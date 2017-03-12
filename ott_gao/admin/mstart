@@ -1,0 +1,8 @@
+#!/bin/sh
+PORT=$1
+shift
+DB=$1
+shift
+BIND_IP=127.0.0.1 MONGO_URL=mongodb://localhost:27017/$DB \
+meteor run --production -p $PORT --release 1.2.1 $@
+

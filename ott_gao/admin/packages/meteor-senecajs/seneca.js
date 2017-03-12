@@ -1,0 +1,2 @@
+seneca = Npm.require("seneca");
+

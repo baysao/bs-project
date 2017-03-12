@@ -1,0 +1,32 @@
+{
+  "public": {
+    "display_host": "http://dp.gao.easyvideo.vn",
+     "stream_host":"http://s.gao.easyvideo.vn",
+    "display_host":"http://dp.gao.easyvideo.vn",
+    "static_host":"http://st.gao.easyvideo.vn",
+    "api_host":"http://a.gao.easyvideo.vn/api",
+    "api_version":"/v1",
+    "api_custom_prefix":"/custom",
+    "api_dev_apis":"/dev_apis"
+
+  },
+  "media_dir":"/opt/apps/data",
+  "static_host":"http://s.gao.easyvideo.vn",
+  "rabbitmq": {
+    "host": "127.0.0.1",
+    "login": "gao",
+    "password": "pQMY4YW0uDvCQELiJVFEUYx0p",
+    "user": "gao",
+    "pass": "pQMY4YW0uDvCQELiJVFEUYx0p"
+  },
+ "queueServer": {
+    "rabbitmq": {
+      "timeout": 22222,
+      "type": "rabbitmq",
+      "host": "localhost",
+      "post": 5672,
+      "username": "gao",
+      "password": "pQMY4YW0uDvCQELiJVFEUYx0p"
+    }
+  }
+}

@@ -1,0 +1,312 @@
+/**
+ * Created by baysao on 04/01/2016.
+ */
+var LRU = Meteor.npmRequire("lru-cache");
+var options = {
+    max: 500,
+    length: function (n, key) {
+        return n * 2 + key.length
+    },
+    maxAge: 1000 * 60
+}
+Cache = {};
+getCache = function (name, opt) {
+    if (!opt) opt = {};
+    if (!Cache[name])
+        Cache[name] = LRU(_.extend(options, opt));
+    return Cache[name];
+}
+
+var middleware_authen = function (req, res, next) {
+    //console.log('middleware_authen');
+    var tokenArr;
+    var token;
+    var userId;
+
+    if (req.authToken)
+        tokenArr = req.authToken.split('.');
+
+    if (tokenArr.length == 2) {
+        userId = tokenArr[0];
+        token = tokenArr[1];
+    }
+    var user = Meteor.users.findOne({
+        '_id': userId,
+        'services.resume.loginTokens.hashedToken': token
+    });
+    if (!user) {
+        res.setHeader("Content-type", "application/json");
+        res.end(JSON.stringify({
+            status: 'error',
+            message: 'No permission'
+        }));
+        return;
+    } else {
+        req.userId = userId;
+    }
+    next(req, res);
+}
+
+var dbUrl = typeof process.env.MONGO_URL != 'undefined' ? process.env.MONGO_URL : "mongodb://localhost:27017/chin";
+webixConnector.db(dbUrl);
+var Mongo = webixConnector.Mongo;
+//var mappedWebixFields = webixMongo.map({title: "db_title", bitrate1: "bitrate"});
+
+var util = Npm.require('util');
+var apiHandler = function (collectionName, permission, callback) {
+
+    return webixConnector.crud(collectionName, function (state, resolve) {
+        console.log('collectionName');
+        console.log(collectionName);
+        var req = state.request;
+        req.collectionName = collectionName;
+        var res = state.response;
+        var db = state.db;
+
+        var coll;
+
+        if (db)
+            coll = db.collection(collectionName);
+
+        var obj_id = state.id;
+        var action = state.action;
+        console.log('action:' + action);
+        console.log('id:' + obj_id);
+        console.log('data:');
+        console.log(util.inspect(state.data, false, null));
+        var done = function () {
+            var userId = req.userId;
+            if (obj_id) {
+
+                var filter = {_id: Mongo.helper.toObjectID(obj_id)};
+                if (permission.owner) {
+                    filter.ownerId = userId;
+                }
+                coll.findOne(filter,
+                    function (err, item) {
+                        if (err) {
+                            resolve(err);
+                        } else {
+                            if (!item) {
+                                resolve({status: 'error', message: 'No permission'});
+                                return;
+                            }
+                            switch (action) {
+                                case 'update':
+                                case 'delete':
+                                    resolve(null, true);
+                                    break;
+                                case 'replace':
+                                    var data = state.data;
+                                    coll.updateById(obj_id, data, function (err, res) {
+                                        resolve(null, {id: obj_id});
+                                    })
+                                    break;
+                                default:
+                                    item.id = item._id;
+                                    delete item._id;
+                                    resolve(null, item);
+                            }
+                        }
+                    }
+                )
+            } else {
+                if (action === 'insert') {
+                    resolve(null, true);
+                } else if (action === 'read') {
+                    var filter = {};
+                    if (permission.owner) {
+                        filter.ownerId = userId;
+                    }
+                    coll.find(filter).sort({_id: -1}).toArray(function (err, items) {
+                        if (err) {
+                            resolve(err);
+                        } else {
+                            if (!items) items = [];
+                            //console.log(items);
+                            resolve(null, _.map(items, function (item) {
+                                item.id = item._id;
+                                delete item._id;
+                                return item;
+                            }));
+                        }
+                    })
+                }
+            }
+        }
+        middleware_authen(req, res, function () {
+            if (callback && typeof callback === 'function')
+                callback(state, resolve, done);
+            else
+                done();
+
+        })
+    })
+}
+function cc_api(req, name, cb) {
+    var query = _.extend(_.omit(req.query, "access_token"),
+        {access_token: 'Gohpheich9Zi4eis7Niz3oph3aid7uKee4eth9Oh'});
+    var query_str = QueryString.stringify(query);
+    var api_url = 'https://api.qc.coccoc.com/v1/' + name + '?' + query_str;
+    console.log(api_url);
+
+    HTTP[req.method.toLowerCase()](api_url, {}, function (error, response) {
+        if (error) {
+            cb(error);
+        } else {
+            cb(null, response.data);
+        }
+    });
+}
+var processAdverts = function (req, collectionName, db, cb) {
+    var cacheName = 'a:' + collectionName;
+    var cache = getCache(cacheName);
+    var cacheKey = req.url;
+    if(cache.has(cacheKey)) {
+        console.log('hit cache:' + cacheKey);
+        cb(null,cache.get(cacheKey));
+        return;
+    }
+    cc_api(req, collectionName, function (err, ress) {
+        if (err) {
+            cb(err);
+            return;
+        }
+        if (!ress || !ress['success']) {
+            cb(null, []);
+            return;
+        }
+        var nData = ress.data;
+        cache.set(cacheKey, nData);
+        cb(null, nData);
+    })
+}
+var processCampaigns = function (req, collectionName, db, cb) {
+    var cacheName = 'c:' + collectionName;
+    var cache = getCache(cacheName);
+    var cacheKey = req.url;
+    if(cache.has(cacheKey)) {
+        console.log('hit cache:' + cacheKey);
+        cb(null,cache.get(cacheKey));
+        return;
+    }
+    cc_api(req, collectionName, function (err, ress) {
+        if (err) {
+            cb(err);
+            return;
+        }
+        if (!ress || !ress['success']) {
+            cb(null, []);
+            return;
+        }
+        var oldData = ress.data || [];
+        var newData;
+        if (_.isArray(oldData)) {
+            var ids = [];
+            var activeData = _.filter(oldData, function (dd) {
+                dd.id = dd.id + '';
+                if (dd.id)
+                    ids.push(dd.id);
+                else
+                    return false;
+                return dd.status == "active";
+            });
+            db.collection(collectionName).find({cc_id: {$in: ids}}).toArray(function (e1, d1) {
+                var dd1 = _.reduce(d1, function (o, v1) {
+                    o[v1.cc_id] = _.extend(_.omit(v1, "_id"), {id: v1._id});
+                    return o;
+                }, {});
+                newData = _.map(activeData, function (el) {
+                    if (!el) return;
+                    if (el['tracking_enabled']) el['tracking_enabled'] = 1; else el['tracking_enabled'] = 0;
+                    if (_.isEmpty(el['start_date'])) el['start_date'] = "";
+                    if (_.isEmpty(el['end_date'])) el['end_date'] = "";
+                    if (_.isEmpty(el['spendings_limit'])) el['spendings_limit'] = "";
+
+                    if (el.id) {
+                        var oo = dd1[el.id];
+                        if (oo)
+                            el = _.extend(el, oo);
+                        else {
+                            el.cc_id = el.id;
+                            delete el.id;
+                        }
+                    }
+                    return el;
+                })
+
+                var nData = _.compact(newData);
+                cache.set(cacheKey, nData);
+                cb(null, nData);
+            })
+        } else {
+            var nData = _.compact(oldData);
+            cache.set(cacheKey, nData);
+            cb(null, nData);
+        }
+    })
+}
+var cc_handler = function (state, resolve, done) {
+    console.log('cc_handler');
+    var action = state.action;
+    var req = state.request;
+    var db = state.db;
+    var collectionName = req.collectionName;
+
+    if (action == 'read') {
+        //var cacheName = collectionName + state.id ? ':' + state.id : '';
+        //var cacheKey = req.url;
+        //var cache = getCache(cacheName);
+
+        //console.log(cacheName);
+        ////console.log(cacheKey);
+        //var doneHandle = function (ccdata) {
+        //    //cache.set(cacheKey, ccdata);
+        //    resolve(null, ccdata);
+        //}
+
+        //if (cache.has(cacheKey)) {
+        //    resolve(null, cache.get(cacheKey));
+        //    return;
+        //}
+        console.log('collectionName:' + collectionName);
+        switch (collectionName) {
+            case 'adverts':
+                processAdverts(req, collectionName, db, function (err, ccdata) {
+                    if (err)
+                        ccdata = [];
+                    //console.log('ccdata');
+                    //console.log(ccdata);
+                    resolve(null, ccdata);
+                    //doneHandle(ccdata);
+                })
+                break;
+            case 'campaigns':
+                processCampaigns(req, collectionName, db, function (err, ccdata) {
+                    if (err)
+                        ccdata = [];
+                    //console.log('ccdata');
+                    //console.log(ccdata);
+                    resolve(null, ccdata);
+                    //doneHandle(ccdata);
+                })
+                break;
+            default:
+                done();
+        }
+    }
+    else {
+        done();
+    }
+}
+
+var apis = [
+    {name: "campaigns", permission: {owner: true}, callback: cc_handler},
+    {name: "adverts", permission: {owner: true}, callback: cc_handler},
+]
+
+var apis_length = apis.length;
+for (var i = 0; i < apis_length; i++) {
+    var api = apis[i];
+    webixConnector.addRoute('/api/v2/' + api.name, apiHandler(api.name, api.permission, api.callback));
+}
