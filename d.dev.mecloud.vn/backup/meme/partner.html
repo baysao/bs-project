@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Partner | MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin-ext,vietnamese' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/partner.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/disableScrollBar.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/global.js"></script>
+    
+    <script>
+    	$(document).ready(function() {
+			
+			///////////////////////////////////////////////////////////////////////
+			//navMenu partner
+			///////////////////////////////////////////////////////////////////////
+			var top = $('.nav-partner').offset().top;
+			$(window).scroll(function (event) {
+			  var y = $(this).scrollTop();
+			  console.log(y,top);
+			  if (y >= top)
+				$('.nav-partner').addClass('fixed');
+			  else
+				$('.nav-partner').removeClass('fixed');
+				
+			  $('.nav-partner').width($('.nav-partner').parent().width());
+			});
+			$( window ).resize(function() {
+			  $('.nav-partner').width($('.nav-partner').parent().width());
+			});
+		});
+    </script>
+</head>
+
+<body id="backtotop" data-spy="scroll" data-target=".nav-partner .container">
+    <div id="header">
+        <div class="container-fluid">
+            <div class="col-xs-7 col-md-4 col-sm-4" style="position:relative;">
+                <a href="partner.html#" class="logo-s">meme.vn</a>
+                
+                <span class="browseCategory">
+                	<span class="dropdown">
+                      <a href="partner.html#" data-toggle="dropdown" class="browse clearfix"><i class="fa fa-bars"></i>  <i class="fa fa-caret-down"></i></a>
+                      <div class="dropdown-menu main-menu arrowTop">
+                      		<div class="arrow"></div>
+                            <div class="search visible-xs">
+								<gcse:searchbox></gcse:searchbox>
+                            </div><!-----------end search------------>
+                            <div class="wrapper-menu scrollable">
+                                <ul class="menu">
+                                    <li><a href="partner.html#" class="menu-hot">Hot</a></li>
+                                    <li><a href="partner.html#" class="menu-hot">Xem nhiều</a></li>
+                                    <li><a href="partner.html#" class="menu-hot">Phim</a></li>
+                                    <li><a href="partner.html#">Sự kiện</a></li>
+                                    <li><a href="partner.html#">Tin tức</a></li>
+                                    <li><a href="partner.html#">Hài</a></li>
+                                    <li><a href="partner.html#">Thể thao</a></li>
+                                    <li><a href="partner.html#">Dancingo</a></li>
+                                    <li><a href="partner.html#">Game</a></li>
+                                    <li><a href="partner.html#">Ẩm thực</a></li>
+                                    <li><a href="partner.html#">Giáo dục</a></li>
+                                    <li><a href="partner.html#">Blog</a></li>
+                                    <li><a href="partner.html#">Showbiz</a></li>
+                                    <li><a href="partner.html#">Xe cộ</a></li>
+                                    <li><a href="partner.html#">Động vật</a></li>
+                                    <li><a href="partner.html#">Đồ hoạ</a></li>
+                                    <li><a href="partner.html#">Giải trí</a></li>
+                                    <li><a href="partner.html#">Hướng dẫn</a></li>
+                                    <li><a href="partner.html#">Thời trang - Làm đẹp</a></li>
+                                    <li><a href="partner.html#">Công nghệ</a></li>
+                                    <li><a href="partner.html#">Du lịch</a></li>
+                                    <li><a href="partner.html#">Gia đình</a></li>
+                                    <li><a href="partner.html#">Hoạt hình</a></li>
+                                    <li><a href="partner.html#">Khoa học</a></li>
+                                    <li><a href="partner.html#">Lifestyle</a></li>
+                                    <li><a href="partner.html#">Nghệ thuật</a></li>
+                                    <li><a href="partner.html#">Sức khoẻ</a></li>
+                                    <li><a href="partner.html#">Thiên nhiên</a></li>
+                                    <li><a href="partner.html#">Trẻ em</a></li>
+                                    <li><a href="partner.html#">Sản phẩm</a></li>
+                                    <li><a href="partner.html#">Quảng cáo</a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="menu-policy clearfix">
+                                	<ul>
+                                    	<li><a href="partner.html#">MeMe là gì?</a></li>
+                                        <li><a href="partner.html#">Cách hoạt động</a></li>
+                                        <li><a href="partner.html#">Điều khoản sử dụng</a></li>
+                                        <li><a href="partner.html#">Chính sách nội dung</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                    </span>
+                </span>
+            </div>
+
+            <div class="search col-md-4 col-sm-4 hidden-xs">
+				<gcse:searchbox></gcse:searchbox>
+            </div><!-----------end search------------>
+            <div class="wrap-menu-top col-xs-5 col-md-4 col-sm-4">
+                <ul class="menu-top">
+                    <li>
+                        <a href="partner.html#" class="menu-top-link tooltipMeme" data-target="#loginPopup" data-toggle="modal"  title="Upload">
+                            <span class="icon icon-upload leftNone"></span>
+                        </a>
+                    </li>
+                    <li class="notification dropdown">
+                        <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="partner.html#" title="Notification" >
+                            <span class="icon icon-notification leftNone"></span>
+                            <span class="notification-count">9+</span>
+                        </a>
+                        
+                            <ul class="dropdown-menu arrowTop">
+                                <div class="arrow"></div>
+                                <div class="notification-head clearfix">
+                                	<span>Thông báo</span>
+                                    <a href="partner.html#" onClick="alert('Đã đọc tất cả')" class="readAll">Đã đọc tất cả</a>
+                                </div>
+                                <div class="wrapper-notification scrollable">
+                                    <li>
+                                        <a class="notification-link unread clearfix" href="http://www.meme.vn/channel?c=53c8e5cfb8d0c3ea3591e1dd" onClick="location.href = $(this).attr('href')">
+                                            <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                        <button onClick="alert('Đã đọc');" type="button" class="btn-read"><i class="fa fa-circle-o"></i></button>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link unread video clearfix" onClick="location.href = $(this).attr('href')" href="http://www.meme.vn/video/loi-noi-xau-lo-lieu-mrbim-sb-music-3ViwvJPgkK0#comment53f424c0b8d0c3a24e59bf32">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                        <button onClick="alert('Đã đọc');" type="button" class="btn-read"><i class="fa fa-circle-o"></i></button>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="partner.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="partner.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="partner.html#">
+                                            <img class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="partner.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="partner.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="partner.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="partner.html#">
+                                            <img class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="partner.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="partner.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="partner.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                </div>
+                                <div class="more-notification"><a href="partner.html#" onClick="alert('Xem tất cả');">Xem tất cả</a></div>
+                            </ul>
+                        
+                    </li>
+                    <!--<li>
+                        <a class="menu-top-link tooltipMeme" href="#" data-toggle="tooltip" title="Đăng nhập">
+                            <span class="icon icon-account leftNone"></span>
+                        </a>
+                    </li>-->
+                    <li class="account dropdown">
+                        <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="partner.html#" title="Account">
+                            <img src="images/avatar2.jpg" class="img-user"><span class="account-name hidden-xs"> Đào Viết Phương </span>
+                            
+                        </a>
+                        <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu arrowTop">
+                        	<div class="arrow"></div>
+                            <div class="swith-channel-text">Bạn muốn đổi thành:</div>
+                            <div class="swith-channel scrollable">
+                            	<a href="partner.html#" class="account-channel">
+                                	<img src="images/channelImg3.jpg" />
+                                    <p>Giọng Hát Việt Nhí 2014</p>
+                                </a>
+                                <a href="partner.html#" class="account-channel">
+                                	<img src="images/channelImg1.jpg" />
+                                    <p>Cuộc Đua Kỳ Thú</p>
+                                </a>
+                                <a href="partner.html#" class="account-channel">
+                                	<img src="images/channelImg2.jpg" />
+                                    <p>Viet Nam Idol 2014</p>
+                                </a>
+                                <a href="partner.html#" class="account-channel">
+                                	<img src="images/channelImg3.jpg" />
+                                    <p>Giọng Hát Việt Nhí 2014</p>
+                                </a>
+                                <a href="partner.html#" class="account-channel">
+                                	<img src="images/channelImg1.jpg" />
+                                    <p>Cuộc Đua Kỳ Thú</p>
+                                </a>
+                                <a href="partner.html#" class="account-channel">
+                                	<img src="images/channelImg2.jpg" />
+                                    <p>Viet Nam Idol 2014</p>
+                                </a>
+                            </div>
+                            <li><a href="http://beta.meme.vn/usercp/account/editProfile"><i class="fa fa-edit"></i> Sửa thông tin cá nhân</a></li>
+                            <li><a href="http://beta.meme.vn/usercp/video"><i class="fa fa-play-circle"></i> Quản lý Video</a></li>
+                            <li><a href="http://beta.meme.vn/usercp/channel"><i class="fa fa-video-camera"></i> Quản lý Channel</a></li>
+                            <li><a href="partner.html#"><i class="fa fa-bar-chart-o"></i> Xem thống kê</a></li>
+                            <li><a href="partner.html#"><i class="fa fa-usd"></i> Xem doanh thu</a></li>
+                            <li><a href="http://beta.meme.vn/user/logout"><i class="fa fa-sign-out"></i> Thoát</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-----------end wrap-menu-top------------>
+            <div class="clearfix"></div>
+        </div>
+  </div>
+  <!-- end header-->
+	
+	<div class="wrapper-content">
+    	<div class="banner-mpp">
+            <h1 class="mpp">Chương trình đối tác của Meme</h1>
+           	<div class="circles clearfix hidden-xs">
+            	<div class="circle">
+                	<span><img class="one" src="images/three.svg" /></span>
+                </div>
+                <div class="circle">
+                	<span><img class="two" src="images/eightteen.svg" /></span>
+                </div>
+                <div class="circle">
+                	<span><img class="three" src="images/nineteen.svg" /></span>
+                </div>
+            </div>
+            <div class="btnRPw">
+            	<a href="partner.html#" class="btnRP">Đăng ký ngay!</a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+       <div class="wrapper-partner clearfix">
+       		<div class="width-partner clearfix">
+                <div class="nav-partner">
+               	  <div class="container">
+                    	<button type="button" class="btn menu-collapse" data-toggle="collapse" data-target="#menu-partner"><i class="fa fa-bars"></i></button>
+                    <ul id="menu-partner" class="nav">
+                            <li class="active"><a id="gioithieulink" href="partner.html#gioithieu" class="scrollToElement">Giới thiệu</a></li>
+                            <li><a id="dieukhoanlink" href="partner.html#dieukhoan" class="scrollToElement">Điều khoản</a></li>
+                      </ul>
+                      <a href="partner.html#mailto:webmaster@example.com" class="mail-partner"><i class="fa fa-envelope-o"></i>partner@meme.vn</a>
+                    </div>
+                </div><!-- end nav-partner-->
+                <div class="container">
+                    <div class="content-partner">
+                        <div id="gioithieu" class="section">
+                            <h3>Giới thiệu</h3>
+                            <p>MEME Partner Program ( Chương trình đối tác của MEME - viết tắt là MPP) là chương trình cho phép những Nhà sáng tạo nội dung (Creator) kiếm tiền dựa trên nền tảng Meme.vn bằng hình thức chia sẻ doanh thu từ hiển thị quảng cáo. Khi tham gia chương trình này các Nhà sáng tạo (Creator) sẽ nhận được nhiều tính năng, công cụ và hỗ trợ mà MEME mang lại nhằm giúp người tham xây dựng Kênh (Channel) và phát triển lượng người xem.</p>
+                        </div><!-- end gioithieu-->
+                        
+                        <div id="loiich" class="section">
+                            <h3>Lợi ích của MPP</h3>
+                            <p>Là một người tham gia vào chương trình này, các video thích hợp của bạn có thể được trả tiền dựa trên lượt hiển thị quảng cáo, hoặc các hoạt động tài trợ / thu phí khác. Các lợi ích mà bạn có thể nhận được từ MPP bao gồm:</p>
+                            <div class="row col-loiich">
+                                <div class="col-sm-6 col-md-3">
+                                    <h4>Khai phá tiềm năng kiếm tiền </h4>
+                                    <p>MEME là nền tảng chia sẻ Video đầu tiên của Việt Nam giúp bạn tạo dựng doanh thu từ nội dung video mà bạn sáng tạo ra.</p>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h4>Thoả thuận linh hoạt</h4>
+                                    <p>MEME không mặc nhiên giới hạn bản quyền các video của bạn chỉ đăng tải độc quyền trên MEME, bạn có quyền tự do chia sẻ và tối đa doanh thu bằng các nền tảng khác.</p>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h4>Thống kê và quản lý hiệu quả </h4>
+                                    <p>MEME Analytics cung cấp một loạt các thống kê giúp bạn có những đánh giá về hiệu quả của video cũng như doanh thu quảng cáo.</p>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h4>Các hình thức mở rộng</h4>
+                                    <p>Ngoài doanh thu từ quảng cáo, MPP mang đến các khoản tài trợ cho video đã phát hành hoặc đang lên kế hoạch sản xuất. Các sự kiện đào tạo, hội thảo, trao thưởng cũng là một phần của chương trình này.</p>
+                                </div>
+                            </div>
+                        </div><!-- end loiich-->
+                        
+                        <div id="dieukien" class="section">
+                            <h3>Điều kiện tham gia MPP</h3>
+                            <p><strong>Channel trên MEME của bạn cần đạt được các điều kiện cơ bản sau đây sẽ có thể tham gia vào MPP</strong></p>
+                            <ul class="nav">
+                                <li><i class="fa fa-caret-right"></i> Tài khoản của bạn chưa từng bị vô hiệu khỏi MPP trong quá khứ</li>
+                                <li><i class="fa fa-caret-right"></i> Các video của bạn đăng tải (upload) lên MEME là nguyên gốc, có chất lượng tốt, có giá trị với cộng đồng và thân thiện với các nhà quảng cáo.</li>
+                                <li><i class="fa fa-caret-right"></i> Bạn đã đọc và cam kết tuân thủ Luật sở hữu trí tuệ</li>
+                                <li><i class="fa fa-caret-right"></i> Bạn đã đọc và đồng ý với <a class="policyLink" href="partner.html#">Điều khoản sử dụng</a>, <a class="policyLink" href="partner.html#">Chính sách nội dung của MEME</a> và <a class="policyLink" href="partner.html#">Điều khoản thanh toán</a></li>
+                            </ul>
+                            <h4>Lưu ý quan trọng:</h4>
+                            <ul class="nav">
+                                <li><i class="fa fa-caret-right"></i> Người chưa đủ 18 tuổi cần có sự đồng ý của người giám hộ hợp pháp bằng văn bản và cam kết sẽ chịu trách nhiệm về các điều khoản của MPP.</li>
+                                <li><i class="fa fa-caret-right"></i> Bạn có thể không được kiếm tiền từ video nếu không được sự chấp thuận của những người / tổ chức cùng tạo ra video đó, hoặc những người / tổ chức sản xuất ra một phần các tài nguyên mà bạn sử dụng trong video.</li>
+                                <li><i class="fa fa-caret-right"></i> Người phụ trách MPP sẽ xem xét từng trường hợp và có thể sẽ liên hệ với người đăng ký để xác nhận thông tin hoặc yêu cầu cung cấp thêm các thông tin khác.</li>
+                                <li><i class="fa fa-caret-right"></i> Bạn có thể bị chối tham gia MPP nếu chúng tôi tin rằng điều nó ảnh hưởng không tối tới chương trình này ngay cả khi bạn đáp ứng được đầy đủ các yếu tố cơ bản nêu trên.</li>
+                                <li><i class="fa fa-caret-right"></i> Đơn đăng ký tham gia MPP sẽ được xử lý tối đa trong vòng 30 ngày, khi được chấp thuận sẽ có thông báo chính thức qua email đã đăng ký. Trong một số trường hợp hiếm gặp đơn đăng ký bị từ chối mà không được thông báo.</li>
+                            </ul>
+                        </div><!-- end dieukien-->
+                        
+                        <div id="dieukhoan" class="section">
+                        	<h3>Điều khoản thanh toán</h3>
+                            <ul class="nav">
+                                <li><i class="fa fa-caret-right"></i> MEME sẽ thanh toán cho bạn bằng hình thức chuyển khoản qua ngân hàng.</li>
+                                <li><i class="fa fa-caret-right"></i> Đơn vị tiền tệ sử dụng trong MPP và thanh toán là Việt Nam Đồng (vnđ)</li>
+                                <li><i class="fa fa-caret-right"></i> Số tiền tối thiểu để được thanh toán là 500,000 vnđ</li>
+                                <li><i class="fa fa-caret-right"></i> Sau 15 ngày kể từ ngày bắt đầu một tháng mới MEME sẽ đối soát và xác nhận số tiền bạn kiếm được của tháng trước đó. Sau khi bạn xác nhận thông tin đối soát thì trong vòng 30 ngày kế tiếp nếu không nhận được khiếu nại gì MEME sẽ tiến hành thanh toán cho bạn.
+    </li>
+                                <li><i class="fa fa-caret-right"></i> Khi tham gia MPP với tư cách cá nhân thì MEME sẽ trích 10% tổng thu nhập của bạn phát sinh từ chương trình để nộp trực tiếp cho cơ quan thuế của Nhà nước theo mã số thuế đã cung cấp, trong trường hợp chưa cung cấp tức là bạn đã uỷ quyền cho MEME thực hiện khởi tạo mã số thuế theo đúng quy định của Pháp luật Việt Nam</li>
+                                <li><i class="fa fa-caret-right"></i> Khi tham gia MPP với tư cách doanh nghiệp việc thanh toán sẽ được thực hiện sau khi MEME nhận được hoá đơn VAT do chính công ty đã đăng ký chương trình cung cấp.</li>
+                                <li><i class="fa fa-caret-right"></i> Việc thanh toán sẽ bị tạm dừng nếu có khiếu kiện hoặc tranh chấp liên quan đến tài khoản, video, kênh của bạn.</li>
+                                <li><i class="fa fa-caret-right"></i> Nếu vi phạm các điều khoản của MPP thì số tiền bạn kiếm được trước đó sẽ không được thanh toán và bạn sẽ bị loại ra khỏi chương trình này.</li>
+                            </ul>
+                            
+                        </div><!-- end dieukhoan-->
+                    </div><!-- end width-partner-->
+                    
+                </div><!-- end content-partner-->
+            </div><!-- end container-->
+       </div><!-- end wrapper-partner-->
+    	
+        <div class="footer container-fluid">
+            <div class="col-md-5 hidden-xs hidden-sm">
+                <div class="footer-head">
+                    <h3>Giới thiệu meme</h3>
+                </div>
+                <div class="footer-content footer-logo">
+                    <p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí…</p>
+                    <a href="partner.html#" class="about-more">Xem thêm</a>
+                </div>
+            </div>
+            
+            
+            
+            <div class="col-md-3 col-sm-6 footerPadd">
+                <div class="footer-head">
+                	<h3>Facebook <a href="http://www.meme.vn/rss/video/latest" class="rssLink"><i class="fa fa-rss"></i></a></h3>
+                </div>
+                <div class="footer-content">
+                    <a class="facebookfan" href="partner.html#"><i class="fa fa-facebook"></i></a>
+                    <h5><a href="partner.html#">TV Network</a></h5>
+                    <p class="facebookfanDesc">Cập nhật tin tức mới từ facebook</p>
+                    
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-head">
+                    <h3>Hỗ trợ</h3>
+                </div>
+                <div class="footer-content">
+                    <ul class="nav">
+                        <li><a href="partner.html#">MeMe là gì?</a>
+                        </li>
+                        <li><a href="partner.html#">Cách hoạt động</a>
+                        </li>
+                        <li><a href="partner.html#">Lợi ích</a>
+                        </li>
+                        <li><a href="partner.html#">Đối tác nội dung</a>
+                        </li>
+                        <li><a href="partner.html#">Khiếu nại bản quyền</a>
+                        </li>
+                        <li><a href="partner.html#">Liên hệ</a>
+                        </li>
+                        <li><a href="partner.html#">Điều khoản sử dụng</a>
+                        </li>
+                        <li><a href="partner.html#">Chính sách nội dung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end footer-->
+
+        <div class="footer-bottom col-xs-12">
+            <span class="copyright">Copyright ©2013 meme.vn</span>
+        </div>
+        <!--end footer bottom-->
+	</div>
+
+    <a href="partner.html#" class="top scrollToElement" id="backtotoplink"><span class="icon icon-arrow-up-s"></span></a>
+<!--pop up addto playlist-->
+  <div id="addToPlaylist" class="addToPlaylist modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add to playlist</h4>
+          </div>
+          <div class="modal-body playlist-row scrollable clearfix">
+            	<a href="partner.html#" class="playlist-name">Best movie counter-strike1.6 Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="partner.html#" class="playlist-name added">Top Hit Nhac Nam My 2014 <i class="fa fa-check-circle"></i> <span class="playlist-number">32</span></a>
+                <a href="partner.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="partner.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="partner.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="partner.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="partner.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="partner.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="partner.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="partner.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="partner.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="partner.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+            </div>
+            <div class="playlist-status">
+            	<span class="create-success">Tạo playlist thành công</span>
+                <!--<span class="create-error">Tên playlist ít nhất 3 ký tự</span>-->
+            </div>    
+            <div class="playlist-form">
+            	<input type="text" class="form-control" placeholder="Tạo playlist mới">
+                <div class="playlist-setting clearfix">    
+                    <div class="dropdown">
+                      <a data-toggle="dropdown" href="partner.html#">Public <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li><a href="partner.html#">Public</a></li>
+                        <li><a href="partner.html#">Only me</a></li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-playlist">Create</button>  
+                </div>
+                  
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end addToPlaylist-->
+  
+  <!--alert upload-->
+  <div id="alertUpload" class="alertUpload modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 id="myModalLabel" class="modal-title">Thông báo</h4>
+          </div>
+          <div class="modal-body clearfix">
+          	<p class="alert-text">Bạn có thực sự muốn hủy video đang upload không?</p>
+            <div class="btn-alert">
+                <span class="file-input btn btn-default btn-file">
+                    Chọn file khác <input type="file" multiple>
+                </span>
+                <button class="btn btn-primary" type="button">Hủy tải lên</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end alert upload-->
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024" /> 
+    <title>Alert page | MeMe Cloud</title>
+    <!-- Global CSS -->
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+    <!-- End Global CSS -->
+    
+    <!-- Page CSS -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <!-- End Page CSS -->
+    
+    <!-- Global Script -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/placeholder.js"></script>
+    <script src="js/global.js"></script>
+    <!-- End Global Script -->
+    
+    <!-- Page Script -->
+    <!--End Page Script -->
+</head>
+
+<body>
+    <div class="wrapper">
+    	
+        <div class="container">
+        
+            <div class="containerTable">
+            
+                <div class="sidebar">
+                    <div class="btn-expand">
+                        <span></span>
+                        <span></span>
+                        <span></span>	
+                    </div>
+                	<div class="bg-overlay"></div>
+                    <div class="sidebarFixed">
+                        <div class="logo">
+                            <a href="#" title="Meme Cloud">Meme Cloud</a>
+                        </div>
+                        
+                        <div class="mainMenu">
+    
+                            <ul id="nav">
+<li><a href="#"><i class="fa fa-globe"></i>Admin <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="allChannel.html">Danh sách channel</a></li>
+<li><a href="managerNotification.html">Quản lý thông báo</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#" class="active"><i class="fa fa-video-camera"></i>Video <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="#" class="selected">Tất cả video</a></li>
+                                  <li><a href="allVideoApprove.html">Duyệt video<span class="numMenu">20</span></a></li>
+                                  <li><a href="upload.html">Upload video mới</a></li>
+                                  <li><a href="uploadBulk.html">Upload cùng lúc</a></li>
+                                  <li><a href="allPlaylist.html">Danh sách phát</a></li>
+                                  <li><a href="categoryManager.html">Quản lý chuyên mục</a></li>
+                                  <li><a href="playerSetting.html">Cài đặt Player</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-bar-chart-o"></i>Thống kê<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="analytics.html">Tổng quan</a></li>
+                                  <li><a href="userAnalytic.html">Theo người dùng</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-wifi"></i>Phát trực tiếp <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="listStreaming.html">Danhs sách phát trực tiếp</a></li>
+                                  <li><a href="upload.html">Tạo sự kiện phát</a></li>
+                                </ul>
+                              </li>
+<li><a href="userManager.html"><i class="fa fa-user"></i>Người dùng</a>
+                              </li>
+                              <li><a href="#"><i class="fa fa-bullhorn"></i>Quảng cáo<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="domainManager.html">Quản lý trang web</a></li>
+                                  <li><a href="adMannagerGlobal.html">Quản lý Adtag</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-wrench"></i>Công cụ<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="alert.html">UI Alert</a></li>
+<li><a href="customEmbed.html">Mã nhúng tùy chỉnh</a></li>
+                                  <li><a href="channelConfig.html">Cấu hình channel</a></li>
+<li><a href="exportData.html">Trích xuất nâng cao</a></li>
+<li><a href="related_setting.html">Cài đặt video liên quan</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!--end sidebar -->
+                
+                
+                
+                <div class="wrapperContent">
+                	
+                    <div class="header clearfix">
+                    	
+                        <div class="searchBox">
+                        	<button type="submit" class="btn btnSearch"><i class="fa fa-search"></i></button>
+                            <input class="formGlobal seachInput" placeholder="Tìm nhanh video" />
+                        </div>
+                        
+                        <a href="advance_search_name.html" class="btnAdvanceSearch"><span>hoặc</span> tìm kiếm nâng cao</a>  
+                        
+                        <div class="account">
+                        	<div class="notification support">
+                        		<a href="#"><i class="fa fa-headphones"></i>Cần hỗ trợ?</a>
+                                <ul class="menuAccount">
+                                    <li><a href="#"><i class="fa fa-phone"></i>0904916386</a></li>
+                                	<li><a href="#" class="supportMail"><i class="fa fa-envelope"></i>support@mecloud.vn</a></li>
+                                    <li><a href="https://www.facebook.com/mecloud.vn" class="fanPage"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                </ul>
+                            </div>
+							<div class="userAcount dropdown">
+                            	<a href="#" class="channelName btnDropdown">Đời sống & pháp luật<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdownDiv menuChannel">
+                                	<div class="swithChannel">Quản lý channel:</div>
+                                    <ul class="scrollable">
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        	<div class="notification"><a href="upload.html" class="notificationIco"><i class="fa fa-cloud-upload"></i></a></div>
+                        	<div class="notification dropdown">
+                            	<a href="#" class="notificationIco btnDropdown"><i class="fa fa-bell"></i><span class="numNof">2</span></a>
+                                <div class="dropdownDiv boxNof">
+                                	<div class="headBoxNof">
+                                    	Bạn có 2 thông báo 
+                                    </div>
+                                    <ul class="listNof scrollable">
+                                    	<li>
+                                        	<a href="activityVideo.html">
+                                            	<img class="thumbNof" src="images/avatar2.jpg" />
+                                            	Video <span class="boldNof strimTitleVideo">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                            	Video <span class="boldNof strimTitleVideo">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="activityVideo.html">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                                Video <span class="boldNof strimTitleVideo">Muônkiểuhành_xử_'xấu'_của_người_Việt_khi_gặp_Cảnh_sát_giao_thôngMuônkiểuhành_xử_'xấu'_của_người_Việt_khi_gặp_Cảnh_sát_giao_thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                            	<span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar2.jpg" />
+                                            	Video <span class="boldNof strimTitleVideo">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                                Video <span class="boldNof strimTitleVideo">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span>
+                                          	</a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                                <span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar3.jpg" />
+                                                Video <span class="boldNof strimTitleVideo">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="footerBoxNof"><a href="notificationUser.html">Xem tất cả</a></div>
+                                </div>
+                            </div>
+                            
+                            <div class="notification userAcount dropdown">
+                            	<a href="#" class="notificationIco userName btnDropdown"><i class="fa fa-cog"></i></a>
+                                <a href="#" class="userThumb"><img src="images/user.jpg" alt="Messi" /></a>
+                                <ul class="dropdownDiv menuAccount">
+                                	<li><a href="changeProfile.html"><i class="fa fa-edit"></i>Đổi thông tin tài khoản</a></li>
+                                    <!--<li><a href="#"><i class="fa fa-user"></i>Tình trạng tài khoản</a></li>-->
+                                    <li><a href="support.html"><i class="fa fa-envelope"></i>Hỗ trợ</a></li>
+                                    <li><a href="#"><i class="fa fa-sign-out"></i>Thoát</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div><!--end header -->
+                    
+                    <div class="content">
+                        
+                            
+                        <div class="boxBreadcrumb">
+                            <ul class="breadcrumb clearfix">
+                                <li><a href="#">Meme Cloud</a><i class="fa fa-angle-right"></i></li>
+                                <li class="active">
+                                    Alert demo
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tabsGlobal">
+                        
+                            <ul class="tabsVideo">
+                                <li class="simple">Alert Demo</li>
+                            </ul>
+                            
+                            <div class="tabsContentGlobal" style="padding-bottom:1px;">
+                            
+                                <div class="table" style="margin:20px;max-width:720px;">
+                                    <div class="row">
+                                    	<div class="col" style="width:80px;">Action</div>
+                                        <div class="col">Description</div>
+                                    </div>
+                                    <div class="row">
+                                    	<div class="col"><a href="#" class="btn btnDefaultSmall" data-popup-target=".notify.basic">Show me</a></div>
+                                        <div class="col">Thông báo cơ bản</div>
+                                    </div>
+                                    <div class="row">
+                                    	<div class="col"><a href="#" class="btn btnDefaultSmall" data-popup-target=".notify.success">Show me</a></div>
+                                        <div class="col">Thông báo thành công</div>
+                                    </div>
+                                    <div class="row">
+                                    	<div class="col"><a href="#" class="btn btnDefaultSmall" data-popup-target=".notify.confirm">Show me</a></div>
+                                        <div class="col">Thông báo confirm</div>
+                                    </div>
+                                </div><!--end tableData -->
+                                
+                            </div><!--end tabsContentGlobal -->
+                            
+                        </div><!--end tabsGlobal -->
+                        
+                        
+                        
+                    </div><!--end content -->
+                    
+                </div><!--end wrapperContent -->
+            
+            </div><!--end containerTable -->
+        
+        </div><!--end container -->
+        
+    </div><!--end wrapper -->
+
+    <div class="popupWrapper">
+    
+    	<div class="popup-overlay"></div>
+        <div style="width:320px;" class="popup notify basic">
+            <div class="popup-body">
+                <div class="popupContent rmb clearfix">
+                	<div class="icon-notify"><i class="fa fa-bullhorn"></i></div>
+                    <h3 class="title-notify">Thông báo</h3>
+                	<div class="text-notify">Để không phải chờ lâu khi dữ liệu trên 200 bản ghi thì bạn nên trích xuất file để xem</div>
+                    <div class="button-notify">
+                    	<button type="button" class="btn cyan clearPopup">Đóng</button>
+                        <button type="button" class="btn orange">Trích xuất file</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--end notify -->
+        <div style="width:320px;" class="popup notify success">
+            <div class="popup-body">
+                <div class="popupContent rmb clearfix">
+                	<div class="icon-notify"><i class="fa fa-check"></i></div>
+                    <h3 class="title-notify">Thao tác thành công</h3>
+                    <div class="button-notify">
+                    	<button type="button" class="btn cyan clearPopup">Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--end notify success -->
+        <div style="width:320px;" class="popup notify confirm">
+            <div class="popup-body">
+                <div class="popupContent rmb clearfix">
+                	<div class="icon-notify pulseConfirm"><i class="fa fa-warning pulseConfirmIns"></i></div>
+                    <h3 class="title-notify">Bạn muốn xóa video <span>Bình minh tình yêu - Lý Hải</span>(dkh6kfhj)?</h3>
+                    <div class="button-notify">
+                    	<button type="button" class="btn btnDefault clearPopup">Hủy</button>
+                        <button type="button" class="btn red">Thực hiện</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--end notify confirm -->
+        
+        
+        
+    </div><!-- end popupWrapper -->
+    
+    
+</body>
+
+</html>

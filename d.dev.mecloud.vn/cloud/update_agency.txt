@@ -1,0 +1,1 @@
+Update: global.js, global.css, style.css, analytic.js, fonts-awesome.css, folder fonts

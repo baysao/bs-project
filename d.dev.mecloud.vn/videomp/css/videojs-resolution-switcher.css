@@ -1,0 +1,140 @@
+.video-js.mep .vmp-resolution-button {
+  font-family: VideoJS;
+  float: right;
+}
+
+.video-js.mep .vmp-resolution-button .vmp-resolution-button-staticlabel:before {
+  content: '\e008';
+  font-size: 2.1em;
+  line-height: 1.87;
+  font-family: VideoJS;
+}
+
+.video-js.mep .vmp-resolution-button .vmp-resolution-button-label {
+  font-size: 1.2em;
+  line-height: 2.50em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: inherit;
+}
+
+.video-js.mep .vmp-resolution-button.vmp-menu-button-popup ul.vmp-menu-content {
+  width: 100% !important;
+  bottom: 0;
+  background: none;
+  position: relative;
+  max-height: inherit;
+}
+
+.video-js.mep .vmp-resolution-button .vmp-menu {
+  position: absolute;
+  bottom: 100%;
+  width: 8em;
+  left: -2em;
+  height: auto;
+  border-top-color: rgba(43, 51, 63, 0.7);
+  margin-bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  font-family: arial;
+}
+.video-js.mep .vmp-resolution-button .vmp-control-text {
+  width: auto;
+  height: auto;
+  position: relative;
+  z-index: 99;
+  clip: auto;
+  padding: 10px 0;
+  display: block;
+  margin: 0;
+  cursor: default;
+  font-size: 12px;
+}
+.video-js.mep .vmp-resolution-button .vmp-menu-item .vmp-control-text {
+  display: none;
+}
+.video-js.mep .vmp-resolution-button .vmp-menu li.vmp-menu-item {
+  padding: 7px 0;
+  text-transform: none;
+  color: #999999;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.video-js.mep .vmp-resolution-button .vmp-menu li.vmp-selected, .video-js.mep .vmp-resolution-button .vmp-menu li.vmp-selected:hover, .video-js.mep .vmp-resolution-button .vmp-menu li.vmp-selected:focus {
+  background-color: #3ea9f5;
+  color: #ffffff;
+}
+.video-js.mep .vmp-resolution-button .vmp-menu li:hover, .video-js.mep .vmp-resolution-button .vmp-menu li:focus {
+  background-color: rgba(0,0,0,0.3);
+  color: #ffffff;
+}
+.video-js.mep .vmp-resolution-button  .vmp-menu li.vmp-menu-item span {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 11px;
+}
+.video-js.mep .vmp-resolution-button .vmp-resolution-button-staticlabel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+/*.vmp-menu-button-popup:hover .vmp-menu {
+  display: none; }*/
+.video-js.mep span.vmp-resolution-button-staticlabel i {
+  position: absolute;
+  display: block;
+  font-style: normal;
+  font-size: 9px;
+  font-family: arial;
+  color: #fff;
+  font-weight: bold;
+  top: 4px;
+  right: 0;
+  background-color: #c0392b;
+  padding: 3px 3px 1px 3px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+
+.video-js.mep .vmp-menu-button-popup .vmp-menu {
+  display: inherit;
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.video-js.mep .withIframe.vmp-menu-button-popup:hover .vmp-menu {
+  visibility: visible;
+  z-index: 1;
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .video-js.mep .vmp-menu-button-popup:hover .vmp-menu, .vmp-menu-button-popup .vmp-menu.vmp-lock-showing {
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  .video-js.mep .vmp-menu-button-popup .vmp-menu.vmp-lock-showing {
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+  }
+  .video-js.mep .vmp-menu-button-popup .vmp-menu {
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+  }
+  
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024" /> 
+    <title>Agency - Danh sách addtag</title>
+    <!-- Global CSS -->
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+    <!-- End Global CSS -->
+    
+    <!-- Page CSS -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <!-- End Page CSS -->
+    
+    <!-- Global Script -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script src="js/global.js"></script>
+    <!-- End Global Script -->
+    
+</head>
+
+<body>
+	
+    <div class="wrapper">
+    	
+        <div class="container">
+        
+            <div class="containerTable">
+            
+                <div class="sidebar">
+                    <div class="sidebarFixed">
+                        <div class="logo">
+                            <a href="#" title="Meme Cloud">Meme Cloud</a>
+                        </div>
+                        
+                        <div class="mainMenu">
+    
+                            <ul id="nav">
+                              <li><a href="#" class="active"><i class="fa fa-globe"></i>Agency Netlink <span class="icoDown fa fa-chevron-down"></span></a>
+                                    <ul>
+                                      <li><a href="agency_allVideoAgency.html">Tất cả video</a></li>
+                                      <li><a href="agency_allChannel.html" class="selected">Channel</a></li>
+                                      <li><a href="agency_managerUser.html">Người dùng</a></li>
+                                      <li><a href="agency_analytic.html">Thống kê</a></li>
+<li><a href="agency_activity.html">Activity</a></li>
+                                    </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-video-camera"></i>Video <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="allVideo.html">Tất cả video</a></li>
+                                  <li><a href="allVideoApprove.html">Duyệt video<span class="numMenu">20</span></a></li>
+                                  <li><a href="upload.html">Upload video mới</a></li>
+                                  <li><a href="uploadBulk.html">Upload cùng lúc</a></li>
+                                  <li><a href="allPlaylist.html">Danh sách phát</a></li>
+                                  <li><a href="categoryManager.html">Quản lý chuyên mục</a></li>
+                                  <li><a href="playerSetting.html">Cài đặt Player</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-bar-chart-o"></i>Thống kê<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="analytics.html">Tổng quan</a></li>
+                                  <li><a href="userAnalytic.html">Theo người dùng</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-wifi"></i>Phát trực tiếp <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="listStreaming.html">Danhs sách phát trực tiếp</a></li>
+                                  <li><a href="upload.html">Tạo sự kiện phát</a></li>
+                                </ul>
+                              </li>
+<li><a href="userManager.html"><i class="fa fa-user"></i>Người dùng</a>
+                              </li>
+                              <li><a href="#" class="active"><i class="fa fa-bullhorn"></i>Quảng cáo<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="domainManager.html">Quản lý trang web</a></li>
+                                  <li><a href="managerAdtag.html">Quản lý Adtag</a></li>
+                                  <li><a href="installAdGlobal.html">Cài đặt chung</a></li>
+<li><a href="installAdChannel.html">Cài đặt Ad Channel</a></li>
+                                  <li><a href="installAdwebsite.html" class="selected">Cài đặt cho website</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-wrench"></i>Công cụ<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="alert.html">UI Alert</a></li>
+<li><a href="customEmbed.html">Mã nhúng tùy chỉnh</a></li>
+                                  <li><a href="channelConfig.html">Cấu hình channel</a></li>
+<li><a href="exportData.html">Trích xuất nâng cao</a></li>
+<li><a href="related_setting.html">Cài đặt video liên quan</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!--end sidebar -->
+
+               <div class="btn-expand">
+                    <span></span>
+                    <span></span>
+                    <span></span>	
+                </div>
+                <div class="bg-overlay"></div>
+  
+                <div class="wrapperContent">
+                	
+                    <div class="header clearfix">
+                    	
+                        <div class="searchBox">
+                        	<button type="submit" class="btn btnSearch"><i class="fa fa-search"></i></button>
+                            <input class="formGlobal seachInput" placeholder="Nhập tên hoặc id video..." />
+                        </div>
+                        
+                        <div class="account">
+                        	<div class="notification support">
+                        		<a href="#"><i class="fa fa-headphones"></i>Cần hỗ trợ?</a>
+                                <ul class="menuAccount">
+                                    <li><a href="#"><i class="fa fa-phone"></i>0904916386</a></li>
+                                	<li><a href="#" class="supportMail"><i class="fa fa-envelope"></i>support@mecloud.vn</a></li>
+                                    <li><a href="https://www.facebook.com/mecloud.vn" class="fanPage"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                </ul>
+                            </div>
+                            <div class="userAcount dropdown">
+                            	<a href="#" class="channelName btnDropdown">Đời sống & pháp luật<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdownDiv menuChannel">
+                                	<div class="swithChannel">Quản lý channel:</div>
+                                    <ul class="scrollable">
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        	<div class="notification"><a href="upload.html" class="notificationIco"><i class="fa fa-cloud-upload"></i></a></div>
+                        	<div class="notification dropdown">
+                            	<a href="#" class="notificationIco btnDropdown"><i class="fa fa-bell"></i><span class="numNof">2</span></a>
+                                <div class="dropdownDiv boxNof">
+                                	<div class="headBoxNof">
+                                    	Bạn có 2 thông báo <a href="#" class="btnReadAsAll">Đã xem tất cả</a>
+                                    </div>
+                                    <ul class="listNof scrollable">
+                                    	<li>
+                                        	<a class="unread" href="activityVideo.html">Video <span class="boldNof">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span></a>
+                                            <a href="#" class="btnRead tooltipText" title="Đã xem"><i class="fa fa-circle-o"></i></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a class="unread" href="activityVideo.html">Video <span class="boldNof">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span></a>
+                                            <a href="#" class="btnRead tooltipText" title="Đã xem"><i class="fa fa-circle-o"></i></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#"><span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#"><span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="notification userAcount dropdown">
+                            	<a href="#" class="notificationIco userName btnDropdown"><i class="fa fa-cog"></i></a>
+                                <a href="#" class="userThumb"><img src="images/user.jpg" alt="Messi" /></a>
+                                <ul class="dropdownDiv menuAccount">
+                                	<li><a href="changeProfile.html"><i class="fa fa-edit"></i>Đổi thông tin tài khoản</a></li>
+                                    <!--<li><a href="#"><i class="fa fa-user"></i>Tình trạng tài khoản</a></li>-->
+                                    <li><a href="support.html"><i class="fa fa-envelope"></i>Hỗ trợ</a></li>
+                                    <li><a href="#"><i class="fa fa-sign-out"></i>Thoát</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div><!--end header -->
+                    
+                    
+                    <div class="content">
+                            
+                            <div class="boxBreadcrumb">
+                                <ul class="breadcrumb clearfix">
+                                    <li><a href="#">Meme Cloud</a><i class="fa fa-angle-right"></i></li>
+                                    <li><a href="#">Agency Netlink</a><i class="fa fa-angle-right"></i></li>
+                                    <li><a href="#">Danh sách channel</a><i class="fa fa-angle-right"></i></li>
+                                    <li class="active">
+                                        Cài đặt quảng cáo
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                        <div class="tabsGlobal">
+                            <ul class="tabsVideo">
+                                <li><a href="agency_adsSetupChannel.html">Danh sách website đã cài đặt</a></li>
+                                <li class="current"><a href="agency_addtagChannel.html">Addtag</a></li>
+                            </ul>
+                            
+                            <div class="tabsContentGlobal">
+                            
+                            	<div class="rowVideo">
+                                    <div class="infoGeneral">
+                                        <div class="nameChannel blue-bg clearfix">
+                                            <div class="l-namechannel">
+                                                <h2><span>Thể thao 24/7</span></h2>
+                                                <a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a>
+                                            </div>
+                                            <div class="r-namechannel">
+                                                <p>Ngày tạo: <span>10:41 | 13/04/2015</span></p>
+                                                <p>Trạng thái: <span>Đang hoạt động</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tableData current">
+                                    <div class="fillterData clearfix">
+                                        <div class="advanceSearch">
+                                            <a href="javascript:;" class="btn orange" onclick="mmAds.showAddAdtagPopup(); return false;"><i class="fa fa-tags"></i>Thêm adtag</a>
+                                        </div>
+                                    </div>
+                                    <div class="tableDataVideo">
+                                        <div class="CSSTableGenerator">
+                                            <table>
+                                                <tbody><tr>
+                                                    <td width="140" style="text-align:left;">
+                                                        Tên
+                                                    </td>
+                                                    <td style="text-align:left;">
+                                                        Value
+                                                    </td>
+                                                    <td width="185" class="fixWidthMD">
+                                                        Tác vụ
+                                                    </td>
+                                                </tr>
+                                                
+                        <tr>
+                            <td> Chi Pu </td>
+                            <td><p style="height:auto;" class="textInline"> <span>Type: "jpg"</span><br><span>Link: "http://thanhbobber.com/wp-content/uploads/2014/01/avatar-thanhbobber1.jpg"</span><br><span>Url: "http://thanhbobber.com/cach-tao-ads-facebook-multi-product.html"</span></p></td>
+                            <td class="text-center">
+                                <a href="#edit" class="btn btnDefault btnAction" onclick="mmAds.showEditAdtagPopup($(this)); return false;">
+                                    <input type="hidden" id="id" value="259">
+                                    <input type="hidden" id="type" value="3">
+                                    <input type="hidden" id="name" value="Chi Pu">
+                                    <input type="hidden" id="value" value="{&quot;type&quot;:&quot;jpg&quot;,&quot;fileLink&quot;:&quot;http://thanhbobber.com/wp-content/uploads/2014/01/avatar-thanhbobber1.jpg&quot;,&quot;url&quot;:&quot;http://thanhbobber.com/cach-tao-ads-facebook-multi-product.html&quot;}">
+                                    <input type="hidden" id="kiptime" value="0">
+                                    <input type="hidden" id="kipable" value="false">
+                                    <input type="hidden" id="time" value="1445312871936">
+                                    <input type="hidden" id="signkey" value="9ff8862d9bf13b488ec569cb756fc5db">
+                                    <i class="fa fa-edit"></i>
+                                    <span class="hiddenMD">Sửa</span>
+                                </a>
+                                <a href="#delete" class="btn btnDefault btnAction" onclick="mmAds.showDeleteAdtagPopup(259,1445312871936,'9ff8862d9bf13b488ec569cb756fc5db','Chi Pu'); return false;">
+                                    <i class="fa fa-trash-o"></i>
+                                    <span class="hiddenMD">Xóa</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> afv pre-roll </td>
+                            <td><p style="height:auto;" class="textInline"> http://googleads.g.doubleclick.net/pagead/ads?ad_type=video_image_flash&amp;client=ca-video-pub-2733935766009433&amp;description_url=<!--?url-->&amp;channel=7807218903&amp;videoad_start_delay=0&amp;hl=vi&amp;max_ad_duration=15000</p></td>
+                            <td class="text-center">
+                                <a href="#edit" class="btn btnDefault btnAction" onclick="mmAds.showEditAdtagPopup($(this)); return false;">
+                                    <input type="hidden" id="id" value="245">
+                                    <input type="hidden" id="type" value="1">
+                                    <input type="hidden" id="name" value="afv pre-roll">
+                                    <input type="hidden" id="value" value="http://googleads.g.doubleclick.net/pagead/ads?ad_type=video_image_flash&amp;client=ca-video-pub-2733935766009433&amp;description_url=<?url>&amp;channel=7807218903&amp;videoad_start_delay=0&amp;hl=vi&amp;max_ad_duration=15000">
+                                    <input type="hidden" id="kiptime" value="0">
+                                    <input type="hidden" id="kipable" value="false">
+                                    <input type="hidden" id="time" value="1445312871936">
+                                    <input type="hidden" id="signkey" value="bfb61a5ec561d5af34777a361fdcb12b">
+                                    <i class="fa fa-edit"></i>
+                                    <span class="hiddenMD">Sửa</span>
+                                </a>
+                                <a href="#delete" class="btn btnDefault btnAction" onclick="mmAds.showDeleteAdtagPopup(245,1445312871936,'bfb61a5ec561d5af34777a361fdcb12b','afv pre-roll'); return false;">
+                                    <i class="fa fa-trash-o"></i>
+                                    <span class="hiddenMD">Xóa</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> test Offset </td>
+                            <td><p style="height:auto;" class="textInline"> http://mecloud.vn/ads/adtag?page=2&amp;size=10</p></td>
+                            <td class="text-center">
+                                <a href="#edit" class="btn btnDefault btnAction" onclick="mmAds.showEditAdtagPopup($(this)); return false;">
+                                    <input type="hidden" id="id" value="235">
+                                    <input type="hidden" id="type" value="2">
+                                    <input type="hidden" id="name" value="test Offset">
+                                    <input type="hidden" id="value" value="http://mecloud.vn/ads/adtag?page=2&amp;size=10">
+                                    <input type="hidden" id="kiptime" value="5">
+                                    <input type="hidden" id="kipable" value="true">
+                                    <input type="hidden" id="time" value="1445312871936">
+                                    <input type="hidden" id="signkey" value="f447e3c4cc2a9e8494d3e26486a34767">
+                                    <i class="fa fa-edit"></i>
+                                    <span class="hiddenMD">Sửa</span>
+                                </a>
+                                <a href="#delete" class="btn btnDefault btnAction" onclick="mmAds.showDeleteAdtagPopup(235,1445312871936,'f447e3c4cc2a9e8494d3e26486a34767','test Offset'); return false;">
+                                    <i class="fa fa-trash-o"></i>
+                                    <span class="hiddenMD">Xóa</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> TrueView InStream (skippable ... </td>
+                            <td><p style="height:auto;" class="textInline"> http://googleads.g.doubleclick.net/pagead/ads?ad_type=skippablevideo&amp;client=ca-video-pub-4968145218643279&amp;videoad_start_delay=0&amp;description_url=http%3A%2F%2Fwww.google.com&amp;hl=en&amp;max_ad_duration=60000&amp;adtest=on</p></td>
+                            <td class="text-center">
+                                <a href="#edit" class="btn btnDefault btnAction" onclick="mmAds.showEditAdtagPopup($(this)); return false;">
+                                    <input type="hidden" id="id" value="231">
+                                    <input type="hidden" id="type" value="1">
+                                    <input type="hidden" id="name" value="TrueView InStream (skippable linear ads):">
+                                    <input type="hidden" id="value" value="http://googleads.g.doubleclick.net/pagead/ads?ad_type=skippablevideo&amp;client=ca-video-pub-4968145218643279&amp;videoad_start_delay=0&amp;description_url=http%3A%2F%2Fwww.google.com&amp;hl=en&amp;max_ad_duration=60000&amp;adtest=on">
+                                    <input type="hidden" id="kiptime" value="0">
+                                    <input type="hidden" id="kipable" value="true">
+                                    <input type="hidden" id="time" value="1445312871936">
+                                    <input type="hidden" id="signkey" value="a6cd6398e4a810f89a54b57ae4d39681">
+                                    <i class="fa fa-edit"></i>
+                                    <span class="hiddenMD">Sửa</span>
+                                </a>
+                                <a href="#delete" class="btn btnDefault btnAction" onclick="mmAds.showDeleteAdtagPopup(231,1445312871936,'a6cd6398e4a810f89a54b57ae4d39681','TrueView InStream (skippable ...'); return false;">
+                                    <i class="fa fa-trash-o"></i>
+                                    <span class="hiddenMD">Xóa</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> VPAID html5 </td>
+                            <td><p style="height:auto;" class="textInline"> http://shadow01.yumenetworks.com/yvp/21/xml/1736DAhIYgKh/vpaid_html5.xml</p></td>
+                            <td class="text-center">
+                                <a href="#edit" class="btn btnDefault btnAction" onclick="mmAds.showEditAdtagPopup($(this)); return false;">
+                                    <input type="hidden" id="id" value="202">
+                                    <input type="hidden" id="type" value="1">
+                                    <input type="hidden" id="name" value="VPAID html5">
+                                    <input type="hidden" id="value" value="http://shadow01.yumenetworks.com/yvp/21/xml/1736DAhIYgKh/vpaid_html5.xml">
+                                    <input type="hidden" id="kiptime" value="0">
+                                    <input type="hidden" id="kipable" value="true">
+                                    <input type="hidden" id="time" value="1445312871936">
+                                    <input type="hidden" id="signkey" value="b6643558dc49bc5c56ceda09c977d9a4">
+                                    <i class="fa fa-edit"></i>
+                                    <span class="hiddenMD">Sửa</span>
+                                </a>
+                                <a href="#delete" class="btn btnDefault btnAction" onclick="mmAds.showDeleteAdtagPopup(202,1445312871936,'b6643558dc49bc5c56ceda09c977d9a4','VPAID html5'); return false;">
+                                    <i class="fa fa-trash-o"></i>
+                                    <span class="hiddenMD">Xóa</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> Google Video testtag </td>
+                            <td><p style="height:auto;" class="textInline"> http://googleads.g.doubleclick.net/pagead/ads?ad_type=video&amp;client=ca-video-pub-4968145218643279&amp;videoad_start_delay=0&amp;description_url=http%3A%2F%2Fwww.google.com&amp;max_ad_duration=40000&amp;adtest=on</p></td>
+                            <td class="text-center">
+                                <a href="#edit" class="btn btnDefault btnAction" onclick="mmAds.showEditAdtagPopup($(this)); return false;">
+                                    <input type="hidden" id="id" value="201">
+                                    <input type="hidden" id="type" value="1">
+                                    <input type="hidden" id="name" value="Google Video testtag">
+                                    <input type="hidden" id="value" value="http://googleads.g.doubleclick.net/pagead/ads?ad_type=video&amp;client=ca-video-pub-4968145218643279&amp;videoad_start_delay=0&amp;description_url=http%3A%2F%2Fwww.google.com&amp;max_ad_duration=40000&amp;adtest=on">
+                                    <input type="hidden" id="kiptime" value="0">
+                                    <input type="hidden" id="kipable" value="true">
+                                    <input type="hidden" id="time" value="1445312871936">
+                                    <input type="hidden" id="signkey" value="6620e022aba48e6ec862a90657e18d26">
+                                    <i class="fa fa-edit"></i>
+                                    <span class="hiddenMD">Sửa</span>
+                                </a>
+                                <a href="#delete" class="btn btnDefault btnAction" onclick="mmAds.showDeleteAdtagPopup(201,1445312871936,'6620e022aba48e6ec862a90657e18d26','Google Video testtag'); return false;">
+                                    <i class="fa fa-trash-o"></i>
+                                    <span class="hiddenMD">Xóa</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> YUME VPAID </td>
+                            <td><p style="height:auto;" class="textInline"> http://shadow01.yumenetworks.com/yvp/20/704AhFxcNBC/Shadow_vpaid_as3.xml</p></td>
+                            <td class="text-center">
+                                <a href="#edit" class="btn btnDefault btnAction" onclick="mmAds.showEditAdtagPopup($(this)); return false;">
+                                    <input type="hidden" id="id" value="180">
+                                    <input type="hidden" id="type" value="2">
+                                    <input type="hidden" id="name" value="YUME VPAID">
+                                    <input type="hidden" id="value" value="http://shadow01.yumenetworks.com/yvp/20/704AhFxcNBC/Shadow_vpaid_as3.xml">
+                                    <input type="hidden" id="kiptime" value="0">
+                                    <input type="hidden" id="kipable" value="true">
+                                    <input type="hidden" id="time" value="1445312871936">
+                                    <input type="hidden" id="signkey" value="060852cd08a74c8be93ac0f137c91b28">
+                                    <i class="fa fa-edit"></i>
+                                    <span class="hiddenMD">Sửa</span>
+                                </a>
+                                <a href="#delete" class="btn btnDefault btnAction" onclick="mmAds.showDeleteAdtagPopup(180,1445312871936,'060852cd08a74c8be93ac0f137c91b28','YUME VPAID'); return false;">
+                                    <i class="fa fa-trash-o"></i>
+                                    <span class="hiddenMD">Xóa</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> ADX </td>
+                            <td><p style="height:auto;" class="textInline"> https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-3588767303886532&amp;slotname=1659698366&amp;ad_type=video_text_image_flash&amp;description_url=http%3A%2F%2Ftinmoi.vn&amp;max_ad_duration=30000&amp;videoad_start_delay=0</p></td>
+                            <td class="text-center">
+                                <a href="#edit" class="btn btnDefault btnAction" onclick="mmAds.showEditAdtagPopup($(this)); return false;">
+                                    <input type="hidden" id="id" value="173">
+                                    <input type="hidden" id="type" value="1">
+                                    <input type="hidden" id="name" value="ADX">
+                                    <input type="hidden" id="value" value="https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-3588767303886532&amp;slotname=1659698366&amp;ad_type=video_text_image_flash&amp;description_url=http%3A%2F%2Ftinmoi.vn&amp;max_ad_duration=30000&amp;videoad_start_delay=0">
+                                    <input type="hidden" id="kiptime" value="0">
+                                    <input type="hidden" id="kipable" value="true">
+                                    <input type="hidden" id="time" value="1445312871936">
+                                    <input type="hidden" id="signkey" value="fa93f1e65147d02fd42bd6ec5ae75564">
+                                    <i class="fa fa-edit"></i>
+                                    <span class="hiddenMD">Sửa</span>
+                                </a>
+                                <a href="#delete" class="btn btnDefault btnAction" onclick="mmAds.showDeleteAdtagPopup(173,1445312871936,'fa93f1e65147d02fd42bd6ec5ae75564','ADX'); return false;">
+                                    <i class="fa fa-trash-o"></i>
+                                    <span class="hiddenMD">Xóa</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> Adtag test google </td>
+                            <td><p style="height:auto;" class="textInline"> http://googleads.g.doubleclick.net/pagead/ads?ad_type=video&amp;client=ca-video-pub-4968145218643279&amp;videoad_start_delay=0&amp;description_url=http%3A%2F%2Fwww.google.com&amp;max_ad_duration=40000&amp;adtest=on</p></td>
+                            <td class="text-center">
+                                <a href="#edit" class="btn btnDefault btnAction" onclick="mmAds.showEditAdtagPopup($(this)); return false;">
+                                    <input type="hidden" id="id" value="159">
+                                    <input type="hidden" id="type" value="1">
+                                    <input type="hidden" id="name" value="Adtag test google">
+                                    <input type="hidden" id="value" value="http://googleads.g.doubleclick.net/pagead/ads?ad_type=video&amp;client=ca-video-pub-4968145218643279&amp;videoad_start_delay=0&amp;description_url=http%3A%2F%2Fwww.google.com&amp;max_ad_duration=40000&amp;adtest=on">
+                                    <input type="hidden" id="kiptime" value="0">
+                                    <input type="hidden" id="kipable" value="true">
+                                    <input type="hidden" id="time" value="1445312871936">
+                                    <input type="hidden" id="signkey" value="7f9a25a9cf6b0ab6dc1c865692b18661">
+                                    <i class="fa fa-edit"></i>
+                                    <span class="hiddenMD">Sửa</span>
+                                </a>
+                                <a href="#delete" class="btn btnDefault btnAction" onclick="mmAds.showDeleteAdtagPopup(159,1445312871936,'7f9a25a9cf6b0ab6dc1c865692b18661','Adtag test google'); return false;">
+                                    <i class="fa fa-trash-o"></i>
+                                    <span class="hiddenMD">Xóa</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> Test </td>
+                            <td><p style="height:auto;" class="textInline"> http://abc.meme.vn</p></td>
+                            <td class="text-center">
+                                <a href="#edit" class="btn btnDefault btnAction" onclick="mmAds.showEditAdtagPopup($(this)); return false;">
+                                    <input type="hidden" id="id" value="157">
+                                    <input type="hidden" id="type" value="1">
+                                    <input type="hidden" id="name" value="Test">
+                                    <input type="hidden" id="value" value="http://abc.meme.vn">
+                                    <input type="hidden" id="kiptime" value="0">
+                                    <input type="hidden" id="kipable" value="true">
+                                    <input type="hidden" id="time" value="1445312871936">
+                                    <input type="hidden" id="signkey" value="e07ede2e36652d526781c1b0a26f387d">
+                                    <i class="fa fa-edit"></i>
+                                    <span class="hiddenMD">Sửa</span>
+                                </a>
+                                <a href="#delete" class="btn btnDefault btnAction" onclick="mmAds.showDeleteAdtagPopup(157,1445312871936,'e07ede2e36652d526781c1b0a26f387d','Test'); return false;">
+                                    <i class="fa fa-trash-o"></i>
+                                    <span class="hiddenMD">Xóa</span>
+                                </a>
+                            </td>
+                        </tr>
+                        
+                                            </tbody></table>
+                                        </div><!-- end CSSTableGenerator -->
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div><!--end tabsGlobal -->
+                        
+                        
+                        
+                    </div><!--end content -->
+                        
+                    
+                </div><!--end wrapperContent -->
+            
+            </div><!--end containerTable -->
+        
+        </div><!--end container -->
+        
+    </div><!--end wrapper -->
+    
+</body>
+
+</html>

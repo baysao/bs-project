@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Contest| MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese,latin-ext' rel='stylesheet' type='text/css'> 
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/contestMeme.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- start global script-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/disableScrollBar.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <!-- end global script-->
+    
+    <!-- start page script-->
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.newsTicker.min.js"></script>
+    <!-- end page script-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+			//news contest
+			$('.newsticker').newsTicker({
+				row_height: 60,
+				max_rows: 4,
+				speed: 600,
+				direction: 'up',
+				duration: 4000,
+				autostart: 1,
+				pauseOnHover: 0
+			});
+					
+			//slider contest
+			var sync1 = $("#sync1");
+			var sync2 = $("#sync2");
+			 
+			sync1.owlCarousel({
+				singleItem : true,
+				autoPlay   : false,
+				slideSpeed : 1000,
+				navigation: false,
+				pagination:false,
+				afterAction : syncPosition,
+				responsiveRefreshRate : 200,
+			});
+			 
+			sync2.owlCarousel({
+				items : 5,
+				itemsDesktop : [1199,5],
+				itemsDesktopSmall : [979,5],
+				itemsTablet : [768,5],
+				itemsMobile : [479,5],
+				pagination:false,
+				responsiveRefreshRate : 100,
+				afterInit : function(el){
+				el.find(".owl-item").eq(0).addClass("synced");
+				}
+			});
+			 
+			function syncPosition(el){
+				var current = this.currentItem;
+				$("#sync2")
+				.find(".owl-item")
+				.removeClass("synced")
+				.eq(current)
+				.addClass("synced")
+				if($("#sync2").data("owlCarousel") !== undefined){
+				center(current)
+				}
+			}
+			 
+			$("#sync2").on("click", ".owl-item", function(e){
+				e.preventDefault();
+				var number = $(this).data("owlItem");
+				sync1.trigger("owl.goTo",number);
+			});
+				 
+			function center(number){
+				var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
+				var num = number;
+				var found = false;
+				for(var i in sync2visible){
+					if(num === sync2visible[i]){
+					var found = true;
+				}
+			}
+				 
+				if(found===false){
+					if(num>sync2visible[sync2visible.length-1]){
+					sync2.trigger("owl.goTo", num - sync2visible.length+2)
+				}else{
+				if(num - 1 === -1){
+					num = 0;
+				}
+					sync2.trigger("owl.goTo", num);
+				}
+				} else if(num === sync2visible[sync2visible.length-1]){
+					sync2.trigger("owl.goTo", sync2visible[1])
+				} else if(num === sync2visible[0]){
+					sync2.trigger("owl.goTo", num-1)
+				}
+			}
+		 
+        });
+    </script>
+	<script src="js/global.js"></script>
+    
+  </head>
+  <body id="backtotop">
+  
+  <div id="header">
+        <div class="container-fluid">
+            <div class="col-xs-7 col-md-4 col-sm-4" style="position:relative;">
+                <a href="contestPage.html#" class="logo-s">meme.vn</a>
+                
+                <span class="browseCategory">
+                	<span class="dropdown">
+                      <a href="contestPage.html#" data-toggle="dropdown" class="browse clearfix"><i class="fa fa-bars"></i>  <i class="fa fa-caret-down"></i></a>
+                      <div class="dropdown-menu main-menu arrowTop">
+                      		<div class="arrow"></div>
+                            <div class="search visible-xs">
+                                <input class="search-top returnFalse form-control" type="text" placeholder="Keyword..." />
+                                <button class="btn search-btn" type="submit"><span class="icon icon-search"></span></button>
+                            </div><!-----------end search------------>
+                            <div class="wrapper-menu scrollable">
+                                <ul class="menu">
+                                    <li><a href="contestPage.html#" class="menu-hot">Hot</a></li>
+                                    <li><a href="contestPage.html#" class="menu-hot">Xem nhiều</a></li>
+                                    <li><a href="contestPage.html#" class="menu-hot">Phim</a></li>
+                                    <li><a href="contestPage.html#">Sự kiện</a></li>
+                                    <li><a href="contestPage.html#">Tin tức</a></li>
+                                    <li><a href="contestPage.html#">Hài</a></li>
+                                    <li><a href="contestPage.html#">Thể thao</a></li>
+                                    <li><a href="contestPage.html#">Dancingo</a></li>
+                                    <li><a href="contestPage.html#">Game</a></li>
+                                    <li><a href="contestPage.html#">Ẩm thực</a></li>
+                                    <li><a href="contestPage.html#">Giáo dục</a></li>
+                                    <li><a href="contestPage.html#">Blog</a></li>
+                                    <li><a href="contestPage.html#">Showbiz</a></li>
+                                    <li><a href="contestPage.html#">Xe cộ</a></li>
+                                    <li><a href="contestPage.html#">Động vật</a></li>
+                                    <li><a href="contestPage.html#">Đồ hoạ</a></li>
+                                    <li><a href="contestPage.html#">Giải trí</a></li>
+                                    <li><a href="contestPage.html#">Hướng dẫn</a></li>
+                                    <li><a href="contestPage.html#">Thời trang - Làm đẹp</a></li>
+                                    <li><a href="contestPage.html#">Công nghệ</a></li>
+                                    <li><a href="contestPage.html#">Du lịch</a></li>
+                                    <li><a href="contestPage.html#">Gia đình</a></li>
+                                    <li><a href="contestPage.html#">Hoạt hình</a></li>
+                                    <li><a href="contestPage.html#">Khoa học</a></li>
+                                    <li><a href="contestPage.html#">Lifestyle</a></li>
+                                    <li><a href="contestPage.html#">Nghệ thuật</a></li>
+                                    <li><a href="contestPage.html#">Sức khoẻ</a></li>
+                                    <li><a href="contestPage.html#">Thiên nhiên</a></li>
+                                    <li><a href="contestPage.html#">Trẻ em</a></li>
+                                    <li><a href="contestPage.html#">Sản phẩm</a></li>
+                                    <li><a href="contestPage.html#">Quảng cáo</a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="menu-policy clearfix">
+                                	<ul>
+                                    	<li><a href="contestPage.html#">MeMe là gì?</a></li>
+                                        <li><a href="contestPage.html#">Cách hoạt động</a></li>
+                                        <li><a href="contestPage.html#">Điều khoản sử dụng</a></li>
+                                        <li><a href="contestPage.html#">Chính sách nội dung</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                    </span>
+                </span>
+            </div>
+
+            <div class="search col-md-4 col-sm-4 hidden-xs">
+                <input class="search-top form-control" type="text" placeholder="Keyword..." />
+                <button class="btn search-btn" type="submit"><span class="icon icon-search"></span>
+                </button>
+            </div><!-----------end search------------>
+            <div class="wrap-menu-top col-xs-5 col-md-4 col-sm-4">
+                <ul class="menu-top">
+                    <li>
+                        <a href="contestPage.html#" class="menu-top-link tooltipMeme" data-target="#loginPopup" data-toggle="modal"  title="Upload">
+                            <span class="icon icon-upload leftNone"></span>
+                        </a>
+                    </li>
+                    <li class="notification dropdown">
+                        <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="contestPage.html#" title="Notification" >
+                            <span class="icon icon-notification leftNone"></span>
+                            <span class="notification-count">9+</span>
+                        </a>
+                        
+                            <ul class="dropdown-menu arrowTop">
+                                <div class="arrow"></div>
+                                <div class="notification-head clearfix">
+                                	<span>Thông báo</span>
+                                    <a href="contestPage.html#" onClick="alert('Đã đọc tất cả')" class="readAll">Đã đọc tất cả</a>
+                                </div>
+                                <div class="wrapper-notification scrollable">
+                                    <li>
+                                        <a class="notification-link unread clearfix" href="http://www.meme.vn/channel?c=53c8e5cfb8d0c3ea3591e1dd" onClick="location.href = $(this).attr('href')">
+                                            <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                        <button onClick="alert('Đã đọc');" type="button" class="btn-read"><i class="fa fa-circle-o"></i></button>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link unread video clearfix" onClick="location.href = $(this).attr('href')" href="http://www.meme.vn/video/loi-noi-xau-lo-lieu-mrbim-sb-music-3ViwvJPgkK0#comment53f424c0b8d0c3a24e59bf32">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                        <button onClick="alert('Đã đọc');" type="button" class="btn-read"><i class="fa fa-circle-o"></i></button>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="contestPage.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="contestPage.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="contestPage.html#">
+                                            <img class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="contestPage.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="contestPage.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="contestPage.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="contestPage.html#">
+                                            <img class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="contestPage.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="contestPage.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="contestPage.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                </div>
+                                <div class="more-notification"><a href="contestPage.html#" onClick="alert('Xem tất cả');">Xem tất cả</a></div>
+                            </ul>
+                        
+                    </li>
+                    <!--<li>
+                        <a class="menu-top-link tooltipMeme" href="#" data-toggle="tooltip" title="Đăng nhập">
+                            <span class="icon icon-account leftNone"></span>
+                        </a>
+                    </li>-->
+                    <li class="account dropdown">
+                        <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="contestPage.html#" title="Account">
+                            <img src="images/avatar2.jpg" class="img-user"><span class="account-name hidden-xs"> Đào Viết Phương </span>
+                            
+                        </a>
+                        <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu arrowTop">
+                        	<div class="arrow"></div>
+                            <div class="swith-channel-text">Bạn muốn đổi thành:</div>
+                            <div class="swith-channel scrollable">
+                            	<a href="contestPage.html#" class="account-channel">
+                                	<img src="images/channelImg3.jpg" />
+                                    <p>Giọng Hát Việt Nhí 2014</p>
+                                </a>
+                                <a href="contestPage.html#" class="account-channel">
+                                	<img src="images/channelImg1.jpg" />
+                                    <p>Cuộc Đua Kỳ Thú</p>
+                                </a>
+                                <a href="contestPage.html#" class="account-channel">
+                                	<img src="images/channelImg2.jpg" />
+                                    <p>Viet Nam Idol 2014</p>
+                                </a>
+                                <a href="contestPage.html#" class="account-channel">
+                                	<img src="images/channelImg3.jpg" />
+                                    <p>Giọng Hát Việt Nhí 2014</p>
+                                </a>
+                                <a href="contestPage.html#" class="account-channel">
+                                	<img src="images/channelImg1.jpg" />
+                                    <p>Cuộc Đua Kỳ Thú</p>
+                                </a>
+                                <a href="contestPage.html#" class="account-channel">
+                                	<img src="images/channelImg2.jpg" />
+                                    <p>Viet Nam Idol 2014</p>
+                                </a>
+                            </div>
+                            <li><a href="http://beta.meme.vn/usercp/account/editProfile"><i class="fa fa-edit"></i> Sửa thông tin cá nhân</a></li>
+                            <li><a href="http://beta.meme.vn/usercp/video"><i class="fa fa-play-circle"></i> Quản lý Video</a></li>
+                            <li><a href="http://beta.meme.vn/usercp/channel"><i class="fa fa-video-camera"></i> Quản lý Channel</a></li>
+                            <li><a href="contestPage.html#"><i class="fa fa-bar-chart-o"></i> Xem thống kê</a></li>
+                            <li><a href="contestPage.html#"><i class="fa fa-usd"></i> Xem doanh thu</a></li>
+                            <li><a href="http://beta.meme.vn/user/logout"><i class="fa fa-sign-out"></i> Thoát</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-----------end wrap-menu-top------------>
+            <div class="clearfix"></div>
+        </div>
+  </div>
+  <!-- end header-->
+  <div id="scrollDown" class="wrapper-content">
+      <div class="contest-head">
+		<div class="coverContest" style="background-image:url('images/contest/cover-contest.jpg');">
+			<div class="menu-contest">
+				<div class="container">
+					<ul class="nav">
+						<li><a href="contestPage.html#" class="active">Trang chủ</a></li>
+						<li><a href="contestPage.html#">Clip dự thi</a></li>
+                        <li><a href="contestPage.html#">Thể lệ</a></li>
+						<li><a href="contestPage.html#">Kết quả</a></li>
+					</ul>
+					<button type="button"class="btn btn-primary btn-subscribe hidden-xs">
+						<i class="fa fa-play-circle"></i> Subscribe
+					</button>
+                    <!--<button type="button" class="btn btn-default btn-subscribed"><i class="fa fa-check-circle"></i> Subscribed</button>
+        			<button type="button" class="btn btn-default btn-unsubscribe"><i class="fa fa-times-circle"></i> Unsubscribe</button>-->
+                    <div class="video-channel-follower arrowLeft hidden-xs">
+                        <div class="arrow"></div>
+                        459k
+                    </div>
+				</div>
+			</div>
+			<!-- end menu-contest-->
+		</div>
+		<!-- end contestMeme-->
+      </div>
+      <!-- end contest-head-->
+	  <div class="container contest">
+      	<div class="col-sm-8 col-md-8">
+        <h1 class="text-center contest-title">Cover & Parody Challenge</h1>
+            <div class="w-contest-prizes">
+                <div class="contest-prizes contest"></div>
+            </div>
+            
+            <button type="button" class="btn btn-join-contest" data-toggle="modal" data-target="#popupJoinContest">Tham gia ngay!</button>
+            <div class="rule-require">
+            	<div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Khi tham gia là tôi đã đồng ý <a href="contestPage.html#">thể lệ cuộc thi</a>
+                  </label>
+                </div> 
+            </div>
+            <div class="stepByStep clearfix">
+                <div class="col-sm-4 addPad">
+                    <div class="contest-step">
+                        <div class="icon-step icon-camera"></div>
+                        <div class="desc-step">
+                            Quay clip Cover/Parody bài hát tùy chọn
+                        </div>
+                        <span class="step-number">1</span>
+                    </div>
+                </div>
+                <div class="col-sm-4 addPad">
+                    <div class="contest-step clearfix">
+                        <div class="icon-step icon-uploadClip"></div>
+                        <div class="desc-step clearfix">
+                            Đăng nhập và ấn nút tham gia ngay để upload clip
+                        </div>
+                        <span class="step-number">2</span>
+                    </div>
+                </div>
+                <div class="col-sm-4 addPad">
+                    <div class="contest-step clearfix">
+                        <div class="icon-step icon-facebook"></div>
+                        <div class="desc-step">
+                            Chia sẻ link clip của bạn lên Facebook và gửi lời thách đấu cho bạn bè.
+                        </div>
+                        <span class="step-number">3</span>
+                    </div>
+                </div>
+            </div><!-- end stepByStep -->
+            <div class="top-video">
+                <ul class="nav tabs-top">
+                  <li class="active"><a href="contestPage.html#videoHot" data-toggle="tab">Mới tham gia</a></li>
+                  <li><a href="contestPage.html#videoPopular" data-toggle="tab">Xem nhiều</a></li>
+                  <li class="moreVideo"><a href="contestPage.html#"><span class="hidden-xs">Xem thêm</span><i class="fa fa-angle-right"></i></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="videoHot" class="tab-pane fade in active video-top-block row">
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img1.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img3.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Sao Việt thách thức Mr Đàm</a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img1.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img2.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Hà Hồ dội nước lạnh lên đầu </a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img3.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Sao Việt thách thức Mr Đàm</a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img1.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img2.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Hà Hồ dội nước lạnh lên đầu </a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img3.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Sao Việt thách thức Mr Đàm</a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                    </div><!-- end video-hot-->
+                    <div id="videoPopular" class="tab-pane fade video-top-block row">
+                       	<div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img1.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img2.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Hà Hồ dội nước lạnh lên đầu </a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img3.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Sao Việt thách thức Mr Đàm</a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img1.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img2.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Hà Hồ dội nước lạnh lên đầu </a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img3.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Sao Việt thách thức Mr Đàm</a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img3.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Sao Việt thách thức Mr Đàm</a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                        <div class="video-item col-sm-6 col-md-3 clearfix">
+                            <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                                <img class="animateImg" src="images/video-img1.jpg" />
+                                <div class="video-item-info-top">
+                                    <span class="video-item-time">07:58</span>
+                                </div>
+                                <div class="video-item-info">
+                                     <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                                     <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                                </div>
+                                <span class="video-item-play"><i class="fa fa-play"></i></span>
+                            </a>
+                            <div class="title-video clearfix">
+                                <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                                <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                                <span class="video-item-date">1 ngày trước</span>
+                            </div>
+                        </div><!--end video-item-->
+                    </div><!-- end video-popular-->
+                    
+                </div><!-- end tab-content-->
+            </div><!-- end top-video-->
+            
+            <div class="new-video clearfix">
+                <h2>Tất cả clip</h2>
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img2.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Hà Hồ dội nước lạnh lên đầu</a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Tin mới</a>
+                        <span class="video-item-date">2 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img1.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                        <span class="video-item-date">1 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img3.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Hành khách bị trói vì gây náo loạn trên chuyến bay của Vietjet Air ">Hành khách bị trói vì gây náo loạn trên chuyến bay của Vietjet Air </a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Người Đưa Tin</a>
+                        <span class="video-item-date">1 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img2.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Hà Hồ dội nước lạnh lên đầu</a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Tin mới</a>
+                        <span class="video-item-date">2 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img1.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                        <span class="video-item-date">1 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img3.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Hành khách bị trói vì gây náo loạn trên chuyến bay của Vietjet Air ">Hành khách bị trói vì gây náo loạn trên chuyến bay của Vietjet Air </a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Người Đưa Tin</a>
+                        <span class="video-item-date">1 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img2.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Hà Hồ dội nước lạnh lên đầu</a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Tin mới</a>
+                        <span class="video-item-date">2 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img1.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                        <span class="video-item-date">1 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img3.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Hành khách bị trói vì gây náo loạn trên chuyến bay của Vietjet Air ">Hành khách bị trói vì gây náo loạn trên chuyến bay của Vietjet Air </a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Người Đưa Tin</a>
+                        <span class="video-item-date">1 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img2.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Hà Hồ dội nước lạnh lên đầu</a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Tin mới</a>
+                        <span class="video-item-date">2 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img1.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                        <span class="video-item-date">1 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img3.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Hành khách bị trói vì gây náo loạn trên chuyến bay của Vietjet Air ">Hành khách bị trói vì gây náo loạn trên chuyến bay của Vietjet Air </a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Người Đưa Tin</a>
+                        <span class="video-item-date">1 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img2.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Hà Hồ dội nước lạnh lên đầu</a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Tin mới</a>
+                        <span class="video-item-date">2 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img1.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu </a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Đời sống & Pháp Luật</a>
+                        <span class="video-item-date">1 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img3.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Hành khách bị trói vì gây náo loạn trên chuyến bay của Vietjet Air ">Hành khách bị trói vì gây náo loạn trên chuyến bay của Vietjet Air </a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Người Đưa Tin</a>
+                        <span class="video-item-date">1 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-3 clearfix">
+                    <a href="contestPage.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="lazy animateImg" src="images/video-img2.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="title-video clearfix">
+                        <a href="contestPage.html#" class="video-item-name" title="Video: Sao Việt thách thức Mr Đàm, Hà Hồ dội nước lạnh lên đầu ">Hà Hồ dội nước lạnh lên đầu</a> 
+                        <a href="contestPage.html#" class="video-item-uploader">Tin mới</a>
+                        <span class="video-item-date">2 ngày trước</span>
+                    </div>
+                </div><!--end video-item-->
+            	<div class="clearfix"></div>
+            	<div class="box-loadmore col-sm-4">
+            	<a class="loadmore" href="contestPage.html#">I want more</a>
+            </div>
+          </div>
+          <!-- end new-video-->
+            
+            
+        </div><!--/col-->
+       	<div class="sidebar-contest col-sm-4 col-md-4">
+        	<div class="news-contest">
+            	<h2>Báo chí nói về cuộc thi</h2>
+                <ul class="content-news-contest newsticker">
+                	<li class="row-news-contest">
+                    	<a class="link-news-contest" href="contestPage.html#">
+                            <img src="images/contest/tinmoi-logo.jpg">
+                            Bình Dương: Người dân phải sống chung với ngập lụt
+                        </a>
+                    </li>
+                    <li class="row-news-contest">
+                    	<a class="link-news-contest" href="contestPage.html#">
+                            <img src="images/contest/ndt-logo.jpg">
+                            Arsenal nhắm hàng thải Real, M.U có sao bự
+                        </a>
+                    </li>
+                    <li class="row-news-contest">
+                    	<a class="link-news-contest" href="contestPage.html#">
+                            <img src="images/contest/dspl-logo.jpg">
+                            Cộng đồng mạng sôi sục với vẻ gợi cảm của Á Hân (BB&BG) trong bản cover Kpop
+                        </a>
+                    </li>
+                    <li class="row-news-contest">
+                    	<a class="link-news-contest" href="contestPage.html#">
+                            <img src="images/contest/saoonline-logo.jpg">
+                            Quách An An diện váy siêu ngắn khoe chân dài trên phố
+                        </a>
+                    </li>
+                    <li class="row-news-contest">
+                    	<a class="link-news-contest" href="contestPage.html#">
+                            <img src="images/contest/tinmoi-logo.jpg">
+                            Bình Dương: Người dân phải sống chung với ngập lụt
+                        </a>
+                    </li>
+                    <li class="row-news-contest">
+                    	<a class="link-news-contest" href="contestPage.html#">
+                            <img src="images/contest/ndt-logo.jpg">
+                            Arsenal nhắm hàng thải Real, M.U có sao bự
+                        </a>
+                    </li>
+                    <li class="row-news-contest">
+                    	<a class="link-news-contest" href="contestPage.html#">
+                            <img src="images/contest/dspl-logo.jpg">
+                            Cộng đồng mạng sôi sục với vẻ gợi cảm của Á Hân (BB&BG) trong bản cover Kpop
+                        </a>
+                    </li>
+                    <li class="row-news-contest">
+                    	<a class="link-news-contest last" href="contestPage.html#">
+                            <img src="images/contest/saoonline-logo.jpg">
+                            Quách An An diện váy siêu ngắn khoe chân dài trên phố
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- end news-contest-->
+            <div class="videos-contest">
+                <h2><span class="hidden-sm">Clip </span>Tham khảo</h2>
+                <div class="sync2">
+                    <div id="sync2" class="owl-carousel">
+                        <div class="item"><a href="contestPage.html#">1</a></div>
+                        <div class="item"><a href="contestPage.html#">2</a></div>
+                        <div class="item"><a href="contestPage.html#">3</a></div>
+                        <div class="item"><a href="contestPage.html#">4</a></div>
+                        <div class="item"><a href="contestPage.html#">5</a></div>
+                    </div>
+                </div>
+                <div id="sync1" class="videos-contest-slider owl-carousel">
+                    <div class="video-contest item">
+                        <a class="video-contest-thumb contest fixThumbVideo" href="contestPage.html#">
+                            <img class="animateImg" src="images/contest/bbtran.jpg" />
+                            <span class="video-contest-bg">
+                                BB Trần
+                            </span>
+                            <span class="video-contest-play"><i class="fa fa-play"></i></span>
+                        </a>
+                    </div><!-- end video-item-->
+                    <div class="video-contest item">
+                        <a class="video-contest-thumb contest fixThumbVideo" href="contestPage.html#">
+                            <img class="animateImg" src="images/contest/tommiez.jpg" />
+                            <span class="video-contest-bg">
+                                Tommiez
+                            </span>
+                            <span class="video-contest-play"><i class="fa fa-play"></i></span>
+                        </a>
+                    </div><!-- end video-item-->
+                    <div class="video-contest item">
+                        <a class="video-contest-thumb contest fixThumbVideo" href="contestPage.html#">
+                            <img class="animateImg" src="images/contest/tiko.jpg" />
+                            <span class="video-contest-bg">
+                                Tiko
+                            </span>
+                            <span class="video-contest-play"><i class="fa fa-play"></i></span>
+                        </a>
+                    </div><!-- end video-item-->
+                    <div class="video-contest item">
+                        <a class="video-contest-thumb contest fixThumbVideo" href="contestPage.html#">
+                            <img class="animateImg" src="images/contest/quynhtran.jpg" />
+                            <span class="video-contest-bg">
+                                Quỳnh Trân
+                            </span>
+                            <span class="video-contest-play"><i class="fa fa-play"></i></span>
+                        </a>
+                    </div><!-- end video-item-->
+                    <div class="video-contest item">
+                        <a class="video-contest-thumb contest fixThumbVideo" href="contestPage.html#">
+                            <img class="animateImg" src="images/contest/lamahan.jpg" />
+                            <span class="video-contest-bg">
+                                Lâm Á Hân
+                            </span>
+                            <span class="video-contest-play"><i class="fa fa-play"></i></span>
+                        </a>
+                    </div><!-- end video-item-->
+                </div>
+            </div><!-- end videos-contest-->
+            
+            <div class="rank-contest">
+            	<div class="rank-contest-tabs clearfix">
+                	<h2 class="rank-title"><i class="fa fa-thumbs-up"></i>Top like</h2>
+                    <ul class="nav">
+                    	<li class="active"><a href="contestPage.html#cover" data-toggle="tab">Cover</a></li>
+                        <li><a href="contestPage.html#parody" data-toggle="tab">Parody</a></li>
+                    </ul>
+                </div><!-- end raking-contest-tabs-->
+                <div class="tab-content">
+                	<div id="cover" class="rank-contest-content tab-pane fade in active">
+                		<div class="rank-item">
+                    	<a class="rank-contest-thumb" href="contestPage.html#">
+                        	<img src="images/video-img4.jpg" />
+                            <span class="rank-number top1">1</span>
+                        </a>
+                        <p class="rank-contest-name"><a class="rank-contest-title" href="contestPage.html#">Anh Này Mà Qwerty Chắc Chưa Đến 30s Là Xong</a></p>
+                        <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                    </div>
+                    <div class="rank-item">
+                    	<a class="rank-contest-thumb" href="contestPage.html#">
+                        	<img src="images/video-img.jpg" />
+                            <span class="rank-number">2</span>
+                        </a>
+                        <p class="rank-contest-name"><a class="rank-contest-title" href="contestPage.html#">Ngày Của Long Đẹp Trai</a></p>
+                        <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                    </div>
+                    <div class="rank-item">
+                    	<a class="rank-contest-thumb" href="contestPage.html#">
+                        	<img src="images/video-img1.jpg" />
+                            <span class="rank-number">3</span>
+                        </a>
+                        <p class="rank-contest-name"><a class="rank-contest-title" href="contestPage.html#">Lk Trung Thu (Lyrics)</a></p>
+                        <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                    </div>
+                    <div class="rank-item">
+                    	<a class="rank-contest-thumb" href="contestPage.html#">
+                        	<img src="images/video-img2.jpg" />
+                            <span class="rank-number">4</span>
+                        </a>
+                        <p class="rank-contest-name"><a class="rank-contest-title" href="contestPage.html#">Kyo York hóa thành chú cuội trong MV trung thu</a></p>
+                        <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                    </div>
+                    <div class="rank-item">
+                    	<a class="rank-contest-thumb" href="contestPage.html#">
+                        	<img src="images/video-img3.jpg" />
+                            <span class="rank-number">5</span>
+                        </a>
+                        <p class="rank-contest-name"><a class="rank-contest-title" href="contestPage.html#">Sao Em Nỡ Vô Tình (Liveshow Trấn Thành 2014)</a></p>
+                        <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                    </div>
+                	</div>
+                	<div id="parody" class="rank-contest-content tab-pane fade">
+                        <div class="rank-item">
+                            <a class="rank-contest-thumb" href="contestPage.html#">
+                                <img src="images/video-img1.jpg" />
+                                <span class="rank-number top1">1</span>
+                            </a>
+                            <p class="rank-contest-name"><a class="rank-contest-title" href="contestPage.html#">Lk Trung Thu (Lyrics)</a></p>
+                            <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                        </div>
+                        <div class="rank-item">
+                            <a class="rank-contest-thumb" href="contestPage.html#">
+                                <img src="images/video-img2.jpg" />
+                                <span class="rank-number">2</span>
+                            </a>
+                            <p class="rank-contest-name"><a class="rank-contest-title" href="contestPage.html#">Kyo York hóa thành chú cuội trong MV trung thu</a></p>
+                            <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                        </div>
+                        <div class="rank-item">
+                            <a class="rank-contest-thumb" href="contestPage.html#">
+                                <img src="images/video-img4.jpg" />
+                                <span class="rank-number">3</span>
+                            </a>
+                            <p class="rank-contest-name"><a class="rank-contest-title" href="contestPage.html#">Anh Này Mà Qwerty Chắc Chưa Đến 30s Là Xong</a></p>
+                            <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                        </div>
+                        <div class="rank-item">
+                            <a class="rank-contest-thumb" href="contestPage.html#">
+                                <img src="images/video-img.jpg" />
+                                <span class="rank-number">4</span>
+                            </a>
+                            <p class="rank-contest-name"><a class="rank-contest-title" href="contestPage.html#">Ngày Của Long Đẹp Trai</a></p>
+                            <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                        </div>
+                        <div class="rank-item">
+                            <a class="rank-contest-thumb" href="contestPage.html#">
+                                <img src="images/video-img3.jpg" />
+                                <span class="rank-number">5</span>
+                            </a>
+                            <p class="rank-contest-name"><a class="rank-contest-title" href="contestPage.html#">Sao Em Nỡ Vô Tình (Liveshow Trấn Thành 2014)</a></p>
+                            <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                        </div>
+                	</div>
+                </div>
+            </div><!-- end raking-contest-->
+            
+            <div class="comment-contest">
+            	<h2>top comment</h2>
+                <div class="top-comment-content scrollable">
+                	<div class="comment-line">
+                    	<img class="comment-user" src="images/avatar.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar1.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Andy Lau</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">Rat hay va y nghia <3 !</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar2.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">Vai ca Tau khua @_@</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar3.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar1.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar2.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Andy Lau</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">Rat hay va y nghia <3 !</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar3.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">Vai ca Tau khua @_@</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar1.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Andy Lau</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">Rat hay va y nghia <3 !</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar2.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">Vai ca Tau khua @_@</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar3.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar1.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar2.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Andy Lau</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">Rat hay va y nghia <3 !</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar3.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">Vai ca Tau khua @_@</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line last">
+                    	<img class="comment-user" src="images/avatar.jpg">
+                        <div class="comment-text">
+                            <a href="contestPage.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestPage.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                </div><!-- end top-comment-content-->
+            </div><!-- end comment-contest-->
+            
+            
+        </div><!-- end sidebar-contest-->
+      </div><!--/container-->
+      <div class="footer container-fluid">
+      	<div class="col-md-6 hidden-xs hidden-sm">
+        	<div class="footer-head">
+            	<h3>Giới thiệu meme</h3>
+            </div>
+            <div class="footer-content footer-logo">
+            	<p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí… <a href="contestPage.html#" class="about-more">Xem thêm</a></p>
+                
+                <p class="master">Đơn vị chủ quản: <span>CÔNG TY CỔ PHẦN TRUYỀN THÔNG TRỰC TUYẾN NETLINK</span></p>
+                <p>Giấy phép MXH số 76/GXN-TTĐT</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+        	<div class="footer-head">
+            	<h3>Facebook</h3>
+            </div>
+            <div class="footer-content">
+            	<h5>TV Network</h5>
+                <div id="fb-root"></div>
+				<script>
+                    (function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                </script>
+                <div class="facebook">
+                    <div class="fb-like" data-href="https://www.facebook.com/memevietnam" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+        	<div class="footer-head">
+            	<h3>Hỗ trợ</h3>
+                </div>
+            <div class="footer-content">
+            	<ul class="nav">
+                	<li><a href="contestPage.html#">MeMe là gì?</a></li>
+                	<li><a href="contestPage.html#">Cách hoạt động</a></li>
+                    <li><a href="contestPage.html#">Lợi ích</a></li>
+                    <li><a href="contestPage.html#">Đối tác nội dung</a></li>
+                    <li><a href="contestPage.html#">Khiếu nại bản quyền</a></li>
+                    <li><a href="contestPage.html#">Liên hệ</a></li>
+                    <li><a href="contestPage.html#">Điều khoản sử dụng</a></li>
+                    <li><a href="contestPage.html#">Chính sách nội dung</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <!--end footer-->
+      <div class="footer-bottom col-xs-12">
+      	<span class="copyright">Copyright ©2013 meme.vn</span>
+      </div>
+      <!--end footer bottom-->
+  </div>
+  <!--end wrapper content-->
+  <a href="contestPage.html#" class="scrollToElement top" id="backtotoplink"><span class="icon icon-arrow-up-s"></span></a>
+  
+  <!--pop up login-->
+  <div id="loginPopup" class="loginPopup modal fade" tabindex="-1" role="dialog" ria-labelledby="myModalLabel" aria-hidden="true">
+  	  <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header clearfix">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div id="sign-header" class="bidouille">
+              <div  id="connect"><img src="images/logo_icone_white.svg" alt=""  width="39" height="34"><span>Connect with MEME</span></div>
+              <ul class="nav">
+                <li class="active"><a href="contestPage.html#tabs-1" data-toggle="tab">Đăng nhập</a></li>
+                <li><a href="contestPage.html#tabs-2" data-toggle="tab">Đăng ký</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-body tab-content clearfix">
+            <div id="tabs-1" class="tab-pane fade in active">
+              <fieldset style="border:0;">
+              	<div id="loading" class="loading" style="display:none;"><img src="images/loading.gif" alt="" />Đang xử lý!</div>
+                  <div class="message-error">Xin vui lòng nhập email!</div>
+                  <div class="message-success">Thành công!</div>
+                <div class="login-container">
+                  <div class="icone fb"><i class="fa fa-facebook"></i></div>
+                  <input class="cbp-mc-submit-fb" type="submit" value="Sign in with facebook" onclick="$('#loading').show();">
+                </div>
+                <p style=" margin:0; color:#bdbdbd; font-weight:100; font-size:12px; line-height:50px; text-align:center;">hoặc đăng nhập bằng tài khoản Meme</p>
+                <ul>
+                  <li>
+                    <div class="login-container">
+                      <div class="icone"><i class="fa fa-envelope"></i></div>
+                      <input id="email" name="email" type="email" placeholder="Email" required>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="login-container">
+                      <div class="icone"><i class="fa fa-lock"></i></div>
+                      <input id="phone" name="phone" type="password" placeholder="Mật khẩu" required>
+                    </div>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+                <p id="forgot"><a href="contestPage.html#">Bạn quên mật khẩu?</a></p>
+                <div id="bt">
+                <div class="policy-login col-sm-9">
+                        Khi đăng nhập vào Meme là bạn đã chấp nhận <a href="contestPage.html#">điều khoản sử dụng</a> và <a href="contestPage.html#">chính sách nội dung</a> của chúng tôi
+                    </div>
+                    <span class="col-sm-3">
+                      <input class="cbp-mc-submit" type="submit" value="Đăng Nhập">
+                      </span>
+                  </div>
+              </fieldset>
+            </div>
+            <div id="tabs-2" class="tab-pane fade">
+              <fieldset style="border:0;">
+                <div class="login-container">
+                  <div class="icone fb"><i class="fa fa-facebook"></i></div>
+                  <input class="cbp-mc-submit-fb" type="submit" value="Sign up with facebook">
+                </div>
+                <p style=" margin:0; color:#bdbdbd; font-weight:100; font-size:12px; line-height:50px; text-align:center;">hoặc đăng nhập bằng tài khoản Meme</p>
+                <ul>
+                  <li>
+                    <div class="login-container">
+                      <div class="icone"><i class="fa fa-user"></i></div>
+                      <input id="email" name="email" type="email" placeholder="Họ và tên" required>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="login-container">
+                      <div class="icone"><i class="fa fa-envelope"></i></div>
+                      <input id="email" name="email" type="email" placeholder="Email" required>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="login-container">
+                      <div class="icone"><i class="fa fa-envelope"></i></div>
+                      <input id="email" name="email" type="email" placeholder="Xác nhận Email" required>
+                    </div>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+                <div id="bt">
+                <div class="policy-login col-sm-9">
+                    Khi đăng ký tham gia vào Meme là bạn đã chấp nhận <a href="contestPage.html#">điều khoản sử dụng</a> và <a href="contestPage.html#">chính sách nội dung</a> của chúng tôi
+                    </div>
+                    <span class="col-sm-3">
+                      <input class="cbp-mc-submit" type="submit" value="Đăng ký">
+                      </span>
+                  </div>
+              </fieldset>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end login-->
+  
+
+  </body>
+</html>

@@ -1,0 +1,246 @@
+.video-js .vjs-big-play-button {
+  display: none;
+}
+
+.vjs-poster {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  cursor: pointer;
+  font-family: Arial;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.vjs-poster.postop .wrapper-btn-big-play {
+  top: 0;
+}
+.vjs-poster.posbottom .wrapper-btn-big-play {
+  bottom: 0;
+}
+.vjs-poster:hover .wrapper-btn-big-play .btn-big-play .icon-play {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.vjs-poster:hover .wrapper-btn-big-play .btn-big-play .title-mep {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-left: 10px;
+}
+.vjs-poster:hover .wrapper-btn-big-play .btn-big-play .icon-play svg {
+  margin-left: 0;
+  -ms-transform: scale(2, 2);
+  -webkit-transform: scale(2, 2);
+  transform: scale(2, 2);
+}
+.vjs-poster .wrapper-btn-big-play {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  left: 0;
+}
+.vjs-poster .wrapper-btn-big-play .btn-big-play {
+  height: 100%;
+  position: relative;
+  padding-left: 80px;
+}
+.vjs-poster .wrapper-btn-big-play .btn-big-play .icon-play {
+  width: 80px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: background-color 0.2s ease-in;
+  -moz-transition: background-color 0.2s ease-in;
+  -o-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+.vjs-poster .wrapper-btn-big-play .btn-big-play .icon-play svg {
+  fill: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 19px;
+  height: 20px;
+  margin-left: -8px;
+  margin-top: -10px;
+  -ms-transform: scale(1.4, 1.4);
+  -webkit-transform: scale(1.4, 1.4);
+  transform: scale(1.4, 1.4);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.vjs-poster .wrapper-btn-big-play .btn-big-play .title-mep {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 80px;
+  padding: 0 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.vjs-poster.poscenter:hover .wrapper-btn-big-play .btn-big-play .icon-play:before {
+  -ms-transform: scale(15, 15);
+  -webkit-transform: scale(15, 15);
+  transform: scale(15, 15);
+}
+.vjs-poster.poscenter:hover .wrapper-btn-big-play .btn-big-play .icon-play:after {
+  -ms-transform: scale(5, 5);
+  -webkit-transform: scale(5, 5);
+  transform: scale(5, 5);
+  opacity: 0;
+}
+.vjs-poster.poscenter:hover .wrapper-btn-big-play .btn-big-play .title-mep {
+  background-color: none;
+  bottom: 30px;
+}
+.vjs-poster.poscenter:hover .wrapper-btn-big-play .btn-big-play .icon-play svg {
+  -ms-transform: scale(5, 5);
+  -webkit-transform: scale(5, 5);
+  transform: scale(5, 5);
+}
+.vjs-poster.poscenter .wrapper-btn-big-play {
+  height: 100%;
+}
+.vjs-poster.poscenter .wrapper-btn-big-play .btn-big-play {
+  height: 100%;
+  padding-left: 0;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+.vjs-poster.poscenter .wrapper-btn-big-play .btn-big-play .icon-play {
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  background: none;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.vjs-poster.poscenter .wrapper-btn-big-play .btn-big-play .icon-play:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.vjs-poster.poscenter .wrapper-btn-big-play .btn-big-play .icon-play:after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: none;
+  top: -5px;
+  left: -5px;
+  border: 5px solid rgba(255, 255, 255, 0.6);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.vjs-poster.poscenter .wrapper-btn-big-play .btn-big-play .icon-play svg {
+  -ms-transform: scale(1.6, 1.6);
+  -webkit-transform: scale(1.6, 1.6);
+  transform: scale(1.6, 1.6);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.vjs-poster.poscenter .wrapper-btn-big-play .btn-big-play .title-mep {
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0 5%;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 90%;
+  -webkit-transition: bottom 0.2s ease-in;
+  -moz-transition: bottom 0.2s ease-in;
+  -o-transition: bottom 0.2s ease-in;
+  transition: bottom 0.2s ease-in;
+}
+/* responsive css for mobile */
+@media (max-width: 767px) {
+
+  .vjs-poster.postop:hover .wrapper-btn-big-play .btn-big-play .title-mep, .vjs-poster.posbottom:hover .wrapper-btn-big-play .btn-big-play .title-mep {
+    padding-left: 5px;
+  }
+  .vjs-poster.postop .wrapper-btn-big-play, .vjs-poster.posbottom .wrapper-btn-big-play {
+    height: 50px;
+  }
+  .vjs-poster.postop .wrapper-btn-big-play .btn-big-play, .vjs-poster.posbottom .wrapper-btn-big-play .btn-big-play {
+    padding-left: 50px;
+  }
+  .vjs-poster.postop .wrapper-btn-big-play .btn-big-play .title-mep, .vjs-poster.posbottom .wrapper-btn-big-play .btn-big-play .title-mep {
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0 16px;
+  }
+  .vjs-poster.postop .wrapper-btn-big-play .btn-big-play .icon-play, .vjs-poster.posbottom .wrapper-btn-big-play .btn-big-play .icon-play {
+    width: 50px;
+  }
+  .vjs-poster.postop .wrapper-btn-big-play .btn-big-play .icon-play svg, .vjs-poster.posbottom .wrapper-btn-big-play .btn-big-play .icon-play svg {
+    height: 12px;
+    margin-top: -7px;
+  }
+
+  .vjs-poster.poscenter:hover .wrapper-btn-big-play .btn-big-play .icon-play:before {
+    -ms-transform: scale(12, 12);
+    -webkit-transform: scale(12, 12);
+    transform: scale(12, 12);
+  }
+  .vjs-poster.poscenter:hover .wrapper-btn-big-play .btn-big-play .title-mep {
+    background-color: none;
+    bottom: 5px;
+  }
+  .vjs-poster.poscenter:hover .wrapper-btn-big-play .btn-big-play .icon-play svg {
+    -ms-transform: scale(3, 3);
+    -webkit-transform: scale(3, 3);
+    transform: scale(3, 3);
+  }
+  .vjs-poster.poscenter .wrapper-btn-big-play .btn-big-play .title-mep {
+    font-size: 14px;
+    bottom: 0;
+    line-height: 50px;
+    height: 50px;
+  }
+  .vjs-poster.poscenter .wrapper-btn-big-play .btn-big-play .icon-play {
+    width: 50px;
+    height: 50px;
+  }
+  .vjs-poster.poscenter .wrapper-btn-big-play .btn-big-play .icon-play svg {
+    height: 12px;
+    margin-top: -7px;
+  }
+  .vjs-poster.poscenter .wrapper-btn-big-play .btn-big-play .icon-play:after {
+    width: 50px;
+    height: 50px;
+  }
+}

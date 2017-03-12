@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Video Detail Playlist Mobile Version | MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese,latin-ext' rel='stylesheet' type='text/css'> 
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/detailMobile.css" rel="stylesheet">
+	
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    
+    <!-- start detail script-->
+    <script src="js/detailPlaylistMobile.js"></script>
+    
+    <script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- end detail script-->
+    
+</head>
+
+<body id="backtotop">
+
+	<div class="pageWrapper">
+    
+        <div id="header">
+            <button type="button" class="iconMenu"><i class="fa fa-bars"></i></button>
+            <a href="detailPlaylist.m.html#" class="logoMeme">meme.vn</a>
+            <button type="button" class="iconSearch"><i class="fa fa-search"></i></button>
+            <div class="WboxSearch">
+                <div class="boxSearch">
+                    <input type="text" class="formGlobal inputSearch" placeholder="Nhập tên video..." />
+                    <button type="submit" class="btnSearch"><i class="fa fa-search"></i></button>
+                    <button type="button" class="btnDelete"><i class="fa fa-times"></i></button>
+                    <button type="button" class="btnCancel">Hủy</button>
+                </div>
+            </div>
+        </div>
+        <!-- end header-->
+        
+        <div class="bgOverlay"></div>
+        <div class="bgOverlayS"></div>
+        
+    	<div id="menuMobile">
+        
+        	<div class="user clearfix">
+            	<a href="detailPlaylist.m.html#" class="thumbUser"><img src="images/avatar1.jpg" /></a>
+                <a href="detailPlaylist.m.html#" class="nameUser">Đào Viết Phương</a>
+            </div>
+            
+            <div class="actionUser">
+            	<a href="detailPlaylist.m.html#" class="btnUpload"><i class="icon icon-upload"></i>Upload</a>
+                <a href="detailPlaylist.m.html#" class="btnNoti"><i class="icon-notification"></i>Thông báo<span class="notiCount">25</span></a>
+            </div>
+            
+            <ul class="browser">
+            	<li><a href="detailPlaylist.m.html#" class="menuHot">Hot</a></li>
+                <li><a href="detailPlaylist.m.html#" class="menuHot">Xem nhiều</a></li>
+                <li><a href="detailPlaylist.m.html#" class="menuHot">Phim</a></li>
+                <li><a href="detailPlaylist.m.html#">Sự kiện</a></li>
+                <li><a href="detailPlaylist.m.html#">Tin tức</a></li>
+                <li><a href="detailPlaylist.m.html#">Hài</a></li>
+                <li><a href="detailPlaylist.m.html#">Thể thao</a></li>
+                <li><a href="detailPlaylist.m.html#">Dancingo</a></li>
+                <li><a href="detailPlaylist.m.html#">Game</a></li>
+                <li><a href="detailPlaylist.m.html#">Ẩm thực</a></li>
+                <li><a href="detailPlaylist.m.html#">Giáo dục</a></li>
+                <li><a href="detailPlaylist.m.html#">Blog</a></li>
+                <li><a href="detailPlaylist.m.html#">Showbiz</a></li>
+                <li><a href="detailPlaylist.m.html#">Xe cộ</a></li>
+                <li><a href="detailPlaylist.m.html#">Động vật</a></li>
+                <li><a href="detailPlaylist.m.html#">Đồ hoạ</a></li>
+                <li><a href="detailPlaylist.m.html#">Giải trí</a></li>
+                <li><a href="detailPlaylist.m.html#">Hướng dẫn</a></li>
+                <li><a href="detailPlaylist.m.html#">Thời trang - Làm đẹp</a></li>
+                <li><a href="detailPlaylist.m.html#">Công nghệ</a></li>
+                <li><a href="detailPlaylist.m.html#">Du lịch</a></li>
+                <li><a href="detailPlaylist.m.html#">Gia đình</a></li>
+                <li><a href="detailPlaylist.m.html#">Hoạt hình</a></li>
+                <li><a href="detailPlaylist.m.html#">Khoa học</a></li>
+                <li><a href="detailPlaylist.m.html#">Lifestyle</a></li>
+                <li><a href="detailPlaylist.m.html#">Nghệ thuật</a></li>
+                <li><a href="detailPlaylist.m.html#">Sức khoẻ</a></li>
+                <li><a href="detailPlaylist.m.html#">Thiên nhiên</a></li>
+                <li><a href="detailPlaylist.m.html#">Trẻ em</a></li>
+                <li><a href="detailPlaylist.m.html#">Sản phẩm</a></li>
+                <li><a href="detailPlaylist.m.html#">Quảng cáo</a></li>
+            </ul>
+            
+            <div class="footer">
+            	<ul>
+                	<li><a href="detailPlaylist.m.html#">MEME là gì?</a></li>
+                    <li><a href="detailPlaylist.m.html#">Cách hoạt động</a></li>
+                    <li><a href="detailPlaylist.m.html#">Điều khoản sử dụng</a></li>
+                    <li><a href="detailPlaylist.m.html#">Chính sách nội dung</a></li>
+                </ul>
+                <div class="infoCompany">
+                    <p class="companyName">MẠNG XÃ HỘI MEME</p>
+                    <p class="certificate">Giấy phép MXH số 76/GXN-TTĐT cấp ngày 14-06-2012</p>
+                </div>
+				<div class="copyright">
+                    <p class="copy">Copyright ©2014 meme.vn</p>
+                </div>
+            </div>
+            
+    	</div><!-- end menuMobile -->
+        
+        <div id="content">
+            <div class="wrapperPlayer">
+                <div class="player">
+                        <div id="Meme_kyonfbktqu" style="display: block; margin: 0 auto !important; width: 100%; height: 100%; max-width: 100%; background: url(http://embed.meme.vn/images/holder.png) center center no-repeat;">	
+                            <script type="text/javascript" src="http://embed.meme.vn/embedjs.php?type=clip&v=kyonfbktqu">//<![CDATA[//]]></script>
+                        </div>
+                </div><!-- end player -->
+            </div><!-- end wrapperPlayer -->
+            
+            <div class="contentVideo">
+            	
+                <div class="countStatis clearfix">
+                	<div class="colCountStatis"><a class="btnLike" href="detailPlaylist.m.html#"><i class="fa fa-thumbs-up"></i>125,300</a><!-- <a class="btnLike active" href="#"><i class="fa fa-thumbs-up"></i>125k</a>--></div>
+                	<div class="colCountStatis"><span><i class="fa fa-eye"></i>1,300,500</span></div>
+                </div><!-- end countStatis --> 
+                
+                <div class="playlistM">
+                
+                	<div class="headPlaylistM">
+                    	<p>Đang xem 3/33</p>
+                        <h2>Tổng hợp clip hay nhất mọi thời đại </h2>
+                        <button type="button" class="expandPlaylist"><i class="fa fa-list"></i></button>
+                    </div><!-- end headPlaylistM --> 
+                    
+                    <div id="contentPlaylistM" class="contentPlaylistM">
+                    	<ul>
+                        	<li>
+                            	<a href="detailPlaylist.m.html#">
+                                	<p class="thumbPLM">
+                                    	<img class="imgPLM" src="images/video-img1.jpg" />
+                                    	<span class="video-relate-time">06:30</span>
+                                        <span class="numberPLM">1</span>
+                                    </p>
+                                    <p class="namePLM">Quán quân The Voice Kid 2014 hát tặng fan trong buổi off ở Bình Định</p>
+                                    <span class="authorPLM">Bạn muốn hẹn hò HTV7</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="detailPlaylist.m.html#">
+                                	<p class="thumbPLM">
+                                    	<img class="imgPLM" src="images/video-img2.jpg" />
+                                    	<span class="video-relate-time">06:30</span>
+                                        <span class="numberPLM">2</span>
+                                    </p>
+                                    <p class="namePLM">Sụt sàn sân khấu The Voice Kids</p>
+                                    <span class="authorPLM">Người Đưa Tin</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="detailPlaylist.m.html#" class="active">
+                                	<p class="thumbPLM">
+                                    	<img class="imgPLM" src="images/video-img3.jpg" />
+                                    	<span class="video-relate-time">06:30</span>
+                                        <span class="numberPLM">3</span>
+                                        <span class="playingPLM"><img src="images/gifPlaying.gif" /></span>
+                                    </p>
+                                    <p class="namePLM">Thiện Nhân the voice kid 2014 hát 'Giọt sương' không nhạc cực hay</p>
+                                    <span class="authorPLM">Đời Sống & Pháp Luật</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="detailPlaylist.m.html#">
+                                	<p class="thumbPLM">
+                                    	<img class="imgPLM" src="images/video-img1.jpg" />
+                                    	<span class="video-relate-time">06:30</span>
+                                        <span class="numberPLM">4</span>
+                                    </p>
+                                    <p class="namePLM">Quán quân The Voice Kid 2014 hát tặng fan trong buổi off ở Bình Định</p>
+                                    <span class="authorPLM">Bạn muốn hẹn hò HTV7</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="detailPlaylist.m.html#">
+                                	<p class="thumbPLM">
+                                    	<img class="imgPLM" src="images/video-img2.jpg" />
+                                    	<span class="video-relate-time">06:30</span>
+                                        <span class="numberPLM">5</span>
+                                    </p>
+                                    <p class="namePLM">Sụt sàn sân khấu The Voice Kids</p>
+                                    <span class="authorPLM">Người Đưa Tin</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="detailPlaylist.m.html#">
+                                	<p class="thumbPLM">
+                                    	<img class="imgPLM" src="images/video-img3.jpg" />
+                                    	<span class="video-relate-time">06:30</span>
+                                        <span class="numberPLM">6</span>
+                                    </p>
+                                    <p class="namePLM">Thiện Nhân the voice kid 2014 hát 'Giọt sương' không nhạc cực hay</p>
+                                    <span class="authorPLM">Đời Sống & Pháp Luật</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="detailPlaylist.m.html#">
+                                	<p class="thumbPLM">
+                                    	<img class="imgPLM" src="images/video-img1.jpg" />
+                                    	<span class="video-relate-time">06:30</span>
+                                        <span class="numberPLM">7</span>
+                                    </p>
+                                    <p class="namePLM">Quán quân The Voice Kid 2014 hát tặng fan trong buổi off ở Bình Định</p>
+                                    <span class="authorPLM">Bạn muốn hẹn hò HTV7</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="detailPlaylist.m.html#">
+                                	<p class="thumbPLM">
+                                    	<img class="imgPLM" src="images/video-img2.jpg" />
+                                    	<span class="video-relate-time">06:30</span>
+                                        <span class="numberPLM">8</span>
+                                    </p>
+                                    <p class="namePLM">Sụt sàn sân khấu The Voice Kids</p>
+                                    <span class="authorPLM">Người Đưa Tin</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="detailPlaylist.m.html#">
+                                	<p class="thumbPLM">
+                                    	<img class="imgPLM" src="images/video-img3.jpg" />
+                                    	<span class="video-relate-time">06:30</span>
+                                        <span class="numberPLM">9</span>
+                                    </p>
+                                    <p class="namePLM">Thiện Nhân the voice kid 2014 hát 'Giọt sương' không nhạc cực hay</p>
+                                    <span class="authorPLM">Đời Sống & Pháp Luật</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="loadmorePLM">Còn tiếp 24 video...<span id="contentPlaylistMlink" class="collapsePlaylist"><i class="fa fa-sort-desc"></i></span></a>
+                    </div><!-- end contentPlaylistM --> 
+                    
+                </div><!-- end playlistM --> 
+                
+                <h1 class="contentTitle">Bố Ơi Mình Đi Đâu Thế Tập 3 Full | Dad Where Are We Going</h1>
+                
+                <div class="contentStatis clearfix">
+                	<div class="movieDetailChannel">
+                        <a href="detailPlaylist.m.html#"><img src="images/channelImg3.jpg" /></a>
+                        <a href="detailPlaylist.m.html#" class="channelLink">The Voice Kid 2014</a>
+                        <div class="subscribeBox">
+                            <button type="button" class="btn btnPrimarySmall pull-left"><i class="fa fa-play-circle"></i>Subscribe</button>
+                            <!--<button type="button" class="btn btnDefaultSmall pull-left"><i class="fa fa-check-circle"></i>Subscribed</button>
+                            <button type="button" class="btn btnDefaultSmall pull-left"><i class="fa fa-times-circle"></i>Unsubscribe</button>-->
+                            <div class="boxCount pull-left">
+                                <div class="arrowRight"></div>
+                                23k
+                            </div>
+                        </div><!-- end subscribeBox --> 
+                    </div><!-- end movieDetailChannel -->
+                	
+                    
+                </div>
+                
+            </div><!-- end contentVideo -->
+            
+            <div class="contentTabs">
+                
+                <div class="tabs">
+                    <ul class="tab">
+                        <li class="current"><a href="detailPlaylist.m.html#infoContent" class="linkTotab"><i class="fa fa-info-circle"></i></a></li>
+                        <li><a href="detailPlaylist.m.html#shareContent" class="linkTotab"><i class="fa fa-share-square-o"></i></a></li>
+                        <li><a href="detailPlaylist.m.html#addtoContent" class="linkTotab"><i class="fa fa-plus"></i></a></li>
+                        <li><a href="detailPlaylist.m.html#reportContent" class="linkTotab"><i class="fa fa-exclamation-circle"></i></a></li>
+                        <li><a href="detailPlaylist.m.html#" id="commentslink" class="scrollToElement"><i class="fa fa-comment"></i></a></li>
+                    </ul>
+                    
+                </div><!-- end tabs -->
+                
+                <div class="tabsContent clearfix">
+                
+                    <div id="infoContent" class="current">
+                        
+                        <p class="uploaded">Uploaded: 10:14:01 | 23/09/2014</p>
+
+                        <h3 class="movieDetailTitleH3">Hai dòng nước mắt - Đông Thiên Đức</h3>
+                        <div class="movieDetailDesc" id="outer">
+                            <div id="inner" class="clearfix">
+                                Thiết kế cá tính, công nghệ phong phú, PCX là con bài khá thành công tại nhiều thị trường. Tuy nhiên, khi về Việt Nam dù được mạnh tay quảng Thiết kế cá tính, công nghệ phong phú, PCX là con bài khá thành công tại nhiều thị trường. Tuy nhiên, khi về Việt Nam dù được mạnh tay quảng
+
+
+                            </div>
+                        </div>
+                        <div class="readmoreInfo">
+                            <a href="detailPlaylist.m.html#" class="descMore">Xem thêm...</a>
+                            <a href="detailPlaylist.m.html#" class="descLess">Rút gọn</a>
+                        </div>
+                        <div class="tags">
+                            <h4><i class="fa fa-tags"></i>Từ khóa</h4>
+                            <ul>
+                                <li><a href="detailPlaylist.m.html#">clip vui</a></li>
+                                <li><a href="detailPlaylist.m.html#">video vui</a></li>
+                                <li><a href="detailPlaylist.m.html#">mr bean</a></li>
+                                <li><a href="detailPlaylist.m.html#">hai huoc</a></li>
+                                <li><a href="detailPlaylist.m.html#">diep vien</a></li>
+                                <li><a href="detailPlaylist.m.html#">dien vien</a></li>
+                                
+                            </ul>
+                        </div><!-- end tags -->
+                    </div><!-- end infoContent -->
+                    
+                    <div id="shareContent">
+                    	<h4>Chia sẻ video</h4>
+                        <div class="wrapperBtn">
+                            <div class="btnIframe">
+                                <a href="detailPlaylist.m.html#" data-content='<iframe src="http://embed.meme.vn/embedif.php?type=clip&v=zjbwyc3pu4" width="560" height="315" frameborder="0"></iframe>'><i class="fa fa-code"></i><br/><span>iframe</span></a>
+                            </div>
+                            <div class="btnJava">
+                                <a href="detailPlaylist.m.html#" data-content='<div id="Meme_zjbwyc3pu4" style="display: block; margin: 0 auto !important; width: 560px; height: 315px; max-width: 100%; background: url(//embed.meme.vn/images/holder.png) center center no-repeat;"><script type="text/javascript" src="http://embed.meme.vn/embedjs.php?type=clip&v=zjbwyc3pu4">//<![CDATA[//]]></script></div>'><i class="fa fa-terminal"></i><br/><span>Javascript</span></a>
+                            </div>
+                            <div class="btnLink">
+                                <a href="detailPlaylist.m.html#" data-content='http://www.meme.vn/video?v=zjbwyc3pu4'><i class="fa fa-link"></i><br/><span>Link video</span></a>
+                            </div>
+                            <div class="btnFacebook">
+                                <a href="detailPlaylist.m.html#"><i class="fa fa-facebook"></i><br/><span>Facebook</span></a>
+                            </div>
+                            <div class="btnGoogle">
+                                <a href="detailPlaylist.m.html#"><i class="fa fa-google-plus"></i><br/><span>Google plus</span></a> 
+                            </div>
+                        </div>
+                                                                                               
+                    </div><!-- end shareContent -->
+                    
+                    <div id="addtoContent">
+                        
+                        <h4>Thêm vào playlist</h4>
+                        <div class="playlistList">
+                            <!--<p class="noPlaylist">Bạn chưa có playlist nào ~.~</p>-->
+                            <ul>
+                                <li><a href="detailPlaylist.m.html#">Phim yêu thích (20)</a></li>
+                                <li><a href="detailPlaylist.m.html#">Phim của tui (10)</a></li>
+                                <li><a href="detailPlaylist.m.html#" class="success">Phim ghét nhất (4)<i class="fa fa-check"></i></a></li>
+                                <li><a href="detailPlaylist.m.html#">Phim 18+</a></li>
+                                <li><a href="detailPlaylist.m.html#">Phim Mỹ</a></li>
+                                <li><a href="detailPlaylist.m.html#">Các phim hot nhất</a></li>
+                                <li><a href="detailPlaylist.m.html#">Phim 18+</a></li>
+                                <li><a href="detailPlaylist.m.html#">Phim Mỹ</a></li>
+                                <li><a href="detailPlaylist.m.html#">Các phim hot nhất</a></li>
+                            </ul>
+                            <div class="playlistForm">
+                                <input type="text" class="form-control" placeholder="Nhập tên playlist" />
+                                <div class="actionPlaylist">
+                                    <select class="form-control pickAction pull-left">
+                                        <option>Công khai</option>
+                                        <option>Riêng tư</option>
+                                    </select>
+                                    <button type="submit" class="btn btnPrimary pull-right">Tạo playlist</button>
+                                </div>
+                            </div><!-- end playlistForm -->
+                        </div><!-- end playlistList -->
+                        
+                    </div><!-- end addtoContent -->
+                    
+                    <div id="reportContent">
+                        <h4>Báo lỗi video</h4>
+                        <div class="wrapperRadio">
+                            <label>
+                                <input type="radio" class="inputRadio" /> Báo lỗi video
+                            </label>
+                            <label>
+                                <input type="radio" class="inputRadio" checked /> Video này đã vi phạm bản quyền 
+                            </label>
+                        </div>
+                        <div class="wrapperForm">
+                            <div class="rowForm"><input type="text" class="formGlobal" placeholder="Họ tên của bạn" /></div>
+                            <div class="rowForm"><input type="text" class="formGlobal" placeholder="Số điện thoại của bạn" /></div>
+                            <div class="rowForm"><input type="text" class="formGlobal" placeholder="Email của bạn" /></div>
+                            <div class="rowForm"><input type="text" class="formGlobal" placeholder="Link video gốc của bạn" /></div>
+                            <div class="rowForm">
+                            	<textarea placeholder="Nội dung ví dụ: Tôi tin rằng video này đã vi phạm bản quyền của tôi / tổ chức tôi đang đại diện. Tôi cam đoan đây là thông tin chính xác. Tôi sẽ chịu mọi trách nhiệm khi thực hiện hành động tố cáo này " rows="5" class="formGlobal" name="descriptions" id="descriptions"></textarea>
+                            </div>
+                            <div class="noteForm">Giúp Meme sửa lỗi bằng cách thông báo chi tiết bạn sẽ có cơ hội nhận những phần quà từ chúng tôi.</div>
+                            <div class="rowForm"><button type="submit" class="btnReport btnPrimary">Gửi</button></div>
+                        </div>
+                    </div><!-- end addtoContent -->
+                    
+                </div><!-- end tabsContent -->
+                
+            </div><!-- end contentTabs -->
+            
+            <div class="boxDetail">
+                <div class="headboxDetail">
+                    <div class="contentBD clearfix">
+                        <h3><a href="detailPlaylist.m.html#">Video liên quan</a></h3>
+                    </div>
+                </div>
+                <div class="relateVideo clearfix">
+                    
+                    <div class="videoRelateItem">
+                        <a class="videoRelateThumb" href="detailPlaylist.m.html#">
+                            <img src="images/video-img3.jpg">
+                            <span class="video-relate-time">05:30</span>
+                        </a>
+                        <a class="videoRelateTitle" href="detailPlaylist.m.html#">Dưa Leo hát - Last Christmas theo phong cách Glee</a>
+                    </div>
+                    <div class="videoRelateItem">
+                        <a class="videoRelateThumb" href="detailPlaylist.m.html#">
+                            <img src="images/video-img2.jpg">
+                            <span class="video-relate-time">05:30</span>
+                        </a>
+                        <a class="videoRelateTitle" href="detailPlaylist.m.html#">Một Nửa Hạnh Phúc - Hồ Quang Hiếu</a>
+                    </div>
+                    <div class="videoRelateItem">
+                        <a class="videoRelateThumb" href="detailPlaylist.m.html#">
+                            <img src="images/video-img1.jpg">
+                            <span class="video-relate-time">05:30</span>
+                        </a>
+                        <a class="videoRelateTitle" href="detailPlaylist.m.html#">Gương Mặt Thân Quen Nhí - Tập 1 Full</a>
+                    </div>
+                    <div class="videoRelateItem">
+                        <a class="videoRelateThumb" href="detailPlaylist.m.html#">
+                            <img src="images/video-img3.jpg">
+                            <span class="video-relate-time">05:30</span>
+                        </a>
+                        <a class="videoRelateTitle" href="detailPlaylist.m.html#">Hài - Nhiều chày giã chung - Chip Đường Phố</a>
+                    </div>
+                    <div class="videoRelateItem">
+                        <a class="videoRelateThumb" href="detailPlaylist.m.html#">
+                            <img src="images/video-img3.jpg">
+                            <span class="video-relate-time">05:30</span>
+                        </a>
+                        <a class="videoRelateTitle" href="detailPlaylist.m.html#">Dưa Leo hát - Last Christmas theo phong cách Glee</a>
+                    </div>
+                    <div class="videoRelateItem">
+                        <a class="videoRelateThumb" href="detailPlaylist.m.html#">
+                            <img src="images/video-img2.jpg">
+                            <span class="video-relate-time">05:30</span>
+                        </a>
+                        <a class="videoRelateTitle" href="detailPlaylist.m.html#">Một Nửa Hạnh Phúc - Hồ Quang Hiếu</a>
+                    </div>
+                    <div class="videoRelateItem">
+                        <a class="videoRelateThumb" href="detailPlaylist.m.html#">
+                            <img src="images/video-img1.jpg">
+                            <span class="video-relate-time">05:30</span>
+                        </a>
+                        <a class="videoRelateTitle" href="detailPlaylist.m.html#">Gương Mặt Thân Quen Nhí - Tập 1 Full</a>
+                    </div>
+                    <div class="videoRelateItem">
+                        <a class="videoRelateThumb" href="detailPlaylist.m.html#">
+                            <img src="images/video-img3.jpg">
+                            <span class="video-relate-time">05:30</span>
+                        </a>
+                        <a class="videoRelateTitle" href="detailPlaylist.m.html#">Hài - Nhiều chày giã chung - Chip Đường Phố</a>
+                    </div>
+                    
+                    
+                </div><!-- end relateVideo -->
+			</div> <!-- end boxDetail -->  
+            
+            <div class="boxDetail">
+                <div class="headboxDetail">
+                    <div class="contentBD clearfix">
+                        <h3>Bình luận</h3>
+                    </div>
+                </div>
+                <div id="comments" class="contentboxDetail clearfix">
+                    <div class="WcommentFacebook">
+                        <div class="commentFacebook">
+                            <div class="fb-comments" data-href="http://www.meme.vn/video/lich-su-bong-da-tg-chua-gap-ca-nao-nho-cho-thu-mon-the-nay-fk4amtnlvc" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
+                        </div>
+                    </div>
+                </div>
+             </div><!-- end boxDetail -->  
+                     
+        </div><!--end content-->
+        
+    </div><!--end pageWrapper-->
+
+</body>
+
+</html>

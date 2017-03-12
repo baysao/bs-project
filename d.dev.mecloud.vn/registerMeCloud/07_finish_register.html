@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Check Website| Register MeCloud</title>
+    <link href="css/register.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+            
+			$('ul.pickPack li .namePack').click(function(e){
+				e.preventDefault();
+				
+				$('ul.pickPack li .namePack').find('.check').removeClass('checked');
+				$(this).find('.check').addClass('checked');
+					
+			});
+			
+        });
+    </script>    
+	
+</head>
+
+<body>
+<div class="wrapperSignup">
+    <div class="photoSignUp"></div>
+    <div class="outerSignup">
+        
+        <div class="headSignup">
+        	<a class="logo" href="07_finish_register.html#">mecloud.vn</a>
+            <h1>Đăng ký</h1>
+        </div>
+        
+        <div class="formSignup">
+        
+            <ul class="stepSignup clearfix">
+                <li class="done"><a href="07_finish_register.html#">Thông tin<br> đăng ký</a></li>
+                <li class="done"><a href="07_finish_register.html#">Kiểm tra<br> website</a></li>
+                <li class="done"><a href="07_finish_register.html#">Chọn gói<br> sản phẩm</a></li>
+                <li class="current"><a href="07_finish_register.html#">Hoàn<br> thành</a></li>
+            </ul>
+        
+            <h4 class="question">Thông tin đăng ký thành công</h4>
+            
+            <div class="infoRegister">
+                <div class="table">
+                    <div class="row">
+                        <div class="col nameField">Họ tên:</div>
+                        <div class="col dataNameField">Johny Nguyễn</div>
+                    </div>
+                    <div class="row">
+                        <div class="col nameField">Email:</div>
+                        <div class="col dataNameField"><a href="mailto:johnnynguyen@gmail.com">johnnynguyen@gmail.com</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col nameField">Phone:</div>
+                        <div class="col dataNameField">090002550</div>
+                    </div>
+                    <div class="row">
+                        <div class="col nameField">Website:</div>
+                        <div class="col dataNameField">www.blogtamsu.vn</div>
+                    </div>
+                    <div class="row">
+                        <div class="col nameField">Ngày:</div>
+                        <div class="col dataNameField">28/08/2015</div>
+                    </div>
+                    <div class="row">
+                        <div class="col nameField">Tên gói:</div>
+                        <div class="col dataNameField">Pro 2</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

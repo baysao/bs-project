@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Meme Cloud Service</title>
+        
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/fontMeme.css">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link rel='stylesheet' href='css/layerslider.css'>
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link href="css/style.css" rel="stylesheet">
+        
+        
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body data-spy="scroll" data-target="nav.navbar">
+    	<header>
+        
+        	<!-- Static navbar -->
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="logo-cloud page-scroll" href="index_en.html#page-top">Meme Cloud</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                    	<ul class="nav navbar-nav navbar-right navbar-action">
+                            <li><a class="btn-smallText" href="http://login.mecloud.vn">Login</a></li>
+                            <li><a class="btn-smallText" href="index_en.html#" data-toggle="modal" data-target="#signup">Sign up</a></li>
+                            <li>
+                            	<a href="index.html" class="language" title="Vietnamese"><img src="images/flag-vn.jpg" /></a>
+                                <!--<a href="#" class="language" title="English"><img src="images/flag-en.jpg" /></a>-->
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="page-scroll" href="index_en.html#feature">Features</a></li>
+                            <li><a class="page-scroll" href="index_en.html#client">Clients</a></li>
+                            <li><a class="page-scroll" href="index_en.html#plan">Plans</a></li>
+                            <li><a href="videoPlayer.html">Video Player</a></li>
+                        </ul>
+                        
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </nav>
+        </header><!-- end header -->
+        
+        <section id="page-top" class="home">
+        	<video autoplay loop id="bgvid">
+                <source src="images/saigon.mp4" type="video/mp4">
+            </video>
+        	<div class="bgOverlayHome"></div>
+        	<div class="container">
+	        	<h1>SIMPLY MONETIZE ONLINE VIDEO</h1>
+                <div class="home-item">
+                	<div class="row">
+                    	<div class="col-sm-4">
+                        	<div class="flip-container hover">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="frontContent">
+                                        	<span class="img-upload"></span>
+                                            <h3>Upload & Manage</h3>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="backContent">
+                                        	<ul>
+                                            	<li><span class="icon fmm-check"></span>Multi-bitrate encode</li>
+                                                <li><span class="icon fmm-check"></span>Video Content Management System</li>
+												<li><span class="icon fmm-check"></span>Real-time Analytics</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/col-->
+                        <div class="col-sm-4">
+                        	<div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="frontContent">
+                                        	<span class="img-money"></span>
+                                            <h3>Publish & Monetize</h3>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="backContent">
+                                        	<ul>
+                                            	<li><span class="icon fmm-check"></span>Any screen playback</li>
+                                                <li><span class="icon fmm-check"></span>IMA & VAST ads support</li>
+                                                <li><span class="icon fmm-check"></span>Auto optimize revenue</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/col-->
+                        <div class="col-sm-4">
+                        	<div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="frontContent">
+                                        	<span class="img-brand"></span>
+                                            <h3>Your Own Brand</h3>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="backContent">
+                                        	<ul>
+                                            	<li><span class="icon fmm-check"></span>White-label player</li>
+                                                <li><span class="icon fmm-check"></span>Watermark support</li>
+                                                <li><span class="icon fmm-check"></span>Create your own site/app via APIs</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/col-->
+                        
+                    </div>
+                </div><!--home-item-->
+                
+                <div class="btns-home">
+                    <a href="index_en.html#" class="btn btn-trial">Free Trial</a>
+                    <a href="index_en.html#feature" class="btn btn-features page-scroll">What's Cool?</a>
+                </div><!--btns-home-->
+            </div>
+        </section><!-- end home -->
+        
+        <section id="screenshot" class="screen-shot os-animation" data-os-animation="fadeIn">
+       		<div class="ls-wp-fullwidth-container">
+               <div class="ls-wp-fullwidth-helper">
+                  <div id="slide_screen" class="ls-wp-container ls-jupiter" style="width: 100%; margin: 0px auto; ">
+                  
+                     <div class="ls-layer" style="slidedirection: right; slidedelay: 4000; durationin: 1500; durationout: 1500; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0; timeshift: 0; transition2d: all; ">
+                        <img src="images/bg-ss-2.jpg" class="ls-bg" alt="Slide background">
+                        <h3 class="ls-s-1" style="color:#ffffff; top:100px; left: 465px; slidedirection : fade; slideoutdirection : left; durationin : 500; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; showuntil : 0;">Screenshot</h3>
+                        <h4 class="ls-s-1" style="position: absolute; text-align:center; color:#ffffff; top:275px; left: 90px; slidedirection : fade; slideoutdirection : left; durationin : 2000; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; showuntil : 0;">Video<br />Dashboard</h4>
+                        <img class="ls-s-1 arrow-screen" style="position: absolute; top:330px; left: 120px; slidedirection : fade; slideoutdirection : left; durationin : 1500; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; showuntil : 0;" src="images/arrow-up.png" />
+                        <img  class="ls-s-1" style="position: absolute; top:390px; left: 125px; slidedirection : left; slideoutdirection : left; durationin : 500; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; showuntil : 0;" src="images/cloud-upload.png" />
+                     </div>
+                     
+                     <div class="ls-layer" style="slidedirection: right; slidedelay: 4000; durationin: 1500; durationout: 1500; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0; timeshift: 0; transition2d: all; ">
+                        <img src="images/bg-ss-1.jpg" class="ls-bg" alt="Slide background">
+                        <h3 class="ls-s-1" style="color:#ffffff; top:100px; left: 465px; slidedirection : fade; slideoutdirection : left; durationin : 500; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; showuntil : 0;">Screenshot</h3>
+                        <h4 class="ls-s-1" style="position: absolute; text-align:center; color:#ffffff; top:275px; left: 95px; slidedirection : fade; slideoutdirection : left; durationin : 2000; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; showuntil : 0;">Real-time<br />Analytics</h4>
+                        <img class="ls-s-1 arrow-screen" style="position: absolute; top:330px; left: 120px; slidedirection : fade; slideoutdirection : left; durationin : 1500; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; showuntil : 0;" src="images/arrow-up.png" />
+                        <img class="ls-s-1" style="position: absolute; top:390px; left: 125px; slidedirection : left;  slideoutdirection : left; durationin : 1000; durationout : 1000; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; showuntil : 0;" src="images/video-analytic.png" />
+                     </div>
+                     
+                     
+                     
+                  </div><!-- end slide_player -->
+               </div>
+            </div>
+        </section>
+        
+        <section id="feature" class="feature">
+        	<div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3 class="heading os-animation" data-os-animation="fadeInLeft">Features</h3>
+                        <div class="divider os-animation" data-os-animation="fadeIn"></div>
+                        <p class="description os-animation" data-os-animation="fadeInRight">Online video made simple. One solution for managing, publishing, monetizing, and analyzing your video online.</p>
+                    </div>
+                </div><!-- row -->
+                <div class="row feature-items os-animation" data-os-animation="fadeInUp">
+                
+                	<div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-devices"></i></div>
+                            <div class="feature-title"><span>Plays Everywhere</span></div>
+                            <div class="feature-desc">Works across browsers, tablets and mobile device. Utilize HTML5 video and adaptive streaming for delivery. Seamless Flash fallback. Support for iPhone, iPad, Android and Windows Phone 8.</div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                	<div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-mkv"></i></div>
+                            <div class="feature-title"><span>Almost all video formats</span></div>
+                            <div class="feature-desc">To maximize compatibility, we supports many popular formats & such as MKV, MOV, MP4, FLV , AVI,... and more than 150 other video codecs.</div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-resolution"></i></div>
+                            <div class="feature-title"><span>HD & Multi-bitrate</span></div>
+                            <div class="feature-desc">Full HD creates the optimal video playback experience. Video is delivered through adaptive streaming to support everything low-bandwidth mobile delivery to stunning Full HD in full screen. </div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-player"></i></div>
+                            <div class="feature-title"><span>Your Own Brand</span></div>
+                            <div class="feature-desc">Lets you customize video player, set watermark, and ensure your branding follows your content wherever it is distributed.</div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-cdn"></i></div>
+                            <div class="feature-title"><span>Delivery with CDN</span></div>
+                            <div class="feature-desc">Your videos automatically stream to the end user from the closest and fastest server in our network of streaming servers.</div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-cloud"></i></div>
+                            <div class="feature-title"><span>Cloud Storage</span></div>
+                            <div class="feature-desc">Automatic back up your data to the cloud servers of our network</div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-cms"></i></div>
+                            <div class="feature-title"><span>Video Content Management System</span></div>
+                            <div class="feature-desc">Our online video CMS makes it easy to sort, manage, search and organize your entire media library</div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-eoffice"></i></div>
+                            <div class="feature-title"><span>Multi-User Account</span></div>
+                            <div class="feature-desc">Create additional users with access to your account and control who manages what. Makes team collaboration effective with real-time notifications.</div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-analytics-chart-graph"></i></div>
+                            <div class="feature-title"><span>Real-time Analytics</span></div>
+                            <div class="feature-desc">A full set of tools let you keep track of your video's performance, plus complete real-time video statistics integration into your Google Analytics account..</div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-ima"></i></div>
+                            <div class="feature-title"><span>Your Own Ads</span></div>
+                            <div class="feature-desc">Your ads can be served as a pre-roll, mid-roll or post-roll, we comply with both Google Interactive Media Ads and IAB VAST.</div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-revenue-1"></i></div>
+                            <div class="feature-title"><span>Auto Optimize Revenue</span></div>
+                            <div class="feature-desc">Increase revenue using video advertising optimization. </div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                    	<div class="feature-item clearfix">
+                        	<div class="feature-icon"><i class="icon fmm-api"></i></div>
+                            <div class="feature-title"><span>API & Integration </span></div>
+                            <div class="feature-desc">It's easy to integrate our platform into existing pages or apps using the full-featured, secure REST-style API.</div>
+                        </div><!-- feature-item -->
+                    </div><!-- /col -->
+                    
+                </div><!-- /row -->
+            </div><!-- container -->
+        </section><!-- end feature -->
+        
+        <section id="client" class="client">
+        	<div class="container">
+            	<div class="row">
+                    <div class="col-md-12">
+                        <h4 class="os-animation" data-os-animation="fadeInLeft">OUR CLIENTS</h4>
+                        <div class="client-slide os-animation" data-os-animation="fadeInRight">
+                            <div class="client-item">
+                                <img class="img-responsive" src="images/dspl.jpg" />
+                            </div><!-- client-item -->
+                            <div class="client-item">
+                                <img class="img-responsive" src="images/tinmoi.jpg" />
+                            </div><!-- client-item -->
+                            <div class="client-item">
+                                <img class="img-responsive" src="images/techz.jpg" />
+                            </div><!-- client-item -->
+                            <div class="client-item">
+                                <img class="img-responsive" src="images/thethao.jpg" />
+                            </div><!-- client-item -->
+                            <div class="client-item">
+                                <img class="img-responsive" src="images/saoonline.jpg" />
+                            </div><!-- client-item -->
+                            <div class="client-item">
+                                <img class="img-responsive" src="images/ndt.jpg" />
+                            </div><!-- client-item -->
+                            <div class="client-item">
+                                <img class="img-responsive" src="images/techz.jpg" />
+                            </div><!-- client-item -->
+                            <div class="client-item">
+                                <img class="img-responsive" src="images/thethao.jpg" />
+                            </div><!-- client-item -->
+                        </div>
+                    </div>
+                    <!--<div class="col-md-6">
+                        <h4>WHAT OUR CLIENTS SAY ?</h4>
+                        <div class="client-say">
+                            <div id="client-say-carousel" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#client-say-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#client-say-carousel" data-slide-to="1"></li>
+                                    <li data-target="#client-say-carousel" data-slide-to="2"></li>
+                                </ol>
+                                
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <div class="wrap-cs">
+                                            <img src="images/team_pic_2.jpg" class="img-responsive img-cs" alt="Michael Schumacher" />
+                                            <div class="info-cs">
+                                                <p class="name-cs">Michael Schumacher</p>
+                                                <p class="say-cs">Suspendisse at nisl libero. Ut sed vestibulum ex. Aliquam hendrerit nulla vel sem condimentum ultrices.</p>
+                                                <p class="company-cs">from saoonline.vn</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wrap-cs">
+                                            <img src="images/team_pic_1.jpg" class="img-responsive img-cs" alt="Michael Schumacher" />
+                                            <div class="info-cs">
+                                                <p class="name-cs">Amon</p>
+                                                <p class="say-cs">Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                <p class="company-cs">from nguoiduatin.vn</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wrap-cs">
+                                            <img src="images/team_pic_4.jpg" class="img-responsive img-cs" alt="Michael Schumacher" />
+                                            <div class="info-cs">
+                                                <p class="name-cs">Michael Schumacher</p>
+                                                <p class="say-cs">Suspendisse at nisl libero. Ut sed vestibulum ex. Aliquam hendrerit nulla vel sem condimentum ultrices.</p>
+                                                <p class="company-cs">from thethao247.vn</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->   
+                </div>
+            </div><!-- container -->
+        </section><!-- end client -->
+        
+        <section id="plan" class="plan">
+        	<div class="container">
+            	<div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3 class="heading os-animation" data-os-animation="fadeInLeft">Plans</h3>
+                        <div class="divider os-animation" data-os-animation="fadeIn"></div>
+                        <p class="description os-animation" data-os-animation="fadeInRight">Choose one that's right for you or just contact us </p>
+                    </div>
+                </div><!-- /row -->
+                
+                <div class="price-table table-responsive">
+                    <table class="table table-bordered">
+                    	
+                        <tr>
+                        	<th class="removePdd" width="230">
+                            	<div class="feature-plan">
+                                	<div class="plan-content">
+	                                    Tính năng
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="removePdd">
+                            	<div class="free-plan">
+                                	<div class="plan-content">
+                                    	<h5>Gói miễn phí</h5>
+                                        <div class="desc-pc">FREE</div>
+                                        <a href="index_en.html#" class="btn-signup">Đăng ký ngay</a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="removePdd">
+                            	<div class="pro1-plan">
+                                	<div class="plan-content">
+                                    	<h5>Gói Pro 1</h5>
+                                        <div class="desc-pc">10 TRIỆU</div>
+                                        <a href="index_en.html#" class="btn-signup">Đăng ký ngay</a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="removePdd">
+                            	<div class="pro2-plan">
+                                	<div class="plan-content">
+                                    	<h5>Gói Pro 2</h5>
+                                        <div class="sale-off">
+                                        	<div class="ribbon">giảm 25%</div>
+                                        </div>
+                                        <div class="desc-pc">15 TRIỆU</div>
+                                        <a href="index_en.html#" class="btn-signup">Đăng ký ngay</a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="removePdd">
+                            	<div class="ulti-plan">
+                                	<div class="plan-content">
+                                    	<h5>Gói Partner</h5>
+                                        <div class="desc-pc">LIÊN HỆ</div>
+                                        <a href="index_en.html#" class="btn-signup">Đăng ký ngay</a>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">Băng thông <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Lưu lượng cho việc stream file hàng tháng">?</span></td>
+                            <td class="text-center">01 TB</td>
+                            <td class="text-center">50 TB</td>
+                            <td class="text-center">100 TB</td>
+                            <td class="text-center">Không giới hạn</td>
+                        </tr>
+                        
+                        <tr>
+                        	<td class="title-feature">Lưu trữ <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Dung lượng cho việc lưu trữ file hàng tháng">?</span></td>
+                            <td class="text-center">10 GB</td>
+                            <td class="text-center">500 GB</td>
+                            <td class="text-center">1024 GB</td>
+                            <td class="text-center">Không giới hạn</td>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">Dung lượng file <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Dung lượng tối đa khi upload 1 file video">?</span></td>
+                            <td class="text-center">100 MB</td>
+                            <td class="text-center">2 GB</td>
+                            <td class="text-center">10 GB</td>
+                            <td class="text-center">Không giới hạn</td>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">Độ phân giải tối đa <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Độ phân giải tối đa của một video khi phát">?</span></td>
+                            <td class="text-center">480p</td>
+                            <td class="text-center">1080p</td>
+                            <td class="text-center">1080p</td>
+                            <td class="text-center">1080p</td>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">Đồng bộ Youtube <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Lấy video từ youtube về MeCloud và chuyển video từ MeCloud lên youtube">?</span></td>
+                            <td class="text-center"><i class="icon fmm-x"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">Danh sách phát (Playlist) <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Phát video theo trình tự của một danh sách có trước">?</span></td>
+                            <td class="text-center"><i class="icon fmm-x"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">Đa người dùng <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Tạo và phân quyền chi tiết nhiều người dùng để
+quản lý video, tài khoản. Duyệt video theo chế đô tòa soạn điện tử">?</span></td>
+                            <td class="text-center"><i class="icon fmm-x"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">Hệ thống thống kê <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Xem hiệu quả của một video như lượt xem,
+nơi xem, thời gian xem, nguồn truy cập, vị trí địa lý, thiết bị,....">?</span></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">Thống kê thời gian thực <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Xem hiệu quả của một video như lượt xem,
+nơi xem, thời gian xem, nguồn truy cập, vị trí địa lý, thiết bị theo thời gian thực">?</span></td>
+                            <td class="text-center"><i class="icon fmm-x"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">Tùy chỉnh thương hiệu <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Gắn thương hiệu của bạn vào Video Player">?</span></td>
+                            <td class="text-center"><i class="icon fmm-x"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">Quảng cáo trên video <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Tự cài đặt và chạy quảng cáo trên video của bạn">?</span></td>
+                            <td class="text-center"><i class="icon fmm-x"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                        </tr>
+                        <tr>
+                        	<td class="title-feature">API <span class="note-feature tooltip-table" data-trigger="hover" data-placement="bottom" data-content="Các hàm dành cho lập trình viên tích hợp sâu hơn
+với hệ thống MeCloud">?</span></td>
+                            <td class="text-center"><i class="icon fmm-x"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                            <td class="text-center"><i class="icon fmm-check-1"></i></td>
+                        </tr>
+                       
+
+                    </table>
+                </div><!-- end table-responsive-->
+                
+                <div class="wrapper-price clearfix">
+                	<h4 class="head-price">BỔ SUNG TÀI NGUYÊN</h4>
+                    <div class="wrapper-slider-price">
+                    	<div class="slider-price">
+                        	<div class="wrapper-pick">
+                                <div id="pick-bw"></div>
+                                <input type="hidden" id="amountBw" class="form-control">
+                                
+                                <div class="title-pick">Băng thông<br /><span class="note-price">1 GB = 200 đ</span></div>
+                            </div>
+                            <div class="wrapper-pick">
+                                <div id="pick-size"></div>
+                                <input type="hidden" id="amountSize" class="form-control">
+                                <div class="title-pick">Lưu trữ<br /><span class="note-price">1 GB = 10.000 đ</span></div>
+                            </div>
+                        </div>
+                        <div class="pay-price">
+                            <div id="amount-label-bw" class="change-price"></div>
+                            <div class="icon-price">+</div>
+                            <div id="amount-label-size" class="change-price"></div>
+                            <div class="icon-price">=</div>
+                            <div id="total-price" class="result-total"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--<div class="wrapper-price clearfix">
+                    <div class="price-left">
+                        <div class="pick-bw">
+                            <h4>Bổ sung băng thông</h4>
+                          <p class="note-price">1 GB = 200 đ</p>
+                          <div class="wrapper-pick">
+                                    <div id="pick-bw"></div>
+                                    <input type="hidden" id="amountBw" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-right">
+                        <div class="pick-size">
+                          <h4>Bổ sung lưu trữ</h4>
+                          <p class="note-price">1 GB = 10.000 đ</p>
+                          <div class="wrapper-pick">
+                                <div id="pick-size"></div>
+                                <input type="hidden" id="amountSize" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="total-price clearfix">
+                    	<div class="result-bw">
+                            <div id="amount-label-bw" class="change-price"></div>
+                        </div>
+                        <div class="icon-price hidden-xs">+</div>
+                        <div class="result-bw">
+                            <div id="amount-label-size" class="change-price orange"></div>
+                        </div>
+                        <div class="icon-price hidden-xs">=</div>
+                        <div id="total-price" class="result-total"></div>
+                    </div>
+                </div><!-- end wrapper price -->
+                
+            </div><!-- container -->
+        </section><!-- end plan -->
+        
+        <div class="trial-player">
+        	<div class="container">
+            	<div class="row">
+                	<h3 class="os-animation" data-os-animation="fadeInDown">EVERYTHING YOU NEED IS HERE, GET YOUR VIDEO ONLINE NOW !</h3>
+                    <a href="index_en.html#" class="btn btn-trial os-animation" data-os-animation="fadeInUp">Free Trail</a>
+                </div>
+            </div>
+        </div><!-- end trial-player -->
+        
+        <footer id="contact" class="footer">
+        	<div class="container">
+            	<!--<div class="footer-head clearfix">
+                    <div class="row">
+                        <h4 class="col-sm-3"><span class="blue-txt">ME</span> CLOUD</h4>
+                        <div class="footer-statis clearfix col-sm-7 col-sm-offset-2">
+                            <div class="pull-right"><span style="padding-left:20px;">14.300.000</span> Views this month</div>
+                            <div class="pull-right"><span>31,689</span> User watching now</div>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="clearfix"></div>
+                <div class="row">
+                	<div class="col-md-3">
+                    	<div class="footer-contact clearfix">
+                        	<h3>Contact</h3>
+                            <ul class="contact">
+                            	<li><i class="icon fmm-home"></i>179 Ly Chinh Thang, District 3, HCM City, Vietnam</li>
+                                <li><i class="icon fmm-phone"></i>0904916386</li>
+                                <li><i class="icon fmm-paperplane-ico"></i><a href="mailto:support@mecloud.vn" class="btn-email">support@mecloud.vn</a></li>
+                                <li>Copyright MemeCloud. All Rights Reserved 2015</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    	<div class="footer-contact clearfix">
+                        	<h3>Features</h3>
+                            <ul class="footer-menu">
+                            	<li><a class="page-scroll" href="index_en.html#feature">Plays Everywhere</a></li>
+                                <li><a class="page-scroll" href="index_en.html#feature">Almost All Video Formats</a></li>
+                                <li><a class="page-scroll" href="index_en.html#feature">HD & Multi-bitrate</a></li>
+                                <li><a class="page-scroll" href="index_en.html#feature">Your Own Brand</a></li>
+                                <li><a class="page-scroll" href="index_en.html#feature">Delivery with CDN</a></li>
+                                <li><a class="page-scroll" href="index_en.html#feature">Cloud Storage</a></li>
+                            </ul>
+                            <ul class="footer-menu">
+                            	<li><a class="page-scroll" href="index_en.html#feature">Video Content Management System</a></li>
+                                <li><a class="page-scroll" href="index_en.html#feature">Multi-User</a></li>
+                                <li><a class="page-scroll" href="index_en.html#feature">Real-time Analytics</a></li>
+                                <li><a class="page-scroll" href="index_en.html#feature">Your Own Ads</a></li>
+                                <li><a class="page-scroll" href="index_en.html#feature">Auto Optimize Revenue </a></li>
+                                <li><a class="page-scroll" href="index_en.html#feature">API & Integration</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    	<div class="footer-support clearfix">
+                        	<h3>Links</h3>
+                            <ul class="footer-menu">
+                            	<li><a href="index_en.html#">Benefits</a></li>
+                                <li><a href="index_en.html#">About us</a></li>
+                                <li><a href="index_en.html#">Plans</a></li>
+                                <li><a href="index_en.html#">Terms of Service</a></li>
+                                <li><a href="index_en.html#">Work with us?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!--/row-->
+                
+            </div>
+        
+        </footer><!-- end footer -->
+        
+        <a href="index_en.html#page-top" class="btn btn-backToTop page-scroll"><i class="icon fmm-angle-up"></i></a>
+        
+        <!-- Modal SignUp -->
+        <div class="modal fade" id="signup">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+                    </div>
+                    <div class="modal-body">
+                    	<div class="alert alert-success">
+                            <strong>Success!</strong> Thank you for signing up, we will contact you shortly to setup your account. MeCloud Team
+                        </div>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Company</label>
+                            <input type="text" class="form-control" placeholder="Enter your company">
+                        </div>
+                        <div class="form-group has-error has-feedback">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" value="xxx@xxx" aria-describedby="inputError2Status" placeholder="Enter your email">
+                            <span class="error-status">Error email format</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Website</label>
+                            <input type="text" class="form-control" placeholder="Enter your website">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="text" class="form-control" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label>Plans</label>
+                            <div class="row">
+                            	<div class="container-fluid">
+                                	<div class="col-sm-4 plan-1">
+                                    	<div>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> Basic
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 plan-2">
+                                    	<div>
+        	                                <label class="radio-inline">
+    	                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Pro
+	                                        </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 plan-3">
+            							<div>
+        	                                <label class="radio-inline">
+    	                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Premium Partner
+	                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <!-- page script -->
+        
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/waypoint.min.js"></script>
+        <script src="js/waypointInit.js"></script>
+        <script src='js/layerslider.kreaturamedia.jquery.js'></script>
+        <script src='js/jquerytransit.js'></script>
+        <script src='js/layerslider.transitions.js'></script>
+        
+        <script src='js/slider.price.js'></script>
+        <script src='js/home.js'></script>
+        <script>
+			var lsjQuery = jQuery;
+				lsjQuery(document).ready(function() {
+					if (typeof lsjQuery.fn.layerSlider == "undefined") {
+						lsShowNotice('layerslider_1', 'jquery');
+					} else if (typeof lsjQuery.transit == "undefined" || typeof lsjQuery.transit.modifiedForLayerSlider == "undefined") {
+						lsShowNotice('layerslider_1', 'transit');
+					} else {
+						lsjQuery("#slide_screen").layerSlider({
+							width: '100%',
+							height: '707px',
+							responsive: false,
+							responsiveUnder: 1140,
+							sublayerContainer: 1140,
+							autoStart: true,
+							pauseOnHover: false,
+							firstLayer: 1,
+							animateFirstLayer: true,
+							randomSlideshow: false,
+							twoWaySlideshow: false,
+							loops: 0,
+							forceLoopNum: true,
+							autoPlayVideos: true,
+							autoPauseSlideshow: 'auto',
+							keybNav: true,
+							touchNav: true,
+							navPrevNext: false,
+							navStartStop: true,
+							skin: "jupiter",
+							skinsPath: "/mecloud/css/skins/",
+							navButtons: true,
+							hoverPrevNext: true,
+							hoverBottomNav: false,
+							showBarTimer: false,
+							showCircleTimer: false,
+							thumbnailNavigation: 'hover',
+							tnWidth: 100,
+							tnHeight: 60,
+							tnContainerWidth: '60%',
+							tnActiveOpacity: 35,
+							tnInactiveOpacity: 100,
+						});
+					}
+				});
+        </script>
+        
+    </body>
+</html>

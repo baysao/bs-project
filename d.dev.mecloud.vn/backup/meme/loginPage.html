@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Login Page | Meme.vn</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese,latin-ext' rel='stylesheet' type='text/css'> 
+<link href="css/loginPage.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="bg-login">
+    <div class="login-page">
+        <div class="head-login clearfix">
+        	<a href="loginPage.html#" class="logo-login clearfix">
+            	<img src="images/logo_icone_white.svg" />
+                Connect with MEME
+            </a>
+        </div>
+        <div class="intro-form-l">
+        	<!--<div class="loading"><img src="images/ajax-loader-login.gif" />Đang xử lý!</div>-->
+        	<div class="message-error"><i class="fa fa-warning"></i> Vui lòng nhập thông tin đăng nhập!</div>
+            <div class="intro-form-input"> <span class="intro-form-input-ico"><i class="fa fa-envelope"></i></span>
+              <input class="form-control" type="text" placeholder="Email">
+            </div>
+            <div class="intro-form-input"> <span class="intro-form-input-ico"><i class="fa fa-lock"></i></span>
+              <input class="form-control" type="text" placeholder="Mật khẩu">
+            </div>
+            <a class="login-forgot-pw" href="loginPage.html#">Bạn quên mật khẩu ?</a> <a class="login-forgot-pw" href="loginPage.html#">Bạn chưa có tải khoản ?</a>
+            <div class="intro-form-button clearfix">
+              <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+              <button type="button" class="btn btn-primary btn-facebook" href="#">Login With Facebook</button>
+            </div>
+            <div style="clear:both"></div>
+            <div class="intro-form-policy"> Khi đăng nhập vào Meme là bạn đã chấp nhận <a href="loginPage.html#"> điều khoản sử dụng</a> và <a href="loginPage.html#">chính sách nội dung</a> của chúng tôi  </div>
+        </div>
+        <span class="copyright">Copyright ©2013 meme.vn</span>
+        <!--end intro-form-l--> 
+    </div>
+</div>
+<script type="text/javascript">
+function hasPlaceholderSupport() {
+  var input = document.createElement('input');
+  return ('placeholder' in input);
+}
+
+if(!hasPlaceholderSupport()){
+	var inputs = document.getElementsByTagName('input');
+	for(var i=0,  count = inputs.length;i<count;i++){
+		if(inputs[i].getAttribute('placeholder')){
+			inputs[i].style.cssText = "color:#939393"
+			inputs[i].value = inputs[i].getAttribute("placeholder");
+			inputs[i].onclick = function(){
+				if(this.value == this.getAttribute("placeholder")){
+					this.value = '';
+					this.style.cssText = "color:#000"
+				}
+			}
+			inputs[i].onblur = function(){
+				if(this.value == ''){
+					this.value = this.getAttribute("placeholder");
+					this.style.cssText = "color:#939393"
+				}
+			}
+		}
+	}
+}
+</script>
+</body>
+</html>

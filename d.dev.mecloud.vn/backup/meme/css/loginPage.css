@@ -1,0 +1,253 @@
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot%3Fv=4.0.3');
+  src: url('fonts/fontawesome-webfont.eot%3F') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff%3Fv=4.0.3') format('woff'), url('fonts/fontawesome-webfont.ttf%3Fv=4.0.3') format('truetype'), url('fonts/fontawesome-webfont.svg%3Fv=4.0.3') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+.fa-lock:before {
+  content: "\f023";
+}
+html {
+	height:100%;
+	min-height:100%;	
+}
+body {
+    background-image: url(../images/bg-login-halloween.jpg); 
+	background-attachment:fixed;
+	background-position:center center;
+	background-repeat:no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+	width:100%;
+	min-height:100%;
+	margin:0;
+	padding:0;
+	font-family: "roboto",sans-serif !important;
+	font-size:13px;
+}
+.btn {
+	display:block;
+	font-family: "roboto",sans-serif !important;
+	padding:5px 10px;	
+	font-size:14px;
+	background-color:#E74D3B;
+	border:none;
+	color:#ffffff;
+	font-weight:400;
+	cursor:pointer;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+}
+.form-control {
+	border:none;
+	width:100%;	
+	box-sizing: border-box;
+}
+.login-page {
+	left: 50%;
+    margin-left: -230px;
+    margin-top: -220px;
+    max-width: 460px;
+    position: absolute;
+    top: 50%;
+}
+.head-login {
+	background-color:#e74d3b;
+	padding:15px;
+	border-radius:4px 4px 0 0;
+}
+.logo-login {
+	font-size:20px;
+	color:#ffffff;
+	font-weight:400;
+	display:block;
+	text-decoration:none;	
+}
+.logo-login:hover {
+	color:#ffffff;	
+}
+.logo-login img {
+	width:40px;
+	float:left;
+	margin-right:10px;	
+}
+.intro-head {
+	float:left;
+	text-align:center;
+	margin-top:20px;	
+}
+.intro-head img {
+	width:224px;
+	height:50px;
+	margin:0 auto;	
+}
+.intro-head h1 {
+	color:#ffffff;
+	font-size:45px;
+	font-weight:400;	
+}
+.intro-form-l {
+	margin:0 auto;
+	max-width:500px;
+	padding:20px;
+	background-image:url(../images/bg-login-halloween-blur.jpg);
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+	border-radius: 0 0 4px 4px;
+}
+.intro-form-l .message-error {
+	background:url(../images/bg-transparent.png);
+	text-align:center;
+	padding:10px;
+	margin-bottom:20px;	
+	color:#FC0;
+	font-weight:400;
+	border-radius:4px;
+}
+.intro-form-input {
+	position:relative;
+	margin-bottom:20px;
+}
+.intro-form-input .form-control {
+	border-radius:6px 4px 4px 6px;	
+}
+.intro-form-l .loading {
+	margin:0 auto 20px auto;
+	width:120px;
+	height:21px;
+	font-weight:400;
+	color:#ffffff;
+}
+.intro-form-l .loading img {
+	width:15px;
+	margin-right:5px;
+}
+.intro-form-input-ico {
+	background-color:#e74d3b;
+	width:40px;
+	height:40px;
+	position:absolute;
+	line-height:40px;
+	text-align:center;
+	left:0;
+	top:0;
+	border-radius: 4px 0 0 4px;
+	color:#ffffff;
+}
+.login-forgot-pw {
+	color:#ffffff;
+	text-decoration:none;
+	display:inline-block;
+	margin-right:5px;
+	padding:0 0 15px 0;
+	font-size:14px;	
+}
+.login-forgot-pw:hover {
+	color:#ffffff;
+	text-decoration:underline;	
+	font-weight:400;
+}
+.intro-form-input .form-control {
+	padding-left:50px !important;
+	height:40px !important;	
+}
+.intro-form-button button {
+	padding: 7px 18px;
+	font-size: 14px;
+	font-weight: 400;
+	float: left;
+}
+.intro-form-button span {
+	color:#ffffff;	
+	margin-left:20px;
+	font-size:16px;
+}
+.intro-form-policy {
+	color:#ffffff;
+	font-size:13px;
+	margin:20px 0 0 0;	
+}
+.intro-form-policy a {
+	color:#ffffff;
+	font-weight:400;
+}
+.intro-form-policy a:hover{
+	text-decoration:underline;
+}
+.btn-facebook {
+	background-color:#4c66a4;
+	width:175px;
+	margin-left:10px;
+	float: left;
+	padding: 7px;
+}
+.copyright {
+	color:#ffffff;
+	width:160px;
+	margin:10px auto;
+	display:block;	
+}
+
+@media (max-width: 767px){
+	.intro-form-button button {
+		float: left;
+		font-size: 12px;
+		padding: 7px 10px;
+	}
+	.btn-facebook {
+		background-color: #4c66a4;
+		margin-left: 10px;
+		width: 148px;
+	}
+	.intro-form-l {
+		background:rgb(0,0,0,0.5);
+	}
+	.login-page {
+		left: 50%;
+		margin-left: -220px;
+		top: 10px;
+		max-width:440px;
+		margin-top:0;
+		padding-top:0;	
+	}
+}
+@media (min-width: 320px) and (max-width:479px){
+	.intro-form-l {
+		max-width:300px;	
+	}
+	.login-page {
+		max-width: 300px;
+		margin-left:-150px;
+	}
+}gin-left:-150px;
+	}
+}

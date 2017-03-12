@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Chân dung nhà lãnh đạo Netlink</title>
+
+    <link href="css/fnl.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+<div id="page-top" class="wrapper">
+    
+    <div class="preloaderLogo">
+        <div class="wrapperLogo">
+            <div class="logoGrey">
+                <svg version="1.1" id="logoGrey" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <g>
+                    <path d="M74.414,60.321c1.315-8.921,4.665-18.802-6.335-10.013C61.19,55.806,52.225,66.49,44.423,72.999
+                        c-8.98,7.503-13.087,13.733-25.316,10.026c-5.268-1.592-7.427-5.282-5.877-12.137l5.953-22.02
+                        c-3.82,3.049-15.908,14.407-15.169,17.845c0.404,1.905,1.565,4.004,2.417,5.73c7.898,15.913,24.298,26.854,43.259,26.854
+                        c19.241,0,35.854-11.267,43.602-27.542c0.448-0.945,1.609-3.382,1.991-4.364c-1.991,0.507-4.971,0.551-7.396,0.531
+                        C78.433,67.844,73.814,64.467,74.414,60.321z"/>
+                    <path d="M88.224,19.271h-0.007C79.406,6.733,65.449,1.443,49.733,1.443c-26.005,0-47.212,21.232-48.226,46.989
+                        c6.85-6.367,26.776-30.278,35.805-30.677c5.542-0.235,8.75,2.314,10.239,6.644c0.984,2.922-2.98,10.001-3.977,12.445
+                        c-3.211,7.792-6.504,15.653-9.727,23.433c0.242,1.024,1.031,0.818,2.072,0.022c14.228-13.346,25.569-22.664,34.039-27.978
+                        c2.324-1.452,4.597-2.85,6.913-3.813c2.716-1.122,5.415-1.58,7.91-1.318c0.142,0.017,0.277,0.039,0.414,0.061
+                        c0.201,0.025,0.397,0.066,0.598,0.103c10.339,2.292,7.273,19.909,7.273,19.909c-0.37,1.484-0.757,2.971-1.146,4.45
+                        c-0.717,3.705,3.504,2.508,5.956,2.723C97.958,53.305,98,52.179,98,51.028c0-1.136-0.039-3.571-0.118-4.687
+                        C97.212,30.717,88.224,19.271,88.224,19.271z"/>
+                </g>
+                </svg>
+            </div>
+            <div class="logoBlue">
+                <svg version="1.1" id="logoBlue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <g>
+                    <path d="M74.414,60.321c1.315-8.921,4.665-18.802-6.335-10.013C61.19,55.806,52.225,66.49,44.423,72.999
+                        c-8.98,7.503-13.087,13.733-25.316,10.026c-5.268-1.592-7.427-5.282-5.877-12.137l5.953-22.02
+                        c-3.82,3.049-15.908,14.407-15.169,17.845c0.404,1.905,1.565,4.004,2.417,5.73c7.898,15.913,24.298,26.854,43.259,26.854
+                        c19.241,0,35.854-11.267,43.602-27.542c0.448-0.945,1.609-3.382,1.991-4.364c-1.991,0.507-4.971,0.551-7.396,0.531
+                        C78.433,67.844,73.814,64.467,74.414,60.321z"/>
+                    <path d="M88.224,19.271h-0.007C79.406,6.733,65.449,1.443,49.733,1.443c-26.005,0-47.212,21.232-48.226,46.989
+                        c6.85-6.367,26.776-30.278,35.805-30.677c5.542-0.235,8.75,2.314,10.239,6.644c0.984,2.922-2.98,10.001-3.977,12.445
+                        c-3.211,7.792-6.504,15.653-9.727,23.433c0.242,1.024,1.031,0.818,2.072,0.022c14.228-13.346,25.569-22.664,34.039-27.978
+                        c2.324-1.452,4.597-2.85,6.913-3.813c2.716-1.122,5.415-1.58,7.91-1.318c0.142,0.017,0.277,0.039,0.414,0.061
+                        c0.201,0.025,0.397,0.066,0.598,0.103c10.339,2.292,7.273,19.909,7.273,19.909c-0.37,1.484-0.757,2.971-1.146,4.45
+                        c-0.717,3.705,3.504,2.508,5.956,2.723C97.958,53.305,98,52.179,98,51.028c0-1.136-0.039-3.571-0.118-4.687
+                        C97.212,30.717,88.224,19.271,88.224,19.271z"/>
+                </g>
+                </svg>
+            </div>
+        </div>
+        <div class="percentage">0%</div>
+    </div>
+    
+    <div class="equa"></div>
+    
+    <header class="sub-page">
+        <div class="container">
+            <h1 class="brand">
+                <a href="index.html" title="Netlink.vn">
+                    Netlink.vn
+                </a>
+            </h1>
+            <nav class="nav-menu">
+                <div class="box-nav-menu">
+                    <button class="btn-nav-menu" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="first-section">
+        
+        <div class="top-section">
+            <div class="gap-blue"></div>
+            <div class="gap-white"></div>
+            <h1 class="title-page">News</h1>
+        </div> 
+        
+        <div class="block last">
+            <div class="container">
+
+                <div class="content-block clearfix">
+                    
+                    <div class="content-news">
+                        
+                        <h1>Chân dung nhà lãnh đạo Netlink</h1>
+                        <div class="date clearfix"><i class="fnl-stopwatch"></i>Ngày 14 tháng 09 Năm 2015</div>
+                        <p class="intro">Netlink Online Communication, công ty do Dũng sáng lập ra, đồng thời giữ chức Chủ tịch kiêm Giám đốc điều hành, hoạt động trong lĩnh vực Truyền thông và Internet. Cho đến nay, công ty của Dũng đã phát triển được khoảng 10 dự án online lớn.</p>
+                        <p><img src="images/news-steven.jpg" class="img-responsive"></p>
+                        <p>Nguyễn Văn Dũng tự nhận mình không phải là một người giỏi điều hành nhưng trong tay anh đang có một đội ngũ nhân sự khoảng 150 người.</p>
+                <p>Sinh năm 1989, ở cái tuổi mà không ít người còn chưa có định hướng gì cho tương lai, Nguyễn Văn Dũng đã là ông chủ của một công ty Internet với đội ngũ nhân viên gần 150 người.</p>
+                
+                <p>Netlink Online Communication, công ty do Dũng sáng lập ra, đồng thời giữ chức Chủ tịch kiêm Giám đốc điều hành, hoạt động trong lĩnh vực Truyền thông và Internet. Cho đến nay, công ty của Dũng đã phát triển được khoảng 10 dự án online lớn.</p>
+                
+                <p>Dũng tình cờ làm quen với máy tính từ cơ quan của mẹ năm học cấp hai, với tài sản ban đầu là một vài tờ báo về tin học mà anh thu thập được. “Chiến tích” đáng nhớ nhất của cậu học sinh cấp II Nguyễn Văn Dũng là việc nối mạng trộm qua đường điện thoại (vì những năm đó chưa có ADSL) và những lần giật mình thon thót vì sợ bố mẹ phát hiện trong những lần thanh toán hóa đơn điện thoại.</p>
+                
+                <p>Khi những quán Internet đầu tiên xuất hiện cũng là lúc Dũng thường xuyên đạp xe 5 cây số ra huyện để truy cập mạng. Khác hẳn với những cậu bé cùng lứa tuổi của mình ra quán net để chơi game, Dũng mày mò lập ra những website hay trang blog và bắt đầu kiếm được những đồng tiền đầu tiên từ những cá nhân hoặc tổ chức thuê anh làm website.</p>
+                
+                <p>Tuy nhiên, phải đến khi lên cấp III, đi học xa nhà, Dũng mới có điều kiện để tiếp cận một cách toàn diện với nguồn thông tin khổng lồ trên Internet và tự dung nạp kiến thức cho mình, đồng thời niềm đam mê Internet mới thực sự ngấm vào máu.</p>
+                
+                <p>Thời điểm này, Dũng cùng với một người bạn thành lập công ty chuyên chuyên về thiết kế, code, vận hành web và một số công việc marketing online khác. Tại đó anh kiêm nhiệm mọi việc từ A-Z, thậm chí, tối làm bảo vệ và ngủ ngay tại trụ sở của công ty. Công ty của anh thời điểm đó liên tục vấp phải những vấn đề về tài chính còn bản thân Dũng bị gia đình chỉ trích rất nhiều.</p>
+                
+                
+                <p>“Bí quyết thành công của nhiều ‘đại gia’ ngành Internet là lúc nào cũng phải giữ cho mình có suy nghĩ như một người mới khởi nghiệp. Nên nếu bạn đang là người mới khởi nghiệp thì ko phải ngại gì cả”.</p>
+                
+                <p>Quyết định được xem là khó khăn nhất trong sự nghiệp của anh, theo chia sẻ của doanh nhân trẻ tuổi này, là việc bỏ thi đại học để theo đuổi ước mơ lập nghiệp dựa vào Internet. “Bỏ thi đại học là một quyết định khó khăn và là sự đấu tranh tư tưởng lớn đối với bản thân, khi mà chính con đường sự nghiệp còn đang loay hoay chưa có gì thuận lợi. Gia đình và mọi người xung quanh phản đối kịch liệt, khiến cho tôi gặp phải áp lực vô cùng lớn thời điểm đó. Tuy nhiên, chính sự phản đối đó cũng thúc đẩy tôi phải quyết tâm thành công nhiều hơn và cũng như một bài học thử thách về tâm lý để tôi vượt qua được những áp lực lớn hơn sau này”, Dũng chia sẻ.</p>
+                
+                <p>Dũng quyết định bước vào “trường đời” tích lũy kinh nghiệm bằng cách đi làm thuê, thay vì tiếp tục làm “ông chủ kiêm nhân viên”. Do đó, anh đã bỏ cả thi đại học, lẫn công ty để nộp đơn xin việc làm. Tại thời điểm đó, Dũng chưa hoàn toàn tin vào con đường mình đi, thâm tâm cảm thấy lo sợ. Tuy nhiên, chàng trai trẻ đã nhanh chóng khẳng định được tài năng của mình khi trở thành trưởng phòng CNTT của một công ty tổ chức sự kiện chỉ sau vài tháng làm việc.</p>
+                
+                <p>Dũng sau đó tiếp tục đầu quân cho một số đơn vị khác, nhưng do cảm thấy môi trường “chật hẹp” không đủ cho mình thỏa sức vẫy vùng, anh đã bỏ việc để tự do làm những gì mình thích. Thời gian này, Dũng bắt đầu quan tâm đến các chương trình quảng cáo của Google và không lâu sau đó, trở thành nhà phân phối của Google với mức thu nhập cao gấp rất nhiều lần so với một nhân viên bình thường trước khi tự mình thành lập công ty.</p>
+                
+                <p>Khi được hỏi về những khó khăn trong việc điều hành và làm việc với các đối tác do tuổi đời còn quá trẻ, Dũng tỏ ra tự tin cho biết, bất cứ người thiếu kinh nghiệm nào cũng sẽ gặp khó khăn, nhưng điều đó sẽ trở thành lợi thế của những người trẻ nếu chứng minh được khả năng và tư duy của mình.</p>
+                
+                <p>“Các chuyên gia trên thế giới thường nói lúc kinh tế khủng hoảng thì Internet lại lên ngôi. Tôi cảm thấy điều đó hoàn toàn đúng trong quá trình phát triển của mình”.</p>
+                
+                <p>Anh cũng cởi mở chia sẻ, công ty của mình sẽ triển khai hai dự án lớn trong vòng hai năm tới. Nhận định về thị trường CNTT trong nước, vị CEO trẻ tuổi cho biết thị trường Internet nước ta đã sôi động hơn nhiều so với khoảng thời gian 5 năm về trước, và cần thêm vài năm nữa để phát triển bùng nổ.</p>
+                    </div><!-- end content-news -->
+                    
+                    <div class="relate-news">
+                        <h3>Relate news</h3>
+                        <ul>
+                            <li><a href="loi-ich-gi-khi-tham-gia-chuong-trinh-adsence-voi-netlink.html"><i class="fnl-right-open"></i>Lợi ích gì khi tham gia chương trình Adsence với Netlink?</a></li>
+                            <li><a href="netlink-tro-thanh-certified-partner-cua-google-adsense-tai-viet-nam.html"><i class="fnl-right-open"></i>Netlink trở thành “Certified Partner” của Google AdSense tại Việt Nam</a></li>
+                            <li><a href="tai-sao-chon-netlink.html"><i class="fnl-right-open"></i>Tại sao bạn chọn Netlink?</a></li>
+                            <li><a href="dieu-kien-tham-gia-certified-partner-cua-netlink.html"><i class="fnl-right-open"></i>Điều kiện tham gia Certified Partner của Netlink?</a></li>
+                            <li><a href="han-che-rui-ro-khi-kiem-tien-bang-google-adsense.html"><i class="fnl-right-open"></i>Hạn chế rủi ro khi kiếm tiền bằng Google AdSense</a></li>
+                            <li><a href="kiem-tien-online-va-nhung-dieu-khong-phai-ai-cung-biet.html"><i class="fnl-right-open"></i>Kiếm tiền Online và những điều không phải ai cũng biết</a></li>
+                        </ul>
+                    </div>
+
+                </div><!-- end content-block clearfix -->
+                    
+            </div><!-- /container -->
+        </div><!-- end block -->
+        
+        
+    </section>
+        
+    <footer>
+    
+        <div class="top-footer">
+            <div class="wrapper-gap">
+                <div class="gap-blue-d"></div>
+                <div class="gap-dark-d"></div>
+            </div>
+            <a href="chan-dung-nha-lanh-dao-netlink.html#" id="page-toplink" class="btn-top page-scroll" title="Back to top"><i class="fnl-up-open"></i></a>
+        </div>
+        
+        <div class="content-footer">
+            <div class="container">
+                <div class="row os-animation" data-os-animation="fadeIn">
+                    <div class="info-footer col-md-6">
+                        <h3>About Netlink</h3>
+                        <p>Established in 2007 by dedicated and talented top managers, Netlink has been growing constantly and become a leading online communication corporation in Vietnam with more than 200 employees. We have four strong businesses... <a href="about.html">readmore</a></p>
+                        <hr>
+                        <P><span>Ha Noi City</span> 4th Floor, Star Tower, Duong Dinh Nghe, Yen Hoa, Cau Giay</P>
+                        <P><span>Ho Chi Minh City</span> 179 Ly Chinh Thang, Dist.3</P>
+                        <ul class="social">
+                            <li><a href="chan-dung-nha-lanh-dao-netlink.html#"><i class="fnl-facebook"></i></a></li>
+                            <li><a href="chan-dung-nha-lanh-dao-netlink.html#"><i class="fnl-twitter"></i></a></li>
+                            <li><a href="chan-dung-nha-lanh-dao-netlink.html#"><i class="fnl-google"></i></a></li>
+                        </ul>
+                    </div><!-- /col -->
+                    <div class="col-md-3">
+                        <h3>WHO YOU ARE?</h3>
+                        <ul class="list-news-footer">
+                            <li><a href="publisher.html">Publisher</a></li>
+                            <li><a href="startup.html">Startup</a></li>
+                            <li><a href="advertiser.html">Advertiser</a></li>
+                            <li><a href="creator.html">Creator</a></li>
+                            <li><a href="investor.html">Investor</a></li>
+                        </ul>
+                    </div><!-- /col -->
+                    <div class="col-md-3">
+                        <h3>WHAT YOU NEED?</h3>
+                        <ul class="list-news-footer">
+                            <li><a href="marketing.html">PR & marketing</a></li>
+                            <li><a href="content.html">Content</a></li>
+                            <li><a href="monetize.html">Monetize</a></li>
+                            <li><a href="jobs.html">Jobs</a></li>
+                        </ul>
+                    </div><!-- /col -->
+                    
+                </div><!-- /row -->
+            </div>
+        </div><!-- content-footer-->
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright © Netlink.vn 2015</p>
+            </div>
+        </div> 
+        
+    </footer>
+</div><!-- end wrapper -->
+    <!--Global js-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/fastclick.min.js"></script>
+    <script src="js/global.js" type="text/javascript"></script>
+    <!--End Global js-->
+    
+    <!--Page js-->
+    <script src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script src="js/waypoint.min.js"></script>
+    <script src="js/waypointInit.js"></script>
+    <script src="js/subPage.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+
+            //Load sub page
+            var imagePage = [
+                'images/bg-office.jpg',
+                'images/news-dieukien.jpg'
+            ];
+            preloaderPage('subPage', imagePage);
+            
+            //load menu
+            nav_menu();
+
+        });
+    </script>
+    <!--End Page js-->
+
+</body>
+</html>

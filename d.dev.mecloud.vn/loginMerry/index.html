@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login | Mecloud</title>
+		<meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style-xmas.css"/>
+	</head>
+	<body>
+    
+    	<div class="preloader">
+        	<div class="object"></div>
+        </div>
+    
+    	<div class="all-xmas">
+        	<ul class="wrapper-bubble">
+            	<li class="layer xmas-1" data-depth="0.40"><img class="swing-1" src="images/xmas-1.png"></li>
+                <li class="layer xmas-2" data-depth="0.20"><img class="swing-3" src="images/xmas-2.png"></li>
+                <li class="layer xmas-3" data-depth="0.60"><img class="swing-2" src="images/xmas-3.png"></li>
+                <li class="layer xmas-4" data-depth="0.40"><img class="swing-4" src="images/xmas-4.png"></li>
+                <li class="layer xmas-5" data-depth="0.50"><img class="swing-1" src="images/xmas-5.png"></li>
+                <li class="layer xmas-6" data-depth="0.40"><img class="swing-3" src="images/xmas-6.png"></li>
+            </ul>
+        </div>
+    	
+        <div class="login-merry">
+        
+        	<div class="wrapper-bubble">
+        	
+                <img src="images/login.png">
+                
+                <div class="logo layer" data-depth="0.40">
+                    <img class="swing-1" src="images/logo.png">
+                </div>
+                
+                <div class="bubble-1 layer" data-depth="0.20">
+                    <img class="swing-6" src="images/bubble1.png">
+                </div>
+                <div class="bubble-3 layer" data-depth="0.10">
+                    <img class="swing-6" src="images/bubble3.png">
+                </div>
+                
+                <div class="bubble-2 layer" data-depth="0.10">
+                    <img class="swing-6" src="images/bubble2.png">
+                </div>
+                <div class="bubble-4 layer" data-depth="0.20">
+                    <img class="swing-6" src="images/bubble4.png">
+                </div>
+            
+            </div>
+            
+        </div>
+        <div class="form-merry">
+        	<form>
+            	<div class="form-group-merry">
+                	<input type="text" class="form-login-merry" placeholder="Email">
+                </div>
+                <div class="form-group-merry">
+                	<input type="password" class="form-login-merry" placeholder="Mật khẩu">
+                </div>
+                <div class="form-group-merry clearfix">
+                	<div class="checkbox-merry">
+                      <label class="label-merry">
+                          <input type="checkbox" class="checkbox">
+                            Ghi nhớ
+                      </label>
+                    </div>
+                    <a href="#" class="btn-forgotpw">Quên mật khẩu</a>
+                </div>
+                <div class="form-group-merry">
+                	<button type="submit" class="btn-submit-merry">ĐĂNG NHẬP</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="bg-music">
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+            <div id="jp_container_1" class="jp-audio-stream" role="application" aria-label="media player">
+                <div class="jp-type-single">
+                    <div class="jp-gui jp-interface">
+                        <div class="jp-controls" style="position:relative;width:40px;height:30px;">
+                            <button class="jp-play" role="button" tabindex="0"></button>
+                            <div class="bars">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <span>MUSIC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jp-no-solution">
+                        <span>Update Required</span>
+                        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="js/ThreeCanvas.js"></script>
+    <script type="text/javascript" src="js/Snow.js"></script>
+    <script type="text/javascript" src="js/init_snow.js"></script>
+	<script type="text/javascript" src="js/parallax.min.js"></script>
+	
+	<script>       
+        
+        $(document).ready(function() {
+            init();
+			
+			//call parallax
+			$('.wrapper-bubble').parallax();
+			
+			///////////////////////////////////////////////////////////////////////
+			//Preloader page
+			///////////////////////////////////////////////////////////////////////
+			$(window).load(function(){
+				
+				$('.preloader').find('.object').addClass('out');
+				$('.preloader').delay(400).fadeOut(800);
+				
+				//background music
+				// The static player at the bottom
+				$("#jquery_jplayer_1").jPlayer({
+					ready: function (event) {
+						$(this).jPlayer("setMedia", {
+							mp3: "WeWishYouAMerryChristmas.mp3"
+						}).jPlayer("play");   //cmt thuan
+						//});
+					},
+					play: function() {
+						$(this).jPlayer("play");
+					},
+					swfPath: "js",
+					supplied: "mp3",
+					cssSelectorAncestor: "#jp_container_1",
+					useStateClassSkin: true,
+					autoBlur: false,
+					ended: function() { // The $.jPlayer.event.ended event
+						$(this).jPlayer("play"); // Repeat the media
+						//console.log('end');
+					}
+				});
+				
+				setTimeout(function(){
+					console.log('vao time out');
+					$("#jquery_jplayer_1").jPlayer('play');
+					  
+					//  $("#jp_container_1").click();
+				},5000);
+				
+			});
+			
+        });
+		
+		//thuan
+	//	jwplayer().onReady(function() { 
+		//	jwplayer().play();
+		//}
+
+    </script>
+	</body>
+</html>

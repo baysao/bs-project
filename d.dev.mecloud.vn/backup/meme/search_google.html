@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Upload Videol | MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/search-google.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/disableScrollBar.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/global.js"></script>
+</head>
+
+<body id="backtotop">
+    <div id="header">
+        <div class="container-fluid">
+            <div class="col-xs-7 col-md-4 col-sm-4" style="position:relative;">
+                <a href="search_google.html#" class="logo-s">meme.vn</a>
+                
+                <span class="browseCategory">
+                	<span class="dropdown">
+                      <a href="search_google.html#" data-toggle="dropdown" class="browse clearfix"><i class="fa fa-bars"></i>  <i class="fa fa-caret-down"></i></a>
+                      <div class="dropdown-menu main-menu arrowTop">
+                      		<div class="arrow"></div>
+                            <div class="search visible-xs">
+								<gcse:searchbox></gcse:searchbox>
+                            </div><!-----------end search------------>
+                            <div class="wrapper-menu scrollable">
+                                <ul class="menu">
+                                    <li><a href="search_google.html#" class="menu-hot">Hot</a></li>
+                                    <li><a href="search_google.html#" class="menu-hot">Xem nhiều</a></li>
+                                    <li><a href="search_google.html#" class="menu-hot">Phim</a></li>
+                                    <li><a href="search_google.html#">Sự kiện</a></li>
+                                    <li><a href="search_google.html#">Tin tức</a></li>
+                                    <li><a href="search_google.html#">Hài</a></li>
+                                    <li><a href="search_google.html#">Thể thao</a></li>
+                                    <li><a href="search_google.html#">Dancingo</a></li>
+                                    <li><a href="search_google.html#">Game</a></li>
+                                    <li><a href="search_google.html#">Ẩm thực</a></li>
+                                    <li><a href="search_google.html#">Giáo dục</a></li>
+                                    <li><a href="search_google.html#">Blog</a></li>
+                                    <li><a href="search_google.html#">Showbiz</a></li>
+                                    <li><a href="search_google.html#">Xe cộ</a></li>
+                                    <li><a href="search_google.html#">Động vật</a></li>
+                                    <li><a href="search_google.html#">Đồ hoạ</a></li>
+                                    <li><a href="search_google.html#">Giải trí</a></li>
+                                    <li><a href="search_google.html#">Hướng dẫn</a></li>
+                                    <li><a href="search_google.html#">Thời trang - Làm đẹp</a></li>
+                                    <li><a href="search_google.html#">Công nghệ</a></li>
+                                    <li><a href="search_google.html#">Du lịch</a></li>
+                                    <li><a href="search_google.html#">Gia đình</a></li>
+                                    <li><a href="search_google.html#">Hoạt hình</a></li>
+                                    <li><a href="search_google.html#">Khoa học</a></li>
+                                    <li><a href="search_google.html#">Lifestyle</a></li>
+                                    <li><a href="search_google.html#">Nghệ thuật</a></li>
+                                    <li><a href="search_google.html#">Sức khoẻ</a></li>
+                                    <li><a href="search_google.html#">Thiên nhiên</a></li>
+                                    <li><a href="search_google.html#">Trẻ em</a></li>
+                                    <li><a href="search_google.html#">Sản phẩm</a></li>
+                                    <li><a href="search_google.html#">Quảng cáo</a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="menu-policy clearfix">
+                                	<ul>
+                                    	<li><a href="search_google.html#">MeMe là gì?</a></li>
+                                        <li><a href="search_google.html#">Cách hoạt động</a></li>
+                                        <li><a href="search_google.html#">Điều khoản sử dụng</a></li>
+                                        <li><a href="search_google.html#">Chính sách nội dung</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                    </span>
+                </span>
+            </div>
+
+            <div class="search col-md-4 col-sm-4 hidden-xs">
+				<gcse:searchbox></gcse:searchbox>
+            </div><!-----------end search------------>
+            <div class="wrap-menu-top col-xs-5 col-md-4 col-sm-4">
+                <ul class="menu-top">
+                    <li>
+                        <a href="search_google.html#" class="menu-top-link tooltipMeme" data-target="#loginPopup" data-toggle="modal"  title="Upload">
+                            <span class="icon icon-upload leftNone"></span>
+                        </a>
+                    </li>
+                    <li class="notification dropdown">
+                        <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="search_google.html#" title="Notification" >
+                            <span class="icon icon-notification leftNone"></span>
+                            <span class="notification-count">9+</span>
+                        </a>
+                        
+                            <ul class="dropdown-menu arrowTop">
+                                <div class="arrow"></div>
+                                <div class="notification-head clearfix">
+                                	<span>Thông báo</span>
+                                    <a href="search_google.html#" onClick="alert('Đã đọc tất cả')" class="readAll">Đã đọc tất cả</a>
+                                </div>
+                                <div class="wrapper-notification scrollable">
+                                    <li>
+                                        <a class="notification-link unread clearfix" href="http://www.meme.vn/channel?c=53c8e5cfb8d0c3ea3591e1dd" onClick="location.href = $(this).attr('href')">
+                                            <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                        <button onClick="alert('Đã đọc');" type="button" class="btn-read"><i class="fa fa-circle-o"></i></button>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link unread video clearfix" onClick="location.href = $(this).attr('href')" href="http://www.meme.vn/video/loi-noi-xau-lo-lieu-mrbim-sb-music-3ViwvJPgkK0#comment53f424c0b8d0c3a24e59bf32">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                        <button onClick="alert('Đã đọc');" type="button" class="btn-read"><i class="fa fa-circle-o"></i></button>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="search_google.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="search_google.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="search_google.html#">
+                                            <img class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="search_google.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="search_google.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="search_google.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="search_google.html#">
+                                            <img class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="search_google.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="search_google.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="search_google.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                </div>
+                                <div class="more-notification"><a href="search_google.html#" onClick="alert('Xem tất cả');">Xem tất cả</a></div>
+                            </ul>
+                        
+                    </li>
+                    <!--<li>
+                        <a class="menu-top-link tooltipMeme" href="#" data-toggle="tooltip" title="Đăng nhập">
+                            <span class="icon icon-account leftNone"></span>
+                        </a>
+                    </li>-->
+                    <li class="account dropdown">
+                        <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="search_google.html#" title="Account">
+                            <img src="images/avatar2.jpg" class="img-user"><span class="account-name hidden-xs"> Đào Viết Phương </span>
+                            
+                        </a>
+                        <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu arrowTop">
+                        	<div class="arrow"></div>
+                            <div class="swith-channel-text">Bạn muốn đổi thành:</div>
+                            <div class="swith-channel scrollable">
+                            	<a href="search_google.html#" class="account-channel">
+                                	<img src="images/channelImg3.jpg" />
+                                    <p>Giọng Hát Việt Nhí 2014</p>
+                                </a>
+                                <a href="search_google.html#" class="account-channel">
+                                	<img src="images/channelImg1.jpg" />
+                                    <p>Cuộc Đua Kỳ Thú</p>
+                                </a>
+                                <a href="search_google.html#" class="account-channel">
+                                	<img src="images/channelImg2.jpg" />
+                                    <p>Viet Nam Idol 2014</p>
+                                </a>
+                                <a href="search_google.html#" class="account-channel">
+                                	<img src="images/channelImg3.jpg" />
+                                    <p>Giọng Hát Việt Nhí 2014</p>
+                                </a>
+                                <a href="search_google.html#" class="account-channel">
+                                	<img src="images/channelImg1.jpg" />
+                                    <p>Cuộc Đua Kỳ Thú</p>
+                                </a>
+                                <a href="search_google.html#" class="account-channel">
+                                	<img src="images/channelImg2.jpg" />
+                                    <p>Viet Nam Idol 2014</p>
+                                </a>
+                            </div>
+                            <li><a href="http://beta.meme.vn/usercp/account/editProfile"><i class="fa fa-edit"></i> Sửa thông tin cá nhân</a></li>
+                            <li><a href="http://beta.meme.vn/usercp/video"><i class="fa fa-play-circle"></i> Quản lý Video</a></li>
+                            <li><a href="http://beta.meme.vn/usercp/channel"><i class="fa fa-video-camera"></i> Quản lý Channel</a></li>
+                            <li><a href="search_google.html#"><i class="fa fa-bar-chart-o"></i> Xem thống kê</a></li>
+                            <li><a href="search_google.html#"><i class="fa fa-usd"></i> Xem doanh thu</a></li>
+                            <li><a href="http://beta.meme.vn/user/logout"><i class="fa fa-sign-out"></i> Thoát</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-----------end wrap-menu-top------------>
+            <div class="clearfix"></div>
+        </div>
+  </div>
+  <!-- end header-->
+
+	<div class="wrapper-content">
+       <div class="wrapper-db">
+       		<div class="container">
+            	<div class="searchResultGoogle">
+                    <gcse:searchresults></gcse:searchresults>
+                </div>
+			</div>
+       </div><!-- end wrapper-db-->
+    
+        <div class="footer container-fluid">
+            <div class="col-md-5 hidden-xs hidden-sm">
+                <div class="footer-head">
+                    <h3>Giới thiệu meme</h3>
+                </div>
+                <div class="footer-content footer-logo">
+                    <p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí…</p>
+                    <a href="search_google.html#" class="about-more">Xem thêm</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-head">
+                    <h3>Facebook</h3>
+                </div>
+                <div class="footer-content">
+                    <h5>TV Network</h5>
+                    <div id="fb-root"></div>
+                    <div id="fb-root"></div>
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <div class="facebook">
+                        <div class="fb-like" data-href="https://www.facebook.com/memevietnam" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-head">
+                    <h3>Hỗ trợ</h3>
+                </div>
+                <div class="footer-content">
+                    <ul class="nav">
+                        <li><a href="search_google.html#">MeMe là gì?</a>
+                        </li>
+                        <li><a href="search_google.html#">Cách hoạt động</a>
+                        </li>
+                        <li><a href="search_google.html#">Lợi ích</a>
+                        </li>
+                        <li><a href="search_google.html#">Đối tác nội dung</a>
+                        </li>
+                        <li><a href="search_google.html#">Khiếu nại bản quyền</a>
+                        </li>
+                        <li><a href="search_google.html#">Liên hệ</a>
+                        </li>
+                        <li><a href="search_google.html#">Điều khoản sử dụng</a>
+                        </li>
+                        <li><a href="search_google.html#">Chính sách nội dung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end footer-->
+
+        <div class="footer-bottom col-xs-12">
+            <span class="copyright">Copyright ©2013 meme.vn</span>
+        </div>
+        <!--end footer bottom-->
+	</div>
+
+    <a href="search_google.html#" class="top scrollToElement" id="backtotoplink"><span class="icon icon-arrow-up-s"></span></a>
+<!--pop up addto playlist-->
+  <div id="addToPlaylist" class="addToPlaylist modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add to playlist</h4>
+          </div>
+          <div class="modal-body playlist-row scrollable clearfix">
+            	<a href="search_google.html#" class="playlist-name">Best movie counter-strike1.6 Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="search_google.html#" class="playlist-name added">Top Hit Nhac Nam My 2014 <i class="fa fa-check-circle"></i> <span class="playlist-number">32</span></a>
+                <a href="search_google.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="search_google.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="search_google.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="search_google.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="search_google.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="search_google.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="search_google.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="search_google.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="search_google.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="search_google.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+            </div>
+            <div class="playlist-status">
+            	<span class="create-success">Tạo playlist thành công</span>
+                <!--<span class="create-error">Tên playlist ít nhất 3 ký tự</span>-->
+            </div>    
+            <div class="playlist-form">
+            	<input type="text" class="form-control" placeholder="Tạo playlist mới">
+                <div class="playlist-setting clearfix">    
+                    <div class="dropdown">
+                      <a data-toggle="dropdown" href="search_google.html#">Public <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li><a href="search_google.html#">Public</a></li>
+                        <li><a href="search_google.html#">Only me</a></li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-playlist">Create</button>  
+                </div>
+                  
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end addToPlaylist-->
+  
+  <!--alert upload-->
+  <div id="alertUpload" class="alertUpload modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 id="myModalLabel" class="modal-title">Thông báo</h4>
+          </div>
+          <div class="modal-body clearfix">
+          	<p class="alert-text">Bạn có thực sự muốn hủy video đang upload không?</p>
+            <div class="btn-alert">
+                <span class="file-input btn btn-default btn-file">
+                    Chọn file khác <input type="file" multiple>
+                </span>
+                <button class="btn btn-primary" type="button">Hủy tải lên</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end alert upload-->
+</body>
+
+</html>

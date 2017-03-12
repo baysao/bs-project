@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Home | Netlink.vn</title>
+
+	<link href="css/fnl.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="css/animate.css" rel="stylesheet" type="text/css">
+    
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+	
+	<div class="preloaderLogo">
+    	<div class="wrapperLogo">
+        	<div class="logoGrey">
+				<svg version="1.1" id="logoGrey" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <g>
+                    <path d="M74.414,60.321c1.315-8.921,4.665-18.802-6.335-10.013C61.19,55.806,52.225,66.49,44.423,72.999
+                        c-8.98,7.503-13.087,13.733-25.316,10.026c-5.268-1.592-7.427-5.282-5.877-12.137l5.953-22.02
+                        c-3.82,3.049-15.908,14.407-15.169,17.845c0.404,1.905,1.565,4.004,2.417,5.73c7.898,15.913,24.298,26.854,43.259,26.854
+                        c19.241,0,35.854-11.267,43.602-27.542c0.448-0.945,1.609-3.382,1.991-4.364c-1.991,0.507-4.971,0.551-7.396,0.531
+                        C78.433,67.844,73.814,64.467,74.414,60.321z"/>
+                    <path d="M88.224,19.271h-0.007C79.406,6.733,65.449,1.443,49.733,1.443c-26.005,0-47.212,21.232-48.226,46.989
+                        c6.85-6.367,26.776-30.278,35.805-30.677c5.542-0.235,8.75,2.314,10.239,6.644c0.984,2.922-2.98,10.001-3.977,12.445
+                        c-3.211,7.792-6.504,15.653-9.727,23.433c0.242,1.024,1.031,0.818,2.072,0.022c14.228-13.346,25.569-22.664,34.039-27.978
+                        c2.324-1.452,4.597-2.85,6.913-3.813c2.716-1.122,5.415-1.58,7.91-1.318c0.142,0.017,0.277,0.039,0.414,0.061
+                        c0.201,0.025,0.397,0.066,0.598,0.103c10.339,2.292,7.273,19.909,7.273,19.909c-0.37,1.484-0.757,2.971-1.146,4.45
+                        c-0.717,3.705,3.504,2.508,5.956,2.723C97.958,53.305,98,52.179,98,51.028c0-1.136-0.039-3.571-0.118-4.687
+                        C97.212,30.717,88.224,19.271,88.224,19.271z"/>
+                </g>
+                </svg>
+        	</div>
+            <div class="logoBlue">
+				<svg version="1.1" id="logoBlue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <g>
+                    <path d="M74.414,60.321c1.315-8.921,4.665-18.802-6.335-10.013C61.19,55.806,52.225,66.49,44.423,72.999
+                        c-8.98,7.503-13.087,13.733-25.316,10.026c-5.268-1.592-7.427-5.282-5.877-12.137l5.953-22.02
+                        c-3.82,3.049-15.908,14.407-15.169,17.845c0.404,1.905,1.565,4.004,2.417,5.73c7.898,15.913,24.298,26.854,43.259,26.854
+                        c19.241,0,35.854-11.267,43.602-27.542c0.448-0.945,1.609-3.382,1.991-4.364c-1.991,0.507-4.971,0.551-7.396,0.531
+                        C78.433,67.844,73.814,64.467,74.414,60.321z"/>
+                    <path d="M88.224,19.271h-0.007C79.406,6.733,65.449,1.443,49.733,1.443c-26.005,0-47.212,21.232-48.226,46.989
+                        c6.85-6.367,26.776-30.278,35.805-30.677c5.542-0.235,8.75,2.314,10.239,6.644c0.984,2.922-2.98,10.001-3.977,12.445
+                        c-3.211,7.792-6.504,15.653-9.727,23.433c0.242,1.024,1.031,0.818,2.072,0.022c14.228-13.346,25.569-22.664,34.039-27.978
+                        c2.324-1.452,4.597-2.85,6.913-3.813c2.716-1.122,5.415-1.58,7.91-1.318c0.142,0.017,0.277,0.039,0.414,0.061
+                        c0.201,0.025,0.397,0.066,0.598,0.103c10.339,2.292,7.273,19.909,7.273,19.909c-0.37,1.484-0.757,2.971-1.146,4.45
+                        c-0.717,3.705,3.504,2.508,5.956,2.723C97.958,53.305,98,52.179,98,51.028c0-1.136-0.039-3.571-0.118-4.687
+                        C97.212,30.717,88.224,19.271,88.224,19.271z"/>
+                </g>
+                </svg>
+        	</div>
+        </div>
+        <div class="percentage">0%</div>
+    </div>
+    
+    
+    <div class="home-page">
+    	<header class="clearfix">
+        	<h1 class="brand">
+            	<a href="index.html" title="netlink.vn">
+                	Netlink.vn
+                </a>
+            </h1>
+            <nav class="nav-menu">
+            	<div class="box-nav-menu">
+                    <button class="btn-nav-menu" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="content-home">
+        	<div class="align-midle">
+                <h2 class="slogan">THE LEADING PUBLISHING SOLUTION COMPANY</h2>
+                <div class="btns-home clearfix">
+                    <a href="#" class="see-more" data-toggle="modal" data-target="#introVideo">Learn more</a>
+                    <button type="button" class="animated tellus hidden-xs hidden-sm" data-toggle="modal" data-target="#solution"><span class="animated pulse infinite">Take a tour</span></button>
+                </div>
+            </div>
+            <button id="wh_contentlink" type="button" class="btn-next hidden-lg hidden-md"><i class="fnl-down-open"></i></button>
+        </section>
+        
+        <section id="wh_content" class="right-content-home clearfix">
+        	<div class="align-midle">
+                <div class="tellus-box animated fadeInRight">
+                    <div class="tellus-skew">PLEASE TELL US</div>
+                </div>
+                <div class="content-wh">
+                    <div class="box-rch clearfix">
+                        <h3>
+                            <span>Who</span><br class="hidden-sm hidden-xs" />
+                            You are?
+                        </h3>
+                        <ul class="menu-rch">
+                            <li><a href="publisher.html">Publisher</a></li>
+                            <li><a href="startup.html">Startup</a></li>
+                            <li><a href="advertiser.html">Advertiser</a></li>
+                            <li><a href="creator.html">Creator</a></li>
+                            <li><a href="doer.html">Doer</a></li>
+                            <li><a href="investor.html">Investor</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-wh">
+                    <div class="box-rch clearfix">
+                        <h3>
+                            <span>What</span><br class="hidden-sm hidden-xs" />
+                            You need?
+                        </h3>
+                        <ul class="menu-rch">
+                            <li><a href="#">PR & marketing</a></li>
+                            <li><a href="#">Content</a></li>
+                            <li><a href="#">Monetize</a></li>
+                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="jobs.html">Jobs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button id="statis_contentlink" type="button" class="btn-next statis-next hidden-lg hidden-md"><i class="fnl-down-open"></i></button>
+            
+        </section><!--right-content-home-->
+        
+        <section class="bottom-content-home clearfix">
+        	<div class="align-midle">
+                <div class="work">
+                    <ul class="nav-work clearfix">
+                        <li><a href="#product" class="current"><span>Products</span></a></li>
+                        <li><a href="#partner"><span>Partners</span></a></li>
+                        <li><a href="#client"><span>Clients</span></a></li>
+                    </ul>	
+                    <div class="slideshow-work">
+                        <div id="product" class="current box-work">
+                            <div class="product-box-work" data-slide="work">
+                                <div class="item-work">
+                                    <a href="#"><img src="images/metub.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/techz.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/ad360.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/tinmoi.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/thethao247.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/netlinkad.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/textlink.jpg" /></a>
+                                </div>
+                            </div>
+                        </div><!-- end #product -->
+                        <div id="partner" class="box-work">
+                            <div class="partner-box-work" data-slide="work">
+                                <div class="item-work">
+                                    <a href="#"><img src="images/saoonline.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/vqg.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/seatime.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/metub.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/ndt.jpg" /></a>
+                                </div>
+                            </div>
+                        </div><!-- end #partner -->
+                        <div id="client" class="box-work">
+                            <div class="client-box-work" data-slide="work">
+                                <div class="item-work">
+                                    <a href="#"><img src="images/dspl.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/saoonline.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/seatime.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/thethao247.jpg" /></a>
+                                </div>
+                                <div class="item-work">
+                                    <a href="#"><img src="images/ndt.jpg" /></a>
+                                </div>
+                            </div>
+                        </div><!-- end #client --> 
+                    </div>
+                </div>
+                
+                <div class="news">
+                    <h4><i class="fnl fnl-lightbulb-shine"></i> Did you know?</h4>
+                    <div class="slideshow-news">
+                        <div class="bg-skew"></div>
+                        <div class="box-news">
+                            <div class="item-news">
+                                <a href="#"><span>Bài học thành công từ hàng triệu lượt view mỗi ngày.</span></a>
+                            </div>
+                            <div class="item-news">
+                                <a href="#"><span>Netlink là một trong những công ty hàng đầu về Internet tại Việt Nam.</span></a>
+                            </div>
+                            <div class="item-news">
+                                <a href="#"><span>Youtube chọn Netlink làm đối tác tại thị trường Việt Nam.</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="statis_content" class="statis clearfix">
+                    <div class="tellus-box mb20 hidden-lg hidden-md">
+                        <div class="tellus-skew">STATIS</div>
+                    </div>
+                    <div class="col-statis">
+                        <p class="title-statis">Employee</p>
+                        <p class="number-statis"><b class="timer" data-to="200" data-speed="6000"></b><span class="plus-statis fix-plus">+</span></p>
+                    </div>
+                    <div class="col-statis">
+                        <p class="title-statis">User</p>
+                        <p class="number-statis"><b class="timer" data-to="15" data-speed="6000"></b>m<span class="plus-statis">+</span></p>
+                    </div>
+                    <div class="col-statis">
+                        <p class="title-statis">Publisher</p>
+                        <p class="number-statis"><b class="timer" data-to="100" data-speed="6000"></b><span class="plus-statis fix-plus">+</span></p>
+                    </div>
+                    <div class="col-statis pr0">
+                        <p class="title-statis">Content</p>
+                        <p class="number-statis"><b class="timer" data-to="200" data-speed="6000"></b>m <span class="plus-statis">+</span></p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        
+    </div>
+
+    <!-- Modal introVideo -->
+    <div class="modal fade popup" id="introVideo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                    <button type="button" class="close-popup" data-dismiss="modal" aria-label="Close">
+                        <span class="first-line"></span>
+                        <span class="second-line"></span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Intro video</h4>
+                </div>
+                <div id="sample-video" class="modal-body">
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade popup" id="solution" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close-popup" data-dismiss="modal" aria-label="Close">
+                        <span class="first-line"></span>
+                        <span class="second-line"></span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">giải pháp publishing solution</h4>
+                </div>
+                <div id="sample-video-1" class="modal-body">
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Global js-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/fastclick.min.js"></script>
+    <!--End Global js-->
+    
+    <!--Page js-->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/global.js" type="text/javascript"></script>
+	<script src="js/home_page.js" type="text/javascript"></script>
+    <script>
+
+        if($.cookie("solutionCookie")) {
+            $("button.tellus").attr("data-target",'');
+        }
+
+        $(document).ready(function() {
+
+            //take a tour
+            $("button.tellus").click(function() {
+                $.cookie("solutionCookie",null,{path:'/'});
+            });
+			
+			//Load home
+			var imagePage = [
+                'images/bg-home.jpg',
+                'images/bg-office.jpg',
+                'images/bg-contact.jpg',
+                'images/ad360.jpg',
+                'images/dspl.jpg',
+                'images/metub.jpg',
+                'images/ndt.jpg',
+                'images/netlinkad.jpg',
+                'images/techz.jpg',
+                'images/seatime.jpg',
+                'images/saoonline.jpg',
+                'images/textlink.jpg',
+                'images/tinmoi.jpg',
+                'images/vqg.jpg'
+            ];
+			preloaderPage('index', imagePage);
+			
+			//load menu
+			nav_menu();
+			
+			//auto show wh
+			auto_show_wh();
+			
+			//tell us
+			tellus();
+			
+			//slider work
+			slider_work();
+			
+			//tabs work 
+			tabs_work();
+			
+			//countTo
+			$('.timer').each(count);
+			
+			function count(options) {
+				var $this = $(this);
+				options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+				$this.countTo(options);
+			}
+
+
+			
+        });
+    </script>
+    <!--End Page js-->
+
+</body>
+</html>

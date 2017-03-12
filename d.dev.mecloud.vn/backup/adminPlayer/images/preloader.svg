@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="90px" height="90px" viewBox="0 0 90 90" enable-background="new 0 0 90 90" xml:space="preserve">
+
+	<circle fill="none" stroke="#3495D5" stroke-miterlimit="10" stroke-dasharray="8.085,8.085" cx="45" cy="45" r="43.762">
+
+		<animateTransform attributeName="transform"
+			 attributeType="XML"
+			 type="rotate"
+			 from="0 45 45"
+			 to="360 45 45"
+			 dur="5s"
+			 repeatCount="indefinite" />
+
+	</circle>
+	
+
+	<circle fill="#3495D5" cx="45" cy="45" r="36.086">
+
+		
+
+	</circle>
+	
+
+	<g>
+
+		<animate attributeName="opacity" 
+			 attributeType="XML"
+         	 values=".1;1;.1" 
+        	 begin="0s" 
+        	 dur="1s" 
+        	 repeatCount="indefinite" />
+
+		<animateTransform id="playBtn"
+			 attributeName="transform"
+			 attributeType="XML"
+			 type="translate"
+			 dur="1s"
+			 values="0,2;0,-3;0,2"
+			 repeatCount="indefinite" />
+
+	
+		<path fill="#C2D7E5" d="M34.065,67.091l30-20h-26L34.065,67.091z" />
+		<path fill="#FFFFFF" d="M34.065,27.091l30,20h-24L34.065,27.091z" />
+		<path fill="#D5E0E8" d="M34.065,67.091l11-20l-11-20V67.091z" />
+	</g>
+</svg>

@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Thống kê tổng quát | MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
+	<link href="css/cpStatisListVideo.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    
+    <!-- start detail script-->
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script>
+		$(document).ready(function() {
+			
+			////calendar
+			$('#dp,#dp1').datepicker();
+			
+			////dropdown calendar
+			$('.statusStatis a').click(function(event){
+				event.preventDefault();
+				var X=$(this).attr('id');
+				if(X==1) {
+					$('.statusStatis i.fa-caret-down').show();
+					$('.statusStatis i.fa-caret-up').hide();
+					$(this).attr('id', '0');
+				}
+				else {
+					$('.statusStatis i.fa-caret-up').show();
+					$('.statusStatis i.fa-caret-down').hide();
+					$(this).attr('id', '1');
+				}
+			});
+		});
+		
+    </script>
+    <!-- end detail script-->
+</head>
+
+<body>
+
+  <div class="contentIframe clearfix">
+      <h1 class="clearfix">
+          <div class="w-text-h1">
+              <span>Thống kê</span> 
+          </div>
+      </h1>
+      <div class="statisTime">
+          
+          <div class="statusStatis clearfix">
+              <span class="ctd">Chọn thời điểm: </span>
+              <a href="cpStatisListVideo.html#" class="viewTotalST" data-toggle="collapse" data-target="#rangeTime">Tháng này 01/11/2014 đến 30/11/2014 <i class="fa fa-caret-down"></i><i class="fa fa-caret-up"></i></a>
+          </div>
+          <div id="rangeTime" class="collapse">
+              <div class="wrapperST">
+                  <div class="col-md-5 col-lg-6">
+                      <div class="statisTimeRange">
+                          <div class="txt-div">Khoảng ngày</div>
+                          <input id="dp" class="form-control" type="text" data-date-format="dd-mm-yyyy" value="01/11/2014" placeholder="Từ ngày">
+                          <input id="dp1" class="form-control" type="text" value="05/11/2014" data-date-format="dd-mm-yyyy" placeholder="Đến ngày">
+                          <button type="submit" class="btn btn-primary">Ok</button>
+                      </div><!-- end range-time -->
+                  </div>
+                  <div class="col-md-7 col-lg-6">
+                      <div class="statisTimeRangeTxt">
+                          <div class="txt-div">Xem nhanh các khoảng ngày</div>
+                          <ul>
+                              <li><a href="cpStatisListVideo.html#">Hôm nay: 04/12</a></li>
+                              <li><a href="cpStatisListVideo.html#">Hôm qua: 03/12</a></li>
+                              <li><a href="cpStatisListVideo.html#">7 ngày qua</a></li>
+                              <li><a href="cpStatisListVideo.html#">30 ngày qua</a></li>
+                          </ul>
+                          <ul>
+                              <li><a href="cpStatisListVideo.html#">Tháng này: tháng 12</a></li>
+                              <li><a href="cpStatisListVideo.html#">Tháng tước: tháng 11</a></li>
+                              <li><a href="cpStatisListVideo.html#">Toàn bộ thời gian</a></li>
+                          </ul>
+                      </div><!-- end range-time-txt -->
+                  </div>
+              </div>
+          </div><!-- end #rangeTime -->
+          
+      </div><!-- end statisTime -->
+      
+      <div class="general-statis">
+          <div class="row total">	
+              <div class="field-gs borderLeft col-xs-6 col-sm-4">
+                  <p>Lượt xem</p>
+                  <p class="field-statis red-lv">1.400</p>
+              </div>
+              <div class="field-gs borderLeft last col-xs-6 col-sm-4">
+                  <p>Like</p>
+                  <p class="field-statis green-lv">400</p>
+              </div>
+              <div class="field-gs borderTop col-xs-12 col-sm-4">
+                  <p>Doanh thu (VNĐ)</p>
+                  <p class="field-statis blue-lv">1.400.000</p>
+              </div>
+          </div>    
+      </div><!-- end general-statis -->
+      
+      <div class="chartTotal">
+      
+          Đồ thị tổng quát
+          
+      </div><!-- end chartTotal -->
+      
+      <div class="statisTotal">
+          
+          <div class="row">
+              <div class="searchVideoST col-xs-12 col-sm-4 col-lg-4">
+                  <input type="text" class="form-control" placeholder="Tìm nhanh video..." />
+                  <span class="iconSearch"><i class="fa fa-search"></i></span>
+              </div>
+              <div class="fillterVideoST col-xs-6 col-sm-3 col-lg-3">
+                  <select class="form-control">
+                      <option>Điều kiện</option>
+                      <option>Lượt like</option>
+                      <option>Lượt xem</option>
+                      <option>Doanh thu</option>
+                  </select>
+              </div>
+              <div class="fillterVideoST col-xs-6 col-sm-3 col-lg-3">
+                  <select class="form-control">
+                      <option>Sắp xếp</option>
+                      <option>Tăng dần</option>
+                      <option>Giảm dần</option>
+                  </select>
+              </div>
+              <div class="col-sm-2 col-lg-2">
+                  <button class="btn btn-primary">Search</button>
+              </div>
+          </div><!-- end headST -->
+          
+          <div class="showVideo clearfix">
+              
+              <div class="resultVideo">Kết quả hiển thị </div>
+              <div class="selectVideo">
+                  <select class="form-control">
+                      <option>10</option>
+                      <option>20</option>
+                      <option>40</option>
+                  </select>
+              </div>
+              
+              <button class="btn btn-default blueST">Export</button>
+              <div class="resultVideo green-lv">Đang hiển thị 10 trong tổng số 1.290.000 video</div>
+          </div>
+          
+          <div class="statisTable table-responsive">
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th width="101">Ngày upload</th>
+                      <th>Video</th>
+                      <th>Like</th>
+                      <th>Xem</th>
+                      <th width="128">Doanh thu (VNĐ)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>24/12/2014<br><span class="timePostST">10:30 pm</span></td>
+                      <td>
+                          <a class="thumbPostST" href="cpStatisListVideo.html#">
+                              <img src="images/sugest-img1.jpg" />
+                              <span>Một đoạn clip khiến ad nổi da gà. Không biết có thật không nữa :(</span>
+                          </a>
+                      </td>
+                      <td>1,690</td>
+                      <td>3,400,000</td>
+                      <td>10,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>24/12/2014<br><span class="timePostST">10:30 pm</span></td>
+                      <td>
+                          <a class="thumbPostST" href="cpStatisListVideo.html#">
+                              <img src="images/sugest-img1.jpg" />
+                              <span>Bất ngờ với độ hoành tráng của các thanh niên này</span>
+                          </a>
+                      </td>
+                      <td>1,690</td>
+                      <td>3,400,000</td>
+                      <td>10,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>24/12/2014<br><span class="timePostST">10:30 pm</span></td>
+                      <td>
+                          <a class="thumbPostST" href="cpStatisListVideo.html#">
+                              <img src="images/sugest-img2.jpg" />
+                              <span>Xin chào các bạn! Tôi là Ted Osius. Quyết định của Tổng thống Obama bổ nhiệm tôi làm Đại sứ mới của Hoa Kỳ tại Việt Nam đã biến ước mơ củ</span>
+                          </a>
+                      </td>
+                      <td>1,690</td>
+                      <td>3,400,000</td>
+                      <td>10,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>24/12/2014<br><span class="timePostST">10:30 pm</span></td>
+                      <td>
+                          <a class="thumbPostST" href="cpStatisListVideo.html#">
+                              <img src="images/sugest-img3.jpg" />
+                              <span>Hệ quả của việc nuôi chó hay bị bắt trộm @@</span>
+                          </a>
+                      </td>
+                      <td>1,690</td>
+                      <td>3,400,000</td>
+                      <td>10,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>24/12/2014<br><span class="timePostST">10:30 pm</span></td>
+                      <td>
+                          <a class="thumbPostST" href="cpStatisListVideo.html#">
+                              <img src="images/sugest-img4.jpg" />
+                              <span>[FULL] Vietnam s Got Talent 2014 - BÁN KẾT 01 - TẬP 10 (30 11 2014)</span>
+                          </a>
+                      </td>
+                      <td>1,690</td>
+                      <td>3,400,000</td>
+                      <td>10,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>24/12/2014<br><span class="timePostST">10:30 pm</span></td>
+                      <td>
+                          <a class="thumbPostST" href="cpStatisListVideo.html#">
+                              <img src="images/sugest-img5.jpg" />
+                              <span>Kenny Sảng tự nhận đẹp hơn David Beckham! Chú đùa với anh à =)))</span>
+                          </a>
+                      </td>
+                      <td>1,690</td>
+                      <td>3,400,000</td>
+                      <td>10,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>24/12/2014<br><span class="timePostST">10:30 pm</span></td>
+                      <td>
+                          <a class="thumbPostST" href="cpStatisListVideo.html#">
+                              <img src="images/sugest-img1.jpg" />
+                              <span>Một đoạn clip khiến ad nổi da gà. Không biết có thật không nữa :(</span>
+                          </a>
+                      </td>
+                      <td>1,690</td>
+                      <td>3,400,000</td>
+                      <td>10,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>24/12/2014<br><span class="timePostST">10:30 pm</span></td>
+                      <td>
+                          <a class="thumbPostST" href="cpStatisListVideo.html#">
+                              <img src="images/sugest-img1.jpg" />
+                              <span>Bất ngờ với độ hoành tráng của các thanh niên này</span>
+                          </a>
+                      </td>
+                      <td>1,690</td>
+                      <td>3,400,000</td>
+                      <td>10,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>24/12/2014<br><span class="timePostST">10:30 pm</span></td>
+                      <td>
+                          <a class="thumbPostST" href="cpStatisListVideo.html#">
+                              <img src="images/sugest-img2.jpg" />
+                              <span>Xin chào các bạn! Tôi là Ted Osius. Quyết định của Tổng thống Obama bổ nhiệm tôi làm Đại sứ mới của Hoa Kỳ tại Việt Nam đã biến ước mơ củ</span>
+                          </a>
+                      </td>
+                      <td>1,690</td>
+                      <td>3,400,000</td>
+                      <td>10,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>24/12/2014<br><span class="timePostST">10:30 pm</span></td>
+                      <td>
+                          <a class="thumbPostST" href="cpStatisListVideo.html#">
+                              <img src="images/sugest-img3.jpg" />
+                              <span>Hệ quả của việc nuôi chó hay bị bắt trộm @@</span>
+                          </a>
+                      </td>
+                      <td>1,690</td>
+                      <td>3,400,000</td>
+                      <td>10,000,000</td>
+                    </tr>
+                    
+                    
+                  </tbody>
+              </table>
+
+          </div>
+          
+          <ul class="pagination">
+            <li class="disabled"><a href="cpStatisListVideo.html#"><i class="fa fa-angle-double-left"></i></a></li>
+            <li class="active"><a href="cpStatisListVideo.html#">1 <span class="sr-only">(current)</span></a></li>
+            <li><a href="cpStatisListVideo.html#">2</a></li>
+            <li><a href="cpStatisListVideo.html#">3</a></li>
+            <li><a href="cpStatisListVideo.html#">4</a></li>
+            <li><a href="cpStatisListVideo.html#"><i class="fa fa-angle-double-right"></i></a></li>
+          </ul>
+          
+      </div><!-- end statisTotal -->
+      
+      
+  </div>
+                    
+</body>
+
+</html>

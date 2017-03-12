@@ -1,0 +1,436 @@
+/**************leftContentContest****************/
+.leftContentContest {
+
+}
+.tabsContest, .tabsClip {
+	border: 1px solid #eeeeee;
+	background-color: #ffffff;
+	margin-top: 20px;
+	border-radius: 4px;
+}
+.leftContentContest .nav {
+	padding: 0 20px;
+	border-bottom: 1px solid #eeeeee;
+}
+.leftContentContest .nav li a, .leftContentContest .nav li a:focus {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	color: #848383;
+	font-weight: 400;
+	border-bottom: 1px solid #eeeeee;
+	padding: 15px 0;
+	margin: 0 30px 0 0;
+	font-size: 14px;
+}
+.leftContentContest .nav li a:hover,.leftContentContest .nav li.active a {
+	border: none;
+	background: none;
+	color: #e64b3a;
+	border-bottom: 1px solid #e64b3a;
+}
+.leftContentContest .tab-content {
+	padding: 20px;
+}
+.itemContest {
+	position: relative;
+}
+.titleItemContest{
+	height: 70px;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background: url(../images/bg-transparent.png);
+	padding: 0 190px 0 20px;
+}
+.titleItemContest h2{
+	color: #ffffff;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;height: 30px;
+    margin: 20px 0;
+}
+.titleItemContest a{
+	border: 2px solid #ffffff;
+	padding: 7px 15px;
+	color: #ffffff;
+	text-transform: uppercase;
+	border-radius: 4px;
+	font-weight: 600;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	font-size: 16px;
+}
+.hotContest .owl-controls {
+	position: absolute;
+	top:-57px;
+	right: -7px;
+}
+
+.itemClip {
+	padding: 0 10px;
+	margin-bottom: 20px;
+}
+.thumbClip {
+	display: block;
+	position: relative;
+	padding-top: 56.25%;
+}
+.thumbClip img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.thumbClip:hover .btnPlayClip {
+	display: block;
+}
+.btnPlayClip {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	line-height: 35px;
+	text-align: center;
+	top:50%;
+	margin-top: -20px;
+	left: 50%;
+	margin-left: -20px;
+	display: block;
+	background: url(../images/bg-transparent.png);
+	border: 2px solid #ffffff;
+	border-radius: 20px;
+	color: #ffffff;
+	display: none;
+	font-size: 18px;
+}
+.winStatus{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 28px;
+	padding: 5px 10px;
+	background-color: #f4b350;
+	color: #ffffff;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100%;
+}
+.winContestName{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 5px 10px;
+	background-color: #e64b3a;
+	color: #ffffff;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100%;
+	min-width: 95px;
+}
+.titleClip {
+	color: #454545;
+	font-size: 14px;
+	display: block;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	font-weight: 400;
+	margin-top: 10px;
+	height: 100%;
+}
+.userClip:hover, .titleClip:hover{
+	color: #e64b3a;
+}
+.userClip {
+	display: block;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	color: #999999;
+	margin-top: 3px;
+}
+.viewMoreClip {
+	width: 100%;
+	display: block;
+	text-align: center;
+	background-color: #f5f5f5;
+	padding: 10px;
+}
+.itemContestActive {
+	padding: 0 10px;
+	margin-bottom: 20px;
+}
+.titleItemCAbg {
+	position: relative;
+}
+.titleItemCA {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 14px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding: 10px;
+	width: 100%;
+	background: url(../images/bg-transparent.png);
+}
+.titleItemCA:hover {
+	color: #e64b3a;
+}
+/************popupCreateContest**************/
+#popupCreateContest label {
+	color: #454545;
+	font-weight: 400;
+}
+#popupCreateContest .btn-primary{
+	padding: 5px 20px;
+	margin-right: 10px;
+	text-transform: uppercase;
+}
+/**************list Clip**************/
+.listClip{
+	border: 1px solid #eeeeee;
+	background-color: #ffffff;
+	margin-top: 20px;
+	border-radius: 4px;
+}
+.listClip h1 {
+    border-bottom: 1px solid #eeeeee;
+    padding: 0 20px;
+    margin: 0;
+    color: #454545;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 15px 20px;
+    text-transform: uppercase;
+}
+.listClipContent{
+	padding: 20px;
+}
+.paging-seo {
+	float:right;
+	margin-top:24px;
+}
+.paging-seo a {
+	padding:0 10px;
+	display:inline-block;
+	border-right:1px solid #eeeeee;
+	float:left;
+	font-size: 14px;
+	color:#454545;
+}
+.paging-seo a:hover, .paging-seo a.active {
+	color:#E64B3A;	
+}
+
+/**************sidebarContest****************/
+.sidebarContest{
+	padding-left: 15px;
+}
+.boxSidebar {
+	border: 1px solid #eeeeee;
+	background-color: #ffffff;
+	margin-top: 20px;
+	border-radius: 4px;
+}
+.boxSidebar h3 {
+	font-size: 14px;
+	text-transform: uppercase;
+	display: block;
+	margin: 0;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #eeeeee;
+	background-color: #f5f5f5;
+	padding: 0 20px;
+}
+.contentBoxSidebar {
+	padding: 20px;
+}
+.contentBoxSidebar.statis {
+    padding: 15px 25px;
+}
+.contentSC {
+	padding: 5px;
+	text-align: center;
+	color: #ffffff;
+}
+.contestSC {
+	background-color: #22a7f0;
+	padding: 10px;
+}
+.videoSC {
+	background-color: #2abb9b;
+	padding: 10px;
+}
+.commentSC {
+	background-color: #9b59b6;
+	padding: 10px;
+}
+.likeSC {
+	background-color: #03c9a9;
+	padding: 10px;
+}
+.viewSC {
+	background-color: #f4b350;
+	padding: 10px;
+}
+.numberSC {
+	font-size: 30px;
+}
+.contestSC .numberSC {
+	font-size: 40px;
+}
+.txtSC {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.btnCreateContest {
+	background-color: #57c745;
+	width: 100%;
+	font-size: 20px;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	font-weight: 400;
+}
+.btnCreateContest:hover {
+	background-color: #43ad32;
+}
+.listComment {
+	overflow-y:scroll;	
+	-webkit-overflow-scrolling:touch;
+	height:480px;
+}
+.contentBoxSidebar .slimScrollDiv {
+	overflow: inherit !important;
+}
+.contentBoxSidebar .slimScrollBar {
+	right: -12px !important;
+}
+.thumbLC {
+	float: left;
+	display: block;
+	width: 40px;
+	height: 40px;
+	padding: 0 !important;
+}
+.thumbLC img {
+	border-radius: 20px;
+}
+.contentLC {
+	margin-left: 50px;
+	border-bottom: 1px solid #eeeeee;
+	padding: 0 0 5px 0 !important;
+	margin-bottom: 10px;
+	display: block;
+}
+.listComment.nav > li > a:hover{
+	background: none;
+}
+.listComment.nav > li > a:hover p{
+	color: #e64b3a;
+}
+.userLC {
+	font-weight: 400;
+	color: #454545;
+	display: block;
+}
+.contentLC p {
+	max-height: 55px;
+    overflow: hidden;
+	color: #999999;
+}
+@media (max-width: 767px) {
+	.leftContentContest {
+ 	   padding: 0 10px;
+	}
+	.tabsContest, .tabsClip {
+	    margin-top: 10px;
+	}
+	.leftContentContest .nav {
+	    padding: 0 10px;
+	}
+	.leftContentContest .nav li a, .leftContentContest .nav li a:focus {
+		font-size: 13px;
+		margin: 0 20px 0 0;
+		text-transform: none;
+	}
+	.leftContentContest .tab-content {
+    	padding: 10px;
+	}
+	.hotContest .owl-controls {
+    	right: -1px;
+    	top: -45px;
+	}
+	.tabsClip .row, .tabsContest .row {
+	    margin-left: -5px;
+	    margin-right: -5px;
+	}
+	.itemClip {
+	    padding: 0 5px;
+	}
+	.winStatus{
+		bottom: 21px;
+		padding: 3px 7px;
+		font-size: 11px;
+	}
+	.winContestName{
+		bottom: 0;
+		padding: 3px 7px;
+		font-size: 11px;
+		min-width: 78px;
+	}
+	.titleClip {
+		font-size: 13px;
+	}
+	.titleItemContest {
+	    height: 40px;
+	    padding: 10px;
+	}
+	.titleItemContest h2 {
+	    font-size: 18px;
+	    margin: 0;
+	}
+	.boxSidebar {
+	    margin-top: 10px;
+	}
+	.boxSidebar h3 {
+	    padding: 0 10px;
+	}
+	.sidebarContest {
+		padding: 0 10px;
+	}
+	.contentBoxSidebar.statis {
+	    padding: 5px 15px;
+	}
+	.contentBoxSidebar {
+    	padding: 10px;
+	}
+	.itemContestActive {
+	    margin-bottom: 10px;
+	    padding: 0 5px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+	.contestSC .numberSC {
+	    font-size: 30px;
+	}
+}
+
+
+@media (min-width: 991px) and (max-width: 1200px) {
+	
+}
+
+
+@media (min-width: 1201px) {
+	
+}

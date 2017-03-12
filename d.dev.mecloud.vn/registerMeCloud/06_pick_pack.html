@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Check Website| Register MeCloud</title>
+    <link href="css/register.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+            
+			$('ul.pickPack li').click(function(e){
+				e.preventDefault();
+				
+				$('ul.pickPack li').removeClass('checked');
+				$(this).addClass('checked');
+					
+			});
+			
+        });
+    </script>    
+	
+</head>
+
+<body>
+<div class="wrapperSignup">
+    <div class="photoSignUp"></div>
+    <div class="outerSignup">
+        
+        <div class="headSignup">
+        	<a class="logo" href="06_pick_pack.html#">mecloud.vn</a>
+            <h1>Đăng ký</h1>
+        </div>
+        
+        <div class="formSignup">
+        
+            <ul class="stepSignup clearfix">
+                <li class="done"><a href="06_pick_pack.html#">Thông tin<br> đăng ký</a></li>
+                <li class="done"><a href="06_pick_pack.html#">Kiểm tra<br> website</a></li>
+                <li class="current"><a href="06_pick_pack.html#">Chọn gói<br> sản phẩm</a></li>
+                <li><a href="06_pick_pack.html#">Hoàn<br> thành</a></li>
+            </ul>
+        
+            <h4 class="question">Chọn gói sản phẩm</h4>
+            
+            <ul class="pickPack">
+                <li class="clearfix">
+                    <div class="namePack">
+                        <span class="check"></span>
+                    </div>
+                    <a href="06_pick_pack.html#" class="descPack" title="Xem chi tiết">
+                    	<span>Cơ bản</span>
+                        <span>Miễn phí</span>
+                    </a>
+                </li>
+                <li class="clearfix checked">
+                    <div class="namePack">
+                        <span class="check"></span>
+                    </div>
+                    <a href="06_pick_pack.html#" class="descPack" title="Xem chi tiết">
+                    	<span>Pro</span>
+                        <span>Pay as you go</span>
+                    </a>
+                </li>
+                <li class="clearfix">
+                    <div class="namePack">
+                        <span class="check"></span>
+                    </div>
+                    <a href="06_pick_pack.html#" class="descPack" title="Xem chi tiết">
+                        <span>Đối tác</span>
+                        <span>CHIA SẺ DOANH THU</span>
+                    </a>
+                </li>
+                <li class="clearfix">
+                    <div class="namePack">
+                        <span class="check"></span>
+                    </div>
+                    <a href="06_pick_pack.html#" class="descPack" title="Xem chi tiết">
+                        <span>Pro 5</span>
+                        <span>Gói phổ thông</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="formGroup twoBtn clearfix">
+                <button type="submit" class="btnBack">Quay lại</button>
+                <button type="submit" class="btnSubmit">Đồng ý</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

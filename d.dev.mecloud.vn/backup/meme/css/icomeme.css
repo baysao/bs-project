@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'icomeme';
+	src:url('http://d.dev.mecloud.vn/backup/meme/css/fonts/icomeme.eot?yeb5uy');
+	src:url('http://d.dev.mecloud.vn/backup/meme/css/fonts/icomeme.eot?') format('embedded-opentype'),
+		url('http://d.dev.mecloud.vn/backup/meme/css/fonts/icomeme.woff?yeb5uy') format('woff'),
+		url('http://d.dev.mecloud.vn/backup/meme/css/fonts/icomeme.ttf?yeb5uy') format('truetype'),
+		url('http://d.dev.mecloud.vn/backup/meme/css/fonts/icomeme.svg?yeb5uy') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomeme';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	float:left;
+	font-size:18px;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.leftNone {
+	float:none;	
+}
+.icon-notification:before {
+	content: "\e60a";
+}
+.icon-upload:before {
+	content: "\e609";
+}
+.icon-account:before {
+	content: "\e60b";
+}
+.icon-search:before {
+	content: "\e600";
+	margin-right:5px;
+}

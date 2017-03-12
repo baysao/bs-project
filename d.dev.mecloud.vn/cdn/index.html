@@ -1,0 +1,643 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Me CDN</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,700&subset=latin,vietnamese,latin-ext' rel='stylesheet' type='text/css'>
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-fixed-top animated fadeInDown">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="573.356px" height="125.424px" viewBox="0 0 573.356 125.424" enable-background="new 0 0 573.356 125.424"
+                             xml:space="preserve">
+                        <path d="M157.17,33.407c0-2.163,1.532-3.046,3.404-1.962l16.25,9.41c1.872,1.084,1.872,2.858,0,3.942l-16.25,9.41
+                            c-1.872,1.084-3.404,0.201-3.404-1.962V33.407z M197.921,89.07c0,20.077-16.274,36.354-36.35,36.354
+                            c-0.664,0-1.323-0.02-1.978-0.055H38.332c-0.655,0.035-1.314,0.055-1.978,0.055C16.274,125.424,0,109.148,0,89.07
+                            c0-20.04,16.221-36.295,36.255-36.348C39.529,23.068,64.664,0,95.19,0c19.344,0,36.519,9.266,47.343,23.597
+                            c5.469-6.276,13.515-10.248,22.494-10.248c16.475,0,29.83,13.358,29.83,29.83c0,7.715-2.929,14.746-7.735,20.042
+                            C193.788,69.812,197.921,78.958,197.921,89.07z M33.15,66.427c-0.015,0.139-0.023,0.279-0.023,0.422
+                            c0,0.057,0.006,0.113,0.009,0.169C33.138,66.82,33.143,66.623,33.15,66.427z M62.324,66.427c-0.015,0.139-0.023,0.279-0.023,0.422
+                            c0,0.057,0.006,0.113,0.009,0.169C62.312,66.82,62.316,66.623,62.324,66.427z M91.702,66.427c-0.015,0.139-0.023,0.279-0.023,0.422
+                            c0,0.057,0.006,0.113,0.009,0.169C91.69,66.82,91.694,66.623,91.702,66.427z M137.584,69.024c-0.01-0.492-0.01-1.106-0.01-1.67
+                            c0-8.837-5-16.505-12.324-20.338c-0.979-0.58-2.034-1.04-3.152-1.358c-1.167-0.331-2.393-0.52-3.666-0.52
+                            c-6.582,0-12.042,4.745-13.18,10.995c-2.178-3.871-5.437-7.053-9.38-9.117c-0.979-0.58-2.034-1.04-3.152-1.358
+                            c-1.167-0.331-2.393-0.52-3.666-0.52c-6.483,0-11.89,4.601-13.137,10.713c-2.177-3.743-5.372-6.821-9.218-8.834
+                            c-0.979-0.58-2.034-1.04-3.152-1.358c-1.167-0.331-2.393-0.52-3.666-0.52c-7.407,0-13.408,6.005-13.408,13.407
+                            c0,1.147,0.159,2.254,0.43,3.316c1.61-0.686,3.38-1.071,5.242-1.071c6.26,0,11.503,4.298,12.979,10.099
+                            c0.27,1.06,0.429,2.165,0.429,3.309c0,0.046-0.006,0.09-0.007,0.135v13.923c0.006-0.003,0.011-0.005,0.017-0.007v10.895l0.008,0.015
+                            c0.008,7.397,6.045,13.355,13.447,13.355l0.015-43.489c-0.01-0.492-0.01-1.106-0.01-1.67c0-2.14-0.299-4.209-0.847-6.174
+                            c1.009-0.245,2.058-0.39,3.143-0.39c6.26,0,11.503,4.298,12.979,10.099c0.27,1.06,0.429,2.165,0.429,3.309
+                            c0,0.046-0.006,0.09-0.007,0.135v13.923c0.006-0.003,0.011-0.005,0.017-0.007v10.895l0.008,0.015
+                            c0.008,7.397,6.045,13.355,13.447,13.355l0.015-43.489c-0.01-0.492-0.01-1.106-0.01-1.67c0-2.122-0.295-4.174-0.835-6.124
+                            c1.068-0.276,2.181-0.44,3.335-0.44c6.26,0,11.503,4.298,12.979,10.099c0.27,1.06,0.429,2.165,0.429,3.309
+                            c0,0.046-0.006,0.09-0.007,0.135v13.923c0.006-0.003,0.011-0.005,0.017-0.007v10.895l0.008,0.015
+                            c0.008,7.397,6.045,13.355,13.447,13.355L137.584,69.024z M181.779,58.854c3.839-4.103,6.194-9.612,6.194-15.674
+                            c0-12.671-10.273-22.947-22.946-22.947c-7.597,0-14.328,3.693-18.505,9.379c-2.792,3.801-4.444,8.491-4.444,13.568
+                            c0,12.674,10.273,22.949,22.949,22.949C171.638,66.129,177.592,63.329,181.779,58.854z M33.135,67.017
+                            c0.003-0.197,0.007-0.394,0.015-0.59c-0.015,0.139-0.023,0.279-0.023,0.422C33.127,66.905,33.133,66.961,33.135,67.017z
+                             M62.309,67.017c0.003-0.197,0.007-0.394,0.015-0.59c-0.015,0.139-0.023,0.279-0.023,0.422C62.3,66.905,62.307,66.961,62.309,67.017
+                            z M91.687,67.017c0.003-0.197,0.007-0.394,0.015-0.59c-0.015,0.139-0.023,0.279-0.023,0.422
+                            C91.679,66.905,91.685,66.961,91.687,67.017z M231.026,119.035c0.318,0.383,0.701,0.574,1.148,0.574h5.216
+                            c0.542,0,0.973-0.184,1.292-0.551c0.318-0.366,0.479-0.837,0.479-1.411V74.15c4.179-1.116,8.166-1.675,11.963-1.675
+                            c1.786,0,3.213,0.271,4.283,0.813c1.068,0.543,1.874,1.571,2.417,3.086c0.542,1.516,0.813,3.646,0.813,6.389v34.884
+                            c0,0.543,0.159,1.005,0.479,1.388c0.318,0.383,0.718,0.574,1.196,0.574h5.216c0.51,0,0.933-0.199,1.268-0.598
+                            c0.335-0.399,0.502-0.854,0.502-1.364V82.763c0-2.839-0.304-5.391-0.909-7.656c4.529-1.754,8.357-2.632,11.484-2.632
+                            c2.807,0,4.992,0.782,6.556,2.345c1.563,1.563,2.345,4.275,2.345,8.135v34.692c0,0.543,0.207,1.005,0.622,1.388
+                            c0.414,0.383,0.861,0.574,1.34,0.574h4.689c0.542,0,1.005-0.184,1.388-0.551c0.383-0.366,0.574-0.837,0.574-1.411V82.954
+                            c0-4.37-0.687-7.896-2.058-10.575c-1.372-2.68-3.23-4.594-5.575-5.742s-5.081-1.723-8.207-1.723c-5.168,0-10.592,1.34-16.27,4.02
+                            c-1.148-1.308-2.751-2.289-4.809-2.942c-2.058-0.654-4.219-0.981-6.484-0.981c-2.648,0-5.527,0.239-8.637,0.718
+                            s-6.788,1.261-11.03,2.345c-1.181,0.256-1.771,1.037-1.771,2.345v47.229C230.548,118.19,230.707,118.652,231.026,119.035z
+                             M316.657,109.034c-2.218-2.488-3.326-6.571-3.326-12.25v-1.388h32.826c1.244,0,1.866-0.718,1.866-2.153v-5.312
+                            c0-4.594-0.813-8.629-2.44-12.106c-1.627-3.477-4.06-6.149-7.297-8.015c-3.238-1.867-7.17-2.8-11.795-2.8
+                            c-6.891,0-12.243,2.05-16.054,6.149c-3.813,4.099-5.718,9.689-5.718,16.771v8.853c0,5.774,1.021,10.407,3.063,13.901
+                            c2.041,3.492,4.729,5.965,8.063,7.416c3.333,1.452,7.042,2.178,11.125,2.178c6.476,0,12.553-1.499,18.231-4.498
+                            c0.893-0.51,1.34-1.101,1.34-1.771v-4.02c0-0.605-0.2-1.045-0.598-1.315c-0.399-0.271-0.95-0.247-1.651,0.071
+                            c-1.213,0.479-2.816,1.061-4.809,1.747c-1.994,0.686-4.036,1.236-6.125,1.65c-2.09,0.415-4.219,0.622-6.388,0.622
+                            C322.31,112.766,318.873,111.522,316.657,109.034z M313.331,88.84v-0.909c0-10.24,4.386-15.36,13.159-15.36
+                            c2.902,0,5.295,0.511,7.178,1.531c1.882,1.021,3.293,2.68,4.235,4.977c0.94,2.297,1.412,5.248,1.412,8.853v0.909H313.331z
+                             M364.221,113.34c4.929,4.626,11.189,6.938,18.782,6.938c2.01,0,4.075-0.224,6.197-0.67c2.121-0.446,4.083-0.988,5.886-1.627
+                            c1.802-0.638,3.23-1.244,4.283-1.818c0.67-0.383,1.005-0.893,1.005-1.531v-4.833c0-0.446-0.144-0.749-0.431-0.909
+                            c-0.287-0.159-0.702-0.144-1.244,0.048c-6.477,2.201-11.708,3.302-15.695,3.302c-3.51,0-6.54-0.718-9.092-2.153
+                            c-2.553-1.436-4.546-3.804-5.981-7.106c-1.436-3.301-2.153-7.663-2.153-13.087V76.399c0-14.834,5.742-22.251,17.227-22.251
+                            c2.297,0,5.056,0.391,8.278,1.172c3.222,0.782,5.694,1.508,7.417,2.178c0.479,0.16,0.877,0.151,1.196-0.023
+                            c0.318-0.176,0.479-0.471,0.479-0.886v-4.785c0-0.67-0.335-1.196-1.005-1.579c-1.053-0.574-2.481-1.18-4.283-1.818
+                            c-1.803-0.638-3.765-1.18-5.886-1.627c-2.122-0.446-4.187-0.67-6.197-0.67c-7.593,0-13.853,2.313-18.782,6.938
+                            c-4.929,4.626-7.393,12.41-7.393,23.352v13.494v0.144C356.828,100.947,359.292,108.715,364.221,113.34z M418.365,47.784
+                            c0-0.542-0.16-0.988-0.479-1.34c-0.319-0.351-0.75-0.526-1.292-0.526h-5.072c-0.574,0-1.013,0.191-1.316,0.574
+                            c-0.304,0.383-0.455,0.813-0.455,1.292v69.863c0,0.574,0.167,1.045,0.502,1.411c0.335,0.367,0.757,0.551,1.268,0.551h5.072
+                            c0.542,0,0.973-0.184,1.292-0.551c0.318-0.366,0.479-0.837,0.479-1.411V47.784z M472.055,88.936c0-7.369-1.875-13.199-5.623-17.489
+                            c-3.749-4.291-9.148-6.437-16.198-6.437c-7.019,0-12.402,2.146-16.15,6.437c-3.749,4.29-5.623,10.12-5.623,17.489v7.465
+                            c0,7.338,1.874,13.151,5.623,17.442c3.748,4.29,9.131,6.436,16.15,6.436c7.05,0,12.449-2.146,16.198-6.436
+                            c3.748-4.291,5.623-10.104,5.623-17.442V88.936z M460.163,108.507c-2.186,2.84-5.496,4.259-9.929,4.259
+                            c-8.773,0-13.159-5.455-13.159-16.365v-7.465c0-5.199,1.084-9.228,3.254-12.083c2.169-2.854,5.471-4.282,9.905-4.282
+                            c2.998,0,5.479,0.654,7.441,1.962c1.962,1.309,3.413,3.182,4.354,5.623c0.94,2.439,1.412,5.367,1.412,8.78v7.465
+                            C463.441,101.633,462.348,105.668,460.163,108.507z M483.108,111.019c1.148,2.983,3.142,5.272,5.981,6.867
+                            c2.839,1.596,6.667,2.393,11.484,2.393c5.678,0,12.441-1.005,20.289-3.015c1.18-0.351,1.771-1.132,1.771-2.345V67.69
+                            c0-0.542-0.176-1.005-0.526-1.388c-0.352-0.383-0.798-0.574-1.34-0.574h-4.785c-0.574,0-1.045,0.199-1.412,0.598
+                            c-0.367,0.399-0.55,0.854-0.55,1.364v43.497c-1.851,0.479-4.052,0.894-6.603,1.244c-2.553,0.352-4.578,0.526-6.077,0.526
+                            c-4.02,0-6.915-0.988-8.685-2.967c-1.771-1.978-2.656-5.375-2.656-10.192V67.69c0-0.542-0.191-1.005-0.574-1.388
+                            s-0.846-0.574-1.388-0.574h-4.689c-0.574,0-1.045,0.191-1.412,0.574c-0.367,0.383-0.55,0.846-0.55,1.388v32.108
+                            C481.386,104.296,481.96,108.036,483.108,111.019z M573.356,47.784c0-0.542-0.16-0.988-0.479-1.34
+                            c-0.319-0.351-0.75-0.526-1.292-0.526h-4.977c-0.543,0-0.989,0.184-1.34,0.551c-0.352,0.366-0.526,0.806-0.526,1.315v18.231
+                            c-3.573-0.67-7.401-1.005-11.484-1.005c-3.573,0-6.708,0.534-9.403,1.603c-2.696,1.069-4.921,2.616-6.675,4.643
+                            c-1.755,2.025-3.071,4.514-3.948,7.465c-0.878,2.95-1.316,6.388-1.316,10.312v7.034c0,4.881,0.773,9.156,2.321,12.824
+                            c1.547,3.669,3.924,6.484,7.13,8.445c3.206,1.963,7.169,2.943,11.891,2.943c6.284,0,12.298-0.543,18.04-1.627
+                            c0.829-0.159,1.379-0.398,1.651-0.718c0.271-0.318,0.407-0.845,0.407-1.579V47.784z M553.259,112.766
+                            c-4.626,0-7.904-1.38-9.833-4.14c-1.931-2.759-2.895-6.945-2.895-12.561v-7.034c0-5.486,0.973-9.602,2.919-12.346
+                            c1.945-2.743,5.216-4.115,9.81-4.115c2.424,0,4.546,0.04,6.364,0.12c1.818,0.079,3.524,0.263,5.12,0.55v38.903
+                            C559.893,112.559,556.065,112.766,553.259,112.766z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li data-scroll-nav='0'  class="active"><a href="#"><span>Trang chủ</span></a></li>
+                        <li data-scroll-nav='1' ><a href="#"><span>Tính năng</span></a></li>
+                        <li data-scroll-nav='2' ><a href="#"><span>Bảng giá</span></a></li>
+                        <li data-scroll-nav='3' ><a href="#"><span>Private CDN</span></a></li>
+                        <li data-scroll-nav='4' ><a href="#"><span>Liên hệ</span></a></li>
+                        <li><a href="#" class="btn btn-login">Đăng nhập</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" data-scroll-index="0" class="home">
+        <div class="info-home">
+            <div class="container">
+                <div class="cd-intro-content mask-2">
+                    <div class="content-wrapper">
+                        <div>
+                            <h1>ME CDN</h1>
+                            <p>Giải pháp tăng tốc truyền tải nội dung , tối ưu trải nghiệm người dùng, tiết kiệm chi phí.</p>
+                            <div class="action-wrapper">
+                                <a href="#contact" class="btn cd-btn main-action page-scroll">Get started</a>
+                                <a href="#feature" class="btn cd-btn page-scroll">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="feature" data-scroll-index="1" class="feature">
+        <div class="container">
+            <div class="header-section">
+                <h2>Tính năng</h2>
+                <span class="header-line"></span>
+                <div class="info-section">Me CDN là dịch vụ hỗ trợ tăng tốc, tối ưu và bảo vệ website tại Việt Nam.</div>
+            </div><!-- end header-section -->
+            <div class="content-section clearfix">
+                <div class="col-md-4 col-sm-6 item-feature orange no-padding">
+                    <div class="icon-item-feature">
+                        <div class="icon-feature icon-1">
+                            <svg version="1.1" id="rocket" class="rocket" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="183.064px" height="162.678px" viewBox="-203.5 -17.5 183.064 162.678"
+                                 enable-background="new -203.5 -17.5 183.064 162.678" xml:space="preserve">
+                            <g>
+                                
+                                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-195.5195" y1="122.8564" x2="-135.0989" y2="64.2129" gradientTransform="matrix(1 0 0 -1 59.1 159.75)">
+                                    <stop  offset="0" style="stop-color:#000000"/>
+                                    <stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+                                </linearGradient>
+                                <path class="rocket-shadow" fill="url(#SVGID_1_)" enable-background="new    " d="M-20.436,92.967L-128.635-17.5l-26.848,26.665
+                                    l-27.743,41.467l94.547,94.547C-60.303,144.774-29.284,118.427-20.436,92.967z"/>
+                                <g class="rocket-main">
+                                    <path class="rocket-tl" fill="#EA4562" d="M-151.275-8.001c7.379-7.379,22.64-9.499,22.64-9.499s-2.118,15.264-9.497,22.642L-151.275-8.001z"/>
+                                    
+                                    <rect class="rocket-body-l" x="-172.572" y="-9.202" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -290.8083 -85.9425)" fill="#FFFFFF" width="18.737" height="52.919"/>
+                                    <path class="rocket-bl" fill="#FFFFFF" d="M-192.829,34.45l22.105-22.105c-5.894-5.894-15.128-6.217-20.626-0.719l-12.082,12.082
+                                        c-0.023,0.023-0.045,0.048-0.069,0.071L-192.829,34.45z"/>
+                                    <path class="rocket-br" fill="#FFFFFF" d="M-180.361,46.918l22.105-22.105c5.894,5.894,6.215,15.127,0.717,20.625L-169.62,57.52
+                                        c-0.023,0.023-0.047,0.047-0.07,0.07L-180.361,46.918L-180.361,46.918z"/>
+                                    <path class="rocket-tr" fill="#BA3160" d="M-144.797-1.522l6.664,6.664c7.379-7.379,9.497-22.642,9.497-22.642s-0.078,0.01-0.219,0.035
+                                        L-144.797-1.522z"/>
+                                    <g>
+                                        <g>
+                                            <path class="rocket-line-l" fill="#EA4562" d="M-192.829,34.45l2.613-2.613l-10.672-10.672l-2.543,2.543c-0.023,0.023-0.045,0.048-0.069,0.071
+                                                L-192.829,34.45z"/>
+                                            <path class="rocket-line-r" fill="#EA4562" d="M-177.747,44.305l-2.613,2.613l10.671,10.671c0.023-0.023,0.047-0.047,0.07-0.07l2.543-2.543
+                                                L-177.747,44.305z"/>
+                                        </g>
+                                    </g>
+                                    
+                                    <rect class="rocket-body-r" x="-164.8" y="-5.983" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -287.5892 -78.1709)" fill="#E8DEDE" width="9.632" height="52.919"/>
+                                    <path class="rocket-body-b" fill="#1A335E" d="M-175.102,42.777c10.863-10.863,16.403-22.933,12.857-26.48c-3.45-3.45-14.975,1.706-25.597,11.994
+                                        l-0.009-0.009l-8.878,8.878l13.529,13.529L-175.102,42.777z"/>
+                                    <polygon class="rocket-line-b" fill="#EA4562" points="-194.641,35.071 -196.729,37.159 -183.2,50.688 -181.087,48.624       "/>
+                                </g>
+                            </g>
+                            </svg>                            
+                        </div>
+                        <div class="title-feature">
+                            Tăng tốc website
+                        </div>
+                    </div>
+                    <div class="content-item-feature">
+                        Các file được cache lại ở cụm server Hà Nội và TP. Hồ Chí Minh, giúp tăng tốc độ trả file cho user ở khắp Việt Nam.
+                    </div>
+                </div><!-- end item-feature-feature -->
+                <div class="col-md-4 col-sm-6 item-feature cyan no-padding">
+                    <div class="icon-item-feature">
+                        <div class="icon-feature icon-2">
+                            <svg version="1.1" id="graph" class="graph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="219.333px" height="175.835px" viewBox="0 0 219.333 175.835" enable-background="new 0 0 219.333 175.835"
+                                 xml:space="preserve">
+                            <g>
+                                <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="77.1936" y1="48.7228" x2="134.8933" y2="117.7147">
+                                    <stop  offset="0" style="stop-color:#000000"/>
+                                    <stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+                                </linearGradient>
+                                <path class="graph-shadow" opacity="0.1" fill="url(#SVGID_2_)" d="M219.333,95.333L124.667,2.045L91.833,41.333l-28.5,24l-28.5-21L1.271,81.289
+                                    l94.547,94.547C124.195,175.431,210.485,120.793,219.333,95.333z"/>
+                                <path class="graph-line" d="M8.225,78.967L4.441,75.7l30.012-34.751L63.23,62.152l26.813-22.579l28.352-34.818l3.877,3.157L93.623,43.094
+                                    L63.437,68.515L35.213,47.718L8.225,78.967z"/>
+                                <circle class="graph-dot-1" fill="#FFF208" cx="6.333" cy="77.333" r="6.333"/>
+                                <circle class="graph-dot-2" fill="#FFF208" cx="34.833" cy="44.333" r="6.333"/>
+                                <circle class="graph-dot-3" fill="#FFF208" cx="63.333" cy="65.333" r="6.333"/>
+                                <circle class="graph-dot-4" fill="#FFF208" cx="91.833" cy="41.333" r="6.333"/>
+                                <circle class="graph-dot-5" fill="#FFF208" cx="120.333" cy="6.333" r="6.333"/>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="title-feature">
+                            Báo cáo thống kê realtime
+                        </div>
+                    </div>
+                    <div class="content-item-feature">
+                        Các file được cache lại ở cụm server Hà Nội và TP. Hồ Chí Minh, giúp tăng tốc độ trả file cho user ở khắp Việt Nam.
+                    </div>
+                </div><!-- end item-feature-feature -->
+                <div class="col-md-4 col-sm-6 item-feature red no-padding">
+                    <div class="icon-item-feature">
+                        <div class="icon-feature icon-3">
+                            <svg version="1.1" id="zone" class="zone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="183.432px" height="167.667px" viewBox="0 0 183.432 167.667" enable-background="new 0 0 183.432 167.667"
+                                 xml:space="preserve">
+                            <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-5.6775" y1="31.9733" x2="58.8815" y2="-45.2203" gradientTransform="matrix(1 0 0 -1 59.1 74.4001)">
+                                <stop  offset="0" style="stop-color:#000000"/>
+                                <stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+                            </linearGradient>
+                            <path class="zone-shadow" fill="url(#SVGID_3_)" enable-background="new    " d="M68.533,8.479l-27.935,4.688L29.314,24.933l22.284,20.9
+                                l-7,2.667L24.444,29.709l-12.222,2.625l-3.743,36.95l98.953,98.383c28.377-0.405,67.152-24.923,76-50.383L68.533,8.479"/>
+                            <g class="zone-g">
+                                <g>
+                                    <path class="zone-t" fill="#4B1004" d="M56.579,24.933L68.533,8.479c-15.56-11.305-35.614-11.305-51.174,0l11.955,16.454
+                                        c3.827-2.786,8.536-4.433,13.632-4.433C48.042,20.5,52.751,22.148,56.579,24.933z"/>
+                                    <path class="zone-r" fill="#E8E846" d="M61.965,56.969l16.949,12.314c11.305-15.56,11.305-35.614,0-51.174L61.965,30.423
+                                        c2.63,3.761,4.178,8.335,4.178,13.273S64.595,53.208,61.965,56.969z"/>
+                                    <path class="zone-b" fill="#4B1004" d="M29.808,62.811L18.109,78.914c15.56,11.305,35.614,11.305,51.174,0L57.065,62.096
+                                        c-3.911,3.006-8.804,4.797-14.118,4.797C38.068,66.893,33.544,65.384,29.808,62.811z"/>
+                                    <path class="zone-l" fill="#E8E846" d="M24.444,29.709L8.479,18.109c-11.305,15.56-11.305,35.614,0,51.174l15.965-11.599
+                                        c-2.945-3.889-4.694-8.733-4.694-13.988S21.499,33.598,24.444,29.709z"/>
+                                </g>
+                                <circle class="zone-c" fill="#E8E846" cx="42.898" cy="44" r="12"/>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="title-feature">
+                            Pull zone, push zone dễ dàng
+                        </div>
+                    </div>
+                    <div class="content-item-feature">
+                        Các file được cache lại ở cụm server Hà Nội và TP. Hồ Chí Minh, giúp tăng tốc độ trả file cho user ở khắp Việt Nam.
+                    </div>
+                </div><!-- end item-feature-feature -->
+                <div class="col-md-4 col-sm-6 item-feature black no-padding">
+                    <div class="icon-item-feature">
+                        <div class="icon-feature icon-2">
+                            <svg version="1.1" id="graph1" class="graph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="219.333px" height="175.835px" viewBox="0 0 219.333 175.835" enable-background="new 0 0 219.333 175.835"
+                                 xml:space="preserve">
+                            <g>
+                                <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="77.1936" y1="48.7228" x2="134.8933" y2="117.7147">
+                                    <stop  offset="0" style="stop-color:#000000"/>
+                                    <stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+                                </linearGradient>
+                                <path class="graph-shadow" fill="url(#SVGID_4_)" d="M219.333,95.333L124.667,2.045L91.833,41.333l-28.5,24l-28.5-21L1.271,81.289
+                                    l94.547,94.547C124.195,175.431,210.485,120.793,219.333,95.333z"/>
+                                <path class="graph-line" style="fill:rgba(255,255,255,0.2); stroke: #ffffff;stroke-width: 1px;" d="M8.225,78.967L4.441,75.7l30.012-34.751L63.23,62.152l26.813-22.579l28.352-34.818l3.877,3.157L93.623,43.094
+                                    L63.437,68.515L35.213,47.718L8.225,78.967z"/>
+                                <circle class="graph-dot-1" fill="#a1d545" cx="6.333" cy="77.333" r="6.333"/>
+                                <circle class="graph-dot-2" fill="#a1d545" cx="34.833" cy="44.333" r="6.333"/>
+                                <circle class="graph-dot-3" fill="#a1d545" cx="63.333" cy="65.333" r="6.333"/>
+                                <circle class="graph-dot-4" fill="#a1d545" cx="91.833" cy="41.333" r="6.333"/>
+                                <circle class="graph-dot-5" fill="#a1d545" cx="120.333" cy="6.333" r="6.333"/>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="title-feature">
+                            Tăng tốc website
+                        </div>
+                    </div>
+                    <div class="content-item-feature">
+                        Các file được cache lại ở cụm server Hà Nội và TP. Hồ Chí Minh, giúp tăng tốc độ trả file cho user ở khắp Việt Nam.
+                    </div>
+                </div><!-- end item-feature-feature -->
+                <div class="col-md-4 col-sm-6 item-feature magenta no-padding">
+                    <div class="icon-item-feature">
+                        <div class="icon-feature icon-5">
+                            <svg version="1.1" id="vod" class="vod"̣ xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="229.25px" height="203.35px" viewBox="0 0 229.25 203.35" enable-background="new 0 0 229.25 203.35" xml:space="preserve">
+                            <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="12.5438" y1="19.5411" x2="92.3269" y2="-57.8954" gradientTransform="matrix(1 0 0 -1 59.1 74.4)">
+                                <stop  offset="0" style="stop-color:#000000"/>
+                                <stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+                            </linearGradient>
+                            <path class="vod-shadow" fill="url(#SVGID_5_)" enable-background="new    " d="M0.93,65.165L136.547,203.35
+                                c28.377-0.404,83.855-50.14,92.703-75.6L104.124,0.887L0.93,65.165z"/>
+                            <path class="vod-bg" fill="#FFFFFF" d="M105,63c0,1.65-1.35,3-3,3H3c-1.65,0-3-1.35-3-3V5c0-1.65,1.35-3,3-3h99c1.65,0,3,1.35,3,3V63z"/>
+                            <path class="vod-head" fill="#a1d545" d="M102,0H3C1.35,0,0,1.35,0,3v7h105V3C105,1.35,103.65,0,102,0z M67,7H4V3h63V7z"/>
+                            <g class="vod-v-1">
+                                <path fill="#a1d545" d="M5,17v20h40V17H5z M22,33V21l10,6L22,33z"/>
+                                <rect x="5" y="39" fill="#d3d9c9" width="27" height="2"/>
+                                <rect x="18" y="43" fill="#d3d9c9" width="27" height="2"/>
+                                <rect x="18" y="47" fill="#d3d9c9" width="27" height="2"/>
+                                <rect x="18" y="51" fill="#d3d9c9" width="27" height="2"/>
+                                <rect x="18" y="55" fill="#d3d9c9" width="27" height="2"/>
+                                <rect x="18" y="59" fill="#d3d9c9" width="27" height="2"/>
+                            </g>
+                            <g class="vod-v-2">
+                                <path fill="#717865" d="M51,17v10h20V17H51z M59,24.85v-5.7L63.75,22L59,24.85z"/>
+                                <rect x="74" y="17" fill="#d3d9c9" width="16" height="2"/>
+                                <rect x="74" y="21" fill="#d3d9c9" width="26" height="2"/>
+                                <rect x="74" y="25" fill="#d3d9c9" width="26" height="2"/>
+                            </g>
+                            <g class="vod-v-3">
+                                <path fill="#717865" d="M51,32v10h20V32H51z M59,39.85v-5.7L63.75,37L59,39.85z"/>
+                                <rect x="74" y="32" fill="#d3d9c9" width="16" height="2"/>
+                                <rect x="74" y="36" fill="#d3d9c9" width="26" height="2"/>
+                                <rect x="74" y="40" fill="#d3d9c9" width="26" height="2"/>
+                            </g>
+                            <g class="vod-v-4">
+                                <path fill="#717865" d="M51,47v10h20V47H51z M59,54.85v-5.7L63.75,52L59,54.85z"/>
+                                <rect x="74" y="47" fill="#d3d9c9" width="16" height="2"/>
+                                <rect x="74" y="51" fill="#d3d9c9" width="26" height="2"/>
+                                <rect x="74" y="55" fill="#d3d9c9" width="26" height="2"/>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="title-feature">
+                            Video On Demand
+                        </div>
+                    </div>
+                    <div class="content-item-feature">
+                        Các file được cache lại ở cụm server Hà Nội và TP. Hồ Chí Minh, giúp tăng tốc độ trả file cho user ở khắp Việt Nam.
+                    </div>
+                </div><!-- end item-feature-feature -->
+                <div class="col-md-4 col-sm-6 item-feature blue no-padding">
+                    <div class="icon-item-feature">
+                        <div class="icon-feature icon-6">
+                            <svg version="1.1" id="server" class="server" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="228.758px" height="214.744px" viewBox="54.313 28.508 228.758 214.744"
+                                 enable-background="new 54.313 28.508 228.758 214.744" xml:space="preserve">
+                            <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="-15.5296" y1="575.4679" x2="78.5173" y2="666.7487" gradientTransform="matrix(1 0 0 1 118.2 -503.2)">
+                                <stop  offset="0" style="stop-color:#000000"/>
+                                <stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+                            </linearGradient>
+                            <path class="server-shadow" fill="url(#SVGID_6_)" enable-background="new" d="M54.75,102.12l134.592,141.133
+                                c28.377-0.404,84.88-53.088,93.728-78.548L147.892,29.297L54.75,47.907L76,75.3l-21.092-0.039l22.717,26.789L54.75,102.12z"/>
+                            <g class="server-case">
+                                <path fill="#FFFFFF" d="M103,119.675c0,1.1-0.816,2-1.813,2s-1.813-0.9-1.813-2v-88c0-1.1,0.816-2,1.813-2s1.813,0.9,1.813,2
+                                    V119.675z"/>
+                                <path fill="#FFFFFF" d="M77.063,124.654c-1.1,0-2-0.816-2-1.813c0-0.997,0.9-1.813,2-1.813h48c1.1,0,2,0.816,2,1.813
+                                    c0,0.997-0.9,1.813-2,1.813H77.063z"/>
+                                <circle fill="#FFFFFF" cx="101.188" cy="121.675" r="7.333"/>
+                            </g>
+                            <g class="server-1">
+                                <path fill="#45485B" d="M148.313,46.675c0,1.1-0.9,2-2,2h-90c-1.1,0-2-0.9-2-2V30.508c0-1.1,0.9-2,2-2h90c1.1,0,2,0.9,2,2V46.675z"
+                                    />
+                                <g>
+                                    <rect x="59.125" y="32.842" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="66.125" y="32.842" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="73.125" y="32.842" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="80.125" y="32.842" fill="#282A37" width="5.333" height="2.917"/>
+                                    <polygon fill="#282A37" points="80.125,40.206 85.458,40.206 85.458,40.133 85.458,37.29 80.125,37.29         "/>
+                                    <rect x="80.125" y="41.592" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="87.125" y="32.842" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="94.125" y="32.842" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="59.125" y="37.217" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="66.125" y="37.217" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="73.125" y="37.217" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="87.125" y="37.217" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="94.125" y="37.217" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="59.125" y="41.592" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="66.125" y="41.592" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="73.125" y="41.592" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="87.125" y="41.592" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="94.125" y="41.592" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="101.125" y="32.842" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="101.125" y="37.217" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="101.125" y="41.592" fill="#282A37" width="5.333" height="2.917"/>
+                                </g>
+                                <circle fill="#F1F2F4" cx="137.625" cy="38.748" r="4.448"/>
+                                <circle fill="#C1F39E" cx="126.625" cy="38.748" r="2.615"/>
+                                <circle fill="#68C7FC" cx="117.625" cy="38.748" r="2.615"/>
+                            </g>
+                            <g class="server-2">
+                                <path fill="#45485B" d="M148.313,73.842c0,1.1-0.9,2-2,2h-90c-1.1,0-2-0.9-2-2V57.675c0-1.1,0.9-2,2-2h90c1.1,0,2,0.9,2,2V73.842z"
+                                    />
+                                <g>
+                                    <rect x="59.125" y="60.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="66.125" y="60.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="73.125" y="60.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="80.125" y="60.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <polygon fill="#282A37" points="80.125,67.373 85.458,67.373 85.458,67.3 85.458,64.456 80.125,64.456         "/>
+                                    <rect x="80.125" y="68.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="87.125" y="60.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="94.125" y="60.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="59.125" y="64.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="66.125" y="64.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="73.125" y="64.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="87.125" y="64.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="94.125" y="64.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="59.125" y="68.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="66.125" y="68.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="73.125" y="68.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="87.125" y="68.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="94.125" y="68.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="101.125" y="60.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="101.125" y="64.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="101.125" y="68.758" fill="#282A37" width="5.333" height="2.917"/>
+                                </g>
+                                <circle fill="#F1F2F4" cx="137.625" cy="65.915" r="4.448"/>
+                                <circle fill="#F9576F" cx="126.625" cy="65.915" r="2.615"/>
+                                <circle fill="#68C7FC" cx="117.625" cy="65.915" r="2.615"/>
+                            </g>
+                            <g class="server-3">
+                                <path fill="#45485B" d="M148.313,100.842c0,1.1-0.9,2-2,2h-90c-1.1,0-2-0.9-2-2V84.675c0-1.1,0.9-2,2-2h90c1.1,0,2,0.9,2,2V100.842
+                                    z"/>
+                                <g>
+                                    <rect x="59.125" y="87.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="66.125" y="87.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="73.125" y="87.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="80.125" y="87.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <polygon fill="#282A37" points="80.125,94.373 85.458,94.373 85.458,94.3 85.458,91.456 80.125,91.456         "/>
+                                    <rect x="80.125" y="95.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="87.125" y="87.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="94.125" y="87.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="59.125" y="91.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="66.125" y="91.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="73.125" y="91.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="87.125" y="91.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="94.125" y="91.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="59.125" y="95.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="66.125" y="95.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="73.125" y="95.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="87.125" y="95.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="94.125" y="95.758" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="101.125" y="87.008" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="101.125" y="91.383" fill="#282A37" width="5.333" height="2.917"/>
+                                    <rect x="101.125" y="95.758" fill="#282A37" width="5.333" height="2.917"/>
+                                </g>
+                                <circle fill="#F1F2F4" cx="137.625" cy="92.915" r="4.448"/>
+                                <circle fill="#FFFC23" cx="126.625" cy="92.915" r="2.615"/>
+                                <circle fill="#68C7FC" cx="117.625" cy="92.915" r="2.615"/>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="title-feature">
+                            Server 2 miền Bắc Nam
+                        </div>
+                    </div>
+                    <div class="content-item-feature">
+                        Các file được cache lại ở cụm server Hà Nội và TP. Hồ Chí Minh, giúp tăng tốc độ trả file cho user ở khắp Việt Nam.
+                    </div>
+                </div><!-- end item-feature-feature -->
+            </div><!-- end content-feature -->
+        </div>
+    </section>
+
+    <section id="plan" data-scroll-index="2" class="plan">
+        <div class="container">
+            <div class="header-section">
+                <h2>Bảng giá</h2>
+                <span class="header-line"></span>
+                <div class="info-section">Bandwidth Pricing Per GB</div>
+            </div><!-- end header-section -->
+            <div class="content-section clearfix">
+                <div class="col-md-8 col-lg-9 no-padding">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead> 
+                                <tr> 
+                                    <th></th> 
+                                    <th>North America</th> 
+                                    <th>Europe</th> 
+                                </tr> 
+                            </thead> 
+                            <tbody> 
+                                <tr> 
+                                    <th>Under 50TB</th> 
+                                    <td>$0.04</td> 
+                                    <td>$0.04</td> 
+                                </tr> 
+                                <tr> 
+                                    <th>151TB-350TB</th> 
+                                    <td>$0.035</td> 
+                                    <td>$0.035</td> 
+                                </tr> 
+                                <tr> 
+                                    <th>351TB-1023TB</th> 
+                                    <td>$0.03</td> 
+                                    <td>$0.03</td> 
+                                </tr> 
+                                <tr> 
+                                    <th>1PB-2PB</th> 
+                                    <td>$0.02</td> 
+                                    <td>$0.02</td> 
+                                </tr> 
+                                <tr> 
+                                    <th>3PB-5PB</th> 
+                                    <td>$0.02-0.008</td> 
+                                    <td>$0.02-0.008</td> 
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!-- /col -->
+                <div class="col-md-4 col-lg-3 no-padding">
+                    <div class="info-plan">
+                        <div class="title-info-plan">Get Started</div>
+                        <a href="#contact" class="btn btn-primary page-scroll">Liên hệ ngay</a>
+                        <ul class="list-info-plan">
+                            <li><i class="fa fa-check"></i> 100% SLA</li>
+                            <li><i class="fa fa-check"></i> Custom Pricing</li>
+                            <li><i class="fa fa-check"></i> Best Support in Industry</li>
+                            <li><i class="fa fa-check"></i> Best Control Panel in Industry</li>
+                            <li><i class="fa fa-check"></i> Best API in Industry</li>
+                        </ul>
+                    </div>
+                </div><!-- /col -->
+            </div><!-- end content-plan -->
+        </div>
+    </section>
+
+    <section id="private" data-scroll-index="3" class="private">
+        <div class="container">
+            <div class="header-section">
+                <h2>Private CDN</h2>
+                <span class="header-line"></span>
+                <div class="info-section">
+                    As a Web Performance testing service, it was critical that WebPageTest was really fast and always available. I looked at various CDN offerings and really liked what I saw with MaxCDN and have been an exceptionally happy customer for several years.
+                </div>
+                <a href="#contact" class="btn btn-primary btn-lg page-scroll">Liên hệ ngay!</a>
+            </div><!-- end header-section -->
+        </div>
+    </section>
+
+    <section id="contact" data-scroll-index="4" class="contact">
+        <div class="container">
+            <div class="header-section">
+                <h2>Liên hệ</h2>
+                <span class="header-line"></span>
+                <div class="info-section">
+                    Vui lòng liên hệ với chúng tôi qua form bên dưới!
+                </div>
+            </div><!-- end header-section -->
+            <div class="content-section clearfix">
+                <div class="col-sm-6 no-padding">
+                    <div class="google-map">
+                        <div id="map"></div>
+                    </div>
+                </div><!-- /col -->
+                <div class="col-sm-6 no-padding">
+                    
+                    <form>
+                        <div class="group">      
+                            <input type="text" required>
+                            <span class="bar"></span>
+                            <label>Name</label>
+                        </div>
+
+                        <div class="group">      
+                            <input type="text" required>
+                            <span class="bar"></span>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="group">      
+                            <input type="text" required>
+                            <span class="bar"></span>
+                            <label>Subject</label>
+                        </div>
+
+                        <div class="form-group"> 
+                            <textarea rows="4" required class="form-control"></textarea>
+                            <label>Message</label>  
+                        </div>
+
+                        <div class="group"> 
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-send"></i></button>
+                        </div>
+
+                    </form>
+
+                    <div class="row wrapper-info-contact">
+                        <div class="col-xs-12 info-contact"><i class="fa fa-home"></i>217 Nam Kỳ Khởi Nghĩa,Phường 7, Quận 3, Thành phố HCM, Vietnam</div>
+                        <div class="col-md-6 col-sm-12 info-contact"><i class="fa fa-phone"></i>0904916386</div>
+                        <div class="col-md-6 col-sm-12 info-contact"><i class="fa fa-envelope"></i><a href="mailto:support@mecloud.vn">support@mecloud.vn</a></div>
+                    </div>
+
+                </div><!-- /col -->
+                
+            </div><!-- end content-plan -->
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            ©MeCloud Team. All right reservers.
+        </div>
+    </footer>
+
+    <!--Global js-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/SmoothScroll.js" type="text/javascript"></script>
+    <script src="js/scrollIt.min.js" type="text/javascript"></script>
+    <!--End Global js-->
+    
+    <!--Page js-->
+    <script src="js/jquery.parallax-1.1.3.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="js/apps.js" type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            //call main menu
+
+        });
+
+    </script>
+    <!--End Page js-->
+
+</body>
+</html>

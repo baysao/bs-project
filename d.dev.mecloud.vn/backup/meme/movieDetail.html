@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Video Detail | MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	
+
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/disableScrollBar.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <!-- start detail script-->
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/moreDesc.js"></script>
+    <!-- end detail script-->
+    <script src="js/global.js"></script>
+    <script src="js/videos.js"></script>
+
+</head>
+
+<body id="backtotop">
+    <div id="header">
+        
+        <div class="container-fluid">
+            <div class="col-xs-7 col-md-4 col-sm-4" style="position:relative;">
+                <a href="movieDetail.html#" class="logo-s">meme.vn</a>
+                
+                <span class="browseCategory">
+                	<span class="dropdown">
+                      <a href="movieDetail.html#" data-toggle="dropdown" class="browse clearfix"><i class="fa fa-bars"></i>  <i class="fa fa-caret-down"></i></a>
+                      <div class="dropdown-menu main-menu arrowTop">
+                      		<div class="arrow"></div>
+                            <div class="wrapper-menu scrollable">
+                                <ul class="menu">
+                                    <li><a href="movieDetail.html#" class="menu-hot">Hot</a></li>
+                                    <li><a href="movieDetail.html#" class="menu-hot">Xem nhiều</a></li>
+                                    <li><a href="movieDetail.html#" class="menu-hot">Phim</a></li>
+                                    <li><a href="movieDetail.html#">Sự kiện</a></li>
+                                    <li><a href="movieDetail.html#">Tin tức</a></li>
+                                    <li><a href="movieDetail.html#">Hài</a></li>
+                                    <li><a href="movieDetail.html#">Thể thao</a></li>
+                                    <li><a href="movieDetail.html#">Dancingo</a></li>
+                                    <li><a href="movieDetail.html#">Game</a></li>
+                                    <li><a href="movieDetail.html#">Ẩm thực</a></li>
+                                    <li><a href="movieDetail.html#">Giáo dục</a></li>
+                                    <li><a href="movieDetail.html#">Blog</a></li>
+                                    <li><a href="movieDetail.html#">Showbiz</a></li>
+                                    <li><a href="movieDetail.html#">Xe cộ</a></li>
+                                    <li><a href="movieDetail.html#">Động vật</a></li>
+                                    <li><a href="movieDetail.html#">Đồ hoạ</a></li>
+                                    <li><a href="movieDetail.html#">Giải trí</a></li>
+                                    <li><a href="movieDetail.html#">Hướng dẫn</a></li>
+                                    <li><a href="movieDetail.html#">Thời trang - Làm đẹp</a></li>
+                                    <li><a href="movieDetail.html#">Công nghệ</a></li>
+                                    <li><a href="movieDetail.html#">Du lịch</a></li>
+                                    <li><a href="movieDetail.html#">Gia đình</a></li>
+                                    <li><a href="movieDetail.html#">Hoạt hình</a></li>
+                                    <li><a href="movieDetail.html#">Khoa học</a></li>
+                                    <li><a href="movieDetail.html#">Lifestyle</a></li>
+                                    <li><a href="movieDetail.html#">Nghệ thuật</a></li>
+                                    <li><a href="movieDetail.html#">Sức khoẻ</a></li>
+                                    <li><a href="movieDetail.html#">Thiên nhiên</a></li>
+                                    <li><a href="movieDetail.html#">Trẻ em</a></li>
+                                    <li><a href="movieDetail.html#">Sản phẩm</a></li>
+                                    <li><a href="movieDetail.html#">Quảng cáo</a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="menu-policy clearfix">
+                                	<ul>
+                                    	<li><a href="movieDetail.html#">MeMe là gì?</a></li>
+                                        <li><a href="movieDetail.html#">Cách hoạt động</a></li>
+                                        <li><a href="movieDetail.html#">Điều khoản sử dụng</a></li>
+                                        <li><a href="movieDetail.html#">Chính sách nội dung</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                    </span>
+                </span>
+            </div>
+
+            <div class="search col-md-4 col-sm-4 hidden-xs">
+                <input class="search-top form-control" type="text" placeholder="Keyword..." />
+                <button class="btn search-btn" type="submit"><span class="icon icon-search"></span>
+                </button>
+            </div><!-----------end search------------>
+            <div class="wrap-menu-top col-xs-5 col-md-4 col-sm-4">
+                <ul class="menu-top">
+                    <li>
+                        <a href="http://beta.meme.vn/usercp/video/add" class="menu-top-link tooltipMeme" title="Upload">
+                            <span class="icon icon-upload leftNone"></span>
+                        </a>
+                    </li>
+                    <li class="notification dropdown">
+                        <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="movieDetail.html#" title="Notification" >
+                            <span class="icon icon-notification leftNone"></span>
+                            <span class="notification-count">9+</span>
+                        </a>
+                        
+                            <ul class="dropdown-menu arrowTop">
+                                <div class="arrow"></div>
+                                <div class="notification-head">Notification</div>
+                                <div class="wrapper-notification scrollable">
+                                    <li>
+                                        <a class="notification-link clearfix" href="movieDetail.html#">
+                                            <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                            <small class="notification-time"> 23 giờ trước</small>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="movieDetail.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="movieDetail.html#">
+                                            <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="movieDetail.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="movieDetail.html#">
+                                            <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="movieDetail.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="movieDetail.html#">
+                                            <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="movieDetail.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="movieDetail.html#">
+                                            <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="movieDetail.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="movieDetail.html#">
+                                            <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="movieDetail.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                </div><!--end wrapper-notification-->
+                                <!--<div class="notification-more"><a href="#">Xem thêm</a></div>-->
+                            </ul>
+                        
+                    </li>
+                    <!--<li>
+                        <a class="menu-top-link tooltipMeme" href="#" data-toggle="tooltip" title="Đăng nhập">
+                            <span class="icon icon-account leftNone"></span>
+                        </a>
+                    </li>-->
+                    <li class="account dropdown">
+                        <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="movieDetail.html#" title="Account">
+                            <img src="images/avatar2.jpg" class="img-user"><span class="account-name hidden-xs"> Đào Viết Phương </span>
+                            
+                        </a>
+                        <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu arrowTop">
+                        	<div class="arrow"></div>
+                            <li><a href="http://beta.meme.vn/usercp/account/editProfile"><i class="fa fa-edit"></i> Sửa thông tin cá nhân</a></li>
+                            <li><a href="http://beta.meme.vn/usercp/video"><i class="fa fa-play-circle"></i> Quản lý Video</a></li>
+                            <li><a href="http://beta.meme.vn/usercp/channel"><i class="fa fa-video-camera"></i> Quản lý Channel</a></li>
+                            <li><a href="movieDetail.html#"><i class="fa fa-bar-chart-o"></i> Xem thống kê</a></li>
+                            <li><a href="movieDetail.html#"><i class="fa fa-usd"></i> Xem doanh thu</a></li>
+                            <li><a href="http://beta.meme.vn/user/logout"><i class="fa fa-sign-out"></i> Thoát</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-----------end wrap-menu-top------------>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- end header-->
+
+	<div class="wrapper-content">
+        <div class="wrapper-video-info">
+        	<div class="container">
+            	<div class="bg-playerMeme"></div>
+            	<div id="video-detail" class="row widthPlayer">
+                    <div class="player">
+                        <div class="wrapper-player">
+                            <iframe class="MemeplayerBox" src="http://player.meme.vn/embedif.php?v=WDspXxY5cT" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!--end player-->
+                </div><!--end #video-detail-->
+                <div class="col-md-8">
+                    <div class="video-info-more">
+                        <div class="wrapper-vim">
+                            <div class="video-detail clearfix">
+                                <h1 class="video-name">
+                                	Phim ngắn - Chầu Hoan Cua Chống - DAMtv [Official] 
+                                	<button type="button" title="Mở rộng" class="tooltipMeme btn btn-default btn-expandPlayer hidden-xs hidden-sm"><i class="fa fa-expand"></i></button>
+                                    <button type="button" title="Thu nhỏ" class="tooltipMeme btn btn-default btn-collapsePlayer hidden-xs hidden-sm"><i class="fa fa-compress"></i></button>
+                                </h1>
+                                <div class="video-btns clearfix">
+                                    <a class="btn-comment scrollToElement" id="commentslink" href="movieDetail.html#"><span class="fa fa-comment"></span>24 comments</a>
+                                    <a class="btn-share" href="movieDetail.html#"><span class="fa fa-share-square-o"></span>Share</a>
+                                    <a class="btn-like" href="movieDetail.html#"><span class="fa fa-thumbs-up"></span>Like</a>
+                                    <!---<a class="btn-like unlike" href="#"><span class="fa fa-thumbs-down"></span>Unlike</a>-->
+                                    <a class="btn-addto" href="movieDetail.html#" data-toggle="modal" data-target="#addToPlaylist"><span class="fa fa-plus"></span>Add to</a>
+                                    <a class="btn-follow-movie" href="movieDetail.html#"><span class="fa fa-flag"></span>Theo dõi</a>
+                                    <!--<a class="btn-follow-movie-active" href="#"><span class="fa fa-flag"></span>Đang theo dõi</a>-->
+                                </div>
+                            </div><!--end video-channel-->
+            				
+                            <div class="episode clearfix">
+                                <h5>Tổng cộng 100 tập</h5>
+                                <ul class="nav col-sm-10 hidden-xs">
+                                    <li>
+                                        <a href="movieDetail.html#" class="active">1</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 1
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">2</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 2
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">3</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 3
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">4</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 4 Chầu Hoan Cua Chống - tập 4
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">5</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 5
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">6</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 6
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">7</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 7
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">8</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 8
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">9</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 9
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">10</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 10
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">11</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 11
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">12</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 12
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">13</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 13
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">14</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 14
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="movieDetail.html#">15</a>
+                                        <div class="episode-info">
+                                            Chầu Hoan Cua Chống - tập 15
+                                        </div>
+                                    </li>
+                                    <li>
+                                    	<a href="movieDetail.html#" class="episode-more">Xem thêm</a>
+                                    	<div class="episode-info">Trọn bộ 100 tập</div>
+                                    </li>
+                                </ul>
+                                <div class="episode-text col-sm-2">
+                                    <span>Chọn nhanh </span> 
+                                    <select class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                
+                                </div>
+                            </div><!--end episode-->
+                            
+                            <div class="video-detail-more clearfix">
+                                <div class="video-detail-info clearfix">
+                                    <div class="col-sm-4">
+                                        <div class="video-statis clearfix">
+                                            <div class="video-statis-txt">
+                                                <span class="video-statis-name">Views</span>
+                                                <span class="video-statis-number">25.000</span>
+                                            </div>
+                                            <div class="video-statis-txt removeB">
+                                                <span class="video-statis-name">Likes</span>
+                                                <span class="video-statis-number">45.000</span>
+                                            </div>
+                                        </div><!--end video-statis-->
+                                    </div><!--/col-->
+                                    <div class="col-sm-8">
+                                        <a href="movieDetail.html#" class="video-channel-avatar">
+                                            <img src="images/channelImg3.jpg" />
+                                        </a>
+                                        <div class="video-channel-info clearfix">
+                                            <a href="movieDetail.html#" class="video-channel-name">The Voice Kid</a>
+                                            <div class="video-channel-statis">
+                                                <button type="button" class="btn btn-primary btn-subscribe"><i class="fa fa-play-circle"></i> Subscribe</button>
+                                                <div class="video-channel-follower arrowLeft">
+                                                    <div class="arrow"></div>
+                                                    459k
+                                                </div>
+                                            </div>
+                                        </div><!--end video-channel-info-->
+                                    </div><!--/col-->
+                                </div><!--end video-detail-info-->
+                                
+                                <p class="video-date">Uploaded: 12:04 PM | 24/12/2012</p>
+                                <div class="desc">
+                                    <p>Link Facebook : <a href="https://www.facebook.com/ParkHuyJ0o" target="_blank" title="https://www.facebook.com/ParkHuyJ0o" rel="nofollow" dir="ltr">https://www.facebook.com/ParkHuyJ0o</a><br>
+                                      Subcribe : <a href="http://bit.ly/subscribe_MrPark" target="_blank" title="http://bit.ly/subscribe_MrPark" rel="nofollow" dir="ltr">http://bit.ly/subscribe_MrPark</a><br>
+                                      Ca khúc "LỆ ĐANG PHAI" - Nhạc : Minh Khang . Lời : Park Huy JOo<br>
+                                      <br>
+                                      Lyric :<br>
+                                      <br>
+                                      Bầu   trời showbiz Việt toàn sao, còn anh thì ở dưới Hải Dương trồng lúa, anh   đâu có nghĩ rằng, từ lúc anh cất tiếng ca lên bầu trời đã sáng lên cũng   như showbiz Việt đã tìm thấy lối đi rồi. Giờ này anh đang rất vui, anh   vui vì anh được hát, lại được bao nhiêu người hâm mộ và a sẽ tiếp tục   hát <br>
+                                      <br>
+                                      Ai thích nghe ca nhạc, đều được nghe đến tên Lệ Rơi/ Nhạc VN có tên Lệ Rơi<br>
+                                      Ai đã yêu âm nhạc, đều phải nghe tiếng hát của Lệ Rơi/ Đều phải yêu tiếng hát của lệ rơi<br>
+                                      Lệ Rơi a đẹp trai người nông dân Hải Dương/ Lệ Rơi yêu đời nên là anh ca ngày đêm<br>
+                                      bao năm anh không ra mặt/ 2 hôm anh ra 5 bài<br>
+                                      Giờ đây anh nổi lên thành ngôi sao Việt Nam/ Off fan xong là anh chạy ngay ra phòng thu<br>
+                                      Vang danh thần tượng Lệ Rơi<br>
+                                      <br>
+                                      Hát như là con bò nó kêu/ Xấu trai rồi không cần hát hay<br>
+                                      Anh không ngại vẫn cho là vui / Miễn sao là các fan được vui<br>
+                                      Mắng a vẫn tiếp tục hát/ Ném đá a tiếp tục hát<br>
+                                      Đá cứ ném anh nhận hết/ cấm anh vẫn tiếp tục hát<br>
+                                      Vì anh không quan tâm/ Vì anh không quan tâm<br>
+                                      Đến bây giờ anh lại đắt show<br>
+                                      Có lexus đón đi phòng thu<br>
+                                      Ôi thật á sao lại thế<br>
+                                      Hát như thế cũng nổi tiếng<br>
+                                    Giờ như thế mới là sao</p>
+                                </div>
+                            </div><!--end video-detail-->
+                        </div><!--end wrapper-vim-->
+                    </div><!--end video-info-more-->
+                    
+                    <div id="wrapper-block">
+                            <div class="comments" id="comments">
+                                <h3>24 Comments</h3>
+                                <div class="comment-line first">
+                                    <a href="movieDetail.html#" class="hidden-xs">
+                                        <img class="comment-user" src="images/avatar-default.jpg">
+                                    </a>
+                                    <div class="comment-form">
+                                        <input class="form-control comment-input-pri" placeholder="write your comment..." />
+                                        <button type="submit" class="btn btn-comment-form">Comment</button>
+                                    </div>
+                                </div>
+                                <!-- end comment-line -->
+                                <div class="clearfix"></div>
+                                <div class="comment-line">
+                                    <a href="movieDetail.html#">
+                                        <img class="comment-user" src="images/avatar.jpg">
+                                    </a>
+                                    <div class="comment-text">
+                                        <a href="movieDetail.html#" class="comment-user-name">Strider Hiryu</a>
+                                        <span class="dropdown comment-action">
+                                            <span class="comment-time"> <i class="dot"></i> 8 min ago</span> 
+                                            <span class="commentMore">
+                                                <a class="comment-btn" data-toggle="dropdown" href="movieDetail.html#"><i class="fa fa-pencil"></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="movieDetail.html#" class="action-btn">Edit</a>
+                                                    </li>
+                                                    <li><a href="movieDetail.html#" class="action-btn">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </span><!-- end comment-action -->
+                                        <p class="comment-review">only said they needed them in 5 weeks just to build some pressure to the scene.. the bikes are already made :) so lame</p>
+                                        <p>
+                                            <a href="movieDetail.html#" class="comment-btn active"><span class="fa fa-thumbs-down"></span>Unlike (350)</a>
+                                            <a href="movieDetail.html#" class="comment-btn"><span class="fa fa-mail-reply"></span>Reply (2)</a>
+                                        </p>
+                                    </div>
+                                    <div class="comment-line-sub">
+                                        <a href="movieDetail.html#">
+                                            <img class="comment-user" src="images/avatar.jpg">
+                                        </a>
+                                        <div class="comment-text">
+                                            <a href="movieDetail.html#" class="comment-user-name">Strider Hiryu</a>  
+                                            <span class="dropdown comment-action">
+                                                <span class="comment-time"> <i class="dot"></i> 8 min ago</span> 
+                                                <span class="commentMore">
+                                                    <a class="comment-btn" data-toggle="dropdown" href="movieDetail.html#"><i class="fa fa-pencil"></i></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="movieDetail.html#"  class="action-btn">Edit</a>
+                                                        </li>
+                                                        <li><a href="movieDetail.html#"  class="action-btn">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </span>
+                                            </span><!-- end comment-action -->
+                                            <p class="comment-review">This is such cut and paste reality TV bullshit, Its just drama for the sake of entertainment and its boring! The beauty about a web series is that you don't have to adhere to commercial structured shite. Showing work and talent behind the game developers and the guys at the bike workshop is all people want without whiny ass drama, 'oh wheres my flux! did you move my flux? Waaaah Pete screwed me Waaah'... No one...fucking...CARES!</p>
+                                            <p>
+                                                <a href="movieDetail.html#" class="comment-btn"><span class="fa fa-thumbs-up"></span>Like (350)</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- end comment-line-sub -->
+                                    <div class="comment-line-sub">
+                                        <a href="movieDetail.html#">
+                                            <img class="comment-user" src="images/avatar.jpg">
+                                        </a>
+                                        <div class="comment-text">
+                                            <a href="movieDetail.html#" class="comment-user-name">Strider Hiryu</a>  
+                                            <span class="dropdown comment-action">
+                                                <span class="comment-time"> <i class="dot"></i> 8 min ago</span> 
+                                                <span class="commentMore">
+                                                    <a class="comment-btn" data-toggle="dropdown" href="movieDetail.html#"><i class="fa fa-pencil"></i></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="movieDetail.html#" class="action-btn">Edit</a>
+                                                        </li>
+                                                        <li><a href="movieDetail.html#" class="action-btn">Delete</a>
+                                                        </li>
+                                                    </ul>
+                                                </span>
+                                            </span><!-- end comment-action -->
+                                            
+                                            <p class="comment-review">only said they needed them in 5 weeks just to build some pressure to the scene.. the bikes are already made :) so lame</p>
+                                            <a href="movieDetail.html#" class="comment-btn"><span class="fa fa-thumbs-up"></span>Like (350)</a>
+                                        </div>
+                                        <div class="comment-line-sub">
+                                            <a href="movieDetail.html#" class="hidden-xs">
+                                                <img class="comment-user" src="images/avatar-default.jpg">
+                                            </a>
+                                            <div class="comment-form">
+                                                <input class="form-control comment-input-sub" value="only said they needed them in 5 weeks just to build some pressure to the scene.. the bikes are already made :) so lame" />
+                                                <button type="submit" class="btn btn-comment-form-sub">Update</button>
+                                            </div>
+                                        </div>
+                                        <!-- end comment-form-sub -->
+                                    </div>
+                                    <!-- end comment-line-sub -->
+                                </div>
+                                <!-- end comment-line -->
+                                <div class="comment-line">
+                                    <a href="movieDetail.html#">
+                                        <img class="comment-user" src="images/avatar.jpg">
+                                    </a>
+                                    <div class="comment-text">
+                                        <a href="movieDetail.html#" class="comment-user-name">Strider Hiryu</a>  
+                                        <span class="dropdown comment-action">
+                                            <span class="comment-time"> <i class="dot"></i> 8 min ago</span> 
+                                            <span class="commentMore">
+                                                <a class="comment-btn" data-toggle="dropdown" href="movieDetail.html#"><i class="fa fa-pencil"></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="movieDetail.html#" class="action-btn">Edit</a>
+                                                    </li>
+                                                    <li><a href="movieDetail.html#" class="action-btn">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </span><!-- end comment-action -->
+                                        <p class="comment-review">This is such cut and paste reality TV bullshit, Its just drama for the sake of entertainment and its boring! The beauty about a web series is that you don't have to adhere to commercial structured shite. Showing work and talent behind the game developers and the guys at the bike workshop is all people want without whiny ass drama, 'oh wheres my flux! did you move my flux? Waaaah Pete screwed me Waaah'... No one...fucking...CARES!</p>
+                                        <p>
+                                            <a href="movieDetail.html#" class="comment-btn"><span class="fa fa-thumbs-up"></span>Like (350)</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- end comment-line -->
+                                <div class="w-loadermore">
+                                	<a href="movieDetail.html#" class="loadmore">more</a>
+                                </div>
+                            </div>
+                            <!-- end comments -->
+                        
+                    </div><!-- end wrapper-block-->
+                </div>
+                <div class="col-md-4">
+                	<h3 class="video-relate-head">Video Liên Quan </h3>
+                    <ul class="video-relate-item">
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate">
+                                	<img src="images/movie-img2.jpg" />
+                                	<span class="video-relate-play"><i class="fa fa-play"></i></span>
+                                </a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Mix - Phim ngắn - Chầu Hoan Cua Chống (Hoàn Châu Công Chúa</a>
+                                <a href="movieDetail.html#" class="video-relate-channel">DamTV Official</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 37k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img1.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Bỗng Dưng Nổi Loạn, Hot Boy Muốn Khóc 2 [Official]</a>
+                                <a href="movieDetail.html#" class="video-relate-channel">POPSTVVIETNAM</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 39k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img4.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Mix - Phim ngắn - Chầu Hoan Cua Chống (Hoàn Châu Công Chúa</a>
+                                <a href="movieDetail.html#" class="video-relate-channel">DamTV Official</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 37k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img1.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Bỗng Dưng Nổi Loạn Phần 2</a>
+                                <a href="movieDetail.html#" class="video-relate-channel">DamTV Official</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 37k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img2.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Tôi không thể nhịn cười được </a>
+                                <a href="movieDetail.html#" class="video-relate-channel">DamTV Official</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 37k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img5.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Mix - Phim ngắn - Chầu Hoan Cua Chống (Hoàn Châu Công Chúa</a>
+                                <a href="movieDetail.html#" class="video-relate-channel">DamTV Official</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 37k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img2.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Mix - Phim ngắn - Chầu Hoan Cua Chống (Hoàn Châu Công Chúa</a>
+                                <a href="movieDetail.html#" class="video-relate-channel">DamTV Official</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 37k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img1.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Bỗng Dưng Nổi Loạn, Hot Boy Muốn Khóc 2 [Official]</a>
+                                <a href="movieDetail.html#" class="video-relate-channel">POPSTVVIETNAM</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 39k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img4.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Mix - Phim ngắn - Chầu Hoan Cua Chống (Hoàn Châu Công Chúa</a>
+                                <a href="movieDetail.html#" class="video-relate-channel">DamTV Official</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 37k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img1.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Bỗng Dưng Nổi Loạn Phần 2</a>
+                                <a href="movieDetail.html#" class="video-relate-channel">DamTV Official</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 37k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img2.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Tôi không thể nhịn cười được </a>
+                                <a href="movieDetail.html#" class="video-relate-channel">DamTV Official</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 37k</span>
+                        </li><!-- /li-->
+                        <li class="clearfix"> 
+                                <a href="movieDetail.html#" class="video-relate-img movieRelate"><img src="images/movie-img5.jpg" /><span class="video-relate-play"><i class="fa fa-play"></i></span></a>
+                                <a href="movieDetail.html#" class="video-relate-title movie">Mix - Phim ngắn - Chầu Hoan Cua Chống (Hoàn Châu Công Chúa</a>
+                                <a href="movieDetail.html#" class="video-relate-channel">DamTV Official</a>
+                                <span class="video-relate-view"><i class="fa fa-eye"></i> 37k</span>
+                        </li><!-- /li-->
+                        <div class="w-loadermore">
+                            <a href="movieDetail.html#" class="loadmore">more</a>
+                        </div>
+                    </ul><!-- end video-relate-item -->
+                    
+                </div>
+                
+            </div><!--/container -->
+        </div><!-- end wrapper-video-info-->
+    
+        <div class="footer container-fluid">
+            <div class="col-md-5 hidden-xs hidden-sm">
+                <div class="footer-head">
+                    <h3>Giới thiệu meme</h3>
+                </div>
+                <div class="footer-content footer-logo">
+                    <p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí…</p>
+                    <a href="movieDetail.html#" class="about-more">Xem thêm</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-head">
+                    <h3>Facebook</h3>
+                </div>
+                <div class="footer-content">
+                    <h5>TV Network</h5>
+                    <div id="fb-root"></div>
+                    <div id="fb-root"></div>
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <div class="facebook">
+                        <div class="fb-like" data-href="https://www.facebook.com/memevietnam" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-head">
+                    <h3>Hỗ trợ</h3>
+                </div>
+                <div class="footer-content">
+                    <ul class="nav">
+                        <li><a href="movieDetail.html#">MeMe là gì?</a>
+                        </li>
+                        <li><a href="movieDetail.html#">Cách hoạt động</a>
+                        </li>
+                        <li><a href="movieDetail.html#">Lợi ích</a>
+                        </li>
+                        <li><a href="movieDetail.html#">Đối tác nội dung</a>
+                        </li>
+                        <li><a href="movieDetail.html#">Khiếu nại bản quyền</a>
+                        </li>
+                        <li><a href="movieDetail.html#">Liên hệ</a>
+                        </li>
+                        <li><a href="movieDetail.html#">Điều khoản sử dụng</a>
+                        </li>
+                        <li><a href="movieDetail.html#">Chính sách nội dung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end footer-->
+
+        <div class="footer-bottom col-xs-12">
+            <span class="copyright">Copyright ©2013 meme.vn</span>
+        </div>
+        <!--end footer bottom-->
+	</div>
+
+    <a href="movieDetail.html#" class="top scrollToElement" id="backtotoplink"><span class="icon icon-arrow-up-s"></span></a>
+<!--pop up addto playlist-->
+  <div id="addToPlaylist" class="addToPlaylist modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add to playlist</h4>
+          </div>
+          <div class="modal-body playlist-row scrollable clearfix">
+            	<a href="movieDetail.html#" class="playlist-name">Best movie counter-strike1.6 Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="movieDetail.html#" class="playlist-name added">Top Hit Nhac Nam My 2014 <i class="fa fa-check-circle"></i> <span class="playlist-number">32</span></a>
+                <a href="movieDetail.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="movieDetail.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="movieDetail.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="movieDetail.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="movieDetail.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="movieDetail.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="movieDetail.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="movieDetail.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="movieDetail.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="movieDetail.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+            </div>
+            <div class="playlist-status">
+            	<span class="create-success">Tạo playlist thành công</span>
+                <!--<span class="create-error">Tên playlist ít nhất 3 ký tự</span>-->
+            </div>    
+            <div class="playlist-form">
+            	<input type="text" class="form-control" placeholder="Tạo playlist mới">
+                <div class="playlist-setting clearfix">    
+                    <div class="dropdown">
+                      <a data-toggle="dropdown" href="movieDetail.html#">Public <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li><a href="movieDetail.html#">Public</a></li>
+                        <li><a href="movieDetail.html#">Only me</a></li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-playlist">Create</button>  
+                </div>
+                  
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end addToPlaylist-->
+
+</body>
+
+</html>

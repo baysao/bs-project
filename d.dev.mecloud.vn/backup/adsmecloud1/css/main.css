@@ -1,0 +1,383 @@
+/*
+	Ads MeCloud Boostrap Theme
+	Author: Tanh Nguyen
+	Version: 0.01
+*/
+/* Font Color */
+/* Background Color */
+/* Border color */
+/* Mixins */
+/* font roboto */
+@font-face {
+  font-family: 'roboto';
+  src: url("fonts/roboto-light-webfont.eot%3F") format("embedded-opentype"), url("fonts/roboto-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url("fonts/roboto-medium-webfont.eot");
+  src: url("fonts/roboto-medium-webfont.eot%3F") format("embedded-opentype"), url("fonts/roboto-medium-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* line 16, ../scss/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 19, ../scss/_base.scss */
+body {
+  font-family: "roboto";
+  font-size: 15px;
+  font-weight: normal;
+  color: #2f2f2f;
+  line-height: 22px;
+  background-color: #ffffff;
+  height: 100%;
+}
+
+/* line 28, ../scss/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #333333;
+}
+
+/* line 31, ../scss/_base.scss */
+a {
+  color: #16b0dd;
+}
+
+/* line 34, ../scss/_base.scss */
+ul, li {
+  list-style: none;
+}
+
+/* line 37, ../scss/_base.scss */
+input, button, textarea {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 40, ../scss/_base.scss */
+.border-none {
+  border: none !important;
+}
+
+/* line 43, ../scss/_base.scss */
+.os-animation {
+  opacity: 0;
+}
+
+/* line 46, ../scss/_base.scss */
+.os-animation.animated {
+  opacity: 1;
+}
+
+/* line 49, ../scss/_base.scss */
+.wrapper-page {
+  padding: 0 0 0 250px;
+  position: relative;
+  height: 100%;
+}
+
+/* line 54, ../scss/_base.scss */
+.p-30 {
+  padding: 30px !important;
+}
+
+/* line 1, ../scss/_layout.scss */
+.wrapper {
+  padding: 80px 40px 0 40px;
+  height: 100%;
+}
+
+/* line 5, ../scss/_layout.scss */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  padding: 0 40px;
+  z-index: 9;
+}
+/* line 15, ../scss/_layout.scss */
+header h1.adsmecloud {
+  width: 200px;
+  margin: 0 auto;
+  font-size: 20px;
+  background-color: #181f23;
+  text-align: center;
+  color: #ffffff;
+  line-height: 80px;
+  position: relative;
+}
+/* line 25, ../scss/_layout.scss */
+header h1.adsmecloud:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 30px solid #181f23;
+}
+
+/* line 40, ../scss/_layout.scss */
+.logo {
+  background: url("../images/logo.png") no-repeat;
+  width: 154px;
+  height: 38px;
+  float: left;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  display: block;
+  text-indent: -9999px;
+  margin-top: 20px;
+}
+
+/* line 50, ../scss/_layout.scss */
+ul.nav-menu {
+  float: right;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+/* line 55, ../scss/_layout.scss */
+ul.nav-menu li {
+  display: inline-block;
+}
+/* line 58, ../scss/_layout.scss */
+ul.nav-menu li a {
+  color: #8a8a8a;
+  font-size: 16px;
+  display: block;
+  line-height: 80px;
+  padding-left: 30px;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+/* line 66, ../scss/_layout.scss */
+ul.nav-menu li a:hover {
+  color: #2f2f2f;
+}
+
+/* line 75, ../scss/_layout.scss */
+.hover-nav {
+  width: 30%;
+  position: fixed;
+  top: 80px;
+  right: 40px;
+  height: 100%;
+  z-index: 8;
+  overflow: hidden;
+}
+
+/* line 84, ../scss/_layout.scss */
+.hover-nav:hover nav.nav-page {
+  margin-right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* line 88, ../scss/_layout.scss */
+nav.nav-page {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 220px;
+  height: 100%;
+  float: right;
+  margin-right: -180px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 96, ../scss/_layout.scss */
+.section {
+  height: 100%;
+  padding: 0 10%;
+  color: #ffffff;
+  -webkit-transition: background-color 1s ease-in-out;
+  -moz-transition: background-color 1s ease-in-out;
+  -o-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+  position: relative;
+}
+/* line 103, ../scss/_layout.scss */
+.section .big-img {
+  text-align: center;
+}
+/* line 107, ../scss/_layout.scss */
+.section.publisher img, .section.advertiser img {
+  margin-top: 30px;
+}
+/* line 111, ../scss/_layout.scss */
+.section .wrapper-img {
+  text-align: center;
+  margin-top: 40px;
+}
+/* line 115, ../scss/_layout.scss */
+.section .wrapper-img a {
+  display: inline-block;
+}
+/* line 118, ../scss/_layout.scss */
+.section .wrapper-img a img {
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+}
+/* line 128, ../scss/_layout.scss */
+.section h3 {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 20px 0;
+}
+/* line 136, ../scss/_layout.scss */
+.section h4 {
+  color: #ffffff;
+  font-style: italic;
+}
+/* line 141, ../scss/_layout.scss */
+.section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+/* line 146, ../scss/_layout.scss */
+.section img {
+  margin-top: 50px;
+  display: inline-block;
+}
+
+/* line 152, ../scss/_layout.scss */
+.btn-scroll-down {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -15px;
+  background: none;
+  border: none;
+}
+/* line 160, ../scss/_layout.scss */
+.btn-scroll-down img {
+  margin-top: 0;
+}
+
+/* line 165, ../scss/_layout.scss */
+.section.whychooseus {
+  background-color: #16b0dd;
+}
+
+/* line 168, ../scss/_layout.scss */
+.section.technology {
+  background-color: #16b0dd;
+}
+
+/* line 171, ../scss/_layout.scss */
+.section.publisher {
+  background-color: #ff6e61;
+}
+
+/* line 174, ../scss/_layout.scss */
+.section.advertiser {
+  background-color: #2ab159;
+}
+
+/* line 177, ../scss/_layout.scss */
+.wrapper-nav {
+  display: table;
+  float: left;
+  height: 100%;
+}
+
+/* line 182, ../scss/_layout.scss */
+ul.number-menu {
+  padding-left: 0;
+  width: 40px;
+  margin-bottom: 0;
+  display: table-cell;
+  vertical-align: middle;
+  overflow: hidden;
+}
+/* line 190, ../scss/_layout.scss */
+ul.number-menu li {
+  width: 40px;
+  position: relative;
+}
+/* line 195, ../scss/_layout.scss */
+ul.number-menu li:before {
+  width: 100%;
+  right: -100%;
+  background-color: #181f23;
+  position: absolute;
+  content: "";
+  top: 0;
+  height: 100%;
+  -webkit-transition: right 0.3s ease-in-out;
+  -moz-transition: right 0.3s ease-in-out;
+  -o-transition: right 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
+  z-index: 2;
+}
+/* line 208, ../scss/_layout.scss */
+ul.number-menu li.active {
+  width: 40px;
+}
+/* line 211, ../scss/_layout.scss */
+ul.number-menu li.active:before {
+  right: 0;
+}
+/* line 217, ../scss/_layout.scss */
+ul.number-menu li a {
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+
+/* line 233, ../scss/_layout.scss */
+ul.text-menu {
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 0;
+  width: 180px;
+  background-color: #181f23;
+  padding-left: 20px;
+}
+/* line 243, ../scss/_layout.scss */
+ul.text-menu li.active a {
+  color: white;
+}
+/* line 248, ../scss/_layout.scss */
+ul.text-menu li a {
+  color: rgba(255, 255, 255, 0.6);
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  z-index: 3;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+/* line 256, ../scss/_layout.scss */
+ul.text-menu li a:hover {
+  color: white;
+}
+te;
+}

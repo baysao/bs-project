@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Document</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/prism.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+    <div class="page3d">
+        <div class="page3d-inner">
+            <aside class="left-bar">
+                <div class="main-menu">
+                    <h3>Main menu</h3>
+                    <ul>
+                        <li><a href="#"><span class="hidden-xs">01</span>Giới Thiệu Chung</a></li>
+                        <li><a href="#"><span class="hidden-xs">02</span>Cấu trúc website</a></li>
+                        <li><a href="#" class="active"><span class="hidden-xs">03</span>chức năng hệ thống</a></li>
+                    </ul>
+                </div><!-- end main-menu -->
+            </aside>
+        </div>
+    </div>
+
+    <div class="page-container">
+
+        <div class="bg-overlay"></div>
+
+        <header class="topbar clearfix">
+            <button type="button" class="btn-main-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <h4>Documents</h4>
+        </header><!-- end header -->
+
+        <section class="main-container row-eq-height clearfix">
+
+            <aside class="sidebar col-lg-3 col-md-3">
+                <div class="head">Chức năng hệ thống</div>
+                <ul class="list-menu">
+                    <li>
+                        <a href="#" class="active">Quản lý video<span></span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="selected">Danh sách video</a></li>
+                            <li><a href="#">Video của tôi</a></li>
+                            <li><a href="#">Video channel</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Activity Tracking<span></span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Sub menu 1</a></li>
+                            <li><a href="#">Sub menu 2</a></li>
+                            <li><a href="#">Sub menu 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Quản lý Website</a></li>
+                </ul>
+            </aside>
+
+            <div class="main-content col-lg-9 col-md-9">
+                <ul class="breadcrumb-docs hidden-xs hidden-sm">
+                    <li><a href="#">Documents</a></li>
+                    <li><a href="#">Chức năng hệ thống</a></li>
+                    <li><a href="#">Quản lý video</a></li>
+                    <li class="current">Danh sách video</li>
+                </ul><!-- end breadcrumb -->
+
+                <div class="clearfix"></div>
+
+                <div class="container-fluid">
+                    <div class="row"> 
+                        <div class="content-page clearfix">
+
+                            <div class="col-md-6">
+                                <div class="widget-wrap">
+                                    <div class="widget-header">
+                                        <h3>Heading</h3>
+                                        <p>All Heading <code>h1, h2, h3, h4, h5, h6</code></p>
+                                    </div>
+                                    <div class="widget-container">
+                                        <div class="widget-content">
+                                            <h1>h1. Bootstrap heading</h1>
+                                            <h2>h2. Bootstrap heading</h2>
+                                            <h3>h3. Bootstrap heading</h3>
+                                            <h4>h4. Bootstrap heading</h4>
+                                            <h5>h5. Bootstrap heading</h5>
+                                            <h6>h6. Bootstrap heading</h6>
+                                            <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+                                            <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+                                            <h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+                                            <h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+                                            <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+                                            <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-wrap">
+                                    <div class="widget-header">
+                                        <h3>Paragraph</h3>
+                                        <p>All type of paragraph <code>class="lead", p</code></p>
+                                    </div>
+                                    <div class="widget-container">
+                                        <div class="widget-content">
+                                            <p class="lead">
+                                                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+                                            </p>
+                                            <p>
+                                                Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id <del>This line of text is meant to be treated as deleted text.</del> dolor id nibh ultricies vehicula. <u>This line of text will render as underlined</u>
+                                            </p>
+                                            <p>
+                                                Cum sociis natoque penatibus et <mark>highlight</mark> magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec <ins>This line of text is meant to be treated as an addition to the document.</ins> elit. Donec ullamcorper nulla non metus auctor fringilla.
+                                            </p>
+                                            <p>
+                                                Maecenas sed diam eget risus varius blandit sit amet <strong>rendered as bold text</strong> non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, <s>This line of text is meant to be treated as no longer accurate.</s> nisi erat porttitor ligula, eget lacinia odio sem nec elit. <em>rendered as italicized text</em>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-wrap">
+                                    <div class="widget-header">
+                                        <h3>Blockquote</h3>
+                                        <p><code>class="blockquote-reverse", &lt;blockquote&gt;</code></p>
+                                    </div>
+                                    <div class="widget-container">
+                                        <div class="widget-content">
+                                            <blockquote>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                                </p>
+                                                <footer>Someone famous in <cite title="Source Title">Source Title</cite>
+                                                </footer>
+                                            </blockquote>
+                                            <blockquote class="blockquote-reverse">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                                </p>
+                                                <footer>Someone famous in <cite title="Source Title">Source Title</cite>
+                                                </footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="widget-wrap">
+                                    <div class="widget-header">
+                                        <h3>Address</h3>
+                                        <p><code>&lt;address&gt;</code></p>
+                                    </div>
+                                    <div class="widget-container">
+                                        <div class="widget-content">
+                                            <address>
+                                                <strong>Twitter, Inc.</strong><br>
+                                                795 Folsom Ave, Suite 600<br>
+                                                San Francisco, CA 94107<br>
+                                                <abbr title="Phone">P:</abbr> (123) 456-7890 </address>
+                                            <address>
+                                                <strong>Full Name</strong><br>
+                                                <a href="mailto:#">first.last@example.com</a>
+                                            </address>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <div class="widget-wrap">
+                                    <div class="widget-header">
+                                        <h3>Section Heading</h3>
+                                        <p><code>h1,h2,h3,h4,h5,h6, class="section-header", class="w-section-header" </code></p>
+                                    </div>
+                                    <div class="widget-container">
+                                        <div class="widget-content">
+                                                <h2>Section header</h2>
+                                            <p>
+                                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                            </p>
+                                            <div class="section-header">
+                                                <h2>Section header</h2>
+                                            </div>
+                                            <p>
+                                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                            </p>
+                                            <div class="w-section-header">
+                                                <h2>Section header</h2>
+                                            </div>
+                                            <p>
+                                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-wrap">
+                                    <div class="widget-header">
+                                        <h3>Unorder List</h3>
+                                        <p><code>&lt;ul&gt; &lt;li&gt;...&lt;/li&gt;&nbsp;&lt;li&gt;&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</code></p>
+                                    </div>
+                                    <div class="widget-container">
+                                        <div class="widget-content">
+                                            <ul>
+                                                <li>Lorem ipsum dolor sit amet</li>
+                                                <li>Consectetur adipiscing elit</li>
+                                                <li>Integer molestie lorem at massa</li>
+                                                <li>Facilisis in pretium nisl aliquet</li>
+                                                <li>Nulla volutpat aliquam velit
+                                                    <ul>
+                                                        <li>Phasellus iaculis neque</li>
+                                                        <li>Purus sodales ultricies</li>
+                                                        <li>Vestibulum laoreet porttitor sem</li>
+                                                        <li>Ac tristique libero volutpat at</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Faucibus porta lacus fringilla vel</li>
+                                                <li>Aenean sit amet erat nunc</li>
+                                                <li>Eget porttitor lorem</li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-wrap">
+                                    <div class="widget-header">
+                                        <h3>Ordered List</h3>
+                                        <p><code>&lt;ol&gt; &lt;li&gt;...&lt;/li&gt;&nbsp;&lt;li&gt;&lt;ol&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ol&gt;</code></p>
+                                </div>
+                                    <div class="widget-container">
+                                        <div class="widget-content">
+                                            <ol>
+                                                <li>Lorem ipsum dolor sit amet</li>
+                                                <li>Consectetur adipiscing elit</li>
+                                                <li>Integer molestie lorem at massa</li>
+                                                <li>Facilisis in pretium nisl aliquet</li>
+                                                <li>Nulla volutpat aliquam velit</li>
+                                                <li>Faucibus porta lacus fringilla vel</li>
+                                                <li>Aenean sit amet erat nunc</li>
+                                                <li>Eget porttitor lorem</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-wrap">
+                                    <div class="widget-header">
+                                        <h3>Description lists</h3>
+                                        <p><code>&lt;dl&gt;&lt;dt&gt;...&lt;/dt&gt;&lt;dd&gt;...&lt;/dd&gt;&lt;/dl&gt;, class="dl-horizontal"</code></p>
+                                    </div>
+                                    <div class="widget-container">
+                                        <div class="widget-content">
+
+                                            <dl>
+                                                <dt>Description lists</dt>
+                                                <dd>A description list is perfect for defining terms.</dd>
+                                                <dt>Euismod</dt>
+                                                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                                <dt>Malesuada porta</dt>
+                                                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                            </dl>
+                                            <dl class="dl-horizontal">
+                                                <dt>Description lists</dt>
+                                                <dd>A description list is perfect for defining terms.</dd>
+                                                <dt>Euismod</dt>
+                                                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                                <dt>Malesuada porta</dt>
+                                                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="widget-wrap">
+                                    <div class="widget-header">
+                                        <h3>Code Highlight</h3>
+                                        <p>Any type code highlight <code>&lt;pre class=&quot;code language-markup&quot;&gt;</code></p>
+                                    </div>
+                                    <div class="widget-container">
+                                        <div class="widget-content">
+                                            <div class="code-api">
+                                                <button type="button" class="btn btn-sm btn-copy">Copy</button>
+                                                <pre><code class="language-markup code-copy">
+    &lt;div id="player">&lt;/div>
+    &lt;script type="text/javascript">
+    var conf = {
+        key:       "969cf34f426d6b4d6f8ec897d4ddd82d",
+        source: {
+          mpd:         '//bitdash-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd',
+          hls:         '//bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
+          progressive: '//bitdash-a.akamaihd.net/content/MI201109210084_1/MI201109210084_mpeg-4_hd_high_1080p25_10mbits.mp4',
+          poster:      '//bitdash-a.akamaihd.net/content/MI201109210084_1/poster.jpg'
+        }
+    };
+    var player = bitdash("player").setup(conf);
+    &lt;/script></code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div><!-- end content-page -->
+                    </div><!-- /row -->
+                </div><!-- /container-fluid -->
+
+            </div>
+
+        </section>
+
+    </div><!-- end page-container -->
+    
+    <!--Global js-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src='js/prism.js'></script>
+    <script src='js/jquery.zclip.min.js'></script>
+    <!--End Global js-->
+    
+    <!--Page js-->
+    <script src="js/apps.js" type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            //call main menu
+
+        });
+
+    </script>
+    <!--End Page js-->
+
+</body>
+</html>

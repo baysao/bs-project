@@ -1,0 +1,141 @@
+body {
+  background-color: #454545; 
+  margin: 40px; 
+}
+h4 {
+  text-align: center;
+  color: #ffffff;
+}
+.example-1 {
+  position: relative;
+  width:23%;
+  float:left;
+  margin: 1%;
+  text-align: center;
+  color: #ffffff;
+}
+.wrapper img {
+  width:100%;
+  display:block;
+}
+.example-2 {
+  position: relative;
+  width:23%;
+  float:left;
+  margin: 1%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #121212;
+}
+.box-line {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.wrapper-line-top, .wrapper-line-bottom {
+  width: 300%;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in;
+  -moz-transition: left 0.6s ease-in;
+  -o-transition: left 0.6s ease-in;
+  transition: left 0.6s ease-in;
+}
+.wrapper-line-top {
+  left: 0;
+}
+.wrapper-line-bottom {
+  left: -200%;
+}
+.wrapper-line-right, .wrapper-line-left {
+  position: relative;
+  height: 300%;
+  top: 0;
+  -webkit-transition: top 0.6s ease-in;
+  -moz-transition: top 0.6s ease-in;
+  -o-transition: top 0.6s ease-in;
+  transition: top 0.6s ease-in;
+}
+.wrapper-line-right {
+  top: 0;
+}
+.wrapper-line-left {
+  top: -200%;
+}
+.line-top, .line-bottom, .line-right, .line-left  {
+  position: absolute;
+  overflow: hidden;
+}
+.line-top {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.line-bottom {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.line-right {
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.line-left {
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.box-line span {
+  display: block;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  opacity:1;
+}
+.line-top span, .line-bottom span {
+  width: 33.33333%;
+  float: left;
+}
+.line-right span, .line-left span {
+  height: 33.33333%;
+}
+.line-top span:nth-child(2), .line-bottom span:nth-child(2), .line-right span:nth-child(2), .line-left span:nth-child(2) {
+  background: none !important;
+}
+/*box active line demo 1*/
+.box-active-demo-1 .wrapper-line-top {
+  left: -200%;
+}
+.box-active-demo-1 .wrapper-line-bottom {
+  left: 0;
+}
+.box-active-demo-1 .wrapper-line-right {
+  top: -200%;
+}
+.box-active-demo-1 .wrapper-line-left {
+  top: 0;
+}
+/*box active line demo 2*/
+.box-active-demo-2 .wrapper-line-top {
+  left: -200%;
+}
+.box-active-demo-2 .wrapper-line-bottom {
+  left: 0;
+}
+.box-active-demo-2 .wrapper-line-right {
+  top: -200%;
+}
+.box-active-demo-2 .wrapper-line-left {
+  top: 0;
+}
+.box-active-demo-2 .line-top span, .box-active-demo-2 .line-bottom span {
+  height:0 !important;
+  opacity: 0;
+}
+.box-active-demo-2 .line-right span, .box-active-demo-2 .line-left span {
+  width:0 !important;
+  opacity:0;
+}

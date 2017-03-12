@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Payment | MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin-ext,vietnamese' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/partner.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/disableScrollBar.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/global.js"></script>
+    
+    <script>
+    	$(document).ready(function() {
+			
+			///////////////////////////////////////////////////////////////////////
+			//form register
+			///////////////////////////////////////////////////////////////////////
+			
+			//input file style
+			$('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+        
+				var input = $(this).parents('.input-group').find(':text'),
+					log = numFiles > 1 ? numFiles + ' files selected' : label;
+				
+				if( input.length ) {
+					input.val(log);
+				} else {
+					if( log ) alert(log);
+				}
+				
+			});
+			
+			//form input ratio
+			$('#doanhnghiep').hide();
+			$('.option-form input').on('change', function() {
+				getOption = $('input[name=inlineRadioOptions]:checked').val();
+				if (getOption == 1) {
+					$('#canhan').show();
+					$('#doanhnghiep').hide();
+				}
+				if (getOption == 2) {
+					$('#canhan').hide();
+					$('#doanhnghiep').show();
+				}
+			});
+			
+			///////////////////////////////////////////////////////////////////////
+			//navMenu partner
+			///////////////////////////////////////////////////////////////////////
+			var top = $('#header').offset().top;
+			$(window).scroll(function (event) {
+			  var y = $(this).scrollTop();
+			  console.log(y,top);
+			  if (y >= top)
+				$('#header').addClass('fixed');
+			  else
+				$('#header').removeClass('fixed');
+				
+			  $('#header').width($('#header').parent().width());
+			});
+			$( window ).resize(function() {
+			  $('#header').width($('#header').parent().width());
+			});
+		});
+    </script>
+</head>
+
+<body id="backtotop" data-spy="scroll" data-target=".nav-partner .container">
+       <div class="wrapper-partner clearfix">
+       		<div class="width-partner clearfix">
+            	<div id="header">
+                    <div class="container">
+                        
+                        <a href="paymentRegister.html#" class="logoPayment">payment.meme.vn</a>
+            			
+                        <div class="menuPayment">
+                        	<button type="button" class="btn btnMenuPayment" data-toggle="collapse" data-target="#menuPayment"><i class="fa fa-bars"></i></button>
+                            <div class="clearfix"></div>
+                        	<ul id="menuPayment" class="clearfix">
+                            	<li><a id="gioithieulink" href="paymentRegister.html#gioithieu" class="scrollToElement">Giới thiệu</a></li>
+                                <li><a id="dieukhoanlink" href="paymentRegister.html#dieukhoan" class="scrollToElement">Điều khoản</a></li>
+                                <li><a href="paymentRegister.html#" class="btnPayment">Quản lý tài khoản thanh toán</a></li>
+                            </ul>
+                        </div>	
+                        
+                    </div>
+              	</div><!-- end header-->
+                
+                <div class="bannerPayment">
+                	<h1>Tài khoản thanh toán MEME</h1>
+                    <div class="imgPayment"></div>
+                    <a href="paymentRegister.html#" class="btnRegister">Đăng ký tài khoản</a>
+                </div><!-- end bannerPayment-->
+                
+                <div class="container">
+                    <div class="content-partner">
+                        
+                        <div class="section" style="border-bottom:none;">
+                            <h3>Đơn đăng ký tham gia chương trình MEME Partner</h3>
+                            <div class="row">
+                            	<div class="account-info col-sm-6">
+                                	<div class="title-form">Thông tin tài khoản </div>
+                                    <div class="form-group field-partner">
+                                        <label>Họ tên đầy đủ:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                     <div class="form-group field-partner clearfix">
+                                        <p>Ngày tháng năm sinh:</p>
+                                        <div class="birthday">
+                                            <select class="form-control">
+                                              <option>Ngày</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="birthday">
+                                            <select class="form-control">
+                                              <option>Tháng</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="birthday" style="padding-right:0;">
+                                            <select class="form-control">
+                                              <option>Năm</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                     <div class="form-group field-partner">
+                                        <label>Tỉnh/Thành phố:</label>
+                                        <select class="form-control">
+                                          <option>Chọn tỉnh/thành phố</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                          <option>5</option>
+                                        </select>
+                                    </div>
+                                     <div class="form-group field-partner">
+                                        <label>Địa chỉ liên hệ:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                     <div class="form-group field-partner">
+                                        <label>Số điện thoại:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group field-partner">
+                                        <label>Channel mà bạn muốn đăng ký tham gia:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div><!-- end account-info -->
+                                <div class="account-info-option col-sm-6">
+                                	<div class="option-form">
+                                        <label class="radio-inline">
+                                          <input type="radio" name="inlineRadioOptions" value="1" checked> Cá nhân
+                                        </label>
+                                        <label class="radio-inline">
+                                          <input type="radio" name="inlineRadioOptions" value="2"> Doanh nghiệp
+                                        </label>
+                                    </div>
+                                    <div id="canhan">
+                                        <div class="option-form-field">
+                                            <div class="form-group field-partner">
+                                            <label>Mã số thuế (nếu có):</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group field-partner">
+                                            <label>Số tài khoản ngân hàng:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group field-partner">
+                                            <label>Tên ngân hàng:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group field-partner">
+                                            <label>Chi nhánh: </label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group inputFile">
+                                          <label>Upload Chứng minh thư / Hộ Chiếu:</label>
+                                          <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <span class="btn btn-primary btn-file">
+                                                        Browse&hellip; <input type="file" multiple>
+                                                    </span>
+                                                </span>
+                                                <input type="text" class="form-control" readonly>
+                                            </div>
+                                            <span class="help-block">
+                                                <a href="paymentRegister.html#">Thêm file khác</a>
+                                            </span>
+                                          </div>
+                                        </div>
+                                    </div><!-- canhan -->
+                                    <div id="doanhnghiep">
+                                        <div class="option-form-field">
+                                            <div class="form-group field-partner">
+                                            <label>Tên công ty:</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group field-partner">
+                                            <label>Địa chỉ: </label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group field-partner">
+                                            <label>Mã số thuế :</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group field-partner">
+                                            <label>Số tài khoản ngân hàng: </label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group field-partner">
+                                            <label>Tên ngân hàng: </label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group field-partner">
+                                            <label>Chi nhánh: </label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group inputFile">
+                                          <label>Upload Chứng nhận đăng ký kinh doanh:</label>
+                                          <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <span class="btn btn-primary btn-file">
+                                                        Browse&hellip; <input type="file" multiple>
+                                                    </span>
+                                                </span>
+                                                <input type="text" class="form-control" readonly>
+                                            </div>
+                                            <span class="help-block">
+                                                <a href="paymentRegister.html#">Thêm file khác</a>
+                                            </span>
+                                          </div>
+                                        </div>
+                                        
+                                    </div><!-- doanhnghiep -->
+                                </div><!-- end account-info-option -->
+                            </div><!-- /row -->
+                            <div class="row">
+                            	<div class="col-xs-12">
+                                	<div class="form-policy">
+                                        <div class="scrollable">
+                                          <strong style="margin-top:0;">1. thỏa THUẬN SỬ DỤNG</strong>
+                                          <p>Trang web này thuộc sở hữu và được   điều hành bởi Công ty Cổ phần Truyền thông MEME (MEME MEDIA). Các Điều   khoản và Điều kiện sau đây được áp dụng cho việc sử dụng trang web và   việc sử dụng toàn bộ thông tin, dữ liệu, chức năng và bất kỳ tài liệu   nào khác trên trang web này.</p>
+                                            <p>Các nội dung pháp luật đầu tiên bạn cần nắm được khi sử dụng dịch vụ trên MEME:</p>
+                                            <ul>
+                                              <li>Không đăng tải hay bình luận về các vấn đề chính trị, tôn giáo, sắc tộc.</li>
+                                              <li>Không đăng tải hay bình luận các thông tin liên quan tới chính sách của Đảng và Nhà nước CHXHCN Việt Nam.</li>
+                                              <li>Không lợi dụng để tiếp tay cho các hành động vi phạm pháp luật nước CHXHCN Việt Nam.</li>
+                                              <li>Không truyền bá các nội dung văn hoá phẩm bạo lực, đồi trụy, trái với thuần phong mỹ tục Việt Nam.</li>
+                                            </ul>
+                                          <strong>2. Giới thiệu dịch vụ MEME</strong>
+                                          <p>MEME ( hoặc "chúng tôi,") cung cấp   dịch vụ xem video online, bao gồm những chương trình chọn lọc với nhiều   thể loại clip ngắn, chương trình truyền hình, phim, giáo dục, âm nhạc,   những nội dung khác (gọi chung là &ldquo;Nội dung&rdquo;). Dịch vụ video của chúng   tôi, nội dung, hệ thống streaming, Video Player (trình phát video) và   những tính năng, công cụ, ứng dụng khác hoặc những dịch vụ đi kèm phát   sinh trong quá trình phát triển và nâng cấp dịch vụ trong tương lai gọi   chung là &ldquo;Dịch vụ MEME&rdquo;.</p>
+                                            <p><strong>Nội dung được cho phép xem thông qua các phương thức sau: (Gọi chung là Phương thức)</strong></p>
+                                            <ul>
+                                              <li>Xem tại website <a href="http://www.meme.vn/info/policy#">meme.vn</a> ( gọi tắt là Trang web Meme.vn)</li>
+                                              <li>Không đăng tải hay bình luận các thông tin liên quan tới chính sách của Đảng và Nhà nước CHXHCN Việt Nam.</li>
+                                              <li>Không lợi dụng để tiếp tay cho các hành động vi phạm pháp luật nước CHXHCN Việt Nam.</li>
+                                              <li>Không truyền bá các nội dung văn hoá phẩm bạo lực, đồi trụy, trái với thuần phong mỹ tục Việt Nam.</li>
+                                            </ul>
+                                            <p>Việc bạn truy cập, duyệt và sử dụng Dịch vụ MEME (bao   gồm truy cập Nội dung) bằng các Phương thức trên có nghĩa là bạn hoàn   toàn đồng ý với Điều khoản sử dụng (&ldquo;Điều khoản sử dụng&rdquo; hoặc &ldquo;Điều   khoản&rdquo;) và bất kì thỏa thuận cấp phép khác dành cho người sử dụng đầu   cuối được đi kèm với các ứng dụng của MEME, tính năng hoặc thiết bị.</p>
+                                            <strong>3. Chấp nhận điều khoản sử dụng và sửa đổi</strong>
+    <p>Chúng tôi hân hạnh mang đến Dịch vụ   MEME phục vụ nhu cầu giải trí, thưởng thức cá nhân của bạn phù hợp với   Điều Khoản Sử Dụng này. Để truy cập và thưởng thức Dịch vụ MEME, bạn   phải đồng ý và tuân theo các điều khoản và điều kiện được quy định tại   Điều Khoản Sử Dụng.</p>
+    
+    
+      <p>Việc bạn lướt web, truy cập hoặc sử dụng bất kì Dịch   Vụ MEME nào (bao gồm việc tiếp cận Nội dung từ các website liên kết, ứng   dụng của MEME) phải tuân theo các điều khoản và điều kiện sau đây và   bất kì điều khoản, điều kiện hoặc hướng dẫn nào khác được quy định tại   trang Web này, cũng như tất cả các luật, quy tắc và quy định hiện hành,   bao gồm nhưng không giới hạn trong những luật về thương hiệu, bản quyền,   quyền riêng tư. BẰNG VIỆC SỬ DỤNG DỊCH VỤ MEME, BẠN CHẤP NHẬN VÀ ĐỒNG Ý   BỊ RÀNG BUỘC BỞI CÁC ĐIỀU KHOẢN VÀ TẤT CẢ CÁC LUẬT HIỆN HÀNH. Do đó,   chúng tôi yêu cầu bạn đọc kỹ các điều khoản được quy định ở đây. Nếu bạn   không đồng ý và không muốn bị ràng buộc bởi các điều khoản này, bạn   không nên sử dụng dịch vụ của chúng tôi. Nếu bạn có bất kì câu hỏi hoặc   phản ánh nào về Điều Khoản Sử Dụng, vui lòng liên hệ với chúng tôi theo   địa chỉ <a href="http://www.meme.vn/info/policy#">lienhe@meme.vn</a></p>
+      <p>Chúng tôi bảo lưu quyền cải tiến, thay đổi, tạm ngưng   hoặc tạm thời ngưng toàn bộ hoặc bất kì phần nào của Dịch vụ MEME hoặc   hạn chế truy cập vào dịch vụ. Bằng việc sử dụng Dịch vụ MEME quý khách   đồng ý trước rằng mỗi lần sử dụng sẽ tuân thủ theo các điều khoản và   điều kiện áp dụng sau đó.</p>
+      <p>Chúng tôi có thể bổ sung, sửa đổi Điều khoản sử dụng vào bất cứ lúc nào bằng cách cập nhật sự thay đổi Điều Khoản Sử Dụng tại <a href="http://www.meme.vn/info/policy">http://www.meme.vn/info/policy</a> và thông báo cho các bạn về sự thay đổi đó</p>
+                                        <strong>4. Tài khoản MEME và tài khoản liên kết</strong>
+    <p>Nếu bạn đăng kí một tài khoản sử   dụng MEME hoặc đăng nhập thông qua tài khoản liên kết, có nghĩa là bạn   sẽ chịu trách nhiệm về thông tin mình cung cấp cho MEME.</p>
+      <p>Tài khoản liên kết là việc dùng tài khoản của Google và Facebook để đăng nhập vào tài khoản MEME.</p>
+      <p>Trước khi đăng ký tài khoản, bạn xác nhận đã đọc, hiểu và đồng ý với tất cả các quy định trong Quy chế sử dụng MEME.</p>
+      <p>Khi đăng ký tài khoản, bạn cung cấp đầy đủ, chính xác   thông tin về họ tên, tuổi, địa chỉ liên lạc, thông tin chứng thực là   giấy tờ tùy thân, Email đăng ký tài khoản, Số điện thoại bảo vệ tài   khoản, Câu hỏi và câu trả lời bảo mật và chịu trách nhiệm các thông tin   mà bạn cung cấp. Bạn có thể đăng ký tài khoản liên kết để sử dụng việc   đăng nhập tài khoản MEME.</p>
+      <p>Nếu phát sinh rủi ro trong quá trình sử dụng, MEME   căn cứ vào những thông tin bạn cung cấp để tiếp nhận và giải quyết. MEME   chỉ tiếp nhận và giải quyết những trường hợp điền đúng, chính xác và   đầy đủ những thông tin quy định, những trường hợp điền không đầy đủ và   chính xác thông tin quy định bạn sẽ không nhận được bất kỳ sự hỗ trợ nào   từ MEME trong quá trình sử dụng và MEME sẽ không chịu trách nhiệm giải   quyết những tranh chấp, rủi ro phát sinh đối với tài khoản này.</p>
+      <p>Sau khi hoàn tất thủ tục đăng ký, bạn sẽ được cung   cấp 01 tài khoản và mã số tài khoản. Với tài khoản này, người sử dụng có   thể truy cập và sử dụng một phần hoặc tất cả Dịch vụ MEME.</p>
+      <p>Chủ tài khoản có trách nhiệm phải tự bảo quản mật   khẩu của mình, nếu mật khẩu bị lộ ra ngoài dưới bất kỳ hình thức nào,   MEME sẽ không chịu trách nhiệm về mọi tổn thất phát sinh.</p>
+      <p>MEME có quyền xóa các tài khoản của người sử dụng nếu   tài khoản này không được sử dụng để đăng nhập vào MEME sau 30 ngày kể   từ ngày đăng ký.</p>
+      <p>MEME có quyền xóa các tài khoản của người sử dụng nếu   tài khoản này không được sử dụng để đăng nhập vào MEME trong 06 tháng   tính từ lần sử dụng cuối cùng.</p>
+      <p>Bạn sẽ dùng tài khoản do mình đăng ký và được MEME cung cấp để đăng nhập và sử dụng một phần hoặc tất cả các sản phẩm của MEME.</p>
+      <p>Ngoài việc dùng tài khoản MEME để đăng nhập, bạn có   thể dụng Email, hoặc tài khoản liên kết để đăng nhập vào MEME. Khi sử   dụng tính năng tiện ích này, bạn đồng ý chấp nhận tất cả những rủi ro   tiềm ẩn sảy ra.</p>
+      <p>Ngoài việc dùng tài khoản MEME để đăng nhập, bạn có   thể dụng Email, hoặc tài khoản liên kết để đăng nhập vào MEME. Khi sử   dụng tính năng tiện ích này, bạn đồng ý chấp nhận tất cả những rủi ro   tiềm ẩn sảy ra.</p>
+                                        <strong>5. TRUY CẬP VÀ SỬ DỤNG DỊCH VỤ MEME</strong>
+    <p>Giấy phép của bạn. MEME hân hạnh cấp   cho bạn một giấy phép có giới hạn không độc quyền để sử dụng Dịch vụ   MEME bằng các Phương thức (máy tính, điện thoại, tivi, thiết bị kết nối   internet), bao gồm việc truy cập, gửi nội dung và xem Nội Dung chỉ trên   hệ thống streaming và Video Player của chúng tôi phục vụ mục đích cá   nhân, không vì mục đích thương mại.</p>
+      <p>Nội dung. Bạn chỉ được truy cập và xem nội dung cho   nhu cầu cá nhân và cho mục đích phi thương mại phù hợp với các Điều   khoản này. Bạn không được phép trực tiếp hoặc gián tiếp sử dụng bất kỳ   thiết bị, phần mềm, trang web internet, dịch vụ dựa trên web, hoặc các   phương tiện khác để gỡ bỏ, thay đổi, bỏ qua, lẩn tránh, cản trở, hoặc   phá hoại bất kỳ bản quyền, thương hiệu, hoặc các dấu hiệu về quyền sở   hữu khác được đánh dấu trên Nội dung (như logo) hoặc bất kỳ hệ thống   kiểm soát dữ liệu, thiết bị, biện pháp bảo vệ nội dung khác cũng như các   biện pháp hạn chế truy cập từ các vùng địa lý khác nhau.</p>
+      <p>Bạn không được phép trực tiếp hoặc gián tiếp thông   qua bất kỳ thiết bị, phần mềm, trang web internet, dịch vụ dựa trên web,   hoặc các phương tiện khác để sao chép, tải về, chụp lại, sản xuất lại,   nhân bản, lưu trữ, phân phối, tải lên, xuất bản, sửa đổi, dịch thuật,   phát sóng , trình chiếu, hiển thị, bán, truyền tải hoặc truyền lại nội   dung trừ khi được sự cho phép của MEME bằng văn bản.</p>
+      <p>Hơn nữa, bạn không được phép tạo ra, tái tạo, phân   phối hay quảng cáo một chi tiết của bất kỳ nội dung trừ khi được phép   của MEME. Bạn không được phép xây dựng mô hình kinh doanh sử dụng các   Nội dung cho dù là có hoặc không vì lợi nhuận. Nội dung được đề cập ở   đây bao gồm nhưng không giới hạn bất kỳ văn bản, đồ họa, hình ảnh, bố   trí, giao diện, biểu tượng, hình ảnh, tài liệu âm thanh và video, và ảnh   tĩnh. Ngoài ra, chúng tôi nghiêm cấm việc tạo ra các sản phẩm phát sinh   hoặc vật liệu có nguồn gốc từ hoặc dựa trên bất kì Nội dung nào bao gồm   dựng phim, làm video tương tự, hình nền, chủ đề máy tính, thiệp chúc   mừng, và hàng hóa, trừ khi nó được sự cho phép của MEME bằng văn bản.   Điều nghiêm cấm này áp dụng trong mọi trường hợp.</p>
+      <p>Video Player (hay Trình phát video). Bạn không được   phép chỉnh sửa, nâng cao, loại bỏ, can thiệp, hoặc thay đổi  trong bất   kỳ cách nào bất kỳ phần nào của Video Player, công nghệ hạ tầng của nó,   bất kỳ cơ chế quản lý quyền kỹ thuật số, thiết bị, hoặc biện pháp bảo vệ   nội dung, biện pháp kiểm soát truy cập tích hợp vào Video Player. Hạn   chế này bao gồm nhưng không giới hạn việc vô hiệu hóa, kỹ thuật đảo   ngược, sửa đổi, can thiệp hoặc phá vỡ Video Player bằng bất cứ cách nào   làm cho người dùng xem được nội dung mà không có: hiển thị rõ ràng cả   Video Player và tất cả các yếu tố xung quanh (bao gồm cả giao diện người   dùng đồ họa, bất kì quảng cáo, thông báo bản quyền và thương hiệu) của   trang web,  truy cập vào tất cả các chức năng của Video Player bao gồm   nhưng không giới hạn tất cả chất lượng video và màn hình hiển thị chức   năng, tương tác, tự chọn, hoặc nhấp chuột thông qua quảng cáo chức năng.</p>
+      <p>Nhúng Video. Chúng tôi đưa ra giải pháp để liên kết   với Nội dung trên Dịch vụ MEME bằng công cụ Chia sẻ dưới mỗi video nội   dung. Bạn có thể nhúng video bằng cách sử dụng Link chúng tôi cung cấp   chạy trên Video Player của chúng tôi, miễn là bạn không nhúng Video   Player trên bất kì trang web hoặc nơi nào khác vi phạm những điều sau:   có chứa hoặc lưu trữ nội dung trái pháp luật, vi phạm, khiêu dâm, tục   tĩu, phỉ báng, bôi nhọ, đe dọa, quấy rối, khiếm nhã, không đứng đắn, xúc   phạm, hận thù, tấn công phân biệt chủng tộc hoặc dân tộc, khuyến khích   hành vi tội ác, làm phát sinh trách nhiệm dân sự, vi phạm luật pháp,   nguyên tắc hay quy định, vi phạm bất kỳ quyền của bất kỳ bên thứ ba bao   gồm cả quyền sở hữu trí tuệ, hoặc là không thích hợp hoặc gây phản đối   tới MEME (tùy theo quyết định của MEME), hoặc liên kết vi phạm hoặc nội   dung trái phép. Bạn không được nhúng Video Player vào bất kỳ phần cứng   hoặc phần mềm ứng dụng, ngay cả đối với mục đích phi thương mại. MEME   bảo lưu quyền ngăn chặn nhúng vào bất kỳ trang web hoặc địa điểm khác mà   MEME nhận thấy không phù hợp hoặc có thể bị phản đối (được xác định bởi   MEME).</p>
+      <p>Quyền sở hữu. Bạn đồng ý rằng MEME sở hữu và giữ lại   tất cả quyền đối với Dịch Vụ MEME. Bạn cũng đồng ý rằng Nội dung bạn   truy cập và xem như là một phần của Dịch vụ MEME được sở hữu hoặc kiểm   soát bởi MEME và bên cấp phép của MEME. Dịch vụ MEME và Nội dung được   bảo vệ bởi bản quyền, nhãn hiệu và luật sở hữu trí tuệ khác.</p>
+      <p>Trách nhiệm của bạn. Để giữ Dịch vụ MEME an toàn và   có sẵn cho tất cả mọi người sử dụng, tất cả chúng ta đều phải thực hiện   theo những luật lệ như nhau. Bạn và người dùng khác phải sử dụng Dịch vụ   MEME hợp pháp, phi thương mại, với mục đích thích hợp. Cam kết của bạn   với nguyên tắc này là rất quan trọng. Bạn đồng ý thực hiện các điều   khoản về Dịch vụ MEME, Nội dung, Video Player và hạn chế nhúng Video ở   trên, và đồng ý thêm rằng bạn sẽ không truy cập vào trang web MEME hoặc   sử dụng Dịch vụ MEME trong bất kì cách nào mà:</p>
+      <ul>
+        <li>Vi phạm quyền của người khác, bao gồm bằng sáng   chế, thương hiệu, bí mật thương mại, quyền tác giả, quyền riêng tư, công   khai, hoặc quyền sở hữu khác;</li>
+        <li>Sử dụng công nghệ hoặc các phương tiện khác để   truy cập hoặc liên kết đến Dịch vụ MEME (bao gồm cả nội dung) mà không   được phép của MEME (bao gồm cả bằng cách loại bỏ, vô hiệu hóa, bỏ qua,   hoặc phá vỡ bất kỳ sự bảo vệ nội dung hoặc các cơ chế kiểm soát truy cập   nhằm mục đích để ngăn chặn tải về trái phép, chụp dòng, liên kết, truy   cập, hoặc phân phối của Dịch vụ MEME);</li>
+        <li>Liên quan đến việc truy cập vào Dịch vụ MEME   (bao gồm cả nội dung) thông qua bất kỳ công cụ tự động, bao gồm cả   "robot", "spiders", hoặc "độc giả ẩn"</li>
+        <li>Cài mã độc, virus hoặc các mã số máy tính khác,   các tập tin, hoặc các chương trình gây cản trở, phá hỏng hoặc hạn chế   các chức năng của bất kỳ phần mềm hoặc phần cứng trên máy tính hoặc   thiết bị viễn thông;</li>
+        <li>Phá hoại, vô hiệu hóa, làm quá tải, làm suy yếu,   hoặc làm tăng truy cập trái phép Dịch vụ MEME, bao gồm cả máy chủ MEME,   mạng máy tính, hoặc các tài khoản người dùng;</li>
+        <li>Gỡ bỏ, chỉnh sửa, vô hiệu hóa, che khuất hoặc làm suy yếu bất kỳ quảng cáo trong kết nối với Dịch vụ MEME (bao gồm cả nội dung);</li>
+        <li>Sử dụng Dịch vụ MEME để quảng cáo hoặc quảng bá các dịch vụ không được chấp thuận trước bằng văn bản rõ ràng của MEME;</li>
+        <li>Thu thập những thông tin cá nhân vi phạm Chính sách bảo mật của MEME;</li>
+        <li>Khuyến khích hành vi phạm tội hoặc làm phát sinh trách nhiệm dân sự;</li>
+        <li>Vi phạm những điều khoản hoặc bất kỳ hướng dẫn hoặc chính sách được quy định bởi MEME;</li>
+        <li>Can thiệp đến việc sử dụng và thưởng thức Dịch vụ MEME của những người khác;</li>
+        <li>Cố gắng làm bất kì việc nào trong những việc trên.</li>
+      </ul>
+      <p>Nếu MEME xác định được rằng bạn đang vi phạm Điều   khoản này, chúng tôi có thể thông báo cho bạn, và  sử dụng các biện pháp   kỹ thuật để ngăn chặn hoặc hạn chế sự truy cập, sử dụng Dịch vụ MEME   của bạn. Trong cả hai trường hợp, bạn đồng ý ngay lập tức ngừng truy cập   hoặc sử dụng Dịch vụ MEME bằng bất kì cách nào, và bạn đồng ý không phá   vỡ, hoặc bỏ qua những hạn chế như vậy, hoặc cố gắng để khôi phục lại sự   truy cập hoặc sử dụng.</p>
+      <ul>
+        <li>Không Spam/ Nhắn tin quảng cáo: Không ai được   phép sử dụng Dịch vụ MEME để thu thập thông tin về người dùng cho mục   đích gửi thư từ, hoặc để tạo điều kiện khuyến khích việc gửi thư số   lượng lớn. Bạn hiểu rằng chúng tôi có thể thực hiện bất kỳ biện pháp kỹ   thuật để ngăn chặn Spam. Nếu bạn Đăng tải (theo quy định tại mục 6 dưới   đây) hoặc gửi thư rác, quảng cáo, hoặc các thông tin liên lạc không được   yêu cầu khác dưới bất kì loại nào thông qua Dịch vụ MEME, bạn thừa nhận   rằng bạn sẽ gây ra thiệt hại đáng kể cho MEME và số lượng tác hại như   vậy sẽ là vô cùng khó khăn để đo lường. Mức ước lượng hợp lý cho những   thiệt hại như vậy bạn đồng ý sẽ bồi thường là 500.000đ cho mỗi thông tin   liên lạc mà bạn gửi thông qua Dịch vụ MEME.</li>
+        <li>Tải nội dung: Để tham gia Dịch vụ MEME hoặc xem   nội dung, bạn có thể được yêu cầu phải download phần mềm hoặc những vật   liệu khác hoặc đồng ý với các điều khoản và điều kiện bổ sung.  </li>
+        <li>Đình chỉ/ ngưng: Chúng tôi có thể thay đổi, đình   chỉ, hoặc ngừng tạm thời hoặc vĩnh viễn một số hoặc tất cả các Dịch vụ   MEME (bao gồm cả nội dung và các thiết bị được truy cập thông qua đó các   Dịch vụ MEME), đối với bất kỳ hoặc tất cả người sử dụng, bất cứ lúc nào   mà không cần thông báo. Bạn thừa nhận MEME có thể làm như vậy tùy theo   quyết định của MEME. Bạn cũng đồng ý rằng MEME sẽ không có trách nhiệm   với bạn cho bất kỳ sửa đổi, đình chỉ, hoặc ngừng cung cấp Dịch vụ MEME,   mặc dù nếu bạn là một thuê bao MEME Premier và MEME đình chỉ hoặc không   tiếp tục cung cấp Dịch vụ MEME Premier, MEME có thể tùy theo quyết định   của mình sẽ hoàn lại tiền, chiết khấu hoặc các hình thức khác. Tuy   nhiên, nếu MEME chấm dứt hoặc đình chỉ tài khoản của bạn hoặc từ bỏ truy   cập của bạn do bạn vi phạm các Điều khoản này thì bạn sẽ không thể được   bồi hoàn tiền, giảm giá hoặc các hình thức khác.</li>
+        <li>Dịch vụ khách hàng: Nếu bạn cần trợ giúp, xin   vui lòng liên hệ với bộ phận dịch vụ khách hàng của chúng tôi theo địa   chỉ: lienhe@meme.vn</li>
+      </ul>
+                                        <strong>6. TÀI KHOẢN VÀ ĐĂNG KÍ</strong>
+    <p>Một số nội dung tại MEME được miễn   phí hoàn toàn cho người dùng. Khi bạn sử dụng dịch vụ của MEME có nghĩa   là bạn đồng ý với việc tuân theo các điều khoản và điều kiện quy định   dưới đây.</p>
+      <p>Để sử dụng một số tính năng khác của Dịch vụ MEME, các   bạn phải có tài khoản MEME hoặc tạo tài khoản tại MEME (nếu chưa có tài   khoản MEME). Nếu bạn đồng ý đăng kí hoặc tạo tài khoản mới để sử dụng   dịch vụ của chúng tôi điều đó đồng nghĩa với việc bạn chấp nhận tuân   theo các điều khoản và điều kiện quy định dưới đây.</p>
+      <p>Thông tin về tài khoản của bạn phải được cung cấp đầy đủ,   chính xác và cập nhật nhất. Vui lòng giữ bí mật mật khẩu của bạn, bạn   không nên tiết lộ cho bất kì ai thông tin mật khẩu. Bạn sẽ phải chịu   trách nhiệm cho tất cả việc sử dụng dịch vụ từ tài khoản của bạn. Xin   vui lòng thông báo cho chúng tôi bằng cách gửi email đến địa chỉ <a href="mailto:lienhe@meme.vn">lienhe@meme.vn</a> nếu   bạn nghi ngờ bất kỳ việc sử dụng trái phép tài khoản của bạn. Hãy đảm   bảo cập nhật cho chúng tôi thông tin mới nhất trong bảng đăng kí của bạn   để chúng tôi có thể liên lạc với bạn trong trường hợp cần thiết.</p>
+      <p>Chúng tôi có quyền ngay lập tức chấm dứt hoặc khóa tài   khoản của bạn hoặc việc sử dụng Dịch vụ MEME hoặc truy cập vào nội dung ở   bất kỳ thời điểm nào mà không cần thông báo hoặc có trách nhiệm, nếu   MEME xác định rằng bạn đã vi phạm các Điều khoản sử dụng, vi phạm luật   pháp, quy tắc, quy định, tham gia vào các hành vi không thích hợp khác,   hoặc vì lý do kinh doanh khác. Chúng tôi cũng có quyền chấm dứt tài   khoản của bạn hoặc việc sử dụng của Dịch vụ MEME hoặc truy cập vào các   nội dung nếu việc sử dụng gây quá tải cho máy chủ của chúng tôi. Trong   một số trường hợp, chúng tôi có quyền sử dụng công nghệ để hạn chế hoạt   động như là giới hạn số lượt truy cập đến máy chủ MEME hoặc dung lượng   sử dụng của người dùng. Bạn đồng ý tôn trọng những giới hạn và không có   bất kì hành động nào để phá vỡ, lẩn tránh hoặc bỏ qua chúng.  </p>
+                                        <strong>7. ĐĂNG TẢI VÀ QUẢN LÝ NỘI DUNG CỦA BẠN</strong>
+    <p>Khi đăng kí sử dụng Dịch vụ MEME bạn   có thể được cấp quyền upload nội dung lên MEME. Việc cấp quyền upload   nội dung hoàn toàn do ban biên tập của MEME xem xét và quyết định. Bạn   hiểu rằng MEME không đảm bảo bất kì sự bí mật nào đối với nội dung bạn   đăng tải.</p>
+      <p>Bạn phải chịu trách nhiệm về nội dung của riêng bạn   và hậu quả của việc đăng tải và xuất bản nội dung của bạn trên Dịch vụ   MEME. Bạn khẳng định, đại diện, và đảm bảo rằng bạn sở hữu hoặc có các   giấy phép cần thiết, quyền, sự đồng ý và cho phép để xuất bản nội dung   bạn đã gửi lên, và cấp phép cho MEME tất cả bằng sáng chế, thương mại,   bí mật thương mại, hoặc quyền sở hữu khác liên quan đến Nội dung để phổ   biến nội dung trên Dịch vụ MEME theo các Điều khoản Dịch vụ.</p>
+      <p>Rõ ràng rằng bạn giữ lại tất cả quyền sở hữu nội dung   của bạn. Tuy nhiên, việc gửi nội dung lên MEME đồng nghĩa với việc bạn   cấp cho MEME một giấy phép truyền tải nội dung không độc quyền, miễn phí   bản quyền để sử dụng, tái xuất bản, phân phối lại, chuẩn bị các sản   phẩm phát sinh, hiển thị và thực hiện các nội dung liên quan đến dịch vụ   và mô hình kinh doanh của MEME bao gồm nhưng không giới hạn cho việc   thúc đẩy và phân phối lại một phần hoặc toàn bộ Dịch vụ (và các sản phẩm   phát sinh của chúng) trong bất kỳ định dạng phương tiện truyền thông và   thông qua bất kỳ kênh truyền thông nào. Bạn cũng đồng ý cấp cho từng   người dùng của Dịch vụ MEME một giấy phép không độc quyền để truy cập   vào nội dung của bạn thông qua Dịch vụ và sử dụng, tái sản xuất, phân   phối, hiển thị và thực hiện các nội dung như thông qua các chức năng của   Dịch vụ và theo các Điều khoản Dịch vụ cho phép. Giấy phép cấp trên của   bạn trong nội dung video bạn gửi cho Dịch vụ sẽ chấm dứt trong một thời   gian hợp lý về mặt thương mại sau khi bạn loại bỏ hoặc xóa các video   của bạn khỏi các dịch vụ. Bạn hiểu và đồng ý, tuy nhiên, rằng MEME có   thể giữ lại, nhưng không hiển thị, phân phối, hoặc thực hiện, bản sao   máy chủ video của bạn đã được gỡ bỏ hoặc bị xóa.</p>
+      <p>Bạn cũng đồng ý rằng Nội dung bạn gửi cho Dịch vụ sẽ   không chứa một phần nội dung nào của  bên thứ ba có bản quyền về vật   chất, hoặc vật liệu là đối tượng để các quyền khác của bên thứ ba độc   quyền, trừ khi bạn có sự cho phép của chủ sở hữu hợp pháp của vật liệu   hoặc bạn có quyền hợp pháp để đăng các vật chất và cấp MEME tất cả các   quyền cấp phép được cấp ở đây.</p>
+      <p>MEME không chứng thực bất kỳ nội dung được gửi lên   Dịch Vụ bởi bất kỳ người sử dụng hoặc người cấp phép nào, hoặc bất kỳ ý   kiến, đề nghị, hoặc tư vấn, và MEME rõ ràng từ chối bất kỳ và tất cả các   trách nhiệm pháp lý trong việc kết nối với nội dung. MEME không cho   phép các hoạt động vi phạm bản quyền và xâm phạm quyền sở hữu trí tuệ   trên Dịch vụ, và MEME sẽ loại bỏ tất cả các nội dung nếu được thông báo   rằng những nội dung vi phạm quyền sở hữu trí tuệ khác. MEME có quyền bỏ   nội dung mà không cần thông báo trước.</p>
+                                        <strong>8. ĐÁNH GIÁ, Ý KIẾN CỦA NGƯỜI DÙNG</strong>
+    <p>Bài viết của bạn. Là một phần của   Dịch vụ MEME, người dùng có cơ hội xuất bản, truyền tải, gửi đi, hoặc   đăng tải (Gọi chung là &ldquo;Đăng tải&rdquo;) những đánh giá, ý kiến, hoặc những   tài liệu khác (gọi chung là &ldquo;Bài viết&rdquo;). Để đảm bảo Dịch vụ MEME hấp dẫn   và dành cho tất cả mọi người, bạn phải tuân thủ các quy tắc dưới dây.</p>
+      <p>Xin vui lòng lựa chọn cẩn thận Bài viết mà bạn muốn   gửi lên. Hãy giới hạn ngôn từ và nội dung của Bài viết để liên quan trực   tiếp đến Dịch vụ MEME.  Ngoài ra, bạn không được phép Đăng tải những   Bài viết có tính chất: (i) chứa những thông tin không phù hợp (Được xác   định ở phần 3); hoặc (ii) tuyên bố danh tính của người khác một cách   không đúng. Xin lưu ý rằng chúng tôi sử dụng tên tài khoản của bạn để   đại diện cho bạn và có thể được nhìn thấy bởi tất cả mọi người, do đó   bạn không nên Đăng thông tin cá nhân như địa chỉ mail, số điện thoại,   địa chỉ …</p>
+      <p>Bạn phải là người đầu tiên Đăng tải hoặc có sự cho   phép từ chủ sở hữu hợp pháp của bất kỳ Bài viết bạn Đăng tải. Khi bạn   Đăng tải một Bài viết nào bạn đại điện và đảm bảo rằng bạn sở hữu chúng   và rằng bạn không vi phạm bất kỳ quyền của bên nào, bao gồm cả quyền   riêng tư, quyền công khai, quyền sở hữu trí tuệ. Ngoài ra bạn đồng ý   chịu trách nhiệm chi phí cho tất cả bản quyền, lệ phí và khoản thanh   toán cho bất kỳ bên nào nếu có liên quan đến Bài viết đăng tải của bạn.   MEME sẽ loại bỏ tất cả các Bài viết nào mà chúng tôi được thông báo rằng   có vi phạm quyền của người khác. Bạn thừa nhận rằng MEME không đảm bảo   bất kỳ bí mật đối với bất kỳ bài viết nào.</p>
+      <p>Khi đăng tải bài viết trên MEME, bạn cấp cho MEME một   giấy phép sử dụng, hiển thị, tái xuất bản, phân phối, chỉnh sửa, xóa,   thêm vào, chỉnh sửa để tái xuất bản, thực hiện công khai, và xuất bản   bài viết thông qua dịch vụ của MEME trên toàn thế giới, vĩnh viễn và   dưới bất kì định dạng truyền thông nào hiện nay vào sau này. Chúng tôi   không phải chịu bất kì chi phí nào cho việc sử dụng các bài viết của   bạn. Ngoài ra bạn đồng ý rằng cấp một giấy phép tương tự cho đối tác của   MEME và người dùng.</p>
+      <p>Bài viết của Bên Thứ Ba. Mặc dù có những hạn chế, xin   vui lòng lưu ý rằng một số bài viết được Đăng tải  bởi người sử dụng có   thể gây phản đối, bất hợp pháp, không chính xác, hoặc không phù hợp.   MEME không có trách nhiệm cho bất kỳ bài viết nào, và bài viết được đăng   không phản ánh quan điểm hay chính sách của MEME. Chúng tôi có quyền,   nhưng không có nghĩa vụ, giám sát Bài viết và hạn chế hoặc loại bỏ các   Bài viết mà tùy theo quyết định của chúng tôi là không phù hợp hoặc vì   bất kỳ lý do kinh doanh khác.</p>
+      <p>MEME không phải chịu trách nhiệm cho bất kỳ Bài viết   nào của người dùng. Bạn có thể thông báo cho chúng tôi về các Bài viết   không phù hợp mà bạn tìm thấy. Nếu một tính năng "báo cáo" thông qua   Dịch vụ MEME không có sẵn cho một trường hợp cụ thể, xin vui lòng phản   hồi qua email <a href="mailto:lienhe@meme.vn">lienhe@meme.vn</a></p>
+                                        <strong>9. ĐƯỜNG DẪN (LINK) VÀ QUẢNG CÁO</strong>
+    <p>Đường dẫn.  Nếu chúng tôi cung cấp   các liên kết hoặc con trỏ đến các website khác, bạn không nên suy luận   rằng MEME hoạt động, kiểm soát hoặc kết nối với những website này. Liên   kết của bạn đến các trang khác hoàn toàn có thể gặp rủi ro, nguy hiểm.    Khi bạn bấm vào một liên kết, chúng tôi sẽ không đưa ra cảnh báo rằng   bạn phải rời khỏi Dịch vụ MEME. Bạn phải chịu trách nhiệm cho việc truy   cập và tuân thủ các giới hạn và điều khoản, các điều khoản bí mật thông   tin và các chú ý pháp lý khác được quy định tại các trang liên kết này.   MEME không chấp nhận bảo đảm, các hiển thị hoặc ngụ ý, liên quan đến sự   chính xác, thời hạn, tính pháp lý hoặc các tài nguyên khác hoặc các   thông tin chứa đựng trên các trang web này.</p>
+      <p>MEME không chịu trách nhiệm về nội dung của bất kì   website hoặc điểm đến nào ngoài trang MEME.  Khi sử dụng Dịch vụ MEME,   bạn nhận thức được và đồng ý rằng MEME không có trách nhiệm với bạn về   bất kì nội dung hoặc tài liệu nào được lưu trữ và phục vụ từ trang web   khác ngoài MEME.</p>
+                                        <strong>10. MẠO DANH</strong>
+    <p>Các hoạt động như sao chép bố cục   kênh (channel) của một người dùng, sử dụng tên người dùng tương tự hoặc   đăng bằng danh tính của người khác trong nhận xét, email hoặc video có   thể được coi là hành vi quấy rối. Trong những trường hợp mà nhóm của   chúng tôi xác định được là một tài khoản được thiết lập nhằm mạo danh   một kênh hoặc cá nhân khác thì tài khoản đó sẽ bị xóa.</p>
+      <p>Hành vi mạo danh trên MEME có thể diễn ra theo hai cách:</p>
+      <ul>
+        <li>Mạo danh một kênh: Người dùng sao chép tiểu sử,   nền hoặc nội dung của một kênh và viết nhận xét để mọi người tưởng rằng   kênh của một người nào khác đã đăng nhận xét đó. Nếu bạn cảm thấy kênh   của mình đang bị mạo danh, hãy gửi ngay thông tin đến email của chúng   tôi <a href="mailto:lienhe@meme.vn">lienhe@meme.vn</a></li>
+        <li>Mạo danh cá nhân: Người dùng tạo kênh hoặc video   bằng cách sử dụng tên thật, hình ảnh hoặc thông tin cá nhân khác của một   cá nhân để lừa mọi người nghĩ rằng họ là một người nào đó trên MEME.   Nếu bạn cảm thấy mình đang bị mạo danh, hãy gửi ngay thông tin đến email   của chúng tôi <a href="mailto:lienhe@meme.vn">lienhe@meme.vn</a></li>
+      </ul>
+                                        <strong>11. SPAM, GIAN LẬN, LỪA ĐẢO</strong>
+    <p> Spam video và nhận xét (comment): Không được đăng lượng   lớn nội dung không có mục tiêu, không được mong đợi hoặc lặp đi lặp lại   trong video, nhận xét, thư riêng hoặc các địa điểm khác trên trang web.   Nếu nội dung của bạn có mục đích chính là lôi kéo mọi người rời bỏ   YouTube và tham gia một trang web khác thì nội dung đó có thể sẽ vi phạm   chính sách spam của chúng tôi. </p>
+      <ul>
+        <li>Spam lưu lượng truy cập giả: Mọi hành vi làm tăng   số lượng lượt xem, lượt thích, nhận xét hoặc số liệu khác một cách giả   tạo bằng các hệ thống tự động hoặc bằng cách phân phối video đến những   người dùng cả tin đều là trái với điều khoản của chúng tôi. Những video   và tài khoản bị phát hiện là vi phạm điều khoản của chúng tôi có thể bị   gỡ xuống và bị xóa khỏi MEME. Nếu bạn sắp sửa thuê một người nào đó trợ   giúp quảng bá nội dung của bạn thì đó phải là người bạn tuyệt đối tin   cậy vì có thể bạn đang đặt vận mệnh của kênh (và doanh nghiệp của bạn   trên MEME) vào tay của họ. Nếu họ đang sử dụng các phương pháp vi phạm   điều khoản dịch vụ của chúng tôi thì bạn có thể là người phải trả cái   giá đắt hơn vì video và kênh của bạn sẽ bị gỡ xuống.</li>
+        <li>Dữ liệu gây hiểu lầm: Dữ liệu chỉ bất kỳ và tất cả   thông tin bổ sung được cung cấp trên một video. Các dữ liệu này bao gồm   tiêu đề, mô tả, thẻ, chú thích và hình thu nhỏ. Lý do mà chúng tôi cung   cấp dữ liệu là để bạn có thể thêm thông tin ngữ cảnh bổ sung cho video   của mình. Vui lòng không sử dụng các tính năng này để chơi trò chơi hoặc   đánh lừa các thuật toán tìm kiếm của chúng tôi. Tất cả các dữ liệu phải   mô tả nội dung chứa trong video của bạn. Trong số các yếu tố khác, dữ   liệu được thêm nhằm mục đích lừa thuật toán tìm kiếm sẽ khiến video của   bạn bị xóa và tài khoản của bạn bị cảnh cáo. Việc thêm thẻ bổ sung vào   phần mô tả của video có thể cấu thành hành vi spam và có thể khiến video   của bạn bị xóa.</li>
+        <li>Hình đại diện cho video (thumbnail) gây lừa đảo   hoặc không phù hợp: Hãy chọn hình đại diện cho video biểu thị nội dung   của bạn đúng nhất. Hình đại diện cho video sẽ được hiển thị trên toàn   trang web và nên phù hợp với mọi lứa tuổi. Mọi hình đại diện cho video   vi phạm chính sách chung sẽ bị gỡ bỏ cùng với video mà nó đại diện.</li>
+        <li>Hành vi lừa đảo: Một số người dùng tạo nội dung   nhằm mục đích lừa đảo người khác để thu lợi tài chính cho bản thân. Nội   dung cố ý lừa đảo người dùng khác để thu lợi tài chính có thể bị xóa và   trong một số trường hợp người tải lên có thể bị nhận cảnh cáo.</li>
+      </ul>
+                                        <strong>12. NHÃN HIỆU</strong>
+    <p>Thương hiệu MEME, Logo MEME, trang   web www.meme.vn và những biểu tượng, hình ảnh, logo, âm thanh là nhãn   hiệu của MEME. Không ai được quyền sao chép, chỉnh sửa hoặc sử dụng,   khai thác.</p>
+                                        <strong>13. TỪ CHỐI BẢO ĐẢM</strong>
+    <p>Các Dịch vụ MEME bao gồm sử dụng   trên website và những phương thức sử dụng khác, nội dung, video player,   bài viết của người dùng, và những dữ liệu khác có trên các phương thức   khác nhau, được cung cấp &ldquo;nguyên trạng&rdquo; mà không có đảm bảo dưới bất kỳ   hình thức nào, rõ ràng hay ngụ ý. MEME tuyên bố miễn trừ mọi bảo đảm,   bao gồm nhưng không giới hạn trong các bảo đảm ngụ ý về khả năng thương   mại, sự phù hợp cho một mục đích cụ thể, hoàn thiện, có sẵn, an ninh, sự   không vi phạm, tính bảo mật, nội dung thông tin, tích hợp hệ thống hay   tính chính xác và bảo đảm rõ ràng về sự hưởng lợi ổn định.</p>
+      <p>MEME không đại diện hay bảo đảm rằng Dịch vụ MEME hoặc   máy chủ, ứng dụng, chức năng không bị ảnh hưởng bởi virus, các thành   phần gây hại khác, hoặc bị lỗi, bạn chịu toàn bộ rủi ro về mất mát hoặc   thiệt hại mà bạn có thể gặp phải hoặc chịu đựng do việc sử dụng Dịch vụ   MEME. Meme không đảm bảo khả năng truy cập liên tục, không gián đoạn,   không có lỗi hoặc an toàn khi sử dụng Dịch vụ MEME, vì hoạt động của   website hoặc các phương thức khác có thể bị can thiệp bởi rất nhiều yếu   tố ngoài tầm kiểm soát của MEME.</p>
+                                        <strong>13. TỪ CHỐI BẢO ĐẢM</strong>
+    <p>Các Dịch vụ MEME bao gồm sử dụng   trên website và những phương thức sử dụng khác, nội dung, video player,   bài viết của người dùng, và những dữ liệu khác có trên các phương thức   khác nhau, được cung cấp &ldquo;nguyên trạng&rdquo; mà không có đảm bảo dưới bất kỳ   hình thức nào, rõ ràng hay ngụ ý. MEME tuyên bố miễn trừ mọi bảo đảm,   bao gồm nhưng không giới hạn trong các bảo đảm ngụ ý về khả năng thương   mại, sự phù hợp cho một mục đích cụ thể, hoàn thiện, có sẵn, an ninh, sự   không vi phạm, tính bảo mật, nội dung thông tin, tích hợp hệ thống hay   tính chính xác và bảo đảm rõ ràng về sự hưởng lợi ổn định.</p>
+      <p>MEME không đại diện hay bảo đảm rằng Dịch vụ MEME hoặc   máy chủ, ứng dụng, chức năng không bị ảnh hưởng bởi virus, các thành   phần gây hại khác, hoặc bị lỗi, bạn chịu toàn bộ rủi ro về mất mát hoặc   thiệt hại mà bạn có thể gặp phải hoặc chịu đựng do việc sử dụng Dịch vụ   MEME. Meme không đảm bảo khả năng truy cập liên tục, không gián đoạn,   không có lỗi hoặc an toàn khi sử dụng Dịch vụ MEME, vì hoạt động của   website hoặc các phương thức khác có thể bị can thiệp bởi rất nhiều yếu   tố ngoài tầm kiểm soát của MEME.</p>
+                                        <strong>14. GIỚI HẠN TRÁCH NHIỆM VÀ BỒI THƯỜNG</strong>
+    <p>MEME  đặc biệt tuyên bố miễn trừ mọi   trách nhiệm pháp lý và trong mọi trường hợp, MEME, các quan chức, giám   đốc, cổ đông hoặc nhân viên của MEME không chịu trách nhiệm pháp lý cho   bất kỳ thiệt hại nào mang tính trực tiếp, gián tiếp, ngẫu nhiên, do hậu   quả, bị trừng phạt hoặc thiệt hại đặc biệt hay bất kỳ thiệt hại nào   khác, bao gồm nhưng không giới hạn trong việc mất quyền sử dụng, mất lợi   nhuận hoặc mất dữ liệu, cho dù trong một hành động của hợp đồng, sai   lầm, trách nhiệm pháp lý nghiêm ngặt hoặc thiệt hại khác (bao gồm nhưng   không giới hạn trong sự bất cẩn), phát sinh từ hoặc có bất kỳ liên quan   nào đến việc truy cập hay sử dụng Dịch vụ MEME (ngay cả khi MEME đã được   báo về khả năng xảy ra thiệt hại đó), bao gồm trách nhiệm pháp lý liên   quan đến virus, macro hoặc phần mềm vô hiệu khác có thể ảnh hưởng đến   thiết bị máy tính của bạn.</p>
+      <p>Bạn có nghĩa vụ bồi thường cho MEME hoặc bất cứ bên thứ   ba nào cho toàn bộ/bất cứ thiệt hại thực tế nào mà phần lỗi được xác   định là do bạn khi xảy ra một trong các tình huống dưới đây:</p>
+      <ul>
+        <li>Vi phạm các điều khoản này hoặc các thỏa thuận sử dụng dịch vụ khác của MEME</li>
+        <li>Vi phạm các quy định và pháp luật hiện hành gây ảnh hưởng/thiệt hại đến MEME</li>
+        <li>Sự vô ý hoặc hành vi cố ý làm sai của bạn, hoặc nhân viên và đại lý của bạn gây ảnh hưởng/thiệt hại đến MEME.</li>
+        <li>Vi phạm bất cứ quy định/thoả thuận nào tại chính sách bảo mật.</li>
+        <li>Xâm phạm quyền sở hữu trí tuệ hoặc quyền lợi hợp pháp của bất kỳ cá nhân/tổ chức nào gây ảnh hưởng/thiệt hại đến MEME.</li>
+        <li>Tranh chấp trong việc quảng cáo, khuyến mãi, phân phối hàng hóa của bạn gây ảnh hưởng/thiệt hại đến MEME.</li>
+      </ul>
+                                        <strong>15. THÔNG BÁO VÀ QUY TRÌNH BÁO CÁO VI PHẠM BẢN QUYỀN</strong>
+    <p>Nếu bạn tin rằng bất kỳ Nội dung,   tài liệu, hoặc các tài liệu khác được cung cấp thông qua Dịch vụ MEME,   bao gồm cả một liên kết vi phạm quyền sở hữu trí tuệ của bạn, vui lòng   thông báo cho chúng tôi về việc vi phạm bản quyền theo quy trình cụ thể   được quy định dưới đây.</p>
+      <p>Chúng tôi sẽ xử lý từng thông báo vi phạm bản quyền mà   chúng tôi nhận được và xử lý theo quy định của pháp luật sở hữu trí tuệ.   Một tuyên bố thông báo vi phạm bản quyền phải được gửi đến MEME tại địa   chỉ: <a href="mailto:lienhe@meme.vn">lienhe@meme.vn</a></p>
+      <p>Để giúp chúng tôi có đủ cơ sở đáp ứng các yêu cầu của bạn, vui lòng gửi thông báo với các thông tin sau:</p>
+      <ul>
+        <li>Bản sao có chữ ký thật của người người được ủy quyền thay mặt cho chủ sở hữu của một sản phẩm độc quyền.</li>
+        <li>Mô tả tác phẩm có bản quyền mà bạn cho là bị vi phạm</li>
+        <li>Mô tả về nơi mà các tài liệu bạn cho là vi phạm nằm trên các Dịch vụ MEME đủ để cho phép MEME xác định vị trí tài liệu đó</li>
+        <li>Thông tin liên hệ của bạn như địa chỉ, số điện thoại, email để MEME có thể liên hệ với bạn.</li>
+        <li>Bạn tuyên bố rằng bạn tin tưởng việc sử dụng nội   dung đó là không được phép của chủ sở hữu quyền tác giả, đại lý độc   quyền hoặc pháp luật;</li>
+        <li>Bạn tuyên bố rằng các thông tin trong thông báo   của bạn là chính xác và bạn chấp nhận hình phạt về tội khai man mà bạn   được ủy quyền hành động thay mặt cho chủ sở hữu bản quyền.</li>
+      </ul>
+      <p>MEME có chính sách chấm dứt những tài khoản vi phạm nhiều lần về việc gửi thông báo.</p>
+                                        <strong>16. THÔNG TIN CHUNG</strong>
+    <p>Sử dụng ngoài phạm vi Việt Nam.   Chúng tôi là công ty có trụ sở tại Việt Nam. Mục tiêu của MEME là mang   lại cho người dùng nội dung dưới sự cho phép của chủ sở hữu nội dung một   cách hợp pháp. Do đó, chúng tôi bị giới hạn bởi các quyền phát hành nội   dung trong phạm vi địa lý từ các nhà cung cấp nội dung. Việc sử dụng   công nghệ để truy cập vào nội dung từ các vùng lãnh thổ mà MEME không có   quyền được cung cấp dịch vụ đều bị cấm.</p>
+      <p>Kiểm soát xuất khẩu. Phần mềm và sự truyền tải dữ liệu   kỹ thuật, nếu có, kết nối với Dịch vụ MEME được kiểm soát xuất khẩu. Bạn   đồng ý tuân thủ với tất cả các luật liên quan đến phần mềm và truyền   tải dữ liệu kỹ thuật từ Việt Nam hoặc quốc gia mà bạn cư trú.</p>
+      <p>Luật áp dụng:  Bạn đồng ý rằng bản Điều khoản sử dụng   và bất kỳ bất đồng nào phát sinh từ việc bạn sử dụng dịch vụ của chúng   tôi sẽ được giải quyết theo luật pháp hiện hành của Nước Cộng hoà Xã hội   Chủ nghĩa Việt Nam . Thông qua việc đăng ký hoặc sử dụng dịch vụ của   chúng tôi, bạn mặc nhiên đồng ý và tuân thủ toàn bộ các quy định của   Luật pháp Việt Nam.</p>
+                                        <strong>17. THÔNG TIN BỔ SUNG</strong>
+    <p>Trong trường hợp một hoặc một số   điều khoản của bản Điều khoản sử dụng này xung đột với các quy định của   luật pháp và bị Tòa án coi là vô hiệu, điều khoản đó sẽ được chỉnh sửa   cho phù hợp với quy định của pháp luật hiện hành, và phần còn lại của   Điều khoản sử dụng vẫn giữ nguyên giá trị;</p>
+      <p>Việc bất kỳ bên nào không thể chứng minh được về quyền   của mình trong Quy định sử dụng sẽ không bị xem là việc từ bỏ quyền của   bên đó và quyền này vẫn còn nguyên giá trị và hiệu lực;</p>
+      <p>Bạn đồng ý rằng, bất kỳ khiếu nại hoặc tố tụng nào   phát sinh từ website này phải được đệ trình trong vòng một (1) năm sau   khi khiêu tố hoặc tố tụng ấy phát sinh, nếu không khiếu nại sẽ hoàn toàn   vô hiệu;</p>
+      <p>Chúng tôi có thể chuyển nhượng quyền lợi và nghĩa vụ   của mình chiếu theo bản Điều khoản sử dụng này và chúng tôi sẽ được giải   phóng khỏi bất kỳ nghĩa vụ nào phát sinh sau đó.</p>
+      <p>Tích hợp, bổ sung, chia rẽ. Xin chú ý rằng các Điều   khoản sử dụng, bao gồm cả Chính sách bảo mật của MEME được kết hợp trong   Điều khoản này và bất kì thỏa thuận giấy phép nào của người sử dụng   cuối có thể đi kèm với ứng dụng của MEME, tính năng, thiết bị, tạo thành   các thỏa thuận pháp lý cuối cùng giữa bạn và MEME và hoàn toàn thay thế   bất kỳ thỏa thuận nào trước đó giữa bạn và MEME liên quan đến Dịch vụ   MEME. Trừ trường hợp quy định tại Điều 2 trên đây, các Điều khoản này có   thể không được sửa đổi, bổ sung hoặc thay đổi ngoại trừ trong một văn   bản có chữ ký của MEME. Những Điều khoản sử dụng hoạt động đến mức tối   đa cho phép theo quy định của pháp luật. Nếu bất kỳ điều khoản nào của   các Điều khoản này bị coi là bất hợp pháp, có hiệu lực, hoặc không thể   thực thi, bạn và chúng tôi đồng ý điều khoản đó sẽ được coi là tách từ   các Điều khoản và sẽ không ảnh hưởng đến hiệu lực và tính thực thi của   các Điều khoản quy định còn lại.</p>
+      <p>Cảm ơn bạn đã dành thời gian để đọc các Điều khoản sử   dụng. Với sự hiểu biết và đồng ý tuân theo các Điều khoản này việc sử   dụng dịch vụ sẽ dễ dàng hơn cho mọi người dùng.</p>
+                                        <strong>18. Mạng Quảng Cáo và các Bên Thứ Ba khác</strong>
+    <p>MEME cho phép một số công ty nhất   định   cung cấp quảng cáo và thu thập thông tin, có các máy chủ quảng   cáo bên   thứ ba, các đại lý quảng cáo, nhà cung cấp công nghệ, nhà cung   cấp nội   dung được tài trợ và các công ty nghiên cứu.</p>
+      <p>Những   công ty này có thể đưa một tập tin, gọi là web   beacon, vào các trang   web MEME để thực hiện kiểm tra, nghiên cứu và   báo cáo cho các nhà quảng   cáo. Vì trình duyệt web của bạn được yêu cầu   nhận về những quảng cáo và   web beacon này từ máy chủ của bên thứ ba,   những công ty này có thể xem,   sửa và thiết lập các cookies của chính   họ, giống như thể là bạn đã yêu   cầu trực tiếp một trang từ trang web   của họ. Những công ty này cũng có   thể sử dụng các cookie và web beacon   này để thu thập thông tin trên MEME   cho mục đích chuyển đến bạn các   quảng cáo tùy chỉnh trên cả các trang   web của MEME và các trang web   ngoài MEME. MEME có thể tùy chỉnh một số   quảng cáo dành cho người dùng   mà chúng tôi cho rằng phù hợp với nhóm sở   thích – ví dụ, nam giới   quan tâm đến thể thao. MEME không cung cấp bất   kỳ thông tin nhận dạng   cá nhân nào cho nhà quảng cáo khi bạn tương tác   hoặc xem quảng cáo tùy   chỉnh của họ. Tuy nhiên, khi bạn xem hoặc tương   tác với một quảng   cáo, có khả năng là nhà quảng cáo sẽ giả định rằng bạn   đã đáp ứng đối   với một nhóm sở thích được sử dụng để chọn quảng cáo.</p>
+      <p>Các   bên thứ ba sau đây cung cấp thông tin về các   thực tiễn thực hiện việc   thu thập dữ liệu của họ, và trong một số   trường hợp, khả năng bỏ chọn,   trên các trang web tương ứng của họ. Vui   lòng xem quy định về sự riêng   tư của từng công ty để hiểu rõ hơn khả   năng kiểm soát dành cho bạn.</p>
+      <p>Danh sách một số bên thứ ba trên MEME (tham khảo): </p>
+      <ul>
+        <li><a href="http://www.adobe.com/privacy.html">Adobe</a></li>
+        <li><a href="http://advertising.aol.com/privacy">Advertising.com, Inc. (an AOL company)</a></li>
+        <li><a href="http://www.addthis.com/privacy/privacy-policy#.UZFbjIIzLi8">AddThis</a></li>
+        <li><a href="http://ambientdigital.com.vn/">Ambient Digital</a></li>
+        <li><a href="http://www.comscore.com/About-comScore/Privacy">comScore</a></li>
+        <li><a href="https://www.google.com/intl/en/policies/privacy/">DoubleClick, Inc.</a></li>
+        <li><a href="https://www.facebook.com/about/privacy/">Facebook</a></li>
+        <li><a href="http://www.nielsen.com/us/en/nielsen-privacy-policy/website-privacy-policy.html">Nielsen</a></li>
+        <li><a href="https://www.google.com/policies/privacy">Google</a></li>
+      </ul>		
+                                        <strong>19. Chính sách về nội dung video</strong>
+    <p>Việc bạn đăng tải (upload) video lên MEME cần phải tuân thủ các điều khoản sau đây:</p>
+    <ul>
+      <li>Video không vi phạm Phát luật của Nhà nước Việt Nam.</li>
+      <li>Bạn   phải là chủ sở hữu hoặc được quyền sử dụng   video, trong một số trường   hợp cần thiết chúng tôi sẽ yêu cầu bạn   chứng minh bản quyền video.</li>
+      <li>Nếu   video của bạn vi phạm một trong những điều sau   đây thì chúng tôi phải   loại ra khỏi website Meme.vn: Ngôn từ kích động   thù địch; Quấy rối và đe   dọa trên mạng; Mạo danh; Đe dọa; Nguy hiểm   đối với trẻ em; Khỏa thân và   nội dung khiêu dâm; Nội dung bạo lực hoặc   đẫm máu; Nội dung tai hại   hoặc nguy hiểm; Spam; Hành vi lừa gạt và   hoạt động lừa đảo.</li>
+      <li>Chúng   tôi sẽ duyệt video của bạn trước khi công bố   rộng rãi trên website   Meme.vn. Một số video không vi phạm các điều   khoản nhưng nếu chúng tôi   tin rằng nó ảnh hưởng không tốt đến website   Meme.vn thì sẽ bị từ chối   hoặc xoá mà không cần phải thông báo.</li>
+    </ul>			
+    									<strong>20. Điều khoản thanh toán</strong>
+                                        <ul>
+                                        	<li>MEME sẽ thanh toán cho bạn bằng hình thức chuyển khoản qua ngân hàng.</li>
+                                            <li>Đơn vị tiền tệ sử dụng trong chương trình MEME Partner và thanh toán là Việt Nam Đồng (vnđ)</li>
+                                            <li>Số tiền tối thiểu để được thanh toán là 500,000 vnđ</li>
+                                            <li>Sau 15 ngày kể từ ngày bắt đầu một tháng mới MEME sẽ đối soát và xác nhận số tiền bạn kiếm được của tháng trước đó. Sau khi bạn xác nhận thông tin đối soát thì trong vòng 30 ngày kế tiếp nếu không nhận được khiếu nại gì MEME sẽ tiến hành thanh toán cho bạn. </li>
+                                            <li>Khi tham gia Chương trình MEME Partner với tư cách cá nhân thì MEME sẽ trích 10% tổng thu nhập của bạn phát sinh từ chương trình để nộp trực tiếp cho cơ quan thuế của Nhà nước theo mã số thuế đã cung cấp, trong trường hợp chưa cung cấp tức là bạn đã uỷ quyền cho MEME thực hiện khởi tạo mã số thuế theo đúng quy định của Pháp luật Việt Nam</li>
+                                            <li>Khi tham gia Chương trình MEME Partner với tư cách doanh nghiệp việc thanh toán sẽ được thực hiện sau khi MEME nhận được hoá đơn VAT do chính công ty đã đăng ký chương trình cung cấp.</li>
+                                            <li>Việc thanh toán sẽ bị tạm dừng nếu có khiếu kiện hoặc tranh chấp liên quan đến tài khoản, video, kênh của bạn.</li>
+                                            <li>Nếu vi phạm các điều khoản của chương trình MEME Partner thì số tiền bạn kiếm được trước đó sẽ không được thanh toán và bạn sẽ bị loại ra khỏi chương trình này.</li>
+                                        </ul>
+                                        </div>		
+                                    </div>
+                                </div><!-- end policy-form-->
+                                <div class="ok-policy col-xs-12">
+                                    <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox" value="">
+                                        Tôi đã đọc, hiểu và đồng ý với các <a href="http://www.meme.vn/info/policy" target="_blank">Điều khoản sử dụng</a>
+                                      </label>
+                                    </div>
+                                </div>
+                            </div><!-- /row -->
+                            <div class="row">
+                            	<button type="submit" class="btn btn-primary btnFormPartner">đăng ký</button>
+                            </div><!-- /row -->
+                            
+                            
+                        </div><!-- end section-->
+                        
+                    </div><!-- end content-partner-->
+                    
+                </div><!-- end container-->
+                
+                <div class="footer container-fluid">
+                	<div class="container">
+                        <div class="col-md-5 hidden-xs hidden-sm">
+                            <div class="footer-head">
+                                <h3>Giới thiệu meme</h3>
+                            </div>
+                            <div class="footer-content footer-logo">
+                                <p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí…</p>
+                                <a href="paymentRegister.html#" class="about-more">Xem thêm</a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-6 footerPadd">
+                            <div class="footer-head">
+                                <h3>Facebook <a href="http://www.meme.vn/rss/video/latest" class="rssLink"><i class="fa fa-rss"></i></a></h3>
+                            </div>
+                            <div class="footer-content">
+                                <a class="facebookfan" href="paymentRegister.html#"><i class="fa fa-facebook"></i></a>
+                                <h5><a href="paymentRegister.html#">TV Network</a></h5>
+                                <p class="facebookfanDesc">Cập nhật tin tức mới từ facebook</p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="footer-head">
+                                <h3>Hỗ trợ</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="nav">
+                                    <li><a href="paymentRegister.html#">MeMe là gì?</a>
+                                    </li>
+                                    <li><a href="paymentRegister.html#">Cách hoạt động</a>
+                                    </li>
+                                    <li><a href="paymentRegister.html#">Lợi ích</a>
+                                    </li>
+                                    <li><a href="paymentRegister.html#">Đối tác nội dung</a>
+                                    </li>
+                                    <li><a href="paymentRegister.html#">Khiếu nại bản quyền</a>
+                                    </li>
+                                    <li><a href="paymentRegister.html#">Liên hệ</a>
+                                    </li>
+                                    <li><a href="paymentRegister.html#">Điều khoản sử dụng</a>
+                                    </li>
+                                    <li><a href="paymentRegister.html#">Chính sách nội dung</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end footer-->
+                
+                <div class="footer-bottom col-xs-12">
+                	<div class="container">
+                    	<span class="copyright">Copyright ©2013 meme.vn</span>
+                    </div>
+                </div><!--end footer bottom-->
+                
+            </div><!-- end width-partner-->
+            
+       </div><!-- end wrapper-partner-->
+
+  
+</body>
+
+</html>

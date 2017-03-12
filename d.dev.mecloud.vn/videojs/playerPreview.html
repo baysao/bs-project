@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Videojs</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="js/jquery.min.js"></script>
+        <link href="css/video-js.css" rel="stylesheet">
+        <script src="js/video.js"></script>
+
+        <link href="css/skin.css" rel="stylesheet">
+
+        <link href="css/custom.css" rel="stylesheet">
+
+        <!-- custom skin color -->
+        <script src="js/videojs-skin.js"></script>
+
+        <link href="css/videojs-watermark.css" rel="stylesheet">
+        <script src="js/videojs-watermark.js"></script>
+
+        <link href="css/videojs-resolution-switcher.css" rel="stylesheet">
+        <script src="js/videojs-resolution-switcher.js"></script>
+
+        <link href="css/videojs-poster.css" rel="stylesheet">
+        <script src="js/videojs-poster.js"></script>
+
+        <link href="css/videojs-brand.css" rel="stylesheet">
+        <script src="js/videojs-brand.js"></script>
+
+        <!-- custom style skin color -->
+        <style type="text/css">
+            .video-js.vjs-color-custom .vjs-play-progress, 
+            .video-js.vjs-color-custom .vjs-volume-level,
+            .video-js.vjs-color-custom .vjs-resolution-button .vjs-menu li.vjs-selected, 
+            .video-js.vjs-color-custom .vjs-resolution-button .vjs-menu li.vjs-selected:hover, 
+            .video-js.vjs-color-custom .vjs-resolution-button .vjs-menu li.vjs-selected:focus {
+                background-color: #3ea9f5;
+            }
+            .video-js.vjs-color-custom .vjs-loading-spinner:before{
+                border-left-color: #3ea9f5;
+                border-right-color: #3ea9f5;
+            }
+            .video-js.vjs-color-custom .vjs-loading-spinner:after{
+                border-top-color: #3ea9f5;
+                border-bottom-color: #3ea9f5;
+            }
+        </style>
+
+    </head>
+    
+    <body>
+        <div>
+            <div class="wrapper-player">
+                <div class="playerMeCloud">
+
+                	<video id="mePlayer" class="video-js vjs-default-skin vjs-color-custom" controls preload="auto">
+                        <source src="hariwon_1080.mp4" type='video/mp4' label='Full <span>HD</span>' res='1080' />
+                        <source src="hariwon_720.mp4" type='video/mp4' label='720p <span>HD</span>' res='720'/>
+                        <source src="hariwon_480.mp4" type='video/mp4' label='480p' res='480' />
+                        <source src="hariwon_360.mp4" type='video/mp4' label='360p' res='360'/>
+                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                    </video>
+
+                </div>
+            </div>
+            <script>
+                var player = videojs('mePlayer');
+                player.videoJsResolutionSwitcher({
+                    default: 480
+                });
+
+                player.videoJsWatermark({
+                    logoLink: 'http://d.dev.mecloud.vn/videojs/mecloud.png',
+                    webLink: 'http://mecloud.vn',
+                    opacity: 0.7, // Default is 70%
+                    posX: 10,   // x align with position, default value is 10px
+                    posY: 10,   // y align with position, default value is 10px
+                    position: 'topRight', // topRight, bottomLeft, bottomRight is default
+                    maxWidthLogo: 10, //default is 10% compare with player
+                    autoHide: true //default is false, false = disable autoHide, true = enable autoHide
+                });
+
+                player.videoJsPoster({
+                    title:'Hương Đêm bay Xa - Hari Won',
+                    image: 'poster.png',
+                    position: 'center',
+                    autoplay: false 
+                });
+
+                player.videoJsBrand({
+                    link:'http://mecloud.vn',
+                    image: 'brand.png',
+                    styleBrand: 'box'
+                });
+ 
+                player.videoJsSkin({
+                    color:'#3ea9f5'
+                });
+            </script>
+            
+        </div>
+
+
+
+    </body>
+</html>

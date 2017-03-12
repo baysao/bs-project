@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movie Info | MeMe.VN</title>
+    <!------------------ Global CSS ----------------------->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,600&subset=latin-ext,vietnamese' rel='stylesheet' type='text/css'>
+    <link href="css/icomeme.css" type="text/css" rel="stylesheet">
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+    <!------------------ End Global CSS ----------------------->
+    
+    <!------------------ Page CSS ----------------------->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <!------------------ End Page CSS ----------------------->
+    
+    <!------------------ Global Script ----------------------->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/global.js"></script>
+    <!------------------ End Global Script ------------------->
+    
+    <!------------------ Page Script ----------------------->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/movieInfo.js"></script>
+    <!------------------End Page Script ----------------------->
+</head>
+
+<body>
+    <div class="pageWidth">
+    	
+    	<div id="header">
+        	<div class="container">
+            	<a href="movieInfo.html#" class="logoMeme" title="Meme.vn">Meme.vn</a>
+                <div class="browse dropdown">
+                	<button type="button" class="btn btnBrowse btnDropdown"><i class="fa fa-bars"></i> <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdownDiv mainMenu">
+                    	<div class="arrowUp"></div>
+                        <ul class="menu">
+                            <li><a href="movieInfo.html#" class="menuHot">Hot</a></li>
+                            <li><a href="movieInfo.html#" class="menuHot">Xem nhiều</a></li>
+                            <li><a href="movieInfo.html#" class="menuHot">Phim</a></li>
+                            <li><a href="movieInfo.html#">Sự kiện</a></li>
+                            <li><a href="movieInfo.html#">Tin tức</a></li>
+                            <li><a href="movieInfo.html#">Hài</a></li>
+                            <li><a href="movieInfo.html#">Thể thao</a></li>
+                            <li><a href="movieInfo.html#">Dancingo</a></li>
+                            <li><a href="movieInfo.html#">Game</a></li>
+                            <li><a href="movieInfo.html#">Ẩm thực</a></li>
+                            <li><a href="movieInfo.html#">Giáo dục</a></li>
+                            <li><a href="movieInfo.html#">Blog</a></li>
+                            <li><a href="movieInfo.html#">Showbiz</a></li>
+                            <li><a href="movieInfo.html#">Xe cộ</a></li>
+                            <li><a href="movieInfo.html#">Động vật</a></li>
+                            <li><a href="movieInfo.html#">Đồ hoạ</a></li>
+                            <li><a href="movieInfo.html#">Giải trí</a></li>
+                            <li><a href="movieInfo.html#">Hướng dẫn</a></li>
+                            <li><a href="movieInfo.html#">Thời trang - Làm đẹp</a></li>
+                            <li><a href="movieInfo.html#">Công nghệ</a></li>
+                            <li><a href="movieInfo.html#">Du lịch</a></li>
+                            <li><a href="movieInfo.html#">Gia đình</a></li>
+                            <li><a href="movieInfo.html#">Hoạt hình</a></li>
+                            <li><a href="movieInfo.html#">Khoa học</a></li>
+                            <li><a href="movieInfo.html#">Lifestyle</a></li>
+                            <li><a href="movieInfo.html#">Nghệ thuật</a></li>
+                            <li><a href="movieInfo.html#">Sức khoẻ</a></li>
+                            <li><a href="movieInfo.html#">Thiên nhiên</a></li>
+                            <li><a href="movieInfo.html#">Trẻ em</a></li>
+                            <li><a href="movieInfo.html#">Sản phẩm</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <div class="menu-policy clearfix">
+                            <ul>
+                                <li><a href="movieInfo.html#">MeMe là gì?</a></li>
+                                <li><a href="movieInfo.html#">Cách hoạt động</a></li>
+                                <li><a href="movieInfo.html#">Điều khoản sử dụng</a></li>
+                                <li><a href="movieInfo.html#">Chính sách nội dung</a></li>
+                            </ul>
+                        </div>
+                    </div><!----------- end dropdownDiv ------------>
+                </div><!----------- end browse ------------>
+                <div class="boxSearch">
+                	<div class="search">
+                    	<input type="text" class="form-control" placeholder="Keyword" />
+                    </div>
+                </div>
+                <div class="accountBox">
+                	<ul class="acountInfo">
+                    	<li class="upload"><a href="movieInfo.html#"><i class="icon icon-upload"></i></a></li>
+                    	<li class="notification dropdown">
+                        	<a href="movieInfo.html#" class="btnDropdown"><i class="icon icon-notification"></i></a>
+                        	<div class="dropdownDiv notificationBox">
+                                <div class="arrowUp"></div>
+                                
+                                <div class="clearfix"></div>
+                                <div class="notificationMore clearfix">
+                                    <a href="movieInfo.html#">Xem thêm</a>
+                                </div>
+                            </div><!----------- end dropdownDiv ------------>
+                        </li>
+                        <li class="account">
+                        	<a href="movieInfo.html#">
+                            	<img src="images/avatar.jpg" /> Phạm Phú Dư Tiền
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- end header -->
+        
+        <div class="navContainer">
+            <div id="navMenu" class="clearfix">
+                <div class="container">
+                    <ul class="navMenu">
+                        <li class="navMenuHaveSub">
+                            <a href="movieInfo.html#" class="active">Phim meme</a>
+                            <div class="arrowUpMenuSub"></div>
+                            <ul class="navMenuSub twoCol">
+                                <li><a href="movieInfo.html#">Phim Việt Nam</a></li>
+                                <li><a href="movieInfo.html#">Phim Âu Mỹ</a></li>
+                                <li><a href="movieInfo.html#">Phim Hàn - Nhật</a></li>
+                                <li><a href="movieInfo.html#">Phim Hong Kong</a></li>
+                                <li><a href="movieInfo.html#">Phim Hoa Ngữ</a></li>
+                                <li><a href="movieInfo.html#">Phim Thái Lan</a></li>
+                                <li><a href="movieInfo.html#">Phim Gia Đình</a></li>
+                                <li><a href="movieInfo.html#">Phim Thần Tượng</a></li>
+                                <li><a href="movieInfo.html#">Hành Động - Phiêu Lưu</a></li>
+                                <li><a href="movieInfo.html#">Khoa Học - Viễn Tưởng</a></li>
+                                <li><a href="movieInfo.html#">Hình Sự - Tội Phạm</a></li>
+                                <li><a href="movieInfo.html#">Kinh Dị - Siêu Nhiên</a></li>
+                                <li><a href="movieInfo.html#">Tâm Lý - Lãng Mạn</a></li>
+                                <li><a href="movieInfo.html#">Lịch Sử - Cổ Trang</a></li>
+                                <li><a href="movieInfo.html#">Giải Trí - Âm Nhạc</a></li>
+                                <li><a href="movieInfo.html#">Hài Hước</a></li>
+                            </ul>
+                        </li>
+                        <li class="navMenuHaveSub">
+                            <a href="movieInfo.html#">Phim bộ</a>
+                            <div class="arrowUpMenuSub"></div>
+                            <ul class="navMenuSub twoCol">
+                                <li><a href="movieInfo.html#">Phim Việt Nam</a></li>
+                                <li><a href="movieInfo.html#">Phim Âu Mỹ</a></li>
+                                <li><a href="movieInfo.html#">Phim Hàn - Nhật</a></li>
+                                <li><a href="movieInfo.html#">Phim Hong Kong</a></li>
+                                <li><a href="movieInfo.html#">Phim Hoa Ngữ</a></li>
+                                <li><a href="movieInfo.html#">Phim Thái Lan</a></li>
+                                <li><a href="movieInfo.html#">Phim Gia Đình</a></li>
+                                <li><a href="movieInfo.html#">Phim Thần Tượng</a></li>
+                                <li><a href="movieInfo.html#">Hành Động - Phiêu Lưu</a></li>
+                                <li><a href="movieInfo.html#">Khoa Học - Viễn Tưởng</a></li>
+                                <li><a href="movieInfo.html#">Hình Sự - Tội Phạm</a></li>
+                                <li><a href="movieInfo.html#">Kinh Dị - Siêu Nhiên</a></li>
+                                <li><a href="movieInfo.html#">Tâm Lý - Lãng Mạn</a></li>
+                                <li><a href="movieInfo.html#">Lịch Sử - Cổ Trang</a></li>
+                                <li><a href="movieInfo.html#">Giải Trí - Âm Nhạc</a></li>
+                                <li><a href="movieInfo.html#">Hài Hước</a></li>
+                            </ul>
+                        </li>
+                        <li class="navMenuHaveSub">
+                            <a href="movieInfo.html#">Phim lẻ</a>
+                            <div class="arrowUpMenuSub"></div>
+                            <ul class="navMenuSub twoCol">
+                                <li><a href="movieInfo.html#">Phim Việt Nam</a></li>
+                                <li><a href="movieInfo.html#">Phim Âu Mỹ</a></li>
+                                <li><a href="movieInfo.html#">Phim Hàn - Nhật</a></li>
+                                <li><a href="movieInfo.html#">Phim Hong Kong</a></li>
+                                <li><a href="movieInfo.html#">Phim Hoa Ngữ</a></li>
+                                <li><a href="movieInfo.html#">Phim Thái Lan</a></li>
+                                <li><a href="movieInfo.html#">Phim Gia Đình</a></li>
+                                <li><a href="movieInfo.html#">Phim Thần Tượng</a></li>
+                                <li><a href="movieInfo.html#">Hành Động - Phiêu Lưu</a></li>
+                                <li><a href="movieInfo.html#">Khoa Học - Viễn Tưởng</a></li>
+                                <li><a href="movieInfo.html#">Hình Sự - Tội Phạm</a></li>
+                                <li><a href="movieInfo.html#">Kinh Dị - Siêu Nhiên</a></li>
+                                <li><a href="movieInfo.html#">Tâm Lý - Lãng Mạn</a></li>
+                                <li><a href="movieInfo.html#">Lịch Sử - Cổ Trang</a></li>
+                                <li><a href="movieInfo.html#">Giải Trí - Âm Nhạc</a></li>
+                                <li><a href="movieInfo.html#">Hài Hước</a></li>
+                            </ul>
+                        </li>
+                        <li class="navMenuHaveSub">
+                            <a href="movieInfo.html#">TV shows</a>
+                            <div class="arrowUpMenuSub"></div>
+                            <ul class="navMenuSub">
+                                <li><a href="movieInfo.html#">Show Việt Nam</a></li>
+                                <li><a href="movieInfo.html#">Show Âu Mỹ</a></li>
+                                <li><a href="movieInfo.html#">Show Hàn Quốc</a></li>
+                                <li><a href="movieInfo.html#">Show Thực Tế</a></li>
+                                <li><a href="movieInfo.html#">Game Show</a></li>
+                                <li><a href="movieInfo.html#">Talk Show</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- end navMenu -->
+        </div>
+        
+        <div id="movieInfomation">
+        	<div class="wrapperCoverMovie">
+                <a href="movieInfo.html#" class="coverMovie">
+                    <img src="images/coverMovie.jpg" />
+                    <span class="btnPlayVideo active"><i class="fa fa-play"></i></span>
+                </a>
+            </div><!-- end wrapperCoverMovie -->
+           
+            <div class="infoMovie clearfix">
+            	<div class="container">
+                    <div class="infoMovieContentLeft">
+                        <h1>Chế tạo mỹ nhân <span class="infoMovieView"><i class="fa fa-eye"></i>300,330</span></h1>
+                        <p><span class="infoMovieFeild">Thể loại:</span> <a class="infoMovieLink" href="movieInfo.html#">Phim Truyền Hình</a>, <a class="infoMovieLink" href="movieInfo.html#">Hành Động - Phiêu Lưu</a></p>
+                        <p class="descMovie">
+                            Vua đầu bếp: MasterChef Vietnam 2013 là mùa thi thứ nhất của chương trình truyền hình thực tế Vua đầu bếp: MasterChef Vietnam. Đây là phiên bản của cuộc thi nấu ăn trên truyền hình MasterChef có nguồn gốc từ Anh do Công ty BHD và Đài truyền hình Việt Nam mua bản quyền và thực hiện. 
+                        </p>
+                    </div><!-- end infoMovieContent -->
+                    <div class="infoMovieContentRight">
+						<p><span class="infoMovieFeild">Tag:</span> <a class="infoMovieLink" href="movieInfo.html#">Supernatural</a>, <a class="infoMovieLink" href="movieInfo.html#">Supernatural - Season 10</a>, <a class="infoMovieLink" href="movieInfo.html#">phim Mỹ</a> </p>
+                        <p><span class="infoMovieFeild">Thể loại:</span> <a class="infoMovieLink" href="movieInfo.html#">Quốc gia:</a>, <a class="infoMovieLink" href="movieInfo.html#">United States</a></p>
+						<p><span class="infoMovieFeild">Thời lượng:</span> 10 Tập</p>
+                        <p><span class="infoMovieFeild">Đạo diễn:</span> Eric Kripke</p>
+                        <p><span class="infoMovieFeild">Diễn viên:</span> Eric Kripke, Taylor Switf, David Beckham</p>
+                    </div><!-- end infoMovieContentRight -->
+                </div>
+            </div><!-- end infoMovie -->
+            
+            <div class="templateOneRow">
+                <div class="container">
+                    <h3 class="templateHead">Chế tạo mỹ nhân <div class="actionMovie"><a href="movieInfo.html#"><i class="fa fa-play-circle-o"></i>Play all </a> | <a href="movieInfo.html#">Xem tất cả</a></div></h3>
+                    <div id="slide13" class="sliderMeme">
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme2">
+                                <img src="images/img1.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle episode">Tập 1 </p>
+                                    <p class="thumbnailVideoDuring">00:55:48</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme4">
+                                <img src="images/img3.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle episode">Tập 2</p>
+                                    <p class="thumbnailVideoDuring">00:55:48</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme6">
+                                <img src="images/img5.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle episode">Tập 3</p>
+                                    <p class="thumbnailVideoDuring">00:55:48</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme2">
+                                <img src="images/img1.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle episode">Tập 4 </p>
+                                    <p class="thumbnailVideoDuring">00:55:48</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme2">
+                                <img src="images/img1.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle episode">Tập 5 </p>
+                                    <p class="thumbnailVideoDuring">00:55:48</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme8">
+                                <img src="images/img7.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle episode">Tập 6</p>
+                                    <p class="thumbnailVideoDuring">00:55:48</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme10">
+                                <img src="images/img9.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle episode">Tập 7</p>
+                                    <p class="thumbnailVideoDuring">00:55:48</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                    </div><!-- end sliderMeme -->
+                </div><!-- /container -->
+            </div><!-- end templateOneRow -->
+            
+            <div class="templateOneRow">
+                <div class="container">
+                    <h3 class="templateHead">Chế tạo mỹ nhân - Trailer & Teaser <div class="actionMovie"><a href="movieInfo.html#"><i class="fa fa-play-circle-o"></i>Play all </a> | <a href="movieInfo.html#">Xem tất cả</a></div></h3>
+                    <div id="slide11" class="sliderMeme">
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme2">
+                                <img src="images/img1.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle">Đường Kiếm Anh Hùng </p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme4">
+                                <img src="images/img3.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle">How to Train Your Dragon 2</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme6">
+                                <img src="images/img5.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme2">
+                                <img src="images/img1.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle">Đường Kiếm Anh Hùng </p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme2">
+                                <img src="images/img1.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle">Đường Kiếm Anh Hùng </p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme8">
+                                <img src="images/img7.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                        <a href="movieInfo.html#" class="thumbnailVideo">
+                            <div class="item" id="tooltipMeme10">
+                                <img src="images/img9.jpg" />
+                                <div class="thumbnailMovieInfo">
+                                    <p class="thumbnailMovieTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                                </div>
+                                <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                            </div><!-- end item -->
+                        </a><!-- end thumbnailVideo -->
+                    </div><!-- end sliderMeme -->
+                </div><!-- /container -->
+            </div><!-- end templateOneRow -->
+            
+        	<div class="container">
+                <div id="comments" class="comments">
+                    <h3>10 bình luận </h3>
+                    <div class="commentsPost clearfix">
+                        <a href="movieInfo.html#" class="commentsAvatar"><img src="images/avatar.jpg" /></a>
+                        <div class="wrapperInputPost">
+                            <div class="arrowRight"></div>
+                            <textarea class="form-control inputPost" rows="2" placeholder="Viết bình luận"></textarea>
+                            <button type="submit" class="btn btnPrimary hide floatRight">Bình luận</button>
+                        </div>
+                    </div><!-- end commentsPost -->
+                    <div class="commentLine">
+                        <a href="movieInfo.html#" class="commentsAvatar"><img src="images/channelImg5.jpg" /></a>
+                        <div class="commentContainer">
+                            <div class="commentContent">
+                                <div class="commentHeader">
+                                    <a href="movieInfo.html#" class="commentUser">Trần Bùm</a>
+                                    <span class="commentTime">2 phút trước</span>
+                                    <span class="moreAction">
+                                        <div class="btnMore" tabindex=1><i class="fa fa-pencil"></i></div>
+                                        <ul class="btnMoreAction">
+                                            <li><a href="movieInfo.html#">Sửa</a></li>
+                                            <li><a href="movieInfo.html#" class="last">Xóa</a></li>
+                                        </ul>
+                                    </span><!-- end moreAction -->
+                                </div>
+                                <p>Theo mình thì nội dung clip này như sau:Hoàng châu Yêu một Anh có sở thích chơi xe PKL và Anh ý giới thiệu HC với Bạn Chơi Của Anh. Sau đó thì Các Bạn Chơi đã nói những điều không tốt về Anh, nhưng HC lại tin vào lời nói của mọi người mà không nghe Anh giải thích. HC nghĩ Anh là người không tốt.</p>
+                            </div><!-- end commentContent -->
+                            <div class="commentAction">
+                                <a href="movieInfo.html#" class="btnLike liked"><i class="fa fa-thumbs-up"></i>Liked (20)</a>
+                                <a href="movieInfo.html#" class="btnReply"><i class="fa fa-mail-forward"></i>Trả lời</a>
+                                <div class="commentsPostSub clearfix">
+                                    <a href="movieInfo.html#" class="commentsAvatarSub"><img src="images/avatar.jpg" /></a>
+                                    <div class="wrapperInputPostSub">
+                                        <div class="arrowRight"></div>
+                                        <textarea class="form-control inputPostSub" rows="1" /></textarea>
+                                        <button type="submit" class="btn btnPrimarySmall hide floatRight">Trả lời</button>
+                                    </div>
+                                </div><!-- end commentsPost -->
+                            </div>
+                        </div>
+                    </div><!-- end commentLine -->
+                    <div class="commentLine">
+                        <a href="movieInfo.html#" class="commentsAvatar"><img src="images/avatar3.jpg" /></a>
+                        <div class="commentContainer">
+                            <div class="commentContent">
+                                <div class="commentHeader">
+                                    <a href="movieInfo.html#" class="commentUser">Lý Hải</a>
+                                    <span class="commentTime">2 phút trước</span>
+                                    <span class="moreAction">
+                                        <div class="btnMore" tabindex=1><i class="fa fa-pencil"></i></div>
+                                        <ul class="btnMoreAction">
+                                            <li><a href="movieInfo.html#">Sửa</a></li>
+                                            <li><a href="movieInfo.html#" class="last">Xóa</a></li>
+                                        </ul>
+                                    </span><!-- end moreAction -->
+                                </div>
+                                <p>HC nghĩ Anh là người không tốt.</p>
+                            </div><!-- end commentContent -->
+                            <div class="commentAction">
+                                <a href="movieInfo.html#" class="btnLike"><i class="fa fa-thumbs-up"></i>Like</a>
+                                <a href="movieInfo.html#" class="btnReply"><i class="fa fa-mail-forward"></i>Trả lời (10)</a>
+                                <div class="commentsPostSub clearfix">
+                                    <a href="movieInfo.html#" class="commentsAvatarSub"><img src="images/avatar.jpg" /></a>
+                                    <div class="wrapperInputPostSub">
+                                        <div class="arrowRight"></div>
+                                        <textarea class="form-control inputPostSub" rows="1" /></textarea>
+                                        <button type="submit" class="btn btnPrimarySmall hide floatRight">Trả lời</button>
+                                    </div>
+                                </div><!-- end commentsPostSub -->
+                                <div class="commentReply">
+                                    <a href="movieInfo.html#" class="commentsAvatarSub"><img src="images/avatar.jpg" /></a>
+                                    <div class="commentContainerSub">
+                                        <div class="commentContent">
+                                            <div class="commentHeader">
+                                                <a href="movieInfo.html#" class="commentUser">Trung Lùn</a>
+                                                <span class="commentTime">2 phút trước</span>
+                                                <span class="moreAction">
+                                                    <div class="btnMore" tabindex=1><i class="fa fa-pencil"></i></div>
+                                                    <ul class="btnMoreAction">
+                                                        <li><a href="movieInfo.html#">Sửa</a></li>
+                                                        <li><a href="movieInfo.html#" class="last">Xóa</a></li>
+                                                    </ul>
+                                                </span><!-- end moreAction -->
+                                            </div>
+                                            <p>Chào bạn!</p>
+                                        </div><!-- end commentContent -->
+                                        <a href="movieInfo.html#" class="btnLike"><i class="fa fa-thumbs-up"></i>Like</a>
+                                    </div>
+                                </div><!-- end commentReply -->
+                                <div class="commentReply">
+                                    <a href="movieInfo.html#" class="commentsAvatarSub"><img src="images/avatar2.jpg" /></a>
+                                    <div class="commentContainerSub">
+                                        <div class="commentContent">
+                                            <div class="commentHeader">
+                                                <a href="movieInfo.html#" class="commentUser">Hoàng Châu</a>
+                                                <span class="commentTime">2 phút trước</span>
+                                                <span class="moreAction">
+                                                    <div class="btnMore" tabindex=1><i class="fa fa-pencil"></i></div>
+                                                    <ul class="btnMoreAction">
+                                                        <li><a href="movieInfo.html#">Sửa</a></li>
+                                                        <li><a href="movieInfo.html#" class="last">Xóa</a></li>
+                                                    </ul>
+                                                </span><!-- end moreAction -->
+                                            </div>
+                                            <p>Hoàng châu Yêu một Anh có sở thích chơi xe PKL</p>
+                                         </div><!-- end commentContent -->
+                                        <a href="movieInfo.html#" class="btnLike"><i class="fa fa-thumbs-up"></i>Like</a>
+                                    </div>
+                                </div><!-- end commentReply -->
+                                <div class="commentReply">
+                                    <a href="movieInfo.html#" class="commentsAvatarSub"><img src="images/avatar3.jpg" /></a>
+                                    <div class="commentContainerSub">
+                                        <div class="commentContent">
+                                            <div class="commentHeader">
+                                                <a href="movieInfo.html#" class="commentUser">Minh Béo</a>
+                                                <span class="commentTime">2 phút trước</span>
+                                                <span class="moreAction">
+                                                    <div class="btnMore" tabindex=1><i class="fa fa-pencil"></i></div>
+                                                    <ul class="btnMoreAction">
+                                                        <li><a href="movieInfo.html#">Sửa</a></li>
+                                                        <li><a href="movieInfo.html#" class="last">Xóa</a></li>
+                                                    </ul>
+                                                </span><!-- end moreAction -->
+                                            </div>
+                                            <p>Clip hay qua</p>
+                                        </div><!-- end commentContent -->
+                                        <a href="movieInfo.html#" class="btnLike"><i class="fa fa-thumbs-up"></i>Like</a>
+                                    </div>
+                                </div><!-- end commentReply -->
+                                <a class="moreReply" href="movieInfo.html#">Xem thêm 7 phản hồi...</a>
+                            </div>
+                        </div>
+                    </div><!-- end commentLine -->
+                    <div class="commentLine">
+                        <a href="movieInfo.html#" class="commentsAvatar"><img src="images/channelImg4.jpg" /></a>
+                        <div class="commentContainer">
+                            <div class="commentContent">
+                                <div class="commentHeader">
+                                    <a href="movieInfo.html#" class="commentUser">Hoàng Châu</a>
+                                    <span class="commentTime">3 phút trước</span>
+                                    <span class="moreAction">
+                                        <div class="btnMore" tabindex=1><i class="fa fa-pencil"></i></div>
+                                        <ul class="btnMoreAction">
+                                            <li><a href="movieInfo.html#">Sửa</a></li>
+                                            <li><a href="movieInfo.html#" class="last">Xóa</a></li>
+                                        </ul>
+                                    </span><!-- end moreAction -->
+                                </div>
+                                <p>Hoàng châu Yêu một Anh có sở thích chơi xe PKL</p>
+                            </div><!-- end commentContent -->
+                            <div class="commentAction">
+                                <a href="movieInfo.html#" class="btnLike"><i class="fa fa-thumbs-up"></i>Like</a>
+                                <a href="movieInfo.html#" class="btnReply"><i class="fa fa-mail-forward"></i>Trả lời</a>
+                                <div class="commentsPostSub clearfix">
+                                    <a href="movieInfo.html#" class="commentsAvatarSub"><img src="images/avatar.jpg" /></a>
+                                    <div class="wrapperInputPostSub">
+                                        <div class="arrowRight"></div>
+                                        <textarea class="form-control inputPostSub" rows="1" /></textarea>
+                                        <button type="submit" class="btn btnPrimarySmall hide floatRight">Trả lời</button>
+                                    </div>
+                                </div><!-- end commentsPost -->
+                            </div>
+                        </div>
+                    </div><!-- end commentLine -->
+                    <div class="commentLine">
+                        <a href="movieInfo.html#" class="commentsAvatar"><img src="images/channelImg5.jpg" /></a>
+                        <div class="commentContainer">
+                            <div class="commentContent">
+                                <div class="commentHeader">
+                                    <a href="movieInfo.html#" class="commentUser">Trần Bùm</a>
+                                    <span class="commentTime">2 phút trước</span>
+                                    <span class="moreAction">
+                                        <div class="btnMore" tabindex=1><i class="fa fa-pencil"></i></div>
+                                        <ul class="btnMoreAction">
+                                            <li><a href="movieInfo.html#">Sửa</a></li>
+                                            <li><a href="movieInfo.html#" class="last">Xóa</a></li>
+                                        </ul>
+                                    </span><!-- end moreAction -->
+                                </div>
+                                <p>Sau đó thì Các Bạn Chơi đã nói những điều không tốt về Anh, nhưng HC lại tin vào lời nói của mọi người mà không nghe Anh giải thích. HC nghĩ Anh là người không tốt.</p>
+                            </div><!-- end commentContent -->
+                            <div class="commentAction">
+                                <a href="movieInfo.html#" class="btnLike"><i class="fa fa-thumbs-up"></i>Like</a>
+                                <a href="movieInfo.html#" class="btnReply"><i class="fa fa-mail-forward"></i>Trả lời</a>
+                                <div class="commentsPostSub clearfix">
+                                    <a href="movieInfo.html#" class="commentsAvatarSub"><img src="images/avatar.jpg" /></a>
+                                    <div class="wrapperInputPostSub">
+                                        <div class="arrowRight"></div>
+                                        <textarea class="form-control inputPostSub" rows="1" /></textarea>
+                                        <button type="submit" class="btn btnPrimarySmall hide floatRight">Trả lời</button>
+                                    </div>
+                                </div><!-- end commentsPost -->
+                            </div>
+                        </div>
+                    </div><!-- end commentLine -->
+                    <button type="button" class="btnMoreComment">Xem thêm...</button>
+                 </div><!-- end comments -->
+            </div>
+        </div><!-- end movieDetail -->
+        
+        <div id="footer">
+        	<div class="container">
+            	<div class="aboutMeme">
+                	<div class="footerHead">
+                    	<h3>Giới thiệu Meme</h3>
+                    </div>
+                    <div class="footerContent">
+                    	<p class="aboutDesc">Nội dung trên MEME là các video được người dùng chia sẻ bao gồm nhiều thể loại như Âm nhạc, Phim, Truyền hình, Giáo dục, Giải trí… <a href="movieInfo.html#">Xem thêm</a></p>
+                        <div class="footerName">
+                        	<p><h4>MẠNG XÃ HỘI MEME</h4></p>
+                            <P>Giấy phép MXH số 76/GXN-TTĐT cấp ngày 14-06-2012</P>
+                        </div>
+                    </div>
+                </div><!-- end aboutMeme -->
+                <div class="footerSupport">
+                    <div class="footerHead">
+                    	<h3>hỗ trợ</h3>
+                    </div>
+                    <div class="footerContent">
+                    	<ul class="nav">
+                            <li><a href="http://www.meme.vn/intro/what-is-meme.html">Meme là gì?</a></li>
+                            <li><a href="http://www.meme.vn/intro/how-it-works.html">Cách hoạt động</a></li>
+                            <li><a href="http://www.meme.vn/intro/benefits.html">Lợi ích</a></li>
+                            <li><a href="http://www.meme.vn/intro/our-team.html">Giới thiệu công ty</a></li>
+                            <li><a href="http://www.meme.vn/info/policy#chap-nhan-dieu-khoan-su-dung-va-sua-doi">Khiếu nại bản quyền</a></li>
+                            <li><a href="http://www.meme.vn/intro/contact.html">Liên hệ</a></li>
+                            <li><a href="http://www.meme.vn/info/policy">Điều khoản sử dụng</a></li>
+                            <li><a href="http://www.meme.vn/info/policy#nineteen">Chính sách nội dung video</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end footerSupport -->
+                <div class="footerFacebook">
+                	<div class="footerHead">
+                    	<h3>Facebook <a href="http://www.meme.vn/rss/video/latest" class="rssLink"><i class="fa fa-rss"></i></a></h3>
+                    </div>
+                    <div class="footerContent">
+                    	<a class="facebookfan" href="movieInfo.html#"><i class="fa fa-facebook"></i></a>
+                        <h5><a href="movieInfo.html#">TV Network</a></h5>
+                        <p class="facebookfanDesc">Cập nhật tin tức mới từ facebook</p>
+                    </div>
+                </div><!-- end footerFacebook -->
+                
+            </div><!-- /container -->
+            <div class="clearfix"></div>
+            <div class="copyrignt">
+            	<div class="container">
+            		Copyright ©2014 meme.vn
+                </div>
+            </div>
+        </div><!-- end footer -->
+        
+    </div><!-- end pageWidth -->
+    
+    <div id="parameter" style="display:none;"> 
+         <div class="playerAPI" style="display:none;"></div>
+    </div>
+</body>
+
+</html>

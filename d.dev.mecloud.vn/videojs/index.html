@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Videojs</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="js/jquery.min.js"></script>
+        <script src="//s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+        <script src="//vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js"></script>
+        <script src="js/video.js"></script>
+	<script src="hls/js/hls.min.js"></script>
+	<script src="hls/js/mecloud-hls.js"></script>
+        <link href="css/skin.css" rel="stylesheet">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+        <link href="css/custom.css" rel="stylesheet">
+
+        <!-- custom skin color -->
+        <script src="js/videojs-skin.js"></script>
+
+        <link href="css/videojs-watermark.css" rel="stylesheet">
+        <script src="js/videojs-watermark.js"></script>
+
+        <link href="css/videojs-resolution-switcher.css" rel="stylesheet">
+        <script src="js/videojs-resolution-switcher.js"></script>
+
+        <link href="css/videojs-poster.css" rel="stylesheet">
+        <script src="js/videojs-poster.js"></script>
+
+        <link href="css/videojs-brand.css" rel="stylesheet">
+        <script src="js/videojs-brand.js"></script>
+	<script src="hls/js/hls.min.js" type="text/javascript"></script>
+        <script src="hls/js/mecloud-hls.js" type="text/javascript"></script>
+
+        <!-- custom style skin color -->
+        <style type="text/css">
+            .mep.video-js.vjs-color-custom .vjs-play-progress, 
+            .mep.video-js.vjs-color-custom .vjs-volume-level,
+            .mep.video-js.vjs-color-custom .vjs-resolution-button .vjs-menu li.vjs-selected, 
+            .mep.video-js.vjs-color-custom .vjs-resolution-button .vjs-menu li.vjs-selected:hover, 
+            .mep.video-js.vjs-color-custom .vjs-resolution-button .vjs-menu li.vjs-selected:focus {
+                background-color: #3ea9f5;
+            }
+            .mep.video-js.vjs-color-custom .vjs-loading-spinner:before{
+                border-left-color: #3ea9f5;
+                border-right-color: #3ea9f5;
+            }
+            .mep.video-js.vjs-color-custom .vjs-loading-spinner:after{
+                border-top-color: #3ea9f5;
+                border-bottom-color: #3ea9f5;
+            }
+        </style>
+
+    </head>
+    
+    <body>
+        <div style="max-width:940px; margin:0 auto;">
+            <div class="wrapper-player">
+                <div class="playerMeCloud">
+
+                	<video id="mePlayer" crossorigin="anonymous" class="mep video-js vjs-default-skin vjs-color-custom" controls preload="auto">
+                        <source src="hariwon_1080.mp4" type='video/mp4' label='Full <span>HD</span>' res='1080' />
+                        <source src="hariwon_720.mp4" type='video/mp4' label='720p <span>HD</span>' res='720'/>
+                        <source src="hariwon_480.mp4" type='video/mp4' label='480p' res='480' />
+                        <source src="hariwon_360.mp4" type='video/mp4' label='360p' res='360'/>
+			<track kind="subtitles" label="english" src="http://img.dev.mecloud.vn/subtitle/2016/7/27/13/52/14/developerStories-subtitles-en.vtt" srclang="en" default=""></track>
+			<track kind="subtitles" label="france" src="http://img.dev.mecloud.vn/subtitle/2016/7/27/13/52/14/developerStories-subtitles-en.vtt" srclang="fr"></track>
+                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                    </video>
+
+                </div>
+            </div>
+            <script>
+                videojs('mePlayer').videoJsResolutionSwitcher({
+                    default: 480
+                });
+
+                videojs('mePlayer').videoJsWatermark({
+                    webLink: 'http://mecloud.vn',
+                    opacity: 0.7, // Default is 70%
+                    posX: 10,   // x align with position, default value is 10px
+                    posY: 10,   // y align with position, default value is 10px
+                    position: 'bottomRight', // topRight, bottomLeft, bottomRight is default
+                    maxWidthLogo: 10, //default is 10% compare with player
+                    autoHide: true //default is false, false = disable autoHide, true = enable autoHide
+                });
+
+                videojs('mePlayer').videoJsPoster({
+                    title:'[Official Trailer] Ca Sĩ Tuấn Hưng - Word Tour Đam Mê in Australia',
+                    image: 'poster.png',
+                    position: 'top',
+                    autoplay: false,
+                    offTitle: true,
+                    buttonPlay:true,
+                    showControlBar: true 
+                });
+
+                videojs('mePlayer').videoJsBrand({
+                    link:'http://mecloud.vn',
+                    image: 'brand_icon_style.png',
+                    imageHover: 'brand_hover_icon_style.png',
+                    styleBrand: 'icon'
+                });
+ 
+                videojs('mePlayer').videoJsSkin({
+                    color:'#3ea9f5',
+					live:false,
+					online:false,
+                });
+            </script>
+            
+        </div>
+
+        <div class="clearfix"></div>
+        
+        <!-- Custom control -->
+        <div id="grid" class="custom-control">
+            <div class="box-control">
+                <header>Custom watermark</header>
+                <section>
+                    <div class="form-group-control">
+                        <label>Url logo</label>
+                        <input id="logoImageWatermark" class="form-control" type="text" value="http://d.dev.mecloud.vn/videojs/mecloud.png">
+                    </div>
+                    <div class="form-group-control">
+                        <label>Url website</label>
+                        <input id="linkWatermark" class="form-control" type="text" value="http://mecloud.vn">
+                    </div>
+                    <div class="form-group-control">
+                        <label>Max Width<span>(%)</span></label>
+                        <input id="widthLogo" type="number" value="10" class="form-control" placeholder="Unit is percent (%)">
+                    </div>
+                    <div class="form-group-control with-opacity">
+                        <label>Transperancy<span>(%)</span></label>
+                        <input type='range' data-idx='1' value="70"/>
+                        <div id="valOpacity" class="val-opacity" data-opacity="0.7">70%</div>
+                    </div>
+                    <div class="form-group-control preview-watermark">
+                        <label>Choose position</label>
+                        <select id="posLogo" class="form-control">
+                            <option value="bottomRight">Bottom Right</option>
+                            <option value="bottomLeft">Bottom Left</option>
+                            <option value="topRight">Top Right</option>
+                            <option value="topLeft">Top Left</option>
+                        </select>
+                        <div class="preview-position">
+                            <div class="wrapper-pp">
+                                <div class="pos-item top-left"></div>
+                                <div class="pos-item top-right"></div>
+                                <div class="pos-item bottom-left"></div>
+                                <div class="pos-item bottom-right selected"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 clearfix">
+                        <div class="form-group-control">
+                            <label>posX<span>(px)</span></label>
+                            <input id="posXlogo" type="number" value="10" class="form-control" placeholder="Horizontal distance">
+                        </div>
+                        <div class="form-group-control">
+                            <label>posY<span>(px)</span></label>
+                            <input id="posYlogo" type="number" value="10" class="form-control" placeholder="Vertical distance">
+                        </div>
+                    </div>
+                    <div class="form-group-control">
+                        <label>Auto hide logo</label>
+                        <div class="active-config">
+                            <div class="switch-checkbox">
+                                <input id="autoHideWatermark" class="sc-toggle sc-toggle-round-flat" value="false" type="checkbox">
+                                <label for="autoHideWatermark"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group-control">
+                        <button id="btnWatermark" type="button">OK</button>
+                    </div>
+                </section>
+            </div>
+            <div class="box-control">
+                <header>Poster</header>
+                <section>
+                    <div class="form-group-control">
+                        <label>Position Play Button</label>
+                        <select id="posPoster" class="form-control">
+                            <option value="top">Top</option>
+                            <option value="center">Center</option>
+                            <option value="bottom">Bottom</option>
+                        </select>
+                    </div>
+                    <div class="form-group-control">
+                        <label>Poster Default</label>
+                        <input id="defaultPoster" type="text" value="http://d.dev.mecloud.vn/videojs/poster.png" class="form-control">
+                    </div>
+                    <div class="form-group-control" id="scb">
+                        <label>Show Control Bar</label>
+                        <div class="active-config">
+                            <div class="switch-checkbox">
+                                <input id="showControlBar" class="sc-toggle sc-toggle-round-flat" value="true" type="checkbox" checked="checked">
+                                <label for="showControlBar"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group-control">
+                        <label>Title Off</label>
+                        <div class="active-config">
+                            <div class="switch-checkbox">
+                                <input id="offTitlePoster" class="sc-toggle sc-toggle-round-flat" value="false" type="checkbox">
+                                <label for="offTitlePoster"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group-control">
+                        <label>Play Button</label>
+                        <div class="active-config">
+                            <div class="switch-checkbox">
+                                <input id="buttonPlayId" class="sc-toggle sc-toggle-round-flat" value="true" checked="checked" type="checkbox">
+                                <label for="buttonPlayId"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group-control">
+                        <button id="btnPoster" type="button">OK</button>
+                    </div>
+                </section>
+            </div>
+            <div class="box-control">
+                <header>Skin Color</header>
+                <section>
+                    <div class="form-group-control">
+                        <label>Choose default color</label>
+                        <select id="skinColor" class="form-control">
+                            <option value="#3ea9f5">Blue</option>
+                            <option value="#f39c12">Orange</option>
+                            <option value="#2ecc71">Green</option>
+                            <option value="#8e44ad">Custom</option>
+                        </select>
+                    </div>
+                    <div id="pickColor" class="form-group-control">
+                        <label>Pick a color</label>
+                        <input type="color" id="colorPicker" disabled="disabled" value="#3ea9f5" onchange="updateSkinColor(this.value)"/>
+                    </div>
+                    
+                </section>
+            </div>
+            <div class="box-control">
+                <header>Brand</header>
+                <section>
+                    <div class="form-group-control">
+                        <label>Url website</label>
+                        <input id="brandLink" type="text" value="http://mecloud.vn" class="form-control">
+                    </div>
+                    <div class="form-group-control">
+                        <label>Url logo</label>
+                        <input id="brandLogo" type="text" value="http://d.dev.mecloud.vn/videojs/brand_icon_style.png" class="form-control">
+                    </div>
+                    <div class="form-group-control">
+                        <label>Url logo hover</label>
+                        <input id="brandLogoHover" type="text" value="http://d.dev.mecloud.vn/videojs/brand_hover_icon_style.png" class="form-control">
+                    </div>
+                    <div class="form-group-control">
+                        <label>Style logo</label>
+                        <select id="brandStyle" class="form-control">
+                            <option value="box">Box</option>
+                            <option value="icon">icon</option>
+                        </select>
+                    </div>
+                    <div class="form-group-control">
+                        <button id="btnBrand" type="button">OK</button>
+                    </div>
+                </section>
+            </div>
+            
+            
+        </div>
+        <script src="js/custom-control.js"></script>
+
+    </body>
+</html>

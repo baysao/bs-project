@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Channel Detail | MeMe.VN</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto:300&subset=vietnamese' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/icomeme.css" rel="stylesheet">
+</head>
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/placeholder.js"></script>
+<script type="text/javascript" src="js/disableScrollBar.js"></script>
+<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+
+<!-- start channel detail script-->
+	
+<!-- end channel detail script-->
+<script>
+		 //detect mobile
+			  var isDesktop = (function(){
+				  try { 
+				   document.createEvent("TouchEvent");
+				  }
+				  catch(e){
+				   return true;
+				  }
+				  return false;
+			  })();
+		$(document).ready(function() {
+		//Global Script/////////////////////////////////////
+			//placeholder
+			$('input, textarea').placeholder();
+			
+			// Add slideup & fadein animation to dropdown
+			 $('.dropdown').on('show.bs.dropdown', function(e){
+				var $dropdown = $(this).find('.dropdown-menu');
+				var orig_margin_top = parseInt($dropdown.css('margin-top'));
+				$dropdown.css({'margin-top': (orig_margin_top + 10) + 'px', opacity: 0}).animate({'margin-top': orig_margin_top + 'px', opacity: 1}, 300, function(){
+				   $(this).css({'margin-top':''});
+				});
+				
+				//hide tooltip
+				$(this).find('.tooltipMeme').tooltip('destroy');
+				
+			 });
+			 // Add slidedown & fadeout animation to dropdown
+			 $('.dropdown').on('hide.bs.dropdown', function(e){
+				var $dropdown = $(this).find('.dropdown-menu');
+				var orig_margin_top = parseInt($dropdown.css('margin-top'));
+				$dropdown.css({'margin-top': orig_margin_top + 'px', opacity: 1, display: 'block'}).animate({'margin-top': (orig_margin_top + 10) + 'px', opacity: 0}, 300, function(){
+				   $(this).css({'margin-top':'', display:''});
+				});
+			 });
+			
+			//limit strim notification
+			$(".notification-status").each(function(i){
+				len=$(this).text().length;
+				if(len>50)
+				{
+				  $(this).text($(this).text().substr(0,50)+'...');
+				}
+			  });
+			
+			//backtotop
+			$(window).scroll(function () {
+				if ($(this).scrollTop()) {
+					$('.top').fadeIn();
+				} else {
+					$('.top').fadeOut();
+				}
+			});
+	
+			//scroll to element and button Back To Top
+			function goToByScroll(id) {
+				id = id.replace("link", "");
+				$('html,body').animate({
+					scrollTop: $("#" + id).offset().top -60
+				}, 'slow');
+			}
+			$(".scrollToElement").click(function (e) {
+				e.preventDefault();
+				goToByScroll($(this).attr("id"));
+	
+			});
+	
+			if (isDesktop) {
+				//slimscroll relate video
+				$('.scrollable').slimScroll({
+					size: '5px',
+					distance: '2px',
+					color: "#888888",
+					allowPageScroll: true
+				});
+				
+				//tooltip 
+				$('.tooltipMeme').tooltip({
+					animated: 'fade',
+					placement: 'bottom',
+				});
+				
+			}
+			
+			//disable scrollbar
+				$(".scrollable").bind("mouseover", function () {
+					disabler.disable_scrolling();
+				});
+				$(".scrollable").bind("mouseleave", function () {
+					disabler.enable_scrolling();
+				});
+
+        //End Global Script////////////////////////////////
+			  
+		//channel Detail Script////////////////////////////////////
+				
+		//channel Detail Script////////////////////////////////////
+		});
+		
+    </script>
+</head><body id="backtotop">
+<div id="header">
+  <div class="container-fluid">
+    <div class="col-xs-7 col-md-4 col-sm-4" style="position:relative;"> <a href="moreChannel.html#" class="logo-s">meme.vn</a> <span class="browseCategory"> <span class="dropdown"> <a href="moreChannel.html#" data-toggle="dropdown" class="browse clearfix"><i class="fa fa-bars"></i> <i class="fa fa-caret-down"></i></a>
+      <div class="dropdown-menu main-menu arrowTop">
+        <div class="arrow"></div>
+        <div class="wrapper-menu scrollable">
+          <ul class="menu">
+            <li><a href="moreChannel.html#" class="menu-hot">Hot</a></li>
+            <li><a href="moreChannel.html#" class="menu-hot">Xem nhiều</a></li>
+            <li><a href="moreChannel.html#" class="menu-hot">Phim</a></li>
+            <li><a href="moreChannel.html#">Sự kiện</a></li>
+            <li><a href="moreChannel.html#">Tin tức</a></li>
+            <li><a href="moreChannel.html#">Hài</a></li>
+            <li><a href="moreChannel.html#">Thể thao</a></li>
+            <li><a href="moreChannel.html#">Dancingo</a></li>
+            <li><a href="moreChannel.html#">Game</a></li>
+            <li><a href="moreChannel.html#">Ẩm thực</a></li>
+            <li><a href="moreChannel.html#">Giáo dục</a></li>
+            <li><a href="moreChannel.html#">Blog</a></li>
+            <li><a href="moreChannel.html#">Showbiz</a></li>
+            <li><a href="moreChannel.html#">Xe cộ</a></li>
+            <li><a href="moreChannel.html#">Động vật</a></li>
+            <li><a href="moreChannel.html#">Đồ hoạ</a></li>
+            <li><a href="moreChannel.html#">Giải trí</a></li>
+            <li><a href="moreChannel.html#">Hướng dẫn</a></li>
+            <li><a href="moreChannel.html#">Thời trang - Làm đẹp</a></li>
+            <li><a href="moreChannel.html#">Công nghệ</a></li>
+            <li><a href="moreChannel.html#">Du lịch</a></li>
+            <li><a href="moreChannel.html#">Gia đình</a></li>
+            <li><a href="moreChannel.html#">Hoạt hình</a></li>
+            <li><a href="moreChannel.html#">Khoa học</a></li>
+            <li><a href="moreChannel.html#">Lifestyle</a></li>
+            <li><a href="moreChannel.html#">Nghệ thuật</a></li>
+            <li><a href="moreChannel.html#">Sức khoẻ</a></li>
+            <li><a href="moreChannel.html#">Thiên nhiên</a></li>
+            <li><a href="moreChannel.html#">Trẻ em</a></li>
+            <li><a href="moreChannel.html#">Sản phẩm</a></li>
+            <li><a href="moreChannel.html#">Quảng cáo</a></li>
+          </ul>
+          <div class="clearfix"></div>
+          <div class="menu-policy clearfix">
+            <ul>
+              <li><a href="moreChannel.html#">MeMe là gì?</a></li>
+              <li><a href="moreChannel.html#">Cách hoạt động</a></li>
+              <li><a href="moreChannel.html#">Điều khoản sử dụng</a></li>
+              <li><a href="moreChannel.html#">Chính sách nội dung</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </span> </span> </div>
+    <div class="search col-md-4 col-sm-4 hidden-xs">
+      <input class="search-top form-control" type="text" placeholder="Keyword..." />
+      <button class="btn search-btn" type="submit"><span class="icon icon-search"></span> </button>
+    </div>
+    <!-----------end search------------>
+    <div class="wrap-menu-top col-xs-5 col-md-4 col-sm-4">
+      <ul class="menu-top">
+        <li> <a href="moreChannel.html#" class="menu-top-link tooltipMeme" title="Upload" data-toggle="modal" data-target="#pickChannel"> <span class="icon icon-upload leftNone"></span> </a> </li>
+        <li class="notification dropdown"> <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="moreChannel.html#" title="Notification" > <span class="icon icon-notification leftNone"></span> <span class="notification-count">9+</span> </a>
+          <ul class="dropdown-menu arrowTop">
+            <div class="arrow"></div>
+            <div class="notification-head">Notification</div>
+            <div class="wrapper-notification scrollable">
+              <li> <a class="notification-link clearfix" href="moreChannel.html#"> <img  class="notification-user-img" src="images/avatar1.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>" </div>
+                </a> </li>
+              <li> <a class="notification-link video clearfix" href="moreChannel.html#"> <img class="notification-user-img" src="images/avatar2.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>" </div>
+                <img class="notification-video-img" src="images/channelImg3.jpg" /> </a> </li>
+              <li> <a class="notification-link clearfix" href="moreChannel.html#"> <img  class="notification-user-img" src="images/avatar3.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>" </div>
+                </a> </li>
+              <li> <a class="notification-link video clearfix" href="moreChannel.html#"> <img class="notification-user-img" src="images/avatar2.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>" </div>
+                <img class="notification-video-img" src="images/channelImg2.jpg" /> </a> </li>
+              <li> <a class="notification-link clearfix" href="moreChannel.html#"> <img  class="notification-user-img" src="images/avatar1.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>" </div>
+                </a> </li>
+              <li> <a class="notification-link video clearfix" href="moreChannel.html#"> <img class="notification-user-img" src="images/avatar2.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>" </div>
+                <img class="notification-video-img" src="images/channelImg3.jpg" /> </a> </li>
+              <li> <a class="notification-link clearfix" href="moreChannel.html#"> <img  class="notification-user-img" src="images/avatar3.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>" </div>
+                </a> </li>
+              <li> <a class="notification-link video clearfix" href="moreChannel.html#"> <img class="notification-user-img" src="images/avatar2.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>" </div>
+                <img class="notification-video-img" src="images/channelImg2.jpg" /> </a> </li>
+              <li> <a class="notification-link clearfix" href="moreChannel.html#"> <img  class="notification-user-img" src="images/avatar1.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>" </div>
+                </a> </li>
+              <li> <a class="notification-link video clearfix" href="moreChannel.html#"> <img class="notification-user-img" src="images/avatar2.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>" </div>
+                <img class="notification-video-img" src="images/channelImg3.jpg" /> </a> </li>
+              <li> <a class="notification-link clearfix" href="moreChannel.html#"> <img  class="notification-user-img" src="images/avatar3.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>" </div>
+                </a> </li>
+              <li> <a class="notification-link video clearfix" href="moreChannel.html#"> <img class="notification-user-img" src="images/avatar2.jpg" />
+                <div class="notification-content"> <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>" </div>
+                <img class="notification-video-img" src="images/channelImg2.jpg" /> </a> </li>
+            </div>
+          </ul>
+        </li>
+        <!--<li>
+                        <a class="menu-top-link tooltipMeme" href="#" data-toggle="tooltip" title="Đăng nhập">
+                            <span class="icon icon-account leftNone"></span>
+                        </a>
+                    </li>-->
+        <li class="account dropdown"> <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="moreChannel.html#" title="Account"> <img src="images/avatar2.jpg" class="img-user"><span class="account-name hidden-xs"> Đào Viết Phương </span> </a>
+          <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu arrowTop">
+            <div class="arrow"></div>
+            <li><a href="http://beta.meme.vn/usercp/account/editProfile"><i class="fa fa-edit"></i> Sửa thông tin cá nhân</a></li>
+            <li><a href="http://beta.meme.vn/usercp/video"><i class="fa fa-play-circle"></i> Quản lý Video</a></li>
+            <li><a href="http://beta.meme.vn/usercp/channel"><i class="fa fa-video-camera"></i> Quản lý Channel</a></li>
+            <li><a href="moreChannel.html#"><i class="fa fa-bar-chart-o"></i> Xem thống kê</a></li>
+            <li><a href="moreChannel.html#"><i class="fa fa-usd"></i> Xem doanh thu</a></li>
+            <li><a href="http://beta.meme.vn/user/logout"><i class="fa fa-sign-out"></i> Thoát</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-----------end wrap-menu-top------------>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<!-- end header-->
+
+<div class="wrapper-content">
+  <div class="w-moreChannel container">
+  	<div class="block-mc row clearfix">
+    	<h3>Tin tức<a href="moreChannel.html#" class="more-mc">Xem thêm <i class="fa fa-angle-right"></i></a></h3>
+        <div class="items-mc">
+        	<div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="hot-item-mc">
+                    <div class="img-hot-mc">
+                        <img src="images/cover.jpg" />
+                        <div class="mask-mc"></div>
+                    </div>
+                    <div class="content-hot-mc">
+                        <div class="field-hot-mc">
+                            <img src="images/avatar2.jpg" />
+                            <div class="text-hot-mc">
+                                <a href="moreChannel.html#" class="title-hot-mc">Cập nhật tin tuc 24h hàng ngày</a>
+                                <p class="desc-hot-mc">Tin Mới cập nhật tin tuc 24h hàng ngày, đọc tin moi nhat về tất cả các sự kiện thời sự nóng trong ngày. Doc Bao tin tuc online về các lĩnh vực ở VN...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="people-subscribe-channel">
+                        <p><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                        <div class="people-psc clearfix"> 
+                        	<a class="people-img" href="moreChannel.html#"><img src="images/avatar1.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar2.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar3.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar2.jpg"></a>
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar3.jpg"></a>  
+                            <a data-target="#totalSubscribe" data-toggle="modal" class="more-people" href="moreChannel.html#"><i class="fa fa-arrow-right"></i></a> 
+                        </div>
+                    </div>
+                    <div class="button-psc">
+                    	<button class="btn btn-primary btn-subscribe" type="button"><i class="fa fa-play-circle"></i> Subscribe</button>
+                    </div>
+                </div><!-- end hot-item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg3.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg2.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg4.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc">70,749 subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2 hidden-md hidden-sm hidden-lg">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg3.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            
+        </div><!-- end items-mc-->
+    </div><!-- end block-mc-->
+    
+    <div class="block-mc row clearfix">
+    	<h3>Thể Thao <a href="moreChannel.html#" class="more-mc">Xem thêm <i class="fa fa-angle-right"></i></a></h3>
+        <div class="items-mc">
+        	<div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="hot-item-mc">
+                    <div class="img-hot-mc">
+                        <img src="images/cover1.jpg" />
+                        <div class="mask-mc"></div>
+                    </div>
+                    <div class="content-hot-mc">
+                        <div class="field-hot-mc">
+                            <img src="images/avatar1.jpg" />
+                            <div class="text-hot-mc">
+                                <a href="moreChannel.html#" class="title-hot-mc">Cập nhật tin tuc 24h hàng ngày</a>
+                                <p class="desc-hot-mc">Tin Mới cập nhật tin tuc 24h hàng ngày, đọc tin moi nhat về tất cả các sự kiện thời sự nóng trong ngày. Doc Bao tin tuc online về các lĩnh vực ở VN...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="people-subscribe-channel">
+                        <p><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                        <div class="people-psc"> 
+                        	<a class="people-img" href="moreChannel.html#"><img src="images/avatar1.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar2.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar3.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar2.jpg"></a>
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar3.jpg"></a>  
+                            <a data-target="#totalSubscribe" data-toggle="modal" class="more-people" href="moreChannel.html#"><i class="fa fa-arrow-right"></i></a> 
+                        </div>
+                    </div>
+                    <div class="button-psc">
+                    	<button class="btn btn-primary btn-subscribe" type="button"><i class="fa fa-play-circle"></i> Subscribe</button>
+                    </div>
+                </div><!-- end hot-item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg1.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg3.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg2.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2 hidden-md hidden-sm hidden-lg">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg3.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            
+        </div><!-- end items-mc-->
+    </div><!-- end block-mc-->
+    
+    <div class="block-mc row clearfix">
+    	<h3>Âm Nhạc <a href="moreChannel.html#" class="more-mc">Xem thêm <i class="fa fa-angle-right"></i></a></h3>
+        <div class="items-mc">
+        	<div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="hot-item-mc">
+                    <div class="img-hot-mc">
+                        <img src="images/cover.jpg" />
+                        <div class="mask-mc"></div>
+                    </div>
+                    <div class="content-hot-mc">
+                        <div class="field-hot-mc">
+                            <img src="images/avatar2.jpg" />
+                            <div class="text-hot-mc">
+                                <a href="moreChannel.html#" class="title-hot-mc">Cập nhật tin tuc 24h hàng ngày</a>
+                                <p class="desc-hot-mc">Tin Mới cập nhật tin tuc 24h hàng ngày, đọc tin moi nhat về tất cả các sự kiện thời sự nóng trong ngày. Doc Bao tin tuc online về các lĩnh vực ở VN...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="people-subscribe-channel">
+                        <p><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                        <div class="people-psc"> 
+                        	<a class="people-img" href="moreChannel.html#"><img src="images/avatar1.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar2.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar3.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar2.jpg"></a>
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar3.jpg"></a>  
+                            <a data-target="#totalSubscribe" data-toggle="modal" class="more-people" href="moreChannel.html#"><i class="fa fa-arrow-right"></i></a> 
+                        </div>
+                    </div>
+                    <div class="button-psc">
+                    	<button class="btn btn-primary btn-subscribe" type="button"><i class="fa fa-play-circle"></i> Subscribe</button>
+                    </div>
+                </div><!-- end hot-item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg3.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg2.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg4.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2 hidden-md hidden-sm hidden-lg">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg3.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            
+        </div><!-- end items-mc-->
+    </div><!-- end block-mc-->
+    <div class="block-mc row clearfix">
+    	<h3>Gamming <a href="moreChannel.html#" class="more-mc">Xem thêm <i class="fa fa-angle-right"></i></a></h3>
+        <div class="items-mc">
+        	<div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="hot-item-mc">
+                    <div class="img-hot-mc">
+                        <img src="images/cover.jpg" />
+                        <div class="mask-mc"></div>
+                    </div>
+                    <div class="content-hot-mc">
+                        <div class="field-hot-mc">
+                            <img src="images/avatar2.jpg" />
+                            <div class="text-hot-mc">
+                                <a href="moreChannel.html#" class="title-hot-mc">Cập nhật tin tuc 24h hàng ngày</a>
+                                <p class="desc-hot-mc">Tin Mới cập nhật tin tuc 24h hàng ngày, đọc tin moi nhat về tất cả các sự kiện thời sự nóng trong ngày. Doc Bao tin tuc online về các lĩnh vực ở VN...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="people-subscribe-channel">
+                        <p><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                        <div class="people-psc"> 
+                        	<a class="people-img" href="moreChannel.html#"><img src="images/avatar1.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar2.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar3.jpg"></a> 
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar2.jpg"></a>
+                            <a class="people-img" href="moreChannel.html#"><img src="images/avatar3.jpg"></a>  
+                            <a data-target="#totalSubscribe" data-toggle="modal" class="more-people" href="moreChannel.html#"><i class="fa fa-arrow-right"></i></a> 
+                        </div>
+                    </div>
+                    <div class="button-psc">
+                    	<button class="btn btn-primary btn-subscribe" type="button"><i class="fa fa-play-circle"></i> Subscribe</button>
+                    </div>
+                </div><!-- end hot-item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg3.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc">70,749 subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg2.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg4.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc"><a href="moreChannel.html#">Phan Ly Linh</a>, <a href="moreChannel.html#">Hoàng An</a> and <a href="moreChannel.html#" data-target="#totalSubscribe" data-toggle="modal">10 others</a> subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            <div class="col-xs-6 col-sm-4 col-md-2 hidden-md hidden-sm hidden-lg">
+           		<div class="item-mc">
+                	<a class="link-mc" href="moreChannel.html#">
+                    	<img src="images/channelImg3.jpg" />
+                        <span>The Voice Kids</span>
+                    </a>
+                    <p class="people-mc">70,749 subscribe channel nay.</p>
+                    <p><button class="btn btn-primary btn-subscribe moreChannel" type="button"><i class="fa fa-play-circle"></i> Subscribe</button></p>
+                </div><!-- item-mc-->
+            </div><!-- /col-->
+            
+        </div><!-- end items-mc-->
+    </div><!-- end block-mc-->
+  </div><!-- end moreChannel-->
+  
+  <div class="footer container-fluid">
+    <div class="col-md-5 hidden-xs hidden-sm">
+      <div class="footer-head">
+        <h3>Giới thiệu meme</h3>
+      </div>
+      <div class="footer-content footer-logo">
+        <p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí…</p>
+        <a href="moreChannel.html#" class="about-more">Xem thêm</a> </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="footer-head">
+        <h3>Facebook</h3>
+      </div>
+      <div class="footer-content">
+        <h5>TV Network</h5>
+        <div id="fb-root"></div>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+        <div class="facebook">
+          <div class="fb-like" data-href="https://www.facebook.com/memevietnam" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="footer-head">
+        <h3>Hỗ trợ</h3>
+      </div>
+      <div class="footer-content">
+        <ul class="nav">
+          <li><a href="moreChannel.html#">MeMe là gì?</a></li>
+          <li><a href="moreChannel.html#">Cách hoạt động</a></li>
+          <li><a href="moreChannel.html#">Lợi ích</a></li>
+          <li><a href="moreChannel.html#">Đối tác nội dung</a></li>
+          <li><a href="moreChannel.html#">Khiếu nại bản quyền</a></li>
+          <li><a href="moreChannel.html#">Liên hệ</a></li>
+          <li><a href="moreChannel.html#">Điều khoản sử dụng</a></li>
+          <li><a href="moreChannel.html#">Chính sách nội dung</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--end footer-->
+  <div class="footer-bottom col-xs-12"> <span class="copyright">Copyright ©2013 meme.vn</span> </div>
+  <!--end footer bottom--> 
+</div>
+<!--end wrapper content--> 
+
+<a href="moreChannel.html#" class="top scrollToElement" id="backtotoplink"><span class="icon icon-arrow-up-s"></span></a> 
+
+<!--pop up total like-->
+<div id="totalLike" class="totalLike modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">People Who Like This</h4>
+      </div>
+      <div class="modal-body w-people-row clearfix">
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Long</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Cao Ky Duyen</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Duc Huy</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar2.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Hoai Lam</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar3.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">DAM TV</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-default btn-subscribed pull-right"><i class="fa fa-check-circle"></i> Subscribed</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Long</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Cao Ky Duyen</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Duc Huy</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar2.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Hoai Lam</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar3.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">DAM TV</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-default btn-subscribed pull-right"><i class="fa fa-check-circle"></i> Subscribed</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Long</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Cao Ky Duyen</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Duc Huy</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar2.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Hoai Lam</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar3.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">DAM TV</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-default btn-subscribed pull-right"><i class="fa fa-check-circle"></i> Subscribed</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Long</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Cao Ky Duyen</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Duc Huy</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar2.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Hoai Lam</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar3.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">DAM TV</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-default btn-subscribed pull-right"><i class="fa fa-check-circle"></i> Subscribed</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row--> 
+      </div>
+    </div>
+  </div>
+</div>
+<!--end total like-->
+
+<div id="totalSubscribe" class="totalSubscribe modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">People Who Subscribed This</h4>
+      </div>
+      <div class="modal-body w-people-row scrollable clearfix">
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Long</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Cao Ky Duyen</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Duc Huy</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar2.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Hoai Lam</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar3.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">DAM TV</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-default btn-subscribed pull-right"><i class="fa fa-check-circle"></i> Subscribed</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Long</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Cao Ky Duyen</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Duc Huy</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar2.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Hoai Lam</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar3.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">DAM TV</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-default btn-subscribed pull-right"><i class="fa fa-check-circle"></i> Subscribed</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Long</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Cao Ky Duyen</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Duc Huy</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar2.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Hoai Lam</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar3.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">DAM TV</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-default btn-subscribed pull-right"><i class="fa fa-check-circle"></i> Subscribed</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Long</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Nguyen Cao Ky Duyen</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar1.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Duc Huy</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar2.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">Hoai Lam</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-primary btn-subscribe  pull-right"><i class="fa fa-play-circle"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row-->
+        <div class="people-row clearfix">
+          <div class="img-pr"> <a href="moreChannel.html#"><img src="images/avatar3.jpg" /></a> </div>
+          <div class="name-pr v-center">
+            <div class="content-pr"> <a href="moreChannel.html#">DAM TV</a> </div>
+          </div>
+          <div class="button-pr v-center">
+            <div class="content-pr">
+              <button type="button" class="btn btn-default btn-subscribed pull-right"><i class="fa fa-check-circle"></i> Subscribed</button>
+            </div>
+          </div>
+        </div>
+        <!--end people-row--> 
+      </div>
+    </div>
+  </div>
+</div>
+<!--end total like-->
+
+<div id="pickChannel" class="pickChannel modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Chọn channel cần upload video</h4>
+      </div>
+      <div class="modal-body w-channel-row scrollable clearfix">
+        <div class="channel-row clearfix">
+        	<div class="w-content-cr">
+                <div class="content-cr">
+                  <div class="input-cr radio">
+                  	  <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                          <span class="img-cr"><img src="images/avatar1.jpg" /></span>
+                          <span class="name-cr">Nguyen Long </span>
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--end channel-row-->
+        <div class="channel-row clearfix">
+        	<div class="w-content-cr">
+                <div class="content-cr">
+                  <div class="input-cr radio">
+                  	  <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                          <span class="img-cr"><img src="images/avatar1.jpg" /></span>
+                          <span class="name-cr">Nguyen Long </span>
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--end channel-row-->
+        <div class="channel-row clearfix">
+        	<div class="w-content-cr">
+                <div class="content-cr">
+                  <div class="input-cr radio">
+                  	  <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                          <span class="img-cr"><img src="images/avatar1.jpg" /></span>
+                          <span class="name-cr">Nguyen Long </span>
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--end channel-row-->
+        <div class="channel-row clearfix">
+        	<div class="w-content-cr">
+                <div class="content-cr">
+                  <div class="input-cr radio">
+                  	  <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                          <span class="img-cr"><img src="images/avatar1.jpg" /></span>
+                          <span class="name-cr">Nguyen Long </span>
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--end channel-row-->
+        <div class="channel-row clearfix">
+        	<div class="w-content-cr">
+                <div class="content-cr">
+                  <div class="input-cr radio">
+                  	  <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                          <span class="img-cr"><img src="images/avatar1.jpg" /></span>
+                          <span class="name-cr">Nguyen Long </span>
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--end channel-row-->
+        <div class="channel-row clearfix">
+        	<div class="w-content-cr">
+                <div class="content-cr">
+                  <div class="input-cr radio">
+                  	  <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                          <span class="img-cr"><img src="images/avatar1.jpg" /></span>
+                          <span class="name-cr">Nguyen Long </span>
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--end channel-row-->
+        <div class="channel-row clearfix">
+        	<div class="w-content-cr">
+                <div class="content-cr">
+                  <div class="input-cr radio">
+                  	  <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                          <span class="img-cr"><img src="images/avatar1.jpg" /></span>
+                          <span class="name-cr">Nguyen Long </span>
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--end channel-row-->
+        <div class="channel-row clearfix">
+        	<div class="w-content-cr">
+                <div class="content-cr">
+                  <div class="input-cr radio">
+                  	  <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                          <span class="img-cr"><img src="images/avatar1.jpg" /></span>
+                          <span class="name-cr">Nguyen Long </span>
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--end channel-row-->
+        <div class="channel-row clearfix">
+        	<div class="w-content-cr">
+                <div class="content-cr">
+                  <div class="input-cr radio">
+                  	  <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                          <span class="img-cr"><img src="images/avatar1.jpg" /></span>
+                          <span class="name-cr">Nguyen Long </span>
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--end channel-row-->
+      </div>
+      <div class="modal-footer">
+      	<div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            Luôn chọn kênh này
+          </label>
+        </div>
+        <button class="btn btn-primary">Đồng ý</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end pickChannel-->
+</body>
+</html>

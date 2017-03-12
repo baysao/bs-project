@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Player Detail | Dashboard MePlayer</title>
+
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/prism.css" rel="stylesheet" type="text/css">
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+    <div class="preloader">
+        <img src="images/preloader.svg" />
+    </div>
+
+    <div class="page-container">
+
+        <nav class="navbar navbar-fixed-top header">
+            <div class="container-fluid">
+                <div class="navbar-header clearfix">
+                    <a href="index.html"><span><img src="images/logo.svg" /></span>MePlayer</a>
+                    <button type="button" class="navbar-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <ul class="navbar-nav navbar-right navbar-user">
+                    <li class="dropdown">
+                        <a href="player_detail.html#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="images/user.jpg" />
+                            <span class="hidden-xs">nvtweb@gmail.com</span> <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="player_detail.html#">kevin.vu@gmail.com</a></li>
+                            <li><a href="player_detail.html#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav><!-- end navbar -->
+
+        <div class="sidebar">
+            <ul class="nav nav-account">
+                <li>
+                    <img src="images/user.jpg" />
+                    Tanh Nguyen
+                </li>
+            </ul>
+            <ul class="nav nav-menu">
+                <li>
+                    <a href="player_detail.html#sub-menu" data-toggle="collapse">
+                        <i class="fa fa-play"></i>
+                        MePlayer <span class="caret"></span>
+                    </a>
+                    <ul class="sub-menu collapse in" id="sub-menu">
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="free.html">Free version</a></li>
+                        <li><a href="professional.html">Professional version</a></li>
+                        <li class="active"><a href="enterprise.html">Enterprise version</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="billing.html"><i class="fa fa-credit-card"></i>Billing</a>
+                </li>
+                <li>
+                    <a href="support.html"><i class="fa fa-support"></i>Support</a>
+                </li>
+            </ul>
+        </div><!-- end sidebar -->
+
+        <div class="content clearfix">
+            <div class="col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1 col- col-xs-12 col-sm-12 col-md-12 col-lg-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Player Details</div>
+                    <div class="panel-body plr-0 mt-30">
+                        <div class="col-lg-10 col-lg-offset-1 p-0">
+                            <div class="form-group clearfix">
+                                <label class="col-sm-3 text-right control-label no-line-height">Available Player Versions:</label>
+                                <div class="col-sm-9"><button type="button" class="btn btn-info btn-lg">3.0</button></div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="col-sm-3 text-right control-label no-line-height">Player Domains:</label>
+                                <div class="col-sm-9">amonweb.com</div>
+                            </div>
+                            <fieldset disabled>
+                                <div class="form-group clearfix">
+                                    <label class="col-sm-3 text-right control-label">Key:</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" type="text" placeholder="969cf34f426d6b4d6f8ec897d4ddd82d">
+                                    </div>
+                                </div>
+                                <div class="form-group clearfix">
+                                    <label class="col-sm-3 text-right control-label">CDN path:</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" type="text" placeholder="//bitdash-a.akamaihd.net/bitmovin-portal/55de85c7aa5a9/93a772062d/latest/bitdash.min.js">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="form-group clearfix">
+                                <label class="col-sm-3 text-right control-label no-line-height">Generated:</label>
+                                <div class="col-sm-9">27.08.2015 10:51:06</div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="col-sm-3 text-right control-label no-line-height">Whats next:</label>
+                                <div class="col-sm-9">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="help.html" target="_blank"><span class="fa fa-sticky-note-o"></span> Getting Started</a></li>
+                                        <li class="list-group-item"><a href="help.html" target="_blank"><span class="fa fa-sticky-note-o"></span> Player Configuration</a></li>
+                                        <li class="list-group-item"><a href="help.html" target="_blank"><span class="fa fa-sticky-note-o"></span> Generate Content for free with bitcodin.com</a></li>
+                                        <li class="list-group-item"><a href="help.html" target="_blank"><span class="fa fa-sticky-note-o"></span> Developer Section</a></li>
+                                        <li class="list-group-item"><a href="help.html" target="_blank"><span class="fa fa-sticky-note-o"></span> Release Notes</a></li>
+                                        <li class="list-group-item"><a href="help.html" target="_blank"><span class="fa fa-sticky-note-o"></span> FAQ's</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end panel -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Embed MePlayer directly in your page</div>
+                    <div class="panel-body">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-sub">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="player_detail.html#cdn">
+                                            <span class="fa fa-chevron-down"></span>
+                                            Use CDN-hosted player
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="cdn" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="tab-overview code">
+                                            <!-- Nav tabs -->
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li class="active"><a href="player_detail.html#snippet" role="tab" data-toggle="tab">Snippet</a></li>
+                                                <li><a href="player_detail.html#sample-page" role="tab" data-toggle="tab">Sample Page</a></li>
+                                            </ul>
+                                            <!-- Tab panes -->
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="snippet">
+                                                    <p><b>&lt;head></b> Insert this line of code into your webpage's <head> tag to load the CDN-hosted DASH Player</p>
+                                                    <div class="code-api">
+                                                        <button type="button" class="btn btn-sm btn-copy">Copy</button>
+                                                        <pre><code class="language-markup code-copy">
+    &lt;script type="text/javascript" src="//bitdash-a.akamaihd.net/bitmovin-portal/55de85c7aa5a9/93a772062d/latest/bitdash.min.js">&lt;/script></code></pre>
+                                                    </div>
+                                                    <p><b>&lt;body></b> Copy the embed code below and paste it into the <body> of your webpage HTML.</p>
+                                                    <div class="code-api">
+                                                        <button type="button" class="btn btn-sm btn-copy">Copy</button>
+                                                        <pre><code class="language-markup code-copy">
+    &lt;div id="player">&lt;/div>
+    &lt;script type="text/javascript">
+        var conf = {
+            key:       "969cf34f426d6b4d6f8ec897d4ddd82d",
+            source: {
+              mpd:         '//bitdash-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd',
+              hls:         '//bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
+              progressive: '//bitdash-a.akamaihd.net/content/MI201109210084_1/MI201109210084_mpeg-4_hd_high_1080p25_10mbits.mp4',
+              poster:      '//bitdash-a.akamaihd.net/content/MI201109210084_1/poster.jpg'
+            }
+        };
+        var player = bitdash("player").setup(conf);
+    &lt;/script></code></pre>
+                                                    </div>
+
+                                                </div>
+                                                <div class="tab-pane fade" id="sample-page">
+                                                    <div class="clearfix">
+                                                        <button type="button" class="btn btn-primary pull-right">Download Code</button>
+                                                    </div>
+                                                    <div class="code-api">
+                                                        <button type="button" class="btn btn-sm btn-copy">Copy</button>
+                                                        <pre><code class="language-markup code-copy">
+    &lt;!DOCTYPE html>
+    &lt;!--
+    *
+    * Copyright (C) 2015, bitmovin GmbH, All Rights Reserved
+    *
+    * Created on: 2015-07-25 11:35:04
+    * Author:     bitmovin GmbH &lt;dash-player@bitmovin.net>
+    *
+    * This source code and its use and distribution, is subject to the terms
+    * and conditions of the applicable license agreement.
+    *
+    -->
+    &lt;html lang="en">
+    &lt;head>
+      &lt;title>bitdash SDK&lt;/title>
+      &lt;meta charset="UTF-8"/>
+      &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+      &lt;link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'/>
+      &lt;!-- bitdash player -->
+      &lt;script type="text/javascript" src="//bitdash-a.akamaihd.net/bitmovin-portal/55de85c7aa5a9/93a772062d/latest/bitdash.min.js">&lt;/script>
+
+      &lt;style>
+        figure {
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          font-family: 'Dosis';
+          color:       white;
+          text-align:  center;
+        }
+        .container a {
+          color: white;
+        }
+        .container h1 {
+          font:          54px/66px 'Dosis';
+          margin-bottom: 22px;
+          line-height:   66px;
+        }
+        .container h2 {
+          font-weight:   normal;
+          margin-bottom: 36px;
+          line-height:   26px;
+        }
+        .player-wrapper {
+          width:        50%;
+          margin-right: auto;
+          margin-left:  auto;
+          box-shadow:   0 0 30px rgba(0,0,0,0.7);
+        }
+        #webserver-warning {
+          margin:           50px;
+          padding:          20px;
+          background-color: rgba(255,0,0,0.5);
+          display:          none;
+        }
+      &lt;/style>
+    &lt;/head>
+    &lt;body background="http://bitdash-a.akamaihd.net/webpages/bitmovin/images/background.jpg">
+    &lt;div class="container">
+      &lt;h1>HTML5 Adaptive Streaming Player for MPEG-DASH & HLS&lt;/h1>
+      &lt;h2>Your videos play everywhere with low startup delay, no buffering and in highest quality.&lt;/h2>
+      &lt;div id="webserver-warning">
+        &lt;div class="ca-content">
+          &lt;h1>Unsupported Protocol&lt;/h1>
+          &lt;h2>This file has been loaded using the unsupported "file" protocol. Please use a &lt;a href="http://wiki.selfhtml.org/wiki/Webserver/lokal" target="_blank">web server&lt;/a> and open this page using http or https.&lt;/h2>
+        &lt;/div>
+      &lt;/div>
+      &lt;div class="content">
+        &lt;div class="player-wrapper">
+          &lt;div id="player">&lt;/div>
+        &lt;/div>
+        &lt;div class="description">
+          &lt;p>For more information about bitdash, please have a look at our online &lt;a href="http://developer.dash-player.com/introduction" target="_blank">Developer Section&lt;/a>.&lt;/p>
+        &lt;/div>
+      &lt;/div>
+
+    &lt;/div>
+    &lt;script type="text/javascript">
+      if (location.protocol === 'file:') {
+        document.getElementById('webserver-warning').style.display = 'block';
+      }
+
+      var player;
+
+      var conf = {
+        key:              '969cf34f426d6b4d6f8ec897d4ddd82d',
+        source: {
+          mpd:            '//bitdash-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd',
+          hls:            '//bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8',
+          progressive:    '//bitdash-a.akamaihd.net/content/MI201109210084_1/MI201109210084_mpeg-4_hd_high_1080p25_10mbits.mp4',
+          poster:         '//bitdash-a.akamaihd.net/content/MI201109210084_1/poster.jpg'
+        },
+        style: {
+          width:          '100%',
+          aspectratio:    '16:9',
+          controls:       true
+        }
+      };
+
+      player = bitdash("player").setup(conf);
+    &lt;/script>
+    &lt;/body>
+    &lt;/html></code></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end tab-overview -->
+                                    </div>
+                                </div>
+                            </div><!-- end panel-sub -->
+                            <div class="panel panel-sub">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="player_detail.html#download">
+                                            <span class="fa fa-chevron-right"></span>
+                                            Download self-hosted player
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="download" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div><!-- end panel-sub -->
+                            <div class="panel panel-sub">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="player_detail.html#sdk">
+                                            <span class="fa fa-chevron-right"></span>
+                                            Explore bitdash SDK
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="sdk" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div><!-- end panel-sub -->
+                        </div><!-- end panel-group -->
+                    </div><!-- end panel-body -->
+                </div><!-- end panel -->
+
+            </div><!-- /col content -->
+        </div><!-- end content -->
+
+    </div>
+    
+    <!--Global js-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <!--End Global js-->
+    
+    <!--Page js-->
+    <script src='js/prism.js'></script>
+    <script src='js/jquery.zclip.min.js'></script>
+    <script src="js/apps.js" type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            $(window).load(function(){
+
+                $('.preloader').fadeOut();
+
+            });
+
+            //call main menu
+            mainMenu();
+
+            //copy code
+
+            copyCode();
+
+            
+
+
+        });
+
+    </script>
+    <!--End Page js-->
+
+</body>
+</html>

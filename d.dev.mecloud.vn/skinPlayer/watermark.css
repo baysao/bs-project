@@ -1,0 +1,32 @@
+/* Font Color */
+/* Background Color */
+/* Mixins */
+/******************************************/
+/*** Watermark ***/
+/******************************************/
+.mep-player:hover .watermark .logo-wm {
+  bottom: 63px !important;
+  -webkit-transition: bottom 0.2s ease-out;
+  -moz-transition: bottom 0.2s ease-out;
+  -o-transition: bottom 0.2s ease-out;
+  transition: bottom 0.2s ease-out;
+}
+
+.watermark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.watermark .logo-wm {
+  position: absolute;
+  max-width: 10%;
+  -webkit-transition: bottom 0.2s ease-in 1.3s;
+  -moz-transition: bottom 0.2s ease-in 1.3s;
+  -o-transition: bottom 0.2s ease-in 1.3s;
+  transition: bottom 0.2s ease-in 1.3s;
+}
+.watermark .logo-wm img {
+  display: block;
+  width: 100%;
+}

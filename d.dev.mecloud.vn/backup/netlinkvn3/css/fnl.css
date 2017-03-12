@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "font-netlink";
+  src:url("fonts/font-netlink.eot");
+  src:url("fonts/font-netlink.eot%3F") format("embedded-opentype"),
+    url("fonts/font-netlink.woff") format("woff"),
+    url("fonts/font-netlink.ttf") format("truetype"),
+    url("fonts/font-netlink.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "font-netlink" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="fnl-"]:before,
+[class*=" fnl-"]:before {
+  font-family: "font-netlink" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fnl-right-open:before {
+  content: "f";
+}
+.fnl-left-open:before {
+  content: "g";
+}
+.fnl-down-open:before {
+  content: "b";
+}
+.fnl-up-open:before {
+  content: "c";
+}
+.fnl-facebook:before {
+  content: "d";
+}
+.fnl-google:before {
+  content: "e";
+}
+.fnl-twitter:before {
+  content: "h";
+}
+.fnl-plane:before {
+  content: "i";
+}
+.fnl-movie:before {
+  content: "l";
+}
+.fnl-archive:before {
+  content: "m";
+}
+.fnl-tools:before {
+  content: "q";
+}
+.fnl-briefcase:before {
+  content: "r";
+}
+.fnl-dollar-bill:before {
+  content: "t";
+}
+.fnl-lifebuoy:before {
+  content: "u";
+}
+.fnl-burning-fire:before {
+  content: "v";
+}
+.fnl-arrow-graph:before {
+  content: "w";
+}
+.fnl-lightbulb:before {
+  content: "a";
+}
+.fnl-megaphone:before {
+  content: "y";
+}
+.fnl-link:before {
+  content: "A";
+}
+.fnl-globe:before {
+  content: "j";
+}
+.fnl-stopwatch:before {
+  content: "k";
+}
+.fnl-phone-2:before {
+  content: "n";
+}
+.fnl-user-add:before {
+  content: "o";
+}
+.fnl-email:before {
+  content: "p";
+}
+.fnl-up-bold:before {
+  content: "s";
+}
+.fnl-location:before {
+  content: "x";
+}
+.fnl-call-phone:before {
+  content: "z";
+}
+.fnl-git-merge:before {
+  content: "C";
+}
+.fnl-target:before {
+  content: "D";
+}
+.fnl-contacts-social:before {
+  content: "B";
+}
+.fnl-pencil-edit:before {
+  content: "F";
+}
+.fnl-buffer:before {
+  content: "G";
+}
+.fnl-quote-left:before {
+  content: "H";
+}
+.fnl-quote-right:before {
+  content: "I";
+}
+.fnl-chart-alt:before {
+  content: "E";
+}
+.fnl-code:before {
+  content: "J";
+}
+.fnl-talk-user:before {
+  content: "K";
+}
+.fnl-talk-love:before {
+  content: "L";
+}
+.fnl-badge:before {
+  content: "M";
+}
+ontent: "M";
+}

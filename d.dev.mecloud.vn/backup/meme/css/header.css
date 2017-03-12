@@ -1,0 +1,149 @@
+/******************************
+			Header
+******************************/
+#header {
+	min-width:1024px !important;	
+	height:58px;
+}
+.container-fluid {
+	padding:0 30px;	
+}
+.logo-s {
+	float:left;	
+}
+.mainMenu {
+	float:left;
+	width:660px;
+	padding-left:40px;
+	
+}
+.mainMenu li {
+	float:left;	
+}
+.mainMenu.nav > li > a, .mainMenu.nav > li > a:focus {
+	padding:17px 15px;
+	font-size:14px;	
+	color:#454545;
+	background:none;
+	white-space:nowrap;
+	text-transform:uppercase;
+}
+.mainMenu.nav > li > a.active {
+	border-bottom: 1px solid #e64b3a;
+	color: #e64b3a;
+}
+.mainMenu.nav > li > a:hover {
+	color: #e64b3a;
+}
+.mainMenu.nav > li > a i {
+	margin-left:5px;	
+}
+.seachBox {
+	width:346px;
+	float:right;
+	margin-right:20px;
+	position:relative;
+	margin-top:10px;	
+}
+.seachBox input {
+	border:none;
+	background-color:#f6f6f6;	
+	padding-right:30px;
+	width:70%;
+	float:right;
+	-webkit-transition: width 200ms ease-in;
+	-moz-transition: width 200ms ease-in;
+	-ms-transition: width 200ms ease-in;
+	-o-transition: width 200ms ease-in;
+	transition: width 200ms ease-in;
+}
+.seachBox .form-control:focus {
+	box-shadow:none;	
+}
+.seachBox input:focus {
+	width:100%;
+}
+.seachBox button {
+	padding:3px;
+	position:absolute;
+	top:3px;
+	right:0;	
+	background:none;
+	color:#8a8a8a;
+}
+ul.mainMenu li.hasSubMenu {
+	position:relative;	
+}
+ul.mainMenu li.hasSubMenu:hover ul.subMenu {
+	display:block;
+}
+ul.subMenu {
+	position:absolute;
+	background-color:#ffffff;
+	border-top: 1px solid #E64B3A;
+	padding:15px;
+	left:0;
+	top:54px;
+	display:none;
+	width:200px;
+	z-index:998;
+	border-radius: 0 0 4px 4px;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.175);
+	-moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.175);
+}
+ul.subMenu li {
+	width:100%;
+	float:left;	
+}
+ul.subMenu.twoCol {
+	width:400px;	
+}
+ul.subMenu.twoCol li {
+	width:50%;	
+}
+ul.subMenu li a {
+	text-transform:uppercase;
+	font-size:14px;
+	font-weight:300;
+	display:block;
+	padding:5px 10px;
+	background-color:#ffffff;	
+	margin:0;
+	border-radius: 4px;
+	color:#454545;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
+}
+ul.subMenu li.addMenu a {
+	font-weight:400;
+}
+ul.subMenu li a:hover {
+	background-color:#f1f1f1;
+	color:#E64B3A;	
+}
+.hide-lg {
+	display:none;	
+}
+@media (max-width:1365px) {
+	.hide-md {
+		display:none !important;	
+	}
+	.addMenu {
+		display:block;	
+	}
+	.mainMenu {
+		width: 415px;
+		padding-left:10px;
+	}	
+	.mainMenu.nav > li > a {
+		padding:17px 10px !important;	
+	}
+	.seachBox {
+		width:300px;
+	}
+}

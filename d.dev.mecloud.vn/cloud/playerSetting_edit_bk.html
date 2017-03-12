@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024" /> 
+    <title>Edit Player Setting</title>
+    <!-- Global CSS -->
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+    <!-- End Global CSS -->
+    
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/powerange.css" />
+    <link href="css/sumoselect.css" type="text/css" rel="stylesheet">
+    <link href="css/jquery.tagsinput.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    
+    <!-- End Page CSS -->
+    
+    <!-- Global Script -->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/global.js"></script>
+    <!-- End Global Script -->
+
+    <!-- Page Script -->
+    <script src="js/powerange.min.js"></script>
+    <script src="js/jquery.sumoselect.min.js"></script>
+    <script src="js/jquery.tagsinput.min.js"></script>
+    <script src="js/settingPlayer.js"></script>
+    <!-- End Page Script -->
+    
+</head>
+
+<body>
+	
+    <div class="wrapper">
+    	
+        <div class="container">
+        
+            <div class="containerTable">
+            
+                <div class="sidebar">
+                    <div class="sidebarFixed">
+                        <div class="logo">
+                            <a href="#" title="Meme Cloud">Meme Cloud</a>
+                        </div>
+                        
+                        <div class="mainMenu">
+    
+                            <ul id="nav">
+                            <li><a href="#"><i class="fa fa-globe"></i>Admin <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="allChannel.html">Danh sách channel</a></li>
+                                    <li><a href="managerNotification.html">Quản lý thông báo</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="active"><i class="fa fa-video-camera"></i>Video <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="allVideo.html">Tất cả video</a></li>
+                                  <li><a href="allVideoApprove.html">Duyệt video<span class="numMenu">20</span></a></li>
+                                  <li><a href="upload.html">Upload video mới</a></li>
+                                  <li><a href="uploadBulk.html">Upload cùng lúc</a></li>
+                                  <li><a href="allPlaylist.html">Danh sách phát</a></li>
+                                  <li><a href="categoryManager.html">Quản lý chuyên mục</a></li>
+                                  <li><a href="playerSetting.html" class="selected">Cài đặt Player</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="fa fa-bar-chart-o"></i>Thống kê<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="analytics.html">Tổng quan</a></li>
+                                  <li><a href="userAnalytic.html">Theo người dùng</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="fa fa-wifi"></i>Phát trực tiếp <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="listStreaming.html">Danhs sách phát trực tiếp</a></li>
+                                  <li><a href="upload.html">Tạo sự kiện phát</a></li>
+                                </ul>
+                              </li>
+<li><a href="userManager.html"><i class="fa fa-user"></i>Người dùng</a>
+                              </li>
+                            <li><a href="#"><i class="fa fa-bullhorn"></i>Quảng cáo<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="domainManager.html">Quản lý trang web</a></li>
+                                  <li><a href="managerAdtag.html">Quản lý Adtag</a></li>
+                                  <li><a href="installAdGlobal.html">Cài đặt chung</a></li>
+<li><a href="installAdChannel.html">Cài đặt Ad Channel</a></li>
+                                  <li><a href="installAdwebsite.html">Cài đặt cho website</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="fa fa-wrench"></i>Công cụ<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="alert.html">UI Alert</a></li>
+<li><a href="customEmbed.html">Mã nhúng tùy chỉnh</a></li>
+                                  <li><a href="channelConfig.html">Cấu hình channel</a></li>
+<li><a href="exportData.html">Trích xuất nâng cao</a></li>
+<li><a href="related_setting.html">Cài đặt video liên quan</a></li>
+                                </ul>
+                            </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!--end sidebar -->
+
+               <div class="btn-expand">
+                    <span></span>
+                    <span></span>
+                    <span></span>	
+                </div>
+                <div class="bg-overlay"></div>
+  
+                <div class="wrapperContent">
+                	
+                    <div class="header clearfix">
+                    	
+                        <div class="searchBox">
+                        	<button type="submit" class="btn btnSearch"><i class="fa fa-search"></i></button>
+                            <input class="formGlobal seachInput" placeholder="Nhập tên hoặc id video..." />
+                        </div>
+                        
+                        <div class="account">
+                        	<div class="notification support">
+                        		<a href="#"><i class="fa fa-headphones"></i>Cần hỗ trợ?</a>
+                                <ul class="menuAccount">
+                                    <li><a href="#"><i class="fa fa-phone"></i>0904916386</a></li>
+                                	<li><a href="#" class="supportMail"><i class="fa fa-envelope"></i>support@mecloud.vn</a></li>
+                                    <li><a href="https://www.facebook.com/mecloud.vn" class="fanPage"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                </ul>
+                            </div>
+                            <div class="userAcount dropdown">
+                            	<a href="#" class="channelName btnDropdown">Đời sống & pháp luật<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdownDiv menuChannel">
+                                	<div class="swithChannel">Quản lý channel:</div>
+                                    <ul class="scrollable">
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        	<div class="notification"><a href="upload.html" class="notificationIco"><i class="fa fa-cloud-upload"></i></a></div>
+                        	<div class="notification dropdown">
+                            	<a href="#" class="notificationIco btnDropdown"><i class="fa fa-bell"></i><span class="numNof">2</span></a>
+                                <div class="dropdownDiv boxNof">
+                                	<div class="headBoxNof">
+                                    	Bạn có 2 thông báo <a href="#" class="btnReadAsAll">Đã xem tất cả</a>
+                                    </div>
+                                    <ul class="listNof scrollable">
+                                    	<li>
+                                        	<a class="unread" href="activityVideo.html">Video <span class="boldNof">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span></a>
+                                            <a href="#" class="btnRead tooltipText" title="Đã xem"><i class="fa fa-circle-o"></i></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a class="unread" href="activityVideo.html">Video <span class="boldNof">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span></a>
+                                            <a href="#" class="btnRead tooltipText" title="Đã xem"><i class="fa fa-circle-o"></i></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#"><span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#"><span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="notification userAcount dropdown">
+                            	<a href="#" class="notificationIco userName btnDropdown"><i class="fa fa-cog"></i></a>
+                                <a href="#" class="userThumb"><img src="images/user.jpg" alt="Messi" /></a>
+                                <ul class="dropdownDiv menuAccount">
+                                	<li><a href="changeProfile.html"><i class="fa fa-edit"></i>Đổi thông tin tài khoản</a></li>
+                                    <!--<li><a href="#"><i class="fa fa-user"></i>Tình trạng tài khoản</a></li>-->
+                                    <li><a href="support.html"><i class="fa fa-envelope"></i>Hỗ trợ</a></li>
+                                    <li><a href="#"><i class="fa fa-sign-out"></i>Thoát</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div><!--end header -->
+                    
+                    
+                    <div class="content">
+                            
+                            <div class="boxBreadcrumb">
+                            <ul class="breadcrumb clearfix">
+                                <li><a href="#">Meme Cloud</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="playerSetting.html">Cài đặt cho Player</a><i class="fa fa-angle-right"></i></li>
+                                <li class="active">
+                                    Chỉnh sửa Amon Player
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tabsGlobal">
+                            <ul class="tabs">
+                                <li class="simple">Chỉnh sửa <span class="blueText">Amon Player</span></li>
+                            </ul>
+                            
+                            <div class="settingPlayer">
+                            
+                            	<div class="head-sp clearfix">
+                                	<button type="button" class="btn red">Xóa</button>
+                                    <button type="button" class="btn cyan">Sao chép</button>
+                                    <button type="button" class="btn cyan" data-popup-target=".notify.advance">Embed code & url player</button>
+                                    <div class="action-sp floatRight">
+                                    	<button type="button" class="btn btnDefault">Discard changes</button>
+                                        <button type="button" class="btn btnPrimary">Publish</button>
+                                    </div>
+                                </div>
+
+                                <div class="preview-sp">
+                                    <div class="playerPreview">
+                                        <div class="playerLive">
+                                            <iframe src="http://d.dev.mecloud.vn/videojs/playerPreview.html"></iframe>
+                                        </div>
+                                        <div class="playerShadow"></div>
+                                    </div>
+                                </div><!--end preview-sp -->
+                            
+                                <div class="content-sp">
+                                    <div class="wrapperCustomBox clearfix">
+                                        <div class="colCustomBox">
+                                            <div class="customBox">
+                                                <div class="headCustomBox clearfix">
+                                                    <h4>Profile</h4>
+                                                    <button id="btnProfile" type="button" class="btn btnPrimarySmall btnEditPlayer htmlEditProfile">Edit</button>
+                                                </div>
+                                                <div class="contentCustomBox">
+                                                	<div class="requireSetting">You have unpublished changes</div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Name</label>
+                                                            <p>Twitch Player Darkcolor</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Slug name</label>
+                                                            <p>twitch-player-darkcolor</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Description</label>
+                                                            <p>
+                                                                This is an instance of the Brightcove Default Player. You can modify this or 
+                                                                choose to create your own.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>State</label>
+                                                            <p>Active</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!--end contentCustomBox -->
+                                                <div class="contentCustomBoxEdit">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Name</label>
+                                                            <input class="formGlobal" value="Twitch Player Darkcolor">
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                        <label>Slug name</label>
+                                                        <input class="formGlobal" value="twitch-player-darkcolor">
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Description</label>
+                                                            <textarea class="formGlobal" rows="3">This is an instance of the Brightcove Default Player. You can modify this or choose to create your own.</textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>State</label>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="radioState" type="radio" checked> Active
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="radioState" type="radio"> Inactive
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <button type="button" class="btn btnPrimary">Save</button>
+                                                        <button type="button" class="btn btnDefault btnCancelEditPlayer">Cancel</button>
+                                                    </div>
+                                                </div><!--end contentCustomBoxEdit -->
+                                            </div><!--end customBox -->
+                                            <div class="customBox">
+                                                <div class="headCustomBox clearfix">
+                                                    <h4>Endscreen</h4>
+                                                    <button type="button" class="btn btnPrimarySmall btnEditPlayer">Edit</button>
+                                                </div>
+                                                <div class="contentCustomBox">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption">
+                                                            <div class="optionFieldCB"><span></span></div>
+                                                            <p>Disable</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption">
+                                                            <div class="optionFieldCB"><span></span></div>
+                                                            <p>Social Sharing</p>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <ul class="listOptionField clearfix">
+                                                                <li class="on"><i class="fa fa-facebook"></i></li>
+                                                                <li class="on"><i class="fa fa-google-plus"></i></li>
+                                                                <li class="off"><i class="fa fa-link"></i></li>
+                                                                <li class="on"><i class="fa fa-code"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption">
+                                                            <div class="optionFieldCB selected"><span></span></div>
+                                                            <p>Related video</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption">
+                                                            <div class="optionFieldCB"><span></span></div>
+                                                            <p>Raw HTML</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!--end contentCustomBox -->
+                                                <div class="contentCustomBoxEdit">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption">
+                                                            <div class="optionFieldCB"><span></span></div>
+                                                            <strong>Disable</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB hasOption">
+                                                        <div class="optionFieldCB selected"><span></span></div>
+                                                        <div class="subRowCB hasCol">
+                                                            <div class="fieldCB">
+                                                                <strong>On/off Sharing</strong>
+                                                            </div>
+                                                            <div class="fieldCB">
+                                                                <div class="switch-checkbox">
+                                                                    <input id="switchSharingEndscreen" class="sc-toggle sc-toggle-round-flat" type="checkbox" checked>
+                                                                    <label for="switchSharingEndscreen"></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="subRowCB socialNetwork">
+                                                            <div class="fieldCB">
+                                                                <div class="listOptionField clearfix">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input type="checkbox" checked> Facebook
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input type="checkbox" checked> Google +
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input type="checkbox"> Website
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input type="checkbox" checked> Embed
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption">
+                                                            <div class="optionFieldCB"><span></span></div>
+                                                            <strong>Related Video Button</strong>
+                                                            <a class="linkSttingRelated" href="related_setting.html">Cài đặt related video</a>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <div class="switch-checkbox floatRight">
+                                                                <input id="switchRelateEndscreen" class="sc-toggle sc-toggle-round-flat" type="checkbox">
+                                                                <label for="switchRelateEndscreen"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB hasOption noCol">
+                                                        <div class="optionFieldCB"><span></span></div>
+                                                        <div class="fieldCB">
+                                                            <label>Raw HTML</label>
+                                                            <textarea class="formGlobal" rows="3">This is an instance of the Brightcove Default Player. You can modify this or choose to create your own.</textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <button type="button" class="btn btnPrimary">Save</button>
+                                                        <button type="button" class="btn btnDefault btnCancelEditPlayer">Cancel</button>
+                                                    </div>
+                                                </div><!--end contentCustomBoxEdit -->
+                                            </div><!--end customBox -->
+                                            <div class="customBox">
+                                                <div class="headCustomBox clearfix">
+                                                    <h4>Simple Styling</h4>
+                                                    <button type="button" class="btn btnPrimarySmall btnEditPlayer">Edit</button>
+                                                </div>
+                                                <div class="contentCustomBox">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <p>Skin color</p>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <div class="itemOptionColor">
+                                                                <span style="background-color:#6441a5"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Position play button</label>
+                                                            <p>Top</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <p>Placeholder</p>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <img class="imageDefaultPlayer" src="images/imgDefault.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div><!--end contentCustomBox -->
+                                                <div class="contentCustomBoxEdit">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Choose default color</label>
+                                                            <select id="defaultColor" class="formGlobal">
+                                                                <option value="#6441a5">Magenta</option>
+                                                                <option value="#f39c12">Orange</option>
+                                                                <option value="#2ecc71">Green</option>
+                                                                <option value="custom">Custom</option>
+                                                            </select>
+                                                            <div id="pickColor" class="formGroup mt20">
+                                                                <label>Pick a color</label>
+                                                                <input type="color" id="colorPicker" disabled="disabled" value="#6441a5">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Position play button</label>
+                                                            <select class="formGlobal">
+                                                                <option value="top">Top</option>
+                                                                <option value="center">Center</option>
+                                                                <option value="bottom">Bottom</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB clearfix">
+                                                            <strong class="fixHeightField floatLeft">Default image</strong>
+                                                        </div>
+                                                        <div class="fieldCB">                                                        	
+                                                            <img class="imageDefaultPlayer" src="images/imgDefault.jpg">
+                                                            <div class="btn btnUploadFile btnPrimarySmall mt20">
+                                                                <i class="fa fa-photo"></i>Change
+                                                                <input type="file" name="upload">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <button type="button" class="btn btnPrimary">Save</button>
+                                                        <button type="button" class="btn btnDefault btnCancelEditPlayer">Cancel</button>
+                                                    </div>
+                                                </div><!--end contentCustomBoxEdit -->
+                                            </div><!--end customBox -->
+                                            <div class="customBox">
+                                                <div class="headCustomBox clearfix">
+                                                    <h4>Advance Styling</h4>
+                                                    <button type="button" class="btn btnPrimarySmall btnEditPlayer">Edit</button>
+                                                </div>
+                                                <div class="contentCustomBox">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Enter custom CSS</label>
+                                                            <p>http://twitch.vn/player/skinPlayer/css/skin-player.css</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Enter custom JS</label>
+                                                            <p>http://twitch.vn/player/skinPlayer/js/skin-player.js</p>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div><!--end contentCustomBox -->
+                                                <div class="contentCustomBoxEdit">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Custom CSS</label>
+                                                            <input class="formGlobal" value="http://twitch.vn/player/skinPlayer/css/skin-player.css">
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                        <label>Custom JS</label>
+                                                        <input class="formGlobal" value="http://twitch.vn/player/skinPlayer/js/skin-player.js">
+                                                        </div>
+                                                    </div>                                                    
+                                                    <div class="rowCB">
+                                                        <button type="button" class="btn btnPrimary">Save</button>
+                                                        <button type="button" class="btn btnDefault btnCancelEditPlayer">Cancel</button>
+                                                    </div>
+                                                </div><!--end contentCustomBoxEdit -->
+                                            </div><!--end customBox -->
+                                            
+                                            <div class="customBox">
+                                                <div class="headCustomBox clearfix">
+                                                	<div class="switch_options floatLeft">
+                                                        <span class="switch_enable selected"> Enable </span>
+                                                        <span class="switch_disable"> Diable </span>
+                                                        <input type="hidden" class="switch_val" value="1">
+                                                    </div>
+                                                    <h4>Branding <span>(Shown on control bar)</span></h4>
+                                                    <button type="button" class="btn btnPrimarySmall btnEditPlayer">Edit</button>
+                                                </div>
+                                                <div class="contentCustomBox">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <p>Logo</p>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <div class="itemOptionImage">
+                                                                <img src="images/brand.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Logo URL</label>
+                                                            <p>http://twitch.vn/</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Logo style</label>
+                                                            <p>Icon</p>
+                                                        </div>
+                                                    </div> 
+                                                </div><!--end contentCustomBox -->
+                                                <div class="contentCustomBoxEdit">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB clearfix">
+                                                            <strong class="fixHeightField floatLeft">Logo</strong>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                        	<div class="itemOptionImage">
+                                                                <img src="images/brand.png">
+                                                            </div>
+                                                        	<div class="btn btnUploadFile btnPrimarySmall">
+                                                                <i class="fa fa-photo"></i>Change
+                                                                <input type="file" name="upload">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Logo URL</label>
+                                                            <input class="formGlobal" value="http://twitch.vn">
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>
+                                                                Logo style
+                                                            </label>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="radioLogoStyle" type="radio"> Box
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="radioLogoStyle" type="radio" checked> Icon
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <button type="button" class="btn btnPrimary">Save</button>
+                                                        <button type="button" class="btn btnDefault btnCancelEditPlayer">Cancel</button>
+                                                    </div>                                                
+                                                </div><!--end contentCustomBoxEdit -->
+                                            </div><!--end customBox -->
+
+                                        </div><!--end colCustomBox -->
+                                        <div class="colCustomBox">
+                                            <div class="customBox">
+                                                <div class="headCustomBox clearfix">
+                                                    <h4>General Settings</h4>
+                                                    <button type="button" class="btn btnPrimarySmall btnEditPlayer">Edit</button>
+                                                </div>
+                                                <div class="contentCustomBox">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB col-3">
+                                                            <label>Primary</label>
+                                                            <p>HTML</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Auto play</label>
+                                                            <p>On</p>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <label>Default Quality</label>
+                                                            <p>Auto</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Sizing</label>
+                                                            <p>Responsive</p>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <label>Aspect Ratio</label>
+                                                            <p>Custom(320x420)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Min height for mobile</label>
+                                                            <p>auto x 290</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Language</label>
+                                                            <p>English</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!--end contentCustomBox -->
+                                                <div class="contentCustomBoxEdit">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <strong>Autoplay</strong>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <div class="switch-checkbox floatRight">
+                                                                <input id="switchAutoplayGen" checked class="sc-toggle sc-toggle-round-flat" type="checkbox">
+                                                                <label for="switchAutoplayGen"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Primary</label>
+                                                            <select class="formGlobal">
+                                                                <option>HTML</option>
+                                                                <option>Flash</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <label>Default Quality</label>
+                                                            <select class="formGlobal">
+                                                            	<option>Auto</option>
+                                                                <option>1080 Full HD</option>
+                                                                <option>720 HD</option>
+                                                                <option>480</option>
+                                                                <option>360</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="subRowCB hasCol">
+                                                            <div class="fieldCB clearfix">
+                                                                <label>Sizing</label>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input value="responsive" name="radioSizing" type="radio" checked> Responsive
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input value="fixed" name="radioSizing" type="radio"> Fixed
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="responsiveSizing" class="subRowCB hasCol">
+                                                            <div class="fieldCB">
+                                                                <label>Aspect Ratio</label>
+                                                                <select class="formGlobal aspectRatio">
+                                                                    <option value="auto">Auto</option>
+                                                                    <option value="169">16:9</option>
+                                                                    <option value="43">4:3</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div id="fixedSizing" class="subRowCB hasCol">
+                                                            <div class="fieldCB">
+                                                                <label>Aspect Ratio</label>
+                                                                <select class="formGlobal aspectRatio">
+                                                                    <option value="custom">Custom</option>
+                                                                    <option value="169">16:9</option>
+                                                                    <option value="43">4:3</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div id="dimensions" class="subRowCB hasCol">
+                                                            <div class="fieldCB">
+                                                                <label>Player Dimensions (W x H)</label>
+                                                                <div class="wrapperDimension clearfix">
+                                                                    <input type="number" name="widthSizing" class="formGlobal" placeholder="width">
+                                                                    <span class="dimensionX">x</span>
+                                                                    <input type="number" name="heightSizing" disabled class="formGlobal" placeholder="height">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>
+                                                                <input id="cbMinHeight" type="checkbox">
+                                                                Min height for mobile
+                                                            </label>
+                                                            <div class="wrapperDimension clearfix">
+                                                                <input type="text" class="formGlobal" disabled value="auto">
+                                                                <span class="dimensionX">x</span>
+                                                                <input type="number" class="formGlobal" value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>
+                                                                Language
+                                                            </label>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="radioLanguage" type="radio" checked> English
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="radioLanguage" type="radio"> Vietnam
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <button type="button" class="btn btnPrimary">Save</button>
+                                                        <button type="button" class="btn btnDefault btnCancelEditPlayer">Cancel</button>
+                                                    </div>
+                                                </div><!--end contentCustomBoxEdit -->
+                                            </div><!--end customBox -->
+                                            <div class="customBox">
+                                                <div class="headCustomBox clearfix">
+                                                    <h4>During Play</h4>
+                                                    <button type="button" class="btn btnPrimarySmall btnEditPlayer">Edit</button>
+                                                </div>
+                                                <div class="contentCustomBox">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Social Sharing</label>
+                                                            <p>On</p>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <ul class="listOptionField clearfix">
+                                                                <li class="on"><i class="fa fa-facebook"></i></li>
+                                                                <li class="off"><i class="fa fa-google-plus"></i></li>
+                                                                <li class="on"><i class="fa fa-link"></i></li>
+                                                                <li class="on"><i class="fa fa-code"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Related Video Button</label>
+                                                            <p>On</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!--end contentCustomBox -->
+                                                <div class="contentCustomBoxEdit">
+                                                    <div class="rowCB">
+                                                        <div class="subRowCB hasCol">
+                                                            <div class="fieldCB">
+                                                                <strong>On/off Sharing</strong>
+                                                            </div>
+                                                            <div class="fieldCB">
+                                                                <div class="switch-checkbox">
+                                                                    <input id="switchSharingDuring" class="sc-toggle sc-toggle-round-flat" type="checkbox">
+                                                                    <label for="switchSharingDuring"></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="subRowCB socialNetwork">
+                                                            <div class="fieldCB">
+                                                                <div class="listOptionField clearfix">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input type="checkbox"> Facebook
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input type="checkbox"> Google +
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input type="checkbox"> Website
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input type="checkbox"> Embed
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <strong>Related Video Button</strong>
+                                                            <a class="linkSttingRelated" href="related_setting.html">Cài đặt related video</a>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <div class="switch-checkbox floatRight">
+                                                                <input id="switchRelateVideo" class="sc-toggle sc-toggle-round-flat" type="checkbox">
+                                                                <label for="switchRelateVideo"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <button type="button" class="btn btnPrimary">Save</button>
+                                                        <button type="button" class="btn btnDefault btnCancelEditPlayer">Cancel</button>
+                                                    </div>
+                                                </div><!--end contentCustomBoxEdit -->
+                                            </div><!--end customBox -->
+                                            <div class="customBox">
+                                                <div class="headCustomBox clearfix">
+                                                	<div class="switch_options floatLeft">
+                                                        <span class="switch_enable selected"> Enable </span>
+                                                        <span class="switch_disable"> Diable </span>
+                                                        <input type="hidden" class="switch_val" value="1">
+                                                    </div>
+                                                    <h4>Watermark <span>(Shown on screen)</span></h4>
+                                                    <button id="btnEditWatermark" type="button" class="btn btnPrimarySmall btnEditPlayer">Edit</button>
+                                                </div>
+                                                <div class="contentCustomBox">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <p>Logo</p>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <div class="itemOptionImage">
+                                                                <img src="images/logo-twitch.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                    
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Logo URL</label>
+                                                            <p>http://twitch.vn</p>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Max width</label>
+                                                            <p>10%</p>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Transperancy</label>
+                                                            <p>70%</p>
+                                                        </div>
+                                                    </div>  
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Position</label>
+                                                            <p>Bottom left</p>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>PosX</label>
+                                                            <p>10</p>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <label>PosY</label>
+                                                            <p>10</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Auto hide logo</label>
+                                                            <p>Yes</p>
+                                                        </div>
+                                                    </div> 
+                                                </div><!--end contentCustomBox -->
+                                                <div class="contentCustomBoxEdit">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB clearfix">
+                                                            <strong class="fixHeightField floatLeft">Logo</strong>
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <div class="itemOptionImage">
+                                                                <img src="images/logo-twitch.png">
+                                                            </div>
+                                                            <div class="btn btnUploadFile btnPrimarySmall">
+                                                                <i class="fa fa-photo"></i>Change
+                                                                <input type="file" name="upload">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Logo URL</label>
+                                                            <input class="formGlobal" value="http://twitch.vn">
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Max width</label>
+                                                            <div class="slider-wrapper">
+                                                                <input type="text" class="js-callback-maxWidth" />
+                                                                <div id="js-display-maxWidth" class="display-box">10</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>Transperancy</label>
+                                                            <div class="slider-wrapper">
+                                                                <input type="text" class="js-callback-transparent" />
+                                                                <div id="js-display-transparent" class="display-box">70</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB preview-watermark">
+                                                            <label>Position</label>
+                                                            <select id="posLogo" class="formGlobal">
+                                                                <option value="bottomRight">Bottom Right</option>
+                                                                <option value="bottomLeft">Bottom Left</option>
+                                                                <option value="topRight">Top Right</option>
+                                                                <option value="topLeft">Top Left</option>
+                                                            </select>
+                                                            <div class="preview-position">
+                                                                <div class="wrapper-pp">
+                                                                    <div class="pos-item top-left"></div>
+                                                                    <div class="pos-item top-right"></div>
+                                                                    <div class="pos-item bottom-left"></div>
+                                                                    <div class="pos-item bottom-right selected"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>PosX</label>
+                                                            <input type="number" class="formGlobal" value="10">
+                                                        </div>
+                                                        <div class="fieldCB">
+                                                            <label>PosY</label>
+                                                            <input type="number" class="formGlobal" value="10">
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB">
+                                                            <label>
+                                                                Auto hide logo
+                                                            </label>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="radioAutoHide" type="radio" checked> Yes
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="radioAutoHide" type="radio"> No
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <button type="button" class="btn btnPrimary">Save</button>
+                                                        <button type="button" class="btn btnDefault btnCancelEditPlayer">Cancel</button>
+                                                    </div>                                                
+                                                </div><!--end contentCustomBox -->
+                                            </div><!--end customBox -->
+                                            <div class="customBox">
+                                                <div class="headCustomBox clearfix">
+                                                    <h4>Applied to <span>(optional)</span></h4>
+                                                    <button type="button" class="btn btnPrimarySmall btnEditPlayer">Edit</button>
+                                                </div>
+                                                <div class="contentCustomBox">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption">
+                                                            <div class="optionFieldCB"><span></span></div>
+                                                            <p>All video</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption fixCategory">
+                                                            <div class="optionFieldCB selected"><span></span></div>
+                                                            <label>Category</label>
+                                                            <p>Entertaiment | Sport | Travel | Funny</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption fixCategory">
+                                                            <div class="optionFieldCB"><span></span></div>
+                                                            <label>Custom category</label>
+                                                            <p>Music | Sport | Travel | Funny</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption fixCategory">
+                                                            <div class="optionFieldCB"><span></span></div>
+                                                            <label>Tags</label>
+                                                            <p>beckham | messi | ronaldo | beckenbauer</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                    	<i class="note">If a video is match with conditions above but have applied the diffirent profile then video's setting is override.</i>
+                                                    </div>
+                                                </div><!--end contentCustomBox -->
+                                                <div class="contentCustomBoxEdit">
+                                                    <div class="rowCB">
+                                                        <div class="fieldCB hasOption">
+                                                            <div class="optionFieldCB"><span></span></div>
+                                                            <strong>All video</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB hasOption noCol">
+                                                        <div class="optionFieldCB selected"><span></span></div>
+                                                        <div class="fieldCB">
+                                                            <label>Category</label>                                                                
+                                                            <select name="section" multiple="multiple" class="selectCategory">
+                                                                <option selected="selected" value="option1">Sport</option>
+                                                                <option value="option2">News</option>
+                                                                <option value="option3">Aniamte</option>
+                                                                <option selected="selected" value="option4">Entertaiment</option>
+                                                                <option selected="selected" value="option5">Travel</option>
+                                                                <option selected="selected" value="option6">Funny</option>
+                                                                <option value="option7">Food</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB hasOption noCol">
+                                                        <div class="optionFieldCB"><span></span></div>
+                                                        <div class="fieldCB">
+                                                            <label>Custom category</label> 
+                                                            <select name="section" multiple="multiple" class="selectCategory formGlobal">
+                                                                <option selected="selected" value="option1">Sport</option>
+                                                                <option selected="selected" value="option2">Music</option>
+                                                                <option selected="selected" value="option3">Travel</option>
+                                                                <option selected="selected" value="option4">Funny</option>
+                                                                <option value="option5">Art</option>
+                                                                <option value="option6">Product</option>
+                                                                <option value="option7">Food</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB hasOption noCol">
+                                                        <div class="optionFieldCB"><span></span></div>
+                                                        <div class="fieldCB">
+                                                            <label>Tags</label>
+                                                            <input name="tags" id="tagsPlayer" class="formGlobal" value="beckham,messi,ronaldo,beckenbauer" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowCB">
+                                                        <button type="button" class="btn btnPrimary">Save</button>
+                                                        <button type="button" class="btn btnDefault btnCancelEditPlayer">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div><!--end customBox -->
+                                        </div><!--end colCustomBox -->
+                                    </div>
+                                </div><!--end content-sp -->
+
+                                <div class="actionForm mt20 clearfix">
+                                    <button type="button" class="btn btnPrimary floatRight">Publish</button>
+                                    <button type="button" class="btn btnDefault floatRight">Discard changes</button>
+                                </div>
+                            
+                            </div><!--end settingPlayer -->
+                            
+                        </div><!--end tabsGlobal -->
+                        
+                        
+                        
+                    </div><!--end content -->
+                        
+                    
+                </div><!--end wrapperContent -->
+            
+            </div><!--end containerTable -->
+        
+        </div><!--end container -->
+        
+    </div><!--end wrapper -->
+
+    <div class="popupWrapper">
+    
+        <div class="popup-overlay"></div>
+
+        <div style="width:720px;" class="popup notify advance">
+            <div class="popup-body">
+                <div class="popupContent rmb clearfix">
+                    <h3 class="title-notify">Preview player</h3>
+                    <div class="text-notify">Use these preview embed codes to review and test changes to the player before publishing it. DO NOT use these codes on production sites - use the published player embed code instead.</div>
+                    <div class="sub-title-notify">Player URL</div>
+                    <a class="link-notify" href="http://preview-players.brightcove.net/v1/accounts/4649357647001/players/77301eeb-083c-44b8-aafe-0df0f0222eb5/preview/embeds/default/master/index.html">http://preview-players.brightcove.net/v1/accounts/4649357647001/players/77301eeb-083c-44b8-aafe-0df0f0222eb5/preview/embeds/default/master/index.html</a>
+                    <div class="sub-title-notify">Standard Embed Code (recommended)</div>
+                    <input type="text" class="formGlobal" value='<div style="display: block; position: relative; max-width: 450px;"><div style="padding-top: 56.2511%;"><iframe src="//preview-players.brightcove.net/v1/accounts/4649357647001/players/77301eeb-083c-44b8-aafe-0df0f0222eb5/preview/embeds/default/master/index.html" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>' >
+                    <div class="button-notify">
+                        <button type="button" class="btn cyan clearPopup">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--end notify advance -->
+
+    </div><!-- end popupWrapper -->
+
+    
+</body>
+
+</html>

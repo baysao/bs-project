@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>News Detail | Netlink.vn</title>
+
+    <link href="css/fnl.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+<div id="page-top" class="wrapper">
+    
+    <div class="preloaderLogo">
+        <div class="wrapperLogo">
+            <div class="logoGrey">
+                <svg version="1.1" id="logoGrey" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <g>
+                    <path d="M74.414,60.321c1.315-8.921,4.665-18.802-6.335-10.013C61.19,55.806,52.225,66.49,44.423,72.999
+                        c-8.98,7.503-13.087,13.733-25.316,10.026c-5.268-1.592-7.427-5.282-5.877-12.137l5.953-22.02
+                        c-3.82,3.049-15.908,14.407-15.169,17.845c0.404,1.905,1.565,4.004,2.417,5.73c7.898,15.913,24.298,26.854,43.259,26.854
+                        c19.241,0,35.854-11.267,43.602-27.542c0.448-0.945,1.609-3.382,1.991-4.364c-1.991,0.507-4.971,0.551-7.396,0.531
+                        C78.433,67.844,73.814,64.467,74.414,60.321z"/>
+                    <path d="M88.224,19.271h-0.007C79.406,6.733,65.449,1.443,49.733,1.443c-26.005,0-47.212,21.232-48.226,46.989
+                        c6.85-6.367,26.776-30.278,35.805-30.677c5.542-0.235,8.75,2.314,10.239,6.644c0.984,2.922-2.98,10.001-3.977,12.445
+                        c-3.211,7.792-6.504,15.653-9.727,23.433c0.242,1.024,1.031,0.818,2.072,0.022c14.228-13.346,25.569-22.664,34.039-27.978
+                        c2.324-1.452,4.597-2.85,6.913-3.813c2.716-1.122,5.415-1.58,7.91-1.318c0.142,0.017,0.277,0.039,0.414,0.061
+                        c0.201,0.025,0.397,0.066,0.598,0.103c10.339,2.292,7.273,19.909,7.273,19.909c-0.37,1.484-0.757,2.971-1.146,4.45
+                        c-0.717,3.705,3.504,2.508,5.956,2.723C97.958,53.305,98,52.179,98,51.028c0-1.136-0.039-3.571-0.118-4.687
+                        C97.212,30.717,88.224,19.271,88.224,19.271z"/>
+                </g>
+                </svg>
+            </div>
+            <div class="logoBlue">
+                <svg version="1.1" id="logoBlue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <g>
+                    <path d="M74.414,60.321c1.315-8.921,4.665-18.802-6.335-10.013C61.19,55.806,52.225,66.49,44.423,72.999
+                        c-8.98,7.503-13.087,13.733-25.316,10.026c-5.268-1.592-7.427-5.282-5.877-12.137l5.953-22.02
+                        c-3.82,3.049-15.908,14.407-15.169,17.845c0.404,1.905,1.565,4.004,2.417,5.73c7.898,15.913,24.298,26.854,43.259,26.854
+                        c19.241,0,35.854-11.267,43.602-27.542c0.448-0.945,1.609-3.382,1.991-4.364c-1.991,0.507-4.971,0.551-7.396,0.531
+                        C78.433,67.844,73.814,64.467,74.414,60.321z"/>
+                    <path d="M88.224,19.271h-0.007C79.406,6.733,65.449,1.443,49.733,1.443c-26.005,0-47.212,21.232-48.226,46.989
+                        c6.85-6.367,26.776-30.278,35.805-30.677c5.542-0.235,8.75,2.314,10.239,6.644c0.984,2.922-2.98,10.001-3.977,12.445
+                        c-3.211,7.792-6.504,15.653-9.727,23.433c0.242,1.024,1.031,0.818,2.072,0.022c14.228-13.346,25.569-22.664,34.039-27.978
+                        c2.324-1.452,4.597-2.85,6.913-3.813c2.716-1.122,5.415-1.58,7.91-1.318c0.142,0.017,0.277,0.039,0.414,0.061
+                        c0.201,0.025,0.397,0.066,0.598,0.103c10.339,2.292,7.273,19.909,7.273,19.909c-0.37,1.484-0.757,2.971-1.146,4.45
+                        c-0.717,3.705,3.504,2.508,5.956,2.723C97.958,53.305,98,52.179,98,51.028c0-1.136-0.039-3.571-0.118-4.687
+                        C97.212,30.717,88.224,19.271,88.224,19.271z"/>
+                </g>
+                </svg>
+            </div>
+        </div>
+        <div class="percentage">0%</div>
+    </div>
+    
+    <div class="equa"></div>
+    
+    <header class="sub-page">
+        <div class="container">
+            <h1 class="brand">
+                <a href="index.html" title="Netlink.vn">
+                    Netlink.vn
+                </a>
+            </h1>
+            <nav class="nav-menu">
+                <div class="box-nav-menu">
+                    <button class="btn-nav-menu" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="first-section">
+        
+        <div class="top-section">
+            <div class="gap-blue"></div>
+            <div class="gap-white"></div>
+            <h1 class="title-page">News</h1>
+        </div> 
+        
+        <div class="block last">
+            <div class="container">
+
+                <div class="content-block clearfix">
+                    
+                    <div class="content-news">
+                        
+                        <h1>Youtube chọn Netlink làm đối tác tại thị trường Việt Nam</h1>
+                        <div class="date clearfix"><i class="fnl-stopwatch"></i>Ngày 30 tháng 04 Năm 2015</div>
+                        <p class="intro">Quý II năm 2014, Netlink đã ký kết hợp đồng với Youtube. Chính thức trở thành đối tác Certified Partner của Youtube tại thị trường Việt Nam. Nhân dịp này, Netlink ra mắt Metub Network - một dự án chuyên sâu về Youtube hướng tới hỗ trợ, thúc đẩy cho cộng đồng Youtuber và cộng đồng sáng tạo Video tại Việt Nam. </p>
+                        <p><img src="images/news-1.jpg" class="img-responsive"></p>
+                        <p>YouTube ra đời với mục đích trở thành website chia sẻ video lớn nhất thế giới. Hiện nay, ở khu vực Châu Á và đặc biệt là Đông Nam Á đang chứng kiến sự gia tăng hoạt động của YouTube với những thành công điển hình. Tuy nhiên, tại Việt Nam thì khái niệm xây dựng cộng đồng những nhà sáng tạo nội dung và tạo nguồn thu nhập từ chính “chất xám” của họ trên YouTube còn khá mới mẻ. Là đối tác mới của YouTube, Netlink sẽ hỗ trợ YouTube trong việc phát triển và mở rộng cộng đồng người dùng tại Việt Nam. Để thực hiện sứ mệnh này, Netlink đã và đang phát triển một dự án mang tính cộng đồng có tên là Metub Network, nhằm  xây dựng một mạng lưới truyền thông đa phương tiện có đầy đủ các tính năng cao cấp để đáp ứng nhu cầu thiết thực của người dùng.</p>
+                        <blockquote>
+                            <p>Those of us that had been up all night were in no mood for coffee and donuts, we wanted strong drink. We were, after all, the absolute cream of the national sporting press.</p>
+                        </blockquote>
+                        <p>Việc Metub-Netlink trở thành đối tác Certified của YouTube tại Việt Nam đã khẳng định quan hệ hợp tác chặt chẽ giữa hai bên, cùng hướng đến mục tiêu mang lại những dịch vụ tối ưu nhất, giúp các nhà sáng tạo nội dung nâng cao hiệu quả hoạt động và khả năng cạnh tranh, tạo ra lợi nhuận từ các sản phẩm video của họ. Netlink có thế mạnh là đơn vị sở hữu và vận hành nhiều trang kênh thông tin trên internet trải rộng ở các lĩnh vực khác nhau lên tới hàng triệu người sử dụng mỗi ngày. Tận dụng lợi thế đó, Metub Network ra đời cùng với một đội ngũ chuyên gia Youtube được đào tạo bài bản, am hiểu sâu sắc về lĩnh vực sẽ mang đến các lợi ích hỗ trợ tốt nhất cho cộng đồng như:</p>
+
+                        <ul>
+                            <li>- Hỗ trợ triển khai, xây dựng người dùng trên Youtube.</li>
+                            <li>- Tư vấn tham ra các chương trình Youtube Partner, kinh doanh kiếm tiền từ Youtube.</li>
+                            <li>- Hỗ trợ triển khai nội dung, tài trợ các dự án sáng tạo Video, clip.</li>
+                            <li>-  Hỗ trợ các vấn đề liên quan tới Youtube, sản phẩm, định hướng triển khai, bảo vệ bản quyền nội dung trên youtube.</li>
+                            <li>...</li>
+                        </ul>
+                        <p>Thông qua việc trở thành đối tác mới của YouTube, Công ty cổ phần truyền thông trực tuyến Netlink nói chung và dự án Metub Network nói riêng hứa hẹn sẽ trở thành lựa chọn hàng đầu của các nhà sản xuất video trực tuyến với số lượng người sử dụng lớn nhất Việt Nam trong thời gian sắp tới. Để tìm hiểu kĩ hơn về dự án Metub và cách thức gia mạng lưới đối tác của chúng tôi,các bạn có thể truy cập vào website chính thức của Metub: <a href="http://d.dev.mecloud.vn/backup/netlinkvn3/www.metub.net">www.metub.net</a></p>
+
+                        <div class="relate-news">
+                            <h3>Relate news</h3>
+                            <ul>
+                                <li><a href="news-detail.html#"><i class="fnl-right-open"></i>Netlink là đối tác truyền thông cho Gdayx tại Việt Nam</a></li>
+                                <li><a href="news-detail.html#"><i class="fnl-right-open"></i>Viettel chính thức tham gia "100 Thương hiệu đồng hành" cùng ĐS&PL</a></li>
+                                <li><a href="news-detail.html#"><i class="fnl-right-open"></i>Bia Đại Việt chọn Netlink là đối tác về marketing online</a></li>
+                                <li><a href="news-detail.html#"><i class="fnl-right-open"></i>Netlink và ĐS&PL hợp tác kinh doanh dịch vụ truyền thông Online</a></li>
+                                <li><a href="news-detail.html#"><i class="fnl-right-open"></i>Truyền thông hiệu quả với chiến dịch “Những điều Cần biết - Chưa biết”</a></li>
+                            </ul>
+                        </div>
+
+                    </div><!-- end content-help -->
+
+                </div><!-- end content-block clearfix -->
+                    
+            </div><!-- /container -->
+        </div><!-- end block -->
+        
+        
+    </section>
+        
+    <footer>
+    
+        <div class="top-footer">
+            <div class="wrapper-gap">
+                <div class="gap-blue-d"></div>
+                <div class="gap-dark-d"></div>
+            </div>
+            <a href="news-detail.html#" id="page-toplink" class="btn-top page-scroll" title="Back to top"><i class="fnl-up-open"></i></a>
+        </div>
+        
+        <div class="content-footer">
+            <div class="container">
+                <div class="row os-animation" data-os-animation="fadeIn">
+                    <div class="info-footer col-md-6">
+                        <h3>About Netlink</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quisquam, culpa, soluta hic aperiam porro ipsum nisi optio necessitatibus commodi dolorum sapiente voluptatem officiis similique maiores. Lorem ipsum dolor sit amet, tio necessitatibus commodi dolorum sapiente voluptique maior... <a href="about.html">readmore</a></p>
+                        <hr>
+                        <P><span>Ha Noi City</span> 4th Floor, Star Tower, Duong Dinh Nghe, Yen Hoa, Cau Giay</P>
+                        <P><span>Ho Chi Minh City</span> 179 Ly Chinh Thang, Dist.3</P>
+                    </div><!-- /col -->
+                    <div class="col-md-3">
+                        <h3>News</h3>
+                        <ul class="list-news-footer">
+                            <li><a href="news-detail.html#">iPhone 6 and 6 Plus review: bigger and better, but with stiffer.</a></li>
+                            <li><a href="news-detail.html#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                            <li><a href="news-detail.html#">We like to provide great site with complete features.</a></li>
+                        </ul>
+                    </div><!-- /col -->
+                    <div class="col-md-3">
+                        <h3>Newletter signup</h3>
+                        <p>Subscribe to Our Newsletter to get Important News, Amazing Offers & Inside Scoops:</p>
+                        <div class="input-group signup-form">
+                            <input type="text" class="form-control" placeholder="Your email">
+                            <span class="input-group-btn">
+                                <button class="btn btn-info" type="button"><i class="fnl-plane"></i></button>
+                            </span>
+                        </div>
+                        <ul class="social">
+                            <li><a href="news-detail.html#"><i class="fnl-facebook"></i></a></li>
+                            <li><a href="news-detail.html#"><i class="fnl-twitter"></i></a></li>
+                            <li><a href="news-detail.html#"><i class="fnl-google"></i></a></li>
+                        </ul>
+                    </div><!-- /col -->
+                </div><!-- /row -->
+            </div>
+        </div><!-- content-footer-->
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright © Netlink.vn 2015</p>
+            </div>
+        </div> 
+        
+    </footer>
+</div><!-- end wrapper -->
+    <!--Global js-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/fastclick.min.js"></script>
+    <script src="js/global.js" type="text/javascript"></script>
+    <!--End Global js-->
+    
+    <!--Page js-->
+    <script src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script src="js/waypoint.min.js"></script>
+    <script src="js/waypointInit.js"></script>
+    <script src="js/subPage.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+
+            //Load sub page
+            var imagePage = [
+                'images/bg-office.jpg',
+                'images/news-1.jpg'
+            ];
+            preloaderPage('subPage', imagePage);
+            
+            //load menu
+            nav_menu();
+
+        });
+    </script>
+    <!--End Page js-->
+
+</body>
+</html>

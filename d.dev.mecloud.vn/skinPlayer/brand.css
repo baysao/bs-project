@@ -1,0 +1,30 @@
+/* Font Color */
+/* Background Color */
+/* Mixins */
+/******************************************/
+/*** brand ***/
+/******************************************/
+.btn-brand {
+  padding: 0;
+  margin: 0;
+  height: 40px;
+  display: table;
+  text-align: center;
+}
+.btn-brand span {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.btn-brand.icon-style {
+  padding: 0 10px;
+}
+.btn-brand.icon-style .img-brand {
+  max-height: 22px;
+  display: block;
+}
+.btn-brand.box-style .img-brand {
+  max-height: 40px;
+  display: block;
+  margin-right: -1px;
+}

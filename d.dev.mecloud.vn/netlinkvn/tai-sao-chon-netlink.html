@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Tại sao bạn chọn Netlink?</title>
+
+    <link href="css/fnl.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+<div id="page-top" class="wrapper">
+    
+    <div class="preloaderLogo">
+        <div class="wrapperLogo">
+            <div class="logoGrey">
+                <svg version="1.1" id="logoGrey" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <g>
+                    <path d="M74.414,60.321c1.315-8.921,4.665-18.802-6.335-10.013C61.19,55.806,52.225,66.49,44.423,72.999
+                        c-8.98,7.503-13.087,13.733-25.316,10.026c-5.268-1.592-7.427-5.282-5.877-12.137l5.953-22.02
+                        c-3.82,3.049-15.908,14.407-15.169,17.845c0.404,1.905,1.565,4.004,2.417,5.73c7.898,15.913,24.298,26.854,43.259,26.854
+                        c19.241,0,35.854-11.267,43.602-27.542c0.448-0.945,1.609-3.382,1.991-4.364c-1.991,0.507-4.971,0.551-7.396,0.531
+                        C78.433,67.844,73.814,64.467,74.414,60.321z"/>
+                    <path d="M88.224,19.271h-0.007C79.406,6.733,65.449,1.443,49.733,1.443c-26.005,0-47.212,21.232-48.226,46.989
+                        c6.85-6.367,26.776-30.278,35.805-30.677c5.542-0.235,8.75,2.314,10.239,6.644c0.984,2.922-2.98,10.001-3.977,12.445
+                        c-3.211,7.792-6.504,15.653-9.727,23.433c0.242,1.024,1.031,0.818,2.072,0.022c14.228-13.346,25.569-22.664,34.039-27.978
+                        c2.324-1.452,4.597-2.85,6.913-3.813c2.716-1.122,5.415-1.58,7.91-1.318c0.142,0.017,0.277,0.039,0.414,0.061
+                        c0.201,0.025,0.397,0.066,0.598,0.103c10.339,2.292,7.273,19.909,7.273,19.909c-0.37,1.484-0.757,2.971-1.146,4.45
+                        c-0.717,3.705,3.504,2.508,5.956,2.723C97.958,53.305,98,52.179,98,51.028c0-1.136-0.039-3.571-0.118-4.687
+                        C97.212,30.717,88.224,19.271,88.224,19.271z"/>
+                </g>
+                </svg>
+            </div>
+            <div class="logoBlue">
+                <svg version="1.1" id="logoBlue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                <g>
+                    <path d="M74.414,60.321c1.315-8.921,4.665-18.802-6.335-10.013C61.19,55.806,52.225,66.49,44.423,72.999
+                        c-8.98,7.503-13.087,13.733-25.316,10.026c-5.268-1.592-7.427-5.282-5.877-12.137l5.953-22.02
+                        c-3.82,3.049-15.908,14.407-15.169,17.845c0.404,1.905,1.565,4.004,2.417,5.73c7.898,15.913,24.298,26.854,43.259,26.854
+                        c19.241,0,35.854-11.267,43.602-27.542c0.448-0.945,1.609-3.382,1.991-4.364c-1.991,0.507-4.971,0.551-7.396,0.531
+                        C78.433,67.844,73.814,64.467,74.414,60.321z"/>
+                    <path d="M88.224,19.271h-0.007C79.406,6.733,65.449,1.443,49.733,1.443c-26.005,0-47.212,21.232-48.226,46.989
+                        c6.85-6.367,26.776-30.278,35.805-30.677c5.542-0.235,8.75,2.314,10.239,6.644c0.984,2.922-2.98,10.001-3.977,12.445
+                        c-3.211,7.792-6.504,15.653-9.727,23.433c0.242,1.024,1.031,0.818,2.072,0.022c14.228-13.346,25.569-22.664,34.039-27.978
+                        c2.324-1.452,4.597-2.85,6.913-3.813c2.716-1.122,5.415-1.58,7.91-1.318c0.142,0.017,0.277,0.039,0.414,0.061
+                        c0.201,0.025,0.397,0.066,0.598,0.103c10.339,2.292,7.273,19.909,7.273,19.909c-0.37,1.484-0.757,2.971-1.146,4.45
+                        c-0.717,3.705,3.504,2.508,5.956,2.723C97.958,53.305,98,52.179,98,51.028c0-1.136-0.039-3.571-0.118-4.687
+                        C97.212,30.717,88.224,19.271,88.224,19.271z"/>
+                </g>
+                </svg>
+            </div>
+        </div>
+        <div class="percentage">0%</div>
+    </div>
+    
+    <div class="equa"></div>
+    
+    <header class="sub-page">
+        <div class="container">
+            <h1 class="brand">
+                <a href="index.html" title="Netlink.vn">
+                    Netlink.vn
+                </a>
+            </h1>
+            <nav class="nav-menu">
+                <div class="box-nav-menu">
+                    <button class="btn-nav-menu" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="first-section">
+        
+        <div class="top-section">
+            <div class="gap-blue"></div>
+            <div class="gap-white"></div>
+            <h1 class="title-page">News</h1>
+        </div> 
+        
+        <div class="block last">
+            <div class="container">
+
+                <div class="content-block clearfix">
+                    
+                    <div class="content-news">
+                        
+                        <h1>Tại sao bạn chọn Netlink?</h1>
+                        <div class="date clearfix"><i class="fnl-stopwatch"></i>Ngày 14 tháng 09 Năm 2015</div>
+                        <p class="intro">Netlink tự hào là một những công ty đầu tiên tại Việt Nam tham gia vào thị trường quảng cáo trực tuyến và nổi bật nhất trong số đó là dịch vụ quảng cáo Google Adwords.</p>
+                        <p><img src="images/news-chose-netlink.jpg" class="img-responsive"></p>
+                        <p>Netlink tự hào là một những công ty đầu tiên tại Việt Nam tham gia vào thị trường quảng cáo trực tuyến và nổi bật nhất trong số đó là dịch vụ quảng cáo Google Adwords. Với hơn 3 năm kinh nghiệm trong lĩnh vực quảng cáo Google Adwords và hơn 100 khách hàng thân thiết, Netlink hiểu rõ hơn ai hết điều mà khách hàng thực sự mong muốn khi tìm đến Netlink như một đối tác rất hiệu quả và đáng tin cậy. Đó chính là:</p>
+                        <ul>
+                        	<li>Hiệu quả cao: Với đội ngũ chuyên gia tư vấn và triển khai dịch vụ chuyên nghiệp, Netlink hiểu rõ và biết phải làm thế nào để giúp khách hàng phải trả chi phí thấp nhất có thể nhưng vẫn mang lại giá trị cao thông qua quy trình khảo sát và phân tích chiến dịch chặt chẽ ngay từ đầu.</li>
+                            <li>Chi phí thấp: Netlink giúp khách hàng đạt được hiệu quả hơn những gì khách hàng mong muốn, các vị trí quảng cáo của khách hàng luôn đứng ở vị trí cao hơn so với các đối thủ khác, mang lại lượng khách hàng tiềm năng rất lớn đến từ quảng cáo trực tuyến.</li>
+                            <li>Chuyên nghiệp: Với 6 bước được quy định và đóng gói chặt chẽ, Netlink luôn tuân thủ những quy định ngặt nghèo và khắt khe nhất từ phía Google cũng như từ phía khách hàng bao gồm chính sách quyền riêng tư, chính sách khuyến mãi, hậu mãi cũng như hỗ trợ và báo cáo hiệu quả chiến dịch theo yêu cầu của khách hàng tại bất kỳ thời điểm nào.</li>
+                        </ul>
+                        <p>Bạn còn chần chừ gì nữa ? Hãy liên hệ với chúng tôi ngay hôm nay để bắt đầu bùng nổ doanh thu của bạn !</p>
+
+                    </div><!-- end content-news -->
+                    
+                    <div class="relate-news">
+                        <h3>Relate news</h3>
+                        <ul>
+                            <li><a href="loi-ich-gi-khi-tham-gia-chuong-trinh-adsence-voi-netlink.html"><i class="fnl-right-open"></i>Lợi ích gì khi tham gia chương trình Adsence với Netlink?</a></li>
+                            <li><a href="dieu-kien-tham-gia-certified-partner-cua-netlink.html"><i class="fnl-right-open"></i>Điều kiện tham gia Certified Partner của Netlink?</a></li>
+                            <li><a href="http://d.dev.mecloud.vn/netlinkvn/netlink-tro-thanh-certified-partner-cua-google-adsense-tai-viet-nam"><i class="fnl-right-open"></i>Netlink trở thành “Certified Partner” của Google AdSense tại Việt Nam</a></li>
+                            <li><a href="chan-dung-nha-lanh-dao-netlink.html"><i class="fnl-right-open"></i>Chân dung nhà lãnh đạo Netlink</a></li>
+                            <li><a href="han-che-rui-ro-khi-kiem-tien-bang-google-adsense.html"><i class="fnl-right-open"></i>Hạn chế rủi ro khi kiếm tiền bằng Google AdSense</a></li>
+                            <li><a href="kiem-tien-online-va-nhung-dieu-khong-phai-ai-cung-biet.html"><i class="fnl-right-open"></i>Kiếm tiền Online và những điều không phải ai cũng biết</a></li>
+                        </ul>
+                    </div>
+
+                </div><!-- end content-block clearfix -->
+                    
+            </div><!-- /container -->
+        </div><!-- end block -->
+        
+        
+    </section>
+        
+    <footer>
+    
+        <div class="top-footer">
+            <div class="wrapper-gap">
+                <div class="gap-blue-d"></div>
+                <div class="gap-dark-d"></div>
+            </div>
+            <a href="tai-sao-chon-netlink.html#" id="page-toplink" class="btn-top page-scroll" title="Back to top"><i class="fnl-up-open"></i></a>
+        </div>
+        
+        <div class="content-footer">
+            <div class="container">
+                <div class="row os-animation" data-os-animation="fadeIn">
+                    <div class="info-footer col-md-6">
+                        <h3>About Netlink</h3>
+                        <p>Established in 2007 by dedicated and talented top managers, Netlink has been growing constantly and become a leading online communication corporation in Vietnam with more than 200 employees. We have four strong businesses... <a href="about.html">readmore</a></p>
+                        <hr>
+                        <P><span>Ha Noi City</span> 4th Floor, Star Tower, Duong Dinh Nghe, Yen Hoa, Cau Giay</P>
+                        <P><span>Ho Chi Minh City</span> 179 Ly Chinh Thang, Dist.3</P>
+                        <ul class="social">
+                            <li><a href="tai-sao-chon-netlink.html#"><i class="fnl-facebook"></i></a></li>
+                            <li><a href="tai-sao-chon-netlink.html#"><i class="fnl-twitter"></i></a></li>
+                            <li><a href="tai-sao-chon-netlink.html#"><i class="fnl-google"></i></a></li>
+                        </ul>
+                    </div><!-- /col -->
+                    <div class="col-md-3">
+                        <h3>WHO YOU ARE?</h3>
+                        <ul class="list-news-footer">
+                            <li><a href="publisher.html">Publisher</a></li>
+                            <li><a href="startup.html">Startup</a></li>
+                            <li><a href="advertiser.html">Advertiser</a></li>
+                            <li><a href="creator.html">Creator</a></li>
+                            <li><a href="investor.html">Investor</a></li>
+                        </ul>
+                    </div><!-- /col -->
+                    <div class="col-md-3">
+                        <h3>WHAT YOU NEED?</h3>
+                        <ul class="list-news-footer">
+                            <li><a href="marketing.html">PR & marketing</a></li>
+                            <li><a href="content.html">Content</a></li>
+                            <li><a href="monetize.html">Monetize</a></li>
+                            <li><a href="jobs.html">Jobs</a></li>
+                        </ul>
+                    </div><!-- /col -->
+                    
+                </div><!-- /row -->
+            </div>
+        </div><!-- content-footer-->
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright © Netlink.vn 2015</p>
+            </div>
+        </div> 
+        
+    </footer>
+</div><!-- end wrapper -->
+    <!--Global js-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/fastclick.min.js"></script>
+    <script src="js/global.js" type="text/javascript"></script>
+    <!--End Global js-->
+    
+    <!--Page js-->
+    <script src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script src="js/waypoint.min.js"></script>
+    <script src="js/waypointInit.js"></script>
+    <script src="js/subPage.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+
+            //Load sub page
+            var imagePage = [
+                'images/bg-office.jpg',
+                'images/news-adsense.jpg'
+            ];
+            preloaderPage('subPage', imagePage);
+            
+            //load menu
+            nav_menu();
+
+        });
+    </script>
+    <!--End Page js-->
+
+</body>
+</html>

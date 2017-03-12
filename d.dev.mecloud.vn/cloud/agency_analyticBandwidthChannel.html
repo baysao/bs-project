@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024" /> 
+    <title>Agency - Thống kê BW/ST channel</title>
+    <!-- Global CSS -->
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+    <!-- End Global CSS -->
+    
+    <!-- Page CSS -->
+    <link href="css/datepicker.css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/cropper.css" type="text/css" rel="stylesheet">
+    <!-- End Page CSS -->
+    
+    <!-- Global Script -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script src="js/global.js"></script>
+    <!-- End Global Script -->
+    
+    <!-- flot chart -->
+    <script src="js/flotChart/jquery.flot.min.js"></script>
+	<script src="js/flotChart/jquery.flot.tooltip.min.js"></script>
+    <script src="js/flotChart/jquery.flot.resize.js"></script>
+    <script src="js/flotChart/jquery.flot.categories.js"></script>
+    <script src="js/flotChart/jquery.flot.pie.min.js"></script>
+    <!-- end flot chart -->
+    
+    <!-- Page Script -->
+    <script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/analytics.js"></script>
+    <!--End Page Script -->
+</head>
+
+<body>
+    <div class="wrapper">
+    	
+        <div class="container">
+        
+            <div class="containerTable">
+            
+                <div class="sidebar">
+                    <div class="btn-expand">
+                        <span></span>
+                        <span></span>
+                        <span></span>	
+                    </div>
+                	<div class="bg-overlay"></div>
+                    <div class="sidebarFixed">
+                        <div class="logo">
+                            <a href="#" title="Meme Cloud">Meme Cloud</a>
+                        </div>
+                        
+                        <div class="mainMenu">
+    
+                           <ul id="nav">
+                              <li><a href="#" class="active"><i class="fa fa-globe"></i>Agency Netlink <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="agency_allVideoAgency.html">Tất cả video</a></li>
+                                  <li><a href="agency_allChannel.html" class="selected">Channel</a></li>
+                                  <li><a href="agency_managerUser.html">Người dùng</a></li>
+                                  <li><a href="agency_analytic.html">Thống kê</a></li>
+<li><a href="agency_activity.html">Activity</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-video-camera"></i>Video <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="allVideo.html">Tất cả video</a></li>
+                                  <li><a href="allVideoApprove.html">Duyệt video<span class="numMenu">20</span></a></li>
+                                  <li><a href="upload.html">Upload video mới</a></li>
+                                  <li><a href="uploadBulk.html">Upload cùng lúc</a></li>
+                                  <li><a href="allPlaylist.html">Danh sách phát</a></li>
+                                  <li><a href="categoryManager.html">Quản lý chuyên mục</a></li>
+                                  <li><a href="playerSetting.html">Cài đặt Player</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-bar-chart-o"></i>Thống kê<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="analytics.html">Tổng quan</a></li>
+                                  <li><a href="userAnalytic.html">Theo người dùng</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-wifi"></i>Phát trực tiếp <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="listStreaming.html">Danhs sách phát trực tiếp</a></li>
+                                  <li><a href="upload.html">Tạo sự kiện phát</a></li>
+                                </ul>
+                              </li>
+<li><a href="userManager.html"><i class="fa fa-user"></i>Người dùng</a>
+                              </li>
+                              <li><a href="#"><i class="fa fa-bullhorn"></i>Quảng cáo<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="domainManager.html">Quản lý trang web</a></li>
+                                  <li><a href="adMannagerGlobal.html">Quản lý Adtag</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-wrench"></i>Công cụ<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="alert.html">UI Alert</a></li>
+<li><a href="customEmbed.html">Mã nhúng tùy chỉnh</a></li>
+                                  <li><a href="channelConfig.html">Cấu hình channel</a></li>
+<li><a href="exportData.html">Trích xuất nâng cao</a></li>
+<li><a href="related_setting.html">Cài đặt video liên quan</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!--end sidebar -->
+                
+                
+                
+                <div class="wrapperContent">
+                	
+                    <div class="header clearfix">
+                    	
+                        <div class="searchBox">
+                        	<button type="submit" class="btn btnSearch"><i class="fa fa-search"></i></button>
+                            <input class="formGlobal seachInput" placeholder="Nhập tên hoặc id video..." />
+                        </div>
+                        
+                        <div class="account">
+                        	<div class="notification support">
+                        		<a href="#"><i class="fa fa-headphones"></i>Cần hỗ trợ?</a>
+                                <ul class="menuAccount">
+                                    <li><a href="#"><i class="fa fa-phone"></i>0904916386</a></li>
+                                	<li><a href="#" class="supportMail"><i class="fa fa-envelope"></i>support@mecloud.vn</a></li>
+                                    <li><a href="https://www.facebook.com/mecloud.vn" class="fanPage"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                </ul>
+                            </div>
+							<div class="userAcount dropdown">
+                            	<a href="#" class="channelName btnDropdown">Đời sống & pháp luật<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdownDiv menuChannel">
+                                	<div class="swithChannel">Quản lý channel:</div>
+                                    <ul class="scrollable">
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        	<div class="notification"><a href="upload.html" class="notificationIco"><i class="fa fa-cloud-upload"></i></a></div>
+                        	<div class="notification dropdown">
+                            	<a href="#" class="notificationIco btnDropdown"><i class="fa fa-bell"></i><span class="numNof">2</span></a>
+                                <div class="dropdownDiv boxNof">
+                                	<div class="headBoxNof">
+                                    	Bạn có 2 thông báo 
+                                    </div>
+                                    <ul class="listNof scrollable">
+                                    	<li>
+                                        	<a href="activityVideo.html">
+                                            	<img class="thumbNof" src="images/avatar2.jpg" />
+                                            	Video <span class="boldNof strimTitleVideo">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                            	Video <span class="boldNof strimTitleVideo">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="activityVideo.html">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                                Video <span class="boldNof strimTitleVideo">Muônkiểuhành_xử_'xấu'_của_người_Việt_khi_gặp_Cảnh_sát_giao_thôngMuônkiểuhành_xử_'xấu'_của_người_Việt_khi_gặp_Cảnh_sát_giao_thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                            	<span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar2.jpg" />
+                                            	Video <span class="boldNof strimTitleVideo">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                                Video <span class="boldNof strimTitleVideo">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span>
+                                          	</a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                                <span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar3.jpg" />
+                                                Video <span class="boldNof strimTitleVideo">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="footerBoxNof"><a href="notificationUser.html">Xem tất cả</a></div>
+                                </div>
+                            </div>
+                            
+                            <div class="notification userAcount dropdown">
+                            	<a href="#" class="notificationIco userName btnDropdown"><i class="fa fa-cog"></i></a>
+                                <a href="#" class="userThumb"><img src="images/user.jpg" alt="Messi" /></a>
+                                <ul class="dropdownDiv menuAccount">
+                                	<li><a href="changeProfile.html"><i class="fa fa-edit"></i>Đổi thông tin tài khoản</a></li>
+                                    <!--<li><a href="#"><i class="fa fa-user"></i>Tình trạng tài khoản</a></li>-->
+                                    <li><a href="support.html"><i class="fa fa-envelope"></i>Hỗ trợ</a></li>
+                                    <li><a href="#"><i class="fa fa-sign-out"></i>Thoát</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div><!--end header -->
+                    
+                    <div class="content">
+                        
+                        <div class="boxBreadcrumb">
+                            <ul class="breadcrumb clearfix">
+                                <li><a href="#">Meme Cloud</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#">Agency Netlink</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#">Danh sách channel</a><i class="fa fa-angle-right"></i></li>
+                                <li class="active">
+                                    Thống kê BW/ST channel
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tabsGlobal">
+                        
+                            <ul class="tabs analytics">
+                                <li class="simple">Thống kê BW/ST channel</li>
+                                <li class="pickRangeTime">
+                                    <span class="txtRangeTime">Chọn thời điểm</span>
+                                    <span class="btnPickTime">1/11/2014 đến 10/11/2014 <i class="fa fa-caret-down"></i></span>
+                                </li>
+                            </ul>
+                            
+                            <div class="tabsContentGlobal">
+                            
+                            	<div class="wRangeTime">
+                                
+                                    <div class="rangeTime clearfix">
+                                    
+                                        <div class="quickTime">
+                                            <div class="formGroup">
+                                                <label>Xem nhanh các khoảng ngày</label>
+                                                <ul>
+                                                    <li><a href="#">Hôm nay: 15/12</a></li>
+                                                    <li><a href="#">Hôm qua: 14/12</a></li>
+                                                    <li><a href="#">7 ngày qua</a></li>
+                                                    <li><a href="#">30 ngày qua</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a href="#">Tháng này: tháng 12</a></li>
+                                                    <li><a href="#">Tháng trước: tháng 11</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="calendarTime">
+                                            <div class="formGroup">
+                                                <label>Chọn khoảng ngày</label>
+                                                <div class="calendar">
+                                                    <span class="fa fa-calendar"></span>
+                                                    <input id="dp" class="formGlobal calendar" type="text" data-date-format="dd-mm-yyyy" value="01-11-2014">
+                                                </div>
+                                                <div class="calendar">
+                                                    <span class="fa fa-calendar"></span>
+                                                    <input id="dp1" class="formGlobal calendar" type="text" data-date-format="dd-mm-yyyy" value="05-11-2014">
+                                                </div>
+                                                <button type="submit" class="btn btnPrimary">OK</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                
+                                </div>
+                                <div class="rowVideo">
+                                    <div class="infoGeneral">
+                                        <div class="nameChannel blue-bg clearfix">
+                                        	<div class="l-namechannel">
+                                                <h2><span>Thể thao 24/7</span></h2>
+                                                <a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a>
+                                            </div>
+                                            <div class="r-namechannel">
+                                                <p>Ngày tạo: <span>10:41 | 13/04/2015</span></p>
+                                                <p>Trạng thái: <span>Đang hoạt động</span></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="statusAnalyticChannel">
+                                            <div class="col-sac cyan-bg">Tổng băng thông<br /><span>30 GB</span></div>
+                                            <div class="col-sac green-bg">Dung lượng<br /><span>600 GB</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chartVideo">
+                                    <div class="formGroup">
+                                        <div id="seekChart" style="height:342px"></div>
+                                    </div><!--end formGroup -->
+                                </div>
+                                        
+                                <div id="allVideoTab" class="tableData pdtb20 current">
+                                    <div class="tableDataVideo">
+                                        <div class="CSSTableGenerator" >
+                                            <table >
+                                                <tr>
+                                                    <td width="93">
+                                                        Hình ảnh
+                                                    </td>
+                                                    <td style="text-align:left;">
+                                                        Tiêu đề
+                                                    </td>
+                                                    <td>
+                                                        Lượt xem
+                                                    </td>
+                                                    <td>
+                                                        Độ dài video
+                                                    </td>
+                                                    <td>
+                                                        Tổng băng thông
+                                                    </td>
+                                                    <td>
+                                                        Tổng dung lượng
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo analytics"><img src="images/video-img.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td >
+                                                        <a href="#" class="titleDataVideo" target="_blank">Lệ Rơi, Đỗ Duy Nam ft Hữu Công - Chắc Ai Đó Sẽ Về (Cover)</a><br />id: <span class="idDataVideo">NHL68BHH</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        1,566,456
+                                                    </td>
+                                                    <td class="text-center">
+                                                        05:10
+                                                    </td>
+                                                    <td class="text-center">
+                                                        150 MB
+                                                    </td>
+                                                    <td class="text-center">
+                                                        300 MB
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo analytics"><img src="images/img1.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td >
+                                                        <a href="#" class="titleDataVideo" target="_blank">Chắc Ai Đó Sẽ Về (Cover)</a><br />id: <span class="idDataVideo">NHL68BHH</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        1,566,456
+                                                    </td>
+                                                    <td class="text-center">
+                                                        05:10
+                                                    </td>
+                                                    <td class="text-center">
+                                                        150 MB
+                                                    </td>
+                                                    <td class="text-center">
+                                                        300 MB
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo analytics"><img src="images/img2.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td >
+                                                        <a href="#" class="titleDataVideo" target="_blank">Chắc Ai Đó Sẽ Về - Lệ Rơi, Đỗ Duy Nam ft Hữu Công</a><br />id: <span class="idDataVideo">NHL68BHH</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        1,566,456
+                                                    </td>
+                                                    <td class="text-center">
+                                                        05:10
+                                                    </td>
+                                                    <td class="text-center">
+                                                        150 MB
+                                                    </td>
+                                                    <td class="text-center">
+                                                        300 MB
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo analytics"><img src="images/video-img.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td >
+                                                        <a href="#" class="titleDataVideo" target="_blank">Lệ Rơi, Đỗ Duy Nam ft Hữu Công - Chắc Ai Đó Sẽ Về (Cover)</a><br />id: <span class="idDataVideo">NHL68BHH</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        1,566,456
+                                                    </td>
+                                                    <td class="text-center">
+                                                        05:10
+                                                    </td>
+                                                    <td class="text-center">
+                                                        150 MB
+                                                    </td>
+                                                    <td class="text-center">
+                                                        300 MB
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo analytics"><img src="images/img1.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td >
+                                                        <a href="#" class="titleDataVideo" target="_blank">Chắc Ai Đó Sẽ Về (Cover)</a><br />id: <span class="idDataVideo">NHL68BHH</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        1,566,456
+                                                    </td>
+                                                    <td class="text-center">
+                                                        05:10
+                                                    </td>
+                                                    <td class="text-center">
+                                                        150 MB
+                                                    </td>
+                                                    <td class="text-center">
+                                                        300 MB
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo analytics"><img src="images/img2.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td >
+                                                        <a href="#" class="titleDataVideo" target="_blank">Chắc Ai Đó Sẽ Về - Lệ Rơi, Đỗ Duy Nam ft Hữu Công</a><br />id: <span class="idDataVideo">NHL68BHH</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        1,566,456
+                                                    </td>
+                                                    <td class="text-center">
+                                                        05:10
+                                                    </td>
+                                                    <td class="text-center">
+                                                        150 MB
+                                                    </td>
+                                                    <td class="text-center">
+                                                        300 MB
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                            </table>
+                                        </div>
+                                    </div><!--end tableDataVideo -->
+                                </div><!--end tableData -->
+                            </div><!--end tabsContentGlobal -->
+                            
+                        </div><!--end tabsGlobal -->
+                    </div><!--end content -->
+                    
+                </div><!--end wrapperContent -->
+            
+            </div><!--end containerTable -->
+        
+        </div><!--end container -->
+        
+    </div><!--end wrapper -->
+
+   
+    
+    
+</body>
+
+</html>

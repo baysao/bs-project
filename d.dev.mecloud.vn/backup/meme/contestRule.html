@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Contest| MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese,latin-ext' rel='stylesheet' type='text/css'> 
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/contestMeme.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- start global script-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/disableScrollBar.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <!-- end global script-->
+    
+    <!-- start page script-->
+    <script src="js/owl.carousel.js"></script>
+    <!-- end page script-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+					
+			//slider contest
+			var sync1 = $("#sync1");
+			var sync2 = $("#sync2");
+			 
+			sync1.owlCarousel({
+				singleItem : true,
+				autoPlay   : true,
+				slideSpeed : 1000,
+				navigation: false,
+				pagination:false,
+				afterAction : syncPosition,
+				responsiveRefreshRate : 200,
+			});
+			 
+			sync2.owlCarousel({
+				items : 5,
+				itemsDesktop : [1199,5],
+				itemsDesktopSmall : [979,5],
+				itemsTablet : [768,5],
+				itemsMobile : [479,5],
+				pagination:false,
+				responsiveRefreshRate : 100,
+				afterInit : function(el){
+				el.find(".owl-item").eq(0).addClass("synced");
+				}
+			});
+			 
+			function syncPosition(el){
+				var current = this.currentItem;
+				$("#sync2")
+				.find(".owl-item")
+				.removeClass("synced")
+				.eq(current)
+				.addClass("synced")
+				if($("#sync2").data("owlCarousel") !== undefined){
+				center(current)
+				}
+			}
+			 
+			$("#sync2").on("click", ".owl-item", function(e){
+				e.preventDefault();
+				var number = $(this).data("owlItem");
+				sync1.trigger("owl.goTo",number);
+			});
+				 
+			function center(number){
+				var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
+				var num = number;
+				var found = false;
+				for(var i in sync2visible){
+					if(num === sync2visible[i]){
+					var found = true;
+				}
+			}
+				 
+				if(found===false){
+					if(num>sync2visible[sync2visible.length-1]){
+					sync2.trigger("owl.goTo", num - sync2visible.length+2)
+				}else{
+				if(num - 1 === -1){
+					num = 0;
+				}
+					sync2.trigger("owl.goTo", num);
+				}
+				} else if(num === sync2visible[sync2visible.length-1]){
+					sync2.trigger("owl.goTo", sync2visible[1])
+				} else if(num === sync2visible[0]){
+					sync2.trigger("owl.goTo", num-1)
+				}
+			}
+		 
+        });
+    </script>
+	<script src="js/global.js"></script>
+    
+  </head>
+  <body id="backtotop">
+  
+  <div id="header">
+        <div class="container-fluid">
+            <div class="col-xs-7 col-md-4 col-sm-4" style="position:relative;">
+                <a href="contestRule.html#" class="logo-s">meme.vn</a>
+                
+                <span class="browseCategory">
+                	<span class="dropdown">
+                      <a href="contestRule.html#" data-toggle="dropdown" class="browse clearfix"><i class="fa fa-bars"></i>  <i class="fa fa-caret-down"></i></a>
+                      <div class="dropdown-menu main-menu arrowTop">
+                      		<div class="arrow"></div>
+                            <div class="search visible-xs">
+                                <input class="search-top returnFalse form-control" type="text" placeholder="Keyword..." />
+                                <button class="btn search-btn" type="submit"><span class="icon icon-search"></span></button>
+                            </div><!-----------end search------------>
+                            <div class="wrapper-menu scrollable">
+                                <ul class="menu">
+                                    <li><a href="contestRule.html#" class="menu-hot">Hot</a></li>
+                                    <li><a href="contestRule.html#" class="menu-hot">Xem nhiều</a></li>
+                                    <li><a href="contestRule.html#" class="menu-hot">Phim</a></li>
+                                    <li><a href="contestRule.html#">Sự kiện</a></li>
+                                    <li><a href="contestRule.html#">Tin tức</a></li>
+                                    <li><a href="contestRule.html#">Hài</a></li>
+                                    <li><a href="contestRule.html#">Thể thao</a></li>
+                                    <li><a href="contestRule.html#">Dancingo</a></li>
+                                    <li><a href="contestRule.html#">Game</a></li>
+                                    <li><a href="contestRule.html#">Ẩm thực</a></li>
+                                    <li><a href="contestRule.html#">Giáo dục</a></li>
+                                    <li><a href="contestRule.html#">Blog</a></li>
+                                    <li><a href="contestRule.html#">Showbiz</a></li>
+                                    <li><a href="contestRule.html#">Xe cộ</a></li>
+                                    <li><a href="contestRule.html#">Động vật</a></li>
+                                    <li><a href="contestRule.html#">Đồ hoạ</a></li>
+                                    <li><a href="contestRule.html#">Giải trí</a></li>
+                                    <li><a href="contestRule.html#">Hướng dẫn</a></li>
+                                    <li><a href="contestRule.html#">Thời trang - Làm đẹp</a></li>
+                                    <li><a href="contestRule.html#">Công nghệ</a></li>
+                                    <li><a href="contestRule.html#">Du lịch</a></li>
+                                    <li><a href="contestRule.html#">Gia đình</a></li>
+                                    <li><a href="contestRule.html#">Hoạt hình</a></li>
+                                    <li><a href="contestRule.html#">Khoa học</a></li>
+                                    <li><a href="contestRule.html#">Lifestyle</a></li>
+                                    <li><a href="contestRule.html#">Nghệ thuật</a></li>
+                                    <li><a href="contestRule.html#">Sức khoẻ</a></li>
+                                    <li><a href="contestRule.html#">Thiên nhiên</a></li>
+                                    <li><a href="contestRule.html#">Trẻ em</a></li>
+                                    <li><a href="contestRule.html#">Sản phẩm</a></li>
+                                    <li><a href="contestRule.html#">Quảng cáo</a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="menu-policy clearfix">
+                                	<ul>
+                                    	<li><a href="contestRule.html#">MeMe là gì?</a></li>
+                                        <li><a href="contestRule.html#">Cách hoạt động</a></li>
+                                        <li><a href="contestRule.html#">Điều khoản sử dụng</a></li>
+                                        <li><a href="contestRule.html#">Chính sách nội dung</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                    </span>
+                </span>
+            </div>
+
+            <div class="search col-md-4 col-sm-4 hidden-xs">
+                <input class="search-top form-control" type="text" placeholder="Keyword..." />
+                <button class="btn search-btn" type="submit"><span class="icon icon-search"></span>
+                </button>
+            </div><!-----------end search------------>
+            <div class="wrap-menu-top col-xs-5 col-md-4 col-sm-4">
+                <ul class="menu-top">
+                    <li>
+                        <a href="contestRule.html#" class="menu-top-link tooltipMeme" data-target="#loginPopup" data-toggle="modal"  title="Upload">
+                            <span class="icon icon-upload leftNone"></span>
+                        </a>
+                    </li>
+                    <li class="notification dropdown">
+                        <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="contestRule.html#" title="Notification" >
+                            <span class="icon icon-notification leftNone"></span>
+                            <span class="notification-count">9+</span>
+                        </a>
+                        
+                            <ul class="dropdown-menu arrowTop">
+                                <div class="arrow"></div>
+                                <div class="notification-head clearfix">
+                                	<span>Thông báo</span>
+                                    <a href="contestRule.html#" onClick="alert('Đã đọc tất cả')" class="readAll">Đã đọc tất cả</a>
+                                </div>
+                                <div class="wrapper-notification scrollable">
+                                    <li>
+                                        <a class="notification-link unread clearfix" href="http://www.meme.vn/channel?c=53c8e5cfb8d0c3ea3591e1dd" onClick="location.href = $(this).attr('href')">
+                                            <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                        <button onClick="alert('Đã đọc');" type="button" class="btn-read"><i class="fa fa-circle-o"></i></button>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link unread video clearfix" onClick="location.href = $(this).attr('href')" href="http://www.meme.vn/video/loi-noi-xau-lo-lieu-mrbim-sb-music-3ViwvJPgkK0#comment53f424c0b8d0c3a24e59bf32">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                        <button onClick="alert('Đã đọc');" type="button" class="btn-read"><i class="fa fa-circle-o"></i></button>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="contestRule.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="contestRule.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>" <br />
+                                                <small class="notification-time"> 1 ngày trước</small>
+                                            </div>
+                                            
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="contestRule.html#">
+                                            <img class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="contestRule.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="contestRule.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="contestRule.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="contestRule.html#">
+                                            <img class="notification-user-img" src="images/avatar1.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="contestRule.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link clearfix" href="contestRule.html#">
+                                            <img class="notification-user-img" src="images/avatar3.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="notification-link video clearfix" href="contestRule.html#">
+                                            <img class="notification-user-img" src="images/avatar2.jpg" />
+                                            <div class="notification-content">
+                                                <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                            </div>
+                                            <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                        </a>
+                                    </li>
+                                </div>
+                                <div class="more-notification"><a href="contestRule.html#" onClick="alert('Xem tất cả');">Xem tất cả</a></div>
+                            </ul>
+                        
+                    </li>
+                    <!--<li>
+                        <a class="menu-top-link tooltipMeme" href="#" data-toggle="tooltip" title="Đăng nhập">
+                            <span class="icon icon-account leftNone"></span>
+                        </a>
+                    </li>-->
+                    <li class="account dropdown">
+                        <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="contestRule.html#" title="Account">
+                            <img src="images/avatar2.jpg" class="img-user"><span class="account-name hidden-xs"> Đào Viết Phương </span>
+                            
+                        </a>
+                        <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu arrowTop">
+                        	<div class="arrow"></div>
+                            <div class="swith-channel-text">Bạn muốn đổi thành:</div>
+                            <div class="swith-channel scrollable">
+                            	<a href="contestRule.html#" class="account-channel">
+                                	<img src="images/channelImg3.jpg" />
+                                    <p>Giọng Hát Việt Nhí 2014</p>
+                                </a>
+                                <a href="contestRule.html#" class="account-channel">
+                                	<img src="images/channelImg1.jpg" />
+                                    <p>Cuộc Đua Kỳ Thú</p>
+                                </a>
+                                <a href="contestRule.html#" class="account-channel">
+                                	<img src="images/channelImg2.jpg" />
+                                    <p>Viet Nam Idol 2014</p>
+                                </a>
+                                <a href="contestRule.html#" class="account-channel">
+                                	<img src="images/channelImg3.jpg" />
+                                    <p>Giọng Hát Việt Nhí 2014</p>
+                                </a>
+                                <a href="contestRule.html#" class="account-channel">
+                                	<img src="images/channelImg1.jpg" />
+                                    <p>Cuộc Đua Kỳ Thú</p>
+                                </a>
+                                <a href="contestRule.html#" class="account-channel">
+                                	<img src="images/channelImg2.jpg" />
+                                    <p>Viet Nam Idol 2014</p>
+                                </a>
+                            </div>
+                            <li><a href="http://beta.meme.vn/usercp/account/editProfile"><i class="fa fa-edit"></i> Sửa thông tin cá nhân</a></li>
+                            <li><a href="http://beta.meme.vn/usercp/video"><i class="fa fa-play-circle"></i> Quản lý Video</a></li>
+                            <li><a href="http://beta.meme.vn/usercp/channel"><i class="fa fa-video-camera"></i> Quản lý Channel</a></li>
+                            <li><a href="contestRule.html#"><i class="fa fa-bar-chart-o"></i> Xem thống kê</a></li>
+                            <li><a href="contestRule.html#"><i class="fa fa-usd"></i> Xem doanh thu</a></li>
+                            <li><a href="http://beta.meme.vn/user/logout"><i class="fa fa-sign-out"></i> Thoát</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-----------end wrap-menu-top------------>
+            <div class="clearfix"></div>
+        </div>
+  </div>
+  <!-- end header-->
+  <div id="scrollDown" class="wrapper-content">
+      <div class="contest-head">
+		<div class="coverContest" style="background-image:url('images/contest/cover-contest.jpg');">
+			<div class="menu-contest">
+				<div class="container">
+					<ul class="nav">
+						<li><a href="contestRule.html#">Trang chủ</a></li>
+						<li><a href="contestRule.html#">Clip dự thi</a></li>
+                        <li><a href="contestRule.html#" class="active">Thể lệ</a></li>
+						<li><a href="contestRule.html#">Kết quả</a></li>
+					</ul>
+					<button type="button"class="btn btn-primary btn-subscribe hidden-xs">
+						<i class="fa fa-play-circle"></i> Subscribe
+					</button>
+                    <!--<button type="button" class="btn btn-default btn-subscribed"><i class="fa fa-check-circle"></i> Subscribed</button>
+        			<button type="button" class="btn btn-default btn-unsubscribe"><i class="fa fa-times-circle"></i> Unsubscribe</button>-->
+                    <div class="video-channel-follower arrowLeft hidden-xs">
+                        <div class="arrow"></div>
+                        459k
+                    </div>
+				</div>
+			</div>
+			<!-- end menu-contest-->
+		</div>
+		<!-- end contestMeme-->
+      </div>
+      <!-- end contest-head-->
+	  <div class="container contest">
+      	<div class="col-sm-8 col-md-8">
+        <h1 class="text-center contest-title">Cover & Parody Challenge</h1>
+            <div class="w-contest-prizes">
+                <div class="contest-prizes"></div>
+            </div>
+            
+            <div class="w-contest-desc">
+            <div class="contest-desc">
+            	<p>Bạn là người yêu thích âm nhạc ? Bạn muốn thể hiện giọng hát và cá tính của mình. Đừng bỏ lỡ cuộc thi <strong>“COVER AND PARODY CHALLENGE”</strong> do <a href="contestRule.html#">MEME.VN</a> tổ chức</p>
+            	<p>Bạn có thể vượt qua thử thách và khẳng định bản thân đồng thời rinh về các giải thưởng với tổng giá trị lên đến 20 triệu đồng cùng cơ hội gặp gỡ với các thành viên đình đám của nhóm BB&BG, những người bạn đồng hành kiêm Ban giám khảo của cuộc thi này.</p>
+            	<h4>THỂ LỆ CUỘC THI</h4>
+				<p><b>THỜI GIAN:</b> cuộc thi diễn ra từ ngày 17/09/2014 đến 17/10/2014 <br /></p>
+                <p><b>CÁCH THỨC THAM GIA:</b></p>
+                <p>- Người chơi đăng ký tài khoản tại website <a href="contestRule.html#">www.meme.vn</a> </p>
+                <p>- Vào <a href="contestRule.html#">www.meme.vn/contest</a> để post bài tham gia.</p>  
+                <p>- Cú pháp đặt tên bài dự thi như sau: </p>
+                	<ul>
+                    	<li>Nếu tham gia thi cover: <span class="coverColor">[Cover]</span><span class="songColor">[Tên ca khúc]</span><span class="nameColor">[Tên/nickname người dự thi]</span> <br />Ví du: [Cover] Em của ngày hôm qua - Minh Hùng</li>
+                        <li>Nếu tham gia thi parody: <span class="coverColor">[Parody]</span><span class="songColor">[Tên ca khúc]</span><span class="nameColor">[Tên/nickname người dự thi]</span><br />Ví du: [Parody] Em của ngày hôm qua - Minh Hùng</li>
+                    </ul>
+                 <p><b>HÌNH THỨC BÀI THI:</b> </p>
+                 	<ul>
+                    	<li>Tất cả các bài dự thi phải thực hiện dưới định dạng video.</li>
+                        <li><b>Video Cover:</b> được hiểu là các video trình diễn lại ca khúc gốc với các hình thức như hát lại hoặc cover lại bằng nhạc cụ. </li>
+                        <li><b>Video Parody:</b> được hiểu là các video nhái theo phong cách của nghệ sĩ, phong cách của một MV nào đó, hoặc nhái theo giai điệu bài hát để sáng tạo lời chế. </li>
+                        <li>Các video tham gia cuộc thi phải có nội dung không vi phạm các vấn đề về chính trị, tôn giáo, không vi phạm thuần phong mỹ tục hoặc các quy tắc ứng xử chung đã được quy định trong nội quy </li>
+                        <li>Các video chỉ được phép hiển thị và tham gia vào cuộc thi khi đáp ứng đủ các điều kiện về hình thức của bài dự thi như trên.</li>
+                    </ul>
+                 <p class="note-rule">Lưu ý: Sau khi trình bày nội dung cover hay parody, bạn hãy thách thức tiếp tục 3 người bạn tiếp theo cùng tự tin tham gia thử thách cuộc thi.</p>
+                 <p><b>GIẢI THƯỞNG:</b></p>
+                 	<ul>
+                    	<li><b>Giải dành cho các video Cover:</b> 
+                        	<ul>
+                            	<li>1 giải được like nhiều nhất: 5 triệu đồng</li>
+                                <li>1 giải được Ban Giám Khảo – nhóm BB&BG bình chọn: 5 triệu đồng</li>
+                            </ul>
+                        </li>
+                        <li><b>Giải dành cho các video Parody:</b>
+                        	<ul>
+                            	<li>1 giải được like nhiều nhất: 5 triệu đồng</li>
+                                <li>1 giải được Ban Giám Khảo – nhóm BB&BG bình chọn: 5 triệu đồng</li>
+                            </ul>
+                        </li>
+                    </ul>
+                 <p><b>QUY ĐỊNH KHÁC:</b></p>
+                 <p>- Người tham gia mặc nhiên phải tuân thủ điều khoản sử dụng và chính sách nội dung của MEME</p>
+                 <p>- BTC có quyền từ chối những video không phù hợp</p>
+                 <p>- BTC sẽ tiến hành kiểm tra ngẫu nhiên để xác minh tính hợp lệ của các bài dự thi và bình chọn.</p>
+                 <p>- BTC có toàn quyền loại bỏ thí sinh ra khỏi cuộc thi mà không cần thông báo trước nếu BTC phát hiện thí sinh đó thực hiện bất cứ hành động nào gây ảnh hưởng đến kết quả trung thực cuối cùng của cuộc thi.</p>
+                 <p>- BTC có toàn quyền sử dụng tất cả các bài dự thi và thông tin liên quan cho các hoạt động quảng bá trên mọi phương tiện thông tin đại chúng trong quá trình cuộc thi diễn ra và sau khi cuộc thi kết thúc mà không cần phải có sự đồng ý của tác giả hoặc thực hiện bất kỳ hình thức thanh toán tài chính, lệ phí nào cho tác giả hay các bên liên quan.</p>
+                 <p>- Quyết định về tính hợp lệ của bình chọn và quyết định cuối cùng của việc trao giải thuộc về của Ban tổ chức</p>
+                 <p>- BTC giữ quyền chính được tạm dừng hay thay đổi nội dung chương trình, hay điều chỉnh thể lệ cho phù hợp với tình hình thực tế vào bất kì thời điểm nào bằng cách đăng tải thể lệ đã chỉnh sửa trên trên trang chủ cuộc thi.</p>
+                 <p>- Trong trường hợp phát sinh tranh chấp, khiếu nại liên quan đến cuộc thi, BTC sẽ trực tiếp giải quyết và quyết định của BTC là kết quả cuối cùng.</p>
+                 <p>Tất cả các trường hợp thắc mắc về cuộc thi, vui lòng email về địa chỉ: <a href="contestRule.html#">info@meme.vn</a></p>
+            </div>
+        </div><!-- end w-contest-desc-->
+            
+            
+        </div><!--/col-->
+       	<div class="sidebar-contest col-sm-4 col-md-4">
+        	<div class="news-contest">
+            	<h2>Báo chí nói về cuộc thi</h2>
+                <div class="content-news-contest scrollable">
+                	<div class="row-news-contest">
+                    	<a class="link-news-contest" href="contestRule.html#">
+                            <img src="images/contest/tinmoi-logo.jpg">
+                            Bình Dương: Người dân phải sống chung với ngập lụt
+                        </a>
+                    </div>
+                    <div class="row-news-contest">
+                    	<a class="link-news-contest" href="contestRule.html#">
+                            <img src="images/contest/ndt-logo.jpg">
+                            Arsenal nhắm hàng thải Real, M.U có sao bự
+                        </a>
+                    </div>
+                    <div class="row-news-contest">
+                    	<a class="link-news-contest" href="contestRule.html#">
+                            <img src="images/contest/dspl-logo.jpg">
+                            Cộng đồng mạng sôi sục với vẻ gợi cảm của Á Hân (BB&BG) trong bản cover Kpop
+                        </a>
+                    </div>
+                    <div class="row-news-contest">
+                    	<a class="link-news-contest" href="contestRule.html#">
+                            <img src="images/contest/saoonline-logo.jpg">
+                            Quách An An diện váy siêu ngắn khoe chân dài trên phố
+                        </a>
+                    </div>
+                    <div class="row-news-contest">
+                    	<a class="link-news-contest" href="contestRule.html#">
+                            <img src="images/contest/tinmoi-logo.jpg">
+                            Bình Dương: Người dân phải sống chung với ngập lụt
+                        </a>
+                    </div>
+                    <div class="row-news-contest">
+                    	<a class="link-news-contest" href="contestRule.html#">
+                            <img src="images/contest/ndt-logo.jpg">
+                            Arsenal nhắm hàng thải Real, M.U có sao bự
+                        </a>
+                    </div>
+                    <div class="row-news-contest">
+                    	<a class="link-news-contest" href="contestRule.html#">
+                            <img src="images/contest/dspl-logo.jpg">
+                            Cộng đồng mạng sôi sục với vẻ gợi cảm của Á Hân (BB&BG) trong bản cover Kpop
+                        </a>
+                    </div>
+                    <div class="row-news-contest">
+                    	<a class="link-news-contest last" href="contestRule.html#">
+                            <img src="images/contest/saoonline-logo.jpg">
+                            Quách An An diện váy siêu ngắn khoe chân dài trên phố
+                        </a>
+                    </div>
+                </div>
+            </div><!-- end news-contest-->
+            <div class="videos-contest">
+                <h2><span class="hidden-sm">Clip </span>Tham khảo</h2>
+                <div class="sync2">
+                    <div id="sync2" class="owl-carousel">
+                        <div class="item"><a href="contestRule.html#">1</a></div>
+                        <div class="item"><a href="contestRule.html#">2</a></div>
+                        <div class="item"><a href="contestRule.html#">3</a></div>
+                        <div class="item"><a href="contestRule.html#">4</a></div>
+                        <div class="item"><a href="contestRule.html#">5</a></div>
+                    </div>
+                </div>
+                <div id="sync1" class="videos-contest-slider owl-carousel">
+                    <div class="video-contest item">
+                        <a class="video-contest-thumb contest fixThumbVideo" href="contestRule.html#">
+                            <img class="animateImg" src="images/contest/bbtran.jpg" />
+                            <span class="video-contest-bg">
+                                BB Trần
+                            </span>
+                            <span class="video-contest-play"><i class="fa fa-play"></i></span>
+                        </a>
+                    </div><!-- end video-item-->
+                    <div class="video-contest item">
+                        <a class="video-contest-thumb contest fixThumbVideo" href="contestRule.html#">
+                            <img class="animateImg" src="images/contest/tommiez.jpg" />
+                            <span class="video-contest-bg">
+                                Tommiez
+                            </span>
+                            <span class="video-contest-play"><i class="fa fa-play"></i></span>
+                        </a>
+                    </div><!-- end video-item-->
+                    <div class="video-contest item">
+                        <a class="video-contest-thumb contest fixThumbVideo" href="contestRule.html#">
+                            <img class="animateImg" src="images/contest/tiko.jpg" />
+                            <span class="video-contest-bg">
+                                Tiko
+                            </span>
+                            <span class="video-contest-play"><i class="fa fa-play"></i></span>
+                        </a>
+                    </div><!-- end video-item-->
+                    <div class="video-contest item">
+                        <a class="video-contest-thumb contest fixThumbVideo" href="contestRule.html#">
+                            <img class="animateImg" src="images/contest/quynhtran.jpg" />
+                            <span class="video-contest-bg">
+                                Quỳnh Trân
+                            </span>
+                            <span class="video-contest-play"><i class="fa fa-play"></i></span>
+                        </a>
+                    </div><!-- end video-item-->
+                    <div class="video-contest item">
+                        <a class="video-contest-thumb contest fixThumbVideo" href="contestRule.html#">
+                            <img class="animateImg" src="images/contest/lamahan.jpg" />
+                            <span class="video-contest-bg">
+                                Lâm Á Hân
+                            </span>
+                            <span class="video-contest-play"><i class="fa fa-play"></i></span>
+                        </a>
+                    </div><!-- end video-item-->
+                </div>
+            </div><!-- end videos-contest-->
+            
+            <div class="rank-contest">
+            	<div class="rank-contest-tabs clearfix">
+                	<h2 class="rank-title"><i class="fa fa-thumbs-up"></i>Top like</h2>
+                    <ul class="nav">
+                    	<li class="active"><a href="contestRule.html#cover" data-toggle="tab">Cover</a></li>
+                        <li><a href="contestRule.html#parody" data-toggle="tab">Parody</a></li>
+                    </ul>
+                </div><!-- end raking-contest-tabs-->
+                <div class="tab-content">
+                	<div id="cover" class="rank-contest-content tab-pane fade in active">
+                		<div class="rank-item">
+                    	<a class="rank-contest-thumb" href="contestRule.html#">
+                        	<img src="images/video-img4.jpg" />
+                            <span class="rank-number top1">1</span>
+                        </a>
+                        <p class="rank-contest-name"><a class="rank-contest-title" href="contestRule.html#">Anh Này Mà Qwerty Chắc Chưa Đến 30s Là Xong</a></p>
+                        <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                    </div>
+                    <div class="rank-item">
+                    	<a class="rank-contest-thumb" href="contestRule.html#">
+                        	<img src="images/video-img.jpg" />
+                            <span class="rank-number">2</span>
+                        </a>
+                        <p class="rank-contest-name"><a class="rank-contest-title" href="contestRule.html#">Ngày Của Long Đẹp Trai</a></p>
+                        <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                    </div>
+                    <div class="rank-item">
+                    	<a class="rank-contest-thumb" href="contestRule.html#">
+                        	<img src="images/video-img1.jpg" />
+                            <span class="rank-number">3</span>
+                        </a>
+                        <p class="rank-contest-name"><a class="rank-contest-title" href="contestRule.html#">Lk Trung Thu (Lyrics)</a></p>
+                        <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                    </div>
+                    <div class="rank-item">
+                    	<a class="rank-contest-thumb" href="contestRule.html#">
+                        	<img src="images/video-img2.jpg" />
+                            <span class="rank-number">4</span>
+                        </a>
+                        <p class="rank-contest-name"><a class="rank-contest-title" href="contestRule.html#">Kyo York hóa thành chú cuội trong MV trung thu</a></p>
+                        <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                    </div>
+                    <div class="rank-item">
+                    	<a class="rank-contest-thumb" href="contestRule.html#">
+                        	<img src="images/video-img3.jpg" />
+                            <span class="rank-number">5</span>
+                        </a>
+                        <p class="rank-contest-name"><a class="rank-contest-title" href="contestRule.html#">Sao Em Nỡ Vô Tình (Liveshow Trấn Thành 2014)</a></p>
+                        <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                    </div>
+                	</div>
+                	<div id="parody" class="rank-contest-content tab-pane fade">
+                        <div class="rank-item">
+                            <a class="rank-contest-thumb" href="contestRule.html#">
+                                <img src="images/video-img1.jpg" />
+                                <span class="rank-number top1">1</span>
+                            </a>
+                            <p class="rank-contest-name"><a class="rank-contest-title" href="contestRule.html#">Lk Trung Thu (Lyrics)</a></p>
+                            <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                        </div>
+                        <div class="rank-item">
+                            <a class="rank-contest-thumb" href="contestRule.html#">
+                                <img src="images/video-img2.jpg" />
+                                <span class="rank-number">2</span>
+                            </a>
+                            <p class="rank-contest-name"><a class="rank-contest-title" href="contestRule.html#">Kyo York hóa thành chú cuội trong MV trung thu</a></p>
+                            <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                        </div>
+                        <div class="rank-item">
+                            <a class="rank-contest-thumb" href="contestRule.html#">
+                                <img src="images/video-img4.jpg" />
+                                <span class="rank-number">3</span>
+                            </a>
+                            <p class="rank-contest-name"><a class="rank-contest-title" href="contestRule.html#">Anh Này Mà Qwerty Chắc Chưa Đến 30s Là Xong</a></p>
+                            <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                        </div>
+                        <div class="rank-item">
+                            <a class="rank-contest-thumb" href="contestRule.html#">
+                                <img src="images/video-img.jpg" />
+                                <span class="rank-number">4</span>
+                            </a>
+                            <p class="rank-contest-name"><a class="rank-contest-title" href="contestRule.html#">Ngày Của Long Đẹp Trai</a></p>
+                            <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                        </div>
+                        <div class="rank-item">
+                            <a class="rank-contest-thumb" href="contestRule.html#">
+                                <img src="images/video-img3.jpg" />
+                                <span class="rank-number">5</span>
+                            </a>
+                            <p class="rank-contest-name"><a class="rank-contest-title" href="contestRule.html#">Sao Em Nỡ Vô Tình (Liveshow Trấn Thành 2014)</a></p>
+                            <p class="rank-contest-like"><i class="fa fa-thumbs-up"></i>56.000</p>
+                        </div>
+                	</div>
+                </div>
+            </div><!-- end raking-contest-->
+            
+            <div class="comment-contest">
+            	<h2>top comment</h2>
+                <div class="top-comment-content scrollable">
+                	<div class="comment-line">
+                    	<img class="comment-user" src="images/avatar.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar1.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Andy Lau</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">Rat hay va y nghia <3 !</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar2.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">Vai ca Tau khua @_@</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar3.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar1.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar2.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Andy Lau</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">Rat hay va y nghia <3 !</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar3.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">Vai ca Tau khua @_@</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar1.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Andy Lau</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">Rat hay va y nghia <3 !</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar2.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">Vai ca Tau khua @_@</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar3.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar1.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar2.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Andy Lau</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">Rat hay va y nghia <3 !</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line">
+                    	<img class="comment-user" src="images/avatar3.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">Vai ca Tau khua @_@</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                    <div class="comment-line last">
+                    	<img class="comment-user" src="images/avatar.jpg">
+                        <div class="comment-text">
+                            <a href="contestRule.html#" class="comment-user-name">Strider Hiryu</a> <span class="dot"></span> <span class="comment-time">8 min ago</span>
+                            <p class="comment-review"><a href="contestRule.html#" class="comment-review-link">only said they needed them in 5 weeks just the bikes are already made :) so lame</a></p>
+                        </div>
+                    </div><!-- end top-comment-line-->
+                </div><!-- end top-comment-content-->
+            </div><!-- end comment-contest-->
+            
+            
+        </div><!-- end sidebar-contest-->
+      </div><!--/container-->
+      <div class="footer container-fluid">
+      	<div class="col-md-6 hidden-xs hidden-sm">
+        	<div class="footer-head">
+            	<h3>Giới thiệu meme</h3>
+            </div>
+            <div class="footer-content footer-logo">
+            	<p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí… <a href="contestRule.html#" class="about-more">Xem thêm</a></p>
+                
+                <p class="master">Đơn vị chủ quản: <span>CÔNG TY CỔ PHẦN TRUYỀN THÔNG TRỰC TUYẾN NETLINK</span></p>
+                <p>Giấy phép MXH số 76/GXN-TTĐT</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+        	<div class="footer-head">
+            	<h3>Facebook</h3>
+            </div>
+            <div class="footer-content">
+            	<h5>TV Network</h5>
+                <div id="fb-root"></div>
+				<script>
+                    (function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                </script>
+                <div class="facebook">
+                    <div class="fb-like" data-href="https://www.facebook.com/memevietnam" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+        	<div class="footer-head">
+            	<h3>Hỗ trợ</h3>
+                </div>
+            <div class="footer-content">
+            	<ul class="nav">
+                	<li><a href="contestRule.html#">MeMe là gì?</a></li>
+                	<li><a href="contestRule.html#">Cách hoạt động</a></li>
+                    <li><a href="contestRule.html#">Lợi ích</a></li>
+                    <li><a href="contestRule.html#">Đối tác nội dung</a></li>
+                    <li><a href="contestRule.html#">Khiếu nại bản quyền</a></li>
+                    <li><a href="contestRule.html#">Liên hệ</a></li>
+                    <li><a href="contestRule.html#">Điều khoản sử dụng</a></li>
+                    <li><a href="contestRule.html#">Chính sách nội dung</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <!--end footer-->
+      <div class="footer-bottom col-xs-12">
+      	<span class="copyright">Copyright ©2013 meme.vn</span>
+      </div>
+      <!--end footer bottom-->
+  </div>
+  <!--end wrapper content-->
+  <a href="contestRule.html#" class="scrollToElement top" id="backtotoplink"><span class="icon icon-arrow-up-s"></span></a>
+  
+  <!--pop up login-->
+  <div id="loginPopup" class="loginPopup modal fade" tabindex="-1" role="dialog" ria-labelledby="myModalLabel" aria-hidden="true">
+  	  <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header clearfix">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div id="sign-header" class="bidouille">
+              <div  id="connect"><img src="images/logo_icone_white.svg" alt=""  width="39" height="34"><span>Connect with MEME</span></div>
+              <ul class="nav">
+                <li class="active"><a href="contestRule.html#tabs-1" data-toggle="tab">Đăng nhập</a></li>
+                <li><a href="contestRule.html#tabs-2" data-toggle="tab">Đăng ký</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-body tab-content clearfix">
+            <div id="tabs-1" class="tab-pane fade in active">
+              <fieldset style="border:0;">
+              	<div id="loading" class="loading" style="display:none;"><img src="images/loading.gif" alt="" />Đang xử lý!</div>
+                  <div class="message-error">Xin vui lòng nhập email!</div>
+                  <div class="message-success">Thành công!</div>
+                <div class="login-container">
+                  <div class="icone fb"><i class="fa fa-facebook"></i></div>
+                  <input class="cbp-mc-submit-fb" type="submit" value="Sign in with facebook" onclick="$('#loading').show();">
+                </div>
+                <p style=" margin:0; color:#bdbdbd; font-weight:100; font-size:12px; line-height:50px; text-align:center;">hoặc đăng nhập bằng tài khoản Meme</p>
+                <ul>
+                  <li>
+                    <div class="login-container">
+                      <div class="icone"><i class="fa fa-envelope"></i></div>
+                      <input id="email" name="email" type="email" placeholder="Email" required>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="login-container">
+                      <div class="icone"><i class="fa fa-lock"></i></div>
+                      <input id="phone" name="phone" type="password" placeholder="Mật khẩu" required>
+                    </div>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+                <p id="forgot"><a href="contestRule.html#">Bạn quên mật khẩu?</a></p>
+                <div id="bt">
+                <div class="policy-login col-sm-9">
+                        Khi đăng nhập vào Meme là bạn đã chấp nhận <a href="contestRule.html#">điều khoản sử dụng</a> và <a href="contestRule.html#">chính sách nội dung</a> của chúng tôi
+                    </div>
+                    <span class="col-sm-3">
+                      <input class="cbp-mc-submit" type="submit" value="Đăng Nhập">
+                      </span>
+                  </div>
+              </fieldset>
+            </div>
+            <div id="tabs-2" class="tab-pane fade">
+              <fieldset style="border:0;">
+                <div class="login-container">
+                  <div class="icone fb"><i class="fa fa-facebook"></i></div>
+                  <input class="cbp-mc-submit-fb" type="submit" value="Sign up with facebook">
+                </div>
+                <p style=" margin:0; color:#bdbdbd; font-weight:100; font-size:12px; line-height:50px; text-align:center;">hoặc đăng nhập bằng tài khoản Meme</p>
+                <ul>
+                  <li>
+                    <div class="login-container">
+                      <div class="icone"><i class="fa fa-user"></i></div>
+                      <input id="email" name="email" type="email" placeholder="Họ và tên" required>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="login-container">
+                      <div class="icone"><i class="fa fa-envelope"></i></div>
+                      <input id="email" name="email" type="email" placeholder="Email" required>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="login-container">
+                      <div class="icone"><i class="fa fa-envelope"></i></div>
+                      <input id="email" name="email" type="email" placeholder="Xác nhận Email" required>
+                    </div>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+                <div id="bt">
+                <div class="policy-login col-sm-9">
+                    Khi đăng ký tham gia vào Meme là bạn đã chấp nhận <a href="contestRule.html#">điều khoản sử dụng</a> và <a href="contestRule.html#">chính sách nội dung</a> của chúng tôi
+                    </div>
+                    <span class="col-sm-3">
+                      <input class="cbp-mc-submit" type="submit" value="Đăng ký">
+                      </span>
+                  </div>
+              </fieldset>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end login-->
+  
+
+  </body>
+</html>

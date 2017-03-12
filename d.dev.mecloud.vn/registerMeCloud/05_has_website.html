@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Check Website| Register MeCloud</title>
+    <link href="css/register.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+            
+			$('ul.tab-check li a').click(function(e){
+				e.preventDefault();
+				
+				$('ul.tab-check li a, .content-tab-check .current').removeClass('current');
+				$(this).addClass('current');
+				
+				var currentTab = $(this).attr('href');
+				$(currentTab).addClass('current');
+					
+			});
+			
+        });
+    </script>    
+	
+</head>
+
+<body>
+<div class="wrapperSignup">
+    <div class="photoSignUp"></div>
+    <div class="outerSignup">
+        
+        <div class="headSignup">
+        	<a class="logo" href="05_has_website.html#">mecloud.vn</a>
+            <h1>Đăng ký</h1>
+        </div>
+        
+            <div class="formSignup">
+            
+            	<ul class="stepSignup clearfix">
+                    <li class="done"><a href="05_has_website.html#">Thông tin<br> đăng ký</a></li>
+                    <li class="current"><a href="05_has_website.html#">Kiểm tra<br> website</a></li>
+                    <li><a href="05_has_website.html#">Chọn gói<br> sản phẩm</a></li>
+                    <li><a href="05_has_website.html#">Hoàn<br> thành</a></li>
+                </ul>
+            
+            	<h4 class="question">Kiểm tra website</h4>
+                
+                <ul class="tab-check clearfix">
+                	<li><a class="current" href="05_has_website.html#cach1">Cách 1</a></li>
+                    <li><a href="05_has_website.html#cach2">Cách 2</a></li>
+                </ul>
+                <div class="content-tab-check">
+                    
+                    <div id="cach1" class="data-tab-check current">
+                        <div class="formGroup">
+                            <p>Bạn hãy download file bên dưới. Sau đó upload lên web server của bạn theo đường dẫn như sau:</p>
+                            <div class="path-check">http://yourwebsite/mecloud</div>
+                            <div class="file-download">
+                                <a href="05_has_website.html#" class="btn-download">Download</a>
+                                <div class="name-file">
+                                    <svg width="18" height="18" viewBox="0 0 512 512"><path d="m155 453c-14 0-32-5-50-23c-24-24-27-47-25-62c2-17 11-34 27-50l150-151c43-42 71-26 83-13c16 15 26 42-14 82l-138 139l-27-27l138-139c22-21 17-26 14-28c-1-2-7-8-29 13l-150 151c-7 7-15 17-16 28c-1 9 4 19 14 30c13 13 23 12 26 11c9-1 19-7 30-18c13-12 167-166 178-178c15-15 24-29 28-42c5-20-1-38-20-57c-19-19-51-40-98 8l-165 165c-8 7-20 7-27 0c-8-8-8-20 0-27l165-165c51-51 106-54 152-8c36 36 36 71 30 94c-6 20-18 39-38 59c-11 12-166 166-178 178c-17 17-34 26-51 29c-3 0-6 1-9 1z"></path></svg>
+                                    <span>mecloud_as32f9hgjk.html</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="formGroup">
+                            <label>Nhập website của bạn:</label>
+                            <input type="text" class="formGlobal" placeholder="Ví dụ: mecloud.vn" />
+                        </div>
+                       
+                        <div class="formGroup twoBtn clearfix">
+                            <button type="submit" class="btnBack">Quay lại</button>
+                            <button type="submit" class="btnSubmit">Đồng ý</button>
+                        </div>
+                    </div>
+                    
+                    <div id="cach2" class="data-tab-check">
+                        <div class="formGroup">
+                            <div class="formGroup">
+                            	<p>Nhập đường dẫn đến page thay đổi phần head để mecloud kiểm tra</p>
+                                <input type="text" class="formGlobal" placeholder="Ví dụ: mecloud.vn" />
+                            </div>
+                            <div class="formGroup">
+                            	<p>Bạn hãy chép đoạn meta bên dưới và đưa vào phần head website của bạn.</p>
+                            	<div class="path-check">&lt;meta id="mecloud_JGIUGIL854HJ"&gt;</div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="formGroup twoBtn clearfix">
+                            <button type="submit" class="btnBack">Quay lại</button>
+                            <button type="submit" class="btnSubmit">Đồng ý</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+        </div>
+    </div>
+</div>
+</body>
+</html>

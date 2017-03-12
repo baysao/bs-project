@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024" /> 
+    <title>List Streaming | MeMe Cloud</title>
+    <!-- Global CSS -->
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+    <!-- End Global CSS -->
+    
+    <!-- Page CSS -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <!-- End Page CSS -->
+    
+    <!-- Global Script -->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/global.js"></script>
+    <!-- End Global Script -->
+
+    <!-- Page Script -->
+    
+    <!--End Page Script -->
+</head>
+
+<body>
+	
+    <div class="wrapper">
+    	
+        <div class="container">
+        
+            <div class="containerTable">
+            
+                <div class="sidebar">
+                
+                	<div class="btn-expand">
+                        <span></span>
+                        <span></span>
+                        <span></span>	
+                    </div>
+                    <div class="bg-overlay"></div>
+                    
+                    <div class="sidebarFixed">
+                        <div class="logo">
+                            <a href="#" title="Meme Cloud">Meme Cloud</a>
+                        </div>
+                        
+                        <div class="mainMenu">
+    
+                            <ul id="nav">
+<li><a href="#"><i class="fa fa-globe"></i>Admin <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="allChannel.html">Danh sách channel</a></li>
+<li><a href="managerNotification.html">Quản lý thông báo</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-video-camera"></i>Video <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="allVideo.html">Tất cả video</a></li>
+                                  <li><a href="allVideoApprove.html">Duyệt video<span class="numMenu">20</span></a></li>
+                                  <li><a href="#">Upload video mới</a></li>
+                                  <li><a href="uploadBulk.html">Upload cùng lúc</a></li>
+                                  <li><a href="allPlaylist.html">Danh sách phát</a></li>
+                                  <li><a href="categoryManager.html">Quản lý chuyên mục</a></li>
+                                  <li><a href="playerSetting.html">Cài đặt Player</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#" class="active"><i class="fa fa-wifi"></i>Phát trực tiếp <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="listStreaming.html" class="selected">Danhs sách phát trực tiếp</a></li>
+                                  <li><a href="upload.html">Tạo sự kiện phát</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#"><i class="fa fa-bar-chart-o"></i>Thống kê<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="analytics.html">Tổng quan</a></li>
+                                  <li><a href="userAnalytic.html">Theo người dùng</a></li>
+                                </ul>
+                              </li>
+
+<li><a href="userManager.html"><i class="fa fa-user"></i>Người dùng</a>
+                              </li>
+                              <li><a href="#"><i class="fa fa-bullhorn"></i>Quảng cáo<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="domainManager.html">Quản lý trang web</a></li>
+                                  <li><a href="adMannagerGlobal.html">Quản lý Adtag</a></li>
+                                </ul>
+                              </li>
+<li><a href="#"><i class="fa fa-wrench"></i>Công cụ<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="alert.html">UI Alert</a></li>
+<li><a href="customEmbed.html">Mã nhúng tùy chỉnh</a></li>
+                                  <li><a href="channelConfig.html">Cấu hình channel</a></li>
+<li><a href="exportData.html">Trích xuất nâng cao</a></li>
+<li><a href="related_setting.html">Cài đặt video liên quan</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!--end sidebar -->
+                
+                <div class="wrapperContent">
+                	
+                    <div class="header clearfix">
+                    	
+                        <div class="searchBox">
+                        	<button type="submit" class="btn btnSearch"><i class="fa fa-search"></i></button>
+                            <input class="formGlobal seachInput" placeholder="Nhập tên hoặc id video..." />
+                        </div>
+                        
+                        <div class="account">
+                        	<div class="notification support">
+                        		<a href="#"><i class="fa fa-headphones"></i>Cần hỗ trợ?</a>
+                                <ul class="menuAccount">
+                                    <li><a href="#"><i class="fa fa-phone"></i>0904916386</a></li>
+                                	<li><a href="#" class="supportMail"><i class="fa fa-envelope"></i>support@mecloud.vn</a></li>
+                                    <li><a href="https://www.facebook.com/mecloud.vn" class="fanPage"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                </ul>
+                            </div>
+<div class="userAcount dropdown">
+                            	<a href="#" class="channelName btnDropdown">Đời sống & pháp luật<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdownDiv menuChannel">
+                                	<div class="swithChannel">Quản lý channel:</div>
+                                    <ul class="scrollable">
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        	<div class="notification"><a href="upload.html" class="notificationIco"><i class="fa fa-cloud-upload"></i></a></div>
+                        	<div class="notification dropdown">
+                            	<a href="#" class="notificationIco btnDropdown"><i class="fa fa-bell"></i><span class="numNof">2</span></a>
+                                <div class="dropdownDiv boxNof">
+                                	<div class="headBoxNof">
+                                    	Bạn có 2 thông báo <a href="#" class="btnReadAsAll">Đã xem tất cả</a>
+                                    </div>
+                                    <ul class="listNof scrollable">
+                                    	<li>
+                                        	<a class="unread" href="activityVideo.html">Video <span class="boldNof">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Tanh Nguyen</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span></a>
+                                            <a href="#" class="btnRead tooltipText" title="Đã xem"><i class="fa fa-circle-o"></i></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a class="unread" href="activityVideo.html">Video <span class="boldNof">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Tanh Nguyen</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span></a>
+                                            <a href="#" class="btnRead tooltipText" title="Đã xem"><i class="fa fa-circle-o"></i></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#"><span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#"><span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">Video <span class="boldNof">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="notification userAcount dropdown">
+                            	<a href="#" class="notificationIco userName btnDropdown"><i class="fa fa-cog"></i></a>
+                                <a href="#" class="userThumb"><img src="images/user.jpg" alt="Messi" /></a>
+                                <ul class="dropdownDiv menuAccount">
+                                	<li><a href="changeProfile.html"><i class="fa fa-edit"></i>Đổi thông tin tài khoản</a></li>
+                                    <!--<li><a href="#"><i class="fa fa-user"></i>Tình trạng tài khoản</a></li>-->
+                                    <li><a href="support.html"><i class="fa fa-envelope"></i>Hỗ trợ</a></li>
+                                    <li><a href="#"><i class="fa fa-sign-out"></i>Thoát</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div><!--end header -->
+                    
+                    
+                    <div class="content fixScroll">
+                        
+                        <div class="boxBreadcrumb">
+                            <ul class="breadcrumb clearfix">
+                                <li><a href="#">Meme Cloud</a><i class="fa fa-angle-right"></i></li>
+                                <li class="active">
+                                    Danh sách phát trực tiếp
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tabsGlobal">
+                            
+                
+                            <ul class="tabs">
+                                <li class="simple">Danh sách phát trực tiếp</li>
+                                <li class="btnHelpLs"><a href="#">Hướng dẫn phát trực tiếp</a></li>
+                            </ul>
+                            
+                            <div class="tabsContentGlobal">
+                                
+                                <div class="tableData current">
+                                    
+                                    <div class="fillterData clearfix">
+                                        
+                                        <div class="col10p">
+                                            <input type="text" class="formGlobal searchData" placeholder="Tìm nhanh video" />
+                                            <button type="submit" class="btn btnSearchData"><i class="fa fa-search"></i></button> 
+                                        </div>
+                                        
+                                        <div class="col2p floatLeft">
+                                            <select class="fillterSort formGlobal">
+                                                <option>Sắp xếp</option>
+                                                <option>Mới nhất</option>
+                                                <option>Cũ nhất</option>
+                                                <option>Xem nhiều nhất</option>
+                                                <option>Xem ít nhất</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="paginationDataTop clearfix">
+                                            <ul class="pagination">
+                                                <li>
+                                                    <a href="viewPreviousPage" onclick="return false;" class="disabled"><i class="fa fa-angle-left"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="viewNextPage"><i class="fa fa-angle-right"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="countRecord">
+                                                <label>Hiển thị</label>
+                                                <select class="formGlobal">
+                                                    <option>10</option>
+                                                    <option>20</option>
+                                                </select> 
+                                                <span>bản ghi ( <b>1</b> - <b>10</b> ) trong tổng <b>30</b> bản ghi</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    
+                                    <div class="tableDataVideo">
+                                    
+                                        <div class="CSSTableGenerator" >
+                                            <table >
+                                                <tr>
+                                                    <td width="116">
+                                                        Hình ảnh
+                                                    </td>
+                                                    <td >
+                                                        Thông tin
+                                                    </td>
+                                                    <td width="140">
+                                                        Người tạo
+                                                    </td>
+                                                    <td width="100">
+                                                        Tác vụ
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo"><img src="images/u23.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td class="hasBtn">
+                                                        <a href="previewStreamingOn.html" class="titleDataVideo">Trực tiếp U23 Việt Nam vs U23 Lào</a>
+                                                        <p class="statusV"><span class="statusLs online"></span> Đang trực tiếp</p>
+                                                        <button type="button" class="btn btnPrimarySmall cyan btnEmbedGrid tooltipText" title="Copy mã nhúng" data-popup-target="#copyEmbed" onClick="$('.selectEmbed').select()"><span class="fa fa-code"></span></button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        Tanh Nguyen <br />
+                                                        <span class="timeUpload">08:00 | 20/11/2014</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="previewStreamingOn.html" class="btn btnDefault btnAction"><span class="fa fa-edit"></span></a>
+                                                        <a href="#" class="btn btnDefault btnAction"><span class="fa fa-trash-o"></span></a>
+                                                        
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo"><img src="images/u23.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td class="hasBtn">
+                                                        <a href="previewStreamingOn.html" class="titleDataVideo">Trực tiếp U23 Việt Nam vs U23 Lào</a>
+                                                        <p class="statusV"><span class="statusLs online"></span> Đang trực tiếp</p>
+                                                        <button type="button" class="btn btnPrimarySmall cyan btnEmbedGrid tooltipText" title="Copy mã nhúng" data-popup-target="#copyEmbed" onClick="$('.selectEmbed').select()"><span class="fa fa-code"></span></button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        Tanh Nguyen <br />
+                                                        <span class="timeUpload">08:00 | 20/11/2014</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="previewStreamingOn.html" class="btn btnDefault btnAction"><span class="fa fa-edit"></span></a>
+                                                        <a href="#" class="btn btnDefault btnAction"><span class="fa fa-trash-o"></span></a>
+                                                        
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo"><img src="images/u23.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td class="hasBtn">
+                                                        <a href="previewStreamingOff.html" class="titleDataVideo">Trực tiếp U23 Việt Nam vs U23 Lào</a>
+                                                        <p class="statusV"><span class="statusLs offline"></span> Đang ngoại tuyến <span class="timeLiveStreaming">Bắt đầu lúc 10:02 Ngày 25/01/2016</span></p>
+                                                        <button type="button" class="btn btnPrimarySmall cyan btnEmbedGrid tooltipText" title="Copy mã nhúng" data-popup-target="#copyEmbed" onClick="$('.selectEmbed').select()"><span class="fa fa-code"></span></button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        Tanh Nguyen <br />
+                                                        <span class="timeUpload">08:00 | 20/11/2014</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="previewStreamingOff.html" class="btn btnDefault btnAction"><span class="fa fa-edit"></span></a>
+                                                        <a href="#" class="btn btnDefault btnAction"><span class="fa fa-trash-o"></span></a>
+                                                        
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo"><img src="images/u23.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td class="hasBtn">
+                                                        <a href="previewStreamingOn.html" class="titleDataVideo">Trực tiếp U23 Việt Nam vs U23 Lào</a>
+                                                        <p class="statusV"><span class="statusLs online"></span> Đang trực tiếp</p>
+                                                        <button type="button" class="btn btnPrimarySmall cyan btnEmbedGrid tooltipText" title="Copy mã nhúng" data-popup-target="#copyEmbed" onClick="$('.selectEmbed').select()"><span class="fa fa-code"></span></button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        Tanh Nguyen <br />
+                                                        <span class="timeUpload">08:00 | 20/11/2014</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="previewStreamingOn.html" class="btn btnDefault btnAction"><span class="fa fa-edit"></span></a>
+                                                        <a href="#" class="btn btnDefault btnAction"><span class="fa fa-trash-o"></span></a>
+                                                        
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo"><img src="images/u23.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td class="hasBtn">
+                                                        <a href="previewStreamingOff.html" class="titleDataVideo">Trực tiếp U23 Việt Nam vs U23 Lào</a>
+                                                        <p class="statusV"><span class="statusLs offline"></span> Đang ngoại tuyến <span class="timeLiveStreaming">Bắt đầu lúc 10:02 Ngày 25/01/2016</span></p>
+                                                        <button type="button" class="btn btnPrimarySmall cyan btnEmbedGrid tooltipText" title="Copy mã nhúng" data-popup-target="#copyEmbed" onClick="$('.selectEmbed').select()"><span class="fa fa-code"></span></button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        Tanh Nguyen <br />
+                                                        <span class="timeUpload">08:00 | 20/11/2014</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="previewStreamingOff.html" class="btn btnDefault btnAction"><span class="fa fa-edit"></span></a>
+                                                        <a href="#" class="btn btnDefault btnAction"><span class="fa fa-trash-o"></span></a>
+                                                        
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="imgDataVideo"><img src="images/u23.jpg" alt="hình ảnh" /></div>
+                                                    </td>
+                                                    <td class="hasBtn">
+                                                        <a href="previewStreamingOff.html" class="titleDataVideo">Trực tiếp U23 Việt Nam vs U23 Lào</a>
+                                                        <p class="statusV"><span class="statusLs offline"></span> Đang ngoại tuyến <span class="timeLiveStreaming">Bắt đầu lúc 10:02 Ngày 25/01/2016</span></p>
+                                                        <button type="button" class="btn btnPrimarySmall cyan btnEmbedGrid tooltipText" title="Copy mã nhúng" data-popup-target="#copyEmbed" onClick="$('.selectEmbed').select()"><span class="fa fa-code"></span></button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        Tanh Nguyen <br />
+                                                        <span class="timeUpload">08:00 | 20/11/2014</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="previewStreamingOff.html" class="btn btnDefault btnAction"><span class="fa fa-edit"></span></a>
+                                                        <a href="#" class="btn btnDefault btnAction"><span class="fa fa-trash-o"></span></a>
+                                                        
+                                                    </td>
+                                                </tr><!-- end row data -->
+                                                
+                                            </table>
+                                        </div>
+            
+                                    </div><!-- end tableDataVideo -->
+                                    <div class="paginationData clearfix">
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="viewPreviousPage" onclick="return false;" class="disabled"><i class="fa fa-angle-left"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="viewNextPage"><i class="fa fa-angle-right"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="countRecord">
+                                            <label>Hiển thị</label>
+                                            <select class="formGlobal">
+                                                <option>10</option>
+                                                <option>20</option>
+                                            </select> 
+                                            <span>bản ghi ( <b>1</b> - <b>10</b> ) trong tổng <b>30</b> bản ghi</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!--end #allVideoTab -->
+
+                            </div><!--end tabsContentGlobal -->
+                            
+                        </div><!--end tabsGlobal -->
+                        
+                        
+                        
+                    </div><!--end content -->
+                        
+                    
+                </div><!--end wrapperContent -->
+            
+            </div><!--end containerTable -->
+        
+        </div><!--end container -->
+        
+    </div><!--end wrapper -->
+    
+    <div class="popupWrapper">
+    
+    	<div class="popup-overlay"></div>
+        
+        <div id="popupHelp" style="width:800px;" class="popup">
+            <div class="popup-body">
+                <div class="popupHead">
+                    <h3>Hướng dẫn upload bằng link</h3>
+                    <span class="popup-exit"><i class="fa fa-times"></i></span>
+                </div>
+                <div class="popupContent scrollable clearfix">
+                	<p class="helpRequire">Link video upload phải là video được công khai (publish) mới có thể upload lên mecloud.</p>
+                    <p class="helpRequire">Copy link trên thanh địa chỉ của trình duyệt khi xem video cần upload</p
+                    ><p class="helpRequire">Hãy xem vài ví dụ bên dưới</p
+                    ><div class="exampleLinkUpload">
+                    	<span class="iconYoutube"><i class="fa fa-youtube-play"></i></span>
+                        <p>https://www.youtube.com/watch?v=D3QIfsX1VAU</p>
+                    </div>
+                    <div class="exampleLinkUpload">
+                    	<span class="iconFacebook"><i class="fa fa-facebook"></i></span>
+                        <p>https://www.facebook.com/1155047347/videos/vb.1155047347/10206231880613348/?type=2&theater </p>
+                    </div>
+                    <div class="exampleLinkUpload">
+                    	<span class="iconVimeo">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+							<g>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M19.907,4.835c0.149-0.837,0.146-1.698-0.371-2.35
+									c-0.722-0.913-2.257-0.947-3.309-0.785C15.37,1.83,12.475,3.108,11.49,6.165c1.745-0.133,2.66,0.126,2.492,2.047
+									c-0.07,0.804-0.476,1.685-0.93,2.529c-0.524,0.973-1.505,2.885-2.793,1.507c-1.16-1.24-1.072-3.612-1.338-5.191
+									c-0.148-0.886-0.304-1.99-0.594-2.902c-0.25-0.784-0.824-1.729-1.526-1.933C6.049,2.002,5.118,2.347,4.571,2.67
+									c-1.742,1.024-3.07,2.48-4.577,3.682v0.112C0.293,6.75,0.373,7.218,0.813,7.281C1.85,7.434,2.839,6.315,3.528,7.48
+									c0.419,0.712,0.55,1.492,0.819,2.259c0.359,1.022,0.636,2.135,0.93,3.31c0.497,1.99,1.108,4.964,2.828,5.693
+									c0.878,0.373,2.197-0.126,2.865-0.522c1.809-1.071,3.219-2.623,4.426-4.202C18.155,10.279,19.677,6.045,19.907,4.835z"/>
+							</g>
+							</svg>
+						</span>
+                        <p>https://vimeo.com/channels/staffpicks/126897736</p>
+                    </div>
+                    <div class="exampleLinkUpload">
+                    	<span class="iconZingtv">
+                        	<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M3.743,0.433c3.413-0.076,12.114-1.058,13.202,1.293
+								c0.676,2.73-7.871,11.875-9.43,14.511c3.065-0.03,7-0.341,9.576,0.287c0.565,1.046,0.801,2.521-0.435,3.161
+								c-1.321,0.683-13.204,0.125-13.783-0.431c-0.358-0.225-0.453-0.432-0.725-0.718c0.035-3.292,7.665-11.651,9.575-14.511
+								c-2.756-0.048-5.513-0.096-8.27-0.144c-0.338-0.335-0.677-0.67-1.016-1.006c0.048-0.431,0.097-0.862,0.145-1.293
+								C2.88,0.941,3.21,0.819,3.743,0.433z"/>
+							</svg>
+                        </span>
+                        <p>http://tv.zing.vn/video/Bo-Oi-Minh-Di-Dau-The-Viet-Nam-Tap-28/IWZBUFI0.html</p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div id="copyEmbed" style="width:500px;" class="popup">
+            <div class="popup-body">
+                <div class="popupHead">
+                    <h3>Copy mã nhúng</h3>
+                    <span class="popup-exit"><i class="fa fa-times"></i></span>
+                </div>
+                <div class="popupContent rmb clearfix">
+                    <input class="formGlobal selectEmbed" type="text" value='<script type="text/javascript" src="http://embed.mecloud.vn/play/GG1cuaJKV0A"></script>' />
+                </div>
+            </div>
+        </div><!--end #copyEmbed -->
+        
+        
+    </div><!-- end popupWrapper -->
+    
+    
+    
+</body>
+
+</html>

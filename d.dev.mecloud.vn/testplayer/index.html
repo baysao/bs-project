@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
+    <!-- 
+    Smart developers always View Source. 
+    
+    This application was built using Adobe Flex, an open source framework
+    for building rich Internet applications that get delivered via the
+    Flash Player or to desktops via Adobe AIR. 
+    
+    Learn more about Flex at http://flex.org 
+    // -->
+    <head>
+        <title>Test Player Version 2</title>
+        <meta name="google" value="notranslate" />         
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- Include CSS to eliminate any default margins/padding and set the height of the html element and 
+             the body element to 100%, because Firefox, or any Gecko based browser, interprets percentage as 
+             the percentage of the height of its parent container, which has to be set explicitly.  Fix for
+             Firefox 3.6 focus border issues.  Initially, don't display flashContent div so it won't show 
+             if JavaScript disabled.
+        -->
+        <style type="text/css" media="screen"> 
+            html, body  { height:100%; }
+            body { margin:0; padding:0; overflow:auto; text-align:center; 
+                   background-color: ${bgcolor}; }   
+            object:focus { outline:none; }
+            #flashContent { display:none; }
+        </style>
+        <style type="text/css" media="screen">
+        a:hover {
+        text-decoration: underline;
+        color:red;
+        }
+        </style>
+         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+        <!-- boostrap 3 -->
+<!-- Latest compiled and minified CSS -->
+<!--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<!--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<!--
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+        <!-- Enable Browser History by replacing useBrowserHistory tokens with two hyphens -->
+        <!-- BEGIN Browser History required section ${useBrowserHistory}>
+        <link rel="stylesheet" type="text/css" href="history/history.css" />
+        <script type="text/javascript" src="history/history.js"></script>
+        <!${useBrowserHistory} END Browser History required section -->  
+            
+        <script type="text/javascript" src="swfobject.js"></script>
+
+        <script type="text/javascript">
+        (function (w, d, s) {
+        if (!w.$_VConfig) {
+        try {
+            w.$_VConfig = {
+               "plugins": {
+                    "sharing": "1.00",
+                    "ads": "1.00",
+                    "playlist": "1.00",
+                    "analytics": "1.00",
+                    "skin": "1.00",
+                    "related": "1.00"
+                },
+                "pluginFolder": "http://static.dev.mecloud.vn/player/plugins/",
+                "JS": "http://static.dev.mecloud.vn/player/js/videoplayer-2.00.js",
+                "videoJS": "http://static.dev.mecloud.vn/player/js/videojs-1.00.js",
+                "CSS": "http://static.dev.mecloud.vn/player/css/videojs-1.00.css",
+                "adsPluginKey": "add9bdcc0dca0bacadd2487dc5dda8df",
+                "imageDomain": "http://img.dev.mecloud.vn",
+                "staticDomain": "http://static.dev.mecloud.vn"
+            };
+            loadScript(w.$_VConfig.JS);
+            loadScript(w.$_VConfig.videoJS);
+            //loadScript(w.$_VConfig.pluginFolder + "skin/skin-1.00.js");
+            //loadScript(w.$_VConfig.pluginFolder + "sharing/sharing-1.00.js");
+            //loadScript(w.$_VConfig.pluginFolder + "ads/ads-1.00.js");
+            //loadScript(w.$_VConfig.pluginFolder + "playlist/playlist-1.00.js");
+            //loadScript(w.$_VConfig.pluginFolder + "analytics/analytics-1.00.js");
+           	//loadScript(w.$_VConfig.pluginFolder + "related/related-1.00.js");
+
+        } catch (e) {
+            console.log(e);
+        }
+    }
+    
+    function loadScript(url, callback, r) {
+        if (w.MeCloudVideoPlayer) {
+            callback();
+            return;
+        }
+        r = document.querySelectorAll('script[src="' + url + '"]');
+        if (r && r.length) {
+            setTimeout(function() {
+                loadScript(url, callback);
+            }, 500);
+            return;
+        }
+        var script = d.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        script.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded')
+                callback();
+        }
+        script.onload = callback;
+        d.head.appendChild(script);
+    }
+    })(window, document);
+            var MeCloudVideoPlayer = {
+                initFlash: function(session){
+                    console.log("Flash init complete " + session);
+                    
+                    var e = document.getElementById('MeCloudVideoPlayer_Flash_'+session);
+
+                    if (e && e.importData) {
+                        if (session == '1458293245928761682')
+                        {
+                            e.importData({
+                            	   "list": {
+                       "title":"Tôi Là Người Chiến Thắng",
+"type":"innerPlaylistBottom",
+"autoPlay":true,
+"current":0,
+"videos":[
+{
+"id":11380,
+"alias":"xses1cBzOL",
+"img":"http://localhost/img/1.jpg",
+"title":"Thách Thức Danh Hài mùa 2 | Trấn Thành lại dở chứng \"mê gái\" khi cười liên tục",
+"description":"",
+"duration":493,
+"playToken":"rlTiTgAgfXh47N9445HhN8Q0ERL0oi1uD7g04x98LdGHQTAX",
+"embed":"http://embed.dev.mecloud.vn/renderList/14?vid\u003dxses1cBzOL"
+},
+{
+"id":11410,
+"alias":"ArQwzP5SLS",
+"img":"http://localhost/img/2.jpg",
+"title":"Worth it - Fifth Harmony ft.Kid Ink / May J Lee Choreography",
+"description":"",
+"duration":507,
+"playToken":"FGQDKTBu5ejNBa3aap0CaWf99olf4Hr1eZj0dijZT4cKDLsx",
+"embed":"http://embed.dev.mecloud.vn/renderList/14?vid\u003dArQwzP5SLS"
+},
+{
+"id":11378,
+"alias":"k7IQbuAJhR",
+"img":"http://localhost/img/3.jpg",
+"title":"Thách Thức Danh Hài mùa 2 | Dì ghẻ và Bạch Tuyết tái hợp",
+"description":"",
+"duration":464,
+"playToken":"GZyT0LhH7UCuj7H52C7v2hve3i5h6514b603K8300F03LL0s",
+"embed":"http://embed.dev.mecloud.vn/renderList/14?vid\u003dk7IQbuAJhR"
+},
+{
+"id":11463,
+"alias":"PHTUlLVaxk",
+"img":"http://img.dev.mecloud.vn/thumb/clip/2016/3/4/10/29/cde78a6461f8e05c4c7202e21d6ce0a9_3.jpg",
+"title":"Thương - Karik ft Uyên Pím (Bệt Band)",
+"description":"",
+"duration":181,
+"playToken":"8T77vH9022H2K9pF6O5dvu06ZAfGb0Nxlc2auR8ofl72cm84",
+"embed":"http://embed.dev.mecloud.vn/renderList/14?vid\u003dPHTUlLVaxk"
+}
+]
+                    },
+                    "playerProfile": {
+                        "styling": {
+                            "useCustomColor": true,
+                            "color": "#008040",
+                            "playButtonPosition":1,
+                            "titleDisplay": true,
+                            "controlBarDisplay": true,
+                            "__isset_bitfield": 15
+                        },
+                         "branding": {
+                            "enable": true,
+                            "logo":"http://localhost/img/default-branding.png",
+                            "logoHover":"http://localhost/img/default-branding-hover.png",
+                            "url": "-192",
+                            "style": 0,
+                            "__isset_bitfield": 3
+                        },
+                       
+                    },
+                    "gaConfig": "123456ABCDEF",
+                            	
+                            	
+                            	"logo":{
+                            		"icon":"http://localhost/VideoPlayer2MeCloud/bin-debug/img/mecloud.png",
+                            		"hover":"http://localhost/VideoPlayer2MeCloud/bin-debug/img/netlink.png",
+                            		"link":"http://zing.vn"
+                            	},
+                            	"ga":{
+                            		"id": ["UA-68205954-1","UA-67703167-2"],
+                            	},
+                               	//"autoplay":true,
+                                "vid":"ZEh89uu6Bn",
+                                "analyticsUrl":"http://analytics.dev.mecloud.vn:8888/bridge",
+                               	"width":960,
+                               	"height":540,
+                               	"liveStream":false,
+                                //"title": "x &gt; 3 <font color='#123'>ABC</font>",
+                                //"title":" x &gt; 3 <font color='red'>ABC</font> Trọng t\u0026agrave;i bị rượt đuổi đ\u0026aacute;nh hội đồng tr\u0026ecirc;n s\u0026acirc;n",
+                                //"thumbnail": "http://imgs.cloud.memefiles.com/thumb/clip/2015/12/18/14/33/434c059cc22a140636273a707ebd994a_3.jpg",
+								"title":"Hương Đêm bay Xa - Hari Won afd fjfjfdkd djdjd djdjd djdjdja nguoi den tu trieu chau ngay xua ngay xdfad",
+								"thumbnail":"http://localhost/img/poster.png",
+/*
+"video": [{
+                        "quality": "360p",
+                        "url": "http://stream1.dev.mecloud.vn/clip/2016/1/8/10/48/783de686aa2afd3ec7dd3097bcb71dbb_360.mp4?e\u003d1454052390\u0026t\u003dd2ef1edcf573e0be1d627bcb9ba00ac4\u0026z\u003d1454037990050753954"
+                    }, {
+                        "quality": "480p",
+                        "url": "http://stream1.dev.mecloud.vn/clip/2016/1/8/10/48/783de686aa2afd3ec7dd3097bcb71dbb_480.mp4?e\u003d1454052390\u0026t\u003dd2ef1edcf573e0be1d627bcb9ba00ac4\u0026z\u003d1454037990050753954"
+                    }, {
+                        "quality": "720p",
+                        "url": "http://stream1.dev.mecloud.vn/clip/2016/1/8/10/48/783de686aa2afd3ec7dd3097bcb71dbb_720.mp4?e\u003d1454052390\u0026t\u003dd2ef1edcf573e0be1d627bcb9ba00ac4\u0026z\u003d1454037990050753954"
+                    }],
+               */
+               
+               "video": [{
+                        "quality": "360p",
+                        //"url": "http://d.dev.mecloud.vn/videojs/hariwon_360.mp4",
+                        "url":"http://localhost/video/video1.mp4",
+                        //"url":"http://stream.dev.mecloud.vn/clip/2016/1/8/10/48/783de686aa2afd3ec7dd3097bcb71dbb_360.mp4?e\u003d1457607751\u0026t\u003d67ddfc4ca70cf4c0b52508ebd0a740c4\u0026z\u003d1457593351603578229",
+                        "size": 40108718
+                    }, {
+                        "quality": "480p",
+                        "url": "http://stream.dev.mecloud.vn/clip/2016/1/8/10/48/783de686aa2afd3ec7dd3097bcb71dbb_480.mp4?e\u003d1457016253\u0026t\u003dcf3c575d07a2fb4b65015c7dc48491f5\u0026z\u003d1457001853072683636",
+                        "size": 71885347
+                    }, {
+                        "quality": "720p",
+                        "url": "http://stream1.dev.mecloud.vn/clip/2016/1/8/10/48/783de686aa2afd3ec7dd3097bcb71dbb_720.mp4?e\u003d1454336400\u0026t\u003d15cc981f9738d6155b3c00f7ba1266ee\u0026z\u003d1454322000744672098",
+                        "size": 163643686
+                    }],
+               
+                              /*
+                                "video": [
+                                    {
+                                        "quality": "360p",
+                                        //"url":"http://alkass-i.akamaihd.net/hls/live/205534/1/live_16s.m3u8"
+                                    "url":"http://hls.dev.mecloud.vn/clip/2016/1/8/10/48/783de686aa2afd3ec7dd3097bcb71dbb.m3u8",
+                                   	//"url":"http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/appleman.m3u8"
+                                   	//"url":"http://www.nacentapps.com/m3u8/index.m3u8"
+                                   	//"url":"http://wms.shared.streamshow.it/canale8/canale8/playlist.m3u8"
+                                   	//"url":"http://www.streambox.fr/playlists/test_001/stream.m3u8"
+                                    },{
+                                        "quality": "480p",
+                                        "url": "http://localhost/video/video5.mp4"
+                                        
+                                    }, {
+                                        "quality": "720p", 
+                                        "url": "http://localhost/video/video6.mp4"
+                                    }, 
+                                    {
+                                        "quality": "1080p", 
+                                        "url": "http://localhost/video/video7.mp4"
+                                    }
+                                ],
+                                */
+                                
+                                "displayTitle":true,
+                                
+                                "subtitle":{
+"autotrack":true,
+"tracks":[
+{
+"file":"http://localhost/sub/ka192.srt",
+"label":"english",
+"isDefault":true
+}
+]
+},
+
+//AD
+
+                     
+                     "ad": {
+                        "pre": {
+                            "id": 1040,
+                            "adtag": [{
+                                "adtagUrl": "http://googleads.g.doubleclick.net/pagead/ads?ad_type\u003dvideo_image_flash\u0026client\u003dca-video-pub-6071525676516988\u0026description_url\u003dhttp%3A%2F%2Fdev.mecloud.vn%2Fvideo%2Fview%3Fid%3DKpmPl2QcD9\u0026hl\u003dvi\u0026max_ad_duration\u003d15000\u0026overlay\u003d0\u0026videoad_start_delay\u003d0\u0026channel\u003d7704251751",
+                                "skippable": false,
+                                "skipTime": 0,
+                                "adType": "IMA",
+                                "adtagId": 116
+                            }],
+                            "displayRule": "FULL_TIME",
+                            "selectRule": "LINEAR",
+                            "interval": 0,
+                            "delay": 0,
+                            "maxDisplay": 1
+                        },
+                        "mid": [{
+                            "id": 1041,
+                            "adtag": [{
+                                "adtagUrl": "http://googleads.g.doubleclick.net/pagead/ads?ad_type\u003dtext_flash\u0026client\u003dca-video-pub-7266710804606728\u0026description_url\u003d\u0026videoad_start_delay\u003d0\u0026hl\u003dvi\u0026overlay\u003d1",
+                                "skippable": false,
+                                "skipTime": 0,
+                                "adType": "IMA",
+                                "adtagId": 77
+                            }],
+                            "displayRule": "FULL_COUNT",
+                            "selectRule": "LINEAR",
+                            "interval": 0,
+                            "delay": 10,
+                            "maxDisplay": 6
+                        }],
+                        "post": {
+                            "id": 1042,
+                            "adtag": [{
+                                "adtagUrl": "http://delivery.adnetwork.vn/247/xmlvideoad/zid_1430973880/wid_1430973174/type_inline/cb_[timestamp]",
+                                "skippable": true,
+                                "skipTime": 3,
+                                "adType": "VAST",
+                                "adtagId": 31
+                            }],
+                            "displayRule": "NOT_DUPLICATE",
+                            "selectRule": "LINEAR",
+                            "interval": 0,
+                            "delay": 0,
+                            "maxDisplay": 0
+                        },
+                        "pausead": {
+                            "id": 1043,
+                            "adtag": [{
+                                "url": "http://globe-views.com/dreams/earth.html",
+                                "type": "jpg",
+                                "fileLink": "http://globe-views.com/dcim/dreams/earth/earth-01.jpg",
+                                "adType": "PAUSE",
+                                "adtagId": 37
+                            }],
+                            "displayRule": "NOT_DUPLICATE",
+                            "selectRule": "LINEAR",
+                            "interval": 0,
+                            "delay": 0,
+                            "maxDisplay": 0
+                        }
+                    },
+
+//RELATED VIDEO
+/*
+"related": [{
+                        "id": 11304,
+                        "alias": "MfvpBIyZN7",
+                        "img": "http://img.dev.mecloud.vn/thumb/clip/2015/11/20/14/33/286581c8673bcc7be1db7ab086b007e0_3.jpg",
+                        "title": "Cách Làm Món Sườn Xào Chua Ngọt - Sweet and Sour Ribs",
+                        "description": "",
+                        "duration": 444000,
+                        "playToken": "ep8030XE6yuo7Z37B18Rampu1T08a8LNs53jROs3H6iLv861",
+                        "embed": "http://embed.dev.mecloud.vn/play/MfvpBIyZN7"
+                    }, {
+                        "id": 11410,
+                        "alias": "ArQwzP5SLS",
+                        "img": "http://img.dev.mecloud.vn/thumb/clip/2016/1/8/10/48/783de686aa2afd3ec7dd3097bcb71dbb_5.jpg",
+                        "title": "Worth it - Fifth Harmony ft.Kid Ink / May J Lee Choreography",
+                        "description": "",
+                        "duration": 507000,
+                        "playToken": "67XrF38eRDX4E67L95lXA9oT7eRi2N4i87eTB3y2sFR633o3",
+                        "embed": "http://embed.dev.mecloud.vn/play/ArQwzP5SLS"
+                    }, {
+                        "id": 11378,
+                        "alias": "k7IQbuAJhR",
+                        "img": "http://img.dev.mecloud.vn/thumb/clip/2015/12/21/15/7/8349e9c2e29ba466a448bb07f92722e0_3.jpg",
+                        "title": "Thách Thức Danh Hài mùa 2 | Dì ghẻ và Bạch Tuyết tái hợp",
+                        "description": "",
+                        "duration": 464000,
+                        "playToken": "87hsjvpjOgBFh7f6OZjRAv83p4mh86HXug6jTWas3pCQgIXI",
+                        "embed": "http://embed.dev.mecloud.vn/play/k7IQbuAJhR"
+                    }, {
+                        "id": 11389,
+                        "alias": "Y6JpaPYzgx",
+                        "title": "She - Groove Coverage [Kara+Vietsub]",
+                        "description": "",
+                        "duration": 230000,
+                        "playToken": "2NIF0cfZv879mCa32ICfLjRU770TlEBrLX5eI8pRbh29HOUl",
+                        "embed": "http://embed.dev.mecloud.vn/play/Y6JpaPYzgx"
+                    }],
+                    */
+
+"related":[
+
+{
+    "id": 192489,
+    "alias": "PAZyJlUYSe",
+    "title": " x &gt; 3 <font color='red'>ABC Phim Ngắn Tình Ngốc - Chấn Hào [Official - Phim Ngắn Cảm Động] Những màn biểu diễn khiến cho Trấn Thành - Việt Hương cười lăn lộn trong Thách Thức Danh Hài!",
+    //"img":"http://localhost/img/honda.jpg",
+    "img": "http://i.ytimg.com/vi/zZEiBStItAg/hqdefault.jpg",
+    //"img":"http://localhost/img/king.jpg",
+    "createTime": 1450103064089,
+    "duration": 5344000,
+    //"channel": "GD Production",
+    "description":"",
+    "playToken":"gxvfKNGd4Fx0co68XrK2ZGj8Qy8fJrWfJ3GxoOhKa6JJ855Z",
+    "embed":""
+}/*
+, {
+    "id": 192452,
+    "alias": "biCq4NvF4J",
+    "title": "[PHIM NGẮN]: YÊU KHÔNG SỢ CẬU EM!",
+    "img": "http://i.ytimg.com/vi/Ee18BdIFNUI/hqdefault.jpg",
+    //"img": "http://localhost/img/test.jpg",
+    //"img":"http://localhost/img/king.jpg",
+    "createTime": 1450095905076,
+    "duration": 2192000,
+    "channel": "GD Production",
+    "description":"",
+    "playToken":"gxvfKNGd4Fx0co68XrK2ZGj8Qy8fJrWfJ3GxoOhKa6JJ855Z",
+}/*
+, {
+    "id": 192051,
+    "alias": "pRsGr2FGhP",
+    "title": "[Phim Ngắn] TRAI QUÊ - FU PRODUCTION",
+    "img": "http://i.ytimg.com/vi/eQot61FVjMA/hqdefault.jpg",
+    "createTime": 1450068947420,
+    "duration": 3509000,
+    "channel": "Fu Production",
+    "description":"",
+    "playToken":"gxvfKNGd4Fx0co68XrK2ZGj8Qy8fJrWfJ3GxoOhKa6JJ855Z",
+
+}/*
+,{"id": 192489,
+    "alias": "PAZyJlUYSe",
+    "title": "[Phim Ngắn] Ai Bảo Mọt Sách Không Biết Yêu",
+    "img": "http://i.ytimg.com/vi/3ErdQpwIQEY/hqdefault.jpg",
+    "createTime": 1450103064089,
+    "duration": 5944000,
+    "channel": "MP Production",
+    "description":"",
+    "playToken":"gxvfKNGd4Fx0co68XrK2ZGj8Qy8fJrWfJ3GxoOhKa6JJ855Z",
+}/*
+, {
+    "id": 192452,
+    "alias": "biCq4NvF4J",
+    "title": "Những màn biểu diễn khiến cho Trấn Thành - Việt Hương cười lăn lộn trong Thách Thức Danh Hài!",
+    "img": "http://thumb.imgs.memefiles.com/medium/thumb/clip/biCq4NvF4J-1450095956960.jpg",
+    "createTime": 1450095905076,
+    "duration": 292000,
+    "channel": "Clash of Clans",
+    "description":"",
+    "playToken":"gxvfKNGd4Fx0co68XrK2ZGj8Qy8fJrWfJ3GxoOhKa6JJ855Z",
+}/*
+, {
+    "id": 192452,
+    "alias": "biCq4NvF4J",
+    "title": "Những màn biểu diễn khiến cho Trấn Thành - Việt Hương cười lăn lộn trong Thách Thức Danh Hài!",
+    "img": "http://img.mecloud.vn/vi/biCq4NvF4J/medium/1.jpg",
+    "createTime": 1450095905076,
+    "duration": 292000,
+    "channel": "Clash of Clans",
+    "description":"",
+    "playToken":"gxvfKNGd4Fx0co68XrK2ZGj8Qy8fJrWfJ3GxoOhKa6JJ855Z",
+}/*
+, {
+    "id": 192452,
+    "alias": "biCq4NvF4J",
+    "title": "Những màn biểu diễn khiến cho Trấn Thành - Việt Hương cười lăn lộn trong Thách Thức Danh Hài!",
+    "img": "http://img.mecloud.vn/vi/biCq4NvF4J/medium/1.jpg",
+    "createTime": 1450095905076,
+    "duration": 292000,
+    "channel": "Clash of Clans",
+    "description":"",
+    "playToken":"gxvfKNGd4Fx0co68XrK2ZGj8Qy8fJrWfJ3GxoOhKa6JJ855Z",
+}/*
+, {
+    "id": 192452,
+    "alias": "biCq4NvF4J",
+    "title": "Những màn biểu diễn khiến cho Trấn Thành - Việt Hương cười lăn lộn trong Thách Thức Danh Hài!",
+    "img": "http://img.mecloud.vn/vi/biCq4NvF4J/medium/1.jpg",
+    "createTime": 1450095905076,
+    "duration": 292000,
+    "channel": "Clash of Clans",
+    "description":"",
+    "playToken":"gxvfKNGd4Fx0co68XrK2ZGj8Qy8fJrWfJ3GxoOhKa6JJ855Z",
+}/*
+, {
+    "id": 192452,
+    "alias": "biCq4NvF4J",
+    "title": "Những màn biểu diễn khiến cho Trấn Thành - Việt Hương cười lăn lộn trong Thách Thức Danh Hài!",
+    "img": "http://img.mecloud.vn/vi/biCq4NvF4J/medium/1.jpg",
+    "createTime": 1450095905076,
+    "duration": 292000,
+    "channel": "Clash of Clans",
+    "description":"",
+    "playToken":"gxvfKNGd4Fx0co68XrK2ZGj8Qy8fJrWfJ3GxoOhKa6JJ855Z",
+}
+*/
+],
+                            });
+                        }  
+                                             
+                    }
+                }
+            }               
+        
+            // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
+            var swfVersionStr = "${version_major}.${version_minor}.${version_revision}";
+            // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
+            var xiSwfUrlStr = "${expressInstallSwf}";
+            var flashvars = {
+                session: "1458293245928761682"
+            };
+            var params = {};
+            params.quality = "high";
+            params.bgcolor = "${bgcolor}";
+            params.allowscriptaccess = "sameDomain";
+            params.allowfullscreen = "true";
+            var attributes = {};
+            attributes.id = "MeCloudVideoPlayer_Flash_1458293245928761682";
+            attributes.name = "${application}";
+            attributes.align = "middle";
+            
+            swfobject.embedSWF(
+                "${swf}.swf", "flashContent", 
+                "640", "360", 
+                swfVersionStr, xiSwfUrlStr, 
+                flashvars, params, attributes);
+            // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
+            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+
+         </script>
+    </head>
+
+    <body>
+   <div id="MeCloudVideoPlayer_HE7Hv5KU1c_1458293245928761682" vid="HE7Hv5KU1c" session="1458293245928761682" style="min-width: 240px; width: 640px; height:360px; position: relative; overflow: hidden;"><div id="MeCloudVideoPlayer_Container_1458293245928761682" class="memeplayer-flash-container" style="top: 0px !important; left: 0px !important; right: 0px !important; bottom: 0px !important; position: absolute;"><embed id="MeCloudVideoPlayer_Flash_1458293245928761682" src="//d.dev.mecloud.vn/testplayer/VideoPlayer.swf" flashvars="session=1458293245928761682" quality="best" allowscriptaccess="always" allowfullscreen="true" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflash" wmode="transparent" style="width: 100% !important; height: 100% !important; min-height: 300px !important;"><iframe id="AnalyticsBridge_HE7Hv5KU1c_1458293245928761682" src="//analytics.mecloud.vn/bridge?session=1458293245928761682" style="display: none !important;"></iframe></div></div>
+        <!-- SWFObject's dynamic embed method replaces this alternative HTML content with Flash content when enough 
+             JavaScript and Flash plug-in support is available. The div is initially hidden so that it doesn't show
+             when JavaScript is disabled.
+        -->
+      
+        <!--
+        <object type="application/x-shockwave-flash" id="VijjlkjlkjdeoPlayer_111" name="Videui]yuioPlayer" align="middle" data="Player.swf" width="560" height="315"><param name="quality" value="high"><param name="bgcolor" value="#ffffff"><param name="allowscriptaccess" value="sameDomain"><param name="allowfullscreen" value="true"><param name="flashvars" value="session=111"></object>  
+    -->
+    <hr>
+   </body>
+</html>

@@ -1,0 +1,30 @@
+/* Font Color */
+/* Background Color */
+/* Mixins */
+/******************************************/
+/*** Watermark ***/
+/******************************************/
+.video-js.mep.vjs-user-inactive .logo-watermark {
+  -webkit-transition: all 0.2s ease-out 0.7s;
+  -moz-transition: all 0.2s ease-out 0.7s;
+  -o-transition: all 0.2s ease-out 0.7s;
+  transition: all 0.2s ease-out 0.7s;
+}
+.video-js.mep.vjs-user-active .logo-watermark {
+  -webkit-transition: all 0.2s ease-in 0s;
+  -moz-transition: all 0.2s ease-in 0s;
+  -o-transition: all 0.2s ease-in 0s;
+  transition: all 0.2s ease-in 0s;
+}
+
+.video-js.mep .logo-watermark {
+  position: absolute;
+}
+.video-js.mep .logo-watermark:hover {
+  opacity: 1 !important;
+}
+.video-js.mep .logo-watermark img {
+  display: block;
+  width: 100%;
+}
+

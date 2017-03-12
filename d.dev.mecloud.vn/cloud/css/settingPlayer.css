@@ -1,0 +1,493 @@
+/* common */
+/* style switch */
+.switch-checkbox {
+  display: inline-block;
+  position: relative;
+}
+.switch-checkbox .sc-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.switch-checkbox .sc-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.switch-checkbox input.sc-toggle-round-flat + label {
+  padding: 1px;
+  width: 50px;
+  height: 24px;
+  margin-bottom: 0;
+  -moz-border-radius: 13px;
+  -webkit-border-radius: 13px;
+  border-radius: 13px;
+}
+.switch-checkbox input.sc-toggle-round-flat + label:before, .switch-checkbox input.sc-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+.switch-checkbox input.sc-toggle-round-flat + label:before {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 13px;
+  -webkit-border-radius: 13px;
+  border-radius: 13px;
+  -webkit-transition: background-color 0.15s ease-in;
+  -moz-transition: background-color 0.15s ease-in;
+  -o-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in;
+}
+.switch-checkbox input.sc-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 18px;
+  background-color: #ffffff;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+.switch-checkbox input.sc-toggle-round-flat:checked + label:before {
+  background-color: #78cd51;
+}
+.switch-checkbox input.sc-toggle-round-flat:checked + label:after {
+  margin-left: 26px;
+  background-color: #ffffff;
+}
+
+.settingPlayer {
+	padding:20px 20px 0;	
+}
+.settingPlayer .table {
+	overflow:hidden;	
+}
+.settingPlayer .table .row:hover ul.actionAs {
+	opacity:1;
+	right:0;
+}
+.settingPlayer ul.actionAs {
+	width:325px;	
+}
+.playerLink {
+	font-weight:500;
+	display:block;
+}
+.playerID {
+	font-style:italic;
+	color:#999999;
+	font-size:12px;	
+}
+.head-sp {
+	margin-bottom:20px;	
+}
+.head-sp button {
+	float:left;	
+	margin-right:5px;
+}
+.head-sp .action-sp button {
+	margin-left: 5px;
+	margin-right: 0;
+	text-transform: uppercase;
+}
+.head-sp .sortBy {
+	float:right;
+	padding-left:55px;	
+}
+.head-sp .sortBy label {
+	font-weight:500;
+	position:absolute;
+	top:8px;
+	left:0;	
+}
+.preview-sp {
+	position: relative;
+	height: 410px;
+	overflow: hidden;
+}
+.preview-sp:before {
+	background:url('../images/preview-bg.jpg') center center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	width: 100%;
+	height: 100%;
+	content: "";
+	top:50%;
+	left: 50%;
+	position: absolute;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+}
+.playerPreview {
+	background-color: #121212;
+	width: 480px;
+	height: 270px;
+	top:50%;
+	left: 50%;
+	position: absolute;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+}
+.playerLive {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+}
+.playerLive iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.playerShadow {
+	z-index: 1;
+	position: absolute;
+	background: url('../images/preview-shadow.png') no-repeat;
+	width: 680px;
+	height: 311px;
+	top: 0;
+	left: 0;
+}
+.rowCB {
+	border-bottom: 1px solid #f5f5f5;
+	padding: 10px 20px;
+    display: table;
+    width: 100%;
+}
+.rowCB:nth-last-child(1) {
+	border:none;
+}
+.optionFieldCB {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #dedede;
+    left: 5px;
+    top: 50%;
+    margin-top: -10px;
+    border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+.optionFieldCB span {
+	width: 12px;
+	height: 12px;
+	background-color: #dedede;
+    border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px; 
+	display: block;
+	margin: 3px;
+}
+.optionFieldCB.selected {
+	border-color: #78cd51;
+}
+.optionFieldCB.selected span {
+	background-color: #78cd51;
+}
+.fieldCB label {
+	color: #999999;
+}
+.rowCB.clearfix .fieldCB {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ul.listOptionField {
+	float: right;
+}
+ul.listOptionField li {
+	width:34px;
+	height: 34px;
+	float: left;
+	margin-left: 5px;
+	text-align: center;
+	line-height: 34px;
+	border-radius: 17px;
+	-webkit-border-radius: 17px;
+	-moz-border-radius: 17px;
+}
+ul.listOptionField li.on {
+	background-color: #78cd51;
+	color: #ffffff;
+}
+ul.listOptionField li.off {
+	background-color: #eeeeee;
+	color: #454545;
+}
+.itemOptionColor {
+	float: right;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #eeeeee;
+	margin-top: 4px;
+}
+.itemOptionColor span {
+	width: 12px;
+	height: 12px;
+	margin: 3px;
+	display: block;
+}
+.itemOptionImage {
+	background-color: #3c454f;
+	width: 90px;
+	height: 40px;
+	position: relative;
+	float: right;
+}
+.itemOptionImage img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-height: 30px;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+}
+.noteCB {
+	background-color: #fdeded;
+	border: 1px solid #f08080;
+	padding: 10px 20px;
+	color: #ac2727;
+	font-style: italic;
+	margin-top: 20px;
+}
+.settingPlayer .actionForm button {
+	margin-right: 0;
+	margin-left: 5px;
+}
+.action-bottom-sp {
+	float: right;
+	border-top: 1px solid #eeeeee;
+}
+.contentCustomBoxEdit {
+	display: none;
+}
+.contentCustomBoxEdit .rowCB {
+    padding: 15px 20px;
+}
+.contentCustomBoxEdit .fieldCB label {
+    font-weight: 500;
+    color: #454545;
+    margin-bottom: 5px;
+    display: block;
+}
+.contentCustomBoxEdit .rowCB .btnPrimary, .contentCustomBoxEdit .rowCB .btnDefault {
+	float: right;
+	margin-left: 5px;
+}
+.subRowCB:nth-last-child(1) .fieldCB {
+	border: none;
+	padding-bottom: 0;
+}
+.fieldCB {
+	display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    padding: 0 5px;
+}
+.fieldCB.col-3 {
+	width: 33.3333333%;
+}
+.fieldCB:nth-last-child(1) {
+	padding-right: 0;
+}
+.fieldCB:nth-child(1) {
+	padding-left: 0;
+}
+.subRowCB.hasCol {
+    display: table;
+    width: 100%;
+}
+.subRowCB.hasCol .switch-checkbox {
+	float: right;
+}
+.subRowCB .fieldCB {
+	display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 15px;
+}
+.subRowCB .fieldCB p {
+	font-weight: 500;
+	line-height: 22px;
+}
+.subRowCB .switch-checkbox {
+	margin-top: 4px;
+}
+.contentCustomBoxEdit .subRowCB .fieldCB .checkbox label {
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.contentCustomBoxEdit .listOptionField {
+    margin: 15px auto 0 auto;
+}
+.subRowCB .listOptionField .checkbox {
+	float: left;
+	margin-right: 30px;
+}
+.subRowCB .listOptionField .checkbox:nth-last-child(1) {
+	margin-right: 0;
+}
+.fieldCB strong {
+	line-height: 24px;
+}
+.subRowCB .fieldCB strong {
+    line-height: 30px;
+}
+.fieldCB.noTable {
+	display: block;
+}
+.rowCB.hasOption {
+    position: relative;
+    padding-left: 60px;
+    cursor: pointer;
+}
+.rowCB.noCol .fieldCB{
+	width: 100%;
+}
+.rowCB.hasOption .optionFieldCB {
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #dedede;
+    left: 25px;
+    top: 50%;
+    margin-top: -10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+.rowCB.hasOption .optionFieldCB.selected {
+	border-color: #78cd51;
+}
+.rowCB.hasOption .optionFieldCB.selected span {
+	background-color: #78cd51;
+}
+#pickColor {
+	opacity: 0.3;
+}
+.fieldCB.hasOption {
+	position: relative;
+	padding-left: 40px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+.wrapperDimension input, .wrapperDimension span {
+	float: left;
+	text-align: center;
+}
+.wrapperDimension input {
+	width: 80px;
+}
+.wrapperDimension span {
+	line-height: 34px;
+	width: 20px;
+}
+.fieldCB .radio {
+	float: left;
+	padding-right: 20px;
+}
+.fieldCB .radio label {
+	font-weight: 300;
+	cursor: pointer;
+}
+.contentCustomBoxEdit .btnUploadFile {
+	line-height: 22px;
+}
+.range-min, .range-max {
+	display: none;
+}
+.slider-wrapper {
+	margin-top: 10px;
+	position: relative;
+}
+.range-quantity {
+    background-color: #78cd51;
+    border-radius: 3px;
+}
+.range-handle {
+    border-radius: 3px;
+    height: 20px;
+    top: -8px;
+    width: 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #78cd51;
+}
+.range-bar {
+    background-color: #eeeeee;
+}
+.display-box {
+	top: -26px;
+    right: 0;
+    position: absolute;
+}
+.fieldCB.preview-watermark {
+  position: relative;
+  padding-right: 84px
+}
+.preview-position {
+  width: 74px;
+  height: 34px;
+  position: absolute;
+  bottom:0;
+  right: 0;
+}
+.wrapper-pp {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #3c454f;
+}
+.pos-item {
+  width: 15px;
+  height: 8px;
+  position: absolute;
+  background-color: #777d84;
+}
+.pos-item.top-left {
+  top:6px;
+  left: 6px;
+}
+.pos-item.top-right {
+  top:6px;
+  right: 6px;
+}
+.pos-item.bottom-left {
+  bottom:6px;
+  left: 6px;
+}
+.pos-item.bottom-right {
+  bottom:6px;
+  right: 6px;
+}
+.pos-item.selected {
+  background-color: #78cd51;
+}
+.imageDefaultPlayer {
+	float: right;
+	max-height: 60px;
+}
+.requireSetting {
+    padding: 10px;
+    margin: 20px 20px 5px;
+    background-color: #f0c7c7;
+    color: #ae1717;
+    text-align: center;
+}

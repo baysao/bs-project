@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'SegoeUI';
+  src: url('fonts/SegoeUI.eot%3F') format('embedded-opentype'),  url('fonts/SegoeUI.woff') format('woff'), url('fonts/SegoeUI.ttf')  format('truetype'), url('fonts/SegoeUI.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SegoeUI';
+  src: url('fonts/SegoeUI-SemiBold.eot%3F') format('embedded-opentype'),  url('fonts/SegoeUI-SemiBold.woff') format('woff'), url('fonts/SegoeUI-SemiBold.ttf')  format('truetype'), url('fonts/SegoeUI-SemiBold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}: bold;
+  font-style: normal;
+}

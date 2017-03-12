@@ -1,0 +1,77 @@
+.search input.gsc-input{
+	border-radius: 4px;
+    font-size: 13px;
+    padding: 5px 10px;
+	background:none !important;
+}
+.search input.gsc-search-button {
+	background-color:#eeeeee;
+	border:1px solid #dddddd;
+	font-size:13px;
+	color:#454545;
+	font-weight:400;
+	padding:4px 10px;
+	height:31px;
+}
+.search table.gsc-search-box td.gsc-input {
+	padding-right:0;	
+}
+.searchResultGoogle .gsc-above-wrapper-area {
+    margin-bottom: 10px !important;
+}
+.searchResultGoogle .cse .gsc-control-cse, .gsc-control-cse {
+	background-color:#fafafa !important;
+	border-color:#fafafa !important;
+}
+.searchResultGoogle .gsc-above-wrapper-area {
+	background-color:#fafafa !important;
+}
+.searchResultGoogle .cse .gsc-webResult.gsc-result, .gsc-webResult.gsc-result, .gsc-imageResult-column, .gsc-imageResult-classic {
+	border-color:#fafafa !important;	
+}
+.searchResultGoogle .gs-title {
+	color:#E64B3A !important;
+	text-decoration:none !important;	
+}
+.searchResultGoogle .gs-title:hover {
+	text-decoration:underline !important;	
+}
+.searchResultGoogle .gs-title b {
+	color:#E64B3A !important;	
+	text-decoration:none !important;
+}
+.searchResultGoogle .gs-webResult div.gs-visibleUrl-long, .searchResultGoogle .gs-promotion div.gs-visibleUrl-long {
+	color:#9f9f9f !important;	
+}
+.searchResultGoogle .gsc-webResult.gsc-result {
+	border-bottom:1px solid #eeeeee !important;
+	padding-bottom:10px !important;	
+}
+.searchResultGoogle .gsc-results .gsc-cursor-box .gsc-cursor-page {
+	background-color:#eeeeee;
+	padding:5px 9px;
+	text-decoration:none;
+	color:#454545;
+	border-radius:4px;
+	margin-right:3px;
+}
+.searchResultGoogle .gsc-results .gsc-cursor-box .gsc-cursor-page:hover {
+	background-color:#dddddd;	
+}
+.searchResultGoogle .gsc-cursor-page.gsc-cursor-current-page {
+	background-color:#E64B3A !important;
+	color:#ffffff !important;
+}
+.searchResultGoogle .gsc-results .gsc-cursor-box {
+    margin-top: 25px;
+	
+}
+.searchResultGoogle img.gcsc-branding-img-noclear {
+	width:51px;
+	height:15px;	
+}
+.search div.gsc-clear-button {
+	position: absolute;
+	right: 105px;
+	top: 5px;
+}

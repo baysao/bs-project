@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Channel Detail | MeMe.VN</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese,latin-ext' rel='stylesheet' type='text/css'> 
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet"></head>
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/mainmenu.js"></script>
+    <!-- start channel detail script-->
+    <script src="js/moreDescChannel.js"></script>
+    <script src="js/sidebarFixed.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <!-- end channel detail script-->
+    <script>
+		$(document).ready(function() {
+		//Global Script/////////////////////////////////////
+			  //placeholder
+			  $('input, textarea').placeholder();		
+			  //menu category
+			  $(".menu-category button").click(function() {
+				  $(".menu-category").css('display','none');
+			  });
+			  $("#browse, .browse").click(function() {
+				  $(".menu-category").slideToggle('fast');
+			  });
+			  //backtotop
+			  $(window).scroll(function() {
+					if ($(this).scrollTop()) {
+						$('.top').fadeIn();
+					} else {
+						$('.top').fadeOut();
+					}
+			  });
+				
+		//End Global Script////////////////////////////////
+			  
+		//channel Detail Script////////////////////////////////////
+			  
+			  //fixed tabs channel and sidebar
+			  
+			  $(".nav-profile").stick_in_parent()
+			  
+			  //button statis
+			  $(".btn-up").click(function() {
+				  $(".btn-up").hide();
+				  $(".btn-down").show();
+				  $(".content-statis-channnel").css('height','76px');
+			  });
+			  $(".btn-down").click(function() {
+				  $(this).hide();
+				  $(".btn-up").show();
+				  $(".content-statis-channnel").css('height','434px');
+			  });
+			  
+			  //dropdown bootstrap row status
+			  $('.btn-action-rs').popover({ 
+					html : true,
+					content: function() {
+					  return $('.action-rs').html();
+					}
+			  });
+			  
+			  
+			  //detect mobile
+			  var isDesktop = (function(){
+				  try { 
+				   document.createEvent("TouchEvent");
+				  }
+				  catch(e){
+				   return true;
+				  }
+				  return false;
+			  })();
+				 if( isDesktop ){ 
+					//slimscroll people like 
+					$('.w-people-row').slimScroll({
+					  height: '425px',
+					  size:'5px',
+					  distance : '2px',
+					  color: "#888888",
+					  allowPageScroll: true
+					  });
+					//slimscroll menu-category
+					$('.category').slimScroll({
+					  height: '300px',
+					  size:'5px',
+					  distance : '2px',
+					  color: "#888888",
+					  allowPageScroll: true
+					  }); 
+					 $.stickysidebarscroll(".sidebar",{offset: {top: 69, bottom: 258}});
+				 }
+			  
+			  //readmore
+			  $('.desc-detail-channel').readmore({
+				  maxHeight: 40
+			  });
+			  
+			  //change click to hover tabs channel
+			  $('.channel-tabs[data-toggle="tab-hover"] .owl-item a').hover( function(){
+				  $(this).tab('show');
+			  });
+					   
+			  //scroll to element and button Back To Top
+			  function goToByScroll(id){
+				  id = id.replace("link", "");
+				  $('html,body').animate({
+					  scrollTop: $("#"+id).offset().top},'slow');
+			  }
+			  $(".top").click(function(e) { 
+				  e.preventDefault(); 
+				  goToByScroll($(this).attr("id"));           
+  
+			  });
+				
+		//channel Detail Script////////////////////////////////////
+		});
+		
+    </script>
+    
+
+  </head>
+  <body id="backtotop">
+  <div id="header">
+            <div class="container-fluid">
+                <div class="col-xs-7 col-md-4 col-sm-4" style="position:relative;">
+                    <a href="channel_video.html#" class="logo-s">meme.vn</a>
+                    
+                    <span class="browseCategory">
+                        <span class="dropdown">
+                          <a href="channel_video.html#" data-toggle="dropdown" class="browse clearfix"><i class="fa fa-bars"></i>  <i class="fa fa-caret-down"></i></a>
+                          <div class="dropdown-menu main-menu arrowTop">
+                                <div class="arrow"></div>
+                                <div class="wrapper-menu scrollable">
+                                    <ul class="menu">
+                                        <li><a href="channel_video.html#" class="menu-hot">Hot</a></li>
+                                        <li><a href="channel_video.html#" class="menu-hot">Xem nhiều</a></li>
+                                        <li><a href="channel_video.html#" class="menu-hot">Phim</a></li>
+                                        <li><a href="channel_video.html#">Sự kiện</a></li>
+                                        <li><a href="channel_video.html#">Tin tức</a></li>
+                                        <li><a href="channel_video.html#">Hài</a></li>
+                                        <li><a href="channel_video.html#">Thể thao</a></li>
+                                        <li><a href="channel_video.html#">Dancingo</a></li>
+                                        <li><a href="channel_video.html#">Game</a></li>
+                                        <li><a href="channel_video.html#">Ẩm thực</a></li>
+                                        <li><a href="channel_video.html#">Giáo dục</a></li>
+                                        <li><a href="channel_video.html#">Blog</a></li>
+                                        <li><a href="channel_video.html#">Showbiz</a></li>
+                                        <li><a href="channel_video.html#">Xe cộ</a></li>
+                                        <li><a href="channel_video.html#">Động vật</a></li>
+                                        <li><a href="channel_video.html#">Đồ hoạ</a></li>
+                                        <li><a href="channel_video.html#">Giải trí</a></li>
+                                        <li><a href="channel_video.html#">Hướng dẫn</a></li>
+                                        <li><a href="channel_video.html#">Thời trang - Làm đẹp</a></li>
+                                        <li><a href="channel_video.html#">Công nghệ</a></li>
+                                        <li><a href="channel_video.html#">Du lịch</a></li>
+                                        <li><a href="channel_video.html#">Gia đình</a></li>
+                                        <li><a href="channel_video.html#">Hoạt hình</a></li>
+                                        <li><a href="channel_video.html#">Khoa học</a></li>
+                                        <li><a href="channel_video.html#">Lifestyle</a></li>
+                                        <li><a href="channel_video.html#">Nghệ thuật</a></li>
+                                        <li><a href="channel_video.html#">Sức khoẻ</a></li>
+                                        <li><a href="channel_video.html#">Thiên nhiên</a></li>
+                                        <li><a href="channel_video.html#">Trẻ em</a></li>
+                                        <li><a href="channel_video.html#">Sản phẩm</a></li>
+                                        <li><a href="channel_video.html#">Quảng cáo</a></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <div class="menu-policy clearfix">
+                                        <ul>
+                                            <li><a href="channel_video.html#">MeMe là gì?</a></li>
+                                            <li><a href="channel_video.html#">Cách hoạt động</a></li>
+                                            <li><a href="channel_video.html#">Điều khoản sử dụng</a></li>
+                                            <li><a href="channel_video.html#">Chính sách nội dung</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                          </div>
+                        </span>
+                    </span>
+                </div>
+    
+                <div class="search col-md-4 col-sm-4 hidden-xs">
+                    <input class="search-top form-control" type="text" placeholder="Keyword..." />
+                    <button class="btn search-btn" type="submit"><span class="icon icon-search"></span>
+                    </button>
+                </div><!-----------end search------------>
+                <div class="wrap-menu-top col-xs-5 col-md-4 col-sm-4">
+                    <ul class="menu-top">
+                        <li>
+                            <a href="http://beta.meme.vn/usercp/video/add" class="menu-top-link tooltipMeme" title="Upload">
+                                <span class="icon icon-upload leftNone"></span>
+                            </a>
+                        </li>
+                        <li class="notification dropdown">
+                            <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="channel_video.html#" title="Notification" >
+                                <span class="icon icon-notification leftNone"></span>
+                                <span class="notification-count">9+</span>
+                            </a>
+                            
+                                <ul class="dropdown-menu arrowTop">
+                                    <div class="arrow"></div>
+                                    <div class="notification-head">Notification</div>
+                                    <div class="wrapper-notification scrollable">
+                                        <li>
+                                            <a class="notification-link clearfix" href="channel_video.html#">
+                                                <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                                </div>
+                                                <small class="notification-time"> 23 giờ trước</small>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="channel_video.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="channel_video.html#">
+                                                <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="channel_video.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="channel_video.html#">
+                                                <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="channel_video.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="channel_video.html#">
+                                                <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="channel_video.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="channel_video.html#">
+                                                <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="channel_video.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="channel_video.html#">
+                                                <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="channel_video.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                            </a>
+                                        </li>
+                                    </div><!--end wrapper-notification-->
+                                    <!--<div class="notification-more"><a href="#">Xem thêm</a></div>-->
+                                </ul>
+                            
+                        </li>
+                        <!--<li>
+                            <a class="menu-top-link tooltipMeme" href="#" data-toggle="tooltip" title="Đăng nhập">
+                                <span class="icon icon-account leftNone"></span>
+                            </a>
+                        </li>-->
+                        <li class="account dropdown">
+                            <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="channel_video.html#" title="Account">
+                                <img src="images/avatar2.jpg" class="img-user"><span class="account-name hidden-xs"> Đào Viết Phương </span>
+                                
+                            </a>
+                            <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu arrowTop">
+                                <div class="arrow"></div>
+                                <li><a href="http://beta.meme.vn/usercp/account/editProfile"><i class="fa fa-edit"></i> Sửa thông tin cá nhân</a></li>
+                                <li><a href="http://beta.meme.vn/usercp/video"><i class="fa fa-play-circle"></i> Quản lý Video</a></li>
+                                <li><a href="http://beta.meme.vn/usercp/channel"><i class="fa fa-video-camera"></i> Quản lý Channel</a></li>
+                                <li><a href="channel_video.html#"><i class="fa fa-bar-chart-o"></i> Xem thống kê</a></li>
+                                <li><a href="channel_video.html#"><i class="fa fa-usd"></i> Xem doanh thu</a></li>
+                                <li><a href="http://beta.meme.vn/user/logout"><i class="fa fa-sign-out"></i> Thoát</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-----------end wrap-menu-top------------>
+                <div class="clearfix"></div>
+            </div>
+    </div>
+    <!-- end header-->
+    
+  <div class="wrapper-content">
+    <div class="channel-profile">
+    	<div class="channel-cover" style="background-image:url(images/cover1.jpg)">
+        	<div class="bg-cover"></div>
+        </div>
+        <div class="channel-info">
+            <div class="container">
+                <img class="channel-avatar" src="images/avatar_channel.jpg" />
+                <h1 class="channel-name-detail">Brady Jacobsen <i class="fa fa-check-circle"></i></h1>	
+                <div class="channnel-desc">
+                <p class="desc-detail-channel">This site has been on this site organizers all genuine licensed video content, take the necessary anti-piracy and anti-hotlinking and other technical measures, and added, set electronic rights management information. Any unit or individual, the organizers of this website without permission, in any way all genuine licensed video content, take the necessary anti. This site has been on this site organizers all genuine licensed video content, take the necessary anti-piracy and anti-hotlinking and other technical measures, and added, set electronic rights management information. Any unit or individual, the organizers of this website without permission, in any way all genuine licensed video content, take the necessary anti </p>
+                	
+                </div>
+            </div>
+        </div>
+    </div><!-- end channel-profile--> 
+    
+    <div class="nav-profile">
+    	<div class="container">
+            <div class="tabs-profile">
+                <ul class="nav">
+                    <li><a href="channel_video.html#">home</a></li>
+                    <li><a class="active" href="channel_video.html#">video</a></li>
+                    <li><a href="channel_video.html#">playlist</a></li>
+                </ul>
+            </div><!-- end tabs-profile-->
+            <div class="button-profile">
+                <button type="button" class="btn btn-default btn-message hidden-xs"><i class="fa fa-envelope"></i> Nhắn tin</button>
+                <!--<button type="button" class="btn btn-primary btn-subscribe"><i class="fa fa-play-circle"></i> Subscribe</button>-->
+                <button type="button" class="btn btn-default btn-subscribed"><i class="fa fa-check-circle"></i> Subscribed</button>
+                <!--<button type="button" class="btn btn-default btn-unsubscribe"><i class="fa fa-times-circle"></i> Unsubscribe</button>-->
+            </div><!-- end button-profile-->
+         </div>
+    </div><!-- end nav-profile--> 
+    
+    <div class="content-channel-detail">
+    	<div class="container">
+            <div class="statis-channnel col-xs-12 col-md-4 col-lg-3">
+            	<div class="sidebar">
+                    <div class="content-statis-channnel clearfix">
+                            <div class="line-statis col-sm-12 col-md-12">
+                                <div class="line-circle fixmt"><i class="fa fa-users"></i></div>
+                                <div class="info-statis fixmt">
+                                    <p class="info-statis-text">Subscriber</p>
+                                    <p class="number-statis-text">590.799</p>
+                                </div>
+                                <div class="people-subscribe">
+                                    <p><a href="channel_video.html#">Phan Ly Linh</a>, <a href="channel_video.html#">Hoàng An</a> and <a href="channel_video.html#">10 others</a> subscribe channel nay.</p>
+                                    <div class="row">
+                                        <a href="channel_video.html#" class="people-img"><img src="images/avatar1.jpg" /></a>
+                                        <a href="channel_video.html#" class="people-img"><img src="images/avatar2.jpg" /></a>
+                                        <a href="channel_video.html#" class="people-img"><img src="images/avatar3.jpg" /></a>
+                                        <a href="channel_video.html#" class="people-img"><img src="images/avatar2.jpg" /></a>
+                                        <a href="channel_video.html#" class="people-img hidden-xs hidden-lg"><img src="images/avatar1.jpg" /></a>
+                                        <a href="channel_video.html#" class="people-img hidden-xs hidden-lg"><img src="images/avatar2.jpg" /></a>
+                                        <a href="channel_video.html#" class="people-img hidden-xs hidden-md hidden-lg"><img src="images/avatar3.jpg" /></a>
+                                        <a href="channel_video.html#" class="people-img hidden-xs hidden-md hidden-lg"><img src="images/avatar2.jpg" /></a>
+                                        <a href="channel_video.html#" class="people-img hidden-md"><img src="images/avatar1.jpg" /></a>
+                                        <a href="channel_video.html#" class="more-people"><i class="fa fa-arrow-right"></i></a>
+                                    </div>
+                                    <p><a href="channel_video.html#">Mời bạn bè tham gia subscribe channel này</a></p>
+                                </div>
+                            </div><!-- end line-statis-->
+                            <div class="line-statis col-sm-4 col-md-12 last4sm-rbb">
+                                <div class="line-circle"><i class="fa fa-video-camera"></i></div>
+                                <div class="info-statis">
+                                    <p class="info-statis-text">Videos</p>
+                                    <p class="number-statis-text">190.799</p>
+                                </div>
+                            </div><!-- end line-statis-->
+                            <div class="line-statis col-sm-4 col-md-12 last4sm-rbb">
+                                <div class="line-circle"><i class="fa fa-thumbs-up"></i></div>
+                                <div class="info-statis">
+                                    <p class="info-statis-text">Likes</p>
+                                    <p class="number-statis-text">468.500</p>
+                                </div>
+                            </div><!-- end line-statis-->
+                            <div class="line-statis col-sm-4 col-md-12 last">
+                                <div class="line-circle"><i class="fa fa-eye"></i></div>
+                                <div class="info-statis">
+                                    <p class="info-statis-text">Views</p>
+                                    <p class="number-statis-text">8.468.500</p>
+                                </div>
+                            </div><!-- end line-statis-->
+                            <div class="button-statis hidden-sm hidden-md hidden-lg">
+                                <button type="button" class="btn btn-down"><i class="fa fa-caret-down"></i></button>
+                                <button type="button" class="btn btn-up"><i class="fa fa-caret-up"></i></button>
+                            </div><!-- end button-statis-->
+                    </div><!-- end content-statis-channnel-->
+                </div>
+            </div><!-- end statis-channnel-->
+            
+        	<div class="activity-channel col-xs-12 col-md-8 col-lg-9">
+            	<div class="paging-channel clearfix">
+                	<h4 class="title-channel-video">Video Mới nhất</h4>
+                    <div class="paging-seo hidden-xs">
+                        <a href="channel_video.html#" class="active">1</a>
+                        <a href="channel_video.html#">2</a>
+                        <a href="channel_video.html#">3</a>
+                        <a href="channel_video.html#">4</a>
+                        <a href="channel_video.html#">5</a>
+                        <a href="channel_video.html#"><i class="fa fa-angle-right"></i></a>
+                    </div> 
+                </div>
+                <div class="clearfix"></div> 
+				<div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img4.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Buổi biểu diễn thời trang công sở</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img3.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Learn HTML, CSS, and how to build iPhone apps at Treehouse.</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img1.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Buổi biểu diễn thời trang công sở</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img2.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Buổi biểu diễn thời trang công sở</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img1.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Buổi biểu diễn thời trang công sở</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img6.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Learn HTML, CSS, and how to build iPhone apps at Treehouse.</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img4.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Buổi biểu diễn thời trang công sở</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img3.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Learn HTML, CSS, and how to build iPhone apps at Treehouse.</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img1.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Buổi biểu diễn thời trang công sở</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img2.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Buổi biểu diễn thời trang công sở</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img1.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Buổi biểu diễn thời trang công sở</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="video-item col-sm-6 col-md-6 col-lg-4 clearfix">
+                    <a href="channel_video.html#" class="video-item-thumb fixThumbVideo">
+                        <img class="animateImg" src="images/video-img6.jpg" />
+                        <div class="video-item-info-top">
+                            <span class="video-item-time">07:58</span>
+                        </div>
+                        <div class="video-item-info">
+                             <span class="video-item-view"><span class="fa fa-eye"></span>36</span>
+                             <span class="video-item-like"><span class="fa fa-thumbs-up"></span>36.000</span>
+                        </div>
+                        <span class="video-item-play"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="channel_video.html#" class="video-item-name">Learn HTML, CSS, and how to build iPhone apps at Treehouse.</a>
+                    <div>
+                        <a href="channel_video.html#" class="video-item-uploader">Andy Lau</a>
+                        <span class="video-item-date">13/05/2014</span>
+                    </div>
+                </div><!--end video-item-->
+                <div class="clearfix"></div>
+        		<div class="box-loadmore col-sm-4">
+                    <a href="channel_video.html#" class="loadmore">I want more</a>
+                </div>
+                
+            </div><!-- end activity-channel-->
+            
+        </div>
+    </div><!-- content-channel-detail--> 
+    
+      <div class="footer container-fluid">
+      	<div class="col-md-5 hidden-xs hidden-sm">
+        	<div class="footer-head">
+            	<h3>Giới thiệu meme</h3>
+            </div>
+            <div class="footer-content footer-logo">
+            	<p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí…</p>
+                <a href="channel_video.html#" class="about-more">Xem thêm</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+        	<div class="footer-head">
+            	<h3>Facebook</h3>
+            </div>
+            <div class="footer-content">
+            	<h5>TV Network</h5>
+                <div id="fb-root"></div>
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="facebook">
+                	<div class="fb-like" data-href="https://www.facebook.com/memevietnam" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+        	<div class="footer-head">
+            	<h3>Hỗ trợ</h3>
+            </div>
+            <div class="footer-content">
+            	<ul class="nav">
+                	<li><a href="channel_video.html#">MeMe là gì?</a></li>
+                	<li><a href="channel_video.html#">Cách hoạt động</a></li>
+                    <li><a href="channel_video.html#">Lợi ích</a></li>
+                    <li><a href="channel_video.html#">Đối tác nội dung</a></li>
+                    <li><a href="channel_video.html#">Khiếu nại bản quyền</a></li>
+                    <li><a href="channel_video.html#">Liên hệ</a></li>
+                    <li><a href="channel_video.html#">Điều khoản sử dụng</a></li>
+                    <li><a href="channel_video.html#">Chính sách nội dung</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <!--end footer-->
+      <div class="footer-bottom col-xs-12">
+      	<span class="copyright">Copyright ©2013 meme.vn</span>
+      </div>
+      <!--end footer bottom-->
+  </div>
+  <!--end wrapper content-->
+
+  <a href="channel_video.html#" class="top" id="backtotoplink"><span class="icon icon-arrow-up-s"></span></a>
+  
+  <!--pop up addto playlist-->
+  <div id="addToPlaylist" class="addToPlaylist modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add to playlist</h4>
+          </div>
+          <div class="modal-body clearfix">
+            <div class="row-playlist clearfix">
+            	<a href="channel_video.html#" class="playlist-name">Best movie counter-strike1.6 </a>
+                <span class="playlist-number">38</span>
+            </div>
+            <div class="row-playlist clearfix">
+            	<a href="channel_video.html#" class="playlist-name">Top Hit Nhac Nam My 2014 </a>
+                <span class="playlist-number">32</span>
+            </div>
+            <div class="playlist-form">
+            	<input type="text" class="form-control" placeholder="Tạo playlist mới">
+                <div class="playlist-setting clearfix">    
+                    <div class="dropdown">
+                      <a data-toggle="dropdown" href="channel_video.html#">Public <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li><a href="channel_video.html#">Public</a></li>
+                        <li><a href="channel_video.html#">Only me</a></li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-playlist">Create</button>  
+                </div>
+                  
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end addToPlaylist-->
+  
+  
+  </body>
+</html>

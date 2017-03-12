@@ -1,0 +1,81 @@
+/* Font Color */
+/* Background Color */
+/* Mixins */
+/* skin color */
+.upnext {
+  position: absolute;
+  bottom: 60px;
+  left: -290px;
+  z-index: 3;
+  width: 290px;
+  height: 72px;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.upnext.show {
+  left: 0;
+  opacity: 1;
+}
+.upnext .link-un {
+  display: table;
+  text-decoration: none;
+}
+.upnext .thumbnail-un {
+  display: table-cell;
+  vertical-align: middle;
+  width: 118px;
+  height: 72px;
+  background-size: 120% auto;
+  -webkit-background-size: 120% auto;
+  -moz-background-size: 120% auto;
+  background-position: center center;
+  -webkit-transition: background-size 0.2s ease-in;
+  -moz-transition: background-size 0.2s ease-in;
+  -o-transition: background-size 0.2s ease-in;
+  transition: background-size 0.2s ease-in;
+}
+.upnext:hover .thumbnail-un {
+  background-size: 150% auto;
+  -webkit-background-size: 150% auto;
+  -moz-background-size: 150% auto;
+}
+.upnext .info-un {
+  display: table-cell;
+  vertical-align: middle;
+  width: 172px;
+}
+.upnext .info-un h3 {
+  color: #3498db;
+  margin: 13px 15px 4px;
+  font-size: 12px;
+}
+.upnext .info-un p {
+  font-size: 12px;
+  color: #fff;
+  padding: 0 15px;
+  margin-top: 0px;
+  overflow: hidden;
+  max-height: 28px;
+}
+.upnext .btn-close-un {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+.upnext .btn-close-un svg {
+  fill: rgba(255, 255, 255, 0.7);
+  -webkit-transition: fill 0.2s ease-in;
+  -moz-transition: fill 0.2s ease-in;
+  -o-transition: fill 0.2s ease-in;
+  transition: fill 0.2s ease-in;
+}
+.upnext .btn-close-un:hover svg {
+  fill: white;
+}

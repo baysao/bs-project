@@ -1,0 +1,317 @@
+/* Font Color */
+/* Background Color */
+/* Mixins */
+/* tooptip-mep */
+.tooltip-mep {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 11px;
+  padding: 3px 5px;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  z-index: -1;
+  white-space: nowrap;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.tooltip-mep:before {
+  width: 0;
+  height: 0;
+  content: "";
+  border-style: solid;
+  border-width: 0 7px 7px 0;
+  border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -3px;
+  position: absolute;
+}
+
+.has-tooltip {
+  position: relative;
+}
+
+.has-tooltip:hover .tooltip-mep {
+  opacity: 1;
+  z-index: 1;
+  top: -40px;
+  visibility: visible;
+}
+
+.wrapper-btn-subtitles {
+  position: relative;
+  padding-top: 11px;
+}
+
+.btn-subtitles {
+  cursor: pointer;
+  position: relative;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  height: 14px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.btn-subtitles .tooltip-mep {
+  margin-left: -5px;
+}
+.btn-subtitles svg {
+  fill: #cccccc;
+  width: 20px;
+  height: 14px;
+  -webkit-transition: fill 0.2s ease-in;
+  -moz-transition: fill 0.2s ease-in;
+  -o-transition: fill 0.2s ease-in;
+  transition: fill 0.2s ease-in;
+  -moz-border-radius: 2px 2px 0 0;
+  -webkit-border-radius: 2px 2px 0 0;
+  border-radius: 2px 2px 0 0;
+}
+.btn-subtitles.active, .btn-subtitles.on {
+  border-color: #3498db;
+}
+.btn-subtitles.active svg, .btn-subtitles.on svg {
+  fill: #ffffff;
+}
+
+.subtitles-config {
+  position: absolute;
+  bottom: 110%;
+  margin-bottom: 13px;
+  left: -98px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 0;
+  opacity: 0;
+  visibility: hidden;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  /* /ul */
+  /* /ul option-language */
+  /* /ul option-language */
+}
+.subtitles-config.show {
+  opacity: 1;
+  bottom: 100%;
+  visibility: visible;
+}
+.subtitles-config .wrapper-config {
+  width: 1000px;
+  -webkit-transition: margin-left 0.2s ease;
+  -moz-transition: margin-left 0.2s ease;
+  -o-transition: margin-left 0.2s ease;
+  transition: margin-left 0.2s ease;
+}
+.subtitles-config ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  position: relative;
+  width: 200px;
+  display: table;
+  float: left;
+}
+.subtitles-config ul li {
+  font-size: 12px;
+  color: #999999;
+  display: table-row;
+  cursor: pointer;
+  height: 30px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.subtitles-config ul li:hover {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.subtitles-config ul li .arrow-config {
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: 3px;
+  color: #cccccc;
+}
+.subtitles-config ul li .arrow-config.back {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.subtitles-config ul li span {
+  color: #ffffff;
+  font-weight: bold;
+}
+.subtitles-config ul li .wrapper-option {
+  width: 280px;
+  height: 145px;
+  overflow: auto;
+}
+.subtitles-config ul li .wrapper-option::-webkit-scrollbar {
+  width: 10px;
+}
+.subtitles-config ul li .wrapper-option::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.subtitles-config ul li .wrapper-option::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.subtitles-config ul li .wrapper-option ul {
+  width: 100%;
+}
+.subtitles-config ul li .wrapper-option ul li .title-config {
+  padding-left: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.subtitles-config ul li .wrapper-option ul li .active-config {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.subtitles-config ul li .title-config, .subtitles-config ul li .active-config {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.subtitles-config ul li .active-config {
+  text-align: right;
+}
+.subtitles-config ul li .active-config.current {
+  color: #ffffff;
+  max-width: 110px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.subtitles-config ul li:nth-last-child(1) .title-config, .subtitles-config ul li:nth-last-child(1) .active-config {
+  border: none;
+}
+.subtitles-config ul.option-language, .subtitles-config ul.option-field {
+  display: none;
+}
+.subtitles-config ul.option-language li .title-config, .subtitles-config ul.option-field li .title-config {
+  padding-left: 30px;
+  border: none;
+}
+.subtitles-config ul.option-language li .title-config.current, .subtitles-config ul.option-field li .title-config.current {
+  padding-left: 15px;
+  color: #ffffff;
+}
+.subtitles-config ul.option-language li .title-config.current svg, .subtitles-config ul.option-field li .title-config.current svg {
+  margin-right: 5px;
+}
+.subtitles-config ul.option-language li:nth-child(1) .title-config, .subtitles-config ul.option-field li:nth-child(1) .title-config {
+  padding-left: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.subtitles-config ul.option-subtitles {
+  display: none;
+  width: 280px;
+}
+.subtitles-config ul.option-subtitles li:nth-last-child(1):hover {
+  background: none;
+}
+.subtitles-config ul.option-subtitles li .title-config {
+  padding-left: 30px;
+}
+.subtitles-config ul.option-subtitles li .title-config.current {
+  padding-left: 15px;
+  color: #ffffff;
+}
+.subtitles-config ul.option-subtitles li .title-config.current svg {
+  margin-right: 5px;
+}
+.subtitles-config ul.option-subtitles li:nth-child(1) .title-config {
+  padding-left: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.switch-checkbox {
+  display: inline-block;
+  position: relative;
+}
+.switch-checkbox .sc-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.switch-checkbox .sc-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.switch-checkbox input.sc-toggle-round-flat + label {
+  padding: 1px;
+  width: 50px;
+  height: 24px;
+  -moz-border-radius: 13px;
+  -webkit-border-radius: 13px;
+  border-radius: 13px;
+}
+.switch-checkbox input.sc-toggle-round-flat + label:before, .switch-checkbox input.sc-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+.switch-checkbox input.sc-toggle-round-flat + label:before {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  -moz-border-radius: 13px;
+  -webkit-border-radius: 13px;
+  border-radius: 13px;
+  -webkit-transition: background-color 0.3s ease-in;
+  -moz-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+.switch-checkbox input.sc-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 18px;
+  background-color: #dddddd;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.switch-checkbox input.sc-toggle-round-flat:checked + label:before {
+  background-color: #3498db;
+}
+.switch-checkbox input.sc-toggle-round-flat:checked + label:after {
+  margin-left: 26px;
+  background-color: #ffffff;
+}

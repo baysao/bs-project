@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>List Video Upload | MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/cpanel.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
+	
+
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/disableScrollBar.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/global.js"></script>
+    
+    <!-- start detail script-->
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script>
+		$(document).ready(function() {
+			 $('#dp,#dp1').datepicker();
+			
+			 //check list
+			 $('#checkAll, .checkbox-row-alu').attr('checked', false);
+			 $('#checkAll').click(function(event) {
+				if(this.checked) { 
+					$('.checkbox-row-alu').each(function() {
+						this.checked = true;
+						$(this).closest('.row-alu').addClass('selected');              
+					});
+				}else{
+					$('.checkbox-row-alu').each(function() {
+						this.checked = false;
+						$(this).closest('.row-alu').removeClass('selected');                     
+					});         
+				}
+			 });
+			 $('.checkbox-row-alu').click(function () {
+				 $(this).closest('.row-alu').toggleClass('selected');
+			 });
+		});
+
+    </script>
+    <!-- end detail script-->
+	
+    
+</head>
+
+<body id="backtotop">
+    <div id="header">
+            <div class="container-fluid">
+                <div class="col-xs-7 col-md-4 col-sm-4" style="position:relative;">
+                    <a href="cpListVideo.html#" class="logo-s">meme.vn</a>
+                    
+                    <span class="browseCategory">
+                        <span class="dropdown">
+                          <a href="cpListVideo.html#" data-toggle="dropdown" class="browse clearfix"><i class="fa fa-bars"></i>  <i class="fa fa-caret-down"></i></a>
+                          <div class="dropdown-menu main-menu arrowTop">
+                                <div class="arrow"></div>
+                                <div class="wrapper-menu scrollable">
+                                    <ul class="menu">
+                                        <li><a href="cpListVideo.html#" class="menu-hot">Hot</a></li>
+                                        <li><a href="cpListVideo.html#" class="menu-hot">Xem nhiều</a></li>
+                                        <li><a href="cpListVideo.html#" class="menu-hot">Phim</a></li>
+                                        <li><a href="cpListVideo.html#">Sự kiện</a></li>
+                                        <li><a href="cpListVideo.html#">Tin tức</a></li>
+                                        <li><a href="cpListVideo.html#">Hài</a></li>
+                                        <li><a href="cpListVideo.html#">Thể thao</a></li>
+                                        <li><a href="cpListVideo.html#">Dancingo</a></li>
+                                        <li><a href="cpListVideo.html#">Game</a></li>
+                                        <li><a href="cpListVideo.html#">Ẩm thực</a></li>
+                                        <li><a href="cpListVideo.html#">Giáo dục</a></li>
+                                        <li><a href="cpListVideo.html#">Blog</a></li>
+                                        <li><a href="cpListVideo.html#">Showbiz</a></li>
+                                        <li><a href="cpListVideo.html#">Xe cộ</a></li>
+                                        <li><a href="cpListVideo.html#">Động vật</a></li>
+                                        <li><a href="cpListVideo.html#">Đồ hoạ</a></li>
+                                        <li><a href="cpListVideo.html#">Giải trí</a></li>
+                                        <li><a href="cpListVideo.html#">Hướng dẫn</a></li>
+                                        <li><a href="cpListVideo.html#">Thời trang - Làm đẹp</a></li>
+                                        <li><a href="cpListVideo.html#">Công nghệ</a></li>
+                                        <li><a href="cpListVideo.html#">Du lịch</a></li>
+                                        <li><a href="cpListVideo.html#">Gia đình</a></li>
+                                        <li><a href="cpListVideo.html#">Hoạt hình</a></li>
+                                        <li><a href="cpListVideo.html#">Khoa học</a></li>
+                                        <li><a href="cpListVideo.html#">Lifestyle</a></li>
+                                        <li><a href="cpListVideo.html#">Nghệ thuật</a></li>
+                                        <li><a href="cpListVideo.html#">Sức khoẻ</a></li>
+                                        <li><a href="cpListVideo.html#">Thiên nhiên</a></li>
+                                        <li><a href="cpListVideo.html#">Trẻ em</a></li>
+                                        <li><a href="cpListVideo.html#">Sản phẩm</a></li>
+                                        <li><a href="cpListVideo.html#">Quảng cáo</a></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <div class="menu-policy clearfix">
+                                        <ul>
+                                            <li><a href="cpListVideo.html#">MeMe là gì?</a></li>
+                                            <li><a href="cpListVideo.html#">Cách hoạt động</a></li>
+                                            <li><a href="cpListVideo.html#">Điều khoản sử dụng</a></li>
+                                            <li><a href="cpListVideo.html#">Chính sách nội dung</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                          </div>
+                        </span>
+                    </span>
+                </div>
+    
+                <div class="search col-md-4 col-sm-4 hidden-xs">
+                    <input class="search-top form-control" type="text" placeholder="Keyword..." />
+                    <button class="btn search-btn" type="submit"><span class="icon icon-search"></span>
+                    </button>
+                </div><!-----------end search------------>
+                <div class="wrap-menu-top col-xs-5 col-md-4 col-sm-4">
+                    <ul class="menu-top">
+                        <li>
+                            <a href="http://beta.meme.vn/usercp/video/add" class="menu-top-link tooltipMeme" title="Upload">
+                                <span class="icon icon-upload leftNone"></span>
+                            </a>
+                        </li>
+                        <li class="notification dropdown">
+                            <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="cpListVideo.html#" title="Notification" >
+                                <span class="icon icon-notification leftNone"></span>
+                                <span class="notification-count">9+</span>
+                            </a>
+                            
+                                <ul class="dropdown-menu arrowTop">
+                                    <div class="arrow"></div>
+                                    <div class="notification-head">Notification</div>
+                                    <div class="wrapper-notification scrollable">
+                                        <li>
+                                            <a class="notification-link clearfix" href="cpListVideo.html#">
+                                                <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                                </div>
+                                                <small class="notification-time"> 23 giờ trước</small>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="cpListVideo.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="cpListVideo.html#">
+                                                <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="cpListVideo.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="cpListVideo.html#">
+                                                <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="cpListVideo.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="cpListVideo.html#">
+                                                <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="cpListVideo.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="cpListVideo.html#">
+                                                <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="cpListVideo.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="cpListVideo.html#">
+                                                <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="cpListVideo.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                            </a>
+                                        </li>
+                                    </div><!--end wrapper-notification-->
+                                    <!--<div class="notification-more"><a href="#">Xem thêm</a></div>-->
+                                </ul>
+                            
+                        </li>
+                        <!--<li>
+                            <a class="menu-top-link tooltipMeme" href="#" data-toggle="tooltip" title="Đăng nhập">
+                                <span class="icon icon-account leftNone"></span>
+                            </a>
+                        </li>-->
+                        <li class="account dropdown">
+                            <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="cpListVideo.html#" title="Account">
+                                <img src="images/avatar2.jpg" class="img-user"><span class="account-name hidden-xs"> Đào Viết Phương </span>
+                                
+                            </a>
+                            <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu arrowTop">
+                                <div class="arrow"></div>
+                                <li><a href="http://beta.meme.vn/usercp/account/editProfile"><i class="fa fa-edit"></i> Sửa thông tin cá nhân</a></li>
+                                <li><a href="http://beta.meme.vn/usercp/video"><i class="fa fa-play-circle"></i> Quản lý Video</a></li>
+                                <li><a href="http://beta.meme.vn/usercp/channel"><i class="fa fa-video-camera"></i> Quản lý Channel</a></li>
+                                <li><a href="cpListVideo.html#"><i class="fa fa-bar-chart-o"></i> Xem thống kê</a></li>
+                                <li><a href="cpListVideo.html#"><i class="fa fa-usd"></i> Xem doanh thu</a></li>
+                                <li><a href="http://beta.meme.vn/user/logout"><i class="fa fa-sign-out"></i> Thoát</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-----------end wrap-menu-top------------>
+                <div class="clearfix"></div>
+            </div>
+    </div>
+    <!-- end header-->
+
+	<div class="wrapper-content">
+       <div class="wrapper-db">
+       		<div class="container">
+                	<div class="left-upload col-sm-3 col-md-2">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand" data-toggle="collapse" data-parent="#accordion" href="cpListVideo.html#collapseOne"><i class="fa fa-video-camera"></i> Video</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <ul class="nav">
+                                        	<li><a class="sub-menu-upload active" href="cpListVideo.html#">Quản lý video</a></li>
+                                            <li><a class="sub-menu-upload" href="cpListVideo.html#">Thêm Video</a></li>
+                                            <li><a class="sub-menu-upload" href="cpListVideo.html#">Chờ duyệt<span class="num-draf">9</span></a></li>
+                                            <li><a class="sub-menu-upload last" href="cpListVideo.html#">Video nháp <span class="num-draf">49</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- .panel -->
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand collapsed" data-toggle="collapse" data-parent="#accordion" href="cpListVideo.html#collapseThree">
+                                           <i class="fa fa-film"></i> Channel
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav">
+                                        	<li><a class="sub-menu-upload" href="cpListVideo.html#">Quản lý channel</a></li>
+                                        	<li><a class="sub-menu-upload" href="cpListVideo.html#">Thành viên</a></li>
+                                            <li><a class="sub-menu-upload" href="cpListVideo.html#">Thông tin</a></li>
+                                            <li><a class="sub-menu-upload" href="cpListVideo.html#">Địa chỉ trang</a></li>
+                                            <li><a class="sub-menu-upload last" href="cpListVideo.html#">Playlist</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- .panel -->
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand collapsed" href="cpListVideo.html#">
+                                            <i class="fa fa-indent"></i> My playlist
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div> <!-- .panel -->
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand collapsed" href="cpListVideo.html#">
+                                            <i class="fa fa-bar-chart-o"></i> Thống kê
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div> <!-- .panel -->
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand collapsed" href="cpListVideo.html#">
+                                            <i class="fa fa-dollar"></i> Doanh Thu
+                                        </a>
+                                    </h4>
+                                </div>
+                                
+                            </div> <!-- .panel -->
+                        </div> <!-- .panel-group -->
+                    </div><!-- end left-upload -->
+                    <div class="col-sm-9 col-md-10">
+                        <div class="right-upload clearfix">
+                        	<h1 class="clearfix">
+                            	<div class="w-text-h1">
+                                    <span>Video</span> 
+                                    <div class="number-fu right">
+                                        <div class="arrow"></div>
+                                        <span>200</span>
+                                    </div> 
+                                </div>
+                    			<a href="cpListVideo.html#" class="btn-addVideo"><i class="fa fa-plus"></i> Thêm video</a></h1>
+                            <div class="search-upload clearfix">
+                            	<div class="col-sm-7 col-md-5 col-lg-6">
+                                	<input type="text" class="form-control" placeholder="Nhập tên hoặc mã video cần tìm" />
+                                </div>
+                                <div class="col-sm-4 col-md-3 col-lg-3">
+                                	<select class="form-control">
+                                    	<option>Thể loại</option>
+                                        <option>Thể thao</option>
+                                        <option>Âm nhạc</option>
+                                        <option>Công nghệ</option>
+                                        <option>Giáo dục</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1 col-md-1 col-lg-1">
+                                	<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                </div>
+                                <div class="col-md-3 col-lg-2">
+                                	<button type="submit" class="btn btn-default" data-toggle="collapse" data-target=".w-advance-search">Tìm kiếm nâng cao</button>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="w-advance-search collapse">
+                                    <div class="advance-search clearfix">
+                                        <div class="col-sm-6 col-md-3">
+                                            <select class="form-control">
+                                                <option>Người Đăng</option>
+                                                <option>Đào Viết Phương</option>
+                                                <option>Xuân Giao</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3">
+                                            <select class="form-control">
+                                                <option>Duyệt video</option>
+                                                <option>Đã duyệt</option>
+                                                <option>Chờ duyệt</option>
+                                                <option>Bị từ chối</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <select class="form-control">
+                                                <option>Trạng thái</option>
+                                                <option>Publish</option>
+                                                <option>Unpublish</option>
+                                                <option>Private</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <select class="form-control">
+                                                <option>Nguồn</option>
+                                                <option>Tự sản xuất</option>
+                                                <option>Giữ bản quyền/được ủy quyền</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3">
+                                            <select class="form-control">
+                                                <option>Show Ads</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                                <option>Pending...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3">
+                                            <select class="form-control">
+                                                <option>Video mặc định</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <select class="form-control">
+                                                <option>Video nổi bật</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-3 col-md-2">
+                                            
+                                              <input id="dp" class="form-control" type="text" data-date-format="dd-mm-yyyy" value="" placeholder="Từ ngày">
+                                        </div>
+                                        <div class="col-xs-6 col-sm-3 col-md-2">
+                                              <input id="dp1" class="form-control" type="text" value="" data-date-format="dd-mm-yyyy" placeholder="Đến ngày">
+                                            
+                                        </div>
+                                    </div>
+                                </div><!-- end w-advance-search -->
+                            </div><!-- end search-upload -->
+                            <div class="content-upload">
+                                <p class="bg-success status-upload"><i class="fa fa-check-circle green-lv"></i> Bạn vừa chỉnh sửa 5 video thành công</p>
+                                 <p class="bg-danger status-upload"><i class="fa fa-warning red-lv"></i> Video này bi lỗi convert nên không thể publish</p>
+                            	<div class="action-list-upload clearfix">
+                                	<div class="checkbox-alu">
+                                        <input type="checkbox" value="" id="checkAll">
+                                    </div>
+                                    <div class="dropdown-alu dropdown">
+                                        <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                           <i class="fa fa-tasks"></i> Tác vụ
+                                        </a>
+                                        <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                            <li>
+                                                <ul class="nav">
+                                                    <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                    <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                    <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="nav">
+                                                    <li><a href="cpListVideo.html#"><i class="fa fa-trash-o"></i>Xóa</a></li>
+                                                    <li><a href="cpListVideo.html#"><i class="fa fa-edit"></i>Sửa</a></li>
+                                                    <li><a href="cpListVideo.html#" class="btn-addto-alu" data-toggle="modal" data-target="#addToPlaylist"><i class="fa fa-plus"></i>Thêm vào playlist</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-sort-alu dropdown">
+                                        <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                            Mới nhất <i class="fa fa-caret-down"></i>
+                                        </a>
+                                        <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                            <li>
+                                                <ul class="nav">
+                                                    <li><a href="cpListVideo.html#"><i class="fa fa-list-alt"></i>Mới nhất</a></li>
+                                                    <li><a href="cpListVideo.html#"><i class="fa fa-comments"></i>Xem nhiều nhất</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="nav">
+                                                    <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                    <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                    <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row-alu clearfix">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 clearfix">
+                                        <input type="checkbox" value="" class="checkbox-row-alu">
+                                        <a href="cpListVideo.html#" class="thumbnail-lv" style="background-image:url(images/video-img.jpg)">
+                                        	<button type="button" class="btn btn-editThumbnail" data-toggle="modal" data-target="#changeThumbnail"><span class="fa fa-camera"></span></button>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 clearfix">
+                                        <div class="info-video-alu col-lg-5 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                        	<a href="cpListVideo.html#" class="title-lv">Video: Sinh viên khoái trí nghe tiến sĩ ra độc chiêu tán gái</a>
+                                            <p class="uploaded-lv">5 phut truoc boi nvtweb@gmail.com</p>
+                                            <p class="error-lv"><i class="fa fa-warning"></i> Video bị lỗi khi convert <a href="cpListVideo.html#" class="support-lv">Xem hướng dẫn</a></p>
+                                        </div>
+                                        <div class="fixPadding-aul fixStatus col-lg-4 col-md-5 col-sm-12 clearfix">
+                                            <div class="status-col-lg-4">
+                                                <i class="fa fa-times icon-lv grey-lv"></i><br class="visible-lg" />
+                                                <span>Không kiếm tiền</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-check icon-lv green-lv"></i><br class="visible-lg" />
+                                                <span>Đã duyệt</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-globe icon-lv grey-lv"></i><br class="visible-lg" />
+                                                <span>Unpublish</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-7 fixPadding-aul clearfix">
+                                            <div class="pull-left fixStatis">
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-comment"></i><br class="visible-sm" /> 15
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-thumbs-up"></i><br class="visible-sm" /> 59
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-eye"></i><br class="visible-sm" /> 100
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-alu-item dropdown clearfix">
+                                                <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                                   <i class="fa fa-tasks"></i> Tác vụ
+                                                </a>
+                                                <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-code"></i>Tạo mã nhúng</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-dollar"></i>Kiếm tiền</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-trash-o"></i>Xóa</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-edit"></i>Sửa</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-camera"></i>Sửa ảnh</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-signal"></i>Activity</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-download"></i>Download</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-bar-chart-o"></i>Thống kê</a></li>
+                                                    	</ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!--/row-->
+                                <div class="row-alu clearfix">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 clearfix">
+                                        <input type="checkbox" value="" class="checkbox-row-alu">
+                                        <a href="cpListVideo.html#" class="thumbnail-lv"><i id="rotateMe" class="fa fa-refresh"></i></a>
+                                    </div>
+                                    <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 clearfix">
+                                        <div class="info-video-alu col-lg-5 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                        	<a href="cpListVideo.html#" class="title-lv">Lynk Lee - Hoàng Hôn Tắt (Official MV)</a>
+                                            <p class="uploaded-lv">5 phut truoc boi nvtweb@gmail.com</p>
+                                            <p class="error-lv">Đang xử lý</p>
+                                        </div>
+                                        <div class="fixPadding-aul fixStatus col-lg-4 col-md-5 col-sm-12 clearfix">
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-check icon-lv green-lv"></i><br class="visible-lg" />
+                                                <span>Kiếm tiền</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-refresh icon-lv red-lv"></i><br class="visible-lg" />
+                                                <span>Đang duyệt</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-globe icon-lv blue-lv"></i><br class="visible-lg" />
+                                                <span>Publish</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-7 fixPadding-aul clearfix">
+                                            <div class="pull-left fixStatis">
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-comment"></i><br class="visible-sm" /> 15
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-thumbs-up"></i><br class="visible-sm" /> 59
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-eye"></i><br class="visible-sm" /> 100
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-alu-item dropdown">
+                                                <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                                   <i class="fa fa-tasks"></i> Tác vụ
+                                                </a>
+                                                <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                                     <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-trash-o"></i>Xóa</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-edit"></i>Sửa</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-signal"></i>Activity</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-download"></i>Download</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-bar-chart-o"></i>Thống kê</a></li>
+                                                    	</ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!--/row-->
+                                <div class="row-alu clearfix">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 clearfix">
+                                        <input type="checkbox" value="" class="checkbox-row-alu">
+                                        <a href="cpListVideo.html#" class="thumbnail-lv" style="background-image:url(images/video-img2.jpg)"></a>
+                                    </div>
+                                    <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 clearfix">
+                                        <div class="info-video-alu col-lg-5 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                        	<a href="cpListVideo.html#" class="title-lv">Video: Sinh viên khoái trí nghe tiến sĩ ra độc chiêu tán gái</a>
+                                            <p class="uploaded-lv">5 phut truoc boi nvtweb@gmail.com</p>
+                                            <p class="error-lv"><i class="fa fa-warning"></i> Video bị lỗi khi convert <a href="cpListVideo.html#" class="support-lv">Xem hướng dẫn</a></p>
+                                        </div>
+                                        <div class="fixPadding-aul fixStatus col-lg-4 col-md-5 col-sm-12 clearfix">
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-warning icon-lv red-lv"></i><br class="visible-lg" />
+                                                <span>Bị từ chối kiếm tiền</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-check icon-lv green-lv"></i><br class="visible-lg" />
+                                                <span>Đã duyệt</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-lock icon-lv blue-lv"></i><br class="visible-lg" />
+                                                <span>Private</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-7 fixPadding-aul clearfix">
+                                            <div class="pull-left fixStatis">
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-comment"></i><br class="visible-sm" /> 15
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-thumbs-up"></i><br class="visible-sm" /> 59
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-eye"></i><br class="visible-sm" /> 100
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-alu-item dropdown clearfix">
+                                                <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                                   <i class="fa fa-tasks"></i> Tác vụ
+                                                </a>
+                                                <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-trash-o"></i>Xóa</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-edit"></i>Sửa</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-signal"></i>Activity</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-download"></i>Download</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-bar-chart-o"></i>Thống kê</a></li>
+                                                    	</ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!--/row-->
+                                <div class="row-alu clearfix">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 clearfix">
+                                        <input type="checkbox" value="" class="checkbox-row-alu">
+                                        <a href="cpListVideo.html#" class="thumbnail-lv" style="background-image:url(images/video-img3.jpg)"></a>
+                                    </div>
+                                    <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 clearfix">
+                                        <div class="info-video-alu col-lg-5 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                        	<a href="cpListVideo.html#" class="title-lv">Video: Sinh viên khoái trí nghe tiến sĩ ra độc chiêu tán gái</a>
+                                            <p class="uploaded-lv">5 phut truoc boi nvtweb@gmail.com</p>
+                                        </div>
+                                        <div class="fixPadding-aul fixStatus col-lg-4 col-md-5 col-sm-12 clearfix">
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-refresh icon-lv red-lv"></i><br class="visible-lg" />
+                                                <span>Chờ duyệt kiếm tiền</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-check icon-lv green-lv"></i><br class="visible-lg" />
+                                                <span>Đã duyệt</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-globe icon-lv blue-lv"></i><br class="visible-lg" />
+                                                <span>Publish</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-7 fixPadding-aul clearfix">
+                                            <div class="pull-left fixStatis">
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-comment"></i><br class="visible-sm" /> 15
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-thumbs-up"></i><br class="visible-sm" /> 59
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-eye"></i><br class="visible-sm" /> 100
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-alu-item dropdown clearfix">
+                                                <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                                   <i class="fa fa-tasks"></i> Tác vụ
+                                                </a>
+                                                <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-trash-o"></i>Xóa</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-edit"></i>Sửa</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-signal"></i>Activity</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-download"></i>Download</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-bar-chart-o"></i>Thống kê</a></li>
+                                                    	</ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!--/row-->
+                                <div class="row-alu clearfix">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 clearfix">
+                                        <input type="checkbox" value="" class="checkbox-row-alu">
+                                        <a href="cpListVideo.html#" class="thumbnail-lv" style="background-image:url(images/video-img3.jpg)"></a>
+                                    </div>
+                                    <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 clearfix">
+                                        <div class="info-video-alu col-lg-5 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                        	<a href="cpListVideo.html#" class="title-lv">Video: Sinh viên khoái trí nghe tiến sĩ ra độc chiêu tán gái</a>
+                                            <p class="uploaded-lv">5 phut truoc boi nvtweb@gmail.com</p>
+                                        </div>
+                                        <div class="fixPadding-aul fixStatus col-lg-4 col-md-5 col-sm-12 clearfix">
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-refresh icon-lv red-lv"></i><br class="visible-lg" />
+                                                <span>Chờ duyệt kiếm tiền</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-check icon-lv green-lv"></i><br class="visible-lg" />
+                                                <span>Đã duyệt</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-globe icon-lv blue-lv"></i><br class="visible-lg" />
+                                                <span>Publish</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-7 fixPadding-aul clearfix">
+                                            <div class="pull-left fixStatis">
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-comment"></i><br class="visible-sm" /> 15
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-thumbs-up"></i><br class="visible-sm" /> 59
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-eye"></i><br class="visible-sm" /> 100
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-alu-item dropdown clearfix">
+                                                <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                                   <i class="fa fa-tasks"></i> Tác vụ
+                                                </a>
+                                                <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-trash-o"></i>Xóa</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-edit"></i>Sửa</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-signal"></i>Activity</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-download"></i>Download</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-bar-chart-o"></i>Thống kê</a></li>
+                                                    	</ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!--/row-->
+                                <div class="row-alu clearfix">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 clearfix">
+                                        <input type="checkbox" value="" class="checkbox-row-alu">
+                                        <a href="cpListVideo.html#" class="thumbnail-lv" style="background-image:url(images/video-img3.jpg)"></a>
+                                    </div>
+                                    <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 clearfix">
+                                        <div class="info-video-alu col-lg-5 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                        	<a href="cpListVideo.html#" class="title-lv">Video: Sinh viên khoái trí nghe tiến sĩ ra độc chiêu tán gái</a>
+                                            <p class="uploaded-lv">5 phut truoc boi nvtweb@gmail.com</p>
+                                        </div>
+                                        <div class="fixPadding-aul fixStatus col-lg-4 col-md-5 col-sm-12 clearfix">
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-refresh icon-lv red-lv"></i><br class="visible-lg" />
+                                                <span>Chờ duyệt kiếm tiền</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-check icon-lv green-lv"></i><br class="visible-lg" />
+                                                <span>Đã duyệt</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-globe icon-lv blue-lv"></i><br class="visible-lg" />
+                                                <span>Publish</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-7 fixPadding-aul clearfix">
+                                            <div class="pull-left fixStatis">
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-comment"></i><br class="visible-sm" /> 15
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-thumbs-up"></i><br class="visible-sm" /> 59
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-eye"></i><br class="visible-sm" /> 100
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-alu-item dropdown clearfix">
+                                                <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                                   <i class="fa fa-tasks"></i> Tác vụ
+                                                </a>
+                                                <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-trash-o"></i>Xóa</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-edit"></i>Sửa</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-signal"></i>Activity</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-download"></i>Download</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-bar-chart-o"></i>Thống kê</a></li>
+                                                    	</ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!--/row-->
+                                <div class="row-alu clearfix">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 clearfix">
+                                        <input type="checkbox" value="" class="checkbox-row-alu">
+                                        <a href="cpListVideo.html#" class="thumbnail-lv" style="background-image:url(images/video-img3.jpg)"></a>
+                                    </div>
+                                    <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 clearfix">
+                                        <div class="info-video-alu col-lg-5 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                        	<a href="cpListVideo.html#" class="title-lv">Video: Sinh viên khoái trí nghe tiến sĩ ra độc chiêu tán gái</a>
+                                            <p class="uploaded-lv">5 phut truoc boi nvtweb@gmail.com</p>
+                                        </div>
+                                        <div class="fixPadding-aul fixStatus col-lg-4 col-md-5 col-sm-12 clearfix">
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-refresh icon-lv red-lv"></i><br class="visible-lg" />
+                                                <span>Chờ duyệt kiếm tiền</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-check icon-lv green-lv"></i><br class="visible-lg" />
+                                                <span>Đã duyệt</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-globe icon-lv blue-lv"></i><br class="visible-lg" />
+                                                <span>Publish</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-7 fixPadding-aul clearfix">
+                                            <div class="pull-left fixStatis">
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-comment"></i><br class="visible-sm" /> 15
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-thumbs-up"></i><br class="visible-sm" /> 59
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-eye"></i><br class="visible-sm" /> 100
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-alu-item dropdown clearfix">
+                                                <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                                   <i class="fa fa-tasks"></i> Tác vụ
+                                                </a>
+                                                <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-trash-o"></i>Xóa</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-edit"></i>Sửa</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-signal"></i>Activity</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-download"></i>Download</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-bar-chart-o"></i>Thống kê</a></li>
+                                                    	</ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!--/row-->
+                                <div class="row-alu clearfix">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 clearfix">
+                                        <input type="checkbox" value="" class="checkbox-row-alu">
+                                        <a href="cpListVideo.html#" class="thumbnail-lv" style="background-image:url(images/video-img3.jpg)"></a>
+                                    </div>
+                                    <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 clearfix">
+                                        <div class="info-video-alu col-lg-5 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                        	<a href="cpListVideo.html#" class="title-lv">Video: Sinh viên khoái trí nghe tiến sĩ ra độc chiêu tán gái</a>
+                                            <p class="uploaded-lv">5 phut truoc boi nvtweb@gmail.com</p>
+                                        </div>
+                                        <div class="fixPadding-aul fixStatus col-lg-4 col-md-5 col-sm-12 clearfix">
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-refresh icon-lv red-lv"></i><br class="visible-lg" />
+                                                <span>Chờ duyệt kiếm tiền</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-check icon-lv green-lv"></i><br class="visible-lg" />
+                                                <span>Đã duyệt</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-globe icon-lv blue-lv"></i><br class="visible-lg" />
+                                                <span>Publish</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-7 fixPadding-aul clearfix">
+                                            <div class="pull-left fixStatis">
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-comment"></i><br class="visible-sm" /> 15
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-thumbs-up"></i><br class="visible-sm" /> 59
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-eye"></i><br class="visible-sm" /> 100
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-alu-item dropdown clearfix">
+                                                <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                                   <i class="fa fa-tasks"></i> Tác vụ
+                                                </a>
+                                                <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-trash-o"></i>Xóa</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-edit"></i>Sửa</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-signal"></i>Activity</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-download"></i>Download</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-bar-chart-o"></i>Thống kê</a></li>
+                                                    	</ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!--/row-->
+                                <div class="row-alu clearfix">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 clearfix">
+                                        <input type="checkbox" value="" class="checkbox-row-alu">
+                                        <a href="cpListVideo.html#" class="thumbnail-lv" style="background-image:url(images/video-img3.jpg)"></a>
+                                    </div>
+                                    <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 clearfix">
+                                        <div class="info-video-alu col-lg-5 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                        	<a href="cpListVideo.html#" class="title-lv">Video: Sinh viên khoái trí nghe tiến sĩ ra độc chiêu tán gái</a>
+                                            <p class="uploaded-lv">5 phut truoc boi nvtweb@gmail.com</p>
+                                        </div>
+                                        <div class="fixPadding-aul fixStatus col-lg-4 col-md-5 col-sm-12 clearfix">
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-refresh icon-lv red-lv"></i><br class="visible-lg" />
+                                                <span>Chờ duyệt kiếm tiền</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-check icon-lv green-lv"></i><br class="visible-lg" />
+                                                <span>Đã duyệt</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-globe icon-lv blue-lv"></i><br class="visible-lg" />
+                                                <span>Publish</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-7 fixPadding-aul clearfix">
+                                            <div class="pull-left fixStatis">
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-comment"></i><br class="visible-sm" /> 15
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-thumbs-up"></i><br class="visible-sm" /> 59
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-eye"></i><br class="visible-sm" /> 100
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-alu-item dropdown clearfix">
+                                                <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                                   <i class="fa fa-tasks"></i> Tác vụ
+                                                </a>
+                                                <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe blue-lv"></i>Publish</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-lock blue-lv"></i>Private</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-globe grey-lv"></i>Unpublish</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-trash-o"></i>Xóa</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-edit"></i>Sửa</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-signal"></i>Activity</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-download"></i>Download</a></li>
+                                                            <li><a href="cpListVideo.html#"><i class="fa fa-bar-chart-o"></i>Thống kê</a></li>
+                                                    	</ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!--/row-->
+                                <div class="row-alu clearfix">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 clearfix">
+                                        <input type="checkbox" value="" class="checkbox-row-alu">
+                                        <a href="cpListVideo.html#" class="thumbnail-lv" style="background-image:url(images/video-img3.jpg)"></a>
+                                    </div>
+                                    <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 clearfix">
+                                        <div class="info-video-alu col-lg-5 col-md-12 col-sm-12 col-xs-12 clearfix">
+                                        	<a href="cpListVideo.html#" class="title-lv">Video: Sinh viên khoái trí nghe tiến sĩ ra độc chiêu tán gái</a>
+                                            <p class="uploaded-lv">5 phut truoc boi nvtweb@gmail.com</p>
+                                        </div>
+                                        <div class="fixPadding-aul fixStatus col-lg-4 col-md-5 col-sm-12 clearfix">
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-refresh icon-lv red-lv"></i><br class="visible-lg" />
+                                                <span>Chờ duyệt kiếm tiền</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-check icon-lv green-lv"></i><br class="visible-lg" />
+                                                <span>Đã duyệt</span>
+                                            </div>
+                                            <div class="status-alu col-lg-4">
+                                                <i class="fa fa-globe icon-lv blue-lv"></i><br class="visible-lg" />
+                                                <span>Publish</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-7 fixPadding-aul clearfix">
+                                            <div class="pull-left fixStatis">
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-comment"></i><br class="visible-sm" /> 15
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-thumbs-up"></i><br class="visible-sm" /> 59
+                                                </div>
+                                                <div class="statis-lv">
+                                                    <i class="fa fa-eye"></i><br class="visible-sm" /> 100
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-alu-item dropdown clearfix">
+                                                <a href="cpListVideo.html#" class="btn-dropdown" data-toggle="dropdown">
+                                                   <i class="fa fa-tasks"></i> Tác vụ
+                                                </a>
+                                                <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu">
+                                                    
+                                                    <li>
+                                                    	<ul class="nav">
+                                                        	<li><a href="cpListVideo.html#">Publish</a></li>
+                                                        	<li><a href="cpListVideo.html#">Private</a></li>
+                                                            <li><a href="cpListVideo.html#">Unpublish</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                            <li><a href="cpListVideo.html#">Activity</a></li>
+                                                            <li><a href="cpListVideo.html#">Download</a></li>
+                                                            <li><a href="cpListVideo.html#">Thống kê</a></li>
+                                                    	</ul>
+                                                    </li>
+                                                    <li>
+                                                    	<ul class="nav">
+                                                        	<li><a href="cpListVideo.html#">Xóa</a></li>
+                                                        	<li><a href="cpListVideo.html#">Sửa</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--/row-->
+                                <ul class="pagination">
+                                  <li class="disabled"><a href="cpListVideo.html#"><i class="fa fa-angle-double-left"></i></a></li>
+                                  <li class="active"><a href="cpListVideo.html#">1 <span class="sr-only">(current)</span></a></li>
+                                  <li><a href="cpListVideo.html#">2</a></li>
+                                  <li><a href="cpListVideo.html#">3</a></li>
+                                  <li><a href="cpListVideo.html#">4</a></li>
+                                  <li><a href="cpListVideo.html#"><i class="fa fa-angle-double-right"></i></a></li>
+                                </ul>
+                            </div><!-- end content-upload -->
+                            
+                        </div><!-- end right-upload -->
+                    </div>    
+    
+            </div>
+       </div><!-- end wrapper-db-->
+    
+        <div class="footer container-fluid">
+            <div class="col-md-5 hidden-xs hidden-sm">
+                <div class="footer-head">
+                    <h3>Giới thiệu meme</h3>
+                </div>
+                <div class="footer-content footer-logo">
+                    <p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí…</p>
+                    <a href="cpListVideo.html#" class="about-more">Xem thêm</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-head">
+                    <h3>Facebook</h3>
+                </div>
+                <div class="footer-content">
+                    <h5>TV Network</h5>
+                    <div id="fb-root"></div>
+                    <div id="fb-root"></div>
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <div class="facebook">
+                        <div class="fb-like" data-href="https://www.facebook.com/memevietnam" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-head">
+                    <h3>Hỗ trợ</h3>
+                </div>
+                <div class="footer-content">
+                    <ul class="nav">
+                        <li><a href="cpListVideo.html#">MeMe là gì?</a>
+                        </li>
+                        <li><a href="cpListVideo.html#">Cách hoạt động</a>
+                        </li>
+                        <li><a href="cpListVideo.html#">Lợi ích</a>
+                        </li>
+                        <li><a href="cpListVideo.html#">Đối tác nội dung</a>
+                        </li>
+                        <li><a href="cpListVideo.html#">Khiếu nại bản quyền</a>
+                        </li>
+                        <li><a href="cpListVideo.html#">Liên hệ</a>
+                        </li>
+                        <li><a href="cpListVideo.html#">Điều khoản sử dụng</a>
+                        </li>
+                        <li><a href="cpListVideo.html#">Chính sách nội dung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end footer-->
+
+        <div class="footer-bottom col-xs-12">
+            <span class="copyright">Copyright ©2013 meme.vn</span>
+        </div>
+        <!--end footer bottom-->
+	</div>
+
+    <a href="cpListVideo.html#" class="top scrollToElement" id="backtotoplink"><span class="icon icon-arrow-up-s"></span></a>
+<!--pop up addto playlist-->
+  <div id="addToPlaylist" class="addToPlaylist modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add to playlist</h4>
+          </div>
+          <div class="modal-body playlist-row scrollable clearfix">
+            	<a href="cpListVideo.html#" class="playlist-name">Best movie counter-strike1.6 Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="cpListVideo.html#" class="playlist-name added">Top Hit Nhac Nam My 2014 <i class="fa fa-check-circle"></i> <span class="playlist-number">32</span></a>
+                <a href="cpListVideo.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="cpListVideo.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="cpListVideo.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="cpListVideo.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="cpListVideo.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="cpListVideo.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="cpListVideo.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="cpListVideo.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="cpListVideo.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="cpListVideo.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+            </div>
+            <div class="playlist-status">
+            	<span class="create-success">Tạo playlist thành công</span>
+                <!--<span class="create-error">Tên playlist ít nhất 3 ký tự</span>-->
+            </div>    
+            <div class="playlist-form">
+            	<input type="text" class="form-control" placeholder="Tạo playlist mới">
+                <div class="playlist-setting clearfix">    
+                    <div class="dropdown">
+                      <a data-toggle="dropdown" href="cpListVideo.html#">Public <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li><a href="cpListVideo.html#">Public</a></li>
+                        <li><a href="cpListVideo.html#">Only me</a></li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-playlist">Create</button>  
+                </div>
+                  
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end addToPlaylist-->
+  
+  <!--alert upload-->
+  <div id="alertUpload" class="alertUpload modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 id="myModalLabel" class="modal-title">Thông báo</h4>
+          </div>
+          <div class="modal-body clearfix">
+          	<p class="alert-text">Bạn có thực sự muốn hủy video đang upload không?</p>
+            <div class="btn-alert">
+                <span class="file-input btn btn-default btn-file">
+                    Chọn file khác <input type="file" multiple>
+                </span>
+                <button class="btn btn-primary" type="button">Hủy tải lên</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end alert upload-->
+  
+  <!--change thumbnail video-->
+  <div id="changeThumbnail" class="changeThumbnail modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 id="myModalLabel" class="modal-title">Sửa ảnh video</h4>
+          </div>
+          <div class="modal-body clearfix">
+          	<ul class="nav navThumbnail">
+            	<li class="active"><a href="cpListVideo.html#thumbnail-render" data-toggle="tab">Hình từ video</a></li>
+                <li><a href="cpListVideo.html#thumbnail-pc" data-toggle="tab">Hình từ máy tính</a></li>
+            </ul>
+            <div class="tab-content">
+            	<div id="thumbnail-render" class="thumbnail-render tab-pane fade in active">
+                	<div class="clearfix">
+                        <a class="video-thumbnail-render" href="cpListVideo.html#">
+                            <img src="images/video-img1.jpg">
+                        </a>
+                        <a class="video-thumbnail-render active" href="cpListVideo.html#">
+                            <img src="images/video-img2.jpg">
+                        </a>
+                        <a class="video-thumbnail-render" href="cpListVideo.html#">
+                            <img src="images/video-img3.jpg">
+                        </a>
+                        <a class="video-thumbnail-render" href="cpListVideo.html#">
+                            <img src="images/video-img2.jpg">
+                        </a>
+                        <a class="video-thumbnail-render" href="cpListVideo.html#">
+                            <img src="images/video-img3.jpg">
+                        </a>
+                        <a class="video-thumbnail-render" href="cpListVideo.html#">
+                            <img src="images/video-img.jpg">
+                        </a>
+                    </div>
+                    <div class="actionThumbnail">
+                        <button class="btn btn-default">Hủy</button>
+                        <button class="btn btn-default cropThumbnail">Cắt hình</button>
+                        <button class="btn btn-primary">Lưu ảnh</button>
+                    </div>
+                </div>
+                <div id="thumbnail-pc" class="thumbnail-pc fade tab-pane">
+                	<div class="w-btn-file">
+                        <span class="file-input btn btn-default btn-file">
+                            Chọn file từ thiết bị <input type="file" multiple>
+                        </span>
+                        <span class="note-upload-img">Hỗ trợ định dạng .jpg .png</span>
+                    </div>
+                    <div class="actionThumbnail">
+                        <button class="btn btn-default">Hủy</button>
+                        <button class="btn btn-primary">Lưu ảnh</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end alert upload-->
+
+</body>
+
+</html>

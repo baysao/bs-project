@@ -1,0 +1,80 @@
+.wrapper.print {
+    width: 1002px;
+    margin: 0 auto;
+}
+.print .content {
+	padding-top: 0;
+}
+.print .print-page h1 {
+	text-align: center;
+	margin: 20px 0;
+}
+.print .print-page h1 span {
+	text-transform: uppercase;
+}
+.print .infoAgencyAnalytic {
+	background: none;
+    border: 1px solid #000;
+    border-bottom: none;
+}
+.print .l-infoAgencyAnalytic h2 {
+    color: #000;
+}
+.print .l-infoAgencyAnalytic a {
+    color: #000;
+}
+.print .r-infoAgencyAnalytic p {
+    color: #000;
+}
+.print .r-infoAgencyAnalytic p span {
+    color: #000;
+}
+.print .col-statusAgency {
+	background: none !important;
+	color: #000;
+	border: 1px solid #000;
+	border-right:none;
+}
+.print .col-statusAgency:nth-last-child(1)  {
+	border-right: 1px solid #000;
+}
+.print .col-statusAgency span {
+	color: #000;
+}
+.print .titleDataVideo {
+	color: #000;
+	font-weight: 500;
+}
+.print .blue, .print .red {
+	color: #000;
+}
+/* chart line */
+.print .legend table tr .legendColorBox div {
+	border: none !important;
+	margin-right: 3px;
+	position: relative;
+}
+.print .legend table tr .legendColorBox div:before {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    content: "";
+    top: -3px;
+    left: 19px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 4px;
+    z-index: 3;
+}
+.print .legend table tr .legendColorBox div > div {
+	width: 45px !important;
+    border: 1px solid rgb(0,0,0) !important;
+}
+.print .legend table tr:nth-child(2) .legendColorBox div > div {
+	border-style: dashed !important;
+}
+.print .legendLabel {
+	color: #000;
+}

@@ -1,0 +1,187 @@
+.cropAvatar {
+	padding-top:10px;
+	position:absolute;
+	text-align:center;
+}
+
+.cropAvatar .default {
+	display:inline-block;
+	z-index:99999;
+	position:absolute;
+}
+
+.output {
+	position:absolute;
+	z-index:55555;
+	top:80px;
+	left:400px;
+	box-shadow:0 0 0 100000px rgba(255,255,255,0.9);
+}
+
+.newupload {
+	border: 3px dashed rgba(0,0,0,0.04);
+	background: rgba(0,0,0,0.02);
+	display: block;
+	padding: 10px 10px 10px 97px;
+	box-sizing:border-box;
+	cursor:pointer;
+}
+.newupload:hover {
+	background: rgba(0,0,0,0.01);
+}
+
+#uploadfile { display:none }
+
+
+
+/*---------------------------------------------------------*/
+/*
+/*  set the aspect ratio
+/*
+/*  the cropper has a 40px offset
+/*  this means 80px will be subtracted from the image height and width
+/*
+/*  the class .one must match the class written into one.init('.one');
+/*
+/*---------------------------------------------------------*/
+
+.default .cropMain {
+	width:280px;
+	height:280px;
+}
+
+
+/*---------------------------------------------------------*/
+/*	cropper styling begins here...
+/*---------------------------------------------------------*/
+
+.cropMain {
+    background:url('../images/bg-cropImage.png') repeat;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.cropMain .crop-img { position: absolute }
+
+.cropMain .crop-container {
+	overflow: hidden;
+	position: relative;
+}
+
+.cropMain .crop-container:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5999;
+	opacity: .75;
+	filter: alpha(opacity=7);
+	-webkit-box-shadow: inset 0 0 0 40px white,inset 0 0 0 41px rgba(0,0,0,.1),inset 0 0 20px 41px rgba(0,0,0,.2);
+	box-shadow: inset 0 0 0 40px white,inset 0 0 0 41px rgba(0,0,0,.1),inset 0 0 20px 41px rgba(0,0,0,.2);
+}
+
+.cropMain .crop-overlay {
+	position: relative;
+	cursor: move;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*---------------------------------------------------------*/
+/*	slider bar styling
+/*---------------------------------------------------------*/
+
+.cropSlider .noUi-target * {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -webkit-touch-callout:none;
+    -ms-touch-action:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    cursor:default
+}
+.cropSlider .noUi-base {
+	margin: 25px 10px;
+	height: 7px;
+	border-radius: 4px;
+	background-color: #bbb;
+	cursor:pointer;
+	position:relative;
+	z-index:1
+}
+.cropSlider .noUi-handle {
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	cursor: move;
+	border-radius: 4px;
+	margin:-7px 0 0 -10px;
+	border:1px solid #dddddd;
+}
+.cropSlider .noUi-active {
+
+}
+.cropSlider .noUi-connect {
+    background:Teal
+}
+.cropSlider .noUi-background {
+    background:#E64B3A
+}
+.cropSlider .noUi-origin-lower {
+	background:#eee;
+}
+.cropSlider .noUi-origin {
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index:0;
+    border-radius:inherit
+}
+.cropSlider .noUi-origin-upper {
+    background:inherit !important
+}
+.cropSlider .noUi-z-index {
+    z-index:10
+}
+.cropSlider .noUi-vertical {
+    width:40px;
+    height:100%
+}
+.cropSlider .noUi-vertical .noUi-origin {
+    bottom:0;
+    left:0
+}
+.cropSlider .noUi-vertical .noUi-handle {
+    margin:-23px 0 0 -3px
+}
+.cropSlider .noUi-target[disabled] .noUi-base {
+	background: #ccc;
+	box-shadow: none;
+}
+.cropSlider .noUi-target[disabled] .noUi-connect {
+	background: #ccc;
+	box-shadow: none;
+}
+.cropSlider .noUi-state-tap .noUi-origin {
+    -webkit-transition:left .3s, top .3s;
+    transition:left .3s, top .3s
+}
+
+
+/*---------------------------------------------------------*/
+/*	crop button styling
+/*---------------------------------------------------------*/
+.cropButton:active {
+    -moz-box-shadow: inset 0 3px 5px #e6e6e6;
+    -o-box-shadow: inset 0 3px 5px #e6e6e6;
+    -webkit-box-shadow: inset 0 3px 5px #e6e6e6;
+    box-shadow: inset 0 3px 5px #e6e6e6;
+}

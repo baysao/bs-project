@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Upload Videol | MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400&subset=vietnamese' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/cpanel.css" rel="stylesheet">
+	
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/disableScrollBar.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/global.js"></script>
+    
+    <!-- start detail script-->
+    <link href="css/bootstrap-tokenfield.css" rel="stylesheet">
+    <script src="js/bootstrap-tokenfield.js"></script>
+    <script>
+		$(document).ready(function() {
+			$('#tokenfield, #tokenfield1').tokenfield();
+			
+			document.getElementById("checkMoney").disabled = true;
+		});
+    </script>
+    <!-- end detail script-->
+	
+    
+</head>
+
+<body id="backtotop">
+    <div id="header">
+            
+            <div class="container-fluid">
+                <div class="col-xs-7 col-md-4 col-sm-4" style="position:relative;">
+                    <a href="upload_process_bk.html#" class="logo-s">meme.vn</a>
+                    
+                    <span class="browseCategory">
+                        <span class="dropdown">
+                          <a href="upload_process_bk.html#" data-toggle="dropdown" class="browse clearfix"><i class="fa fa-bars"></i>  <i class="fa fa-caret-down"></i></a>
+                          <div class="dropdown-menu main-menu arrowTop">
+                                <div class="arrow"></div>
+                                <div class="wrapper-menu scrollable">
+                                    <ul class="menu">
+                                        <li><a href="upload_process_bk.html#" class="menu-hot">Hot</a></li>
+                                        <li><a href="upload_process_bk.html#" class="menu-hot">Xem nhiều</a></li>
+                                        <li><a href="upload_process_bk.html#" class="menu-hot">Phim</a></li>
+                                        <li><a href="upload_process_bk.html#">Sự kiện</a></li>
+                                        <li><a href="upload_process_bk.html#">Tin tức</a></li>
+                                        <li><a href="upload_process_bk.html#">Hài</a></li>
+                                        <li><a href="upload_process_bk.html#">Thể thao</a></li>
+                                        <li><a href="upload_process_bk.html#">Dancingo</a></li>
+                                        <li><a href="upload_process_bk.html#">Game</a></li>
+                                        <li><a href="upload_process_bk.html#">Ẩm thực</a></li>
+                                        <li><a href="upload_process_bk.html#">Giáo dục</a></li>
+                                        <li><a href="upload_process_bk.html#">Blog</a></li>
+                                        <li><a href="upload_process_bk.html#">Showbiz</a></li>
+                                        <li><a href="upload_process_bk.html#">Xe cộ</a></li>
+                                        <li><a href="upload_process_bk.html#">Động vật</a></li>
+                                        <li><a href="upload_process_bk.html#">Đồ hoạ</a></li>
+                                        <li><a href="upload_process_bk.html#">Giải trí</a></li>
+                                        <li><a href="upload_process_bk.html#">Hướng dẫn</a></li>
+                                        <li><a href="upload_process_bk.html#">Thời trang - Làm đẹp</a></li>
+                                        <li><a href="upload_process_bk.html#">Công nghệ</a></li>
+                                        <li><a href="upload_process_bk.html#">Du lịch</a></li>
+                                        <li><a href="upload_process_bk.html#">Gia đình</a></li>
+                                        <li><a href="upload_process_bk.html#">Hoạt hình</a></li>
+                                        <li><a href="upload_process_bk.html#">Khoa học</a></li>
+                                        <li><a href="upload_process_bk.html#">Lifestyle</a></li>
+                                        <li><a href="upload_process_bk.html#">Nghệ thuật</a></li>
+                                        <li><a href="upload_process_bk.html#">Sức khoẻ</a></li>
+                                        <li><a href="upload_process_bk.html#">Thiên nhiên</a></li>
+                                        <li><a href="upload_process_bk.html#">Trẻ em</a></li>
+                                        <li><a href="upload_process_bk.html#">Sản phẩm</a></li>
+                                        <li><a href="upload_process_bk.html#">Quảng cáo</a></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <div class="menu-policy clearfix">
+                                        <ul>
+                                            <li><a href="upload_process_bk.html#">MeMe là gì?</a></li>
+                                            <li><a href="upload_process_bk.html#">Cách hoạt động</a></li>
+                                            <li><a href="upload_process_bk.html#">Điều khoản sử dụng</a></li>
+                                            <li><a href="upload_process_bk.html#">Chính sách nội dung</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                          </div>
+                        </span>
+                    </span>
+                </div>
+    
+                <div class="search col-md-4 col-sm-4 hidden-xs">
+                    <input class="search-top form-control" type="text" placeholder="Keyword..." />
+                    <button class="btn search-btn" type="submit"><span class="icon icon-search"></span>
+                    </button>
+                </div><!-----------end search------------>
+                <div class="wrap-menu-top col-xs-5 col-md-4 col-sm-4">
+                    <ul class="menu-top">
+                        <li>
+                            <a href="http://beta.meme.vn/usercp/video/add" class="menu-top-link tooltipMeme" title="Upload">
+                                <span class="icon icon-upload leftNone"></span>
+                            </a>
+                        </li>
+                        <li class="notification dropdown">
+                            <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="upload_process_bk.html#" title="Notification" >
+                                <span class="icon icon-notification leftNone"></span>
+                                <span class="notification-count">9+</span>
+                            </a>
+                                <ul class="dropdown-menu arrowTop">
+                                    <div class="arrow"></div>
+                                    <div class="notification-head">Notification</div>
+                                    <div class="wrapper-notification scrollable">
+                                        <li>
+                                            <a class="notification-link clearfix" href="upload_process_bk.html#">
+                                                <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                                </div>
+                                                <small class="notification-time"> 23 giờ trước</small>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="upload_process_bk.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="upload_process_bk.html#">
+                                                <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="upload_process_bk.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="upload_process_bk.html#">
+                                                <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="upload_process_bk.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="upload_process_bk.html#">
+                                                <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="upload_process_bk.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="upload_process_bk.html#">
+                                                <img  class="notification-user-img" src="images/avatar1.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="upload_process_bk.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">Aj pit bo fim nao vua danh dam vua haj chj coi voi,fjm ma hay fjm kjnh dj cang tot,bun wa tro</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg3.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link clearfix" href="upload_process_bk.html#">
+                                                <img  class="notification-user-img" src="images/avatar3.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> comment on your status "<span class="notification-status">Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-link video clearfix" href="upload_process_bk.html#">
+                                                <img class="notification-user-img" src="images/avatar2.jpg" />
+                                                <div class="notification-content">
+                                                    <span class="notification-name">Phương Đào </span> like và comment your video "<span class="notification-status">wtf??? Clip Bựa vãi! Clip Bựa vãi!</span>"
+                                                </div>
+                                                <img class="notification-video-img" src="images/channelImg2.jpg" />
+                                            </a>
+                                        </li>
+                                    </div><!--end wrapper-notification-->
+                                    <!--<div class="notification-more"><a href="#">Xem thêm</a></div>-->
+                                </ul>
+                            
+                        </li>
+                        <!--<li>
+                            <a class="menu-top-link tooltipMeme" href="#" data-toggle="tooltip" title="Đăng nhập">
+                                <span class="icon icon-account leftNone"></span>
+                            </a>
+                        </li>-->
+                        <li class="account dropdown">
+                            <a class="menu-top-link tooltipMeme" data-toggle="dropdown" href="upload_process_bk.html#" title="Account">
+                                <img src="images/avatar2.jpg" class="img-user"><span class="account-name hidden-xs"> Đào Viết Phương </span>
+                                
+                            </a>
+                            <ul aria-labelledby="dLabel" role="menu" class="dropdown-menu arrowTop">
+                                <div class="arrow"></div>
+                                <li><a href="http://beta.meme.vn/usercp/account/editProfile"><i class="fa fa-edit"></i> Sửa thông tin cá nhân</a></li>
+                                <li><a href="http://beta.meme.vn/usercp/video"><i class="fa fa-play-circle"></i> Quản lý Video</a></li>
+                                <li><a href="http://beta.meme.vn/usercp/channel"><i class="fa fa-video-camera"></i> Quản lý Channel</a></li>
+                                <li><a href="upload_process_bk.html#"><i class="fa fa-bar-chart-o"></i> Xem thống kê</a></li>
+                                <li><a href="upload_process_bk.html#"><i class="fa fa-usd"></i> Xem doanh thu</a></li>
+                                <li><a href="http://beta.meme.vn/user/logout"><i class="fa fa-sign-out"></i> Thoát</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-----------end wrap-menu-top------------>
+                <div class="clearfix"></div>
+            </div>
+    </div>
+    <!-- end header-->
+
+	<div class="wrapper-content">
+       <div class="wrapper-db">
+       		<div class="container">
+                	<div class="left-upload col-sm-3 col-md-2">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand" data-toggle="collapse" data-parent="#accordion" href="upload_process_bk.html#collapseOne"><i class="fa fa-video-camera"></i> Video</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <ul class="nav">
+                                        	<li><a class="sub-menu-upload" href="upload_process_bk.html#">Quản lý video</a></li>
+                                            <li><a class="sub-menu-upload" href="upload_process_bk.html#">Thêm Video</a></li>
+                                            <li><a class="sub-menu-upload last" href="upload_process_bk.html#">Video nháp <span class="num-draf">49</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- .panel -->
+        
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand collapsed" data-toggle="collapse" data-parent="#accordion" href="upload_process_bk.html#collapseTwo"><i class="fa fa-comment"></i> Comment</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav">
+                                        	<li><a class="sub-menu-upload" href="upload_process_bk.html#">My comment</a></li>
+                                            <li><a class="sub-menu-upload" href="upload_process_bk.html#">Video comment</a></li>
+                                            <li><a class="sub-menu-upload last" href="upload_process_bk.html#">Channel comment</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- .panel -->
+        
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand collapsed" data-toggle="collapse" data-parent="#accordion" href="upload_process_bk.html#collapseThree">
+                                           <i class="fa fa-film"></i> Channel
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav">
+                                        	<li><a class="sub-menu-upload" href="upload_process_bk.html#">Thành viên</a></li>
+                                            <li><a class="sub-menu-upload" href="upload_process_bk.html#">Thông tin</a></li>
+                                            <li><a class="sub-menu-upload" href="upload_process_bk.html#">Địa chỉ trang</a></li>
+                                            <li><a class="sub-menu-upload last" href="upload_process_bk.html#">Playlist</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- .panel -->
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand collapsed" href="upload_process_bk.html#">
+                                            <i class="fa fa-indent"></i> My playlist
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div> <!-- .panel -->
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand collapsed" href="upload_process_bk.html#">
+                                            <i class="fa fa-bar-chart-o"></i> Thống kê
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div> <!-- .panel -->
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="pannel-expand collapsed" href="upload_process_bk.html#">
+                                            <i class="fa fa-dollar"></i> Doanh Thu
+                                        </a>
+                                    </h4>
+                                </div>
+                                
+                            </div> <!-- .panel -->
+                        </div> <!-- .panel-group -->
+                    </div><!-- end left-upload -->
+                    <div class="col-sm-9 col-md-10">
+                        <div class="right-upload clearfix">
+                        	<h1>Upload Video</h1>
+                            <div class="content-upload">
+                            	<!--<div class="alert-upload">
+                                	<i class="fa fa-warning"></i> Có lỗi xảy ra khi upload video! <a href="#">Chọn lại video khác</a>
+                                </div>-->
+                                <div class="process-bar-upload">
+                                    <p>Đang xử lý file <span class="name-file-upload">01_05-Edge Animate CC For Photoshop Users.mp4 (3Mb)</span></p>
+                                    <div class="progress">
+                                      <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                        60%
+                                      </div>
+                                      <button type="button" class="cancel-upload" data-toggle="modal" data-target="#alertUpload"><i class="fa fa-times"></i></button>
+                                    </div>
+                                    <p>Video của bạn sẽ được phát trực tuyến tại: <a href="upload_process_bk.html#">http://www.meme.vn/video?v=6GH8QKBti1</a></p>
+                                    
+                                </div><!-- end process-bar-upload -->
+                                <!-- upload thành công
+                                <div class="process-bar-upload">
+                                    <p>Hoàn thành upload file <span class="name-file-upload">01_05-Edge Animate CC For Photoshop Users.mp4 (3Mb)</span></p>
+                                    <div class="progress">
+                                      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                        Upload thành công
+                                      </div>
+                                    </div>
+                                    <p>Video của bạn sẽ được phát trực tuyến tại: <a href="#">http://www.meme.vn/video?v=6GH8QKBti1</a></p>
+                                </div>
+                                -->
+                                <!-- end process-bar-upload -->
+                                
+                                <div class="row">
+                                	<div class="col-sm-12">
+                                        <ul class="nav nav-tabs navUpload" role="tablist">
+                                          <li class="active"><a href="upload_process_bk.html#videoNormal" role="tab" data-toggle="tab">Thông tin cơ bản</a></li>
+                                          <li><a href="upload_process_bk.html#videoAdvance" role="tab" data-toggle="tab">Nâng cao</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div id="videoNormal" class="tab-pane active">
+                                        	<div class="col-sm-12">
+                                            	<div class="box-contest-pick">
+                                                    <button type="button" class="btn btn-default contest-pick" data-toggle="collapse" data-target="#contest-pick">Muốn video này dự thi?</button>
+                                                    <div id="contest-pick" class="collapse">
+                                                    	<div class="field-upload haveSelect">
+                                                            <select class="form-control">
+                                                                <option>Chọn cuộc thi</option>
+                                                                <option>Challenge cover & parody</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 putPadding">
+                                                
+                                                <div class="field-upload">
+                                                    <input type="text" class="form-control" value="01 05 Edge Animate CC For Photoshop Users" />
+                                                    <!--<span class="error-upload">Chưa nhập tiêu đề <i class="fa fa-level-up"></i></span>-->
+                                                </div>
+                                                <div class="field-upload">
+                                                    <textarea class="form-control" rows="3" placeholder="Mô tả"></textarea>
+                                                </div>
+                                                
+                                                
+                                                <div class="field-upload">
+                                                    <input type="text" class="form-control" placeholder="Thẻ (ví dụ: Meme Official, thể thao, ca sĩ...)" id="tokenfield" value="Ho Ngoc Ha" />
+                                                    <button class="note-form-input" data-container="body" data-toggle="popover" data-placement="top" data-content="Đây là chú thích của trường này" >?</button>
+                                                </div>
+                                                
+                                            </div><!--/col-->
+                                            <div class="col-sm-6">
+                                            	<div class="field-upload haveFaq haveSelect">
+                                                    <select class="form-control">
+                                                        <option>Chọn thể loại</option>
+                                                        <option>Âm nhạc</option>
+                                                    </select>
+                                                    <button class="note-form-input" data-container="body" data-toggle="popover" data-placement="top" data-content="Đây là chú thích của trường này" >?</button>
+                                                </div>
+                                            	<div class="field-upload">
+                                                    <div class="browse-upload">
+                                                        <p class="browse-title">Thể loại channel <a href="upload_process_bk.html#">Đời sống và Pháp Luật</a> <button type="button" class="btn btn-primary addMoreChannel"><i class="fa fa-plus"></i></button>
+                                                        <button class="note-form-input" data-container="body" data-toggle="popover" data-placement="top" data-content="Đây là chú thích của trường này" >?</button></p>
+                                                        <ul class="nav scrollable">
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Âm nhạc
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Thời trang & làm đẹp
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Dancing
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Giáo dục
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Giải trí
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Công nghệ
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Hoạt hình
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Nghệ thuật
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Trẻ em
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Đồ họa
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Phim
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Hài
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Game
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Blog
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Hướng dẫn
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Du lịch
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Khoa học
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                  <label>
+                                                                    <input type="checkbox">Sức khỏe
+                                                                  </label>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!--<span class="error-upload">Chưa chọn thể loại <i class="fa fa-level-up"></i></span>-->
+                                                </div>
+                                                
+                                                <div class="field-upload haveFaq haveSelect">
+                                                    <select class="form-control">
+                                                        <option>Nguồn nội dung</option>
+                                                        <option>Tự sản xuất</option>
+                                                    </select>
+                                                    <button class="note-form-input" data-container="body" data-toggle="popover" data-placement="top" data-content="Đây là chú thích của trường này" >?</button>
+                                                </div>
+                                                <div class="field-upload haveFaq haveSelect">
+                                                    <select class="form-control">
+                                                        <option>Trạng thái</option>
+                                                        <option>Public</option>
+                                                    </select>
+                                                    <button class="note-form-input" data-container="body" data-toggle="popover" data-placement="top" data-content="Đây là chú thích của trường này" >?</button>
+                                                </div>
+                                            </div><!--/col-->
+                                        </div>
+                                        <div id="videoAdvance" class="tab-pane">
+                                            <div class="col-sm-6 putPadding">
+                                            	<div class="field-upload haveFaq share-upload">
+                                                    <div class="checkbox">
+                                                      <label>
+                                                        <input type="checkbox" checked>Lấy thông tin video trước hoặc <a href="upload_process_bk.html#" data-target="#idVideo" data-toggle="collapse">nhập mã id video</a>
+                                                      </label>
+                                                    </div>
+                                                    <div id="idVideo" class="w-idVideo collapse">
+                                                        <div class="field-upload">
+                                                            <input type="text" class="form-control" value="Nhập ID video" />
+                                                        </div>
+                                                    </div>
+                                                    <button class="note-form-input" data-container="body" data-toggle="popover" data-placement="top" data-content="Đây là chú thích của trường này" >?</button>
+                                                </div>
+                                                
+                                                <div class="field-upload haveFaq share-upload">
+                                                   <a data-target="#addToPlaylist" data-toggle="modal" href="upload_process_bk.html#" class="btn-addto"><i class="fa fa-plus"></i> Thêm vào playlist</a>
+                                                    <button class="note-form-input" data-container="body" data-toggle="popover" data-placement="top" data-content="Đây là chú thích của trường này" >?</button>
+                                                </div>
+                                                
+                                                <div class="field-upload haveFaq share-upload">
+                                                    <span>Chia sẻ video</span>
+                                                    <label class="radio-inline">
+                                                      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+                                                    </label>
+                                                    <button class="note-form-input" data-container="body" data-toggle="popover" data-placement="top" data-content="Đây là chú thích của trường này" >?</button>
+                                                </div>
+                                                <div class="field-upload haveFaq share-upload">
+                                                    <!--<div class="checkbox">
+                                                      <label class="highlight">
+                                                        <input type="checkbox" value="">
+                                                        <i class="fa fa-dollar highlight"></i> Kiếm tiền 
+                                                      </label>
+                                                    </div>-->
+                                                    <div class="checkbox">
+                                                      <label class="disable">
+                                                        <input id="checkMoney" type="checkbox" value="">
+                                                        <i class="fa fa-dollar disable"></i> Không được kiếm tiền
+                                                      </label>
+                                                    </div>
+                                                    <button class="note-form-input" data-container="body" data-toggle="popover" data-placement="top" data-content="Đây là chú thích của trường này" >?</button>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-sm-6">
+                                            	
+                                                
+                                                <button data-toggle="collapse" data-target=".relate-video-upload" class="btn btn-default expand-relate-video"><i class="fa fa-plus"></i> Thêm video liên quan</button>
+                                                <div class="relate-video-upload collapse clearfix">
+                                                      <div class="suggest-search">
+                                                          <input placeholder="Nhập tên video liên quan" class="form-control" type="text">
+                                                          <i class="fa fa-search"></i>
+                                                      </div>
+                                                      <div class="clearfix"></div>
+                                                      <div class="w-autocomplete-box">
+                                                          <div class="autocomplete-box scrollable">
+                                                              <div class="video-relate-item-at">
+                                                                  <img class="thumbnail-video-at" src="images/video-item1.jpg" />
+                                                                  <p><a href="upload_process_bk.html#" class="video-relate-name-at">Hải Phòng: Tai nạn giao thông, gần 40 người bị thương</a></p>
+                                                              </div>
+                                                              <div class="video-relate-item-at">
+                                                                  <img class="thumbnail-video-at" src="images/video-item2.jpg" />
+                                                                  <p><a href="upload_process_bk.html#" class="video-relate-name-at">Hải Phòng: Tai nạn giao thông, gần 40 người bị thương</a></p>
+                                                              </div>
+                                                              <div class="video-relate-item-at">
+                                                                  <img class="thumbnail-video-at" src="images/video-item2.jpg" />
+                                                                  <p><a href="upload_process_bk.html#" class="video-relate-name-at">Hải Phòng: Tai nạn giao thông, gần 40 người bị thương</a></p>
+                                                              </div>
+                                                              <div class="video-relate-item-at">
+                                                                  <img class="thumbnail-video-at" src="images/video-item3.jpg" />
+                                                                  <p><a href="upload_process_bk.html#" class="video-relate-name-at">Hải Phòng: Tai nạn giao thông, gần 40 người bị thương</a></p>
+                                                              </div>
+                                                              <div class="video-relate-item-at">
+                                                                  <img class="thumbnail-video-at" src="images/video-item1.jpg" />
+                                                                  <p><a href="upload_process_bk.html#" class="video-relate-name-at">Hải Phòng: Tai nạn giao thông, gần 40 người bị thương</a></p>
+                                                              </div>
+                                                              <div class="video-relate-item-at">
+                                                                  <img class="thumbnail-video-at" src="images/video-item2.jpg" />
+                                                                  <p><a href="upload_process_bk.html#" class="video-relate-name-at">Hải Phòng: Tai nạn giao thông, gần 40 người bị thương</a></p>
+                                                              </div>
+                                                              <div class="video-relate-item-at">
+                                                                  <img class="thumbnail-video-at" src="images/video-item3.jpg" />
+                                                                  <p><a href="upload_process_bk.html#" class="video-relate-name-at">Hải Phòng: Tai nạn giao thông, gần 40 người bị thương</a></p>
+                                                              </div>
+                                                              <div class="video-relate-item-at">
+                                                                  <img class="thumbnail-video-at" src="images/video-item2.jpg" />
+                                                                  <p><a href="upload_process_bk.html#" class="video-relate-name-at">Hải Phòng: Tai nạn giao thông, gần 40 người bị thương</a></p>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      
+                                                      <div class="box-content box-relate-video">
+                                                          <div class="video-relate-item">
+                                                              <a href="upload_process_bk.html#" class="btn-remove"><i class="fa fa-trash-o"></i></a>
+                                                              <img class="thumbnail-video" src="images/video-item1.jpg" />
+                                                              <p><a href="upload_process_bk.html#" class="video-relate-name">Hải Phòng: Tai nạn giao thông, gần 40 người bị thương</a></p>
+                                                              <p>ID: v8iQFcgxbR</p>
+                                                          </div>
+                                                          <div class="video-relate-item">
+                                                              <a href="upload_process_bk.html#" class="btn-remove"><i class="fa fa-trash-o"></i></a>
+                                                              <img class="thumbnail-video" src="images/video-item2.jpg" />
+                                                              <p><a href="upload_process_bk.html#" class="video-relate-name">Giàn khoan Hải Dương 981 tiếp tục dịch chuyển</a></p>
+                                                              <p>ID: v8iQFcgxbR</p>
+                                                          </div>
+                                                      </div><!-- end: box-relate-video -->
+                                                </div><!-- end: relate-video-upload -->
+                                            </div>
+                                        </div>
+                                    </div><!-- tab-content -->
+                                    <div class="clearfix"></div>
+                                    <div class="btn-save-video clearfix">
+                                        <button type="button" class="btn btn-default">Hủy</button>
+                                        <button type="button" class="btn btn-primary">Lưu thông tin</button>
+                                    </div>
+                            </div><!-- /row -->
+                        </div><!-- end right-upload -->
+                    </div>    
+    
+            </div>
+       </div><!-- end wrapper-db-->
+    
+        <div class="footer container-fluid">
+            <div class="col-md-5 hidden-xs hidden-sm">
+                <div class="footer-head">
+                    <h3>Giới thiệu meme</h3>
+                </div>
+                <div class="footer-content footer-logo">
+                    <p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí…</p>
+                    <a href="upload_process_bk.html#" class="about-more">Xem thêm</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-head">
+                    <h3>Facebook</h3>
+                </div>
+                <div class="footer-content">
+                    <h5>TV Network</h5>
+                    <div id="fb-root"></div>
+                    <div id="fb-root"></div>
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <div class="facebook">
+                        <div class="fb-like" data-href="https://www.facebook.com/memevietnam" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="footer-head">
+                    <h3>Hỗ trợ</h3>
+                </div>
+                <div class="footer-content">
+                    <ul class="nav">
+                        <li><a href="upload_process_bk.html#">MeMe là gì?</a>
+                        </li>
+                        <li><a href="upload_process_bk.html#">Cách hoạt động</a>
+                        </li>
+                        <li><a href="upload_process_bk.html#">Lợi ích</a>
+                        </li>
+                        <li><a href="upload_process_bk.html#">Đối tác nội dung</a>
+                        </li>
+                        <li><a href="upload_process_bk.html#">Khiếu nại bản quyền</a>
+                        </li>
+                        <li><a href="upload_process_bk.html#">Liên hệ</a>
+                        </li>
+                        <li><a href="upload_process_bk.html#">Điều khoản sử dụng</a>
+                        </li>
+                        <li><a href="upload_process_bk.html#">Chính sách nội dung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end footer-->
+
+        <div class="footer-bottom col-xs-12">
+            <span class="copyright">Copyright ©2013 meme.vn</span>
+        </div>
+        <!--end footer bottom-->
+	</div>
+
+    <a href="upload_process_bk.html#" class="top scrollToElement" id="backtotoplink"><span class="icon icon-arrow-up-s"></span></a>
+<!--pop up addto playlist-->
+  <div id="addToPlaylist" class="addToPlaylist modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add to playlist</h4>
+          </div>
+          <div class="modal-body playlist-row scrollable clearfix">
+            	<a href="upload_process_bk.html#" class="playlist-name">Best movie counter-strike1.6 Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="upload_process_bk.html#" class="playlist-name added">Top Hit Nhac Nam My 2014 <i class="fa fa-check-circle"></i> <span class="playlist-number">32</span></a>
+                <a href="upload_process_bk.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="upload_process_bk.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="upload_process_bk.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="upload_process_bk.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="upload_process_bk.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="upload_process_bk.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="upload_process_bk.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="upload_process_bk.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+                <a href="upload_process_bk.html#" class="playlist-name">Best movie counter-strike1.6 <span class="playlist-number">38</span></a>
+            	<a href="upload_process_bk.html#" class="playlist-name">Top Hit Nhac Nam My 2014 <span class="playlist-number">32</span></a>
+            </div>
+            <div class="playlist-status">
+            	<span class="create-success">Tạo playlist thành công</span>
+                <!--<span class="create-error">Tên playlist ít nhất 3 ký tự</span>-->
+            </div>    
+            <div class="playlist-form">
+            	<input type="text" class="form-control" placeholder="Tạo playlist mới">
+                <div class="playlist-setting clearfix">    
+                    <div class="dropdown">
+                      <a data-toggle="dropdown" href="upload_process_bk.html#">Public <b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li><a href="upload_process_bk.html#">Public</a></li>
+                        <li><a href="upload_process_bk.html#">Only me</a></li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-playlist">Create</button>  
+                </div>
+                  
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end addToPlaylist-->
+  
+  <!--alert upload-->
+  <div id="alertUpload" class="alertUpload modal fade" tabindex="-1" role="dialog">
+  	  <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+            <h4 id="myModalLabel" class="modal-title">Thông báo</h4>
+          </div>
+          <div class="modal-body clearfix">
+          	<p class="alert-text">Bạn có thực sự muốn hủy video đang upload không?</p>
+            <div class="btn-alert">
+                <span class="file-input btn btn-default btn-file">
+                    Chọn file khác <input type="file" multiple>
+                </span>
+                <button class="btn btn-primary" type="button">Hủy tải lên</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div><!--end alert upload-->
+
+</body>
+
+</html>

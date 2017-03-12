@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024">
+    <title>Sign Up| MeMe Cloud</title>
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+    <script>
+    	$(document).ready(function() {
+            $('ul.planSignup li').on('click',function() {
+				var $this = $(this);
+				$('ul.planSignup li').removeClass('selected');
+				$this.addClass('selected');
+				$('ul.planSignup li').find('.fa-check-circle').removeClass('fa-check-circle').addClass('fa-circle-o');
+				$this.find('.fa-circle-o').removeClass('fa-circle-o').addClass('fa-check-circle');
+				
+				console.log($this.attr('id'));
+			});
+        });
+    </script>
+</head>
+
+<body>
+<div class="wrapperSignup">
+    <div class="photoSignUp"></div>
+    <div class="outerSignup">
+        <div class="boxSignup">
+            <h1 class="logoSignUp"><a href="http://d.dev.mecloud.vn/backup/cloud1/mecloud.vn">mecloud.vn</a></h1>
+            <h3>Đăng ký dịch vụ mecloud</h3>
+            <div class="formGroup">
+                <input type="text" id="fullName" class="formGlobal formLogin" placeholder="Tên bạn:" />
+            </div>
+            <div class="formGroup">
+                <input type="text" id="companyName" class="formGlobal formLogin" placeholder="Công ty/tổ chức:" />
+            </div>
+            <div class="formGroup">
+                <input type="text" id="email" class="formGlobal formLogin errorInput" placeholder="Địa chỉ email:" />
+                <div class="errorForm"><i class="fa fa-caret-right"></i>Địa chỉ email chưa đúng</div>
+            </div>
+            <div class="formGroup">
+                <input type="text" id="website" class="formGlobal formLogin" placeholder="Website:" />
+            </div>
+            <div class="formGroup">
+                <input type="text" id="phone" class="formGlobal formLogin" placeholder="Điện thoại:" />
+            </div>
+            <div class="wrapperPlanSignup">
+                <ul class="planSignup clearfix">
+                    <li id="planFree" class="plan selected">
+                        <span class="check"><i class="fa fa-check-circle"></i></span>
+                        Miễn Phí
+                    </li>
+                    <li id="planPro1" class="plan">
+                        <span class="check"><i class="fa fa-circle-o"></i></span>
+                        Pro 1
+                    </li>
+                    <li id="planPro2" class="plan">
+                        <span class="check"><i class="fa fa-circle-o"></i></span>
+                        Pro 2
+                    </li>
+                    <li id="planPartner" class="plan">
+                        <span class="check"><i class="fa fa-circle-o"></i></span>
+                        Partner
+                    </li>
+                </ul>
+                <div class="viewPlan">
+                    <a class="linkSignup" href="signup.html#">Xem chi tiết các gói tại đây</a>
+                </div>
+            </div>
+            <div class="formGroup submitBtn">
+                <button type="button" class="btn btnSignup">Đăng ký</button>
+                 <div class="waiting">
+                    <div class="loader"></div>
+                 </div>
+            </div>
+            <div class="formGroup text-center"><a class="linkSignup" href="signup.html#">Đăng nhập meCloud</a></div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

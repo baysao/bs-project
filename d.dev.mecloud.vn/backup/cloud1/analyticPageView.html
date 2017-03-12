@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024" /> 
+    <title>Activity Video | MeMe Cloud</title>
+    <!-- Global CSS -->
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+    <!-- End Global CSS -->
+    
+    <!-- Page CSS -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/jquery.tagsinput.css" type="text/css" rel="stylesheet">
+    <link href="css/sumoselect.css" type="text/css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
+    <!-- End Page CSS -->
+    
+    <!-- Global Script -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script src="js/global.js"></script>
+    <!-- End Global Script -->
+    
+    
+</head>
+
+<body>
+	
+    <div class="wrapper">
+    	
+        <div class="container">
+        
+            <div class="containerTable">
+            
+                <div class="sidebar">
+                    <div class="sidebarFixed">
+                        <div class="logo">
+                            <a href="analyticPageView.html#" title="Meme Cloud">Meme Cloud</a>
+                        </div>
+                        
+                        <div class="mainMenu">
+    
+                            <ul id="nav">
+<li><a href="analyticPageView.html#"><i class="fa fa-globe"></i>Admin <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="allChannel.html">Danh sách channel</a></li>
+<li><a href="managerNotification.html">Quản lý thông báo</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="analyticPageView.html#" class="active"><i class="fa fa-video-camera"></i>Video <span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="allVideo.html">Tất cả video</a></li>
+                                  <li><a href="allVideoApprove.html">Duyệt video<span class="numMenu">20</span></a></li>
+                                  <li><a href="upload.html">Upload video mới</a></li>
+                                  <li><a href="uploadBulk.html">Upload cùng lúc</a></li>
+                                  <li><a href="allPlaylist.html">Danh sách phát</a></li>
+                                  <li><a href="categoryManager.html">Quản lý chuyên mục</a></li>
+                                  <li><a href="playerSetting.html">Cài đặt Player</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="analyticPageView.html#"><i class="fa fa-bar-chart-o"></i>Thống kê<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="analytics.html">Tổng quan</a></li>
+                                  <li><a href="userAnalytic.html">Theo người dùng</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="userManager.html"><i class="fa fa-user"></i>Người dùng</a>
+                              </li>
+                              <li><a href="analyticPageView.html#"><i class="fa fa-bullhorn"></i>Quảng cáo<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="domainManager.html">Quản lý trang web</a></li>
+                                  <li><a href="adMannagerGlobal.html">Quản lý Adtag</a></li>
+                                </ul>
+                              </li>
+<li><a href="analyticPageView.html#"><i class="fa fa-wrench"></i>Công cụ<span class="icoDown fa fa-chevron-down"></span></a>
+                                <ul>
+                                  <li><a href="customEmbed.html">Mã nhúng tùy chỉnh</a></li>
+                                  <li><a href="channelConfig.html">Cấu hình channel</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!--end sidebar -->
+
+               <div class="btn-expand">
+                    <span></span>
+                    <span></span>
+                    <span></span>	
+                </div>
+<div class="bg-overlay"></div>
+  
+                <div class="wrapperContent">
+                	
+                    <div class="header clearfix">
+                    	
+                        <div class="searchBox">
+                        	<button type="submit" class="btn btnSearch"><i class="fa fa-search"></i></button>
+                            <input class="formGlobal seachInput" placeholder="Nhập tên hoặc id video..." />
+                        </div>
+                        
+                        <div class="account">
+                        	<div class="notification support">
+                        		<a href="analyticPageView.html#"><i class="fa fa-headphones"></i>Cần hỗ trợ?</a>
+                                <ul class="menuAccount">
+                                    <li><a href="analyticPageView.html#"><i class="fa fa-phone"></i>0904916386</a></li>
+                                	<li><a href="analyticPageView.html#" class="supportMail"><i class="fa fa-envelope"></i>support@mecloud.vn</a></li>
+                                    <li><a href="https://www.facebook.com/mecloud.vn" class="fanPage"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                </ul>
+                            </div>
+<div class="userAcount dropdown">
+                            	<a href="analyticPageView.html#" class="channelName btnDropdown">Đời sống & pháp luật<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdownDiv menuChannel">
+                                	<div class="swithChannel">Quản lý channel:</div>
+                                    <ul class="scrollable">
+                                        <li><a href="analyticPageView.html#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="analyticPageView.html#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        	<div class="notification"><a href="upload.html" class="notificationIco"><i class="fa fa-cloud-upload"></i></a></div>
+                        	<div class="notification dropdown">
+                            	<a href="analyticPageView.html#" class="notificationIco btnDropdown"><i class="fa fa-bell"></i><span class="numNof">2</span></a>
+                                <div class="dropdownDiv boxNof">
+                                	<div class="headBoxNof">
+                                    	Bạn có 2 thông báo <a href="analyticPageView.html#" class="btnReadAsAll">Đã xem tất cả</a>
+                                    </div>
+                                    <ul class="listNof scrollable">
+                                    	<li>
+                                        	<a class="unread" href="activityVideo.html">Video <span class="boldNof">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span></a>
+                                            <a href="analyticPageView.html#" class="btnRead tooltipText" title="Đã xem"><i class="fa fa-circle-o"></i></a>
+                                        </li>
+                                        <li>
+                                        	<a href="analyticPageView.html#">Video <span class="boldNof">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a class="unread" href="activityVideo.html">Video <span class="boldNof">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span></a>
+                                            <a href="analyticPageView.html#" class="btnRead tooltipText" title="Đã xem"><i class="fa fa-circle-o"></i></a>
+                                        </li>
+                                        <li>
+                                        	<a href="analyticPageView.html#"><span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="analyticPageView.html#">Video <span class="boldNof">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="analyticPageView.html#">Video <span class="boldNof">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="analyticPageView.html#"><span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span></a>
+                                        </li>
+                                        <li>
+                                        	<a href="analyticPageView.html#">Video <span class="boldNof">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="notification userAcount dropdown">
+                            	<a href="analyticPageView.html#" class="notificationIco userName btnDropdown"><i class="fa fa-cog"></i></a>
+                                <a href="analyticPageView.html#" class="userThumb"><img src="images/user.jpg" alt="Messi" /></a>
+                                <ul class="dropdownDiv menuAccount">
+                                	<li><a href="changeProfile.html"><i class="fa fa-edit"></i>Đổi thông tin tài khoản</a></li>
+                                    <!--<li><a href="#"><i class="fa fa-user"></i>Tình trạng tài khoản</a></li>-->
+                                    <li><a href="support.html"><i class="fa fa-envelope"></i>Hỗ trợ</a></li>
+                                    <li><a href="analyticPageView.html#"><i class="fa fa-sign-out"></i>Thoát</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div><!--end header -->
+                    
+                    <div class="content">
+                            
+                            <div class="boxBreadcrumb">
+                            <ul class="breadcrumb clearfix">
+                                <li><a href="analyticPageView.html#">Meme Cloud</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="analyticPageView.html#">Video</a><i class="fa fa-angle-right"></i></li>
+                                <li class="active">
+                                    Thống kê lượt xem video
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="boxContent clearfix">
+                        	<div class="headBoxContent clearfix">
+                                <h1 class="floatLeft">Thống kê lượt xem video</h1>
+                                <div class="paginationDataTop p0 clearfix">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="http://d.dev.mecloud.vn/backup/cloud1/viewPreviousPage" onclick="return false;" class="disabled"><i class="fa fa-angle-left"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="http://d.dev.mecloud.vn/backup/cloud1/viewNextPage"><i class="fa fa-angle-right"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="countRecord">
+                                        <label>Hiển thị</label>
+                                        <select class="formGlobal">
+                                            <option>10</option>
+                                            <option>20</option>
+                                        </select> 
+                                        <span>bản ghi ( <b>1</b> - <b>10</b> ) trong tổng <b>30</b> bản ghi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="pageViewVideo">
+                            
+                            	<div class="lineVV">
+                                
+                                	<div class="headVV clearfix">
+                                    	<h3 class="floatLeft textInlineDot"><span class="countVV">4879</span><a href="analyticPageView.html#">Chắc ai đó sẽ về - Sơn Tùng MTP</a></h3>
+                                        <div class="timePlayerVV">
+                                        	<span>Tải player lúc 10:30:45 PM | </span>
+                                            <span>Bắt đầu: <span class="greyText">10:32:45 PM</span></span> - 
+                                            <span>Kết thúc: <span class="greyText">10:44:59 PM</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="contentVV">
+                                    	<div class="infoVV">
+                                        	<img src="images/video-img.jpg" />
+                                            <ul class="list2col">
+                                                <li>ID: <span class="greyText">453KHHJG</span></li>
+                                                <li>IP: <span class="greyText">188.457.142.113</span></li>
+                                                <li>Thiết bị: <span class="greyText">Desktop</span></li>
+                                                <li>HDH: <span class="greyText">Windows</span></li>
+                                                <li>Trình duyệt: <span class="greyText">Chrome</span></li>
+                                                <li>Vị trí: <span class="greyText">TP. Hồ Chí Minh</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="graphVV">
+                                        	<p class="titleGraph">Đoạn video đã xem</p>
+                                            <div class="wrapBarSeek">
+                                            	<div class="barSeek">
+                                                	<div class="watchedSeek" style="left:33.33333%; width:33.33333%;">
+                                                    	<div class="timeWrap tooltipText" title="2:00 - 4:00"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeSeek">
+                                                	<ul>
+                                                    	<li style="left:0">0</li>
+                                                        <li style="left:33.33333%;margin-left:-16px">02:00</li>
+                                                        <li style="left:66.66666%;margin-left:-16px">04:00</li>
+                                                        <li style="left:100%;margin-left:-32px">06:00</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end contentVV -->
+                                    
+                                </div><!-- end lineVV -->
+                                
+                                <div class="lineVV">
+                                
+                                	<div class="headVV clearfix">
+                                    	<h3 class="floatLeft textInlineDot"><span class="countVV">4878</span><a href="analyticPageView.html#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
+                                        <div class="timePlayerVV">
+                                        	<span>Tải player lúc 10:30:45 PM | </span>
+                                            <span>Bắt đầu: <span class="greyText">10:32:45 PM</span></span> - 
+                                            <span>Kết thúc: <span class="greyText">10:44:59 PM</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="contentVV">
+                                    	<div class="infoVV">
+                                        	<img src="images/img4.jpg" />
+                                            <ul class="list2col">
+                                                <li>ID: <span class="greyText">453KHHJG</span></li>
+                                                <li>IP: <span class="greyText">188.457.142.113</span></li>
+                                                <li>Thiết bị: <span class="greyText">Desktop</span></li>
+                                                <li>HDH: <span class="greyText">Linux</span></li>
+                                                <li>Trình duyệt: <span class="greyText">Firefox</span></li>
+                                                <li>Vị trí: <span class="greyText">Hà Nội</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="graphVV">
+                                        	<p class="titleGraph">Đoạn video đã xem</p>
+                                            <div class="wrapBarSeek">
+                                            	<div class="barSeek">
+                                                	<div class="watchedSeek" style="left:20%; width:20%;">
+                                                    	<div class="timeWrap tooltipText" title="2:00 - 4:00"></div>
+                                                    </div>
+                                                    <div class="watchedSeek" style="left:66.33%; width:10.17%;">
+                                                    	<div class="timeWrap tooltipText" title="6:33 - 7:50"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeSeek">
+                                                	<ul>
+                                                    	<li style="left:0">0</li>
+                                                        <li style="left:33.33333%;margin-left:-16px">03:33</li>
+                                                        <li style="left:66.66666%;margin-left:-16px">06:33</li>
+                                                        <li style="left:100%;margin-left:-32px">10:00</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end contentVV -->
+                                    
+                                </div><!-- end lineVV -->
+                                
+                                <div class="lineVV">
+                                
+                                	<div class="headVV clearfix">
+                                    	<h3 class="floatLeft textInlineDot"><span class="countVV">4879</span><a href="analyticPageView.html#">Chắc ai đó sẽ về - Sơn Tùng MTP</a></h3>
+                                        <div class="timePlayerVV">
+                                        	<span>Tải player lúc 10:30:45 PM | </span>
+                                            <span>Bắt đầu: <span class="greyText">10:32:45 PM</span></span> - 
+                                            <span>Kết thúc: <span class="greyText">10:44:59 PM</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="contentVV">
+                                    	<div class="infoVV">
+                                        	<img src="images/video-img.jpg" />
+                                            <ul class="list2col">
+                                                <li>ID: <span class="greyText">453KHHJG</span></li>
+                                                <li>IP: <span class="greyText">188.457.142.113</span></li>
+                                                <li>Thiết bị: <span class="greyText">Desktop</span></li>
+                                                <li>HDH: <span class="greyText">Windows</span></li>
+                                                <li>Trình duyệt: <span class="greyText">Chrome</span></li>
+                                                <li>Vị trí: <span class="greyText">TP. Hồ Chí Minh</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="graphVV">
+                                        	<p class="titleGraph">Đoạn video đã xem</p>
+                                            <div class="wrapBarSeek">
+                                            	<div class="barSeek">
+                                                	<div class="watchedSeek" style="left:33.33333%; width:33.33333%;">
+                                                    	<div class="timeWrap tooltipText" title="2:00 - 4:00"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeSeek">
+                                                	<ul>
+                                                    	<li style="left:0">0</li>
+                                                        <li style="left:33.33333%;margin-left:-16px">02:00</li>
+                                                        <li style="left:66.66666%;margin-left:-16px">04:00</li>
+                                                        <li style="left:100%;margin-left:-32px">06:00</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end contentVV -->
+                                    
+                                </div><!-- end lineVV -->
+                                
+                                <div class="lineVV">
+                                
+                                	<div class="headVV clearfix">
+                                    	<h3 class="floatLeft textInlineDot"><span class="countVV">4878</span><a href="analyticPageView.html#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
+                                        <div class="timePlayerVV">
+                                        	<span>Tải player lúc 10:30:45 PM | </span>
+                                            <span>Bắt đầu: <span class="greyText">10:32:45 PM</span></span> - 
+                                            <span>Kết thúc: <span class="greyText">10:44:59 PM</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="contentVV">
+                                    	<div class="infoVV">
+                                        	<img src="images/img4.jpg" />
+                                            <ul class="list2col">
+                                                <li>ID: <span class="greyText">453KHHJG</span></li>
+                                                <li>IP: <span class="greyText">188.457.142.113</span></li>
+                                                <li>Thiết bị: <span class="greyText">Desktop</span></li>
+                                                <li>HDH: <span class="greyText">Linux</span></li>
+                                                <li>Trình duyệt: <span class="greyText">Firefox</span></li>
+                                                <li>Vị trí: <span class="greyText">Hà Nội</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="graphVV">
+                                        	<p class="titleGraph">Đoạn video đã xem</p>
+                                            <div class="wrapBarSeek">
+                                            	<div class="barSeek">
+                                                	<div class="watchedSeek" style="left:20%; width:20%;">
+                                                    	<div class="timeWrap tooltipText" title="2:00 - 4:00"></div>
+                                                    </div>
+                                                    <div class="watchedSeek" style="left:66.33%; width:10.17%;">
+                                                    	<div class="timeWrap tooltipText" title="6:33 - 7:50"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeSeek">
+                                                	<ul>
+                                                    	<li style="left:0">0</li>
+                                                        <li style="left:33.33333%;margin-left:-16px">03:33</li>
+                                                        <li style="left:66.66666%;margin-left:-16px">06:33</li>
+                                                        <li style="left:100%;margin-left:-32px">10:00</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end contentVV -->
+                                    
+                                </div><!-- end lineVV -->
+                                
+                                <div class="lineVV">
+                                
+                                	<div class="headVV clearfix">
+                                    	<h3 class="floatLeft textInlineDot"><span class="countVV">4879</span><a href="analyticPageView.html#">Chắc ai đó sẽ về - Sơn Tùng MTP</a></h3>
+                                        <div class="timePlayerVV">
+                                        	<span>Tải player lúc 10:30:45 PM | </span>
+                                            <span>Bắt đầu: <span class="greyText">10:32:45 PM</span></span> - 
+                                            <span>Kết thúc: <span class="greyText">10:44:59 PM</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="contentVV">
+                                    	<div class="infoVV">
+                                        	<img src="images/video-img.jpg" />
+                                            <ul class="list2col">
+                                                <li>ID: <span class="greyText">453KHHJG</span></li>
+                                                <li>IP: <span class="greyText">188.457.142.113</span></li>
+                                                <li>Thiết bị: <span class="greyText">Desktop</span></li>
+                                                <li>HDH: <span class="greyText">Windows</span></li>
+                                                <li>Trình duyệt: <span class="greyText">Chrome</span></li>
+                                                <li>Vị trí: <span class="greyText">TP. Hồ Chí Minh</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="graphVV">
+                                        	<p class="titleGraph">Đoạn video đã xem</p>
+                                            <div class="wrapBarSeek">
+                                            	<div class="barSeek">
+                                                	<div class="watchedSeek" style="left:33.33333%; width:33.33333%;">
+                                                    	<div class="timeWrap tooltipText" title="2:00 - 4:00"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeSeek">
+                                                	<ul>
+                                                    	<li style="left:0">0</li>
+                                                        <li style="left:33.33333%;margin-left:-16px">02:00</li>
+                                                        <li style="left:66.66666%;margin-left:-16px">04:00</li>
+                                                        <li style="left:100%;margin-left:-32px">06:00</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end contentVV -->
+                                    
+                                </div><!-- end lineVV -->
+                                
+                                <div class="lineVV">
+                                
+                                	<div class="headVV clearfix">
+                                    	<h3 class="floatLeft textInlineDot"><span class="countVV">4878</span><a href="analyticPageView.html#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
+                                        <div class="timePlayerVV">
+                                        	<span>Tải player lúc 10:30:45 PM | </span>
+                                            <span>Bắt đầu: <span class="greyText">10:32:45 PM</span></span> - 
+                                            <span>Kết thúc: <span class="greyText">10:44:59 PM</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="contentVV">
+                                    	<div class="infoVV">
+                                        	<img src="images/img4.jpg" />
+                                            <ul class="list2col">
+                                                <li>ID: <span class="greyText">453KHHJG</span></li>
+                                                <li>IP: <span class="greyText">188.457.142.113</span></li>
+                                                <li>Thiết bị: <span class="greyText">Desktop</span></li>
+                                                <li>HDH: <span class="greyText">Linux</span></li>
+                                                <li>Trình duyệt: <span class="greyText">Firefox</span></li>
+                                                <li>Vị trí: <span class="greyText">Hà Nội</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="graphVV">
+                                        	<p class="titleGraph">Đoạn video đã xem</p>
+                                            <div class="wrapBarSeek">
+                                            	<div class="barSeek">
+                                                	<div class="watchedSeek" style="left:20%; width:20%;">
+                                                    	<div class="timeWrap tooltipText" title="2:00 - 4:00"></div>
+                                                    </div>
+                                                    <div class="watchedSeek" style="left:66.33%; width:10.17%;">
+                                                    	<div class="timeWrap tooltipText" title="6:33 - 7:50"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeSeek">
+                                                	<ul>
+                                                    	<li style="left:0">0</li>
+                                                        <li style="left:33.33333%;margin-left:-16px">03:33</li>
+                                                        <li style="left:66.66666%;margin-left:-16px">06:33</li>
+                                                        <li style="left:100%;margin-left:-32px">10:00</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end contentVV -->
+                                    
+                                </div><!-- end lineVV -->
+                                
+                                <div class="lineVV">
+                                
+                                	<div class="headVV clearfix">
+                                    	<h3 class="floatLeft textInlineDot"><span class="countVV">4879</span><a href="analyticPageView.html#">Chắc ai đó sẽ về - Sơn Tùng MTP</a></h3>
+                                        <div class="timePlayerVV">
+                                        	<span>Tải player lúc 10:30:45 PM | </span>
+                                            <span>Bắt đầu: <span class="greyText">10:32:45 PM</span></span> - 
+                                            <span>Kết thúc: <span class="greyText">10:44:59 PM</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="contentVV">
+                                    	<div class="infoVV">
+                                        	<img src="images/video-img.jpg" />
+                                            <ul class="list2col">
+                                                <li>ID: <span class="greyText">453KHHJG</span></li>
+                                                <li>IP: <span class="greyText">188.457.142.113</span></li>
+                                                <li>Thiết bị: <span class="greyText">Desktop</span></li>
+                                                <li>HDH: <span class="greyText">Windows</span></li>
+                                                <li>Trình duyệt: <span class="greyText">Chrome</span></li>
+                                                <li>Vị trí: <span class="greyText">TP. Hồ Chí Minh</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="graphVV">
+                                        	<p class="titleGraph">Đoạn video đã xem</p>
+                                            <div class="wrapBarSeek">
+                                            	<div class="barSeek">
+                                                	<div class="watchedSeek" style="left:33.33333%; width:33.33333%;">
+                                                    	<div class="timeWrap tooltipText" title="2:00 - 4:00"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeSeek">
+                                                	<ul>
+                                                    	<li style="left:0">0</li>
+                                                        <li style="left:33.33333%;margin-left:-16px">02:00</li>
+                                                        <li style="left:66.66666%;margin-left:-16px">04:00</li>
+                                                        <li style="left:100%;margin-left:-32px">06:00</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end contentVV -->
+                                    
+                                </div><!-- end lineVV -->
+                                
+                                <div class="lineVV">
+                                
+                                	<div class="headVV clearfix">
+                                    	<h3 class="floatLeft textInlineDot"><span class="countVV">4878</span><a href="analyticPageView.html#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
+                                        <div class="timePlayerVV">
+                                        	<span>Tải player lúc 10:30:45 PM | </span>
+                                            <span>Bắt đầu: <span class="greyText">10:32:45 PM</span></span> - 
+                                            <span>Kết thúc: <span class="greyText">10:44:59 PM</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="contentVV">
+                                    	<div class="infoVV">
+                                        	<img src="images/img4.jpg" />
+                                            <ul class="list2col">
+                                                <li>ID: <span class="greyText">453KHHJG</span></li>
+                                                <li>IP: <span class="greyText">188.457.142.113</span></li>
+                                                <li>Thiết bị: <span class="greyText">Desktop</span></li>
+                                                <li>HDH: <span class="greyText">Linux</span></li>
+                                                <li>Trình duyệt: <span class="greyText">Firefox</span></li>
+                                                <li>Vị trí: <span class="greyText">Hà Nội</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="graphVV">
+                                        	<p class="titleGraph">Đoạn video đã xem</p>
+                                            <div class="wrapBarSeek">
+                                            	<div class="barSeek">
+                                                	<div class="watchedSeek" style="left:20%; width:20%;">
+                                                    	<div class="timeWrap tooltipText" title="2:00 - 4:00"></div>
+                                                    </div>
+                                                    <div class="watchedSeek" style="left:66.33%; width:10.17%;">
+                                                    	<div class="timeWrap tooltipText" title="6:33 - 7:50"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeSeek">
+                                                	<ul>
+                                                    	<li style="left:0">0</li>
+                                                        <li style="left:33.33333%;margin-left:-16px">03:33</li>
+                                                        <li style="left:66.66666%;margin-left:-16px">06:33</li>
+                                                        <li style="left:100%;margin-left:-32px">10:00</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end contentVV -->
+                                    
+                                </div><!-- end lineVV -->
+                                
+                                <div class="lineVV">
+                                
+                                	<div class="headVV clearfix">
+                                    	<h3 class="floatLeft textInlineDot"><span class="countVV">4879</span><a href="analyticPageView.html#">Chắc ai đó sẽ về - Sơn Tùng MTP</a></h3>
+                                        <div class="timePlayerVV">
+                                        	<span>Tải player lúc 10:30:45 PM | </span>
+                                            <span>Bắt đầu: <span class="greyText">10:32:45 PM</span></span> - 
+                                            <span>Kết thúc: <span class="greyText">10:44:59 PM</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="contentVV">
+                                    	<div class="infoVV">
+                                        	<img src="images/video-img.jpg" />
+                                            <ul class="list2col">
+                                                <li>ID: <span class="greyText">453KHHJG</span></li>
+                                                <li>IP: <span class="greyText">188.457.142.113</span></li>
+                                                <li>Thiết bị: <span class="greyText">Desktop</span></li>
+                                                <li>HDH: <span class="greyText">Windows</span></li>
+                                                <li>Trình duyệt: <span class="greyText">Chrome</span></li>
+                                                <li>Vị trí: <span class="greyText">TP. Hồ Chí Minh</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="graphVV">
+                                        	<p class="titleGraph">Đoạn video đã xem</p>
+                                            <div class="wrapBarSeek">
+                                            	<div class="barSeek">
+                                                	<div class="watchedSeek" style="left:33.33333%; width:33.33333%;">
+                                                    	<div class="timeWrap tooltipText" title="2:00 - 4:00"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeSeek">
+                                                	<ul>
+                                                    	<li style="left:0">0</li>
+                                                        <li style="left:33.33333%;margin-left:-16px">02:00</li>
+                                                        <li style="left:66.66666%;margin-left:-16px">04:00</li>
+                                                        <li style="left:100%;margin-left:-32px">06:00</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end contentVV -->
+                                    
+                                </div><!-- end lineVV -->
+                                
+                                <div class="lineVV">
+                                
+                                	<div class="headVV clearfix">
+                                    	<h3 class="floatLeft textInlineDot"><span class="countVV">4878</span><a href="analyticPageView.html#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
+                                        <div class="timePlayerVV">
+                                        	<span>Tải player lúc 10:30:45 PM | </span>
+                                            <span>Bắt đầu: <span class="greyText">10:32:45 PM</span></span> - 
+                                            <span>Kết thúc: <span class="greyText">10:44:59 PM</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="contentVV">
+                                    	<div class="infoVV">
+                                        	<img src="images/img4.jpg" />
+                                            <ul class="list2col">
+                                                <li>ID: <span class="greyText">453KHHJG</span></li>
+                                                <li>IP: <span class="greyText">188.457.142.113</span></li>
+                                                <li>Thiết bị: <span class="greyText">Desktop</span></li>
+                                                <li>HDH: <span class="greyText">Linux</span></li>
+                                                <li>Trình duyệt: <span class="greyText">Firefox</span></li>
+                                                <li>Vị trí: <span class="greyText">Hà Nội</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="graphVV">
+                                        	<p class="titleGraph">Đoạn video đã xem</p>
+                                            <div class="wrapBarSeek">
+                                            	<div class="barSeek">
+                                                	<div class="watchedSeek" style="left:20%; width:20%;">
+                                                    	<div class="timeWrap tooltipText" title="2:00 - 4:00"></div>
+                                                    </div>
+                                                    <div class="watchedSeek" style="left:66.33%; width:10.17%;">
+                                                    	<div class="timeWrap tooltipText" title="6:33 - 7:50"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeSeek">
+                                                	<ul>
+                                                    	<li style="left:0">0</li>
+                                                        <li style="left:33.33333%;margin-left:-16px">03:33</li>
+                                                        <li style="left:66.66666%;margin-left:-16px">06:33</li>
+                                                        <li style="left:100%;margin-left:-32px">10:00</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end contentVV -->
+                                    
+                                </div><!-- end lineVV -->
+                                
+                            </div><!-- end pageViewVideo -->
+                            
+                            <div class="paginationDataTop p0 pt20 clearfix">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="http://d.dev.mecloud.vn/backup/cloud1/viewPreviousPage" onclick="return false;" class="disabled"><i class="fa fa-angle-left"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="http://d.dev.mecloud.vn/backup/cloud1/viewNextPage"><i class="fa fa-angle-right"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="countRecord">
+                                    <label>Hiển thị</label>
+                                    <select class="formGlobal">
+                                        <option>10</option>
+                                        <option>20</option>
+                                    </select> 
+                                    <span>bản ghi ( <b>1</b> - <b>10</b> ) trong tổng <b>30</b> bản ghi</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        
+                    </div><!--end content -->
+                    
+                </div><!--end wrapperContent -->
+            
+            </div><!--end containerTable -->
+        
+        </div><!--end container -->
+        
+    </div><!--end wrapper -->
+    
+</body>
+
+</html>

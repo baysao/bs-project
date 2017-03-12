@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Login | MeMe Cloud</title>
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="wrapperLogin">
+	<div class="boxLogin">	
+        <div class="logoLogin"><h1>Meme Cloud</h1></div>
+        <div class="login">
+        	<form>
+            	<div class="formGroup successStatus">Bạn hãy check mail để lấy lại mật khẩu</div>
+                <div class="formGroup">
+                    <input type="text" id="fPassword" class="formGlobal formLogin" placeholder="Nhập email" />
+                </div>
+                <div class="formGroup submitBtn">
+                    <button type="button" class="btn btnLogin" onClick="$('.successStatus').show();">Khôi phục mật khẩu</button>
+                     <div class="waiting">
+                     	<div class="loader"></div>
+                     </div>
+                </div>
+            </form> 
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>

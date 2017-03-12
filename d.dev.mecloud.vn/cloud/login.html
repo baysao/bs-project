@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Login | MeMe Cloud</title>
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="wrapperLogin">
+	<div class="boxLogin">	
+        <div class="logoLogin"><h1>Meme Cloud</h1></div>
+        <div class="login">
+        	<form>
+            	<div class="formGroup errorStatus">Chưa nhập email</div>
+                <div class="formGroup">
+                    <input type="text" id="username" class="formGlobal formLogin" placeholder="Tên đăng nhập" />
+                </div>
+                <div class="formGroup">
+                    <input type="password" id="password" class="formGlobal formLogin" placeholder="Mật khẩu" />
+                </div>
+                <div class="formGroup inline clearfix">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" checked> Ghi nhớ
+                        </label>
+                    </div>
+                    <a href="login.html#" class="forgotPw">Bạn quên mật khẩu?</a>
+                </div>
+                <div class="formGroup submitBtn">
+                    <button type="button" class="btn btnLogin" onClick="$('#username').addClass('errorInput');$('.errorStatus').show();">Đăng nhập</button>
+                     <div class="waiting">
+                     	<div class="loader"></div>
+                     </div>
+                </div>
+            </form> 
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>

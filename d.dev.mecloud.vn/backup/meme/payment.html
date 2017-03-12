@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Payment | MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin-ext,vietnamese' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/partner.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/disableScrollBar.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/global.js"></script>
+    
+    <script>
+    	$(document).ready(function() {
+			
+			//scroll to element and button Back To Top
+			function goToByScrollPage(id) {
+				id = id.replace("link", "");
+				$('html,body').animate({
+					scrollTop: $("#" + id).offset().top -80
+				}, 'slow');
+			}
+			$(".scrollTo").click(function () {
+				//e.preventDefault();
+				goToByScrollPage($(this).attr("id"));
+			});
+			
+			$(window).load(function () {
+				goToByScrollPage($(hash).attr("id"));
+			});
+			
+		
+			///////////////////////////////////////////////////////////////////////
+			//navMenu partner
+			///////////////////////////////////////////////////////////////////////
+				
+			$('#header').width($('#header').parent().width());
+			
+			$( window ).resize(function() {
+			  $('#header').width($('#header').parent().width());
+			});
+		});
+		
+    </script>
+</head>
+
+<body id="backtotop" data-spy="scroll" data-target=".nav-partner .container">
+       <div class="wrapper-partner clearfix">
+       		<div class="width-partner clearfix">
+            	<div id="header">
+                    <div class="container">
+                        
+                        <a href="payment.html#" class="logoPayment">payment.meme.vn</a>
+            			
+                        <div class="menuPayment">
+                        	<button type="button" class="btn btnMenuPayment" data-toggle="collapse" data-target="#menuPayment"><i class="fa fa-bars"></i></button>
+                            <div class="clearfix"></div>
+                        	<ul id="menuPayment" class="clearfix">
+                            	<li><a id="gioithieulink" href="payment.html#gioithieu" class="scrollTo">Giới thiệu</a></li>
+                                <li><a id="dieukhoanlink" href="payment.html#dieukhoan" class="scrollTo">Điều khoản</a></li>
+                                <li><a href="payment.html#" class="btnPayment">Quản lý tài khoản thanh toán</a></li>
+                            </ul>
+                        </div>	
+                        
+                    </div>
+              	</div><!-- end header-->
+                
+                <div class="bannerPayment">
+                	<h1>Tài khoản thanh toán MEME</h1>
+                    <div class="imgPayment"></div>
+                    <a href="payment.html#" class="btnRegister">Đăng ký tài khoản</a>
+                </div><!-- end bannerPayment-->
+                
+                <div class="container">
+                    <div class="content-partner">
+                        <div id="gioithieu" class="section">
+                            <h3>Giới thiệu</h3>
+                            <p>Tài khoản thánh toán MEME dùng để phục vụ cho việc chi trả tiền quảng cáo cho đối tác của MEME, bao gồm hệ thống Network, Publisher và các Channel tham gia chương trình MEME Partner. </p>
+                        </div><!-- end gioithieu-->
+                        
+                        <div class="section">
+                            <h3>Lợi ích của việc dùng tài khoản thanh toán MEME</h3>
+                            <p>Chỉ cần 1 thông tin chi trả để áp dụng cho tất cả các nguồn thu khác nhau liên quan đến MEME. Ngoài ra, sử dụng tài khoản thanh toán MEME cũng giúp bạn quản lý được doanh thu kiếm được theo thời gian, đồng thời chủ động và tiện lợi hơn trong việc rút tiền.</p>
+                        </div><!-- end loiich-->
+                        
+                        <div class="section">
+                            <h3>Điều kiện để sở hữu tài khoản thanh toán MEME</h3>
+                            <ul class="nav">
+                                <li><i class="fa fa-caret-right"></i> Bạn cần điền đầy đủ thông tin cá nhân và thông tin thanh toán chính xác để MEME thực hiện việc chi trả nhanh chóng và thuận lợi. Thông tin đăng ký của bạn sẽ không cần được duyệt, nhưng nếu bạn cần cập nhật thông tin, thì phải thông qua kiểm duyệt của MEME.</li>
+                                <li><i class="fa fa-caret-right"></i> Thông tin cá nhân là các thông tin sau: họ tên đầy đủ, ngày tháng năm sinh, nơi ở, tỉnh/thành phố, số điện thoại.</li>
+                                <li><i class="fa fa-caret-right"></i> Thông tin thanh toán là các thông tin sau: mã số thuế, tài khoản ngân hàng, tên ngân hàng, chi nhánh, ảnh chứng minh nhân dân.</li>
+                                <li><i class="fa fa-caret-right"></i> Nếu bạn đại diện cho công ty, bạn cần cung cấp thêm tên công ty và up ảnh chụp giấy chứng nhận đăng ký kinh doanh.</li>
+                            </ul>
+                        </div><!-- end dieukien-->
+                        
+                        <div id="dieukhoan" class="section" style="border:none;">
+                        	<h3>Điều khoản thanh toán</h3>
+                            <ul class="nav">
+                                <li><i class="fa fa-caret-right"></i> Tài khoản của bạn sẽ có 1 số tiền, gọi là số dư của tài khoản. </li>
+                                <li><i class="fa fa-caret-right"></i> Số tiền kiếm được trong tháng gọi là số dư trong tháng.</li>
+                                <li><i class="fa fa-caret-right"></i> Số tiền kiếm được mỗi ngày sẽ được cộng vào số dư trong tháng tương ứng vào khoảng thời gian 3 đến 4 giờ sáng ngày hôm sau.</li>
+                                <li><i class="fa fa-caret-right"></i> Vào ngày 6 của mỗi tháng, số dư trong tháng của tháng trước sẽ được cộng vào số dư tài khoản.</li>
+                                <li><i class="fa fa-caret-right"></i> Bạn chỉ được phép rút tiền khi số dư của tài khoản tối thiểu là 500.000 đồng. Không giới hạn lượng tiền tối đa trong tài khoản.</li>
+                                <li><i class="fa fa-caret-right"></i> Từ ngày 15 đến hết tháng (mỗi tháng), nút rút tiền sẽ xuất hiện để bạn thực hiện yêu cầu rút tiền nếu bạn đủ điều kiện. Chúng tôi (MEME) sẽ kiểm tra và thanh toán cho bạn trong vòng 15 ngày đầu tháng tiếp sau.</li>
+                                <li><i class="fa fa-caret-right"></i> Ví dụ: Bạn bắt đầu hoạt động trong tháng 9 và kiếm được 20 triệu đồng. Ngày 5/10 số tiền này vẫn nằm ở số dư trong tháng của bạn. Ngày 6/10 số tiền này sẽ được chuyển vào số dư trong tài khoản. Từ ngày 10 đến ngày 14, bạn có trách nhiệm đối soát số liệu và liên lạc với MEME nếu có thắc mắc. Từ ngày 15/10 đến 31/10, nút rút tiền sẽ hiện ra để bạn thực hiện yêu cầu. Từ ngày 1/11 đến 15/11, chúng tôi sẽ xử lý và chuyển tiền cho bạn.</li>
+                            </ul>
+                            
+                        </div><!-- end dieukhoan-->
+                    </div><!-- end content-partner-->
+                    
+                </div><!-- end container-->
+                
+                <div class="footer container-fluid">
+                	<div class="container">
+                        <div class="col-md-5 hidden-xs hidden-sm">
+                            <div class="footer-head">
+                                <h3>Giới thiệu meme</h3>
+                            </div>
+                            <div class="footer-content footer-logo">
+                                <p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí…</p>
+                                <a href="payment.html#" class="about-more">Xem thêm</a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-6 footerPadd">
+                            <div class="footer-head">
+                                <h3>Facebook <a href="http://www.meme.vn/rss/video/latest" class="rssLink"><i class="fa fa-rss"></i></a></h3>
+                            </div>
+                            <div class="footer-content">
+                                <a class="facebookfan" href="payment.html#"><i class="fa fa-facebook"></i></a>
+                                <h5><a href="payment.html#">TV Network</a></h5>
+                                <p class="facebookfanDesc">Cập nhật tin tức mới từ facebook</p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="footer-head">
+                                <h3>Hỗ trợ</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="nav">
+                                    <li><a href="payment.html#">MeMe là gì?</a>
+                                    </li>
+                                    <li><a href="payment.html#">Cách hoạt động</a>
+                                    </li>
+                                    <li><a href="payment.html#">Lợi ích</a>
+                                    </li>
+                                    <li><a href="payment.html#">Đối tác nội dung</a>
+                                    </li>
+                                    <li><a href="payment.html#">Khiếu nại bản quyền</a>
+                                    </li>
+                                    <li><a href="payment.html#">Liên hệ</a>
+                                    </li>
+                                    <li><a href="payment.html#">Điều khoản sử dụng</a>
+                                    </li>
+                                    <li><a href="payment.html#">Chính sách nội dung</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end footer-->
+                
+                <div class="footer-bottom col-xs-12">
+                	<div class="container">
+                    	<span class="copyright">Copyright ©2013 meme.vn</span>
+                    </div>
+                </div><!--end footer bottom-->
+                
+            </div><!-- end width-partner-->
+            
+       </div><!-- end wrapper-partner-->
+
+  
+</body>
+
+</html>

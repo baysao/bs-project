@@ -1,0 +1,115 @@
+.noel {
+	position:fixed; 
+	width:150px; 
+	height:150px; 
+	bottom:30px;
+	right:60px;
+	z-index:9999;
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg);
+	-webkit-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	-ms-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+}
+.noel img {
+	-webkit-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	-ms-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+	border-radius:75px;
+	-webkit-border-radius:75px;
+	-moz-border-radius:75px;
+	-ms-border-radius:75px;
+	-o-border-radius:75px; 
+}
+
+.btnGoNoel {
+	position:absolute;
+	bottom:0;
+	left:0;
+	background-color: #e64b3a;
+	width:50px;
+	height:50px;
+	border-radius:30px;
+	-webkit-border-radius:30px;
+	-moz-border-radius:30px;
+	-ms-border-radius:30px;
+	-o-border-radius:30px;
+	color:#ffffff;
+	text-align:center;
+	line-height:50px;
+	font-weight:500;
+	font-size:20px; 
+	-webkit-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	-ms-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+}
+.btnGoNoel:hover {
+	background-color:#e6b541;	
+}
+.noel img:hover {
+	border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	-ms-border-radius:15px;
+	-o-border-radius:15px; 
+}
+.noel:hover .btnGoNoel {
+	bottom:-10px;
+	left:-10px;
+	width:60px;
+	height:60px;
+	line-height:60px;
+}
+.closeNoel {
+	cursor:pointer;
+	position:absolute;
+	top:7px;
+	right:7px;
+	width:30px;
+	height:30px;
+	background-color:#ffffff;
+	text-align:center;
+	line-height:30px;
+	color:#454545;
+	border-radius:25px;
+	-webkit-border-radius:25px;
+	-moz-border-radius:25px;
+	-ms-border-radius:25px;
+	-o-border-radius:25px; 
+	-webkit-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	-ms-transition: all 200ms ease-in;
+	-o-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+}
+.closeNoel:hover {
+	background-color:#e6b541;
+	color:#ffffff;
+	font-size:20px;	
+}
+.noel:hover .closeNoel {
+	top:-10px;
+	right:-10px;
+	width:50px;
+	height:50px;
+	line-height:50px;
+	font-size:20px;	
+}
+
+.noel.aniNoel {
+	right:-170px;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+}

@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Statis Video | MeMe.VN</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
+	<link href="css/cpStatis.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    
+    <!-- start detail script-->
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script>
+		$(document).ready(function() {
+			////calendar
+			$('#dp,#dp1').datepicker();
+			
+			////dropdown calendar
+			$('.statusStatis a').click(function(event){
+				event.preventDefault();
+				var X=$(this).attr('id');
+				if(X==1) {
+					$('.statusStatis i.fa-caret-down').show();
+					$('.statusStatis i.fa-caret-up').hide();
+					$(this).attr('id', '0');
+				}
+				else {
+					$('.statusStatis i.fa-caret-up').show();
+					$('.statusStatis i.fa-caret-down').hide();
+					$(this).attr('id', '1');
+				}
+			});
+		});
+    </script>
+    <!-- end detail script-->
+</head>
+
+<body>
+
+  <div class="contentIframe clearfix">
+      <h1 class="clearfix">
+          <div class="w-text-h1">
+              <span>Thống kê video</span> 
+          </div>
+      </h1>
+      <div class="statisTime">
+          
+          <div class="statusStatis clearfix">
+              <span class="ctd">Chọn thời điểm: </span>
+              <a href="cpStatis.html#" class="viewTotalST" data-toggle="collapse" data-target="#rangeTime">Tháng này 01/11/2014 đến 30/11/2014 <i class="fa fa-caret-down"></i><i class="fa fa-caret-up"></i></a>
+          </div>
+          <div id="rangeTime" class="collapse">
+              <div class="wrapperST">
+                  <div class="col-md-5 col-lg-6">
+                      <div class="statisTimeRange">
+                          <div class="txt-div">Khoảng ngày</div>
+                          <input id="dp" class="form-control" type="text" data-date-format="dd-mm-yyyy" value="01/11/2014" placeholder="Từ ngày">
+                          <input id="dp1" class="form-control" type="text" value="05/11/2014" data-date-format="dd-mm-yyyy" placeholder="Đến ngày">
+                          <button type="submit" class="btn btn-primary">Ok</button>
+                      </div><!-- end range-time -->
+                  </div>
+                  <div class="col-md-7 col-lg-6">
+                      <div class="statisTimeRangeTxt">
+                          <div class="txt-div">Xem nhanh các khoảng ngày</div>
+                          <ul>
+                              <li><a href="cpStatis.html#">Hôm nay: 04/12</a></li>
+                              <li><a href="cpStatis.html#">Hôm qua: 03/12</a></li>
+                              <li><a href="cpStatis.html#">7 ngày qua</a></li>
+                              <li><a href="cpStatis.html#">30 ngày qua</a></li>
+                          </ul>
+                          <ul>
+                              <li><a href="cpStatis.html#">Tháng này: tháng 12</a></li>
+                              <li><a href="cpStatis.html#">Tháng tước: tháng 11</a></li>
+                              <li><a href="cpStatis.html#">Toàn bộ thời gian</a></li>
+                          </ul>
+                      </div><!-- end range-time-txt -->
+                  </div>
+              </div>
+          </div><!-- end #rangeTime -->
+          
+      </div><!-- end statisTime -->
+      <div class="head-video-statis clearfix">
+          <a class="thumbnail-statis hidden-xs" href="cpStatis.html#"><img src="images/video-img.jpg" /></a>
+          <div class="info-video-statis">
+              <a href="cpStatis.html#" class="title-video-statis">Sắc đỏ tràn ngập phố phường sau chiến thắng của U19 Việt Nam</a>
+              <p class="field-video-statis">
+                  <span><span class="dot"></span>Ngày upload: <i>21/05/2014</i></span> 
+                  <span><span class="dot"></span>Thời lượng: <i>02:25</i></span>
+                  <span><span class="dot"></span>Lượt xem: <i>1.480</i></span>
+                  <span><span class="dot"></span>Upload bởi: <a href="cpStatis.html#">BB Trần</a></span>
+              </p>
+          </div>
+      </div><!-- end head-video-statis -->
+      <div class="general-statis">
+          <div class="row">	
+              <div class="field-gs col-xs-6 col-sm-4 col-md-2">
+                  <p>Lượt xem</p>
+                  <p class="field-statis blue-lv">1.400</p>
+              </div>
+              <div class="field-gs col-xs-6 col-sm-4 col-md-2">
+                  <p>Like</p>
+                  <p class="field-statis red-lv">400</p>
+              </div>
+              <div class="field-gs col-xs-6 col-sm-4 col-md-2">
+                  <p>Bình luận</p>
+                  <p class="field-statis grey-lv">14</p>
+              </div>
+              <div class="field-gs col-xs-6 col-sm-4 col-md-2">
+                  <p>Subscribed</p>
+                  <p class="field-statis">20</p>
+              </div>
+              <div class="field-gs col-xs-6 col-sm-4 col-md-2">
+                  <p>Xem hết video</p>
+                  <p class="field-statis green-lv">213 (9.15%)</p>
+              </div>
+              <div class="field-gs col-xs-6 col-sm-4 last col-md-2">
+                  <p>Doanh thu (VNĐ)</p>
+                  <p class="field-statis red-lv">1.400.000</p>
+              </div>
+          </div>    
+      </div><!-- end general-statis -->
+      <div class="content-upload padding">
+          <div class="box-statis">
+              <div class="title-box">
+                  Thống kê lượt xem của video <br />  
+                  <span>Bảng thống kê sau sẽ cho bạn thấy số lượt xem và quảng cáo theo từng ngày</span>
+                  <button type="button" class="btn btn-primary"><i class="fa fa-list-alt"></i></button>
+              </div>
+              <div class="content-box">
+                  Biểu đồ lượt xem của video
+              </div>
+          </div><!-- end box-statis -->
+          <div class="box-statis">
+              <div class="title-box">
+                  Mức độ hiệu quả của video <br />  
+                  <span>Bảng thống kê sau sẽ cho bạn thấy tỷ lệ lượt xem ứng với thời lượng video được xem</span>
+                  <button type="button" class="btn btn-primary"><i class="fa fa-list-alt"></i></button>
+              </div>
+              <div class="content-box">
+                  Biểu đồ mức độ hiệu quả của video
+              </div>
+          </div><!-- end box-statis -->
+          <div class="box-statis">
+              <div class="title-box">
+                  Mức độ hiệu quả của từng đoạn trong video <br />  
+                  <span>Bảng thống kê sau sẽ cho bạn thấy đoạn nào của video được xem nhiều nhất & ít nhất</span>
+                  <button type="button" class="btn btn-primary"><i class="fa fa-list-alt"></i></button>
+              </div>
+              <div class="content-box">
+                  Biểu đồ mức độ hiệu quả của từng đoạn trong video
+              </div>
+          </div><!-- end box-statis -->
+          <div class="row">
+              <div class="box-statis col-md-6">
+                  <div class="title-box">
+                      Thống kê vị trí play video  
+                      <button type="button" class="btn btn-primary"><i class="fa fa-list-alt"></i></button>
+                  </div>
+                  <div class="content-box">
+                      Biểu đồ Thống kê vị trí play video 
+                  </div>
+              </div><!-- end box-statis -->
+              <div class="box-statis col-md-6">
+                  <div class="title-box">
+                      Thống kê thiết bị 
+                      <button type="button" class="btn btn-primary"><i class="fa fa-list-alt"></i></button>
+                  </div>
+                  <div class="content-box">
+                      Biểu đồ Thống kê thiết bị
+                  </div>
+              </div><!-- end box-statis -->
+              <div class="box-statis col-md-6">
+                  <div class="title-box">
+                      Thống kê nguồn xem  
+                      <button type="button" class="btn btn-primary"><i class="fa fa-list-alt"></i></button>
+                  </div>
+                  <div class="content-box">
+                      Biểu đồ Thống kê nguồn xem
+                  </div>
+              </div><!-- end box-statis -->
+              <div class="box-statis col-md-6">
+                  <div class="title-box">
+                      Thống kê địa lý 
+                      <button type="button" class="btn btn-primary"><i class="fa fa-list-alt"></i></button>
+                  </div>
+                  <div class="content-box">
+                      Biểu đồ Thống kê địa lý
+                  </div>
+              </div><!-- end box-statis -->
+          </div>
+          
+      </div><!-- end content-upload -->
+  </div><!-- end right-upload -->
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/******************************************/
+/*** brand ***/
+/******************************************/
+.video-js.mep .btn-brand {
+  padding: 0;
+  margin: 0;
+  height: 40px;
+  display: table;
+  text-align: center;
+  float: right;
+  width: auto !important;
+}
+.video-js.mep .btn-brand span {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.video-js.mep .btn-brand span .wrapper-img-brand {
+  position: relative;
+}
+.video-js.mep .btn-brand.icon-style {
+  padding: 0 10px;
+}
+.video-js.mep .btn-brand.icon-style .img-brand {
+  max-height: 22px;
+  display: block;
+}
+.video-js.mep .btn-brand.icon-style .img-brand-hover {
+  max-height: 22px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video-js.mep .btn-brand.box-style .img-brand {
+  max-height: 40px;
+  display: block;
+}
+.video-js.mep .btn-brand.box-style .img-brand-hover {
+  max-height: 40px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video-js.mep .btn-brand .img-brand {
+  z-index: 1;
+  padding: 0;
+}
+.video-js.mep .btn-brand .img-brand-hover {
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+}
+.video-js.mep .btn-brand:hover .img-brand-hover {
+  opacity: 1;
+  visibility: visible;
+}

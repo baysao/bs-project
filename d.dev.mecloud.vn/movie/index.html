@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movie | MeMe.VN</title>
+    <!--- Global CSS -->
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/fmeott.css" type="text/css" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <!--<link href="css/jquery.mCustomScrollbar.min.css" type="text/css" rel="stylesheet">-->
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+    <!-- End Global CSS -->
+    
+    <!-- Page CSS -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/tooltipster.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <!-- End Page CSS -->
+    
+    <!-- Global Script -->
+	<script src="js/jquery.min.js"></script>
+    <!--<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>-->
+    <script src="js/typeahead.bundle.min.js"></script>
+    <script src="js/handlebars.js"></script>
+    <script src="js/global.js"></script>
+    <!-- End Global Script -->
+    
+    <!-- Page Script -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/jquery.newsTicker.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+    <script>
+        $(document).ready(function() {
+			for (var i = 1;i < 200;i++) {
+				$myTooltip = $('#tooltipMeme' + i)
+				$myTooltip.tooltipster({
+					position: 'right',
+					offsetX: 7,
+                    delay: 200,
+                    speed: 200,
+					interactive: true,
+					content: $('<div class="tooltipInfo"><p class="tooltipInfoEpisode">Tập 10/40</p><a href="#" class="tooltipInfoTitle">Bí kíp luyện rồng 2</a><a href="#" class="tooltipInfoChannel">Lotte Cinema</a><p class="tooltipInfo1Desc">Vốn là một chương trình thực tế nổi tiếng, Grandpas Over Flowers sẽ xuất hiện phiên bản phim truyền hình với... </p><a href="#" class="btn tooltipInfoPlay">Xem Video</a></div>')
+				});
+			}
+        });
+    </script>
+</head>
+
+<body id="backtotop">
+    <div id="header">
+        <div class="header-left">
+            <h1 class="logo">MeOTT</h1>
+        </div>
+        <div class="header-right">
+            <ul class="nav-account">
+                <li>
+                    <a href="#" class="btn-search"><i class="fmeott fmeott-search"></i></a> 
+                </li>
+                <li>
+                    <a href="signin.html" class="btn-account"><i class="fmeott fmeott-user"></i></a> 
+                </li>
+            </ul>
+        </div>
+        <ul class="nav-menu">
+            <li class="active">
+                <a href="#">Trang chủ</a>
+            </li>
+            <li>
+                <a href="#">Truyền hình</a>
+            </li>
+            <li>
+                <a href="#">Thể thao</a>
+            </li>
+            <li>
+                <a href="#">Phim bộ</a>
+            </li>
+            <li>
+                <a href="#">Phim lẻ</a>
+            </li>
+            <li>
+                <a href="#">TV show</a>
+            </li>
+            <li class="have-sub-menu">
+                <a href="#">Khác<i class="fa fa-caret-down"></i></a>
+
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#">Thiếu nhi</a>
+                    </li>
+                    <li>
+                        <a href="#">Hoạt hình</a>
+                    </li>
+                    <li>
+                        <a href="#">Clip hài</a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </div><!-- end header -->
+    <div class="wraper-search-box">
+        <div class="search-box">
+            <input type="text" class="input-sb" placeholder="Nhập từ khóa" id="search-suggest">
+            <a href="#" class="btn-close-search"></a>
+            <!-- <div class="suggest-sb">
+                sd
+            </div> -->
+        </div>
+    </div><!-- end search-box -->
+    <div class="pageWidth">
+        <div id="showcase">
+            <div class="showcaseItem">
+                <a href="#" class="showcaseImage" style="background-image:url(images/showcase1.jpg)"></a>
+                <a href="#" class="btnPlayShowcase"></a>
+                <div class="showcaseInfo">
+                	<a href="#" class="showcase-channel">
+                    	<img src="images/channelImg1.jpg" /> BHD Cinema
+                    </a>
+                    <h2 class="showcaseTitle"><a href="#">Ngày cũ của tương lai</a></h2>
+                    <p class="showcaseDesc">Golden Globe Award-winning comedy series about what happens when a hotshot detective (Andy Samberg, who won this year’s Golden Globe Award for Best Performance...</p>
+                    <a href="#" class="btn btnPlayNow">Xem Ngay <span class="fa fa-play"></span></a>
+                </div>
+            </div><!-- end showcaseItem -->
+            <div class="showcaseItem">
+                <a href="#" class="showcaseImage" style="background-image:url(images/showcase2.jpg)"></a>
+                <a href="#" class="btnPlayShowcase"></a>
+                <div class="showcaseInfo">
+                	<a href="#" class="showcase-channel">
+                    	<img src="images/channelImg3.jpg" /> LKC Media
+                    </a>
+                    <h2 class="showcaseTitle"><a href="#">Wonderful Radio - Radio Diệu Kỳ</a></h2>
+                    <p class="showcaseDesc">Gina, trưởng nhóm của một ban nhạc nữ "Purple" từng nổi tiếng một thời, hiện đang dẫn một chương trình phát thanh có tên gọi “Wonderful Radio”.</p>
+                    <a href="#" class="btn btnPlayNow">Xem Ngay <span class="fa fa-play"></span></a>
+                </div>
+            </div><!-- end showcaseItem -->
+            <div class="showcaseItem">
+                <a href="#" class="showcaseImage" style="background-image:url(images/showcase3.jpg)"></a>
+                <a href="#" class="btnPlayShowcase"></a>
+                <div class="showcaseInfo">
+                	<a href="#" class="showcase-channel">
+                    	<img src="images/channelImg1.jpg" /> BHD Cinema
+                    </a>
+                    <h2 class="showcaseTitle"><a href="#">Ngày cũ của tương lai</a></h2>
+                    <p class="showcaseDesc">Golden Globe Award-winning comedy series about what happens when a hotshot detective (Andy Samberg, who won this year’s Golden Globe Award for Best Performance...</p>
+                    <a href="#" class="btn btnPlayNow">Xem Ngay <span class="fa fa-play"></span></a>
+                </div>
+            </div><!-- end showcaseItem -->
+            <div class="showcaseItem">
+                <a href="#" class="showcaseImage" style="background-image:url(images/showcase4.jpg)"></a>
+                <a href="#" class="btnPlayShowcase"></a>
+                <div class="showcaseInfo">
+                	<a href="#" class="showcase-channel">
+                    	<img src="images/channelImg3.jpg" /> LKC Media
+                    </a>
+                    <h2 class="showcaseTitle"><a href="#">Wonderful Radio - Radio Diệu Kỳ</a></h2>
+                    <p class="showcaseDesc">Gina, trưởng nhóm của một ban nhạc nữ "Purple" từng nổi tiếng một thời, hiện đang dẫn một chương trình phát thanh có tên gọi “Wonderful Radio”.</p>
+                    <a href="#" class="btn btnPlayNow">Xem Ngay <span class="fa fa-play"></span></a>
+                </div>
+            </div><!-- end showcaseItem -->
+            <div class="showcaseItem">
+                <a href="#" class="showcaseImage" style="background-image:url(images/showcase5.jpg)"></a>
+                <a href="#" class="btnPlayShowcase"></a>
+                <div class="showcaseInfo">
+                	<a href="#" class="showcase-channel">
+                    	<img src="images/channelImg1.jpg" /> BHD Cinema
+                    </a>
+                    <h2 class="showcaseTitle"><a href="#">Ngày cũ của tương lai</a></h2>
+                    <p class="showcaseDesc">Golden Globe Award-winning comedy series about what happens when a hotshot detective (Andy Samberg, who won this year’s Golden Globe Award for Best Performance...</p>
+                    <a href="#" class="btn btnPlayNow">Xem Ngay <span class="fa fa-play"></span></a>
+                </div>
+            </div><!-- end showcaseItem -->
+        </div><!-- end showcase -->
+        
+        <div id="headline" class="clearfix">
+        	<div class="container">
+            	<div class="headlineContainer">
+                	<div class="btnHeadline">
+                        <i class="fa fa-caret-left" id="headlinePrev"></i>
+                        <i class="fa fa-caret-right" id="headlineNext"></i>
+                    </div>
+                    <ul class="headlineContent">
+                        <li><a href="#">Phim tèo em đã có phiên bản full HD</a></li>
+                        <li><a href="#">Phim đường kiếm anh hùng đã có đủ trọn bộ 40 tập Phim đường kiếm anh hùng đã có đủ trọn bộ 40 tập</a></li>
+                        <li><a href="#">Phim tèo em đã có phiên bản full HD</a></li>
+                        <li><a href="#">Phim đường kiếm anh hùng đã có đủ trọn bộ 40 tập</a></li>
+                    </ul>
+                </div>
+                <div class="headlineSocial">
+                	<div class="googlePlus">
+                        <!-- Place this tag where you want the +1 button to render. -->
+                        <div class="g-plusone" data-size="medium" data-annotation="bubble" data-width="300"></div>
+                    </div>
+                    <div class="facebookLike">
+                    	<div id="fb-root"></div>
+						<script>(function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) return;
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like" data-href="http://meme.vn" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end headline -->
+        
+        <div class="templateOneBigTwoRow">
+        	<div class="container">
+            	<h3 class="templateHead">Tập phim mới cập nhật <a href="#" class="readmore">Xem tất cả</a></h3>
+                <div id="slide1" class="sliderMeme">
+                    <a href="#" id="1" class="thumbnailVideo" data-merge="2">
+                    	<div class="item" id="tooltipMeme1">
+                            <img src="images/imgbig1.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme2">
+                            <img src="images/img1.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">Đường Kiếm Anh Hùng </p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                        <div class="item" id="tooltipMeme3">
+                            <img src="images/img2.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Lotte Cinema</p>
+                                <p class="thumbnailVideoTitle">Vương quốc của gió  - Truyền... thuyết Jumong II</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme4">
+                            <img src="images/img3.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                        <div class="item" id="tooltipMeme5">
+                            <img src="images/img4.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">HBO Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme6">
+                            <img src="images/img5.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                        <div class="item" id="tooltipMeme7">
+                            <img src="images/img11.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">High School: Love On</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                        <div class="item" id="tooltipMeme2">
+                            <img src="images/img1.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">Đường Kiếm Anh Hùng </p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                        <div class="item" id="tooltipMeme3">
+                            <img src="images/img2.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Lotte Cinema</p>
+                                <p class="thumbnailVideoTitle">Vương quốc của gió  - Truyền... thuyết Jumong II</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                        <div class="item" id="tooltipMeme4">
+                            <img src="images/img3.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                        
+                    </a><!-- end thumbnailVideo -->
+                    
+                </div><!-- end sliderMeme -->
+            </div><!-- /container -->
+        </div><!-- end templateOneBigTwoRow -->
+        
+        <div class="templateOneRow">
+        	<div class="container">
+            	<h3 class="templateHead">Phim xem nhiều trong tuần <a href="#" class="readmore">Xem tất cả</a></h3>
+                <div id="slide2" class="sliderMeme">
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme12">
+                            <img src="images/img1.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">Đường Kiếm Anh Hùng </p>
+                            </div>
+                            <span class="thumbnailVideoRank redTV">1</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme13">
+                            <img src="images/img3.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoRank greenTV">2</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme14">
+                            <img src="images/img5.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoRank blueTV">3</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme15">
+                            <img src="images/img7.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoRank blackTV">4</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme16">
+                            <img src="images/img9.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoRank blackTV">5</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme17">
+                            <img src="images/img1.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">Đường Kiếm Anh Hùng </p>
+                            </div>
+                            <span class="thumbnailVideoRank blackTV">6</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme18">
+                            <img src="images/img3.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoRank blackTV">7</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme19">
+                            <img src="images/img5.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoRank blackTV">8</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme20">
+                            <img src="images/img7.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoRank blackTV">9</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme21">
+                            <img src="images/img9.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoRank blackTV">10</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                </div><!-- end sliderMeme -->
+            </div><!-- /container -->
+        </div><!-- end templateOneBigTwoRow -->
+        
+        <div class="templateFuture">
+        	<div class="container">
+            	<h3 class="templateHead">Phim nổi bật tháng<a href="#" class="readmore">Xem tất cả</a></h3>
+                <div id="slide3" class="sliderMeme">
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme22">
+                            <img src="images/img12.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">Đường Kiếm Anh Hùng </p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme23">
+                            <img src="images/img11.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme24">
+                            <img src="images/img10.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme25">
+                            <img src="images/img9.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme26">
+                            <img src="images/img8.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme27">
+                            <img src="images/img7.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">Đường Kiếm Anh Hùng </p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme28">
+                            <img src="images/img6.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme29">
+                            <img src="images/img5.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme30">
+                            <img src="images/img4.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item" id="tooltipMeme31">
+                            <img src="images/img3.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                </div><!-- end sliderMeme -->
+            </div><!-- /container -->
+        </div><!-- end templateFuture -->
+        
+        <div class="templateOneBigTwoRow">
+        	<div class="container">
+            	<h3 class="templateHead">Phim bộ <a href="#" class="readmore">Xem tất cả</a></h3>
+                <div id="slide4" class="sliderMeme">
+                    <a href="#" class="thumbnailVideo" data-merge="2">
+                    	<div class="item">
+                            <img src="images/imgbig1.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 10/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/img1.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">Đường Kiếm Anh Hùng </p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 11/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                        <div class="item">
+                            <img src="images/img2.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Lotte Cinema</p>
+                                <p class="thumbnailVideoTitle">Vương quốc của gió  - Truyền... thuyết Jumong II</p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 25/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/img3.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 35/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                        <div class="item">
+                            <img src="images/img4.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">HBO Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2</p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 7/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/img5.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 15/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                        <div class="item">
+                            <img src="images/img11.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">High School: Love On</p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 23/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/img7.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 10/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                        <div class="item">
+                            <img src="images/img8.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Lotte Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 3/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/img9.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 1/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                        <div class="item">
+                            <img src="images/img10.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="thumbnailVideoEpisode">Tập 30/40</span>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                </div><!-- end sliderMeme -->
+            </div><!-- /container -->
+        </div><!-- end templateOneBigTwoRow -->
+        
+        <div class="templateOneRowMovie">
+        	<div class="container">
+            	<h3 class="templateHead">Phim lẻ <a href="#" class="readmore">Xem tất cả</a></h3>
+                <div id="slide5" class="sliderMeme">
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/imgMovie1.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">Đường Kiếm Anh Hùng </p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/imgMovie2.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/imgMovie3.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/imgMovie4.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/imgMovie5.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/imgMovie3.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">BHD Cinema</p>
+                                <p class="thumbnailVideoTitle">Đường Kiếm Anh Hùng </p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/imgMovie1.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/imgMovie4.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/imgMovie5.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                    <a href="#" class="thumbnailVideo">
+                    	<div class="item">
+                            <img src="images/imgMovie1.jpg" />
+                            <div class="thumbnailVideoInfo">
+                                <p class="thumbnailVideoChannel">Galaxy Cinema</p>
+                                <p class="thumbnailVideoTitle">Bí Kíp Luyện Rồng 2 - How to Train Your Dragon 2</p>
+                            </div>
+                            <span class="btnPlayVideo"><i class="fa fa-play"></i></span>
+                        </div><!-- end item -->
+                    </a><!-- end thumbnailVideo -->
+                </div><!-- end sliderMeme -->
+            </div><!-- /container -->
+        </div><!-- end templateOneBigTwoRow -->
+        
+        
+        
+        
+        
+        <div id="footer">
+        	<div class="container">
+            	<div class="aboutMeme">
+                	<div class="footerHead">
+                    	<h3>Giới thiệu Meme</h3>
+                    </div>
+                    <div class="footerContent">
+                    	<p class="aboutDesc">Nội dung trên MEME là các video được người dùng chia sẻ bao gồm nhiều thể loại như Âm nhạc, Phim, Truyền hình, Giáo dục, Giải trí… <a href="#">Xem thêm</a></p>
+                        <div class="footerName">
+                        	<p><h4>MẠNG XÃ HỘI MEME</h4></p>
+                            <P>Giấy phép MXH số 76/GXN-TTĐT cấp ngày 14-06-2012</P>
+                        </div>
+                    </div>
+                </div><!-- end aboutMeme -->
+                <div class="footerSupport">
+                    <div class="footerHead">
+                    	<h3>hỗ trợ</h3>
+                    </div>
+                    <div class="footerContent">
+                    	<ul class="nav">
+                            <li><a href="http://www.meme.vn/intro/what-is-meme.html">Meme là gì?</a></li>
+                            <li><a href="http://www.meme.vn/intro/how-it-works.html">Cách hoạt động</a></li>
+                            <li><a href="http://www.meme.vn/intro/benefits.html">Lợi ích</a></li>
+                            <li><a href="http://www.meme.vn/intro/our-team.html">Giới thiệu công ty</a></li>
+                            <li><a href="http://www.meme.vn/info/policy#chap-nhan-dieu-khoan-su-dung-va-sua-doi">Khiếu nại bản quyền</a></li>
+                            <li><a href="http://www.meme.vn/intro/contact.html">Liên hệ</a></li>
+                            <li><a href="http://www.meme.vn/info/policy">Điều khoản sử dụng</a></li>
+                            <li><a href="http://www.meme.vn/info/policy#nineteen">Chính sách nội dung video</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end footerSupport -->
+                <div class="footerFacebook">
+                	<div class="footerHead">
+                    	<h3>Facebook <a href="http://www.meme.vn/rss/video/latest" class="rssLink"><i class="fa fa-rss"></i></a></h3>
+                    </div>
+                    <div class="footerContent">
+                    	<a class="facebookfan" href="#"><i class="fa fa-facebook"></i></a>
+                        <h5><a href="#">TV Network</a></h5>
+                        <p class="facebookfanDesc">Cập nhật tin tức mới từ facebook</p>
+                    </div>
+                </div><!-- end footerFacebook -->
+                
+            </div><!-- /container -->
+            <div class="clearfix"></div>
+            <div class="copyrignt">
+            	<div class="container">
+            		Copyright ©2014 meme.vn
+                </div>
+            </div>
+        </div><!-- end footer -->
+        
+    </div><!-- end pageWidth -->
+    <button type="button" class="btnBackToTop scrollToElement" id="backtotoplink"><span class="fa fa-angle-up"></span></button>
+</body>
+
+</html>

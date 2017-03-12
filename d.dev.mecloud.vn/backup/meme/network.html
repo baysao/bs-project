@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Network | MeMe.VN</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin-ext,vietnamese' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icomeme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/partner.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/disableScrollBar.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/global.js"></script>
+    
+    <script>
+    	$(document).ready(function() {
+			
+			
+			//scroll to element and button Back To Top
+			function goToByScrollPage(id) {
+				id = id.replace("link", "");
+				$('html,body').animate({
+					scrollTop: $("#" + id).offset().top -80
+				}, 'slow');
+			}
+			$(".scrollTo").click(function () {
+				//e.preventDefault();
+				goToByScrollPage($(this).attr("id"));
+			});
+			
+			
+			///////////////////////////////////////////////////////////////////////
+			//navMenu partner
+			///////////////////////////////////////////////////////////////////////
+				
+			$('#header').width($('#header').parent().width());
+			
+			$( window ).resize(function() {
+			  $('#header').width($('#header').parent().width());
+			});
+			
+		});
+		
+    </script>
+</head>
+
+<body id="backtotop" data-spy="scroll" data-target=".nav-partner .container">
+       <div class="wrapper-partner clearfix">
+       		<div class="width-partner clearfix">
+            	<div id="header">
+                    <div class="container">
+                        
+                        <a href="network.html#" class="logoNetwork">network.meme.vn</a>
+            			
+                        <div class="menuPayment">
+                        	<button type="button" class="btn btnMenuPayment" data-toggle="collapse" data-target="#menuPayment"><i class="fa fa-bars"></i></button>
+                            <div class="clearfix"></div>
+                        	<ul id="menuPayment" class="clearfix">
+                            	<li><a id="gioithieulink" href="network.html#gioithieu" class="scrollTo">Giới thiệu </a></li>
+                                <li><a href="network.html#" class="btnPayment">Quản lý tài khoản thanh toán</a></li>
+                            </ul>
+                        </div>	
+                        
+                    </div>
+              	</div><!-- end header-->
+                
+                <div class="bannerNetwork">
+                	<h1>Chương trình MEME network</h1>
+                    <div class="imgNetwork"></div>
+                    <a href="network.html#" class="btnRegister">Đăng ký tài khoản</a>
+                </div><!-- end bannerPayment-->
+                
+                <div class="container">
+                    <div class="content-partner">
+                        <div id="gioithieu" class="section">
+                            <h3>Giới thiệu</h3>
+                            <p>Meme Certificate Network (MCN) là một chương trình dành cho các chuyên gia quản lý Channel (Kênh), thường là các công ty, tổ chức có năng lực trong lĩnh vực truyền thông, nội dung số. Sứ mệnh của MCN là giúp những Nhà sáng tạo nội dung (Creator) thành công trên mạng xã hội chia sẻ video Meme.vn. </p>
+                        </div><!-- end gioithieu-->
+                        
+                        <div class="section">
+                            <h3>Nhiệm vụ của Network:</h3>
+                            <p>Một công ty tham gia chương trình MCN được MEME cấp chứng nhận sẽ được gọi là một Meme Certificate Network (gọi tắt là Network)
+
+Nếu bạn là một Creator bạn có thể tham gia vào mạng lưới của một Network thuận tiện hơn so với tham gia trực tiếp vào <a href="http://partner.meme.vn">Chương trình đối tác của MEME (MPP)</a>. 
+</p>						
+							<p><strong>Nhiệm vụ của Network đối với Creator và Channel là:</strong></p>
+							<ul class="nav">
+                                <li><i class="fa fa-caret-right"></i> Tư vấn, đào tạo sử dụng Meme.vn</li>
+                                <li><i class="fa fa-caret-right"></i> Giúp xây dựng chiến lược phát triển Channel</li>
+                                <li><i class="fa fa-caret-right"></i> Hỗ trợ quản lý Channel</li>
+                                <li><i class="fa fa-caret-right"></i> Tối ưu doanh thu cho Channel</li>
+                                <li><i class="fa fa-caret-right"></i> Đại diện về bản quyền nội dung cho Channel</li>
+                                <li><i class="fa fa-caret-right"></i> Chi trả doanh thu cho Channel</li>
+                            </ul>
+                        </div><!-- end loiich-->
+                        
+                        <div class="section">
+                            <h3>Danh sách các Meme Certificate Network</h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                  <tr>
+                                    <td align="center" valign="middle"><strong>Tên  Network</strong></td>
+                                    <td align="center" valign="middle">TPI</td>
+                                    <td align="center" valign="middle">Metub</td>
+                                    <td align="center" valign="middle">MusicFine</td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle"><strong>Logo</strong></td>
+                                    <td align="center" valign="middle"><img class="networkLogo" src="images/logotpi.png" /></td>
+                                    <td align="center" valign="middle"><img class="networkLogo" src="images/logoMetub.png" /></td>
+                                    <td align="center" valign="middle"><img class="networkLogo" src="images/logoMusicfine.png" /></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle"><strong>Tên  công ty</strong></td>
+                                    <td align="center" valign="middle"><p>Công ty CP Thông tin Trường Phát (Truong Phat Information JSC)</p></td>
+                                    <td align="center" valign="middle">Công  ty CP Truyền thông trực tuyến Netlink (Netlink Online Corp.)</td>
+                                    <td align="center" valign="middle">Công  ty CP MusicFine</td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle"><strong>Website</strong></td>
+                                    <td align="center" valign="middle"><a href="http://truongphatinfomation.com">http://truongphatinfomation.com</a></td>
+                                    <td align="center" valign="middle"><a href="http://metub.net">http://metub.net</a></td>
+                                    <td align="center" valign="middle"><a href="http://musicfine.vn">http://musicfine.vn</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle"><strong>Lĩnh  vực chủ đạo</strong></td>
+                                    <td align="center" valign="middle">Nội  dung số tổng hợp</td>
+                                    <td align="center" valign="middle">Giải  trí, phim ảnh</td>
+                                    <td align="center" valign="middle">Âm  nhạc</td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle"><strong>Email</strong></td>
+                                    <td align="center" valign="middle"><a href="network.html#">truongphatinformation@gmail.com</a></td>
+                                    <td align="center" valign="middle"><a href="network.html#">truongphatinformation@gmail.com</a></td>
+                                    <td align="center" valign="middle"><a href="network.html#">tube@vietwav.com</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle"><strong>Điều  kiện tham gia tối thiểu</strong></td>
+                                    <td align="center" valign="middle">chưa  yêu cầu</td>
+                                    <td align="center" valign="middle">chưa  yêu cầu</td>
+                                    <td align="center" valign="middle">Là  nghệ sĩ, hoặc có các sản phẩm âm nhạc, nghệ thuật</td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle"><strong>Các  thức tham gia</strong></td>
+                                    <td align="center" valign="middle"><a href="network.html#">Đăng ký qua email</a></td>
+                                    <td align="center" valign="middle"><a href="network.html#">Đăng ký online</a></td>
+                                    <td align="center" valign="middle"><a href="network.html#">Đăng ký online</a></td>
+                                  </tr>
+                                </table>
+
+                            </div>
+                      </div><!-- end dieukien-->
+                        
+                        <div id="dieukhoan" class="section" style="border:none;">
+                        	<h3>Trở thành Network:</h3>
+                            <p>Các điều kiện để trở thành một Meme Certificate Network </p>
+                            <p>Nhằm đảm bảo những lợi ích mang lại cho đơn vị được chứng nhận tham gia MCN chúng tôi có giới hạn về số lượng Network cũng như những tiêu chí riêng biệt. Sự tham gia thường bắt đầu bằng một lời mời.</p>
+                            <p>Nếu bạn nhận thấy MCN là một chương trình tiềm năng với tổ chức, đơn vị của mình bạn có thể liên hệ trực tiếp với chúng tôi qua email info@meme.vn sau khi tham khảo một số tiêu chí cơ bản sau:</p>
+                            <ul>
+                                <li><i class="fa fa-caret-right"></i> Là một doanh nghiệp hợp pháp và hoạt động bền vững</li>
+                                <li><i class="fa fa-caret-right"></i> Có kinh nghiệm trong lĩnh vực truyền thông, marketing online, nội dung số</li>
+                                <li><i class="fa fa-caret-right"></i> Có hiểu biết về lĩnh vực video online.</li>
+                                <li><i class="fa fa-caret-right"></i> Tiếp tục tuân thủ tất cả các chính sách của MEME, bao gồm <a href="network.html#">Điều khoản sử dụng</a> và <a href="network.html#">Chính sách nội dung</a> </li>
+                            </ul>
+                            
+                        </div><!-- end dieukhoan-->
+                    </div><!-- end content-partner-->
+                    
+                </div><!-- end container-->
+                
+                <div class="footer container-fluid">
+                	<div class="container">
+                        <div class="col-md-5 hidden-xs hidden-sm">
+                            <div class="footer-head">
+                                <h3>Giới thiệu meme</h3>
+                            </div>
+                            <div class="footer-content footer-logo">
+                                <p>Nội dung trên MEME là các video được chọn lọc bao gồm clip ngắn, phim, chương trình truyền hình, giáo dục, giải trí…</p>
+                                <a href="network.html#" class="about-more">Xem thêm</a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-6 footerPadd">
+                            <div class="footer-head">
+                                <h3>Facebook <a href="http://www.meme.vn/rss/video/latest" class="rssLink"><i class="fa fa-rss"></i></a></h3>
+                            </div>
+                            <div class="footer-content">
+                                <a class="facebookfan" href="network.html#"><i class="fa fa-facebook"></i></a>
+                                <h5><a href="network.html#">TV Network</a></h5>
+                                <p class="facebookfanDesc">Cập nhật tin tức mới từ facebook</p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="footer-head">
+                                <h3>Hỗ trợ</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="nav">
+                                    <li><a href="network.html#">MeMe là gì?</a>
+                                    </li>
+                                    <li><a href="network.html#">Cách hoạt động</a>
+                                    </li>
+                                    <li><a href="network.html#">Lợi ích</a>
+                                    </li>
+                                    <li><a href="network.html#">Đối tác nội dung</a>
+                                    </li>
+                                    <li><a href="network.html#">Khiếu nại bản quyền</a>
+                                    </li>
+                                    <li><a href="network.html#">Liên hệ</a>
+                                    </li>
+                                    <li><a href="network.html#">Điều khoản sử dụng</a>
+                                    </li>
+                                    <li><a href="network.html#">Chính sách nội dung</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end footer-->
+                
+                <div class="footer-bottom col-xs-12">
+                	<div class="container">
+                    	<span class="copyright">Copyright ©2013 meme.vn</span>
+                    </div>
+                </div><!--end footer bottom-->
+                
+            </div><!-- end width-partner-->
+            
+       </div><!-- end wrapper-partner-->
+
+  
+</body>
+
+</html>

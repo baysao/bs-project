@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024" /> 
+    <title>Admin - Pick Channel </title>
+    <!-- Global CSS -->
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+    <!-- End Global CSS -->
+    
+    <!-- Page CSS -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <!-- End Page CSS -->
+    
+    <!-- Global Script -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/placeholder.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script src="js/global.js"></script>
+    <!-- End Global Script -->
+    
+    <!-- Page Script -->
+    
+    <!--End Page Script -->
+</head>
+
+<body>
+    <div class="wrapper">
+    	
+        <div class="container">
+        
+            <div class="containerTable">
+            
+                <div class="sidebar">
+                    <div class="btn-expand">
+                        <span></span>
+                        <span></span>
+                        <span></span>	
+                    </div>
+                	<div class="bg-overlay"></div>
+                    <div class="sidebarFixed">
+                        <div class="logo">
+                            <a href="#" title="Meme Cloud">Meme Cloud</a>
+                        </div>
+                        
+                        <div class="mainMenu">
+    
+                            <ul id="nav">
+                                <li>
+                                	<a id="sidebar_head_website" href="agency_listAgency.html" class="active"><i class="fa fa-group"></i>Danh sách Agency</a>
+                                </li>
+                                <li>
+                                	<a id="sidebar_head_website" href="agency_listChannel.html"><i class="fa fa-television"></i>Danh sách Channel</a>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!--end sidebar -->
+                
+                
+                
+                <div class="wrapperContent">
+                	
+                    <div class="header clearfix">
+                    	
+                        <div class="searchBox">
+                        	<button type="submit" class="btn btnSearch"><i class="fa fa-search"></i></button>
+                            <input class="formGlobal seachInput" placeholder="Nhập tên hoặc id video..." />
+                        </div>
+                        
+                        <div class="account">
+                        	<div class="notification support">
+                        		<a href="#"><i class="fa fa-headphones"></i>Cần hỗ trợ?</a>
+                                <ul class="menuAccount">
+                                    <li><a href="#"><i class="fa fa-phone"></i>0904916386</a></li>
+                                	<li><a href="#" class="supportMail"><i class="fa fa-envelope"></i>support@mecloud.vn</a></li>
+                                    <li><a href="https://www.facebook.com/mecloud.vn" class="fanPage"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                </ul>
+                            </div>
+							<div class="userAcount dropdown">
+                            	<a href="#" class="channelName btnDropdown">Đời sống & pháp luật<i class="fa fa-caret-down"></i></a>
+                                <div class="dropdownDiv menuChannel">
+                                	<div class="swithChannel">Quản lý channel:</div>
+                                    <ul class="scrollable">
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Tin Mới</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Thể Thao 24/7</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                        <li><a href="#">Người Đưa Tin</a><button type="button" class="btnEditChannel" title="Chỉnh sửa channel" data-popup-target="#editChannel"><i class="fa fa-pencil"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        	<div class="notification"><a href="upload.html" class="notificationIco"><i class="fa fa-cloud-upload"></i></a></div>
+                        	<div class="notification dropdown">
+                            	<a href="#" class="notificationIco btnDropdown"><i class="fa fa-bell"></i><span class="numNof">2</span></a>
+                                <div class="dropdownDiv boxNof">
+                                	<div class="headBoxNof">
+                                    	Bạn có 2 thông báo 
+                                    </div>
+                                    <ul class="listNof scrollable">
+                                    	<li>
+                                        	<a href="activityVideo.html">
+                                            	<img class="thumbNof" src="images/avatar2.jpg" />
+                                            	Video <span class="boldNof strimTitleVideo">Muôn kiểu hành xử 'xấu' của người Việt khi gặp Cảnh sát giao thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                            	Video <span class="boldNof strimTitleVideo">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="activityVideo.html">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                                Video <span class="boldNof strimTitleVideo">Muônkiểuhành_xử_'xấu'_của_người_Việt_khi_gặp_Cảnh_sát_giao_thôngMuônkiểuhành_xử_'xấu'_của_người_Việt_khi_gặp_Cảnh_sát_giao_thông</span> do <span class="boldNof">Phước Anh</span> upload đề nghị bạn duyệt <br /> <span class="timeNof">25 phút trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                            	<span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar2.jpg" />
+                                            	Video <span class="boldNof strimTitleVideo">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                                Video <span class="boldNof strimTitleVideo">Ebola chính thức bị dập tắt</span> do <span class="boldNof">bạn</span> upload đã sẵn sàng sử dụng <br /> <span class="timeNof">2 phút trước</span>
+                                          	</a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar1.jpg" />
+                                                <span class="boldNof">Bạn</span> đang có 4 video chờ duyệt <br /> <span class="timeNof">1 giờ trước</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                        	<a href="#">
+                                            	<img class="thumbNof" src="images/avatar3.jpg" />
+                                                Video <span class="boldNof strimTitleVideo">Đua xe trái phép tại Bình Dương</span> của <span class="boldNof">Bạn</span> bị <span class="boldNof">Kevin Vu</span> từ chối <br /> <span class="timeNof">2 giờ trước</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="footerBoxNof"><a href="notificationUser.html">Xem tất cả</a></div>
+                                </div>
+                            </div>
+                            
+                            <div class="notification userAcount dropdown">
+                            	<a href="#" class="notificationIco userName btnDropdown"><i class="fa fa-cog"></i></a>
+                                <a href="#" class="userThumb"><img src="images/user.jpg" alt="Messi" /></a>
+                                <ul class="dropdownDiv menuAccount">
+                                	<li><a href="changeProfile.html"><i class="fa fa-edit"></i>Đổi thông tin tài khoản</a></li>
+                                    <!--<li><a href="#"><i class="fa fa-user"></i>Tình trạng tài khoản</a></li>-->
+                                    <li><a href="support.html"><i class="fa fa-envelope"></i>Hỗ trợ</a></li>
+                                    <li><a href="#"><i class="fa fa-sign-out"></i>Thoát</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div><!--end header -->
+                    
+                    <div class="content">
+                        
+                        <div class="boxBreadcrumb">
+                            <ul class="breadcrumb clearfix">
+                                <li><a href="#">Meme Cloud</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#">Danh sách Agency</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#">FPT Corporation</a><i class="fa fa-angle-right"></i></li>
+                                <li class="active">
+                                    Chọn channel
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tabsGlobal">
+                        
+                            <ul class="tabsVideo">
+                                <li class="simple">Channel được quản lý bởi FPT Corporation</li>
+                            </ul>
+                            
+                            <div class="tabsContentGlobal">
+                            	
+                                <div class="rowVideo">
+                                    <div class="infoAgencyAnalytic clearfix">
+                                    	<div class="l-infoAgencyAnalytic">
+                                            <img src="images/fpt.jpg">
+                                            <h2><span>FPT Corporation</span></h2>
+                                            <a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a>
+                                        </div>
+                                        <div class="r-infoAgencyAnalytic">
+                                            <p>Ngày tạo: <span>10:41 | 13/04/2015</span></p>
+                                            <p>Trạng thái: <span>Đang hoạt động</span></p>
+                                        </div>
+                                    </div><!-- end infoAgency -->
+                                </div>
+                            
+                                <div class="tableData current">
+                                    
+                                    <div class="pickListAgency">
+                                    	<div class="search-suggest">
+                                        	<!--<div class="btn-pickChannel">
+                                            	<button type="button" class="btn orange">Thêm channel</button>
+                                            </div>-->
+                                            <div class="search-pla">
+                                                <input type="text" class="formGlobal searchData" placeholder="Tìm nhanh channel" />
+                                                <button type="submit" class="btn btnSearchData"><i class="fa fa-search"></i></button> 
+                                            </div>
+                                        </div>
+                                        <div class="table">
+                                            <div class="list-pla">
+                                                <div class="head-pla blue-bg">Danh sách tất cả channel</div>
+                                                <div class="content-pla">
+                                                	<div class="item-pla table has-agency">
+                                                    	<div class="col-pla">
+                                                            <p class="name-item-pla">Thể thao 24/7</p>
+                                                            <p class="boss-item-pla"><a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a></p>
+                                                        </div>
+                                                        <div class="col-pla">
+                                                            <p class="name-agency-pla">Netlink Corporation</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-pla table">
+                                                    	<div class="col-pla">
+                                                            <p class="name-item-pla">Thể thao 24/7</p>
+                                                            <p class="boss-item-pla"><a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a></p>
+                                                        </div>
+                                                        <span class="btn-pla"><i class="fa fa-long-arrow-right"></i></span>
+                                                    </div>
+                                                    <div class="item-pla table">
+                                                    	<div class="col-pla">
+                                                            <p class="name-item-pla">Thể thao 24/7</p>
+                                                            <p class="boss-item-pla"><a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a></p>
+                                                        </div>
+                                                        <span class="btn-pla"><i class="fa fa-long-arrow-right"></i></span>
+                                                    </div>
+                                                    <div class="item-pla table">
+                                                    	<div class="col-pla">
+                                                            <p class="name-item-pla">Thể thao 24/7</p>
+                                                            <p class="boss-item-pla"><a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a></p>
+                                                        </div>
+                                                        <span class="btn-pla"><i class="fa fa-long-arrow-right"></i></span>
+                                                    </div>
+                                                    <div class="item-pla table has-agency">
+                                                    	<div class="col-pla">
+                                                            <p class="name-item-pla">Thể thao 24/7</p>
+                                                            <p class="boss-item-pla"><a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a></p>
+                                                        </div>
+                                                        <div class="col-pla">
+                                                            <p class="name-agency-pla">FPT Corporation</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-pla table has-agency">
+                                                    	<div class="col-pla">
+                                                            <p class="name-item-pla">Thể thao 24/7</p>
+                                                            <p class="boss-item-pla"><a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a></p>
+                                                        </div>
+                                                        <div class="col-pla">
+                                                            <p class="name-agency-pla">VC Corporation</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pick-pla">
+                                                <div class="head-pla red-bg">(3) channel được quản lý bởi FPT Corporation</div>
+                                                <div class="content-pla">
+                                                	<div class="item-pla">
+                                                        <p class="name-item-pla">Báo điện tử tin mới</p>
+                                                        <p class="boss-item-pla"><a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a></p>
+                                                        <a class="btn-remove-pla"><i class="fa fa-remove"></i></a>
+                                                    </div>
+                                                    <div class="item-pla">
+                                                        <p class="name-item-pla">Báo người đưa tin</p>
+                                                        <p class="boss-item-pla"><a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a></p>
+                                                        <a class="btn-remove-pla"><i class="fa fa-remove"></i></a>
+                                                    </div>
+                                                    <div class="item-pla">
+                                                        <p class="name-item-pla">Sao online</p>
+                                                        <p class="boss-item-pla"><a href="mailto:kevin.vu@gmail.com">kevin.vu@gmail.com</a></p>
+                                                        <a class="btn-remove-pla"><i class="fa fa-remove"></i></a>
+                                                    </div>	
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="actionForm">
+                                            <button class="btn btnPrimary" type="submit">Lưu cài đặt</button>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                </div><!--end #allVideoTab -->
+                                
+                            </div><!--end tabsContentGlobal -->
+                            
+                        </div><!--end tabsGlobal -->
+                        
+                        
+                        
+                    </div><!--end content -->
+                    
+                </div><!--end wrapperContent -->
+            
+            </div><!--end containerTable -->
+        
+        </div><!--end container -->
+        
+    </div><!--end wrapper -->
+
+    <div class="popupWrapper">
+    
+        <div id="createAgency" style="width:750px;" class="popup">
+            <div class="popup-body">
+                <div class="popupHead">
+                    <h3>Thêm Agency mới</h3>
+                    <span class="popup-exit"><i class="fa fa-times"></i></span>
+                </div>
+                <div class="popupContent pb0 clearfix">
+                    <div class="popupContentBox posRelative clearfix">
+                    	<div class="createThumb formGroup">
+                        	<label>Ảnh đại diện</label>
+                            <div class="btn blue btnUploadFile">
+                                <i class="fa fa-picture-o"></i>Upload hình
+                                <input type="file" name="upload">
+                            </div>
+                            <img src="images/netlink.jpg">
+                        </div>
+                        <div class="formGroup inline clearfix">
+                            <label>Tên Agency:</label>
+                            <input type="text" class="formGlobal" />
+                        </div>
+                        <div class="formGroup inline clearfix">
+                            <label>Số channel tối đa:</label>
+                            <input type="number" class="formGlobal" value="5"/>
+                        </div>
+                        <div class="formGroup inline clearfix">
+                            <label>Họ tên:</label>
+                            <input type="text" class="formGlobal" />
+                        </div>
+                        <div class="formGroup inline clearfix">
+                            <label>Địa chỉ email:</label>
+                            <input type="text" class="formGlobal" />
+                        </div>
+                        <div class="formGroup inline clearfix">
+                            <label>Mật khẩu:</label>
+                            <input type="password" class="formGlobal" />
+                        </div>
+                        <div class="formGroup inline clearfix">
+                            <label>Xác nhận mật khẩu:</label>
+                            <input type="password" class="formGlobal" />
+                        </div>
+                        <div class="formGroup">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Gửi thông tin tài khoản qua email cho người dùng
+                                </label>
+                            </div>
+                        
+                        </div><!--end formGroup -->
+                        <div class="actionForm">
+                            <button type="submit" class="btn btnPrimary">Tạo Agency</button>
+                            <button type="button" class="btn btnDefault clearPopup">Hủy</button>
+                        </div>
+                    </div><!--end popupContentBox -->
+                </div>
+            </div>
+        </div><!--end #createUser -->
+        <div id="editAgency" style="width:750px;" class="popup">
+            <div class="popup-body">
+                <div class="popupHead">
+                    <h3>Chỉnh sửa Agency</h3>
+                    <span class="popup-exit"><i class="fa fa-times"></i></span>
+                </div>
+                <div class="popupContent clearfix pb0">
+                    <div class="popupContentBox posRelative clearfix mb10">
+                    	<div class="createThumb formGroup">
+                        	<label>Ảnh đại diện</label>
+                            <div class="btn blue btnUploadFile">
+                                <i class="fa fa-picture-o"></i>Upload hình
+                                <input type="file" name="upload">
+                            </div>
+                            <img src="images/netlink.jpg">
+                        </div>
+                        <div class="formGroup inline clearfix">
+                            <label>Tên Agency:</label>
+                            <input type="text" class="formGlobal" value="Netlink" />
+                        </div>
+                        <div class="formGroup inline clearfix">
+                            <label>Số channel tối đa:</label>
+                            <input type="number" class="formGlobal" value="8"/>
+                        </div>
+                        <div class="formGroup inline clearfix">
+                            <label>Họ tên:</label>
+                            <input type="text" value="Kevin Vu" class="formGlobal" />
+                        </div>
+                        <div class="formGroup inline clearfix">
+                            <label>Địa chỉ email:</label>
+                            <input type="text" placeholder="kevinvu@meme.vn" class="formGlobal" disabled="disabled" />
+                        </div>
+                        <div class="formGroup">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Gửi thông tin tài khoản qua email cho người dùng
+                                </label>
+                            </div>
+                        
+                        </div><!--end formGroup -->
+                        <div class="actionForm mlr-20 pb0 clearfix">
+                            <button type="submit" class="btn btnPrimary">Cập nhật</button>
+                            <button type="button" class="btn btnDefault clearPopup">Hủy</button>
+                        </div>
+                    </div><!--end popupContentBox -->
+                </div>
+            </div>
+        </div><!--end #editUser -->
+        <div class="popup-overlay"></div>
+    
+    </div><!-- end popupWrapper -->
+    
+    
+</body>
+
+</html>
