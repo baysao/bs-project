@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    [[[= partial('partials/seo.html')]]]
+
+    <!-- video.js END -->
+   [[[= partial('partials/vbx_head_videojs.html')]]]
+   [[[= partial('partials/vbx_head_common.html')]]]
+
+    <script>
+        [[[= partial('partials/vbx_player_config.js')]]]
+        VBX_layoutConfig = {
+            video: {id: 'video1',   preload: true,
+                autoplay: true,
+                platform: VBX.Layout.VideoPlayerPlatform.VIDEOJS},
+            menu: {
+                id: 'menu1',
+                iconSize: 32,
+                overflow: 'moreApp',
+                overflowFunction: showMoreApp,
+                share: 'embedApp',
+                shareFunction: showEmbedApp,
+                addShareIfNoVideo: true
+            },
+            container: {
+                id: 'apps1',
+                closeButton: true,
+                rollPrompt: 'rollPrompt',
+                rollPromptFunction: showRollPrompt,
+                completeAllowSkipRollApp: false,
+                appCloseCallback: onAppClose,
+                appIframeCreatedCallback: onAppIframeCreated
+            },
+            ready: function () {
+                onReady();
+            }
+        };
+        VBX.Layout.init(VBX_layoutConfig);
+
+    </script>
+    [[[= partial('partials/vbx_tracking.html')]]]
+</head>
+    [[[= partial('partials/vbx_body.html')]]]
+</html>

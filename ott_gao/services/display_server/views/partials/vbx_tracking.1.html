@@ -1,0 +1,44 @@
+<!-- Snowplow starts plowing -->
+<!--<script type="text/javascript">-->
+    <!--(function () {-->
+        <!--(function (p, l, o, w, i, n, g) {-->
+            <!--if (!p[i]) {-->
+                <!--p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];-->
+                <!--p.GlobalSnowplowNamespace.push(i);-->
+                <!--p[i] = function () {-->
+                    <!--(p[i].q = p[i].q || []).push(arguments)-->
+                <!--};-->
+                <!--p[i].q = p[i].q || [];-->
+                <!--n = l.createElement(o);-->
+                <!--g = l.getElementsByTagName(o)[0];-->
+                <!--n.async = 1;-->
+                <!--n.src = w;-->
+                <!--g.parentNode.insertBefore(n, g)-->
+            <!--}-->
+        <!--}(window, document, "script", "/scripts/sp.js", "spvb"));-->
+
+            <!--window.spvb('newTracker', 'co', 'p.gao.easyvideo.vn/piwik.php?idsite=1&rec=1&action_name=', { // Initialise a tracker-->
+                <!--appId: 'viewbix-player', // Application ID can be anything you want-->
+                <!--platform: 'web', // Do not change-->
+                <!--post: false,      // Use POST rather than GET-->
+                <!--bufferSize: 1,    // Wait for 5 events to be recorded then send them all into Snowplow via a single POSTS request. You can set this to whatever you want -  if you don't set it it will defuault to 1-->
+                <!--cookieName: "_vbtrck_" // Name the viewbix cookie. This will prevent another Snowplow tracker writing to the same cookie, e.g. if a Viewbix ad unit is shown on a publisher site where Snowplow is running-->
+            <!--});-->
+    <!--}());-->
+
+<!--</script>-->
+<script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//p.gao.easyvideo.vn/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<noscript><p><img src="//p.gao.easyvideo.vn/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+<!-- Snowplow stops plowing -->

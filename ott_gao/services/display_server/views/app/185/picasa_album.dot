@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="/libraries/third_party/greensock/TweenLiteLightweight.min.js"></script>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        var coverFlowScroller;
+        var followLink = false;
+        var imageLink = '';
+
+        VBX.App.init({
+            feed: { container: 'feed-container1', template: 'item-template1', onBuilt: onEntriesBuilt , source: 'url', pageSize: 'pageSize', image: function (entry, xml) {
+                if (VBX.ok(xml)) {
+                    var imageNode = xml.querySelector('group > content');
+                    if (VBX.ok(imageNode)) {
+                        return imageNode.getAttribute('url');
+                    } else {
+                        return '';
+                    }
+                }
+            }, thumbnail: function (entry, xml) {
+                if (VBX.ok(xml)) {
+                    var imageNode = xml.querySelector('group > thumbnail');
+                    if (VBX.ok(imageNode)) {
+                        return imageNode.getAttribute('url');
+                    } else {
+                        return '';
+                    }
+                }
+            }
+            },
+            ready: function () {
+
+                VBX.App.onState('mouseover', function () {
+                    var thumbs = VBX.select('#feed-container1 .vbx-cover-flow-thumbnail');
+                    var numImages = thumbs.length();
+                    if (numImages >= 2) {
+                        var coverFlow = VBX.select('.vbx-cover-flow').first();
+                        coverFlow.style.display = 'block';
+                        TweenLite.to(coverFlow, 0.5, { autoAlpha: 1 });
+                    }
+                });
+
+                VBX.App.onState('mouseout', function () {
+                    var thumbs = VBX.select('#feed-container1 .vbx-cover-flow-thumbnail');
+                    var numImages = thumbs.length();
+                    if (numImages >= 2) {
+                        var coverFlow = VBX.select('.vbx-cover-flow').first();
+                        coverFlow.style.display = 'block';
+                        TweenLite.to(coverFlow, 0.5, { autoAlpha: 0 });
+                    }
+                });
+
+                VBX.App.listen('followLink', function (value) {
+                    followLink = value == 'true';
+                });
+
+                VBX.listen(VBX.select('.vbx-cover-flow-mask').first(), 'resize', function (e) {
+                    updateScrollPageButtons();
+                });
+
+                VBX.listen(VBX.select('#feed-container1').first(), 'resize', function (e) {
+                    updateScrollPageButtons();
+                });
+            }
+        });
+
+        function onEntriesBuilt() {
+            var prevArea = document.querySelector('.prev-area');
+            var nextArea = document.querySelector('.next-area');
+            var coverFlow = document.querySelector('.vbx-cover-flow');
+            var noImagesAlert = document.querySelector('.no-images-alert');
+
+            var thumbs = VBX.select('#feed-container1 .vbx-cover-flow-thumbnail');
+            var numImages = thumbs.length();
+            if (numImages < 2) {
+                prevArea.style.display = 'none';
+                nextArea.style.display = 'none';
+                coverFlow.style.display = 'none';
+            } else {
+                prevArea.style.display = 'block';
+                nextArea.style.display = 'block';
+                coverFlow.style.display = 'block';
+            }
+
+            if (numImages == 0) {
+                noImagesAlert.style.display = 'block';
+                selectIndex(-1);
+            } else {
+                noImagesAlert.style.display = 'none';
+                selectIndex(0);
+            }
+
+            updateScrollPageButtons();
+        }
+
+        var selectedIndex = -1;
+
+        function selectIndex(index) {
+            var thumbs = VBX.select('#feed-container1 .vbx-cover-flow-thumbnail');
+            var numImages = thumbs.length();
+
+            if (numImages == 0) {
+                selectedIndex = -1;
+                selectThumb(null);
+                return;
+            }
+
+            if (isNaN(index) || index < 0) {
+                index = numImages - 1;
+            }
+
+            if (index > numImages - 1) {
+                index = 0;
+            }
+
+            var indexThumb = thumbs.nodes(index);
+            selectThumb(indexThumb);
+        }
+
+        function selectPrev() {
+            selectIndex(selectedIndex - 1);
+        }
+
+        function selectNext() {
+            selectIndex(selectedIndex + 1);
+        }
+
+        function clickImage() {
+            if (imageLink != '') {
+                window.open(imageLink, '_blank');
+            }
+        }
+
+        function selectThumb(thumbElement) {
+            followLink = VBX.App.config('followLink') == 'true';
+
+            var thumbs = VBX.select('#feed-container1 .vbx-cover-flow-thumbnail');
+            var thumbElements = thumbs.nodes();
+            for (var i = 0; i < thumbElements.length; ++i) {
+                if (thumbElements[i] == thumbElement) {
+                    selectedIndex = i;
+                    // add class 'selected';
+                } else {
+                    // remove class 'selected'
+                }
+            }
+
+            if (thumbElement == null) {
+                document.querySelector('.main-image').style.backgroundImage = 'none';
+                VBX.App.removeState('follow-link');
+                imageLink = '';
+                return;
+            }
+
+            var imageUrl = thumbElement.getAttribute('image')
+            if (!VBX.empty(imageUrl)) {
+                document.querySelector('.main-image').style.backgroundImage = 'url("' + imageUrl + '")';
+            } else {
+                document.querySelector('.main-image').style.backgroundImage = thumbElement.style.backgroundImage;
+            }
+
+            if (followLink && thumbElement.hasAttribute('link') && thumbElement.getAttribute('link') != '') {
+                VBX.App.addState('follow-link');
+                imageLink = thumbElement.getAttribute('link');
+            } else {
+                VBX.App.removeState('follow-link');
+                imageLink = '';
+            }
+
+            var scrollerElement = document.querySelector('.vbx-cover-flow-mask');
+            var thumbX = thumbElement.offsetLeft;
+            var scrollToThumb = (thumbX < scrollerElement.scrollLeft) || (thumbX > scrollerElement.scrollLeft + scrollerElement.clientWidth - thumbElement.clientWidth);
+            if (scrollToThumb) {
+                tweenScrollerTo(thumbX);
+            }
+        }
+
+        function scrollPageLeft() {
+            var scrollerElement = document.querySelector('.vbx-cover-flow-mask');
+            var aThumbElement = document.querySelector('#feed-container1 .vbx-cover-flow-thumbnail');
+            var scrollAmount = scrollerElement.clientWidth - aThumbElement.clientWidth;
+            tweenScrollerTo(scrollerElement.scrollLeft - scrollAmount);
+        }
+
+        function scrollPageRight() {
+            var scrollerElement = document.querySelector('.vbx-cover-flow-mask');
+            var aThumbElement = document.querySelector('#feed-container1 .vbx-cover-flow-thumbnail');
+            var scrollAmount = scrollerElement.clientWidth - aThumbElement.clientWidth;
+            tweenScrollerTo(scrollerElement.scrollLeft + scrollAmount);
+        }
+
+        function tweenScrollerTo(left) {
+            var scrollerElement = document.querySelector('.vbx-cover-flow-mask');
+            var pinLeft = Math.max(0, Math.min(left, scrollerElement.scrollWidth - scrollerElement.clientWidth));
+            TweenLite.to(scrollerElement, 1, { scrollLeft: pinLeft, ease: Cubic.easeOut });
+        }
+
+        function updateScrollPageButtons() {
+            var pageButtonLeft = document.querySelector('.vbx-cover-flow-scroll-left');
+            var pageButtonRight = document.querySelector('.vbx-cover-flow-scroll-right');
+            var scrollerElement = document.querySelector('.vbx-cover-flow-mask');
+
+            if (scrollerElement.clientWidth < scrollerElement.scrollWidth) {
+                pageButtonLeft.style.display = 'block';
+                pageButtonRight.style.display = 'block';
+            } else {
+                pageButtonLeft.style.display = 'none';
+                pageButtonRight.style.display = 'none';
+            }
+        }
+
+    </script>
+
+    <style>
+        #feed-container1 {
+            position: relative;
+            display: inline-block;
+            overflow: visible;
+        }
+
+        .vbx-cover-flow {
+            display: none;
+        }
+
+        .vbx-cover-flow-mask {
+            position: absolute;
+        }
+
+        .vbx-image-feed .main-image {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .vbx-image-feed .prev-area {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .vbx-image-feed .next-area {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .follow-link .vbx-image-feed .prev-area, .follow-link .vbx-image-feed .next-area {
+            width: 6em;
+        }
+
+        .vbx-image-feed .click-area {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            cursor: pointer;
+        }
+
+        .follow-link .vbx-image-feed .click-area {
+            display: block;
+        }
+
+        .vbx-image-feed .prev-area:after {
+            position: absolute;
+            left: 2em;
+            top: calc(50% - 22px);
+            display: none;
+            content: url("/storage/content/img/prev_image_icon.png");
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .vbx-image-feed .prev-area:hover:after {
+            display: block;
+        }
+
+        .vbx-image-feed .next-area:after {
+            position: absolute;
+            right: 2em;
+            top: calc(50% - 22px);
+            display: none;
+            content: url("/storage/content/img/next_image_icon.png");
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .vbx-image-feed .next-area:hover:after {
+            display: block;
+        }
+
+        .vbx-image-feed .no-images-alert {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 45%;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+
+    <script> function getAppConfigs() { return {"id":"ca632aba-87fd-4668-bed5-6ce25cddb2ea","internalId":"a7948552-3450-4def-8b4d-52212f4136dd","component":"com.qoof.sdk.components.image.PicasaFeed","order":23,"lightStyle":false,"showInMenu":"true","icon":"/storage/content/icon/16/picasa.png","followLink":"true","pageSize":"10","label":"Picasa Album","url":"asdfasdf","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body style="background-color:#000000; color:#FFFFFF;">
+<div class="vbx-image-feed">
+    <div class="no-images-alert">No images</div>
+    <div class="main-image"></div>
+    <div class="click-area" onclick="clickImage()"></div>
+    <div class="prev-area" onclick="selectPrev()"></div>
+    <div class="next-area" onclick="selectNext()"></div>
+    <div class="vbx-cover-flow">
+        <div class="vbx-cover-flow-scroll-left" onclick="scrollPageLeft()"></div>
+        <div class="vbx-cover-flow-scroll-right" onclick="scrollPageRight()"></div>
+        <div class="vbx-cover-flow-mask">
+            <div id="feed-container1">
+                <div id="item-template1" class="vbx-cover-flow-thumbnail" onclick="selectThumb(this)" style="background-image:url('{$thumbnail}')" image="{$image}" link="{$link}"><img onload="updateScrollPageButtons()" src="{$thumbnail}" style="display:none;" /></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

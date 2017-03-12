@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        VBX.App.init({
+            feed: { container: 'feed-container1', template: 'item-template1', source: 'feedXmlString' }
+        });
+    </script>
+    <script> function getAppConfigs() {
+    return [[[= JSON.stringify(model.getAppConfigs)]]];
+    } </script></head>
+<body>
+<div class="vbx-scrollable">
+    <div class="instructions" data-vbx="instructions"></div>
+    <div id="feed-container1" class="vbx-feed-container">
+        <div id="item-template1" class="vbx-feed-item">
+            {if $link}
+            <a href="{$link}">
+                <div class="vbx-feed-link-item">
+                    <img class="vbx-feed-thumbnail" src="{$thumbnail}" />
+                    <span class="vbx-feed-content">{$content}</span>
+                </div>
+            </a>
+            {/if}
+        </div>
+    </div>
+</div>
+</body>
+</html>

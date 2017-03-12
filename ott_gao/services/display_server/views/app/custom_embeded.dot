@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Custom Embed</title>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            overflow: hidden;
+        }
+
+        .touchscreen #container {
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        #frame {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+        }
+    </style>
+    <script>
+        var source;
+
+        function trim(x) {
+            return x.replace(/^\s+|\s+$/gm, '');
+        }
+
+        function updateIframe() {
+            var src = null;
+            var srcdoc = null;
+            if (VBX.ok(source)) {
+                source = trim(source);
+
+                var sourceIsLinkOrIframe = source.indexOf('http://') == 0 ||
+                        source.indexOf('https://') == 0 ||
+                        source.indexOf('//') == 0 ||
+                        source.toLowerCase().indexOf('<iframe') == 0;
+
+                if (sourceIsLinkOrIframe) {
+                    src = VBX.extractLink(source);
+                }
+
+                if (!VBX.ok(src)) {
+                    srcdoc = source;
+                }
+            }
+
+            if (!VBX.ok(src)) {
+                src = 'about:blank';
+            }
+
+            document.querySelector('#frame').setAttribute('src', src);
+
+            //To enable using any content as srcdoc, uncomment following lines
+            // ===========================================================================================================================
+            document.querySelector('#frame').removeAttribute('srcdoc');
+            if (VBX.ok(srcdoc)) {
+                document.querySelector('#frame').setAttribute('srcdoc', srcdoc);
+            }
+            // ===========================================================================================================================
+        }
+
+        VBX.App.init({
+            ready: function () {
+                document.body.style.padding = '0';
+
+                source = VBX.App.config('text1');
+                VBX.App.listen('text1', function (value) {
+                    var changed = source != value;
+                    source = value;
+                    if (changed) {
+                        updateIframe();
+                    }
+
+                });
+                VBX.App.onState('vbx-selected', function () {
+                    document.querySelector('#container').style.WebkitOverflowScrolling = 'auto';
+
+                    setTimeout(function () {
+                        document.querySelector('#container').style.WebkitOverflowScrolling = 'touch';
+                    }, 500);
+                });
+
+                updateIframe();
+            },
+            pauseAllMedia: function () {
+                var oldSource = source;
+                source = null;
+                updateIframe();
+                source = oldSource;
+                updateIframe();
+            }
+        });
+
+
+    </script>
+    <script> function getAppConfigs() {
+        return [[[= JSON.stringify(model.getAppConfigs)]]];
+//        return {
+//            "_id": "56df8ee82555a6e938892c5a",
+//            "ownerId": "mRyrgujASHyfRHrLB",
+//            "label": "Mua Ngay",
+//            "title": "Mua Ngay",
+//            "categories": "commerce",
+//            "icon": "http://dp.gao.easyvideo.vn/storage/content/icon/svg/details.svg",
+//            "type": "custom_embeded",
+//            "component": "com.qoof.sdk.components.link.CustomEmbed",
+//            "text1": "http://www.nguyenkim.com/dien-thoai-samsung-galaxy-s6-edge-sm-g925-den.html",
+//            "id": "56df8ee82555a6e938892c5a_0",
+//            "internalId": "56df8ee82555a6e938892c5a_0"
+//        };
+//            return {
+//                "id": "9cbcb03e-3fa9-4d38-9ca4-8a4984714ea9",
+//                "internalId": "eb1b93e9-1563-46cb-8704-727c8820fd39",
+//                "component": "com.qoof.sdk.components.link.CustomEmbed",
+//                "order": 1,
+//                "lightStyle": false,
+//                "icon": "/storage/content/icon/16/shopcart.png",
+//                "mid_roll_app.startTime": "30",
+//                "showInMenu": "true",
+//                "text1": "http://www.nguyenkim.com/dien-thoai-samsung-galaxy-s6-edge-sm-g925-den.html",
+//                "label": "Mua ngay",
+//                "player.videoThumbnailUrl": "//assets.viewbix.com/4dc78442-b3ce-446a-aaf7-92c3c452b4b2.jpg",
+//                "player.title": "Samsung Galaxy S6 edge+ : Official Introduction",
+//                "player.videoUrl": "http://demo.easyvideo.vn/samsung_s6e.mp4",
+//                "player.name": "Samsung Galaxy S6 edge+ : Official Introduction",
+//                "affiliateRegex": ["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)", "tplclick\\?lid=\\d+&pubid=(?P<ac>.+)", "bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&", "&pubid=(?P<ac>[^&]*)", "&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&", "/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)", "shareasale\\.com[^?]*\\?(?P<query>.*)", "/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+", "linkconnector\\.com[^?]*\\?(?P<query>.*)", "(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]
+//            };
+//        return {
+//            "id": "e6ffc6ac-0869-42ea-9b30-e82cf3c221e6",
+//            "internalId": "b128d683-1ee4-448c-a269-a0c2878a2c1f",
+//            "component": "com.qoof.sdk.components.link.CustomEmbed",
+//            "order": 8,
+//            "lightStyle": false,
+//            "showInMenu": "true",
+//            "icon": "/storage/content/icon/16/embed.png",
+//            "text1": "asdfas",
+//            "label": "Custom Embed",
+//            "player.videoThumbnailUrl": "//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg",
+//            "player.videoUrl": "http://demo.easyvideo.vn/vinamilk.mp4",
+//            "player.title": "Vinamilk Optimum 4",
+//            "player.name": "Vinamilk",
+//            "affiliateRegex": ["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)", "tplclick\\?lid=\\d+&pubid=(?P<ac>.+)", "bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&", "&pubid=(?P<ac>[^&]*)", "&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&", "/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)", "shareasale\\.com[^?]*\\?(?P<query>.*)", "/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+", "linkconnector\\.com[^?]*\\?(?P<query>.*)", "(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]
+//        };
+    } </script>
+</head>
+<body>
+<div id="container">
+    <iframe id="frame" src="about:blank" frameborder="0" allowfullscreen></iframe>
+</div>
+</body>
+</html>
+

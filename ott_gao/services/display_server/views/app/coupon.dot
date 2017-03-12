@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Coupon</title>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        VBX.App.init({
+        });
+
+        function clickPrint() {
+            window.print();
+        }
+    </script>
+    <style>
+        body {text-align:center; overflow:hidden}
+
+        @media screen {
+            .coupon {
+                position: absolute;
+                left: 0;
+                top: 3em;
+                right: 0;
+                bottom: 3em;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+            }
+
+            .overlay-top {
+                position: absolute;
+                background-color: rgba(0,0,0,0.8);
+                left: 0;
+                top: 0;
+                right: 0;
+                height: 3em;
+                line-height: 3em;
+            }
+
+            .overlay-bottom {
+                position: absolute;
+                background-color: rgba(0,0,0,0.8);
+                left: 0;
+                bottom: 0;
+                right: 0;
+                height: 3em;
+                line-height: 3em;
+            }
+
+            .vbx-light-style .overlay-top, .vbx-light-style .overlay-bottom {
+                background-color: rgba(255,255,255,0.8);
+                color: #000000;
+            }
+
+            .overlay-bottom button {
+                line-height: 0em;
+                margin-top: 5px;
+            }
+
+            .print-only {
+                display: none;
+            }
+        }
+
+        @media print {
+            .overlay-top, .overlay-bottom, .coupon {
+                display: none;
+            }
+
+            .print-only {
+                position:absolute;
+                left:0;top:0;
+                width:100%;
+                overflow:hidden;
+                display: block;
+                text-align:center;
+                background-color: white;
+            }
+
+            .print-only img {
+                max-width:80%;
+                max-height:80%;
+            }
+        }
+    </style>
+    <script> function getAppConfigs() { return {"id":"7b7d719a-53d2-4ee5-ba76-226131fc5ac8","internalId":"376de646-b992-4934-835c-d84b2ee630c8","component":"com.qoof.sdk.components.image.Coupon","order":7,"lightStyle":false,"title":"sdfasdasdfas","showInMenu":"true","coupon":"//assets.viewbix.com/53c3a289-1316-44b4-a459-aaf00ca91722.jpg","label":"Coupon","icon":"/storage/content/icon/16/coupon.png","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body>
+<div class="vbx-scrollable">
+    <div data-vbx-style-background-image="coupon" class="coupon"></div>
+    <div class="overlay-top"><div data-vbx="title"></div></div>
+    <div class="overlay-bottom"><button type="button" class="vbx-submit" onclick="clickPrint()">Print</button></div>
+    <div class="print-only"><img data-vbx-src="coupon" /></div>
+</div>
+</body>
+</html>
+

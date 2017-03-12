@@ -1,0 +1,59 @@
+#menu1 {
+    position: absolute;
+    /* bottom: 0; */
+    left: 0;
+    z-index: 3;
+    display: none;
+}
+
+#menu1 .vbx-menu {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+#menu1 .vbx-menu li {
+    display: table-cell;
+    text-align: center;
+    height: 42px;
+    padding: 0 9px;
+}
+
+#menu1 .vbx-menu li img {
+    display: none;
+}
+
+#menu1 .vbx-menu li .vbx-menu-label {
+    display: inline-block;
+    height: 42px;
+    vertical-align: middle;
+    line-height: 42px;
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size: 0.9em;
+}
+
+
+#appsTrigger {
+    position: absolute;
+    left: 0;
+    /* bottom: 60px; */
+    z-index: 1;
+    display: none;
+    cursor: pointer;
+    max-width:90%;
+}
+
+.vbx-container-item {
+    position: absolute;
+}
+
+    .vbx-container-item.vbx-unselected {
+        display: none;
+        z-index: 3;
+    }
+
+    .vbx-container-item.vbx-selected {
+        display: block;
+        z-index: 3;
+    }

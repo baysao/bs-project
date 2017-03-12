@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        var YAHOO_CODE_IMAGE_LARGE_DAY = "http://l.yimg.com/a/i/us/nws/weather/gr/{code}d.png";
+        // 250 X 180 symbol is positioned on upper left
+        var YAHOO_CODE_IMAGE_LARGE_NIGHT = "http://l.yimg.com/a/i/us/nws/weather/gr/{code}n.png";
+        // 250 X 180 symbol is positioned on upper left
+        var YAHOO_CODE_IMAGE_SMALL_DAY = "http://l.yimg.com/a/i/us/nws/weather/gr/{code}ds.png";
+        // 61 X 34 symbol is centered
+        var YAHOO_CODE_IMAGE_SMALL_NIGHT = "http://l.yimg.com/a/i/us/nws/weather/gr/{code}ns.png";
+        // 61 X 34 symbol is centered
+
+        var YAHOO_WEATHER_LOGO_URL = "//www.viewbix.com/content/img/yahoo_weather.png";
+
+        /**
+         @param {Object} result The feed result from Google Feed API.
+         */
+        function onFeedLoaded(result) {
+
+            var xmlNode = $(result.xmlDocument);
+
+            var condition = $(xmlNode.find('condition'));
+            if (condition.length == 0) {
+                condition = $(xmlNode.find('yweather\\:condition'));
+            }
+
+            var forecast = $(xmlNode.find('forecast'));
+            if (forecast.length == 0) {
+                forecast = xmlNode.find('yweather\\:forecast');
+            }
+
+            var code = condition.attr('code');
+            var temp = condition.attr('temp');
+            var conditionText = condition.attr('text');
+            var date = condition.attr('date');
+            var units = VBX.App.config('units').toUpperCase();
+            var high = $(forecast[0]).attr('high');
+            var low = $(forecast[0]).attr('low');
+
+            var title = $(xmlNode.find('title')[1]).text();
+            var re = /Conditions for ([a-zA-Z??, ]+) at /;
+            var m = re.exec(title);
+            var location = '';
+            if (m.length > 1) {
+                location = m[1];
+            }
+
+            $('#time').text(date);
+            $('#location').text(location);
+
+            //forecast start
+            var imageUrl = YAHOO_CODE_IMAGE_LARGE_DAY.replace(/\{code\}/, code);
+            var imageTag = $('#imageTag');
+            imageTag.attr("src", imageUrl);
+
+            var tempDiv = $('#temp');
+            tempDiv.html(temp + '&deg; ' + units);
+
+            var highLowDiv = $('#highLow');
+            highLowDiv.html('High: ' + high + '&deg;&nbsp;&nbsp;Low: ' + low + '&deg;');
+
+            var forecastTextDiv = $('#forecastText');
+            forecastTextDiv.text(conditionText);
+            //forecast end
+
+            //five day start
+            for (var i = 0; i < forecast.length; i++) {
+                var fcast = $(forecast[i]);
+
+                var fiveDayDiv = $('<div class="five-day-div" />');
+
+                var weatherThumbnailUrl = YAHOO_CODE_IMAGE_SMALL_DAY.replace(/\{code\}/, fcast.attr('code'));
+                var weatherThumbnailTag = $('<img class="weather-thumbnail" />');
+                weatherThumbnailTag.attr('src', weatherThumbnailUrl);
+                fiveDayDiv.append(weatherThumbnailTag);
+
+                var dayDiv = $('<div class="day"/>');
+                dayDiv.text(fcast.attr('day'));
+                fiveDayDiv.append(dayDiv);
+
+                var forecastTextDiv = $('<div class="five-day-forecast-text"/>');
+                forecastTextDiv.html('&nbsp;-&nbsp;' + fcast.attr('text') + '.&nbsp;');
+                fiveDayDiv.append(forecastTextDiv);
+
+                var fiveDayHighLowDiv;
+                fiveDayHighLowDiv = $('<div class="five-day-high-low"/>');
+                fiveDayHighLowDiv.html('High:&nbsp;');
+                fiveDayDiv.append(fiveDayHighLowDiv);
+                fiveDayHighLowDiv = $('<div class="five-day-high-low-value" />');
+                fiveDayHighLowDiv.html(fcast.attr("high"));
+                fiveDayDiv.append(fiveDayHighLowDiv);
+                fiveDayHighLowDiv = $('<div class="five-day-high-low" />');
+                fiveDayHighLowDiv.html("&nbsp;&nbsp;Low:&nbsp;");
+                fiveDayDiv.append(fiveDayHighLowDiv);
+                fiveDayHighLowDiv = $('<div class="five-day-high-low-value" />');
+                fiveDayHighLowDiv.html(fcast.attr("low"));
+                fiveDayDiv.append(fiveDayHighLowDiv);
+
+                var clearDiv = $('<div class="clear" />');
+
+                fiveDayDiv.append(clearDiv);
+
+                $('#body-scroll').append(fiveDayDiv);
+            }
+
+            //five day end
+        }
+
+        VBX.App.init({
+            feed: {
+                source: 'url',
+                pageSize: 1,
+                onLoaded: onFeedLoaded
+            }
+        });
+    </script>
+
+    <style>
+        #weatherLogo {
+            float: left;
+            margin-right: 1em;
+        }
+
+        #time {
+            float:left;
+            font-size: 0.8em;
+            line-height:26px;
+        }
+
+        #location {
+            clear:both;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 0.25em;
+        }
+
+        #forecast {
+            clear:both;
+        }
+
+        #imageDiv {
+            float:left;
+        }
+
+        #imageTag {
+            max-height: 90px;
+            max-width: 125px;
+        }
+
+        #forecastInfo {
+            float:left;
+        }
+
+        #temp {
+            font-size:2em;
+            font-weight:bold;
+        }
+
+        #highLow {
+
+        }
+
+        #forecastText {
+            font-weight: bold;
+            margin-top: 0.3em;
+        }
+
+        #fiveDayLabel {
+            clear: both;
+            font-size: 0.8em;
+            font-style: italic;
+            margin-top: 0.3em;
+        }
+
+        .five-day-div {
+            clear:both;
+            margin-top:0.25em;
+            padding-top:0.5em;
+            border-top: solid 1px rgba(127, 127, 127, 0.5);
+        }
+
+        .five-day-div:last-of-type {
+            border-bottom: solid 1px rgba(127, 127, 127, 0.5);
+        }
+
+        .weather-thumbnail {
+            float:left;
+            width:50px;
+        }
+
+        .day {
+            float:left;
+            font-weight: bold;
+        }
+
+        .five-day-forecast-text, .five-day-high-low {
+            float:left;
+            font-weight:normal;
+        }
+
+        .five-day-high-low-value {
+            float:left;
+            font-weight:bold;
+        }
+
+        .clear {
+            clear:both;
+        }
+
+    </style>
+    <script> function getAppConfigs() { return {"id":"c707bcab-a1d2-415e-81c3-b3615b7480c5","internalId":"85bf7008-1a9c-4948-9ea1-af1b09f25980","component":"com.qoof.sdk.components.rss.YahooWeather","order":28,"lightStyle":false,"url":"http://xml.weather.yahoo.com/forecastrss/10001_f.xml","query":"10001","icon":"/storage/content/icon/16/weather.png","units":"f","showInMenu":"true","label":"Yahoo Weather","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body>
+<div id="body-scroll" class="vbx-scrollable">
+    <div>
+        <img id="weatherLogo" src="//www.viewbix.com/storage/content/img/yahoo_weather.png" />
+        <div id="time"></div>
+    </div>
+    <div id="location"></div>
+    <div id="forecast">
+        <div id="imageDiv">
+            <img id="imageTag" />
+        </div>
+        <div id="forecastInfo">
+            <div id="temp"></div>
+            <div id="highLow"></div>
+            <div id="forecastText"></div>
+        </div>
+    </div>
+    <div id="fiveDayLabel">Five Day Forecast:</div>
+</div>
+</body>
+</html>
+

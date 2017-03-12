@@ -1,0 +1,243 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Peer5 client -->
+    <!--<script src="//api.peer5.com/peer5.js?id=ncp2vywz762cq79dgwd7"></script>-->
+    <script src="./oo.peer5.js"></script>
+    <!--<script src="./oo.peer5.js?id=ncp2vywz762cq79dgwd7"></script>-->
+    <!--<script src="./peer5.3.js?id=hx1kd20nmlr4c9wccf16"></script>-->
+    <!--<script src="./p2p.js?id=ncp2vywz762cq79dgwd7"></script>-->
+
+    <!-- styles -->
+    <!--<link rel="stylesheet" href="./videojs/assets/video-js.css">-->
+
+    <!-- video.js -->
+    <!--<script src="./peer5.videojs.js"></script>-->
+    <!--<script src="./peer5.videojs.js"></script>-->
+
+    <!-- youbora -->
+    <!--<script src="http://smartplugin.youbora.com/1.4/js/libs/youbora-data-1.4.1.min.js"></script>-->
+    <!--<script src="http://smartplugin.youbora.com/1.4/js/libs/youbora-api-1.4.5.min.js"></script>-->
+    <!--<script src='http://smartplugin.youbora.com/1.4/js/videojs/3.4.3/sp.min.js'></script>-->
+
+    <title>Streaming Demo</title>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-8 col-sm-12">
+                <!--<a href="//www.peer5.com" class="logo">-->
+                    <!--<img src="assets/img/logo-white.png" alt="Peer5 Logo">-->
+                <!--</a>-->
+
+                <p class="lead">Streaming demo</p>
+            </div>
+            <!--<div class="col-lg-4 col-md-4 col-sm-12">-->
+                <!--<br>-->
+                <!--<a href="https://app.peer5.com/register" onclick="ga('send','event','button','signup');" class="btn btn-peer5" style="position:absolute; right:0;">Signup</a>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="row">
+            <div class="col-lg-7 col-md-8 col-sm-12">
+                <ul class="nav nav-tabs">
+                    <!--<li class=""><a href="clappr.html" data-toggle="tab" aria-expanded="true">Clappr</a></li>-->
+                    <li class="active"><a data-toggle="tab" aria-expanded="true">GaoPlayer</a></li>
+                    <!--<li class=""><a href="flowplayer.html" data-toggle="tab" aria-expanded="true">Flowplayer</a></li>-->
+                    <!--<li class=""><a href="jwplayer6.html" data-toggle="tab" aria-expanded="true">JWPlayer6</a></li>-->
+                    <!--<li class=""><a href="shakaplayer.html" data-toggle="tab" aria-expanded="true">Shakaplayer</a></li>-->
+                    <li class="last"><a href="javascript:" target="_target" onclick="window.open(location.href);"
+                                        data-toggle="tab" aria-expanded="true">Add Peer</a></li>
+                </ul>
+                <video width="100%" height="auto" class="video-player" id="pre-roll-demo"
+                       src="http://s.gao.easyvideo.vn/hls/vpub/entryId/56a106c4b64e4ebd024f8453/flavorId/5694433d6ee7dc5e65ce7724/rawId/56a106c4b64e4ebd024f8452.mp4/index.m3u8"
+                       controls
+                       poster="http://st.gao.easyvideo.vn/thumb_640x360/5/entryId/56a106c4b64e4ebd024f8453/flavorId/5694433d6ee7dc5e65ce7724/rawId/56a106c4b64e4ebd024f8452.png">
+                </video>
+                <!--<video id="video" class="video-js vjs-default-skin" height="360" width="640" controls>-->
+                    <!--<source src="https://livestream.storage.googleapis.com/hls/kite/index.m3u8"-->
+                            <!--type="application/x-mpegURL">-->
+                <!--</video>-->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <select class="form-control" id="streams">
+                    <option>Select stream to play</option>
+                    <option value="//cdn.theoplayer.com/video/star_wars_episode_vii-the_force_awakens_official_comic-con_2015_reel_(2015)/index.m3u8">THEO</option>
+                    <option value="https://livestream.peer5.com/video/kite/index.m3u8">Kite - LIVE</option>
+
+                    <option value="http://s.gao.easyvideo.vn/hls/vpub/entryId/56a106c4b64e4ebd024f8453/flavorId/5694433d6ee7dc5e65ce7724/rawId/56a106c4b64e4ebd024f8452.mp4/index.m3u8">
+                        Binh Than - VOD
+                    </option>
+                    <option value="http://demo.easyvideo.vn/maygiat.mp4">
+                        MP4
+                    </option>
+                    <option value="http://wowza.peer5.com/live/smil:nature.smil/playlist.m3u8">
+                        Nature - Live - MBR
+                    </option>
+
+                    <option value="http://wowza.peer5.com/live/smil:clock.smil/playlist.m3u8">
+                        Clock - Live
+                    </option>
+
+                    <option value="http://wowza.peer5.com/vod/mp4:cartoon.mp4/playlist.m3u8">
+                        Cartoon - VOD
+                    </option>
+
+                    <option value="http://wowza.peer5.com/vod/mp4:avengers.mp4/playlist.m3u8">
+                        Avengers - VOD
+                    </option>
+
+                    <option value="https://cdnapisec.kaltura.com/p/1375472/sp/137547200/playManifest/entryId/0_945p1zm2/flavorIds/0_7gbto9wn,0_lotoheyk/format/applehttp/protocol/https/a.m3u8">
+                        Serfomay - VOD
+                    </option>
+
+                    <option value="https://cdnapisec.kaltura.com/p/1375472/sp/137547200/playManifest/entryId/0_ncvvnzfe/flavorIds/0_obbhtwhw,0_ikr2ob7t/format/applehttp/protocol/https/a.m3u8">
+                        Tears of Steel - VOD
+                    </option>
+                </select>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Real time statistics</div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>HTTP</th>
+                                <th>P2P</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Total Downloaded</td>
+                                <td class="stats-http-download metric">0</td>
+                                <td class="stats-p2p-download metric">0</td>
+                            </tr>
+                            <tr>
+                                <td>Total Uploaded</td>
+                                <td class="stats-http-upload metric">0</td>
+                                <td class="stats-p2p-upload metric">0</td>
+                            </tr>
+                            <tr>
+                                <td>Peers</td>
+                                <td class="stats-http-peers metric">----</td>
+                                <td class="stats-p2p-peers metric">0</td>
+                            </tr>
+                            <tr>
+                                <td>Usage</td>
+                                <td class="stats-http-usage metric">0%</td>
+                                <td class="stats-p2p-usage metric">0%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="chart-files"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="//code.highcharts.com/adapters/standalone-framework.js"></script>
+<script src="//code.highcharts.com/highcharts.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    function waitUntil(boolFn, callback, delay) { "use strict"; delay = (typeof (delay) === 'undefined' || isNaN(parseInt(delay, 10))) ? 100 : delay; setTimeout(function () { (boolFn()) ? callback() : waitUntil(boolFn, callback, delay); }, delay); }
+    function loadScript(src, opt_callback) {
+        if (opt_callback) {
+            $.ajax({
+                url: src,
+                dataType: "script",
+                success: opt_callback,
+            });
+        } else {
+            //only use this in dev/debug mode
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', src, false);
+            xhr.send('');
+            var se = document.createElement('script');
+            se.type = "text/javascript";
+            se.text = xhr.responseText;
+            document.getElementsByTagName('head')[0].appendChild(se);
+        }
+    }
+    var gaoplayer_config = {
+        version: 'demo',
+        key: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvd25lcklkIjoibVJ5cmd1akFTSHlmUkhyTEIiLCJuYW1lIjoiYXBpMTIiLCJ0eXBlIjoid2ViIiwiaXNfZW5hYmxlZCI6IjEiLCJpcF9yYW5nZXMiOiIxOTIuMTY4LjEuMSIsImh0dHBfcmVmZXJlcnMiOiJsb2NhbGhvc3Q6NDAwMCIsImV4cGlyZWQiOiIiLCJrZXkiOiJvS3A4RklLMGV6N1F1bWNoam0vaTFTU2h1YW1EYnlHZVhxa0pvMVY1eXFVd1VyWnUwei8zVldXKzlGeXpFUWxIVkpEOG5iUlZ1S2sxYjhaeU8wQWxjUT09IiwidXNlcklkIjoibVJ5cmd1akFTSHlmUkhyTEIiLCJjcmVhdGVkQXQiOjE0NTUyNTg0Mzl9.Aill-i3RN4-Yzds1dOWH1s18VBkvRZW3RAGSsYa2XqA',
+        plhost: '//localhost:4000',
+//        key: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoid2ViX2RwLmdhbyIsInR5cGUiOiJ3ZWIiLCJpc19lbmFibGVkIjoiMSIsImlwX3JhbmdlcyI6IiIsImh0dHBfcmVmZXJlcnMiOiJkcC5nYW8uZWFzeXZpZGVvLnZuIiwiZXhwaXJlZCI6IiIsImtleSI6IlJuR2JRNW5sL3pHTFdJMUNURm5Ka1VDTGJwTVRoUFUxM0owME5RbmsvQkJWVFA3N08vZkZLV3BTalJ6NWdPd3VtVk9ZaW44cnlaZkFhQTJhQXlJSVlRPT0iLCJ1c2VySWQiOiJFcWNmaXN2YWViNkFOY0VFWCIsImNyZWF0ZWRBdCI6MTQ1NDU2Mjc1OX0.Qoyf0WVXjHQpFslcR0mqHO-PkiYRTMtWD4aJDAF2QFw',
+//        plhost: '//dp.gao.easyvideo.vn',
+
+        elements: [
+            {
+                id: 'pre-roll-demo',
+//                ads: {
+//                    vast: {
+//                        url: "//st.movideo.us/ads/vnm2.xml",
+//                        skip: 50
+//                    }
+//                }
+            }
+        ]
+
+    };
+    (function (b) {
+        var c = b.version;
+        theoplayer = window.theoplayer || {};
+        theoplayer.configuration = {
+            libraryLocation: "/player/" + c + "/" + b.key + "/",
+            styleSheetURI: "/player/" + c + "/" + b.key + "/gao.css",
+            skipAutoDetect: !0
+        };
+        theoplayer.onReady = function () {
+            for (var c = b.elements, d = b.elements.length, a = 0; a < d; a++) {
+                var e = c[a], f = document.getElementById(e.id);
+                theoplayer(f, e)
+            }
+            waitUntil(function(){ return theoplayer && theoplayer.player && theoplayer.player(0) && theoplayer.player(0).initialized;}, function(){
+                loadScript('./peer5.videojs1.js');
+                (function() {
+
+                    var streams = document.getElementById('streams');
+
+                    streams.onchange = function() {
+                        var val = streams.value;
+
+                        if (val) {
+                            app.setStream(val);
+                        }
+                    };
+                    waitUntil(function(){ return theoplayer && theoplayer.player && theoplayer.player(0) && theoplayer.player(0).initialized;}, function(){
+                        app.init();
+                    }, 100);
+
+                })();
+            }, 100);
+
+        };
+        var c = b.plhost + "/player/" + c + "/" + b.key, d = document, a = d.createElement("script"), d = d.getElementsByTagName("script")[0];
+        a.type = "text/javascript";
+        a.async = !0;
+        a.defer = !0;
+        a.src = c + "/theoplayer.loader.js";
+        d.parentNode.insertBefore(a, d)
+    })(gaoplayer_config);
+
+
+</script>
+</body>
+</html>

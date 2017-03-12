@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        VBX.App.init({
+            feed: {
+                container: 'feed-container1', template: 'item-template1', source: 'feedXmlString', artist: function (entry, xml, index) {
+                    return xml.querySelector('artist').textContent;
+                },
+                audioUrl: function (entry, xml, index) {
+                    return xml.querySelector('audioUrl').textContent;
+                },
+                onBuilt: function () {
+                    $('audio').on('play', function (e) {
+                        $('audio').each(function (index) {
+                            if (this != e.target) {
+                                this.pause();
+                            }
+                        });
+                    });
+                }
+            },
+            pauseAllMedia: function () {
+                $('audio').each(function (index) {
+                    this.pause();
+                });
+            }
+        });
+
+    </script>
+
+    <style>
+        .image {
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .header {
+            margin-bottom:1em;
+        }
+    </style>
+
+    <script> function getAppConfigs() { return {"id":"fca240a6-f90a-4536-8558-2290252be4f0","internalId":"247d9c1e-0135-4018-b97e-cfad31d71912","component":"com.qoof.sdk.components.rss.AudioPlaylist","order":25,"lightStyle":false,"showInMenu":"true","icon":"/storage/content/icon/16/music.png","thumbnailWidth":"70","feedXmlString":"","label":"Upload Music","title":"dfd","image":"//assets.viewbix.com/57f83f40-7a02-4f1a-9e7b-70a48dea3cd8.jpg","artist":"asdfasd","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body>
+<div class="vbx-scrollable">
+    <div class="header">
+        <img class="image" data-vbx-src="image" data-vbx-style-max-width="VBX.px(thumbnailWidth)" data-vbx-style-max-height="VBX.px(thumbnailWidth)" />
+        <div class="vbx-feed-title" data-vbx="title"></div>
+        <div class="artist" data-vbx="artist"></div>
+    </div>
+    <div id="feed-container1" class="vbx-feed-container">
+        <div id="item-template1" class="vbx-feed-item">
+            <div><span class="audio-title">{$title}</span> - <span class="audio-artist">{$artist}</span> <span class="audio-duration">{$duration}</span></div>
+            <audio controls="controls" src="{$audioUrl}"></audio>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

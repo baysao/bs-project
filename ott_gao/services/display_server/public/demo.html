@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="medium" content="video"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>Title</title>
+</head>
+<body>
+<div class="video-container" style="width: 100%;height:auto;">
+    <!--src="http://s.gao.easyvideo.vn/hls/vpub/entryId/56a106c4b64e4ebd024f8453/flavorId/5694433d6ee7dc5e65ce7724/rawId/56a106c4b64e4ebd024f8452.mp4/index.m3u8"-->
+    <!--src="http://demo.easyvideo.vn/maygiat.mp4"-->
+    <video width="100%" height="auto" class="video-player" id="pre-roll-demo"
+           src="http://miraiobj.62de30e6.cdnviet.com/mtv/MTVConnection.mp4"
+           controls  autoplay
+           poster="http://st.gao.easyvideo.vn/thumb_640x360/5/entryId/56a106c4b64e4ebd024f8453/flavorId/5694433d6ee7dc5e65ce7724/rawId/56a106c4b64e4ebd024f8452.png">
+    </video>
+</div>
+<script type="text/javascript">
+    var gaoplayer_config = {
+    key: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoid2ViX2RwLmdhbyIsInR5cGUiOiJ3ZWIiLCJpc19lbmFibGVkIjoiMSIsImlwX3JhbmdlcyI6IiIsImh0dHBfcmVmZXJlcnMiOiJkcC5nYW8uZWFzeXZpZGVvLnZuIiwiZXhwaXJlZCI6IiIsImtleSI6IlJuR2JRNW5sL3pHTFdJMUNURm5Ka1VDTGJwTVRoUFUxM0owME5RbmsvQkJWVFA3N08vZkZLV3BTalJ6NWdPd3VtVk9ZaW44cnlaZkFhQTJhQXlJSVlRPT0iLCJ1c2VySWQiOiJFcWNmaXN2YWViNkFOY0VFWCIsImNyZWF0ZWRBdCI6MTQ1NDU2Mjc1OX0.Qoyf0WVXjHQpFslcR0mqHO-PkiYRTMtWD4aJDAF2QFw',
+        plhost: '//dp.gao.easyvideo.vn',
+        version: 'v1',
+//    skipAutoDetect : true,
+    elements: [
+        {
+            id: 'pre-roll-demo',
+//            ads: {
+//                vast: {
+//                    url: "//st.movideo.us/ads/vnm2.xml",
+//                    skip: 50
+//                }
+//            }
+        }
+    ]
+};
+    (function(b){var c=b.version;theoplayer=window.theoplayer||{};theoplayer.configuration={libraryLocation:"/player/"+c+"/"+b.key+"/",styleSheetURI:"/player/"+c+"/"+b.key+"/gao.css",skipAutoDetect:!0};theoplayer.onReady=function(){for(var c=b.elements,d=b.elements.length,a=0;a<d;a++){var e=c[a],f=document.getElementById(e.id);theoplayer(f,e)}};var c=b.plhost+"/player/"+c+"/"+b.key,d=document,a=d.createElement("script"),d=d.getElementsByTagName("script")[0];a.type="text/javascript";a.async=!0;a.defer= !0; a.src = c +"/gao.js";d.parentNode.insertBefore(a,d)})(gaoplayer_config);
+</script>
+<script type="text/javascript">
+    //tracking code
+    var _paq=_paq||[];_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);(function(){_paq.push(["setTrackerUrl","//p.gao.easyvideo.vn/gaotracker"]);_paq.push(["setSiteId",1]);var a=document,b=a.createElement("script"),a=a.getElementsByTagName("script")[0];b.type="text/javascript";b.async=!0;b.defer=!0;b.src="//p.gao.easyvideo.vn/gaotracker.js";a.parentNode.insertBefore(b,a)})();
+</script>
+<noscript><p><img src="//p.gao.easyvideo.vn/gaotracker?idsite=1" style="border:0;" alt=""/></p></noscript>
+</body>
+</html>

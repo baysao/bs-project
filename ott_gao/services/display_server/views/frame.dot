@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"
+      xmlns:og="http://opengraphprotocol.org/schema/" xmlns:g="http://base.google.com/ns/1.0">
+<head id="Head1">
+<meta name="medium" content="video" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>[[[= model.title || model.name || '']]]</title>
+[[[= partial('partials/vbx_head_common.html')]]]
+
+    
+
+    <!-- Piwik -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+	
+	window.piwikMediaAnalyticsAsyncInit = function () {
+
+		var MA = Piwik.MediaAnalytics;
+		MA.enableDebugMode();
+
+		function CustomHTML5(node, resource) { 
+
+			//without calling scanForMedia here, html5video is tracked twice and youtube videos are track oce
+			// with can for media, only youtube videos are tracked 
+ 
+	        	var tracker = new MA.MediaTracker("html5", Piwik.MediaAnalytics.mediaType.VIDEO, node.currentSrc);
+
+
+			tracker.setHeight(node.clientHeight);
+	    		tracker.setWidth(node.clientWidth);
+	    		tracker.setFullscreen(MA.element.isFullscreen(node));
+	    		//tracker.setMediaTitle(node.getAttribute('title'));
+			tracker.setMediaTitle('[[[= model.title || model.name || '']]]');
+
+			var useCapture = true;
+
+
+		    node.addEventListener('play', function() {
+		        // if the player supports something like playlists you might want to check 
+		        // whether the source has changed and if so, call the following 3 methods:
+		        // tracker.reset();
+		        // tracker.setResource(newResource);
+		        // tracker.setMediaTitle(newMediaTitleOrEmptyString);
+		        // this allows you to automatically track a new media as soon 
+		        // as the currently played video or audio changes
+
+		        // notify the tracker the media is now playing
+		        tracker.play();
+
+		    }, useCapture);
+
+
+		    node.addEventListener('pause', function() {
+		        // notify the tracker the media is now paused
+		        tracker.pause();
+		    }, useCapture);
+
+
+		    node.addEventListener('ended', function() { 
+		        // notify the tracker the media is now finished
+		        tracker.finish(); 
+		    }, useCapture);
+
+
+		    node.addEventListener('timeupdate', function() {
+		        // notify the tracker the media is still playing
+
+		        // we update the current made progress (time position) and duration of 
+		        // the media. Not all players might give you that information
+		        tracker.setMediaProgressInSeconds(node.currentTime);
+		        tracker.setMediaTotalLengthInSeconds(node.duration);
+
+		        // it is important to call the tracker.update() method regularly while the 
+		        // media is playing. If this method is not called eg every X seconds no 
+		        // updated data will be tracked. 
+		        // The method itself will not actually send a tracking request whenever it 
+		        // is called. Instead it will make sure to respect the set ping interval and
+		        // eg only send a tracking request every 5 seconds.
+		        tracker.update();
+
+		    }, useCapture);
+
+		    $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function (e){
+			    tracker.setWidth(node.clientWidth);
+        		tracker.setHeight(node.clientHeight);
+        		//tracker.setFullscreen(MA.element.isFullscreen(node));
+
+			//this is deprecated
+			//tracker.setFullscreen(node.webkitDisplayingFullscreen);
+
+			tracker.setFullscreen(document.fullscreenElement && (node.id == document.fullscreenElement.id));			
+
+	       		tracker.update();
+			});
+
+	    	// it is important to call the tracker.update() method regularly while the 
+	        // media is playing. If this method is not called eg every X seconds no 
+	        // updated data will be tracked. 
+	        // The method itself will not actually send a tracking request whenever it 
+	        // is called. Instead it will make sure to respect the set ping interval and
+	        // eg only send a tracking request every 5 seconds.
+	        tracker.trackUpdate();
+		}
+
+		var html5Videos = document.getElementsByTagName("video"); 
+		var sources = document.getElementsByTagName("source");
+
+        	for (var i = 0; i < html5Videos.length; i++) { 
+            		//MA.scanForMedia(html5Videos[i]);
+            		new CustomHTML5(html5Videos[i], html5Videos[i].getAttribute("src"));
+        	}
+
+		// CustomHTML5.scanForMedia = function (documentOrHTMLElement) {
+		//     // find all medias for your player
+		//     var html5Videos = documentOrHTMLElement.getElementsByTagName('video');
+
+		//     for (var i = 0; i < html5Videos.length; i++) {
+		//         // for each of the medias found, create an instance of your player as long as the media is 
+		//         // not supposed to be ignored via a "data-piwik-ignore" attribute
+		//         if (!MA.element.isMediaIgnored(html5Videos[i])) {
+		//             new MyPlayer(html5Videos[i], MA.mediaType.VIDEO); 
+		//             // there is also a MA.mediaType.AUDIO constant if you want to track audio
+		//         }
+		//     }
+		// };
+
+		//remove the native html5 tracker of Piwik to avoid double tracking on html5 videos
+		MA.removePlayer('html5');
+		//MA.addPlayer('CustomHTML5', CustomHTML5);
+	};
+
+      var _paq = _paq || [];
+      _paq.push(["setDomains", ["*.demo.easyvideo.vn/nguyenkim"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      _paq.push(['enableHeartBeatTimer']);
+      (function() {
+        var u="//113.164.27.59/pw2/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '1011']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//113.164.27.59/pw2/piwik.php?idsite=1011" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
+</head>
+<body data-vbx-style-font-family="standardTextFormatFont"
+      data-vbx-class="bodyClass(customLogoUrl, title, ctaText, showViewbixBranding, showFacebookButton, showTwitterButton, showShareButton, keepControlsVisible:false, backgroundImage:)">
+[[[= partial('partials/vbx_body.html')]]]
+
+
+</body>
+</html>

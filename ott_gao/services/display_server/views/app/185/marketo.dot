@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Marketo</title>
+
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        VBX.App.init({
+            form: {
+                formElement: 'form-container1',
+                submitElement: 'form-submit1',
+                reloadOnConfigs: ['listIds'
+
+                ]
+
+            }
+        });
+    </script>
+
+    <style>
+        .vbx-form-success .instructions {
+            display:none;
+        }
+
+        .vbx-form-success-msg a, .vbx-form-error-msg a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <script> function getAppConfigs() { return {"id":"21bd8e03-88f7-4707-bfd9-06553c55762f","internalId":"c493097f-9d4c-4654-bd5e-d8b5c955e242","component":"com.qoof.sdk.components.forms.Marketo","order":21,"lightStyle":false,"label":"Marketo","instructions":"Please submit your email.","success":"Thank you! Your email was successfully added.\nYou should receive an email confirmation within 24 hours. You may remove yourself at any time by using the remove link at the bottom of each message.","listIds":"","icon":"/storage/content/icon/16/marketo.png","showInMenu":"true","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body>
+<div class="vbx-scrollable">
+    <div class="instructions" data-vbx="instructions"></div>
+
+    <form id="form-container1"></form>
+
+    <button type="button" data-vbx="submitText" id="form-submit1">Submit Form</button>
+
+    <div data-vbx="VBX.linkify(success)" class="vbx-form-success-msg"></div>
+
+    <div data-vbx="VBX.linkify(error)" class="vbx-form-error-msg"></div>
+</div>
+</body>
+</html>
+

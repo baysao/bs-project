@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    [[[= partial('partials/seo.html')]]]
+    [[[= partial('partials/vbx_head_theoplayer.html')]]]
+    [[[= partial('partials/vbx_head_common.html')]]]
+
+    <script>
+        [[[= partial('partials/vbx_player_config.js')]]]
+        function onTheoplayerReady() {
+            onReady();
+            var playerConfig = getPlayerConfigurations();
+            var videoUrl = playerConfig.videoUrl;
+            if (theoplayer && theoplayer.player) {
+                if (videoUrl) {
+                    theoplayer.player(0).src = videoUrl;
+                }
+                [[[= model.lazyload_videourl]]]
+                if (VBX_layoutConfig && VBX_layoutConfig['video'] && VBX_layoutConfig['video'].autoplay) {
+                    theoplayer.player(0).src && theoplayer.player(0).play();
+                }
+            }
+        }
+        VBX_layoutConfig = {
+//            video: {id: 'video1',   preload: true,
+//                autoplay: true,
+//                platform: VBX.Layout.VideoPlayerPlatform.VIDEOJS},
+            video: {
+                id: 'video1',
+                platform: VBX.Layout.VideoPlayerPlatform.EXTERNAL,
+                preload: true,
+                autoplay: false,
+                channel: {
+                    send: function (name, opt) {
+//                        if (name == "EXTERNAL_PLAYER_SERVICE") {
+//                            console.log(name);
+//                            console.log(opt);
+//                            $LAB
+//                                    .script("/player/v1/[[[= model.seckey]]]/gao.js")
+//                                    .wait(function () {
+//                                        theoplayer.onReady = function () {
+//                                            if (theoplayer && theoplayer.player) {
+//                                                console.log('theoplayer ready');
+//                                                var player = theoplayer.player(0);
+//                                                var event = opt.name;
+//                                                var event_data = opt.data;
+//                                                console.log(player);
+//                                                console.log('opt');
+//                                                switch (event) {
+//                                                    case 'LOAD':
+//                                                        player.src = event_data;
+//                                                        break;
+//                                                    case 'POSTER':
+//                                                        break;
+//                                                    case 'PLAY':
+//                                                        player.play();
+//                                                    case 'PAUSE':
+//                                                        player.pause();
+//                                                        break;
+//                                                }
+//                                            }
+//                                        }
+//                                    })
+//                        }
+                    }
+                }
+            },
+            menu: {
+                id: 'menu1',
+                iconSize: 32,
+                overflow: 'moreApp',
+                overflowFunction: showMoreApp,
+                share: 'embedApp',
+                shareFunction: showEmbedApp,
+                addShareIfNoVideo: true
+            },
+            container: {
+                id: 'apps1',
+                closeButton: true,
+                rollPrompt: 'rollPrompt',
+                rollPromptFunction: showRollPrompt,
+                completeAllowSkipRollApp: false,
+                appCloseCallback: onAppClose,
+                appIframeCreatedCallback: onAppIframeCreated
+            },
+            ready: function () {
+                if (theoplayer) {
+                    console.log('theoplayer loaded');
+                    theoplayer.onReady = function () {
+                        onTheoplayerReady();
+                    }
+                }
+                else {
+                    console.log('theoplayer not loaded');
+                    $LAB
+                            .script("/player/v1/[[[= model.seckey]]]/gao.js")
+                            .wait(function () {
+                                theoplayer.onReady = function () {
+                                    onTheoplayerReady();
+                                }
+                            })
+                }
+            }
+        };
+        VBX.Layout.init(VBX_layoutConfig);
+
+    </script>
+    [[[= partial('partials/vbx_tracking.html')]]]
+</head>
+[[[= partial('partials/vbx_body.html')]]]
+</html>

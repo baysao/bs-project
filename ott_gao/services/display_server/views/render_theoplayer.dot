@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    [[[= partial('partials/seo.html')]]]
+
+   [[[= partial('partials/vbx_head_common.html')]]]
+    <script type="text/javascript">
+        theoplayer = {
+            configuration: {
+                libraryLocation: '/player/v1/[[[= model.seckey]]]/',
+                styleSheetURI: '/player/v1/[[[= model.seckey]]]/gao.1.6.3.min.css',
+                ads:  [[[= JSON.stringify(model.ads)]]]
+            }
+        }
+    </script>
+    <script src="/player/v1/[[[= model.seckey]]]/gao.js"></script>
+    <script>
+        [[[= partial('partials/vbx_player_config.js')]]]
+        VBX_layoutConfig = {
+            video: {id: 'video1', preload: true,
+                autoplay: true,
+                platform: VBX.Layout.VideoPlayerPlatform.THEO},
+            menu: {
+                id: 'menu1',
+                iconSize: 32,
+                overflow: 'moreApp',
+                overflowFunction: showMoreApp,
+                share: 'embedApp',
+                shareFunction: showEmbedApp,
+                addShareIfNoVideo: true
+            },
+            container: {
+                id: 'apps1',
+                closeButton: true,
+                rollPrompt: 'rollPrompt',
+                rollPromptFunction: showRollPrompt,
+                completeAllowSkipRollApp: false,
+                appCloseCallback: onAppClose,
+                appIframeCreatedCallback: onAppIframeCreated
+            },
+            ready: function () {
+
+                theoplayer.onReady = function () {
+                    [[[= model.lazyload_videourl || '']]]
+                    onReady();
+                }
+            }
+        };
+        VBX.Layout.init(VBX_layoutConfig);
+    </script>
+    [[[= partial('partials/vbx_tracking.html')]]]
+</head>
+    [[[= partial('partials/vbx_body.html')]]]
+</html>

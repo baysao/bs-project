@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"
+      xmlns:og="http://opengraphprotocol.org/schema/" xmlns:g="http://base.google.com/ns/1.0">
+<head id="Head1">
+<meta name="medium" content="video" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>[[[= model.title || model.name || '']]]</title>
+[[[= partial('partials/vbx_head_common.html')]]]
+
+    
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+
+    window.piwikMediaAnalyticsAsyncInit = function () {
+        var MA = Piwik.MediaAnalytics;
+
+	function hasTrackerInstance(element) {
+		var ptrack = element.getAttribute("hastracker");
+		if ( ptrack == "1" ) {
+			return true;
+		}
+		return false;
+	}        
+	
+	function GaoPlayer (node, mediaType) {
+
+            if ( hasTrackerInstance(node) ) {
+                // prevent creating multiple trackers for the same media 
+                // when scanning for media multiple times 
+                 return;
+            }
+
+		
+		gaop = gao.player(node.getAttribute("id"));
+
+
+
+            //node.hasPlayerInstance = true;
+	    node.setAttribute("hastracker", "1"); 
+
+            // find the actual resource / URL of the video
+            var actualResource = MA.element.getAttribute(node, 'src');
+	    //var actualResource = node.getAttribute("src");	
+
+            // a user can overwrite the actual resource by defining a "data-piwik-resource" attribute. 
+            // the method `getMediaResource` will detect whether such an attribute was set 
+            var resource = MA.element.getMediaResource(node, actualResource);
+
+            // create an instance of the media tracker. 
+            // Make sure to replace myPlayerName with your player name.
+            var tracker = new MA.MediaTracker('gaoPlayer', mediaType, resource);
+
+            // for video you should detect the width, height, and fullscreen usage, if possible
+            tracker.setWidth(gaop.width);
+            tracker.setHeight(gaop.height);
+            tracker.setFullscreen(gaop.fullscreenEnabled);
+
+            // the method `getMediaTitle` will try to get a media title from a
+            // "data-piwik-title", "title" or "alt" HTML attribute. Sometimes it might be possible
+            // to retrieve the media title directly from the video or audio player
+            var title = MA.element.getMediaTitle(node);
+            tracker.setMediaTitle(title);
+
+            // some media players let you already detect the total length of the video 
+            tracker.setMediaTotalLengthInSeconds(gao.duration);
+
+            var useCapture = true;
+
+
+            gao.addEventListener('play', function() {
+                // if the player supports something like playlists you might want to check 
+                // whether the source has changed and if so, call the following 3 methods:
+                // tracker.reset();
+                // tracker.setResource(newResource);
+                // tracker.setMediaTitle(newMediaTitleOrEmptyString);
+                // this allows you to automatically track a new media as soon 
+                // as the currently played video or audio changes
+
+                // notify the tracker the media is now playing
+                tracker.play();
+
+            }, useCapture);
+
+
+           gao.addEventListener('pause', function() {
+                // notify the tracker the media is now paused
+                tracker.pause();
+            }, useCapture);
+
+
+            gao.addEventListener('ended', function() { 
+                // notify the tracker the media is now finished
+                tracker.finish(); 
+            }, useCapture);
+
+
+            gao.addEventListener('timeupdate', function() {
+                // notify the tracker the media is still playing
+
+                // we update the current made progress (time position) and duration of 
+                // the media. Not all players might give you that information
+                tracker.setMediaProgressInSeconds(gao.currentTime);
+                tracker.setMediaTotalLengthInSeconds(gao.duration);
+
+                // it is important to call the tracker.update() method regularly while the 
+                // media is playing. If this method is not called eg every X seconds no 
+                // updated data will be tracked. 
+                // The method itself will not actually send a tracking request whenever it 
+                // is called. Instead it will make sure to respect the set ping interval and
+                // eg only send a tracking request every 5 seconds.
+                tracker.update();
+
+            }, useCapture);
+
+
+            gao.addEventListener('seeking', function() {
+                // "seekStart" is needed when the player is seeking or buffering. 
+                // It will stop the timer that tracks for how long the media has been played.
+                tracker.seekStart(); 
+            }, true);
+
+
+            gao.addEventListener('seeked', function() {
+                // we update the current made progress (time position) and duration of 
+                // the media. Not all players might give you that information
+                tracker.setMediaProgressInSeconds(gao.currentTime);
+                tracker.setMediaTotalLengthInSeconds(gao.duration);
+
+                // "seekFinish" is needed when the player has finished seeking or buffering. 
+                // It will start the timer again that tracks for how long the media has been played.
+                tracker.seekFinish();
+            }, useCapture);
+
+
+            // for videos it might be useful to listen to the resize event to detect a 
+            // changed video width or when the video has gone fullscreen
+            //window.addEventListener('resize', function () {
+            //    tracker.setWidth(node.clientWidth);
+            //    tracker.setHeight(node.clientHeight);
+            //    tracker.setFullscreen(MA.element.isFullscreen(node));
+            //}, useCapture);
+
+
+            // here we make sure to send an initial tracking request for this media. 
+            // This basically tracks an impression for this media. 
+            tracker.trackUpdate();
+        }
+
+
+        GaoPlayer.scanForMedia = function (documentOrHtmlElement) {
+
+            //document.addEventListener('DOMContentLoaded', function() {
+                // find all medias for your player
+                var html5Videos = documentOrHtmlElement.getElementsByTagName('video');            
+            //}, false);
+
+            for (var i = 0; i < html5Videos.length; i++) {
+               
+		var title = "[[[= model.title || model.name || '']]]" ;
+		html5Videos[i].setAttribute("title", title);
+
+		// for each of the medias found, create an instance of your player as long as the media is 
+                // not supposed to be ignored via a "data-piwik-ignore" attribute
+                if (!MA.element.isMediaIgnored(html5Videos[i])) {
+                    new GaoPlayer(html5Videos[i], MA.mediaType.VIDEO); 
+                    // there is also a MA.mediaType.AUDIO constant if you want to track audio
+                }
+            }
+        };
+
+
+	//this should not be in production
+	MA.enableDebugMode();
+	
+	
+	//this would be a serious problem with scope here
+	//window.alert(GaoPlayer.resource);
+
+        // adding the newly created player to the Media Analytics tracker
+        MA.addPlayer('gaoPlayer', GaoPlayer);
+    };
+
+      var _paq = _paq || [];
+      _paq.push(["setDomains", ["*.demo.easyvideo.vn/nguyenkim"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      _paq.push(['enableHeartBeatTimer']);
+      (function() {
+        var u="//113.164.27.59/pw3/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '2030']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//113.164.27.59/pw3/piwik.php?idsite=2030" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
+</head>
+<body data-vbx-style-font-family="standardTextFormatFont"
+      data-vbx-class="bodyClass(customLogoUrl, title, ctaText, showViewbixBranding, showFacebookButton, showTwitterButton, showShareButton, keepControlsVisible:false, backgroundImage:)">
+[[[= partial('partials/vbx_body.html')]]]
+
+
+</body>
+</html>

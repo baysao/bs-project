@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        VBX.App.init({
+            feed: { container: 'feed-container1', template: 'item-template1', source: 'feedXmlString' }
+        });
+    </script>
+    <script> function getAppConfigs() { return {"id":"b1a47c9d-e922-44cb-8e39-9ceccd3006bc","internalId":"98f30855-4ece-4c28-897a-996682c5a7cb","component":"com.qoof.sdk.components.rss.SocialShare","order":27,"lightStyle":false,"instructions":"asdfasdfasdf","icon":"/storage/content/icon/16/socialshare.png","thumbnailWidth":"32","label":"Social Media","showInMenu":"true","feedXmlString":"<feed><entry><id></id><title></title><content>Like us on Facebook</content><thumbnailUrl>//assets.viewbix.com/1de6383d6bc72baaad6b4eb974e6ef1d.png</thumbnailUrl><link>http://aa</link><contentSnippet>Like us on Facebook</contentSnippet><publishedDate></publishedDate><index>0</index></entry><entry><id></id><title></title><content>Follow us on Twitter</content><thumbnailUrl>//assets.viewbix.com/2e196eb56ed1490704f340102675d173.png</thumbnailUrl><link>http://dfa</link><contentSnippet>Follow us on Twitter</contentSnippet><publishedDate></publishedDate><index>10</index></entry><entry><id></id><title></title><content>Find us on Google+</content><thumbnailUrl>//assets.viewbix.com/6b07a43d78830335538c9bcbda148686.png</thumbnailUrl><link>http://asdfas</link><contentSnippet>Find us on Google+</contentSnippet><publishedDate></publishedDate><index>20</index></entry><entry><id></id><title></title><content>Subscribe to our YouTube</content><thumbnailUrl>//assets.viewbix.com/62a53f54d2cfa317bb6fea3a289bc24d.png</thumbnailUrl><link></link><contentSnippet>Subscribe to our YouTube</contentSnippet><publishedDate></publishedDate><index>30</index></entry><entry><id></id><title></title><content>Follow us on Pinterest</content><thumbnailUrl>//assets.viewbix.com/1abd078a32bc5583cb7b872659427bbb.png</thumbnailUrl><link>http://asdfa</link><contentSnippet>Follow us on Pinterest</contentSnippet><publishedDate></publishedDate><index>50</index></entry><entry><id></id><title></title><content>Connect on LinkedIn</content><thumbnailUrl>//assets.viewbix.com/69895bbd05e17b5bd653b4722db92b6e.png</thumbnailUrl><link>http://dasfdas</link><contentSnippet>Connect on LinkedIn</contentSnippet><publishedDate></publishedDate><index>40</index></entry><entry><id></id><title></title><content>Stumble Upon Us</content><thumbnailUrl>//assets.viewbix.com/37680cb565f4fd922ddceaa8d69f051b.png</thumbnailUrl><link>http://asasdfa</link><contentSnippet>Stumble Upon Us</contentSnippet><publishedDate></publishedDate><index>5</index></entry><entry><id></id><title></title><content>Visit us on Tumblr</content><thumbnailUrl>//assets.viewbix.com/4180b4a15bd023c35810868f0d10ba0a.png</thumbnailUrl><link>http://asdfas</link><contentSnippet>Visit us on Tumblr</contentSnippet><publishedDate></publishedDate><index>60</index></entry><entry><id></id><title></title><content>Follow us on Instagram</content><thumbnailUrl>//assets.viewbix.com/4018ecdc6da2cab9b6baae80569209a9.png</thumbnailUrl><link>http://asdfasd</link><contentSnippet>Follow us on Instagram</contentSnippet><publishedDate></publishedDate><index>45</index></entry></feed>","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body>
+<div class="vbx-scrollable">
+    <div class="instructions" data-vbx="instructions"></div>
+    <div id="feed-container1" class="vbx-feed-container">
+        <div id="item-template1" class="vbx-feed-item">
+            {if $link}
+            <a href="{$link}">
+                <div class="vbx-feed-link-item">
+                    <img class="vbx-feed-thumbnail" src="{$thumbnail}" />
+                    <span class="vbx-feed-content">{$content}</span>
+                </div>
+            </a>
+            {/if}
+        </div>
+    </div>
+</div>
+</body>
+</html>

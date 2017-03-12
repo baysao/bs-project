@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="vast_2.0.1-creativeView.xsd">
+    <Ad>
+        <InLine id="Viewbix">
+            <AdSystem>Viewbix</AdSystem>
+            <AdTitle>Viewbix VPAID Ad</AdTitle>
+            <Creatives>
+                <Creative sequence="1">
+                    <Linear>
+                        <Duration>00:00:35</Duration>
+                        <MediaFiles>
+                            <MediaFile delivery="progressive" type="application/javascript" width="224" height="398" apiFramework="VPAID"><![CDATA[https://origin-www.viewbix.com/plugins/vpaid.js?layout=jolt&id=baeb23a9-e9f0-420a-ac33-c1074a8e5be3&html5=true]]></MediaFile>
+                        </MediaFiles>
+                        <AdParameters><![CDATA[html5=true]]></AdParameters>
+                    </Linear>
+                </Creative>
+            </Creatives>
+            <Error><![CDATA[https://origin-www.viewbix.com/tracklog]]></Error>
+        </InLine>
+    </Ad>
+</VAST>

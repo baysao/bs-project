@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        var tokenName;
+
+        VBX.App.init({
+            feed: {
+                container: 'feed-container1', template: 'item-template1', source: 'feedXmlString'
+            },
+            ready: function () {
+                tokenName = VBX.App.config('tokenName');
+            }
+        });
+
+        function hideResults () {
+            document.querySelector('#results').style.display = 'none';
+        }
+
+        function onClickFind() {
+            hideResults();
+            var query = document.querySelector('#zip').value;
+            if (!VBX.empty(query)) {
+                var links = document.querySelectorAll('.vbx-feed-item');
+                for (var i = 0; i < links.length; ++i) {
+                    var element = links[i];
+                    var link = element.getAttribute('link');
+                    link = link.replace(new RegExp('{' + tokenName + '}', 'g'), query);
+                    element.setAttribute('onclick', 'window.open(\'' + link + '\',\'_blank\');return false;');
+
+                    if (links.length == 1) {
+                        window.open(link, '_blank');
+                    }
+                }
+
+                if (links.length != 1) {
+                    document.querySelector('#results').style.display = 'block';
+                }
+            }
+
+            return false;
+        }
+    </script>
+
+    <style>
+        #form {display:block; margin-bottom:1em;}
+        #results {display:none;}
+        #feed-container1:empty:before {
+            content: "No results found."
+        }
+    </style>
+
+    <script> function getAppConfigs() { return {"id":"997c3bc4-6969-45b8-8a44-50b1a56851a3","internalId":"2a295c72-d25d-48d2-8a6b-a5920cf36f7f","component":"com.qoof.sdk.components.rss.StoreLocatorList","order":23,"lightStyle":false,"instructions":"Enter your ZIP code to find locations near you:","feedXmlString":"","submitText":"Find","icon":"/storage/content/icon/16/store_locator.png","label":"Store Locator","thumbnailWidth":"70","tokenName":"zipcode","showInMenu":"true","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body>
+<div class="vbx-scrollable">
+    <form id="form" onsubmit="return onClickFind();">
+        <div class="instructions" data-vbx="instructions"></div>
+        <input id="zip" type="text" name="zip" onkeydown="hideResults()" />
+        <button type="button" class="vbx-submit" data-vbx="submitText" onclick="onClickFind();"></button>
+        <input class="input-pix" type="image" src="//www.viewbix.com/pix.gif" />
+    </form>
+    <div id="results">
+        <div id="feed-container1" class="vbx-feed-container">
+            <div id="item-template1" class="vbx-feed-item" link="{$link}">
+                <div class="vbx-feed-link-item">
+                    {if $thumbnail}<img class="vbx-feed-thumbnail" src="{$thumbnail}" data-vbx-style-width="VBX.px(thumbnailWidth)" />{/if}
+                    <div class="vbx-feed-title">{$title}</div>
+                    <div class="vbx-feed-content">{$content}</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+

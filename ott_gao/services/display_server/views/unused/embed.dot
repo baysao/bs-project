@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>[[[= model.name]]]</title>
+    <meta name="version" content="[[[= model.vbixver]]]">
+    [[[= partial('partials/common.html')]]]
+    <script type="text/javascript">
+        [[[= partial('partials/init_player.js') ]]]
+                [[[= partial('partials/init_vbx.js') ]]]
+    </script>
+</head>
+<body data-vbx-style-font-family="standardTextFormatFont"
+      data-vbx-class="bodyClass(customLogoUrl, title, ctaText, showViewbixBranding, showFacebookButton, showTwitterButton, showShareButton, keepControlsVisible:false, backgroundImage:)">
+
+[[[= partial('partials/init_vbx.html') ]]]
+[[[= partial('partials/init_tracking.html') ]]]
+</body>
+</html>

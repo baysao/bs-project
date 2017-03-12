@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+      <!DOCTYPE html>
+      <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+          <title></title>
+          <link href="../vbxapp.css" rel="stylesheet">
+          <script src="../vbxapp.min.js"></script>
+          <script>
+              VBX.App.init({
+                  feed: {
+                      container: 'feed-container1', template: 'item-template1', source: 'feedXmlString'
+                  }
+              });
+          </script>
+          <script> function getAppConfigs() { return {"id":"a419a213-9c05-4fe0-be3c-8fe9fcf7b102","internalId":"6940c238-a404-479f-9979-e277603f720b","component":"com.qoof.sdk.components.rss.RSSItem","order":1,"lightStyle":true,"thumbnailWidth":"70","showInMenu":"true","label":"About","feedXmlString":"<feed><entry><id></id><title>About title</title><content>test na</content><thumbnailUrl>//assets.viewbix.com/58386196-c324-407b-9d44-aec92e812ee6.png</thumbnailUrl><link></link><contentSnippet>test na</contentSnippet><publishedDate></publishedDate><index></index></entry></feed>","icon":"/storage/content/icon/16/details.png","player.title":"My Title","player.videoUrl":"http://novaasia.net/CgBefvjK-f4.mp4","player.videoThumbnailUrl":"//assets.viewbix.com/5a03d484-5494-4150-8d95-a3bf86bf366a.png","player.name":"demo2","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body class="vbx-app-rssitem">
+<div class="vbx-scrollable">
+    <div id="feed-container1" class="vbx-feed-container">
+        <div id="item-template1" class="vbx-feed-item">
+            {if $thumbnail}<img class="vbx-feed-thumbnail" src="{$thumbnail}" data-vbx-style-width="VBX.px(thumbnailWidth)" />{/if}
+            {if $author}<div class="vbx-feed-author">{$author}</div>{/if}
+            <div class="vbx-feed-title">{$title}</div>
+            <div class="vbx-feed-content">{$content}</div>
+            {if $publishedDate}<div class="vbx-feed-date">{$publishedDate}</div>{/if}
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+</title>
+</head>
+<body>
+
+</body>
+</html>

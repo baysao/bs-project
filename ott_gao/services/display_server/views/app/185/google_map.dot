@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Google Map</title>
+    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC0jP7teT6j50zBukQfVZHtUL59O0tP-fE'></script>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            position:relative;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map-canvas {
+            position:absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+        }
+
+        .gm-style-iw {
+            color: black;
+        }
+    </style>
+    <script>
+        VBX.App.init({
+            ready: function () {
+                document.body.style.padding = '0';
+
+                var address = VBX.App.config('address');
+                VBX.App.listen('address', function (value) {
+                    address = value;
+                    updateMap();
+                });
+
+                var zoom = VBX.App.config('zoom');
+                if (VBX.empty(zoom)) {
+                    zoom = 15;
+                } else {
+                    zoom = parseInt(zoom, 10);
+                }
+                VBX.App.listen('zoom', function (value) {
+                    zoom = parseInt(value, 10);
+                    updateMap();
+                });
+
+                var title = VBX.App.config('title');
+                VBX.App.listen('title', function (value) {
+                    title = value;
+                    if (mapRendered) {
+                        updateTitle();
+                    } else {
+                        updateMap();
+                    }
+                });
+
+                var element = document.querySelector('#map-canvas');
+                var options = {
+                    center: new google.maps.LatLng(-34.397, 150.644),
+                    zoom: zoom,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    mapTypeControl: false
+                };
+
+                var map = new google.maps.Map(element, options);
+                var geocoder = new google.maps.Geocoder();
+                var marker = new google.maps.Marker({map:map});
+                var infoWindow = new google.maps.InfoWindow();
+                var mapRendered = false;
+                var mapLoaded = false;
+
+                function updateTitle() {
+//console.log({
+//    method: 'updateTitle',
+//    title: title
+//});
+                    if (!VBX.empty(title)) {
+                        infoWindow.setContent(title);
+                        infoWindow.open(map, marker);
+                        google.maps.event.trigger(map, 'resize');
+//console.log({
+//    method: 'updateTitle2',
+//    title: title,
+//    map: map,
+//    marker: marker
+//});
+                    }
+                }
+
+                function updateMap() {
+//console.log({
+//    method: 'updateMap',
+//    address: address,
+//    zoom: zoom,
+//    map: map,
+//    geocoder: geocoder
+//});
+                    if (VBX.ok(address) && VBX.ok(zoom) && VBX.ok(map) && VBX.ok(geocoder) && mapLoaded) {
+                        geocoder.geocode({
+                            'address': address
+                        }, function (results, status) {
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                var center = results[0].geometry.location;
+                                marker.setPosition(center);
+                                updateTitle();
+                                map.setCenter(center);
+                                map.setZoom(zoom);
+                                mapRendered = true;
+//console.log({
+//    method: 'geocode success',
+//    center: center,
+//    zoom: zoom
+//});
+//                            } else {
+//console.log({
+//    method: 'geocode fail'
+//});
+                            }
+                        });
+                    }
+                }
+
+                google.maps.event.addListenerOnce(map, 'idle', function () {
+                    mapLoaded = true;
+                    updateMap();
+                });
+
+
+                updateMap();
+            }
+        });
+
+
+    </script>
+    <style>
+        body {overflow:hidden;}
+        #map-canvas {display:block;}
+    </style>
+    <script> function getAppConfigs() { return {"id":"90f52d98-e462-4510-8609-6eb29e5f68c8","internalId":"b0e34992-f5dd-4126-8604-087b3509e820","component":"com.qoof.sdk.components.map.GoogleMap","order":14,"lightStyle":false,"icon":"/storage/content/icon/16/google_map.png","address":"New York City","label":"Google Map","zoom":"7","showInMenu":"true","title":"Visit us in New York","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body>
+<div id="map-canvas"/>
+</body>
+</html>
+

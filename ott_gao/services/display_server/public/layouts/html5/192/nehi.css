@@ -1,0 +1,82 @@
+#cta-button-menu-container {
+    display: block;
+    position: relative;
+    right: 0.5em;
+    top: 0.25em;
+    float: right;
+    z-index: 3;
+    max-width: 40%;
+}
+
+.menumouseout #cta-button-menu-container {
+    overflow: hidden;
+}
+
+#cta-button {
+    z-index: 4;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0;
+    max-width: 100%;
+    right: 0;
+    top: 0;
+}
+
+#menu1 {
+    z-index: 3;
+}
+
+.vbx-menu li {
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 0;
+    list-style-type: none;
+    cursor: pointer;
+    overflow: visible;
+    white-space: normal;
+    height: auto !important;
+    margin-bottom: 0px;
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+}
+
+    .vbx-menu li img {
+        display: none;
+    } 
+    
+    .vbx-menu li .vbx-menu-label {
+        display: inline-block;
+        padding: 0 0.5em;
+        height: auto !important;
+        line-height: 14px;
+        word-wrap: break-word;
+        width: 100%;
+        font-size: 14px;
+        background: transparent;
+    }
+
+#title1 {
+    z-index: 3;
+    background: transparent;
+}
+
+.vbx-menu { 
+    color: white; background-color:rgba(255, 94, 94, 0.75); 
+}
+
+.vbx-menu li:hover .tooltip {
+    display: inline;
+    position: absolute;
+    right: 110%;
+    background: rgba(248, 243, 249, 1);
+    padding: 5px 15px;
+    z-index: 98;
+    border-radius: 5px;
+    font-size: 11px;
+    color: black;
+}
+
+.tooltip {
+    display: none;
+    word-wrap: break-word;
+}

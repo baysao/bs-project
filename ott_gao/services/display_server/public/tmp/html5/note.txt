@@ -1,0 +1,3 @@
+$viewbix$sdk$helper$UriHelper$getProtocolAndDomain$$
+VBX.Layout.VideoPlayerPlatform.EXTERNAL
+$JSCompiler_StaticMethods_registerService$$

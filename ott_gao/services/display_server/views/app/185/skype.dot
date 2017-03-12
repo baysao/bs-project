@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        var address = '';
+
+        VBX.App.init({
+            ready: function () {
+                VBX.App.listen('address', function (value) {
+                    address = value;
+                    updateButton();
+                });
+            }
+        });
+
+        function updateButton() {
+            var buttonText;
+            var numericRegExp = /^[0-9+ .()-]*$/;
+            if (numericRegExp.test(address)) {
+                buttonText = 'Call with Skype';
+            } else {
+                buttonText = 'Chat on Skype';
+            }
+            document.querySelector('#call-button').textContent = buttonText;
+        }
+
+        function clickButton() {
+            var numericRegExp = /^[0-9+ .()-]*$/;
+            if (numericRegExp.test(address)) {
+                window.open('skype:+' + address + '?call', 'skypeout', 'width=472,height=320,resizable=yes');
+            } else {
+
+                window.open('skype:' + address + '?chat', 'skypechat', 'width=472,height=320,resizable=yes');
+            }
+        }
+    </script>
+
+    <style>
+        #skype-logo {margin-bottom: 1em;}
+    </style>
+    <script> function getAppConfigs() { return {"id":"f602d408-dc39-45d3-982f-4e5cd7f507eb","internalId":"64aa3483-0bc6-4317-9a11-3f4e1cf1b762","component":"com.qoof.sdk.components.contact.Skype","order":26,"lightStyle":false,"address":"baysao","label":"Skype","showInMenu":"true","icon":"/storage/content/icon/16/skype.png","instructions":"Click the button below to contact us through Skype.","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body>
+<div class="vbx-scrollable">
+    <img id="skype-logo" src="//www.viewbix.com/storage/content/img/skype_logo.png" />
+    <div class="instructions" data-vbx="instructions"></div>
+    <button type="button" id="call-button" class="vbx-submit" onclick="clickButton()"></button>
+</div>
+</body>
+</html>
+

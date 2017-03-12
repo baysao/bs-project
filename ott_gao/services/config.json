@@ -1,0 +1,39 @@
+{
+  "hosts": {
+    "stream_prefix": {
+      "raw": "/raw/vpub",
+      "hls": "/hls/vpub",
+      "thumb": "/thumb"
+    },
+   "stream":"http://s.gao.easyvideo.vn",
+   "display":"http://dp.gao.easyvideo.vn",
+    "static":"http://st.gao.easyvideo.vn",
+    "api":"http://a.gao.easyvideo.vn"
+  },
+ "services": {
+    "api_server": { "host": "127.0.0.1", "port": 5000},
+    "thumb_server": { "host": "127.0.0.1", "port": 6000},
+    "display_server": { "host": "127.0.0.1", "port": 4000}
+  },
+
+  "log_dir": "./logs",
+  "media_dir": "/opt/apps/data/",
+  "raw_dir": "/opt/apps/data/vraw/",
+  "transcoded_dir": "/opt/apps/data/vpub/",
+  "thumbnail_dir": "/opt/apps/data/thumb/",
+  "database": {
+    "name": "gao",
+    "host": "127.0.0.1",
+    "port": 27017
+  },
+  "queueServer": {
+    "rabbitmq": {
+      "timeout": 22222,
+      "type": "rabbitmq",
+      "host": "localhost",
+      "port": 5672,
+      "username": "gao",
+      "password": "pQMY4YW0uDvCQELiJVFEUYx0p"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        var message;
+
+        VBX.App.init({
+            ready: function () {
+                VBX.App.listen('message', function (value) {
+                    message = value;
+                    updateImage();
+                });
+            }
+        });
+
+        function updateImage() {
+            var qrPixelSize = Math.max(Math.round(window.innerHeight * 0.7), 200);
+            var image = document.querySelector('#image');
+            var qrUrl = 'http://chart.apis.google.com/chart?cht=qr&chs=' + qrPixelSize + 'x' + qrPixelSize + '&choe=UTF-8&chld=H&chl=' + encodeURIComponent(message);
+            image.setAttribute('src', qrUrl);
+        }
+
+    </script>
+
+    <style>
+        body {text-align:center;}
+    </style>
+    <script> function getAppConfigs() {  return [[[= JSON.stringify(model.getAppConfigs)]]];
+//        return {
+//            "id": "5508742d-a8b8-4dd2-8721-aa97b0d22bcb",
+//            "internalId": "3656706f-09a0-4738-8a60-ea86295bbc60",
+//            "component": "com.qoof.sdk.components.qr.QRCode",
+//            "order": 2,
+//            "lightStyle": false,
+//            "showInMenu": "true",
+//            "message": "NGUYENKIM_S6_DIS30PER",
+//            "mid_roll_app.startTime": "30",
+//            "icon": "/storage/content/icon/16/qr.png",
+//            "instructions": "Scan barcode và nhắn tin về tổng đài 999 để nhận để nhận mã giảm giá VIP",
+//            "label": "Đăng ký - Giảm ngay 1 triệu",
+//            "player.videoThumbnailUrl": "//assets.viewbix.com/4dc78442-b3ce-446a-aaf7-92c3c452b4b2.jpg",
+//            "player.title": "Samsung Galaxy S6 edge+ : Official Introduction",
+//            "player.videoUrl": "http://demo.easyvideo.vn/samsung_s6e.mp4",
+//            "player.name": "Samsung Galaxy S6 edge+ : Official Introduction",
+//            "affiliateRegex": ["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)", "tplclick\\?lid=\\d+&pubid=(?P<ac>.+)", "bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&", "&pubid=(?P<ac>[^&]*)", "&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&", "/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)", "shareasale\\.com[^?]*\\?(?P<query>.*)", "/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+", "linkconnector\\.com[^?]*\\?(?P<query>.*)", "(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]
+//        };
+//    }
+    //        return {
+//            "id": "96c8bbed-af19-477d-a136-fb8cd6be64ad",
+//            "internalId": "5a2b94a1-a07f-43e9-92aa-6c5d4d617de0",
+//            "component": "com.qoof.sdk.components.qr.QRCode",
+//            "order": 24,
+//            "lightStyle": false,
+//            "icon": "/storage/content/icon/16/qr.png",
+//            "showInMenu": "true",
+//            "message": "http://www.viewbix.com",
+//            "label": "QR Code",
+//            "instructions": "Scan this code to visit our site.",
+//            "player.videoThumbnailUrl": "//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg",
+//            "player.videoUrl": "http://demo.easyvideo.vn/vinamilk.mp4",
+//            "player.title": "Vinamilk Optimum 4",
+//            "player.name": "Vinamilk",
+//            "affiliateRegex": ["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)", "tplclick\\?lid=\\d+&pubid=(?P<ac>.+)", "bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&", "&pubid=(?P<ac>[^&]*)", "&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&", "/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)", "shareasale\\.com[^?]*\\?(?P<query>.*)", "/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+", "linkconnector\\.com[^?]*\\?(?P<query>.*)", "(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]
+//        };
+    } </script>
+</head>
+<body>
+<div class="instructions" data-vbx="instructions"></div>
+<img id="image" />
+</body>
+</html>
+

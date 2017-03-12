@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="vast_2.0.1-creativeView.xsd">
+    <Ad>
+        <InLine id="Viewbix">
+            <AdSystem>Viewbix</AdSystem>
+            <AdTitle>Viewbix VPAID Ad</AdTitle>
+            <Creatives>
+                <Creative sequence="1">
+                    [[[? model.adtype === 'nonlinear']]]
+                    <NonLinearAds>
+                        <NonLinear apiFramework="VPAID">
+                            [[[? model.html5 === 'true']]]
+                            <StaticResource creativeType="application/javascript">
+                                <![CDATA[http://dp.gao.easyvideo.vn/plugins/vpaid.js?layout=jolt&[[[= model.q || '']]]]]>
+                            </StaticResource>
+                            [[[??]]]
+                            <StaticResource creativeType="application/x-shockwave-flash">
+                                <![CDATA[http://dp.gao.easyvideo.vn/layouts/811/jolt.swf?rp=true&&version=811&sp=http%3a%2f%2fdp.gao.easyvideo.vn&[[[= model.q || '']]]]]>
+                            </StaticResource>
+                            [[[?]]]
+                            <AdParameters> [[[= model.q1 || '']]] </AdParameters>
+                        </NonLinear>
+                    </NonLinearAds>
+                    [[[??]]]
+                    <Linear>
+                        <Duration>00:00:35</Duration>
+                        <MediaFiles>
+                            [[[? model.html5 === 'true']]]
+                            <MediaFile delivery="progressive" type="application/javascript" width="224" height="398" apiFramework="VPAID">
+                                <![CDATA[http://dp.gao.easyvideo.vn/plugins/vpaid.js?layout=jolt&[[[= model.q || '']]]]]>
+                            </MediaFile>
+                            [[[??]]]
+                            <MediaFile delivery="progressive" type="application/x-shockwave-flash" width="224" height="398" apiFramework="VPAID">
+                                <![CDATA[http://dp.gao.easyvideo.vn/layouts/811/jolt.swf?rp=true&&version=811&sp=http%3a%2f%2fdp.gao.easyvideo.vn&[[[= model.q || '']]]]]>
+                            </MediaFile>
+                            [[[?]]]
+                        </MediaFiles>
+                        <AdParameters>
+                            <![CDATA[[[[= model.q1 || '']]]]]>
+                        </AdParameters>
+                    </Linear>
+                    [[[?]]]
+                </Creative>
+            </Creatives>
+            <Error><![CDATA[http://p.gao.easyvideo.vn/gaotracker]]></Error>
+        </InLine>
+    </Ad>
+</VAST>

@@ -1,0 +1,160 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Peer5 client -->
+    <!--<script src="//api.peer5.com/peer5.js?id=ncp2vywz762cq79dgwd7"></script>-->
+    <script src="./peer5.2.js?id=ncp2vywz762cq79dgwd7"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./videojs/assets/video-js.css">
+
+    <!-- video.js -->
+    <script src="./peer5.videojs.js"></script>
+    <!--<script src="./peer5.videojs.js"></script>-->
+
+    <!-- youbora -->
+    <!--<script src="http://smartplugin.youbora.com/1.4/js/libs/youbora-data-1.4.1.min.js"></script>-->
+    <!--<script src="http://smartplugin.youbora.com/1.4/js/libs/youbora-api-1.4.5.min.js"></script>-->
+    <!--<script src='http://smartplugin.youbora.com/1.4/js/videojs/3.4.3/sp.min.js'></script>-->
+
+    <title>Peer5 - Streaming Demo</title>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-8 col-sm-12">
+                <a href="//www.peer5.com" class="logo">
+                    <img src="assets/img/logo-white.png" alt="Peer5 Logo">
+                </a>
+
+                <p class="lead">Streaming demo</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <br>
+                <a href="https://app.peer5.com/register" onclick="ga('send','event','button','signup');" class="btn btn-peer5" style="position:absolute; right:0;">Signup</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="row">
+            <div class="col-lg-7 col-md-8 col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class=""><a href="clappr.html" data-toggle="tab" aria-expanded="true">Clappr</a></li>
+                    <li class="active"><a data-toggle="tab" aria-expanded="true">VideoJS</a></li>
+                    <li class=""><a href="flowplayer.html" data-toggle="tab" aria-expanded="true">Flowplayer</a></li>
+                    <li class=""><a href="jwplayer6.html" data-toggle="tab" aria-expanded="true">JWPlayer6</a></li>
+                    <li class=""><a href="shakaplayer.html" data-toggle="tab" aria-expanded="true">Shakaplayer</a></li>
+                    <li class="last"><a href="javascript:" target="_target" onclick="window.open(location.href);"
+                                        data-toggle="tab" aria-expanded="true">Add Peer</a></li>
+                </ul>
+                <video id="video" class="video-js vjs-default-skin" height="360" width="640" controls>
+                    <source src="https://livestream.storage.googleapis.com/hls/kite/index.m3u8"
+                            type="application/x-mpegURL">
+                </video>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <select class="form-control" id="streams">
+                    <option>Select stream to play</option>
+                    <option value="https://livestream.peer5.com/video/kite/index.m3u8">Kite - LIVE</option>
+
+                    <option value="http://wowza.peer5.com/live/smil:nature.smil/playlist.m3u8">
+                        Nature - Live - MBR
+                    </option>
+
+                    <option value="http://wowza.peer5.com/live/smil:clock.smil/playlist.m3u8">
+                        Clock - Live
+                    </option>
+
+                    <option value="http://wowza.peer5.com/vod/mp4:cartoon.mp4/playlist.m3u8">
+                        Cartoon - VOD
+                    </option>
+
+                    <option value="http://wowza.peer5.com/vod/mp4:avengers.mp4/playlist.m3u8">
+                        Avengers - VOD
+                    </option>
+
+                    <option value="https://cdnapisec.kaltura.com/p/1375472/sp/137547200/playManifest/entryId/0_945p1zm2/flavorIds/0_7gbto9wn,0_lotoheyk/format/applehttp/protocol/https/a.m3u8">
+                        Serfomay - VOD
+                    </option>
+
+                    <option value="https://cdnapisec.kaltura.com/p/1375472/sp/137547200/playManifest/entryId/0_ncvvnzfe/flavorIds/0_obbhtwhw,0_ikr2ob7t/format/applehttp/protocol/https/a.m3u8">
+                        Tears of Steel - VOD
+                    </option>
+                </select>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Real time statistics</div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>HTTP</th>
+                                <th>P2P</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Total Downloaded</td>
+                                <td class="stats-http-download metric">0</td>
+                                <td class="stats-p2p-download metric">0</td>
+                            </tr>
+                            <tr>
+                                <td>Total Uploaded</td>
+                                <td class="stats-http-upload metric">0</td>
+                                <td class="stats-p2p-upload metric">0</td>
+                            </tr>
+                            <tr>
+                                <td>Peers</td>
+                                <td class="stats-http-peers metric">----</td>
+                                <td class="stats-p2p-peers metric">0</td>
+                            </tr>
+                            <tr>
+                                <td>Usage</td>
+                                <td class="stats-http-usage metric">0%</td>
+                                <td class="stats-p2p-usage metric">0%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="chart-files"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="//code.highcharts.com/adapters/standalone-framework.js"></script>
+<script src="//code.highcharts.com/highcharts.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    (function() {
+
+        var streams = document.getElementById('streams');
+
+        streams.onchange = function() {
+            var val = streams.value;
+
+            if (val) {
+                app.setStream(val);
+            }
+        };
+
+        app.init('videojs');
+    })();
+</script>
+</body>
+</html>

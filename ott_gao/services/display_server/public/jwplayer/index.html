@@ -1,0 +1,23 @@
+<html>
+<head>
+<!-- <script type="text/javascript" src="jwads/jwplayer.js"></script> -->
+<!-- <script type="text/javascript">jwplayer.key="vmAEdu5OJSCiJfE3aWibJZ6338lN/A7tybduu0fdEfxYgi7AkWpjckRUFeI=";</script> -->
+</head>
+	<body>
+	<div id="myElement"></div>
+	<script type="text/javascript">
+		var playerInstance = jwplayer('myElement');
+		playerInstance.setup({
+		  // file: 'rtmp://dev.wowza.longtailvideo.com/vod/_definst_/sintel/640.mp4',
+		  file: 'rtmp://dev.baysao.com/mypull.mp4',
+		  image: 'pb3.jpg',
+		  primary: 'flash',
+		  // advertising: {
+		  //   client: 'vast',
+		  //    tag: "jwplayer/jwads/ads.xml"
+		  // }
+		});
+	</script>
+	</body>
+
+</html>

@@ -1,0 +1,73 @@
+<div id="mask">
+    <div id="background" data-vbx-style-background-color="backgroundColor"
+         data-vbx-style-border-radius="VBX.px(cornerRadius:8)"></div>
+
+
+    <div id="title1">
+        <a id="cta-button" data-vbx="ctaText" data-vbx-style-background-color="ctaButtonBackgroundColor"
+           data-vbx-style-color="ctaButtonTextColor(ctaButtonBackgroundColor)"
+           onclick="VBX.Layout.clickCtaButton(); return false;"></a>
+        <img class="custom-logo" data-vbx-class="customLogoClass(customLogoUrl, scaleLogoToTitleBar, customLogoLink)"
+             data-vbx-src="/layouts/html5/[[= model.vbixver]]/customLogoUrl" onclick="VBX.Layout.clickCustomLogo();"/>
+
+        <div class="title" data-vbx-class="titleClass(customLogoUrl)" data-vbx="title"
+             data-vbx-style-color="titleTextFormatColor"
+             data-vbx-href="/layouts/html5/[[= model.vbixver]]/titleLink"></div>
+    </div>
+
+    <div id="video1"></div>
+
+
+    <div id="bottomLogo" class="bottom-logo"
+         data-vbx-class="bottomLogoClass(bottomLogoUrl, bottomLogoLink, bannerApps:)">
+        <img id="bottom-logo" data-vbx-src="/layouts/html5/[[= model.vbixver]]/bottomLogoUrl"
+             data-vbx-href="/layouts/html5/[[= model.vbixver]]/bottomLogoLink"
+             onclick="VBX.Layout.clickBanner(); return false;"/>
+    </div>
+
+    <div id="viewbixBranding" class="viewbix-branding">
+
+        <!--<a href="http://www.viewbix.com/" target="_blank">-->
+        <!--<img alt="Powered by Viewbix" class="powered-by-viewbix" src="/storage/content/img/powered-by-viewbix.png"/>-->
+        <!--</a>-->
+
+    </div>
+
+    <div id="menu1">
+
+    </div>
+
+    <div id="apps1" class="overlay">
+        <div id="embedApp" class="vbx-app-body vbx-scrollable">
+            <div id="embed-share-section">
+                Share:
+                <div class="share-button share-facebook" data-vbx-class="facebookButtonClass(showFacebookButton)"
+                     onclick="VBX.Layout.shareFacebook(this)"></div>
+                <div class="share-button share-twitter" data-vbx-class="twitterButtonClass(showTwitterButton)"
+                     onclick="VBX.Layout.shareTwitter(this)"></div>
+            </div>
+            <div id="embed-link-section">
+                Link:
+                <textarea id="link-text" readonly></textarea>
+                Embed:
+                <textarea id="embed-text" readonly></textarea>
+            </div>
+        </div>
+        <div id="moreApp" class="vbx-app-body vbx-scrollable">More App</div>
+        <div id="rollPrompt">
+            <div id="skipLink" onclick="VBX.Layout.setRollAppCompleted()"><span class="skip-link-divider">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span
+                    class="skip-link-text">No, thanks.</span></div>
+        </div>
+    </div>
+
+
+    <div id="shareButtons" class="share-buttons">
+        <div class="share-button share-facebook" data-vbx-class="facebookButtonClass(showFacebookButton)"
+             onclick="VBX.Layout.shareFacebook(this)"></div>
+        <div class="share-button share-twitter" data-vbx-class="twitterButtonClass(showTwitterButton)"
+             onclick="VBX.Layout.shareTwitter(this)"></div>
+        <div class="share-button share-player" data-vbx-class="shareButtonClass(showShareButton)"
+             onclick="showEmbedApp(this)"></div>
+        <div class="share-button fullscreen-button" onclick="VBX.Layout.toggleFullScreen()"></div>
+    </div>
+</div>

@@ -1,0 +1,493 @@
+<objects>
+    <item>
+        <objectType>KalturaFlavorParams</objectType>
+        <videoCodec></videoCodec>
+        <videoBitrate>0</videoBitrate>
+        <audioCodec></audioCodec>
+        <audioBitrate>0</audioBitrate>
+        <audioChannels>0</audioChannels>
+        <audioSampleRate>0</audioSampleRate>
+        <width>0</width>
+        <height>0</height>
+        <frameRate>0</frameRate>
+        <gopSize>0</gopSize>
+        <conversionEngines></conversionEngines>
+        <conversionEnginesExtraParams></conversionEnginesExtraParams>
+        <twoPass>0</twoPass>
+        <deinterlice>0</deinterlice>
+        <rotate>0</rotate>
+        <operators></operators>
+        <engineVersion>0</engineVersion>
+        <format>copy</format>
+        <aspectRatioProcessingMode>0</aspectRatioProcessingMode>
+        <forceFrameToMultiplication16>1</forceFrameToMultiplication16>
+        <isGopInSec>0</isGopInSec>
+        <isAvoidVideoShrinkFramesizeToSource>0</isAvoidVideoShrinkFramesizeToSource>
+        <isAvoidVideoShrinkBitrateToSource>0</isAvoidVideoShrinkBitrateToSource>
+        <isVideoFrameRateForLowBrAppleHls>0</isVideoFrameRateForLowBrAppleHls>
+        <anamorphicPixels>0</anamorphicPixels>
+        <isAvoidForcedKeyFrames>0</isAvoidForcedKeyFrames>
+        <isCropIMX>0</isCropIMX>
+        <optimizationPolicy>1</optimizationPolicy>
+        <maxFrameRate>0</maxFrameRate>
+        <videoConstantBitrate>0</videoConstantBitrate>
+        <videoBitrateTolerance>0</videoBitrateTolerance>
+        <id>0</id>
+        <partnerId>0</partnerId>
+        <name>Source</name>
+        <systemName>Source</systemName>
+        <description>Maintains the original format and settings of the file - duplicate of the source file
+        </description>
+        <createdAt>1264317015</createdAt>
+        <isSystemDefault>1</isSystemDefault>
+        <tags>source</tags>
+        <requiredPermissions></requiredPermissions>
+        <sourceRemoteStorageProfileId>0</sourceRemoteStorageProfileId>
+        <mediaParserType>0</mediaParserType>
+    </item>
+    <item>
+        <objectType>KalturaFlavorParams</objectType>
+        <videoCodec>mpeg4</videoCodec>
+        <videoBitrate>300</videoBitrate>
+        <audioCodec>aac</audioCodec>
+        <audioBitrate>64</audioBitrate>
+        <audioChannels>0</audioChannels>
+        <audioSampleRate>0</audioSampleRate>
+        <width>320</width>
+        <height>0</height>
+        <frameRate>0</frameRate>
+        <gopSize>300</gopSize>
+        <conversionEngines>2,99,3</conversionEngines>
+        <conversionEnginesExtraParams>-async 2 -vsync 1 | -async 2 -vsync 1</conversionEnginesExtraParams>
+        <twoPass>0</twoPass>
+        <deinterlice>0</deinterlice>
+        <rotate>0</rotate>
+        <operators></operators>
+        <engineVersion>0</engineVersion>
+        <format>3gp</format>
+        <aspectRatioProcessingMode>0</aspectRatioProcessingMode>
+        <forceFrameToMultiplication16>1</forceFrameToMultiplication16>
+        <isGopInSec>0</isGopInSec>
+        <isAvoidVideoShrinkFramesizeToSource>0</isAvoidVideoShrinkFramesizeToSource>
+        <isAvoidVideoShrinkBitrateToSource>0</isAvoidVideoShrinkBitrateToSource>
+        <isVideoFrameRateForLowBrAppleHls>0</isVideoFrameRateForLowBrAppleHls>
+        <anamorphicPixels>0</anamorphicPixels>
+        <isAvoidForcedKeyFrames>0</isAvoidForcedKeyFrames>
+        <isCropIMX>0</isCropIMX>
+        <optimizationPolicy>1</optimizationPolicy>
+        <maxFrameRate>0</maxFrameRate>
+        <videoConstantBitrate>0</videoConstantBitrate>
+        <videoBitrateTolerance>0</videoBitrateTolerance>
+        <id>301991</id>
+        <partnerId>0</partnerId>
+        <name>Mobile (3GP)</name>
+        <systemName>Mobile(3GP)</systemName>
+        <description>Nokia/Blackberry</description>
+        <createdAt>1300960710</createdAt>
+        <isSystemDefault>1</isSystemDefault>
+        <tags>mobile,mpeg4</tags>
+        <requiredPermissions></requiredPermissions>
+        <sourceRemoteStorageProfileId>0</sourceRemoteStorageProfileId>
+        <mediaParserType>0</mediaParserType>
+    </item>
+    <item>
+        <objectType>KalturaFlavorParams</objectType>
+        <videoCodec>h264b</videoCodec>
+        <videoBitrate>400</videoBitrate>
+        <audioCodec>aac</audioCodec>
+        <audioBitrate>64</audioBitrate>
+        <audioChannels>2</audioChannels>
+        <audioSampleRate>44100</audioSampleRate>
+        <width>640</width>
+        <height>0</height>
+        <frameRate>0</frameRate>
+        <gopSize>0</gopSize>
+        <conversionEngines>2,99,3</conversionEngines>
+        <conversionEnginesExtraParams>-flags +loop+mv4 -cmp 256 -partitions +parti4x4+partp8x8+partb8x8 -trellis 1 -refs
+            1 -me_range 16 -keyint_min 20 -sc_threshold 40 -i_qfactor 0.71 -bt 100k -maxrate 400k -bufsize 1200k -rc_eq
+            &apos;blurCplx^(1-qComp)&apos; -level 30 -async 2 -vsync 1 -threads 4 | -flags +loop+mv4 -cmp 256
+            -partitions +parti4x4+partp8x8+partb8x8 -trellis 1 -refs 1 -me_range 16 -keyint_min 20 -sc_threshold 40
+            -i_qfactor 0.71 -bt 100k -maxrate 400k -bufsize 1200k -rc_eq &apos;blurCplx^(1-qComp)&apos; -level 30 -async
+            2 -vsync 1 | -x264encopts
+            qcomp=0.6:qpmin=10:qpmax=50:qpstep=4:frameref=1:bframes=0:threads=auto:level_idc=30:global_header:partitions=i4x4+p8x8+b8x8:trellis=1:me_range=16:keyint_min=20:scenecut=40:ipratio=0.71:ratetol=20:vbv-maxrate=400:vbv-bufsize=1200
+        </conversionEnginesExtraParams>
+        <twoPass>0</twoPass>
+        <deinterlice>0</deinterlice>
+        <rotate>0</rotate>
+        <operators></operators>
+        <engineVersion>0</engineVersion>
+        <format>mp4</format>
+        <aspectRatioProcessingMode>0</aspectRatioProcessingMode>
+        <forceFrameToMultiplication16>1</forceFrameToMultiplication16>
+        <isGopInSec>0</isGopInSec>
+        <isAvoidVideoShrinkFramesizeToSource>0</isAvoidVideoShrinkFramesizeToSource>
+        <isAvoidVideoShrinkBitrateToSource>0</isAvoidVideoShrinkBitrateToSource>
+        <isVideoFrameRateForLowBrAppleHls>0</isVideoFrameRateForLowBrAppleHls>
+        <anamorphicPixels>0</anamorphicPixels>
+        <isAvoidForcedKeyFrames>0</isAvoidForcedKeyFrames>
+        <isCropIMX>0</isCropIMX>
+        <optimizationPolicy>1</optimizationPolicy>
+        <maxFrameRate>0</maxFrameRate>
+        <videoConstantBitrate>0</videoConstantBitrate>
+        <videoBitrateTolerance>0</videoBitrateTolerance>
+        <id>487041</id>
+        <partnerId>0</partnerId>
+        <name>Basic/Small - WEB/MBL (H264/400)</name>
+        <systemName>Basic/Small - WEB/MBL (H264/400)</systemName>
+        <description>Basic/Small - WEB/MBL (H264/400)</description>
+        <createdAt>1348150198</createdAt>
+        <isSystemDefault>1</isSystemDefault>
+        <tags>mobile,web,mbr,iphone,iphonenew</tags>
+        <requiredPermissions>
+            <item>
+                <objectType>KalturaString</objectType>
+                <value>FEATURE_V2_FLAVORS</value>
+            </item>
+        </requiredPermissions>
+        <sourceRemoteStorageProfileId>0</sourceRemoteStorageProfileId>
+        <mediaParserType>0</mediaParserType>
+        <sourceAssetParamsIds></sourceAssetParamsIds>
+    </item>
+    <item>
+        <objectType>KalturaFlavorParams</objectType>
+        <videoCodec>h264b</videoCodec>
+        <videoBitrate>600</videoBitrate>
+        <audioCodec>aac</audioCodec>
+        <audioBitrate>64</audioBitrate>
+        <audioChannels>2</audioChannels>
+        <audioSampleRate>44100</audioSampleRate>
+        <width>640</width>
+        <height>0</height>
+        <frameRate>0</frameRate>
+        <gopSize>0</gopSize>
+        <conversionEngines>2,99,3</conversionEngines>
+        <conversionEnginesExtraParams>-flags +loop+mv4 -cmp 256 -partitions +parti4x4+partp8x8+partb8x8 -trellis 1 -refs
+            1 -me_range 16 -keyint_min 20 -sc_threshold 40 -i_qfactor 0.71 -bt 200k -maxrate 600k -bufsize 1200k -rc_eq
+            &apos;blurCplx^(1-qComp)&apos; -level 30 -async 2 -vsync 1 -threads 4 | -flags +loop+mv4 -cmp 256
+            -partitions +parti4x4+partp8x8+partb8x8 -trellis 1 -refs 1 -me_range 16 -keyint_min 20 -sc_threshold 40
+            -i_qfactor 0.71 -bt 200k -maxrate 600k -bufsize 1200k -rc_eq &apos;blurCplx^(1-qComp)&apos; -level 30 -async
+            2 -vsync 1 | -x264encopts
+            qcomp=0.6:qpmin=10:qpmax=50:qpstep=4:frameref=1:bframes=0:threads=auto:level_idc=30:global_header:partitions=i4x4+p8x8+b8x8:trellis=1:me_range=16:keyint_min=20:scenecut=40:ipratio=0.71:ratetol=20:vbv-maxrate=600:vbv-bufsize=1200
+        </conversionEnginesExtraParams>
+        <twoPass>0</twoPass>
+        <deinterlice>0</deinterlice>
+        <rotate>0</rotate>
+        <operators></operators>
+        <engineVersion>0</engineVersion>
+        <format>mp4</format>
+        <aspectRatioProcessingMode>0</aspectRatioProcessingMode>
+        <forceFrameToMultiplication16>1</forceFrameToMultiplication16>
+        <isGopInSec>0</isGopInSec>
+        <isAvoidVideoShrinkFramesizeToSource>0</isAvoidVideoShrinkFramesizeToSource>
+        <isAvoidVideoShrinkBitrateToSource>0</isAvoidVideoShrinkBitrateToSource>
+        <isVideoFrameRateForLowBrAppleHls>0</isVideoFrameRateForLowBrAppleHls>
+        <anamorphicPixels>0</anamorphicPixels>
+        <isAvoidForcedKeyFrames>0</isAvoidForcedKeyFrames>
+        <isCropIMX>0</isCropIMX>
+        <optimizationPolicy>1</optimizationPolicy>
+        <maxFrameRate>0</maxFrameRate>
+        <videoConstantBitrate>0</videoConstantBitrate>
+        <videoBitrateTolerance>0</videoBitrateTolerance>
+        <id>487051</id>
+        <partnerId>0</partnerId>
+        <name>Basic/Small - WEB/MBL (H264/600)</name>
+        <systemName>Basic/Small - WEB/MBL (H264/600)</systemName>
+        <description>Basic/Small - WEB/MBL (H264/600)</description>
+        <createdAt>1348150222</createdAt>
+        <isSystemDefault>1</isSystemDefault>
+        <tags>mobile,web,mbr,iphone,iphonenew</tags>
+        <requiredPermissions>
+            <item>
+                <objectType>KalturaString</objectType>
+                <value>FEATURE_V2_FLAVORS</value>
+            </item>
+        </requiredPermissions>
+        <sourceRemoteStorageProfileId>0</sourceRemoteStorageProfileId>
+        <mediaParserType>0</mediaParserType>
+    </item>
+    <item>
+        <objectType>KalturaFlavorParams</objectType>
+        <videoCodec>h264m</videoCodec>
+        <videoBitrate>900</videoBitrate>
+        <audioCodec>aac</audioCodec>
+        <audioBitrate>64</audioBitrate>
+        <audioChannels>2</audioChannels>
+        <audioSampleRate>44100</audioSampleRate>
+        <width>640</width>
+        <height>0</height>
+        <frameRate>0</frameRate>
+        <gopSize>0</gopSize>
+        <conversionEngines>2,99,3</conversionEngines>
+        <conversionEnginesExtraParams>-flags +loop+mv4 -cmp 256 -partitions +parti4x4+partp8x8+partb8x8 -trellis 1 -refs
+            1 -me_range 16 -keyint_min 20 -sc_threshold 40 -i_qfactor 0.71 -bt 300k -maxrate 900k -bufsize 1200k -rc_eq
+            &apos;blurCplx^(1-qComp)&apos; -level 31 -async 2 -vsync 1 -threads 4 | -flags +loop+mv4 -cmp 256
+            -partitions +parti4x4+partp8x8+partb8x8 -trellis 1 -refs 1 -me_range 16 -keyint_min 20 -sc_threshold 40
+            -i_qfactor 0.71 -bt 300k -maxrate 900k -bufsize 1200k -rc_eq &apos;blurCplx^(1-qComp)&apos; -level 31 -async
+            2 -vsync 1 | -x264encopts
+            qcomp=0.6:qpmin=10:qpmax=50:qpstep=4:frameref=1:bframes=0:threads=auto:level_idc=31:global_header:partitions=i4x4+p8x8+b8x8:trellis=1:me_range=16:keyint_min=20:scenecut=40:ipratio=0.71:ratetol=40:vbv-maxrate=900:vbv-bufsize=1200
+        </conversionEnginesExtraParams>
+        <twoPass>0</twoPass>
+        <deinterlice>0</deinterlice>
+        <rotate>0</rotate>
+        <operators></operators>
+        <engineVersion>0</engineVersion>
+        <format>mp4</format>
+        <aspectRatioProcessingMode>0</aspectRatioProcessingMode>
+        <forceFrameToMultiplication16>1</forceFrameToMultiplication16>
+        <isGopInSec>0</isGopInSec>
+        <isAvoidVideoShrinkFramesizeToSource>0</isAvoidVideoShrinkFramesizeToSource>
+        <isAvoidVideoShrinkBitrateToSource>0</isAvoidVideoShrinkBitrateToSource>
+        <isVideoFrameRateForLowBrAppleHls>0</isVideoFrameRateForLowBrAppleHls>
+        <multiStream></multiStream>
+        <anamorphicPixels>0</anamorphicPixels>
+        <isAvoidForcedKeyFrames>0</isAvoidForcedKeyFrames>
+        <isCropIMX>0</isCropIMX>
+        <optimizationPolicy>1</optimizationPolicy>
+        <maxFrameRate>0</maxFrameRate>
+        <videoConstantBitrate>0</videoConstantBitrate>
+        <videoBitrateTolerance>0</videoBitrateTolerance>
+        <watermarkData></watermarkData>
+        <id>487061</id>
+        <partnerId>0</partnerId>
+        <name>SD/Small - WEB/MBL (H264/900)</name>
+        <systemName>SD/Small - WEB/MBL (H264/900)</systemName>
+        <description>SD/Small - WEB/MBL (H264)</description>
+        <createdAt>1348150243</createdAt>
+        <isSystemDefault>1</isSystemDefault>
+        <tags>mobile,web,mbr,ipad,ipadnew,dash</tags>
+        <requiredPermissions>
+            <item>
+                <objectType>KalturaString</objectType>
+                <value>FEATURE_V2_FLAVORS</value>
+            </item>
+        </requiredPermissions>
+        <sourceRemoteStorageProfileId>0</sourceRemoteStorageProfileId>
+        <mediaParserType>0</mediaParserType>
+        <sourceAssetParamsIds></sourceAssetParamsIds>
+    </item>
+    <item>
+        <objectType>KalturaFlavorParams</objectType>
+        <videoCodec>h264m</videoCodec>
+        <videoBitrate>1500</videoBitrate>
+        <audioCodec>aac</audioCodec>
+        <audioBitrate>128</audioBitrate>
+        <audioChannels>2</audioChannels>
+        <audioSampleRate>44100</audioSampleRate>
+        <width>0</width>
+        <height>720</height>
+        <frameRate>0</frameRate>
+        <gopSize>0</gopSize>
+        <conversionEngines>2,99,3</conversionEngines>
+        <conversionEnginesExtraParams>-flags +loop+mv4 -cmp 256 -partitions +parti4x4+partp8x8+partb8x8 -trellis 1 -refs
+            1 -me_range 16 -keyint_min 20 -sc_threshold 40 -i_qfactor 0.71 -bt 400k -maxrate 1500k -bufsize 1200k -rc_eq
+            &apos;blurCplx^(1-qComp)&apos; -level 31 -async 2 -vsync 1 -threads 4 | -flags +loop+mv4 -cmp 256
+            -partitions +parti4x4+partp8x8+partb8x8 -trellis 1 -refs 1 -me_range 16 -keyint_min 20 -sc_threshold 40
+            -i_qfactor 0.71 -bt 400k -maxrate 1500k -bufsize 1200k -rc_eq &apos;blurCplx^(1-qComp)&apos; -level 31
+            -async 2 -vsync 1 | -x264encopts
+            qcomp=0.6:qpmin=10:qpmax=50:qpstep=4:frameref=1:bframes=0:threads=auto:level_idc=31:global_header:partitions=i4x4+p8x8+b8x8:trellis=1:me_range=16:keyint_min=20:scenecut=40:ipratio=0.71:ratetol=40:vbv-maxrate=1500:vbv-bufsize=1200
+        </conversionEnginesExtraParams>
+        <twoPass>0</twoPass>
+        <deinterlice>0</deinterlice>
+        <rotate>0</rotate>
+        <operators></operators>
+        <engineVersion>0</engineVersion>
+        <format>mp4</format>
+        <aspectRatioProcessingMode>0</aspectRatioProcessingMode>
+        <forceFrameToMultiplication16>1</forceFrameToMultiplication16>
+        <isGopInSec>0</isGopInSec>
+        <isAvoidVideoShrinkFramesizeToSource>0</isAvoidVideoShrinkFramesizeToSource>
+        <isAvoidVideoShrinkBitrateToSource>0</isAvoidVideoShrinkBitrateToSource>
+        <isVideoFrameRateForLowBrAppleHls>0</isVideoFrameRateForLowBrAppleHls>
+        <multiStream></multiStream>
+        <anamorphicPixels>0</anamorphicPixels>
+        <isAvoidForcedKeyFrames>0</isAvoidForcedKeyFrames>
+        <isCropIMX>0</isCropIMX>
+        <optimizationPolicy>1</optimizationPolicy>
+        <maxFrameRate>0</maxFrameRate>
+        <videoConstantBitrate>0</videoConstantBitrate>
+        <videoBitrateTolerance>0</videoBitrateTolerance>
+        <watermarkData></watermarkData>
+        <id>487071</id>
+        <partnerId>0</partnerId>
+        <name>SD/Large - WEB/MBL (H264/1500)</name>
+        <systemName>SD/Large - WEB/MBL (H264/1500)</systemName>
+        <description>SD/Large - WEB/MBL (H264/1500)</description>
+        <createdAt>1348150294</createdAt>
+        <isSystemDefault>1</isSystemDefault>
+        <tags>mobile,web,mbr,ipad,ipadnew,dash</tags>
+        <requiredPermissions>
+            <item>
+                <objectType>KalturaString</objectType>
+                <value>FEATURE_V2_FLAVORS</value>
+            </item>
+        </requiredPermissions>
+        <sourceRemoteStorageProfileId>0</sourceRemoteStorageProfileId>
+        <mediaParserType>0</mediaParserType>
+        <sourceAssetParamsIds></sourceAssetParamsIds>
+    </item>
+    <item>
+        <objectType>KalturaFlavorParams</objectType>
+        <videoCodec>h264h</videoCodec>
+        <videoBitrate>2500</videoBitrate>
+        <audioCodec>aac</audioCodec>
+        <audioBitrate>128</audioBitrate>
+        <audioChannels>2</audioChannels>
+        <audioSampleRate>44100</audioSampleRate>
+        <width>0</width>
+        <height>720</height>
+        <frameRate>0</frameRate>
+        <gopSize>0</gopSize>
+        <conversionEngines>2,99,3</conversionEngines>
+        <conversionEnginesExtraParams>-flags +loop+mv4 -cmp 256 -partitions +parti4x4+partp8x8+partb8x8 -trellis 1 -refs
+            6 -me_range 16 -keyint_min 20 -sc_threshold 40 -i_qfactor 0.71 -bt 700k -maxrate 2500k -bufsize 5000k -rc_eq
+            &apos;blurCplx^(1-qComp)&apos; -async 2 -vsync 1 -threads 4 | -flags +loop+mv4 -cmp 256 -partitions
+            +parti4x4+partp8x8+partb8x8 -trellis 1 -refs 6 -me_range 16 -keyint_min 20 -sc_threshold 40 -i_qfactor 0.71
+            -bt 700k -maxrate 2500k -bufsize 5000k -rc_eq &apos;blurCplx^(1-qComp)&apos; -async 2 -vsync 1 |
+            -x264encopts
+            qcomp=0.6:qpmin=10:qpmax=50:qpstep=4:frameref=6:bframes=0:threads=auto:global_header:partitions=i4x4+p8x8+b8x8:trellis=1:me_range=16:keyint_min=20:scenecut=40:ipratio=0.71:ratetol=40:vbv-maxrate=2500:vbv-bufsize=5000
+        </conversionEnginesExtraParams>
+        <twoPass>0</twoPass>
+        <deinterlice>0</deinterlice>
+        <rotate>0</rotate>
+        <operators></operators>
+        <engineVersion>0</engineVersion>
+        <format>mp4</format>
+        <aspectRatioProcessingMode>0</aspectRatioProcessingMode>
+        <forceFrameToMultiplication16>1</forceFrameToMultiplication16>
+        <isGopInSec>0</isGopInSec>
+        <isAvoidVideoShrinkFramesizeToSource>0</isAvoidVideoShrinkFramesizeToSource>
+        <isAvoidVideoShrinkBitrateToSource>0</isAvoidVideoShrinkBitrateToSource>
+        <isVideoFrameRateForLowBrAppleHls>0</isVideoFrameRateForLowBrAppleHls>
+        <multiStream></multiStream>
+        <anamorphicPixels>0</anamorphicPixels>
+        <isAvoidForcedKeyFrames>0</isAvoidForcedKeyFrames>
+        <isCropIMX>0</isCropIMX>
+        <optimizationPolicy>1</optimizationPolicy>
+        <maxFrameRate>0</maxFrameRate>
+        <videoConstantBitrate>0</videoConstantBitrate>
+        <videoBitrateTolerance>0</videoBitrateTolerance>
+        <watermarkData></watermarkData>
+        <id>487081</id>
+        <partnerId>0</partnerId>
+        <name>HD/720 - WEB (H264/2500)</name>
+        <systemName>HD/720 - WEB (H264/2500)</systemName>
+        <description>HD/720 - WEB (H264/2500)</description>
+        <createdAt>1348150476</createdAt>
+        <isSystemDefault>1</isSystemDefault>
+        <tags>web,mbr,dash</tags>
+        <requiredPermissions>
+            <item>
+                <objectType>KalturaString</objectType>
+                <value>FEATURE_V2_FLAVORS</value>
+            </item>
+        </requiredPermissions>
+        <sourceRemoteStorageProfileId>0</sourceRemoteStorageProfileId>
+        <mediaParserType>0</mediaParserType>
+        <sourceAssetParamsIds></sourceAssetParamsIds>
+    </item>
+    <item>
+        <objectType>KalturaFlavorParams</objectType>
+        <videoCodec>h264h</videoCodec>
+        <videoBitrate>4000</videoBitrate>
+        <audioCodec>aac</audioCodec>
+        <audioBitrate>128</audioBitrate>
+        <audioChannels>2</audioChannels>
+        <audioSampleRate>44100</audioSampleRate>
+        <width>0</width>
+        <height>1080</height>
+        <frameRate>0</frameRate>
+        <gopSize>0</gopSize>
+        <conversionEngines>2,99,3</conversionEngines>
+        <conversionEnginesExtraParams>-flags +loop+mv4 -cmp 256 -partitions +parti4x4+partp8x8+partb8x8 -trellis 1 -refs
+            6 -me_range 16 -keyint_min 20 -sc_threshold 40 -i_qfactor 0.71 -bt 1200k -maxrate 4000k -bufsize 8000k
+            -rc_eq &apos;blurCplx^(1-qComp)&apos; -async 2 -vsync 1 -threads 4 | -flags +loop+mv4 -cmp 256 -partitions
+            +parti4x4+partp8x8+partb8x8 -trellis 1 -refs 6 -me_range 16 -keyint_min 20 -sc_threshold 40 -i_qfactor 0.71
+            -bt 1200k -maxrate 4000k -bufsize 8000k -rc_eq &apos;blurCplx^(1-qComp)&apos; -async 2 -vsync 1 |
+            -x264encopts
+            qcomp=0.6:qpmin=10:qpmax=50:qpstep=4:frameref=6:bframes=0:threads=auto:global_header:partitions=i4x4+p8x8+b8x8:trellis=1:me_range=16:keyint_min=20:scenecut=40:ipratio=0.71:ratetol=40:vbv-maxrate=4000:vbv-bufsize=8000
+        </conversionEnginesExtraParams>
+        <twoPass>0</twoPass>
+        <deinterlice>0</deinterlice>
+        <rotate>0</rotate>
+        <operators></operators>
+        <engineVersion>0</engineVersion>
+        <format>mp4</format>
+        <aspectRatioProcessingMode>0</aspectRatioProcessingMode>
+        <forceFrameToMultiplication16>1</forceFrameToMultiplication16>
+        <isGopInSec>0</isGopInSec>
+        <isAvoidVideoShrinkFramesizeToSource>0</isAvoidVideoShrinkFramesizeToSource>
+        <isAvoidVideoShrinkBitrateToSource>0</isAvoidVideoShrinkBitrateToSource>
+        <isVideoFrameRateForLowBrAppleHls>0</isVideoFrameRateForLowBrAppleHls>
+        <multiStream></multiStream>
+        <anamorphicPixels>0</anamorphicPixels>
+        <isAvoidForcedKeyFrames>0</isAvoidForcedKeyFrames>
+        <isCropIMX>0</isCropIMX>
+        <optimizationPolicy>1</optimizationPolicy>
+        <maxFrameRate>0</maxFrameRate>
+        <videoConstantBitrate>0</videoConstantBitrate>
+        <videoBitrateTolerance>0</videoBitrateTolerance>
+        <watermarkData></watermarkData>
+        <id>487091</id>
+        <partnerId>0</partnerId>
+        <name>HD/1080 - WEB (H264/4000)</name>
+        <systemName>HD/1080 - WEB (H264/4000)</systemName>
+        <description>HD/1080 - WEB (H264/4000)</description>
+        <createdAt>1348150521</createdAt>
+        <isSystemDefault>1</isSystemDefault>
+        <tags>web,mbr,dash</tags>
+        <requiredPermissions>
+            <item>
+                <objectType>KalturaString</objectType>
+                <value>FEATURE_V2_FLAVORS</value>
+            </item>
+        </requiredPermissions>
+        <sourceRemoteStorageProfileId>0</sourceRemoteStorageProfileId>
+        <mediaParserType>0</mediaParserType>
+        <sourceAssetParamsIds></sourceAssetParamsIds>
+    </item>
+    <item>
+        <objectType>KalturaFlavorParams</objectType>
+        <videoCodec>vp8</videoCodec>
+        <videoBitrate>750</videoBitrate>
+        <audioCodec>vorbis</audioCodec>
+        <audioBitrate>96</audioBitrate>
+        <audioChannels>0</audioChannels>
+        <audioSampleRate>0</audioSampleRate>
+        <width>0</width>
+        <height>360</height>
+        <frameRate>0</frameRate>
+        <gopSize>0</gopSize>
+        <conversionEngines>2,99</conversionEngines>
+        <conversionEnginesExtraParams></conversionEnginesExtraParams>
+        <twoPass>0</twoPass>
+        <deinterlice>0</deinterlice>
+        <rotate>0</rotate>
+        <operators></operators>
+        <engineVersion>0</engineVersion>
+        <format>webm</format>
+        <aspectRatioProcessingMode>0</aspectRatioProcessingMode>
+        <forceFrameToMultiplication16>1</forceFrameToMultiplication16>
+        <isGopInSec>0</isGopInSec>
+        <isAvoidVideoShrinkFramesizeToSource>0</isAvoidVideoShrinkFramesizeToSource>
+        <isAvoidVideoShrinkBitrateToSource>0</isAvoidVideoShrinkBitrateToSource>
+        <isVideoFrameRateForLowBrAppleHls>0</isVideoFrameRateForLowBrAppleHls>
+        <anamorphicPixels>0</anamorphicPixels>
+        <isAvoidForcedKeyFrames>0</isAvoidForcedKeyFrames>
+        <isCropIMX>0</isCropIMX>
+        <optimizationPolicy>1</optimizationPolicy>
+        <maxFrameRate>0</maxFrameRate>
+        <videoConstantBitrate>0</videoConstantBitrate>
+        <videoBitrateTolerance>0</videoBitrateTolerance>
+        <id>487111</id>
+        <partnerId>0</partnerId>
+        <name>WebM</name>
+        <systemName>WebM</systemName>
+        <description>WebM</description>
+        <createdAt>1348150713</createdAt>
+        <isSystemDefault>1</isSystemDefault>
+        <tags>html5,webm</tags>
+        <requiredPermissions></requiredPermissions>
+        <sourceRemoteStorageProfileId>0</sourceRemoteStorageProfileId>
+        <mediaParserType>0</mediaParserType>
+    </item>
+</objects>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mail Form</title>
+
+    <script>
+        function getPlayerReferrer(out) {
+            out['value'] = VBX.App.config('player.referrer');
+            return true;
+        }
+        function getPlayerName(out) {
+            out['value'] = VBX.App.config('player.name');
+            return true;
+        }
+
+        var includeComments = false;
+        var commentsLabel = '';
+        var includeCheckbox = false;
+        var checkboxLabel = '';
+
+        function getFields() {
+            includeComments = VBX.toBoolean(VBX.App.config('includeComments'));
+            commentsLabel = VBX.App.config('commentsLabel');
+            includeCheckbox = VBX.toBoolean(VBX.App.config('includeCheckbox'));
+            checkboxLabel = VBX.App.config('checkboxLabel');
+
+            var fields = [
+                {
+                    name: 'Name',
+                    type: 'text',
+                    label:'Name',
+                    required:true
+                },
+                {
+                    name:'Email',
+                    type:'email',
+                    label:'Email',
+                    required:true
+                }
+            ];
+
+            if (includeComments)
+            {
+                fields.push(
+                        {
+                            name: 'Comments',
+                            type: 'textarea',
+                            label:commentsLabel,
+                            required:false
+                        });
+            }
+
+            if (includeCheckbox)
+            {
+                fields.push(
+                        {
+                            name: 'Checkbox',
+                            type: 'checkbox',
+                            label:checkboxLabel,
+                            required:false
+                        });
+            }
+
+            return fields;
+        }
+    </script>
+
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        VBX.App.init({
+            form: {
+                formElement: 'form-container1',
+                submitElement: 'form-submit1',
+                reloadOnConfigs: ['listIds'
+                    , 'includeComments', 'commentsLabel', 'includeCheckbox', 'checkboxLabel'
+
+                ]
+                , source: getFields, fixedFields: {'PlayerReferrer': getPlayerReferrer, 'PlayerName': getPlayerName}
+
+            }
+        });
+    </script>
+
+    <style>
+        .vbx-form-success .instructions {
+            display:none;
+        }
+
+        .vbx-form-success-msg a, .vbx-form-error-msg a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <script> function getAppConfigs() { return {"id":"a8c5bc12-5ad0-478f-aeef-7897251a0207","internalId":"02504a2b-7ff6-4ffe-9896-c1c08629d59e","component":"com.qoof.sdk.components.forms.MailForm","order":20,"lightStyle":false,"includeCheckbox":"false","icon":"/storage/content/icon/16/mail.png","showInMenu":"true","success":"Thank you for contacting us.","includeComments":"false","instructions":"Please fill in the form below and click \"Submit\".","commentsLabel":"Comments","checkboxLabel":"Add me to list","submitText":"Submit","label":"Mail Form","emails":"sdfasd@asdfasd.com","from":"viewbix-lead@viewbix.com","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body>
+<div class="vbx-scrollable">
+    <div class="instructions" data-vbx="instructions"></div>
+
+    <form id="form-container1"></form>
+
+    <button type="button" data-vbx="submitText" id="form-submit1">Submit Form</button>
+
+    <div data-vbx="VBX.linkify(success)" class="vbx-form-success-msg"></div>
+
+    <div data-vbx="VBX.linkify(error)" class="vbx-form-error-msg"></div>
+</div>
+</body>
+</html>
+

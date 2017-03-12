@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="medium" content="video"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>Title</title>
+</head>
+<body>
+       <!-- src="http://stream1.tv.zdn.vn/streaming/7adab48b19258c9c8865aa89a67e1d60/56fea7c3/2012/1219/ed/187503ca4affa90c08002dc146b34889.mp4?format=f360&device=web_flash&start=0&token=fa1328c922214dee3e0af99bdab6d87a" -->
+<!--src="http://s.gao.easyvideo.vn/hls/vpub/entryId/56a106c4b64e4ebd024f8453/flavorId/5694433d6ee7dc5e65ce7724/rawId/56a106c4b64e4ebd024f8452.mp4/index.m3u8"-->
+    <video class="video-player"
+           controls
+          src="rtmp://thethao24hlive.3856dea3.cdnviet.com/fm19"
+           poster="//cdn.theoplayer.com/video/star_wars_episode_vii-the_force_awakens_official_comic-con_2015_reel_(2015)/poster.jpg">
+    </video>
+<script type="text/javascript">
+    var gaoplayer_config = {
+        key: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvd25lcklkIjoibVJ5cmd1akFTSHlmUkhyTEIiLCJuYW1lIjoiYXBpMTIiLCJ0eXBlIjoid2ViIiwiaXNfZW5hYmxlZCI6IjEiLCJpcF9yYW5nZXMiOiIxOTIuMTY4LjEuMSIsImh0dHBfcmVmZXJlcnMiOiJsb2NhbGhvc3Q6NDAwMCIsImV4cGlyZWQiOiIiLCJrZXkiOiJvS3A4RklLMGV6N1F1bWNoam0vaTFTU2h1YW1EYnlHZVhxa0pvMVY1eXFVd1VyWnUwei8zVldXKzlGeXpFUWxIVkpEOG5iUlZ1S2sxYjhaeU8wQWxjUT09IiwidXNlcklkIjoibVJ5cmd1akFTSHlmUkhyTEIiLCJjcmVhdGVkQXQiOjE0NTUyNTg0Mzl9.Aill-i3RN4-Yzds1dOWH1s18VBkvRZW3RAGSsYa2XqA',
+        version: 'demo',
+        plhost: '//localhost:4000',
+        elements: [
+            {
+                id: 'pre-roll-demo',
+                ads: {
+//                    vast: {
+//                        url: "//st.movideo.us/ads/vnm2.xml",
+//                        skip: 50
+//                    }
+                }
+            }
+        ]
+
+    };
+    (function (b) {
+        var c = b.version;
+        theoplayer = window.theoplayer || {};
+        theoplayer.configuration = {
+            libraryLocation: "/player/" + c + "/" + b.key + "/",
+            styleSheetURI: "/player/" + c + "/" + b.key + "/gao.css"
+        };
+        theoplayer.onReady = function () {
+            for (var c = b.elements, d = b.elements.length, a = 0; a < d; a++) {
+                var e = c[a], f = document.getElementById(e.id);
+                theoplayer(f, e);
+            }
+        };
+        var c = b.plhost + "/player/" + c + "/" + b.key, d = document, a = d.createElement("script"), d = d.getElementsByTagName("script")[0]; a.type = "text/javascript"; a.async = !0; a.defer = !0; a.src = c + "/theoplayer.loader.js"; d.parentNode.insertBefore(a, d)
+    })(gaoplayer_config);
+
+
+</script>
+<!--<script type="text/javascript">-->
+    <!--var _paq = _paq || [];-->
+    <!--_paq.push(['trackPageView']);-->
+    <!--_paq.push(['enableLinkTracking']);-->
+    <!--(function () {-->
+        <!--var u = "//p.gao.easyvideo.vn/";-->
+        <!--_paq.push(['setTrackerUrl', u + 'gaotracker']);-->
+        <!--_paq.push(['setSiteId', 1]);-->
+        <!--var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];-->
+        <!--g.type = 'text/javascript';-->
+        <!--g.async = true;-->
+        <!--g.defer = true;-->
+        <!--g.src = u + 'gaotracker.js';-->
+        <!--s.parentNode.insertBefore(g, s);-->
+    <!--})();-->
+<!--</script>-->
+<!--<noscript><p><img src="//p.gao.easyvideo.vn/gaotracker?idsite=1" style="border:0;" alt=""/></p></noscript>-->
+</body>
+</html>

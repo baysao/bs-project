@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>eBay</title>
+    <link href="vbxapp.css" rel="stylesheet">
+    <script src="vbxapp.min.js"></script>
+    <script>
+        function getEntryDoc(entry) {
+            var entryDoc = document.createElement('entry');
+            entryDoc.innerHTML = entry.content;
+            return entryDoc;
+        }
+
+        VBX.App.init({
+            feed: {
+                container: 'feed-container1', template: 'item-template1', source: 'ebayUrl(url)',
+                link: function (entry, xml) {
+                    return getEntryDoc(entry).querySelector('a').getAttribute('href');
+                },
+                title: function (entry, xml) {
+                    var link = getEntryDoc(entry).querySelector('a').getAttribute('href');
+                    var offset = link.indexOf('ebay.com/itm') + 13;
+                    var title = link.substr(offset);
+                    var length = title.indexOf('/');
+                    title = title.substr(0, length);
+                    title = title.replace(/-/g, ' ');
+                    return title;
+                },
+                priceInfo: function (entry, xml) {
+                    var result = '';
+
+                    var entryDoc = getEntryDoc(entry);
+
+                    var auctionType;
+                    var BUY_IT_NOW = 'Buy it now';
+                    var AUCTION = 'Auction';
+                    var buyItNowPrice;
+                    var currentPrice;
+
+
+                    var offset = entry.content.indexOf('Buy It Now for only: ');
+                    if (offset >= 0) {
+                        auctionType = BUY_IT_NOW;
+                        offset += 21;
+                        buyItNowPrice = entry.content.substr(offset);
+                        offset = buyItNowPrice.indexOf('</div>');
+                        buyItNowPrice = buyItNowPrice.substr(0, offset);
+                    }
+                    else {
+                        offset = entry.content.indexOf('<strong>');
+                        if (offset >= 0) {
+                            auctionType = AUCTION;
+                            offset += 8;
+                            currentPrice = entry.content.substr(offset);
+                            offset = currentPrice.indexOf('</strong>');
+                            currentPrice = currentPrice.substr(0, offset);
+                        }
+                    }
+
+                    if (auctionType == AUCTION) {
+                        result += '<div class="ebay-price">' + currentPrice + '</div>';
+                        var bidCount;
+                        var endTime;
+                        var bidCountRegExp = /\((\d+) Bids\)/;
+                        var bidCountResult = bidCountRegExp.exec(entry.content);
+                        if (bidCountResult != null && bidCountResult.length > 1)
+                        {
+                            bidCount = Number(bidCountResult[1]);
+                        }
+
+                        offset = entry.content.indexOf('End Date: <span>');
+                        if (offset >= 0)
+                        {
+                            offset += 16;
+                            endTime = entry.content.substr(offset);
+                            offset = endTime.indexOf('</span>');
+                            endTime = endTime.substr(0, offset);
+                            endTime = endTime.replace(/-/g, ' ');
+                            if (endTime.length == 12)
+                            {
+                                var date = new Date();
+                                endTime = endTime.substr(0, 7) + date.getFullYear() + ' ' + endTime.substr(7) + " UTC-0800";
+                            }
+                        }
+
+                        var bidText = bidCount + (bidCount == 1 ? ' bid ' : ' bids ');
+                        var timeRemaining = getRemainingTimeAsString(endTime);
+
+                        result += '<div class="ebay-auction">';
+                        result += '<span class="ebay-bid">' + bidText + '</span>';
+                        result += '<span class="ebay-time-remaining">' + timeRemaining + '</span>';
+                        result += '</div>';
+
+                    } else if (auctionType == BUY_IT_NOW) {
+                        result += '<div class="ebay-price">' + buyItNowPrice + '</div>';
+                        result += '<div class="ebay-auction"><span class="ebay-buy-now">Buy It Now</span></div>';
+                    }
+
+                    return result;
+                }
+            }
+        });
+
+        function ebayUrl(url) {
+            var username = null;
+            if (url.indexOf('http') == 0 && url.indexOf('ebay.com/sch/rss') > 0) {
+                // Is a valid RSS url, just use it as is.
+            } else if (url.indexOf('http') == 0 && url.indexOf('ebay.com/sch/i.html') > 0) {
+                url = url + '&_rss=1';
+            } else {
+                var uidRegExTest = /^([, ]*\d+[, ]*)+$/;
+                var uidRegExExtract = /(\d+)[, ]*/g;
+                var productIds;
+
+                if (uidRegExTest.test(url)) {
+                    var match;
+                    productIds = [];
+
+                    do {
+                        match = uidRegExExtract.exec(url);
+                        if (match != null) {
+                            productIds.push(match[1]);
+                        }
+                    } while (match != null)
+
+                    url = 'http://www.ebay.com/sch/rss/?_nkw=%28' + encodeURIComponent(productIds.join(',')) + '%29&_rss=1';
+                } else {
+                    username = url;
+                }
+            }
+
+            if (!VBX.empty(username)) {
+                // Create an rss feed url for the user:
+                url = 'http://www.ebay.com/sch/rss/?_ssn=' + username + '&_rss=1';
+            } else if (url.indexOf('_rss=1') >= 0) {
+                //Pasted in an invalid eBay url
+                // Do nothing for now
+                //return null;
+            }
+
+            return url;
+        }
+
+        function getRemainingTimeAsString(source, includeSeconds) {
+            var MILLISECONDS_IN_DAY = 86400000;
+
+            if (typeof (includeSeconds) == "undefined" || includeSeconds == null) {
+                includeSeconds = false;
+            }
+
+            var returnValue = "";
+
+            if (source == null) {
+                return returnValue;
+            }
+
+            var date = new Date(source);
+
+            var milliseconds = date.getTime() - getCurrentTime();
+
+            var years = Math.floor(milliseconds / (365 * MILLISECONDS_IN_DAY));
+            milliseconds -= years * (365 * MILLISECONDS_IN_DAY);
+
+            var days = Math.floor(milliseconds / (MILLISECONDS_IN_DAY));
+            milliseconds -= days * (MILLISECONDS_IN_DAY);
+
+            var hours = Math.floor(milliseconds / (60 * 60 * 1000));
+            milliseconds -= hours * (60 * 60 * 1000);
+
+            var minutes = Math.floor(milliseconds / (60 * 1000));
+            milliseconds -= minutes * (60 * 1000);
+
+            var seconds = Math.floor(milliseconds / 1000);
+            milliseconds -= seconds * 1000; // Remainder milliseconds. Unused.
+
+            if (years > 0) {
+                returnValue += years + "y ";
+            }
+
+            if (days > 0 || (years > 0 && (hours > 0 || minutes > 0 || seconds > 0))) {
+                returnValue += days + "d ";
+            }
+
+            if (hours > 0 || ((years > 0 || days > 0) && (minutes > 0 || (includeSeconds && seconds > 0)))) {
+                returnValue += hours + "h ";
+            }
+
+            if (minutes > 0 || ((years > 0 || days > 0 || hours > 0) && (includeSeconds && seconds > 0))) {
+                returnValue += minutes + "m ";
+            }
+
+            if (includeSeconds) {
+                returnValue += seconds + "s ";
+            }
+
+            returnValue = returnValue.substring(0, returnValue.length - 1);
+
+            return returnValue;
+        }
+
+        function getCurrentTime() {
+            return (new Date()).getTime();
+        }
+    </script>
+
+    <style>
+        a {
+            text-decoration:none;
+        }
+        .ebay-title {
+            text-decoration: underline;
+        }
+        .ebay-auction {
+            display: inline-block;
+            margin-top: 1px;
+        }
+        .ebay-buy-now {
+            font-weight: bold;
+        }
+        .ebay-price {
+            display: inline-block;
+            font-weight: bold;
+            margin-right: 1em;
+        }
+        .ebay-bid {
+            margin-right: 1em;
+        }
+    </style>
+    <script> function getAppConfigs() { return {"id":"67a08aa7-5839-45f0-9a6b-fc4316100153","internalId":"e05668ce-5a51-4161-a4af-ff76aee14ca1","component":"com.qoof.sdk.components.rss.EbayFeed","order":9,"lightStyle":false,"showInMenu":"true","label":"eBay","pageSize":"10","url":"asdfasd","thumbnailWidth":"70","icon":"/storage/content/icon/16/ebay.png","player.videoThumbnailUrl":"//assets.viewbix.com/bef4b4f841950e9306a22c4914de07a0.jpg","player.videoUrl":"http://demo.easyvideo.vn/vinamilk.mp4","player.title":"Vinamilk Optimum 4","player.name":"Vinamilk","affiliateRegex":["greensmoke\\.co.+?\\/aff\\/(?P<ac>\\d+)\\/ad\\/(?P<aid>\\d+)","tplclick\\?lid=\\d+&pubid=(?P<ac>.+)","bin/.+?\\?id=(?P<ac>[^&]+)&offerid=(?P<aid>[^&]+)|bin/.+?\\?id=(?P<ac>.+?)&","&pubid=(?P<ac>[^&]*)","&aid=(?P<aid>[\\d\\.]+)&pid=(?P<ac>\\d+)&","/click-(?P<ac>\\d+)-(?P<aid>[\\d\\.]+)","shareasale\\.com[^?]*\\?(?P<query>.*)","/t/\\d+-\\d+-(?P<ac>\\d+)-\\d+","linkconnector\\.com[^?]*\\?(?P<query>.*)","(?:/BI/(?P<ac>\\d+)/KBID/(?P<aid>\\d+))|(?:BI=(?P<ac>\\d+).+?KBID=(?P<aid>\\d+))"]}; } </script></head>
+<body>
+<div class="vbx-scrollable">
+    <div id="feed-container1" class="vbx-feed-container">
+        <div id="item-template1" class="vbx-feed-item">
+            {if $link}<a href="{$link}">
+            {/if}
+            <div class="vbx-feed-link-item">
+                {if $thumbnail}<img class="vbx-feed-thumbnail" src="{$thumbnail}" data-vbx-style-width="VBX.px(thumbnailWidth)" />{/if}
+                <div class="ebay-title">{$title}</div>
+                <div class="ebay-price-info">{$priceInfo}</div>
+            </div>
+            {if $link}
+        </a>{/if}
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
