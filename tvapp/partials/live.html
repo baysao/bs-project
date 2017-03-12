@@ -1,0 +1,151 @@
+<div class="page-live-video">
+	<div class="row container-video-live" ng-controller="liveCtrl">
+		<div class="wrap-video-live col-md-9">
+			<div class="status-video-hot">
+				<span class="icon-live icon"></span>
+				<span class="txt-note">Đang diễn ra</span>
+				<span class="time-live">06:00 - 07:00</span>
+			</div>
+			<div class="img-show"><iframe id="video-player-live" width="100%" height="100%" src="" frameborder="0" allowfullscreen=""></iframe></div>
+		</div>
+		<div class="lich-phat-song col-md-3">
+			<div class="title-lich-phatsong">
+	            <h2>Lịch phát sóng</h2>
+	        </div>
+	        <div class="fix-row select-calendar-action">
+	            <i class="fa fa-calendar"></i>
+	            <select class="date-lich">
+	            	<option value="" selected="selected">Thứ 4 ngày 03/02/2016</option>
+	            	<option value="">Thứ 5 ngày 04/02/2016</option>
+	            	<option value="">Thứ 7 ngày 06/02/2016</option>
+	            	<option value="">Thứ 4 ngày 03/02/2016</option>
+	            	<option value="">Thứ 5 ngày 04/02/2016</option>
+	            	<option value="">Thứ 7 ngày 06/02/2016</option>
+	            	<option value="">Thứ 4 ngày 03/02/2016</option>
+	            	<option value="">Thứ 5 ngày 04/02/2016</option>
+	            	<option value="">Thứ 7 ngày 06/02/2016</option>
+	            	<option value="">Thứ 4 ngày 03/02/2016</option>
+	            	<option value="">Thứ 5 ngày 04/02/2016</option>
+	            	<option value="">Thứ 7 ngày 06/02/2016</option>
+	            	<option value="">Thứ 4 ngày 03/02/2016</option>
+	            	<option value="">Thứ 5 ngày 04/02/2016</option>
+	            	<option value="">Thứ 7 ngày 06/02/2016</option>
+	            	<option value="">Thứ 4 ngày 03/02/2016</option>
+	            	<option value="">Thứ 5 ngày 04/02/2016</option>
+	            	<option value="">Thứ 7 ngày 06/02/2016</option>
+	            </select>
+	        </div>
+	        <div class="box-lich-item">
+				<ul class="box-list-play">
+					<li class="select_program">
+						<span>
+							<p class="title">Phóng sự</p>
+							<p class="description">Bài học từ việc sử dụng đối tượng cử tuyển ở Lào Cai</p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Thời sự 23h</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Mỗi ngày 1 cuốn sách</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Thế giới 24h chuyển động</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Phóng sự</p>
+							<p class="description">Bài học từ việc sử dụng đối tượng cử tuyển ở Lào Cai</p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Thời sự 23h</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Mỗi ngày 1 cuốn sách</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Thế giới 24h chuyển động</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Phóng sự</p>
+							<p class="description">Bài học từ việc sử dụng đối tượng cử tuyển ở Lào Cai</p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Thời sự 23h</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Mỗi ngày 1 cuốn sách</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Thế giới 24h chuyển động</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Phóng sự</p>
+							<p class="description">Bài học từ việc sử dụng đối tượng cử tuyển ở Lào Cai</p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Thời sự 23h</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Mỗi ngày 1 cuốn sách</p>
+							<p class="description"></p>
+						</span>
+					</li>
+					<li class="select_program">
+						<span>
+							<p class="title">Thế giới 24h chuyển động</p>
+							<p class="description"></p>
+						</span>
+					</li>
+				</ul>
+	        </div>
+		</div>
+	</div>
+	<div ng-include="'/partials/showListCategory.html'"></div>
+</div>
+<script>
+	$(document).ready(function () {
+		$('.box-lich-item').slimScroll({
+	        height: '496px',
+	        color: '#d22827',
+	        alwaysVisible: true,
+	        opacity: 1
+	    });
+	});
+</script>

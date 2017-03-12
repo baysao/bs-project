@@ -1,0 +1,8 @@
+<div class="pageCategory" ng-controller="resultsSearchCtrl">
+	<p class="title-search-results">Kết quả tìm kiếm "{{textSearch}}"</p>
+	<div class="box-list">
+		<div class="col-sm-3 item" ng-repeat="item in arrSearchResults">
+			<div class="cover wrap-img" style="background-image:url({{item.thumbnail}}?width=600&height=360);"><a href="#/app/detail/{{item._id}}"><div><span class="title-name">{{item.name}}</span><span class="meta-info">Diễn viên, Diễn viên</span></div></a></div>
+		</div>
+	</div>
+</div>

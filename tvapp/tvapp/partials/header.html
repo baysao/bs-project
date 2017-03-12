@@ -1,0 +1,38 @@
+<header class="">
+	<div class="clearfix wrap-header container">
+		<div class="pull-right option-header">
+			<div class="search-header pull-right">
+				<a rel="#search-box" class="icon icon-search tab-header"></a>
+			</div>
+			<div class="all-menu pull-right">
+				<div class="selected">
+					<a class="tab-header" rel="#select-chuyen-muc"><span class="txt-selected">Chuyên mục TV</span><span class="icon icon-down"></span></a>
+				</div>
+			</div>
+		</div>
+		<div class="logo cover wrap-img pull-left" style="background-image:url(images/logo.jpg);"><a href="#/app/home" class="" data-directive></a></div>
+		<div class="clearfix"></div>
+
+		<div id="search-box" class="menu-tab-header outsideevent hide">
+			<form id="frm-search" action="" class="clearfix">
+				<input type="text" placeholder="Gõ từ khóa..." />
+				<input type="submit" value="Tìm" id="btn-search" />
+			</form>
+		</div>
+
+		<div id="select-chuyen-muc" class="menu-tab-header clearfix outsideevent hide">
+			<ul class="clearfix list-chuyen-muc">
+				<li ng-repeat="item in listCategory"><a href="#/app/chuyen-muc/{{item._id}}" ng-click="onSelected(item.name);">{{item.name}}</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<div id="select-chanel" class="clearfix">
+			<ul class="clearfix">
+				<li ng-repeat="item in listChanel">
+					<a href="#/app/live/{{item._id}}"><img src="{{item.thumbnail}}" alt="" /></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>

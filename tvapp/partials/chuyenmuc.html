@@ -1,0 +1,20 @@
+<div ng-controller="chuyenmucCtrl">
+	<section class="pageCategory">
+		<div class="box-list row list-inline">
+			<h2 class="title-list">{{title_category}}</h2>
+
+			<uib-tabset active="active">
+				<uib-tab index="0" active="tab.active" heading="Mới Nhất">
+					<div class="col-sm-3 item" ng-repeat="item in arrMoiNhat">
+						<div class="cover wrap-img" style="background-image:url({{item.thumbnail}}?width=600&height=360);"><a href="#/app/detail/{{item._id}}"><div><span class="title-name">{{item.name}}</span><span class="meta-info">Diễn viên, Diễn viên</span></div></a></div>
+					</div>
+				</uib-tab>
+				<uib-tab index="$index + 1" heading="Xem Nhiều">
+					<div class="col-sm-3 item" ng-repeat="item in arrXemNhieu">
+						<div class="cover wrap-img" style="background-image:url({{item.thumbnail}}?width=600&height=360);"><a href="#/app/detail/{{item._id}}"><div><span class="title-name">{{item.name}}</span><span class="meta-info">Diễn viên, Diễn viên</span></div></a></div>
+					</div>
+				</uib-tab>
+			</uib-tabset>
+		</div>
+	</section>
+</div>

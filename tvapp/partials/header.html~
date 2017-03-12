@@ -1,0 +1,50 @@
+<header class="">
+	<div class="clearfix wrap-header container">
+		<div class="pull-right option-header">
+			<div class="search-header pull-right">
+				<a rel="#search-box" class="icon icon-search tab-header outsideevent"></a>
+			</div>
+
+			<div class="all-menu pull-right">
+				<div class="selected">
+					<a class="tab-header outsideevent" rel="#select-chuyen-muc"><span class="txt-selected">Chuyên mục</span><span class="icon icon-down"></span></a>
+				</div>
+			</div>
+			<div class="all-menu pull-right">
+				<div class="selected">
+					<a class="tab-header outsideevent" rel="#select-chanel"><span class="txt-selected">Kenh Truyen Hinh</span><span class="icon icon-down"></span></a>
+				</div>
+			</div>
+			<!--div class="chanel pull-right">
+				<a class="tab-header outsideevent" rel="#select-chanel"><span class="txt-selected"><img src="images/20150321182312!THVL_Logo.png" alt="" width="90" height="30"></span><span class="icon icon-down"></span></a>
+			</div-->
+		</div>
+		<div class="logo cover wrap-img pull-left" style="background-image:url(images/gao_logo_100.png);"><a href="#/app/home" class="" data-directive></a></div>
+		<div class="clearfix"></div>
+
+		<div id="search-box" class="menu-tab-header outsideevent">
+			<a class="btnClose icon" href=""></a>
+			<form ng-submit="showResults(searchText)">
+				<input type="text" placeholder="Gõ từ khóa..." ng-model="searchText" />
+				<button type="submit" id="btn-search">Tìm</button>
+			</form>
+		</div>
+
+		<div id="select-chuyen-muc" class="menu-tab-header clearfix outsideevent">
+			<a class="btnClose icon" href=""></a>
+			<ul class="clearfix list-chuyen-muc">
+				<li ng-repeat="item in listCategory"><a href="#/app/chuyen-muc/{{item._id}}" ng-click="onSelected(item.name);">{{item.name}}</a></li>
+			</ul>
+		</div>
+
+		<div id="select-chanel" class="menu-tab-header clearfix outsideevent">
+			<a class="btnClose icon" href=""></a>
+			<ul class="clearfix">
+				<li ng-repeat="item in listChanel">
+					<a href="#/app/live/{{item._id}}"><img src="{{item.thumbnail}}" alt="" /></a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</header>

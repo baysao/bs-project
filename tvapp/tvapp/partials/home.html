@@ -1,0 +1,44 @@
+<div ng-controller="homeCtrl">
+	<section class="pageHome">
+		<div class="row list-hot">
+			<div class="col-sm-9 col-left">
+				<div class="status-video-hot">
+					<span class="icon-live icon"></span>
+					<span class="txt-note">Đang diễn ra</span>
+					<span class="time-live">06:00 - 07:00</span>
+				</div>
+				<div class="wrap-live-video wrap-img">
+					<iframe id="video-player" width="100%" height="480" src="" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+			</div>
+			<div class="col-sm-3 col-right">
+				<h2 class="title-slidebar">Liên quan</h2>
+				<div class="scroll-bar list-lq">
+					<div class="wrap-scroll">
+						<ul>
+							<li ng-repeat="item in listRelated">
+								<div class="wrap-img cover" style="background-image:url({{item.thumbnail}}?width=600&height=360);">
+									<a class="wrap-video" href="#" data-url="{{item.url_embed}}">
+										<p>{{item.name}}</p>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="list-category-show"></div>
+	</section>
+</div>
+
+<script>
+	$(document).ready(function () {
+		$('.wrap-scroll').slimScroll({
+	        height: '478px',
+	        color: '#d22827',
+	        alwaysVisible: true,
+	        opacity: 1
+	    });
+	});
+</script>

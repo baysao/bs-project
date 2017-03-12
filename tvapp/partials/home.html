@@ -1,0 +1,39 @@
+<section class="pageHome">
+	<div class="row list-hot" ng-controller="homeCtrl">
+		<div class="col-sm-9 col-left">
+			<div class="wrap-live-video wrap-img">
+				<div class="img-show"><iframe id="video-player" width="100%" height="100%" src="" frameborder="0" allowfullscreen=""></iframe></div>
+			</div>
+		</div>
+		<div class="col-sm-3 col-right">
+			<h2 class="title-slidebar">Liên quan</h2>
+			<div class="scroll-bar list-lq">
+				<div class="wrap-scroll">
+					<ul class="wrap-lazy">
+						<li ng-repeat="item in listRelated">
+							<div class="wrap-img cover">
+								<a class="wrap-video" href="#/app/detail/{{item._id}}">
+									<div class="img-show"><div><img data-original="" src="{{item.thumbnail}}?width=600&height=360"></div></div>
+									<span class="loading"></span>
+									<p>{{item.name}}</p>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-include="'/partials/showListCategory.html'"></div>
+</section>
+
+<script>
+	$(document).ready(function () {
+		$('.wrap-scroll').slimScroll({
+	        height: '420px',
+	        color: '#d22827',
+	        alwaysVisible: true,
+	        opacity: 1
+	    });
+	});
+</script>
